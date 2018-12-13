@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Broadcom BCM94352Z, macOS 시에라에서 설정하기</title>
+  
+  <link rel="stylesheet" media="print" type="text/css" href="../static/css/print.css">
+  <link rel="stylesheet" media="screen" type="text/css" href="../static/css/eunchan.css">
+  <link rel="shortcut icon" href="../static/img/favicon.png">
+
+  
+  
+  
+  <meta property="og:title" content="Broadcom BCM94352Z, macOS 시에라에서 설정하기" />
+  <meta property="og:site_name" content="Eunchan.Kim" />
+
+
+</head>
+
+<body>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="../">
+      <img src="../static/img/logo2.png">
+    </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMain" class="navbar-menu">
+    <div class="navbar-start">
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="../article/">article</a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="../article/">posts</a>
+          <a class="navbar-item" href="../research/">research</a>
+          <a class="navbar-item" href="../review/">review</a>
+          <a class="navbar-item" href="../tips/">tips &amp; tricks</a>
+        </div>
+      </div>
+      <a class="navbar-item" href="../blog/">journal</a>
+      <a class="navbar-item" href="../travel/">travel</a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">hobby</a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="../motorcycle/">motorcycle</a>
+          <a class="navbar-item" href="../aviation/">aviation</a>
+        </div>
+      </div>
+      <a class="navbar-item" href="../sky/">night sky</a>
+      <a class="navbar-item" href="../eunchan/" rel="author">contact</a>
+    </div><!--/@navbar-start-->
+    <div class="navbar-end">
+    </div><!--/@navbar-end-->
+  </div>
+</nav><!--/@navigation-->
+<div id="docs" class="docs">
+
+<main class="main">
+  <section class="section">
+    <h1 class="title">
+      Broadcom BCM94352Z, macOS 시에라에서 설정하기
+    </h1>
+
+
+    <p class="subtitle">
+      November 19, 2016
+    </p>
+
+
+  </section><!--/@hero-->
+  <div class="container is-max-desktop">
+    <section class="medium-section">
+
+
+      <div class="content"><!--only html tag-->
+<p><a href="../research/installing-macos-on-alienware-alpha.html">에얼리언웨어 알파 해킨토시 설치</a> 글에서 잠깐 언급했는데, 알파에 기본으로 내장된 WIFI 모듈은 인텔 제조라 macOS에서 드라이버가 없어서 동작을 못합니다.
+그래서 인터넷을 수소문 한 결과, 브로드컴의 BCM94352Z가 문제없이 잘 동작한다길래 <a href="https://www.amazon.com/BCM94352Z-NGFF-WiFi-Bluetooth-802-11ac/dp/B00JGFA50U">아마존에서 주문</a>해서 막 받았네요.</p>
+<p>그런데 이놈이 이렇게 고생을 시킬 줄은 꿈에도 몰랐죠. ㅜ.ㅜ
+인터넷 설명이 죄다 El Capitan, 아니면 Sierra 10.12 여서, 제가 설치한 버전인 10.12.1 에는 동작을 안하더군요.</p>
+<h2 id="final-result">Final Result</h2>
+<p>고생기를 먼저 장황하게 쓸 필요는 없을 것 같고, 일단 고생한 결과물을 알려드릴게요.</p>
+<ol type="1">
+<li><p><a href="https://bitbucket.org/RehabMan/os-x-brcmpatchram/downloads">RehabMan의 BrcmPatchRAM</a>과
+<a href="https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads">RehabMan의 FakePCIID</a>을 다운로드 받아둡니다.</p></li>
+<li><p>EFI Mounter로 EFI 파티션을 연결합니다. 수정을 하기 전 EFI 폴더를 백업해 둡시다.
+만일을 위해서 Clover Bootable USB도 준비합니다.
+이전에 Sierra를 설치했다면 그 USB만 있어도 됩니다.</p></li>
+<li><p><code>EFI/CLOVER/kexts/Other</code> 디렉토리에 위의 두 파일을 압축을 풀어서, 아래 4개의 파일을 복사합니다.</p>
+<ul>
+<li>BrcmPatchRAM2.kext</li>
+<li>BrcmFirmwareData.kext</li>
+<li>FakePCIID.kext</li>
+<li>FakePCIID_Broadcom_WiFi.kext</li>
+</ul></li>
+<li><p><code>EFI/CLOVER/config.plist</code>를 엽니다. 그러면 Clover Configurator 앱이 열릴겁니다.</p></li>
+<li><p><strong>Acpi</strong> 탭에서 <strong>DropOEM</strong>을 선택합니다. (SSDT 항목에 있어요)</p></li>
+<li><p><strong>Boot</strong> 탭에서 <strong>kexts-dev-mode=1</strong> 을 선택합니다.</p></li>
+<li><p><strong>Device</strong> 탭에서 WiFi 에 <code>0x43B114E4</code>를 입력합니다.
+이 값은 DPCIManager.app 에서 보이는 브로드컴 WIFI 의 Device/Vendor ID 입니다.
+만일 DPCIManager.app에서 브로드컴이 안보인다면 연결이 잘 안된것이므로 윗판을 뜯어서 다시 확인합시다.</p></li>
+<li><p><strong>System Parameters</strong> 탭에서 <strong>Inject Kext</strong>를 <strong>Yes</strong>로 바꿔줍니다.</p></li>
+<li><p>저장 후 나갑니다.</p></li>
+<li><p>Terminal을 열어서 vim이나 기타 텍스트 에디터로 <code>EFI/CLOVER/config.plist</code>를 엽니다.
+<strong>TextEdit.app</strong> 은 사용하지 마세요. 인식이 안되서 오동작할 수 있습니다.
+아래 내용을 입력하는데, tab으로 띄어쓰기 해야 합니다.
+안그러면 인식이 안될 수 있어요.</p></li>
+</ol>
+<pre><code>	&lt;key&gt;KernelAndKextPatches&lt;/key&gt;
+	&lt;dict&gt;
+        ...
+		&lt;key&gt;KextsToPatch&lt;/key&gt;
+		&lt;array&gt;
+			&lt;dict&gt;
+				&lt;key&gt;Comment&lt;/key&gt;
+				&lt;string&gt;AirPortBrcm4360 - fcvo&lt;/string&gt;
+				&lt;key&gt;Disabled&lt;/key&gt;
+				&lt;false/&gt;
+				&lt;key&gt;Find&lt;/key&gt;
+				&lt;data&gt;
+				gflSqgAAdSk=
+				&lt;/data&gt;
+				&lt;key&gt;Name&lt;/key&gt;
+				&lt;string&gt;AirPortBrcm4360&lt;/string&gt;
+				&lt;key&gt;Replace&lt;/key&gt;
+				&lt;data&gt;
+				gflSqgAAZpA=
+				&lt;/data&gt;
+			&lt;/dict&gt;
+			&lt;dict&gt;
+				&lt;key&gt;Comment&lt;/key&gt;
+				&lt;string&gt;AirPortBrcm4360 - PCI Error 1&lt;/string&gt;
+				&lt;key&gt;Disabled&lt;/key&gt;
+				&lt;false/&gt;
+				&lt;key&gt;Find&lt;/key&gt;
+				&lt;data&gt;
+				QTnEdRs=
+				&lt;/data&gt;
+				&lt;key&gt;Name&lt;/key&gt;
+				&lt;string&gt;AirPortBrcm4360&lt;/string&gt;
+				&lt;key&gt;Replace&lt;/key&gt;
+				&lt;data&gt;
+				QTnEZpA=
+				&lt;/data&gt;
+			&lt;/dict&gt;
+			&lt;dict&gt;
+				&lt;key&gt;Comment&lt;/key&gt;
+				&lt;string&gt;AirPortBrcm4360 - PCI Error 2&lt;/string&gt;
+				&lt;key&gt;Disabled&lt;/key&gt;
+				&lt;false/&gt;
+				&lt;key&gt;Find&lt;/key&gt;
+				&lt;data&gt;
+				QQ+3zTnBdQw=
+				&lt;/data&gt;
+				&lt;key&gt;Name&lt;/key&gt;
+				&lt;string&gt;AirPortBrcm4360&lt;/string&gt;
+				&lt;key&gt;Replace&lt;/key&gt;
+				&lt;data&gt;
+				QQ+3zTnBZpA=
+				&lt;/data&gt;
+			&lt;/dict&gt;
+			&lt;dict&gt;
+				&lt;key&gt;Comment&lt;/key&gt;
+				&lt;string&gt;AirPortBrcm4360 - PCI Error 3&lt;/string&gt;
+				&lt;key&gt;Disabled&lt;/key&gt;
+				&lt;false/&gt;
+				&lt;key&gt;Find&lt;/key&gt;
+				&lt;data&gt;
+				g33EBHQG
+				&lt;/data&gt;
+				&lt;key&gt;Name&lt;/key&gt;
+				&lt;string&gt;AirPortBrcm4360&lt;/string&gt;
+				&lt;key&gt;Replace&lt;/key&gt;
+				&lt;data&gt;
+				g33EBGaQ
+				&lt;/data&gt;
+			&lt;/dict&gt;
+		&lt;/array&gt;</code></pre>
+<ol start="11" type="1">
+<li>재부팅 합니다.</li>
+</ol>
+<p>이제 와이파이가 잘 뜰겁니다.</p>
+<h2 id="downloads">Downloads</h2>
+<p>위에서 설명된 프로그램은 아래의 링크에서 받을 수 있습니다.</p>
+<ul>
+<li>EFI Mounter : <a href="https://www.tonymacx86.com/resources/efi-mounter-v3.280/" class="uri">https://www.tonymacx86.com/resources/efi-mounter-v3.280/</a></li>
+<li>DPCIManager : <a href="https://sourceforge.net/projects/dpcimanager/" class="uri">https://sourceforge.net/projects/dpcimanager/</a></li>
+</ul>
+<!-- SKY LINKS -->
+<!-- AVIATION LINKS -->
+
+
+<nav class="pagination is-small" role="navigation" aria-label="pagination">
+    
+    
+</nav>
+
+
+<div class="comment">
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+var disqus_config = function () {
+this.page.url = "https://www.eunchan.kim/research/bcm94352z-setup-on-macos-sierra.html";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "Broadcom BCM94352Z, macOS 시에라에서 설정하기"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://eunchan.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<!--    <p>Comment system is closed.
+        Please send email to <a href="javascript:location='mailto:\u006d\u0065\u0040\u0065\u0075\u006e\u0063\u0068\u0061\u006e\u002e\u006b\u0069\u006d';void 0"><script type="text/javascript">document.write('\u006d\u0065\u0040\u0065\u0075\u006e\u0063\u0068\u0061\u006e\u002e\u006b\u0069\u006d')</script></a>
+        if you have any question or advise.</p>-->
+</div>
+
+
+
+      </div><!--/@content-->
+
+
+    </section>
+  </div> <!--/@container-->
+</main>
+</div><!--/@docs-->
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p class="copyright">
+        <a href="../eunchan/">E.K</a> | <a href="//creativecommons.org/licenses/by-nc-nd/4.0/"> CCL (BY-NC-ND) </a> except images and stated pages.
+    </p>
+  </div>
+</footer>
+<!-- Call Map.js later in order to load "map_canvas" correctly -->
+<script type="application/ecmascript" src="../static/js/eunchan.js"></script>
+</body>
+</html>

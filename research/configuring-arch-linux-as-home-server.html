@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archlinux as Home Server</title>
+  
+  <link rel="stylesheet" media="print" type="text/css" href="../static/css/print.css">
+  <link rel="stylesheet" media="screen" type="text/css" href="../static/css/eunchan.css">
+  <link rel="shortcut icon" href="../static/img/favicon.png">
+
+  
+  
+  
+  <meta property="og:title" content="Archlinux as Home Server" />
+  <meta property="og:site_name" content="Eunchan.Kim" />
+
+
+</head>
+
+<body>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="../">
+      <img src="../static/img/logo2.png">
+    </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMain" class="navbar-menu">
+    <div class="navbar-start">
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="../article/">article</a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="../article/">posts</a>
+          <a class="navbar-item" href="../research/">research</a>
+          <a class="navbar-item" href="../review/">review</a>
+          <a class="navbar-item" href="../tips/">tips &amp; tricks</a>
+        </div>
+      </div>
+      <a class="navbar-item" href="../blog/">journal</a>
+      <a class="navbar-item" href="../travel/">travel</a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">hobby</a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="../motorcycle/">motorcycle</a>
+          <a class="navbar-item" href="../aviation/">aviation</a>
+        </div>
+      </div>
+      <a class="navbar-item" href="../sky/">night sky</a>
+      <a class="navbar-item" href="../eunchan/" rel="author">contact</a>
+    </div><!--/@navbar-start-->
+    <div class="navbar-end">
+    </div><!--/@navbar-end-->
+  </div>
+</nav><!--/@navigation-->
+<div id="docs" class="docs">
+
+<main class="main">
+  <section class="section">
+    <h1 class="title">
+      Archlinux as Home Server
+    </h1>
+
+
+    <p class="subtitle">
+      April 6, 2012
+    </p>
+
+
+  </section><!--/@hero-->
+  <div class="container is-max-desktop">
+    <section class="medium-section">
+
+
+      <div class="content"><!--only html tag-->
+<h2 id="initial-setting">Initial Setting</h2>
+<h3 id="hostname">Hostname</h3>
+<pre><code>HOSTNAME in */etc/rc.conf*</code></pre>
+<h3 id="showing-utf-8-character">Showing UTF-8 Character</h3>
+<pre><code>alias ls='ls --color=auto --show-control-chars'</code></pre>
+<h3 id="locale">Locale</h3>
+<pre><code>/etc/rc.conf
+
+LOCALE=ko_KR.UTF-8
+
+localedef </code></pre>
+<h2 id="install-packages">Install Packages</h2>
+<pre><code>pacman -S nginx trac python2 samba mercurial virtualenv2 vim postgresql</code></pre>
+<h2 id="samba">Samba</h2>
+<ul>
+<li><em>/etc/samba/conf/smb.conf</em> 수정</li>
+<li><em>smbpasswd</em> 를 이용해서 계정 비밀번호 생성</li>
+</ul>
+<h2 id="postgresql">PostgreSQL</h2>
+<pre><code>rc.d start postresql
+sudo -i -u postgres
+createuser -U postgres
+psql template1
+&gt;&gt;&gt; CREATE USER &lt;username&gt; WITH PASSWORD 'password' CREATE ROLE;
+createdb -O &lt;username&gt; -T template0 &lt;db_name&gt;</code></pre>
+<h2 id="django">Django</h2>
+<pre><code>virtualenv2 .virtualenv
+source .virtualenv/bin/activate
+pip install django flup markdown &lt;what-you-want-to-install&gt;
+django-admin.py startproject &lt;project_name&gt;
+cd &lt;project_name&gt;
+./manage.py startapp &lt;app_name&gt;
+./manage.py runfcgi --port=8080</code></pre>
+<h2 id="nginx">NGINX</h2>
+<pre><code>/etc/nginx/conf/nginx.conf 수정</code></pre>
+<h2 id="fail2ban">Fail2ban</h2>
+<p>To block the host that tries malicious login requests, install fail2ban and activate ssh-iptables</p>
+<pre><code>vim /etc/rc.conf
+add fail2ban and iptables
+
+vim /etc/fail2ban/jain.conf
+make enable true in [sshd-iptables]
+log path = /var/log/auth.log</code></pre>
+<h2 id="mta-mail">MTA mail</h2>
+<ol type="1">
+<li><p>Only for sending mails to others, I setup msmtp::</p>
+<pre><code>pacman -S msmtp-mta</code></pre></li>
+<li><p>edit /etc/mail.rc</p>
+<pre><code>set sendmail=/usr/sbin/msmtp</code></pre></li>
+<li><p>edit ~/.msmtprc for gmail</p>
+<pre><code># Accounts will inherit settings from this section
+defaults
+auth             on
+tls              on
+tls_trust_file   /usr/share/ca-
+ertificates/mozilla/Thawte_Premium_Server_CA.crt
+
+# A first gmail address
+account        gmail
+host           smtp.gmail.com
+port           587
+from           username@gmail.com
+user           username@gmail.com
+password       password
+
+# A second gmail address
+account    gmail2 : gmail
+from       username2@gmail.com
+user       username2@gmail.com
+password   password2
+# It looks like Google's in the process of becoming its own certificate
+# authority. For some users, they seem to have switched to a &quot;Google
+# Certificate Authority&quot; certificate, which is rooted in Equifax.
+#tls_trust_file /usr/share/ca-certificates/mozilla/Equifax_Secure_CA.crt
+
+# A freemail service
+account    freemail
+host       smtp.freemail.example
+from       joe_smith@freemail.example
+user       joe.smith
+password   secret
+
+# A provider's service
+account   provider
+host      smtp.provider.example
+
+# Set a default account
+account default : gmail</code></pre></li>
+<li><p>And make it secure</p>
+<pre><code>chmod 600 ~/.msmtprc</code></pre></li>
+</ol>
+<!-- SKY LINKS -->
+<!-- AVIATION LINKS -->
+
+      </div><!--/@content-->
+
+
+    </section>
+  </div> <!--/@container-->
+</main>
+</div><!--/@docs-->
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p class="copyright">
+        <a href="../eunchan/">E.K</a> | <a href="//creativecommons.org/licenses/by-nc-nd/4.0/"> CCL (BY-NC-ND) </a> except images and stated pages.
+    </p>
+  </div>
+</footer>
+<!-- Call Map.js later in order to load "map_canvas" correctly -->
+<script type="application/ecmascript" src="../static/js/eunchan.js"></script>
+</body>
+</html>

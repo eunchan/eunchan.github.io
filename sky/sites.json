@@ -1,0 +1,44 @@
+[
+    {
+        "name" : "양평 벗고개",
+        "lng" : 127.731341,
+        "lat" : 37.501019,
+        "descript" : "동천, 서천 막힘. 거의 밝기 4 수준의 3",
+        "url" : "/sky/site/beotgogae.html"
+    },
+    {
+        "name" : "Big Sur Lodge",
+        "lng" : -121.7862403,
+        "lat" : 36.2529162,
+        "descript" : "정말 어두운 밤하늘을 볼 수 있는 곳",
+        "url" : "/sky/site/big-sur-lodge.html"
+    },
+    {
+        "name" : "House on Bronson Ave.",
+        "lng" : -121.928763,
+        "lat" : 37.254219,
+        "descript" : "집 뒷마당",
+        "url" : "/sky/site/bronson.html"
+    },
+    {
+        "name" : "공림사",
+        "lng" : 127.813967,
+        "lat" : 36.630043,
+        "descript" : "대전 근처에 그나마 괜찮게 볼만한 곳",
+        "url" : "/sky/site/gonglimsa.html"
+    },
+    {
+        "name" : "Lake Tahoe",
+        "lng" : -120.036937,
+        "lat" : 39.102607,
+        "descript" : "Lake Tahoe",
+        "url" : "/sky/site/lake-tahoe.html"
+    },
+    {
+        "name" : "용인 축구 센터",
+        "lng" : 127.314804,
+        "lat" : 37.151184,
+        "descript" : "수원 근교에서 가장 무난한 곳",
+        "url" : "/sky/site/yonginfc.html"
+    }
+]
