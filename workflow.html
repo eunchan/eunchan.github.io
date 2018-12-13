@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workflow</title>
+  
+  <meta name="keywords" content="writing, workflow, programming">
+  
+  <link rel="stylesheet" media="print" type="text/css" href="./static/css/print.css">
+  <link rel="stylesheet" media="screen" type="text/css" href="./static/css/eunchan.css">
+  <link rel="shortcut icon" href="./static/img/favicon.png">
+
+  
+  
+  
+  <meta property="og:title" content="Workflow" />
+  <meta property="og:site_name" content="Eunchan.Kim" />
+
+
+</head>
+
+<body>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="./">
+      <img src="./static/img/logo2.png">
+    </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMain" class="navbar-menu">
+    <div class="navbar-start">
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="./article/">article</a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="./article/">posts</a>
+          <a class="navbar-item" href="./research/">research</a>
+          <a class="navbar-item" href="./review/">review</a>
+          <a class="navbar-item" href="./tips/">tips &amp; tricks</a>
+        </div>
+      </div>
+      <a class="navbar-item" href="./blog/">journal</a>
+      <a class="navbar-item" href="./travel/">travel</a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">hobby</a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="./motorcycle/">motorcycle</a>
+          <a class="navbar-item" href="./aviation/">aviation</a>
+        </div>
+      </div>
+      <a class="navbar-item" href="./sky/">night sky</a>
+      <a class="navbar-item" href="./eunchan/" rel="author">contact</a>
+    </div><!--/@navbar-start-->
+    <div class="navbar-end">
+    </div><!--/@navbar-end-->
+  </div>
+</nav><!--/@navigation-->
+<div id="docs" class="docs">
+
+<main class="main">
+  <section class="section">
+    <h1 class="title">
+      Workflow
+    </h1>
+
+
+    <p class="subtitle">
+      September 30, 2013
+    </p>
+
+
+  </section><!--/@hero-->
+  <div class="container is-max-desktop">
+    <section class="medium-section">
+
+
+      <div class="content"><!--only html tag-->
+<p>이 글에서 제가 어떻게, 그리고 어떤 도구를 이용해 글을 쓰고 프로그래밍을 하는지 설명하려고 합니다. 그냥 ’이런 방법으로 하는 사람도 있구나….’라고 생각해주시면 됩니다. :) 더 좋은 Workflow를 가지고 계시고, 공유하고 싶으신 분은 아래 Disqus에 답글 달아주세요.</p>
+<h2 id="writing">Writing</h2>
+<p>제가 글을 쓰는 용도는 크게 두가지가 있습니다.</p>
+<ol type="1">
+<li><p>지금 하고 있는 일 같이 사이트에 글을 올리기 위해 쓰는 경우가 있습니다.</p></li>
+<li><p>내부적인 문서화. 예를 들면 하드웨어 디자인 한 부분을 메뉴얼을 작성한다든지, 아니면 Issue 를 정리한다든지 하기위해 글을 씁니다.</p></li>
+</ol>
+<p>위의 두가지 방법에 대해 제가 적용하는 방법이 다릅니다.</p>
+<h3 id="website에-글-쓰기">Website에 글 쓰기</h3>
+<p>저는 사이트를 운용하는 데에 <a href="http://jaspervdj.be/hakyll/">Hakyll</a>을 이용하여 Static Webpage로 만들어서 운용합니다. Static Website로 운용한다는 것은 동적인 내용이 없다는 의미입니다. 워드프로세서나 TextCube같은 블로깅 도구를 들어본 적이 있으실 겁니다. 이 블로깅 도구들은 PHP, Python, Ruby 같은 프로그래밍 언어로 구현되어 있습니다. 이 언어를 웹서버에서 실행하기 위해서 항상 프로그램이 켜져 있어 방문자의 요청에 알맞은 데이터를 가공하여 전송합니다. 그래서 웹서버에서 HTTP 프로그램 이외에 PHP-CGI, Python-WSGI 같은 프로그램이 같이 돌아갑니다.</p>
+<p>이렇게 추가적인 프로그램이 돌아가니 서버 자원을 더 잡아먹습니다. 그 수준이 심각한 수준은 아닙니다. 그러나 낮은 사양 서버에서 돌아가는 사이트는 순간적으로 방문자가 급증하면 처리하는데 시간이 걸릴 수 있습니다. 또한, 이런 언어뿐만이 아니라 데이터를 처리하기 위한 데이터베이스도 동시에 돌아가는 경우가 대부분입니다.</p>
+<p>Static Website는 위에서 언급한 PHP, Python, Ruby 같은 스크립트 언어를 전혀 사용하지 않고 정말 순수하게 html, js, css 같은 정적인 contents로만 이루어진 사이트를 말합니다. 즉, 방문자의 요청에 웹서버는 그저 내부에 있는 파일 내용을 그대로 전달하기만 하면 됩니다. 내부적인 연산이 필요 없고 데이터베이스에 접근할 필요도 없습니다. 그만큼 서버의 연산량은 줄어들게 되고 같은 프로세스 자원으로 더 많은 동시접속자를 처리할 수 있습니다.</p>
+<p>위에서 설명한 대로 정적 사이트는 사이트 내용을 작성하여 원하는 위치에 올려두기만 하면 되기 때문에, 블로깅 도구에서 글을 쓰는 방법인 브라우저에서 글을 쓰는 것이 아니라 오프라인에서 작성하여 html 파일을 만든 후 서버에 올리는 방법을 사용합니다.</p>
+<p>이 html 파일을 직접 손으로 만들 수도 있습니다. 하지만 그 과정이 그다지 쉽지는 않습니다. 모든 페이지마다 사이트의 기본 디자인을 적용해야 하고 내용도 써넣어야 하고. 이러면 내용에 집중하기 어려워집니다. 그래서 html을 만들어내는 도구를 사용합니다. 이러한 도구는 Jekyll, Flask 등 여러 종류가 있는데 저는 Haskell 언어로 만들어진 <a href="http://jaspervdj.be/hakyll/">Hakyll</a>을 사용하고 있습니다.</p>
+<p><a href="http://jaspervdj.be/hakyll/">Hakyll</a>은 Haskell (하스켈로 읽습니다) 언어로 만들어진 정적 웹사이트 라이브러리입니다. 이 라이브러리는 일반 텍스트를 Html로 바꿔주는데, 이를 위해 하스켈 라이브러리 중 하나인 <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a> 라이브러리를 사용합니다. 이 <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>은 입력과 출력으로 여러 포맷을 지원합니다. 그 중 저는 <a href="http://daringfireball.net/projects/markdown/">Markdown</a> 문법을 사용하여 작성하고 있습니다. 깔끔한 문법에 그냥 텍스트만으로도 봐줄 만 하게 만들어지기 때문에 애용하고 있습니다. 한때는 <a href="http://docutils.sourceforge.net/rst.html">RestructuredText</a> 도 썼었으나 하나로 통일하고자 <a href="http://daringfireball.net/projects/markdown/">Markdown</a>으로 합치게 되었습니다.</p>
+<p>글쓰기 도구는 많은 사람들이 그다지 좋아하지 않는 <a href="http://www.vim.org">Vim</a> 을 사용합니다. 일단 편집 도구로 <a href="http://www.vim.org">Vim</a>을 쓰는 이유는 다음과 같습니다.</p>
+<ol type="1">
+<li><p>Unix, Windows 환경과 관계없이 모두 같게 보이도록 만들 수 있습니다. GUI 환경뿐만이 아니라 Terminal 환경도 같게 사용할 수 있습니다.</p></li>
+<li><p>단순히 글쓰기만을 위해서는 그다지 많은 기능이 필요하지 않습니다. 삽입, 삭제, 복사, 붙여넣기, 그리고 textwidth 제한 등 몇 가지 단축키와 설정만 익히면 됩니다.</p></li>
+<li><p><a href="http://www.vim.org">Vim</a>은 많은 Syntax Highlighting 플러그인을 제공합니다. 그 중에 markdown도 지원하고 있습니다. 깔끔하게 필요한 부분을 색으로 강조하기 때문에 번잡스럽지도 않고 좋습니다.</p></li>
+</ol>
+<p>다른 도구들도 몇 가지 시도해 보았습니다만 딱 제 맘에 드는 도구가 없어서 다시 Vim으로 돌아왔습니다. <a href="http://writemonkey.com">WriteMonkey</a>는 Markdown 을 지원하지만, 한글에서 문제가 있어서 한글 문서를 작성할 때에는 오히려 Vim보다 가독성이 떨어집니다. <a href="http://www.literatureandlatte.com">Scrivener</a>는 기능이 너무 방대하고 데이터가 raw 텍스트로 저장되지 않는 점 때문에 제외되었습니다.</p>
+<p>Windows에서는 불가능하지만, Mac에서는 MacVim을 이용해 좀 더 집중된 글쓰기를 할 수 있습니다. MacVim에서는 <strong>fullscreen</strong> 환경을 지원하는데 이 옵션을 이용해 깔끔하게 Vim만 바탕화면에 나오게 한 후 글쓰기를 할 수 있습니다.</p>
+<pre class="bashrc"><code>function! DistractionFree()
+    if has('macunix')
+        NERDTreeClose
+        set fuoptions-=maxhorz
+        set columns=82
+        set laststatus=0
+        set fullscreen
+    endif
+endfunction</code></pre>
+<p>제가 기본적으로 사용하는 Plugin이 NERDTree이므로 이를 닫고 가운데 정렬을 하기 위해 fuoptions로 maxhorz를 끕니다. 그 후 columns를 82로 설정해 <code>set textwidth=78</code> 에 알맞게 넓이를 설정한 후 fullscreen 상태로 진입합니다.</p>
+<figure>
+<img src="//storage.eunchan.kim/media/page/workflow/macvim-fullscreen.png" alt /><figcaption>MacVim Fullscreen Mode</figcaption>
+</figure>
+<p><strong>Update (2016-12-28)</strong> 최근에는 VIM 뿐만이 아니라, Atom 에디터도 사용하고 있습니다. 테마도 여러가지 지원하고, Sublime Text 같이 플러그인을 지원해서 오른쪽 sidebar에 minimap도 추가할 수 있습니다. 메모리를 많이 잡아먹고 조금 느린 느낌이 있긴 하지만, 꾸준히 사용해 볼 생각입니다. / End of Update</p>
+<p>이렇게 작성된 markdown(.md) 파일은 그대로 <a href="http://git-scm.org">Git</a> 저장소에 버전관리가 됩니다. 이 <a href="http://git-scm.org">Git</a> 저장소는 서버와 Bitbucket에 모두 저장됩니다. 이 저장소는 문서와 웹사이트 디자인 파일을 포함하고 있고, 실제 Hakyll Configuration 코드는 <a href="https://github.com/eunchan/website.code">Github</a>에 공개되어 있습니다. 그러나 사진 등은 용량이 커서 따로 관리하고 있습니다. 일단은 구글 드라이브로 공유 폴더를 만들어서 동기화 시키고 있는데 뭔가 다른 방법을 찾아봐야 할 것 같습니다. 차라리 Git 저장소에 사진까지 보관하는 것이 나을 것 같다는 생각도 듭니다.</p>
+<p><del>문서를 만들고 나면 서버의 Git 저장소에서 바로 사이트를 빌드하면 그대로 Website가 변경됩니다. 문서를 만들고 사이트를 갱신하는 데에 몇 가지 단계가 존재(저장소 커밋 –&gt; 저장소 원격 Push –&gt; 원격에서 Build)하는데 이 부분을 Git의 post-receive hook을 사용하여 해결하였습니다.</del></p>
+<p><strong>Update (2016-12-28)</strong> 사이트를 Amazon Web Service로 옮기면서 상시 서버를 돌리지 않아서 post-receive hook은 사용하지 않게 되었습니다. Travis CI 같은 서비스를 이용해도 되겠지만, 일단은 랩탑에서 웹사이트를 만들어서 업로드하고 있습니다. / End of Update</p>
+<h3 id="내부-문서작성용-글쓰기">내부 문서작성용 글쓰기</h3>
+<p>제가 말하는 내부 문서는 사이트에 올리지 않는 문서를 말합니다. 내부문서는 불량 분석 보고서가 될 수도 있고 하드웨어 디자인 메뉴얼, 업무 메뉴얼이 될 수도 있습니다.</p>
+<p>문서작성은 아무리 강조해도 지나치지 않습니다. 문서를 잘 기록해 두어야 추후 해당 기록을 다시 살펴볼 수 있습니다. 그리고 다른 사람이 해당 업무를 이해하는데에도 큰 도움이 됩니다. 그래서 전 늘 업무 중간마다 문서작업을 합니다. 이를 편하게 하려고 저는 워드프로세서를 사용하지 않고 텍스트 편집을 합니다.</p>
+<p>저의 경우는 약간은 광적으로 Raw Text 저장에 집착하는 편입니다. 무엇인가 특정한 종속된 Format으로 저장되는 것에 어떤 불안감이 있는 것 같습니다. 물론 이런 이유만은 아니고 텍스트 저장이 몇 가지 장점이 있습니다.</p>
+<ol type="1">
+<li><p>텍스트는 용량이 매우 작습니다. 일반적인 Word 파일(.docx)의 경우 그다지 많은 글을 쓰지 않았음에도 용량이 매우 늘어납니다. 가벼운 글을 쓰기엔 프로그램 자체도 꽤 무거운 편입니다. 텍스트로 저장하면 용량이 글자 하나당 1~3 Byte밖에 차지하지 않습니다. 아무리 많이 써봐야 수백 kByte 수준 내에 대부분의 문서 작성이 끝납니다.</p></li>
+<li><p>텍스트 저장을 하면 Version Control이 가능합니다. 저는 <a href="http://git-scm.org">Git</a>을 이용해 버전 관리를 하는데, <a href="http://git-scm.org">Git</a>은 Source code같이 raw text 버전관리에 특화된 도구입니다. 이 도구를 이용해 일반 문서 버전관리를 하려면 일반 문서도 raw text이면 좋습니다. 바이너리 파일의 경우 <a href="http://git-scm.org">Git</a> 같은 open source VCS(Version Control System)의 경우 파일 전체를 새로 저장합니다. 그러나 raw text는 이전 버전과의 차이점만을 저장하므로 공간이 많이 절약됩니다.</p></li>
+<li><p>배포에 제약이 없습니다. 텍스트 파일이므로 그대로 전달하여도 어느 정도는 보는 데에 무리가 없습니다. 그러나 저는 일반적으로 PDF로 만들어서 배포하는 편입니다.</p></li>
+</ol>
+<p>물론 텍스트 파일로 문서화 하는 것이 장점만 있는 것은 아닙니다. 굉장히 불편한 단점이 있는데, 표 작성입니다. 간단한 표는 작성하는데 불편하지 않지만 조금만 커지면 표 작성하는 것이 고역입니다. 이 부분은 아직 딱히 해결방법이 보이질 않습니다. 엑셀로 작성 후 Text로 변환하는 것도 고려해 보았지만 그다지 신통치 않았습니다. 되도록 표 작성을 줄이는 방향으로 가고 있습니다.</p>
+<p>텍스트 작성을 <a href="http://daringfireball.net/projects/markdown/">Markdown</a> 형식에 맞춰서 작성하면, 위에서 언급한 <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>을 이용하여 PDF로 변환할 수 있습니다. 간단한 테스트를 해보고 싶다면 <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>을 설치하시고 짧은 Markdown 파일을 만든 후 pandoc으로 다음 명령을 실행해 보세요.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="fu"># 큰제목</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a><span class="fu">## 소제목</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>간단한 Markdown 파일입니다.</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a><span class="ss">- </span>리스트 1</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a><span class="ss">- </span>리스트 2</span></code></pre></div>
+<pre><code>$ pandoc simple.md -o simple.pdf</code></pre>
+<p>위의 명령을 실행하면 깔끔한 PDF 를 얻을 수 있습니다. 다만, 한글 저장은 UTF-8 인코딩으로 저장하세요.</p>
+<p>저는 저 방법을 사용하는데 중간 단계를 하나 거칩니다. Pandoc에서 바로 PDF를 변환하면 code 블럭이 verbatim 환경<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> 으로 정의가 돼서 입맛에 맞게 수정을 하기 어렵습니다. 그래서 tex로 변환 후 verbatim을 <code>Verbatim</code> 환경으로 치환합니다. 그 후 tex를 latex 도구를 이용해 PDF로 변환합니다.</p>
+<p>이 과정에서 사용되는 도구는 <strong>Pandoc</strong>, <strong>texlive</strong>, <strong>sed</strong> 또는 윈도우에서 <strong>fart</strong> 입니다.</p>
+<p>이 설정은 <a href="http://bitbucket.org/eunchan/docs/">Docs 저장소</a>에 들어있습니다. 필요하신 분은 fork해서 사용하세요.</p>
+<!-- SKY LINKS -->
+<!-- AVIATION LINKS -->
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>LaTeX에서 사용되는 환경입니다.<code>&lt;pre&gt;&lt;code&gt;</code>와 같다고 생각하시면 됩니다.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+
+<nav class="pagination is-small" role="navigation" aria-label="pagination">
+    
+    
+</nav>
+
+
+<div class="comment">
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+var disqus_config = function () {
+this.page.url = "https://www.eunchan.kim/workflow.html";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "Workflow"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://eunchan.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<!--    <p>Comment system is closed.
+        Please send email to <a href="javascript:location='mailto:\u006d\u0065\u0040\u0065\u0075\u006e\u0063\u0068\u0061\u006e\u002e\u006b\u0069\u006d';void 0"><script type="text/javascript">document.write('\u006d\u0065\u0040\u0065\u0075\u006e\u0063\u0068\u0061\u006e\u002e\u006b\u0069\u006d')</script></a>
+        if you have any question or advise.</p>-->
+</div>
+
+
+
+      </div><!--/@content-->
+
+
+    </section>
+  </div> <!--/@container-->
+</main>
+</div><!--/@docs-->
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p class="copyright">
+        <a href="./eunchan/">E.K</a> | <a href="//creativecommons.org/licenses/by-nc-nd/4.0/"> CCL (BY-NC-ND) </a> except images and stated pages.
+    </p>
+  </div>
+</footer>
+<!-- Call Map.js later in order to load "map_canvas" correctly -->
+<script type="application/ecmascript" src="./static/js/eunchan.js"></script>
+</body>
+</html>

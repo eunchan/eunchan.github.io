@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OS X Other 공간 비우기</title>
+  
+  <meta name="keywords" content="os-x, crashplan, other-storage, out-of-space">
+  
+  <link rel="stylesheet" media="print" type="text/css" href="../../static/css/print.css">
+  <link rel="stylesheet" media="screen" type="text/css" href="../../static/css/eunchan.css">
+  <link rel="shortcut icon" href="../../static/img/favicon.png">
+
+  
+  
+  
+  <meta property="og:title" content="OS X Other 공간 비우기" />
+  <meta property="og:site_name" content="Eunchan.Kim" />
+
+
+</head>
+
+<body>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="../../">
+      <img src="../../static/img/logo2.png">
+    </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMain" class="navbar-menu">
+    <div class="navbar-start">
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="../../article/">article</a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="../../article/">posts</a>
+          <a class="navbar-item" href="../../research/">research</a>
+          <a class="navbar-item" href="../../review/">review</a>
+          <a class="navbar-item" href="../../tips/">tips &amp; tricks</a>
+        </div>
+      </div>
+      <a class="navbar-item" href="../../blog/">journal</a>
+      <a class="navbar-item" href="../../travel/">travel</a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">hobby</a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="../../motorcycle/">motorcycle</a>
+          <a class="navbar-item" href="../../aviation/">aviation</a>
+        </div>
+      </div>
+      <a class="navbar-item" href="../../sky/">night sky</a>
+      <a class="navbar-item" href="../../eunchan/" rel="author">contact</a>
+    </div><!--/@navbar-start-->
+    <div class="navbar-end">
+    </div><!--/@navbar-end-->
+  </div>
+</nav><!--/@navigation-->
+<div id="docs" class="docs">
+
+<main class="main">
+  <section class="section">
+    <h1 class="title">
+      OS X Other 공간 비우기
+    </h1>
+
+
+    <p class="subtitle">
+      December 29, 2015
+    </p>
+
+
+  </section><!--/@hero-->
+  <div class="container is-max-desktop">
+    <section class="medium-section">
+
+
+      <div class="content"><!--only html tag-->
+<figure>
+<img src="//storage.eunchan.kim/media/blog/2015-12-29-disk-utility-status.png" alt /><figcaption>Disk Utility</figcaption>
+</figure>
+<p>오늘에서야 발견했는데, “Disk Utility”에서 Other 공간이 170GB를 차지하고 있는 것을 보았습니다. 어느 녀석이 이리 잡아먹나 알아보기 위해 <a href="https://www.omnigroup.com/more">OmniDiskSweeper</a>를 설치해서 살펴보았는데 이상한 점이 발견됩니다.</p>
+<p>분명히 가용 공간은 겨우 20GB 인데 실제로 검색되는 파일의 총 크기는 125GB 남짓밖에 되지 않았습니다. 뭔가 이상해서 구글링을 해 보니, <a href="https://www.omnigroup.com/more">OmniDiskSweeper</a> 같은 디스크 검사 툴은 <code>root</code>권한으로 실행하는 것이 좋다고 하더군요.</p>
+<pre><code>$ sudo /Application/OmniDiskSweeper.app/Contents/MacOSX/OmniDiskSweeper</code></pre>
+<p>루트권한으로 실행하니 범인이 드러납니다. <code>/.MobileBackups.trash</code> 디렉토리가 77 GB를 잡아먹고 있었네요.</p>
+<p>왜 이렇게 잡아먹나 궁금해서 다시 구글링을 해보니, <code>CrashPlan</code>이 범인이었습니다. CrashPlan을 NAS에서 사용하기위해 Headless로 설치 후 클라이언트만 사용하기에 서비스를 실행 시킬 필요가 없어서 서비스를 중지하고 <code>/.MobileBackups.trash</code> 공간을 확보하기로 합니다.</p>
+<pre><code>서비스 동작 중인지 확인:
+$ ps aux | grep CrashPlanService
+서비스 비활성화 :
+$ sudo launchctl unload /Library/LaunchDaemons/com.crashplan.engine.plist
+재시작시 다시 동작하는 것을 없애기 위해 서비스 파일 삭제:
+$ sudo rm /Library/LaunchDaemons/com.crashplan.engine.plist</code></pre>
+<p>지우고 나니 100 GB가 확보되었네요. :)</p>
+<!-- SKY LINKS -->
+<!-- AVIATION LINKS -->
+
+
+<nav class="pagination is-small" role="navigation" aria-label="pagination">
+    
+    <a class="pagination-next" href="../../blog/2016/gtd-omnifocus-2.html" style="float:left;">다음 글</a>
+    
+    
+    <a class="pagination-previous" href="../../blog/2015/stuff-in-2015.html" style="float:right; text-align: right;">이전 글</a>
+    
+</nav>
+
+
+<div class="comment">
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+var disqus_config = function () {
+this.page.url = "https://www.eunchan.kim/blog/2015/free-up-huge-other-storage-space-on-mac-os-x.html";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "OS X Other 공간 비우기"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://eunchan.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<!--    <p>Comment system is closed.
+        Please send email to <a href="javascript:location='mailto:\u006d\u0065\u0040\u0065\u0075\u006e\u0063\u0068\u0061\u006e\u002e\u006b\u0069\u006d';void 0"><script type="text/javascript">document.write('\u006d\u0065\u0040\u0065\u0075\u006e\u0063\u0068\u0061\u006e\u002e\u006b\u0069\u006d')</script></a>
+        if you have any question or advise.</p>-->
+</div>
+
+
+
+      </div><!--/@content-->
+
+
+    </section>
+  </div> <!--/@container-->
+</main>
+</div><!--/@docs-->
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p class="copyright">
+        <a href="../../eunchan/">E.K</a> | <a href="//creativecommons.org/licenses/by-nc-nd/4.0/"> CCL (BY-NC-ND) </a> except images and stated pages.
+    </p>
+  </div>
+</footer>
+<!-- Call Map.js later in order to load "map_canvas" correctly -->
+<script type="application/ecmascript" src="../../static/js/eunchan.js"></script>
+</body>
+</html>

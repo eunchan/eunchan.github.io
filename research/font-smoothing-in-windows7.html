@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Smoothing</title>
+  
+  <link rel="stylesheet" media="print" type="text/css" href="../static/css/print.css">
+  <link rel="stylesheet" media="screen" type="text/css" href="../static/css/eunchan.css">
+  <link rel="shortcut icon" href="../static/img/favicon.png">
+
+  
+  
+  
+  <meta property="og:title" content="Font Smoothing" />
+  <meta property="og:site_name" content="Eunchan.Kim" />
+
+
+</head>
+
+<body>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="../">
+      <img src="../static/img/logo2.png">
+    </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMain" class="navbar-menu">
+    <div class="navbar-start">
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="../article/">article</a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="../article/">posts</a>
+          <a class="navbar-item" href="../research/">research</a>
+          <a class="navbar-item" href="../review/">review</a>
+          <a class="navbar-item" href="../tips/">tips &amp; tricks</a>
+        </div>
+      </div>
+      <a class="navbar-item" href="../blog/">journal</a>
+      <a class="navbar-item" href="../travel/">travel</a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">hobby</a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="../motorcycle/">motorcycle</a>
+          <a class="navbar-item" href="../aviation/">aviation</a>
+        </div>
+      </div>
+      <a class="navbar-item" href="../sky/">night sky</a>
+      <a class="navbar-item" href="../eunchan/" rel="author">contact</a>
+    </div><!--/@navbar-start-->
+    <div class="navbar-end">
+    </div><!--/@navbar-end-->
+  </div>
+</nav><!--/@navigation-->
+<div id="docs" class="docs">
+
+<main class="main">
+  <section class="section">
+    <h1 class="title">
+      Font Smoothing
+    </h1>
+
+
+    <p class="subtitle">
+      January 3, 2012
+    </p>
+
+
+  </section><!--/@hero-->
+  <div class="container is-max-desktop">
+    <section class="medium-section">
+
+
+      <div class="content"><!--only html tag-->
+<p>Windows에서 Cleartype이 활성화되어있음에도 몇몇 폰트들, 예를들면 Helvetica나 <a href="http://developer.android.com/design/style/typography.html">Roboto</a> 폰트같은 Manual hint가 포함되지 않은 글꼴들은 작은 폰트 크기에서 명료하게 보이지 않습니다. Cleartype자체가 어느정도 한계를 지니고 있습니다.</p>
+<p><a href="http://developer.android.com/design/style/typography.html">Roboto</a> 폰트의 경우 Mac OS X나 리눅스, 안드로이드에서 매우 깔끔하게 보입니다. 그러나 Windows 7에서는 이 폰트는 거칠고 울퉁불퉁하여 사용할 수 없을 수준입니다.</p>
+<p>이러한 문제를 해결하기 위해 몇몇 프로젝트가 진행되고 있습니다. 저는 <a href="http://code.google.com/p/gdipp/">GDI++</a> 를 사용하였습니다. 매우 좋은 대안으로는 <a href="http://mactype.themex.net">MacType</a> 이 있습니다. 이러한 프로젝트는 Windows의 기본 라이브러리인 <strong>GDI+</strong> 를 대체하여 폰트 그리기를 독자적으로 수행합니다. 이 프로그램을 이용하면 리눅스에서 보이는 것과 동일하게 위의 폰트들에서도 작은 폰트크기로 깔끔한 글꼴을 보여줍니다.</p>
+<!-- SKY LINKS -->
+<!-- AVIATION LINKS -->
+
+      </div><!--/@content-->
+
+
+    </section>
+  </div> <!--/@container-->
+</main>
+</div><!--/@docs-->
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p class="copyright">
+        <a href="../eunchan/">E.K</a> | <a href="//creativecommons.org/licenses/by-nc-nd/4.0/"> CCL (BY-NC-ND) </a> except images and stated pages.
+    </p>
+  </div>
+</footer>
+<!-- Call Map.js later in order to load "map_canvas" correctly -->
+<script type="application/ecmascript" src="../static/js/eunchan.js"></script>
+</body>
+</html>

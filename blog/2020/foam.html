@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foam</title>
+  
+  <link rel="stylesheet" media="print" type="text/css" href="../../static/css/print.css">
+  <link rel="stylesheet" media="screen" type="text/css" href="../../static/css/eunchan.css">
+  <link rel="shortcut icon" href="../../static/img/favicon.png">
+
+  
+  
+  
+  <meta property="og:title" content="Foam" />
+  <meta property="og:site_name" content="Eunchan.Kim" />
+
+
+</head>
+
+<body>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="../../">
+      <img src="../../static/img/logo2.png">
+    </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMain" class="navbar-menu">
+    <div class="navbar-start">
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="../../article/">article</a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="../../article/">posts</a>
+          <a class="navbar-item" href="../../research/">research</a>
+          <a class="navbar-item" href="../../review/">review</a>
+          <a class="navbar-item" href="../../tips/">tips &amp; tricks</a>
+        </div>
+      </div>
+      <a class="navbar-item" href="../../blog/">journal</a>
+      <a class="navbar-item" href="../../travel/">travel</a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">hobby</a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="../../motorcycle/">motorcycle</a>
+          <a class="navbar-item" href="../../aviation/">aviation</a>
+        </div>
+      </div>
+      <a class="navbar-item" href="../../sky/">night sky</a>
+      <a class="navbar-item" href="../../eunchan/" rel="author">contact</a>
+    </div><!--/@navbar-start-->
+    <div class="navbar-end">
+    </div><!--/@navbar-end-->
+  </div>
+</nav><!--/@navigation-->
+<div id="docs" class="docs">
+
+<main class="main">
+  <section class="section">
+    <h1 class="title">
+      Foam
+    </h1>
+
+
+    <p class="subtitle">
+      June 30, 2020
+    </p>
+
+
+  </section><!--/@hero-->
+  <div class="container is-max-desktop">
+    <section class="medium-section">
+
+
+      <div class="content"><!--only html tag-->
+<h2 id="overview">Overview</h2>
+<p><a href="https://github.com/foambubble/foam"><strong>Foam</strong></a>은 <a href="https://roamresearch.com/">Roam Research</a>와 <a href="https://zettelkasten.de/">Zettelkasten</a>에 영감을 받아 만든 개인 지식 관리 시스템입니다. 다르게 말하면 기능을 배낀 아류작이죠.</p>
+<h3 id="personal-knowledge-management-pkm-system">Personal Knowledge Management (PKM) system</h3>
+<p>개인 지식관리 시스템 (이하 PKM)은 쉽게 생각하면 개인 위키입니다. 각 위키 글 별로 주제가 있고 그 사이를 연결하는 하이퍼텍스트 링크가 있죠. PKM도 작은 단위의 글, 정보를 디렉토리 구조와 상관없이 기록하고 서로 링크를 걸어 정보가 꼬리에 꼬리를 물고 이어질 수 있게 하는 시스템입니다.</p>
+<p>개인 위키는 위키를 구동할 호스팅 서버가 필요한 게 보통인 데, PKM은 프로그램을 통해 구동하거나 다른 IDE에 플러그인으로 제공되는 경우가 대부분입니다.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> 중앙서버에서 동작하는 <a href="https://supernotes.com/">Super Notes</a>나 <a href="https://roamresearch.com/">Roam Research</a>도 개인이 서버를 운영하는 게 아니라 만든 회사의 클라우드 서비스를 이용하는 것이니 서버 관리의 괴로움은 없죠.</p>
+<h2 id="install">Install</h2>
+<ul>
+<li>VSCode 설치</li>
+<li><a href="https://github.com/foambubble/foam-template">foam-template</a> 코드 저장소 템플릿을 이용해 개인 저장소 생성</li>
+<li>로컬 디렉토리로 Clone</li>
+<li>VSCode에서 해당 저장소 디렉토리를 오픈</li>
+<li>처음 오픈 시 Extension 설치를 물어보는 데 <em>Install All</em></li>
+</ul>
+<p>저의 경우에는 여기에 추가로 <em>Markdown Footnotes</em>를 설치했습니다. 다른 곳에서도 설치하려면 <code>.vscode/extensions.json</code>에 아래 라인을 추가하면 됩니다.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="er">//</span> <span class="er">file:</span> <span class="er">.vscode/extensions.json</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="fu">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>    <span class="dt">&quot;recommendations&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>        <span class="er">//</span> <span class="er">...</span> <span class="er">prev</span> <span class="er">extensions</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>        <span class="er">...</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>        </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>        <span class="er">//</span> <span class="er">Markdown</span> <span class="er">Footnotes</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>        <span class="st">&quot;bierner.markdown-footnotes&quot;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>    <span class="ot">]</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a><span class="fu">}</span></span></code></pre></div>
+<h2 id="사용법">사용법</h2>
+<p>PKM의 핵심은 Backlink와 Graph입니다. 역링크는 현재 페이지를 가리키는 링크를 가지고 있는 페이지 목록을 보여주는 것이고, Graph는 페이지가 서로 어떻게 연결되어 있는지 그래프로 그려주는 기능입니다. 이 두개의 기능을 통해 페이지가 독립되어 있지만 서로 엮여있을 수 있게 됩니다.</p>
+<p>아직은 Foam이 <a href="https://roamresearch.com/">Roam Research</a>의 모든 기능을 구현하지는 못해서 subdirectory document를 graph로 잘 못 보여준다던지, Daily Note 기능이 없고, Unique ID도 없지만, 핵심인 두가지가 있어서 여전히 도움이 많이 됩니다.</p>
+<p>일단 기록하고자 하는 페이지를 만들고 (.md 확장자) 그 안에 두서없이 짤막하게 기록합니다. 주제하나에 너무 많은 글을 기록하는 것은 나중에 관리하기가 어려워 지는 듯 합니다. 자세하게 써야 하는 내용이 있다면, 해당 내용은 따로 파일을 생성해서 Internal Link를 걸어주는 게 낫습니다.</p>
+<p>예를 들면 아래와 같이 VSCode에 대한 설명은 따로 링크를 걸어서 <code>vscode.md</code> 파일에 기록합니다.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="fu"># FOAM 사용법</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>FOAM은 ROAM 기능을 [<span class="co">[</span><span class="ot">VSCode</span><span class="co">]</span>]에 구현한 Extension이다.</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>#foam #roam #vscode</span></code></pre></div>
+<p>그러면 <code>vscode.md</code> 페이지에서 역링크는 <code>foam.md</code>가 보이고, Graph에서 두 페이지가 서로 연결되어있습니다.</p>
+<p>일견 단순해 보여서 효과가 없을 것 같아 보입니다. 그러나 정보가 쌓일 수록 정보가 꼬리에 꼬리를 물게 되어 하나의 주제를 선택해서 여러 다양한 정보를 뽑아낼 수 있습니다.</p>
+<!-- SKY LINKS -->
+<!-- AVIATION LINKS -->
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p><a href="https://supernotes.com/">Super Notes</a>나 <a href="https://roamresearch.com/">Roam Research</a>의 경우에는 중앙 서버에서 구동됩니다.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+
+<nav class="pagination is-small" role="navigation" aria-label="pagination">
+    
+    <a class="pagination-next" href="../../blog/2020/ktm-790-adventure-r.html" style="float:left;">다음 글</a>
+    
+    
+    <a class="pagination-previous" href="../../blog/2020/kimchi-jjigae.html" style="float:right; text-align: right;">이전 글</a>
+    
+</nav>
+
+
+<div class="comment">
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+var disqus_config = function () {
+this.page.url = "https://www.eunchan.kim/blog/2020/foam.html";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "Foam"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://eunchan.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<!--    <p>Comment system is closed.
+        Please send email to <a href="javascript:location='mailto:\u006d\u0065\u0040\u0065\u0075\u006e\u0063\u0068\u0061\u006e\u002e\u006b\u0069\u006d';void 0"><script type="text/javascript">document.write('\u006d\u0065\u0040\u0065\u0075\u006e\u0063\u0068\u0061\u006e\u002e\u006b\u0069\u006d')</script></a>
+        if you have any question or advise.</p>-->
+</div>
+
+
+
+      </div><!--/@content-->
+
+
+    </section>
+  </div> <!--/@container-->
+</main>
+</div><!--/@docs-->
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p class="copyright">
+        <a href="../../eunchan/">E.K</a> | <a href="//creativecommons.org/licenses/by-nc-nd/4.0/"> CCL (BY-NC-ND) </a> except images and stated pages.
+    </p>
+  </div>
+</footer>
+<!-- Call Map.js later in order to load "map_canvas" correctly -->
+<script type="application/ecmascript" src="../../static/js/eunchan.js"></script>
+</body>
+</html>
