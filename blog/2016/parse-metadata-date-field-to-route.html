@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hakyll Route for Metadata `date` Field</title>
+  
+  <meta name="keywords" content="hakyll, haskell, metadata, customRoute">
+  
+  <link rel="stylesheet" media="print" type="text/css" href="../../static/css/print.css">
+  <link rel="stylesheet" media="screen" type="text/css" href="../../static/css/eunchan.css">
+  <link rel="shortcut icon" href="../../static/img/favicon.png">
+
+  
+  
+  
+  <meta property="og:title" content="Hakyll Route for Metadata `date` Field" />
+  <meta property="og:site_name" content="Eunchan.Kim" />
+
+
+</head>
+
+<body>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="../../">
+      <img src="../../static/img/logo2.png">
+    </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMain" class="navbar-menu">
+    <div class="navbar-start">
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="../../article/">article</a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="../../article/">posts</a>
+          <a class="navbar-item" href="../../research/">research</a>
+          <a class="navbar-item" href="../../review/">review</a>
+          <a class="navbar-item" href="../../tips/">tips &amp; tricks</a>
+        </div>
+      </div>
+      <a class="navbar-item" href="../../blog/">journal</a>
+      <a class="navbar-item" href="../../travel/">travel</a>
+      <a class="navbar-item" href="../../motorcycle/">motorcycle</a>
+      <a class="navbar-item" href="../../sky/">night sky</a>
+      <a class="navbar-item" href="../../eunchan/" rel="author">contact</a>
+    </div><!--/@navbar-start-->
+    <div class="navbar-end">
+    </div><!--/@navbar-end-->
+  </div>
+</nav><!--/@navigation-->
+<div id="docs" class="docs">
+
+<main class="main">
+  <section class="section">
+    <h1 class="title">
+      Hakyll Route for Metadata `date` Field
+    </h1>
+
+
+    <p class="subtitle">
+      March 11, 2016
+    </p>
+
+
+  </section><!--/@hero-->
+  <div class="container is-max-desktop">
+    <section class="medium-section">
+
+
+      <div class="content"><!--only html tag-->
+<p>블로그 URL을 보면 이전과는 좀 달라졌습니다. 예전엔 url이 <code>blog/YYYY-MM-DD-post.html</code> 방식이었다면, 새로운 URL은 <code>blog/YYYY/MM/DD/post.html</code> 형태로 바뀌었습니다.</p>
+<p>변경을 한 이유는, 블로그 글이라면 제목과 연관된 URL이 유지되어야 하는데 그 앞에 항상 년,월,일 이 디렉토리 형태도 아니고 같은 묶음으로 다니는게 조금은 이치에 맞지 않는 것 같았기 때문입니다. 그래서 아카이브 형태로 년,월,일 을 디렉토리로 구분하였습니다. 글을 자주 쓰는 게 아니니 년,월,일 보다 2016, 2015 해서 년만 넣어도 충분하겠지만 일단은 이렇게 가는 걸로 하죠. ㅎㅎ</p>
+<p>기존에 블로그에 글을 쓸 때에는 <code>blog/</code> 디렉토리 밑에 URL과 동일했던 마크다운 파일을 두고 글을 썼습니다. 지금이야 글이 꼴랑 20개 남짓이라 문제가 없지만, 나중에,, 아마 한 5년은 걸리겠지만, 나중에 100개 이상이 되었을 때 한 폴더에 모든 글을 다 보관한다는 건 조금은 번거로운 일이 될 것 같아서 방식을 바꾸기로 했습니다.</p>
+<p>새로운 방식은, <code>blog/</code> 밑에 어느 폴더에 두더라도 <code>blog/YYYY/MM/DD/post.html</code> 형태로 바꾸도록 변경했습니다. Hakyll에서는 URL을 결정하는 Rule을 <code>Route</code>라는 이름으로 만들었습니다. 이 Route에 원하는 규칙을 넣으면 그 규칙대로 대상 URL이 결정됩니다.</p>
+<p>아래의 코드는 위의 <code>blog/</code> 를 위해 만든 규칙입니다.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="co">-- | Route based on metadata field 'date' -------------------------------------</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="ot">dateRoute ::</span> <span class="dt">FilePath</span> <span class="ot">-&gt;</span> <span class="dt">Routes</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>dateRoute prefix <span class="ot">=</span> metadataRoute (f prefix)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>  <span class="kw">where</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>    f p md <span class="ot">=</span> customRoute <span class="op">$</span> pullDateToFilePath p md</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a><span class="co">-- | Add prefix then compose YYYY/MM/DD/post.html format ----------------------</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a><span class="ot">pullDateToFilePath ::</span> <span class="dt">FilePath</span> <span class="ot">-&gt;</span> <span class="dt">Metadata</span> <span class="ot">-&gt;</span> <span class="dt">Identifier</span> <span class="ot">-&gt;</span> <span class="dt">FilePath</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>pullDateToFilePath p m i <span class="ot">=</span> p <span class="op">&lt;/&gt;</span> (convertDateToFilePath m i)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a>  <span class="kw">where</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a>    convertDateToFilePath md id' <span class="ot">=</span> convertLocalTimetoISO (md <span class="op">M.!</span> <span class="st">&quot;date&quot;</span>) (M.lookup <span class="st">&quot;slug&quot;</span> md) <span class="op">$</span> toFilePath id'</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a>    <span class="co">-- convertLocalTimetoISO :: String -&gt; Maybe String -&gt; FilePath -&gt; FilePath</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a>    convertLocalTimetoISO d (<span class="dt">Just</span> s) _ <span class="ot">=</span> toISO d <span class="op">&lt;/&gt;</span> s <span class="op">&lt;.&gt;</span> <span class="st">&quot;.html&quot;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true"></a>    convertLocalTimetoISO d <span class="dt">Nothing</span> fp <span class="ot">=</span> toISO d <span class="op">&lt;/&gt;</span> chopDayFromFileName fp</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true"></a>    chopDayFromFileName fp' <span class="ot">=</span> replaceAll <span class="st">&quot;[0-9]{4}-[0-9]{2}-[0-9]{2}-&quot;</span> (<span class="fu">const</span> <span class="st">&quot;&quot;</span>) <span class="op">$</span> takeFileName fp'</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true"></a>    toISO dateString <span class="ot">=</span> formatTime defaultTimeLocale <span class="st">&quot;%Y/%m/%d&quot;</span> <span class="op">$</span> readTimeFromMetadataString dateString</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true"></a><span class="co">-- TODO: Make more format </span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true"></a><span class="ot">readTimeFromMetadataString ::</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">UTCTime</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true"></a>readTimeFromMetadataString dateString <span class="ot">=</span> parseTimeOrError <span class="dt">False</span> defaultTimeLocale <span class="st">&quot;%B %e, %Y&quot;</span> dateString</span></code></pre></div>
+<p>일단 post 내의 메타데이터 <code>date</code> 를 이용하기 위해 <code>metadataRoute</code> 가 사용됩니다. 이 <code>metadataRoute</code> 는 함수 인자를 받는데 <code>Metadata -&gt; Route</code>, 즉 <code>Metadata</code>를 입력으로 받고 결과가 <code>Route</code>인 함수를 인자로 받습니다.</p>
+<p><code>Metadata</code>를 이용해 <code>YYYY/MM/DD</code> 형식으로 변경해야 하므로 <code>customRoute</code>를 사용해서 원하는 형태로 바꿔주도록 합니다. <code>customRoute</code>는 <code>metadataRoute</code>와 비슷하게 함수 하나를 인자로 받습니다. 이 함수는 <code>Identifier -&gt; FilePath</code> 타입으로 <code>Identifier</code>를 입력으로 받고 최종 URL인 <code>FilePath</code>를 결과로 내는 함수입니다.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a>f p md <span class="ot">=</span> customRoute <span class="op">$</span> pullDateToFilePath p md</span></code></pre></div>
+<p>Higher Order Function을 이용해서 <code>pullDateToFilePath</code> 함수를 <code>Identifier -&gt; FilePath</code> 처럼 인식되게 했습니다. 실제 <code>pullDateToFilePath</code>의 타입은 <code>pullDateToFilePath :: FilePath -&gt; Metadata -&gt; Identifier -&gt; FilePath</code> 이죠. 즉, FilePath, Metadata, Identifier를 입력 받아서 FilePath를 리턴하는 함수입니다.</p>
+<p><code>Metadata</code>는 <code>Data.Map</code> 타입이라 원하는 필드, <code>date</code>, <code>slug</code> 를 검색할 수 있습니다. 이를 검색해서 <code>date</code>는 YYYY/MM/DD 형태로 바꿔주도록 하고 <code>slug</code>가 있다면 사용하고 없다면 파일 이름을 사용하도록 합니다.</p>
+<p>그래서 <code>slug</code>를 검색할 때는 <code>M.lookup "slug" md</code> 로 해서 <code>Maybe</code> Monad로 결과를 받고 <code>Just</code> 또는 <code>Nothing</code>으로 처리합니다.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a>    convertDateToFilePath md id' <span class="ot">=</span> convertLocalTimetoISO (md <span class="op">M.!</span> <span class="st">&quot;date&quot;</span>) (M.lookup <span class="st">&quot;slug&quot;</span> md) <span class="op">$</span> toFilePath id'</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>    <span class="co">-- convertLocalTimetoISO :: String -&gt; Maybe String -&gt; FilePath -&gt; FilePath</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a>    convertLocalTimetoISO d (<span class="dt">Just</span> s) _ <span class="ot">=</span> toISO d <span class="op">&lt;/&gt;</span> s <span class="op">&lt;.&gt;</span> <span class="st">&quot;.html&quot;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>    convertLocalTimetoISO d <span class="dt">Nothing</span> fp <span class="ot">=</span> toISO d <span class="op">&lt;/&gt;</span> chopDayFromFileName fp</span></code></pre></div>
+<p>이 방식을, <code>sky/log/</code> 에도 적용해서 그 부분도 YYYY/MM/DD 형식으로 저장되도록 했습니다.</p>
+<p>이번 수정을 하면서 Haskell의 깔끔한 구현 방식이 논리적으로 생각하는 흐름에 맞게 잘 되어있구나, 라는 생각이 다시 한번 들었습니다. 생각의 흐름 그대로 top down이나 bottom up 구현을 해 나갈 수 있어서 큰 무리 없이 수정이 가능했습니다.</p>
+<!-- SKY LINKS -->
+
+
+<nav class="pagination is-small" role="navigation" aria-label="pagination">
+    
+    <a class="pagination-next" href="../../blog/2016/renting-a-single-house.html" style="float:left;">다음 글</a>
+    
+    
+    <a class="pagination-previous" href="../../blog/2016/green-card.html" style="float:right; text-align: right;">이전 글</a>
+    
+</nav>
+
+<div class="comment">
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+var disqus_config = function () {
+this.page.url = "https://www.eunchan.kim/blog/2016/parse-metadata-date-field-to-route.html";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "Hakyll Route for Metadata `date` Field"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://eunchan.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<!--    <p>Comment system is closed.
+        Please send email to <a href="javascript:location='mailto:\u006d\u0065\u0040\u0065\u0075\u006e\u0063\u0068\u0061\u006e\u002e\u006b\u0069\u006d';void 0"><script type="text/javascript">document.write('\u006d\u0065\u0040\u0065\u0075\u006e\u0063\u0068\u0061\u006e\u002e\u006b\u0069\u006d')</script></a>
+        if you have any question or advise.</p>-->
+</div>
+
+
+
+      </div><!--/@content-->
+
+
+    </section>
+  </div> <!--/@container-->
+</main>
+</div><!--/@docs-->
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p class="copyright">
+        <a href="../../eunchan/">E.K</a> | <a href="//creativecommons.org/licenses/by-nc-nd/4.0/"> CCL (BY-NC-ND) </a> except images and stated pages.
+    </p>
+  </div>
+</footer>
+<!-- Call Map.js later in order to load "map_canvas" correctly -->
+<script type="application/ecmascript" src="../../static/js/eunchan.js"></script>
+</body>
+</html>

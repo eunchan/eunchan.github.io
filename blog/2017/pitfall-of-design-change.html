@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pitfall of Design Change</title>
+  
+  <link rel="stylesheet" media="print" type="text/css" href="../../static/css/print.css">
+  <link rel="stylesheet" media="screen" type="text/css" href="../../static/css/eunchan.css">
+  <link rel="shortcut icon" href="../../static/img/favicon.png">
+
+  
+  
+  
+  <meta property="og:title" content="Pitfall of Design Change" />
+  <meta property="og:site_name" content="Eunchan.Kim" />
+
+
+</head>
+
+<body>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="../../">
+      <img src="../../static/img/logo2.png">
+    </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMain" class="navbar-menu">
+    <div class="navbar-start">
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="../../article/">article</a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="../../article/">posts</a>
+          <a class="navbar-item" href="../../research/">research</a>
+          <a class="navbar-item" href="../../review/">review</a>
+          <a class="navbar-item" href="../../tips/">tips &amp; tricks</a>
+        </div>
+      </div>
+      <a class="navbar-item" href="../../blog/">journal</a>
+      <a class="navbar-item" href="../../travel/">travel</a>
+      <a class="navbar-item" href="../../motorcycle/">motorcycle</a>
+      <a class="navbar-item" href="../../sky/">night sky</a>
+      <a class="navbar-item" href="../../eunchan/" rel="author">contact</a>
+    </div><!--/@navbar-start-->
+    <div class="navbar-end">
+    </div><!--/@navbar-end-->
+  </div>
+</nav><!--/@navigation-->
+<div id="docs" class="docs">
+
+<main class="main">
+  <section class="section">
+    <h1 class="title">
+      Pitfall of Design Change
+    </h1>
+
+
+    <p class="subtitle">
+      June 14, 2017
+    </p>
+
+
+  </section><!--/@hero-->
+  <div class="container is-max-desktop">
+    <section class="medium-section">
+
+
+      <div class="content"><!--only html tag-->
+<p>하드웨어 설계는 한번 실수에 대한 비용이 정말 큰 것 같습니다. 공정이 세밀화 되면서 실수 하나로 인해 작게는 Metal ECO에서 크게는 Re-synthesis 까지 가게 되면 비용은 수십억이 소요될 수도 있죠.</p>
+<p>최근에 겪었던 일화를 하나 소개할까 합니다.</p>
+<p>새로운 프로젝트가 진행되면서 기존에 있던 디자인을 개선을 하게 되었습니다. 이 모듈은 주변의 몇몇 모듈과 서로 신호를 주고 받고 있었죠. 개선을 하면서, 내보내는 신호의 특성을 바꾸게 되었는데, 이 수정되는 부분을 통신하는 반대편 모듈에도 적용을 하였습니다. 이상없이 잘 동작하는 것을 보고 칩을 Tape-out했죠.</p>
+<p>문제는 다른데서 터집니다. 또다른 개선버전 프로젝트가 Original project에서 갈라져 나오게 되었는데, 이 프로젝트에서 개선된 디자인을 <strong>하나만</strong> 가져다 쓰게 된거죠. 서로 바뀐 프로토콜을 이해하고 수정된 디자인이 아니니, 기존 디자인은 예전 방식으로 신호가 올 것이라 기대를 하고 새로운 디자인은 새로 정의된 방식으로 신호를 주게 됩니다.</p>
+<p>일반적인 상황에서는 이 부분이 보이지 않았으나 예외의 상황 – 버퍼가 가득찼다던지, 버퍼가 비었다던지 – 에서 문제가 발생합니다. 결국 이 프로젝트도 칩이 이미 나와버려서, 이 부분을 수정하려면 Metal ECO 외에는 선택지가 없었고 큰 비용을 지불하고 새로운 마스크를 만들어야만 했습니다.</p>
+<h2 id="어떻게-미리-막을-수-있을까요">어떻게 미리 막을 수 있을까요?</h2>
+<p>어떻게 이런 불상사를 미리 막을 수 있을까요?</p>
+<h3 id="design-stage">Design Stage</h3>
+<p>일단, 디자인 단계에서부터 차근차근 방법을 생각해 봅시다. 디자인을 할 때, 양쪽 어디든 한 곳에서 <a href="https://www.doulos.com/knowhow/sysverilog/tutorial/assertions/">SVA(System Verilog Assertion)</a>을 사용 해, 기대하는 신호의 특성을 기술했었다면 디자인을 검증하는 단계에서 이 문제를 미리 찾을 수 있었을 겁니다. 예를 들면, 신호가 <code>req/grant</code> 방식에서 <code>pulse</code> 방식으로 바뀌었다고 하면, 양쪽의 SVA는 이렇게 달랐을 겁니다.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode verilog"><code class="sourceCode verilog"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="co">// Old Design (In)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>property p_req_grant;</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>    @(<span class="kw">posedge</span> clk) <span class="kw">disable</span> iff (!rst_n) I_REQ |-&gt; ##[<span class="dv">1</span>:<span class="dv">3</span>] I_REQ &amp;&amp; O_GRANT; </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>endproperty</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a><span class="dv">ap_req_grant:</span> assert property (p_req_grant);</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode verilog"><code class="sourceCode verilog"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="co">// New Design (Out)</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>property p_pulse;</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>    @(<span class="kw">posedge</span> clk) <span class="kw">disable</span> iff (!rst_n) O_REQ |-&gt; #<span class="bn">#1</span> !O_REQ;</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>endproperty</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a><span class="dv">ap_pulse:</span> assert property (p_pulse);</span></code></pre></div>
+<p>그러면, 받는 쪽에서 의도하지 않은 신호가 왔을 경우 Assertion Error가 났을겁니다.</p>
+<p>다른 한 방법은 신호의 특성이 바뀌었으니 port 이름도 바꾸었다면 두 디자인을 엮을 때 발견할 수도 있었을 겁니다. 위의 예를 들면 <code>O_REQ</code>가 <code>O_REQ_PULSE</code> 로 바뀌는 것을 예로 들 수 있겠네요.</p>
+<h3 id="ip-verification-soc-verification">IP Verification, SoC Verification</h3>
+<p>만일 디자인 단계에서 이 부분을 걸러내지 못했다면, 그 다음에 있을 검증 단계에서는 어떻게 찾을 수 있었을까요? IP 검증이나 SoC 검증에서 <a href="http://www.asic-world.com/systemverilog/coverage1.html">Functional Coverage</a>가 잘 기술되어 있었다면, 이 문제를 발견할 수 있었으리라 봅니다. 너무나 단순한 실수임에도 불구하고, 그 상황이 예외적인 상황이었다면 그 문제를 발견하지 못하고 진행될 경우가 많습니다.</p>
+<p>그러나 시작은 이 한 부분이었을지라도 그것에 영향을 끼치는 부분은 꽤 많이 있습니다. 위에서 예를 들었던, 버퍼가 가득찬 상태를 보죠.</p>
+<p>만일 <code>covgroup</code>이 buffer full 상태를 포함하고 있었다면, 검증 엔지니어가 coverage report에서 부족한 부분을 발견하고 해당 testcase를 추가했을 겁니다. 그러면 문제가 조기 발견될 수 있었겠죠.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode verilog"><code class="sourceCode verilog"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a>covergroup buffer @(<span class="kw">posedge</span> push_req);</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>    <span class="dv">full:</span> coverpoint buf_full {</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a>        bins not_full = {<span class="dv">0</span>};</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>        bins full     = {<span class="dv">1</span>};</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>    }</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a>    <span class="dv">empty:</span> coverpoint buf_empty {</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a>        bins not_empty = {<span class="dv">0</span>};</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a>        bins empty     = {<span class="dv">1</span>};</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a>    }</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a>endgroup</span></code></pre></div>
+<h2 id="closing">Closing</h2>
+<p>디자인을 할 때에나, 디자인을 수정할 때에 엔지니어에게 가장 중요한 것은 아무리 봐도 <strong>꼼꼼함</strong> 인 것 같습니다. 저도 시간에 쫓기며 워낙에 덜렁대다보니 이런 저런 실수를 종종 해왔는데요. 저부터 반성을 많이 하게 됩니다.</p>
+<p>하드웨어 디자인 엔지니어 대부분이 systemverilog의 <code>assertion</code> 이나 <code>covergroup</code>을 들어본 적도 없다는 사실에 깜짝 놀랄 때가 많습니다. 이미 수십년간 하드웨어 디자인 언어가 발전해 오면서 가장 빈번하게 발생하는 사람에 의한 실수를 막을 수 있는 많은 방법이 언어에 녹아들어있습니다. 이런 새롭게 추가된 기능을 툴이 허용하는 한도 내에서 충분히 활용한다면, <strong>꼼꼼함</strong>이 부족한 저같은 사람에게 큰 도움이 될 것 같네요.</p>
+<p>새로운 기능을 시도할 때 주의할 점은, 이 기능이 현재의 디자인 프로세스에 모두 적용될 수 있는 지 검토하는 것 일것 같습니다. SystemVerilog 가 Hardware Description 기능도 많이 추가되었는데, 그 중 몇몇은 현행 버전 도구에서도 아직 지원하지 않는 것이 있습니다. 이게 Design Compiler가 지원을 하지 않으면 합성 전에 수정이 되어 괜찮은데, Design Compiler는 지원을 하고, FPGA Synthesis 도구는 지원을 하지 않거나, LEC(Logic Equivalent Check) 도구가 지원을 하지 않게 되면 나중에 이러지도 저러지도 못하는 상황이 발생할 수 있습니다.</p>
+<p>모두 꼼꼼함을 최 우선 덕목으로 삼고 버그 없는 칩을 잘 만들어 봐요.</p>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://www.doulos.com/knowhow/sysverilog/tutorial/assertions/">SystemVerilog Assertions</a></li>
+<li><a href="http://www.asic-world.com/systemverilog/coverage1.html">Functional Coverage</a></li>
+</ul>
+<!-- SKY LINKS -->
+
+
+<nav class="pagination is-small" role="navigation" aria-label="pagination">
+    
+    <a class="pagination-next" href="../../blog/2017/lifetime-study.html" style="float:left;">다음 글</a>
+    
+    
+    <a class="pagination-previous" href="../../blog/2017/tk-graduation.html" style="float:right; text-align: right;">이전 글</a>
+    
+</nav>
+
+<div class="comment">
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+var disqus_config = function () {
+this.page.url = "https://www.eunchan.kim/blog/2017/pitfall-of-design-change.html";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "Pitfall of Design Change"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://eunchan.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<!--    <p>Comment system is closed.
+        Please send email to <a href="javascript:location='mailto:\u006d\u0065\u0040\u0065\u0075\u006e\u0063\u0068\u0061\u006e\u002e\u006b\u0069\u006d';void 0"><script type="text/javascript">document.write('\u006d\u0065\u0040\u0065\u0075\u006e\u0063\u0068\u0061\u006e\u002e\u006b\u0069\u006d')</script></a>
+        if you have any question or advise.</p>-->
+</div>
+
+
+
+      </div><!--/@content-->
+
+
+    </section>
+  </div> <!--/@container-->
+</main>
+</div><!--/@docs-->
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p class="copyright">
+        <a href="../../eunchan/">E.K</a> | <a href="//creativecommons.org/licenses/by-nc-nd/4.0/"> CCL (BY-NC-ND) </a> except images and stated pages.
+    </p>
+  </div>
+</footer>
+<!-- Call Map.js later in order to load "map_canvas" correctly -->
+<script type="application/ecmascript" src="../../static/js/eunchan.js"></script>
+</body>
+</html>

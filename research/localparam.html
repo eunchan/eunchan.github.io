@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>localparam in param port list</title>
+  
+  <link rel="stylesheet" media="print" type="text/css" href="../static/css/print.css">
+  <link rel="stylesheet" media="screen" type="text/css" href="../static/css/eunchan.css">
+  <link rel="shortcut icon" href="../static/img/favicon.png">
+
+  
+  
+  
+  <meta property="og:title" content="localparam in param port list" />
+  <meta property="og:site_name" content="Eunchan.Kim" />
+
+
+</head>
+
+<body>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="../">
+      <img src="../static/img/logo2.png">
+    </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMain" class="navbar-menu">
+    <div class="navbar-start">
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="../article/">article</a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="../article/">posts</a>
+          <a class="navbar-item" href="../research/">research</a>
+          <a class="navbar-item" href="../review/">review</a>
+          <a class="navbar-item" href="../tips/">tips &amp; tricks</a>
+        </div>
+      </div>
+      <a class="navbar-item" href="../blog/">journal</a>
+      <a class="navbar-item" href="../travel/">travel</a>
+      <a class="navbar-item" href="../motorcycle/">motorcycle</a>
+      <a class="navbar-item" href="../sky/">night sky</a>
+      <a class="navbar-item" href="../eunchan/" rel="author">contact</a>
+    </div><!--/@navbar-start-->
+    <div class="navbar-end">
+    </div><!--/@navbar-end-->
+  </div>
+</nav><!--/@navigation-->
+<div id="docs" class="docs">
+
+<main class="main">
+  <section class="section">
+    <h1 class="title">
+      localparam in param port list
+    </h1>
+
+
+    <p class="subtitle">
+      May 29, 2019
+    </p>
+
+
+  </section><!--/@hero-->
+  <div class="container is-max-desktop">
+    <section class="medium-section">
+
+
+      <div class="content"><!--only html tag-->
+<p>Designing configurable hardware IP is hard but necessary to be flexible IPs. As design cost increases over time due to increasing the salaries of the designers, increasing the tape-out cost, it is essential to reduce the development time. Preparing configurable designs can be a way to achieve it.</p>
+<h2 id="early-era">Early Era</h2>
+<p>The configurable hardware IP can be designed with multiple ways. In early era of Hardware Description Language, verilog-1995, it was common to use preprocessor <code>define</code> to design the IP configurable. Look at below example.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode verilog"><code class="sourceCode verilog"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="co">// module_a.v</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a><span class="ot">`include </span><span class="fl">&quot;define.v&quot;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a><span class="kw">module</span> a (</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>  clk, rst_n, addr, din, dout</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>);</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>  <span class="co">//...</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>  <span class="dt">input</span>  [<span class="ot">`AW</span><span class="dv">-1</span>:<span class="dv">0</span>] addr;</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a>  <span class="dt">input</span>  [<span class="ot">`DW</span><span class="dv">-1</span>:<span class="dv">0</span>] din;</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a>  <span class="dt">output</span> [<span class="ot">`DW</span><span class="dv">-1</span>:<span class="dv">0</span>] dout;</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a>  <span class="co">// ...</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true"></a><span class="kw">endmodule</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true"></a><span class="co">// define.vh</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true"></a><span class="ot">`ifndef __DEFINE_H__</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true"></a><span class="ot">`define __DEIFNE_H__</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true"></a><span class="ot">`define AW 10</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true"></a><span class="ot">`define DW 32</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true"></a><span class="ot">`endif </span><span class="co">// __DEFINE_H__</span></span></code></pre></div>
+<p>By changing <code>AW</code> and <code>DW</code>, the module can have various width of address and data. But if this module is used (instantiated) multiple times with different <code>AW</code> or <code>DW</code>, then it becomes bothersome. It needs <code>undef</code> for <code>AW</code>, and <code>DW</code>, after reading the module and needs a prefix to the module name to distinguish among multiple configurations.</p>
+<h2 id="verilog-2001-era">Verilog-2001 Era</h2>
+<p><code>parameter</code> existed prior to verilog 2001 but it became widely used with other verilog-2001 syntax. Module can have parameter port list prior to definitions of input and output ports. Look at the example below.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode verilog"><code class="sourceCode verilog"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="co">// b.v</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a><span class="kw">module</span> b #(</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>    <span class="dt">parameter</span> AW = <span class="dv">10</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>    <span class="dt">parameter</span> DW = <span class="dv">32</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>) (</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>    <span class="dt">input</span>               clk,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a>    <span class="dt">input</span>               rst_n,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a>    <span class="dt">input</span>      [AW<span class="dv">-1</span>:<span class="dv">0</span>] addr,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a>    <span class="dt">input</span>      [DW<span class="dv">-1</span>:<span class="dv">0</span>] din,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a>    <span class="dt">output</span> <span class="dt">reg</span> [DW<span class="dv">-1</span>:<span class="dv">0</span>] dout</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a>);</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a>  <span class="co">//...</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true"></a><span class="kw">endmodule</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true"></a><span class="co">// c.v: parent module</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true"></a><span class="kw">module</span> c ;</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true"></a>  b #(.AW(<span class="dv">10</span>), .DW(<span class="dv">64</span>)) u_b0 (...);</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true"></a>  b #(.AW(<span class="dv">14</span>), .DW(<span class="dv">32</span>)) u_b1 (...);</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true"></a><span class="kw">endmodule</span></span></code></pre></div>
+<p>Now without having <code>define</code>, the module can have multiple configurations as above. While synthesizing (uniquify) the design module <code>b</code> is duplicated into <code>b_AW_10_DW_64</code> and <code>b_AW_14_DW_32</code>.</p>
+<p>This seems to solve everything but apparently not. If one of the parameter is derived from other parameter, and used in the ports, it also needs to be defined as <code>parameter</code>. It doesn’t prevent the parent module from overriding the derived parameter. In the below example, the parent module overrides <code>AW</code> which supposes to not be modified.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode verilog"><code class="sourceCode verilog"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="kw">module</span> d #(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>    <span class="dt">parameter</span> DEPTH = <span class="dv">64</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a>    <span class="co">// Do not change below.</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>    <span class="dt">parameter</span> AW = <span class="dt">$clog2</span>(DEPTH)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>) ( ... </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a>    <span class="dt">input</span> [AW<span class="dv">-1</span>:<span class="dv">0</span>] addr,</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a>);</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a>  <span class="co">// ...</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a><span class="kw">endmodule</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true"></a><span class="co">// e.v: parent</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true"></a><span class="kw">module</span> e;</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true"></a>  d #(.DEPTH(<span class="dv">65</span>), .AW(<span class="dv">10</span>)) u_d;</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true"></a><span class="kw">endmodule</span></span></code></pre></div>
+<p>To avoid this, every module which has derived parameters, need to have some assertion using <code>generate if</code>.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode verilog"><code class="sourceCode verilog"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="kw">module</span> d #( ...) (...);</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a>  <span class="dt">localparam</span> AW_LOCAL = <span class="dt">$clog2</span>(DEPTH);</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a>  <span class="kw">generate</span> <span class="kw">if</span> AW != AW_LOCAL: gen_error</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a>    <span class="dt">$fatal</span>();</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"></a>  <span class="kw">endgenerate</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true"></a><span class="kw">endmodule</span></span></code></pre></div>
+<h2 id="systemverilog-era">Systemverilog Era</h2>
+<p>Systemverilog 2009 LRM introduced quite useful syntax to solve this issue. From SV 2009, <code>localparam</code> can be used in the parameter port list. Previously, <code>localparam</code> is only allowed after the module port definition. By allowing <code>localparam</code> in the port list, it removes above issues.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode verilog"><code class="sourceCode verilog"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="kw">module</span> f #(</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a>    <span class="dt">parameter</span>  int DEPTH = <span class="dv">64</span>,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a>    <span class="dt">localparam</span> int AW = <span class="dt">$clog2</span>(DEPTH)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a>) (</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true"></a>    <span class="dt">input</span> [AW<span class="dv">-1</span>:<span class="dv">0</span>] addr,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true"></a>);</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true"></a>  <span class="co">//...</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true"></a><span class="kw">endmodule</span></span></code></pre></div>
+<p>If the parent module tries to override localparam, it raises an error.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode verilog"><code class="sourceCode verilog"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="kw">module</span> g;</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true"></a>  f #(.DEPTH(<span class="dv">128</span>))          u_f0 (...); <span class="co">// Good</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true"></a>  f #(.DEPTH(<span class="dv">129</span>), .AW(<span class="dv">10</span>)) u_f1 (...); <span class="co">// Compile error</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true"></a><span class="kw">endmodule</span></span></code></pre></div>
+<h2 id="compatibility">Compatibility</h2>
+<p>Using newly introduced syntax in the HDL area always considered risky. One tool may support it but other tools may not. If the other tool is used later of the design process such as equivalent checking, it consumes significant time to roll back the design. So, before adopting the new syntax to the design it is wise to check the compatibility of the widely used tools.</p>
+<p>As I check, at least Vivado (Xilinx FPGA), VCS (Synopsys), Conformal (Cadence), Design Compiler (Synopsys), Verdi (Synopsys) Verilator support the <code>localparam</code> syntax. A few of those tools need additional options (for instance, verdi needs <code>-2009</code> option to read the syntax). For the simulator in the Cadence, Incisive doesn’t support it so Xcelium should be used to run the simulation if you only have Cadence license.</p>
+<!-- SKY LINKS -->
+
+
+<nav class="pagination is-small" role="navigation" aria-label="pagination">
+    
+    
+</nav>
+
+<div class="comment">
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+var disqus_config = function () {
+this.page.url = "https://www.eunchan.kim/research/localparam.html";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "localparam in param port list"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://eunchan.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<!--    <p>Comment system is closed.
+        Please send email to <a href="javascript:location='mailto:\u006d\u0065\u0040\u0065\u0075\u006e\u0063\u0068\u0061\u006e\u002e\u006b\u0069\u006d';void 0"><script type="text/javascript">document.write('\u006d\u0065\u0040\u0065\u0075\u006e\u0063\u0068\u0061\u006e\u002e\u006b\u0069\u006d')</script></a>
+        if you have any question or advise.</p>-->
+</div>
+
+
+
+      </div><!--/@content-->
+
+
+    </section>
+  </div> <!--/@container-->
+</main>
+</div><!--/@docs-->
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p class="copyright">
+        <a href="../eunchan/">E.K</a> | <a href="//creativecommons.org/licenses/by-nc-nd/4.0/"> CCL (BY-NC-ND) </a> except images and stated pages.
+    </p>
+  </div>
+</footer>
+<!-- Call Map.js later in order to load "map_canvas" correctly -->
+<script type="application/ecmascript" src="../static/js/eunchan.js"></script>
+</body>
+</html>

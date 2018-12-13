@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Under Test (DUT)</title>
+  
+  <link rel="stylesheet" media="print" type="text/css" href="../../static/css/print.css">
+  <link rel="stylesheet" media="screen" type="text/css" href="../../static/css/eunchan.css">
+  <link rel="shortcut icon" href="../../static/img/favicon.png">
+
+  
+  
+  
+  <meta property="og:title" content="Design Under Test (DUT)" />
+  <meta property="og:site_name" content="Eunchan.Kim" />
+
+
+</head>
+
+<body>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="../../">
+      <img src="../../static/img/logo2.png">
+    </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMain" class="navbar-menu">
+    <div class="navbar-start">
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="../../article/">article</a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="../../article/">posts</a>
+          <a class="navbar-item" href="../../research/">research</a>
+          <a class="navbar-item" href="../../review/">review</a>
+          <a class="navbar-item" href="../../tips/">tips &amp; tricks</a>
+        </div>
+      </div>
+      <a class="navbar-item" href="../../blog/">journal</a>
+      <a class="navbar-item" href="../../travel/">travel</a>
+      <a class="navbar-item" href="../../motorcycle/">motorcycle</a>
+      <a class="navbar-item" href="../../sky/">night sky</a>
+      <a class="navbar-item" href="../../eunchan/" rel="author">contact</a>
+    </div><!--/@navbar-start-->
+    <div class="navbar-end">
+    </div><!--/@navbar-end-->
+  </div>
+</nav><!--/@navigation-->
+<div id="docs" class="docs">
+
+<main class="main">
+  <section class="section">
+    <h1 class="title">
+      Design Under Test (DUT)
+    </h1>
+
+
+    <p class="subtitle">
+      January 8, 2019
+    </p>
+
+
+  </section><!--/@hero-->
+  <div class="container is-max-desktop">
+    <section class="medium-section">
+
+
+      <div class="content"><!--only html tag-->
+<p><a href="../../research/uvm/">UVM 첫화면</a></p>
+<ol type="1">
+<li><a href="../../research/uvm/uvm-introduction.html">UVM 개요</a></li>
+<li>Design Under Test (DUT)</li>
+<li><a href="../../research/uvm/uvm-flow.html">UVM Test Flow</a></li>
+<li><a href="../../research/uvm/uvm-blocks.html">UVM Blocks</a></li>
+</ol>
+<hr />
+<p>UVM을 구현해 보기에 앞서서, 앞으로 검증할 하드웨어 모듈에 대한 설명을 먼저 하는게 나을 것 같네요. 어떤 모듈을 하는 게 좋을까 생각을 좀 해보았습니다.</p>
+<p>너무 간단한 것을 하면 UVM의 기본은 이해할 수 있으나 실제 검증에서 쓰이기 쉽지 않을 겁니다. 예를 들면 AXI Memory 같은 것은 AXI master agent만 있으면 되어 구현이 쉽지만 실제 써먹기엔 좀 애매하겠죠. 그렇다고 여러 interface를 가지고 있는 복잡한 시스템을 구현하는 것을 목표로 하면 너무 많은 정보에 파묻혀서 핵심을 놓치고 헤매이게 될 수도 있겠더라구요.</p>
+<p>그래서 제가 이해한 수준에서 적당히 구현해 볼 수 있는, 1 proactive agent, 1 reactive agent가 있는 모듈을 기반으로 이야기 해 볼까 합니다. Proactive/ Reactive 용어는 다음에 설명할게요.</p>
+<h2 id="dut-구조">DUT 구조</h2>
+<figure>
+<img src="//storage.eunchan.kim/media/page/research/uvm/dut-blockdiagram.svg" alt /><figcaption>DUT Block Diagram</figcaption>
+</figure>
+<p>이 DUT는 하나의 Bus slave 포트와, 하나의 interrupt output을 가지고 있는 모듈입니다. 특정한 버스 입력이 왔을 때 내부 동작으로 인터럽트가 발생하는 거죠.</p>
+<p>이 모듈의 버스는 레지스터 접근을 위한 것이 주된 이유이고, 다른 하나는 버스 트랜잭션으로 인터럽트를 발생할 수 있는 로직도 있습니다. 즉, 버스로 특정 주소에 특정 데이터값을 쓰면 그게 인터럽트 출력으로 나오는 동작을 수행합니다.</p>
+<p>레지스터 모듈은 인터럽트 동작을 enable/disable하는 부분과, 어떤 인터럽트가 우선순위가 있는지 정하는 priority 레지스터등이 있다고 가정합니다. 또한, 인터럽트를 받은 모듈 (타겟으로 지칭할게요)이 인터럽트를 claim하고 complete 하는 레지스터 인터페이스도 있습니다.</p>
+<p>기본 골격은 RISC-V의 Platform-Level Interrupt Controller 구조를 따왔으나 인터럽트 입력을 단순화하기 위해 Message Signaled Interrupt (MSI) 방법만 지원하는 것을 가정했습니다.</p>
+<p>복잡한 용어가 몇개 등장했는데, 이게 검증에 핵심은 아니니, 그저 “테스트할 모듈이 버스 트랜잭션을 받아서 인터럽트를 만들어내는 모듈” 이라고 이해하면 충분할 것 같네요.</p>
+<p><a href="../../research/uvm/uvm-introduction.html">이전 글에서 보여준 검증 환경 구조</a>가 사실 이 모듈에 곧장 적용할 수 있는 구조입니다. 그 그림을 다시 보면,</p>
+<figure>
+<img src="//storage.eunchan.kim/media/page/research/uvm/uvm-overall.svg" alt /><figcaption>UVM blocks</figcaption>
+</figure>
+<p>하나의 화살표는 DUT방향으로 향하고 다른 하나는 DUT에서 <code>uvm_agent #2</code>로 가는 것을 볼 수 있습니다. 위의 하드웨어 모듈에 적용하면 <code>uvm_agent #1</code>의 <code>uvm_driver</code>에서 DUT로 전송되는 화살표는 버스 인터페이스이고 DUT에서 <code>uvm_agent #2</code>로 향하는 화살표는 인터럽트 출력 신호겠죠.</p>
+<h2 id="bus-interface">Bus Interface</h2>
+<p>버스는 간략화된 Register Interface라고 가정합시다. AXI protocol이나 TileLink 프로토콜을 설명하는게 이 글의 목적은 아니니까요. 간단하게 버스 신호를 살펴보면, 아래처럼 구현되어 있다고 해봅시다.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode verilog"><code class="sourceCode verilog"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">module</span> riscv_plic (</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>  <span class="dt">input</span> clk,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>  <span class="dt">input</span> rst_n,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>  <span class="co">// Bus Interface</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>  <span class="dt">input</span>               m2s_valid,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>  <span class="dt">input</span>        [<span class="dv">31</span>:<span class="dv">0</span>] m2s_address,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>  <span class="dt">input</span>               m2s_write,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>  <span class="dt">input</span>        [<span class="dv">31</span>:<span class="dv">0</span>] m2s_data,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a>  <span class="dt">output</span> logic        m2s_ready,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a>  <span class="dt">output</span> logic        s2m_valid,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a>  <span class="dt">output</span> logic [<span class="dv">31</span>:<span class="dv">0</span>] s2m_data,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true"></a>  <span class="dt">output</span> logic        s2m_error,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true"></a>  <span class="dt">input</span>               s2m_ready,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true"></a>  <span class="co">// ...</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true"></a>);</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true"></a><span class="kw">endmodule</span></span></code></pre></div>
+<p>두개의 채널로 되어있고 <code>m2s_</code> 채널은 request와 write data가 있고, <code>s2m_</code> 채널은 response와 read data로 이뤄져있습니다. <code>m2s_</code>에서 <code>s2m_</code> 응답이 한 클럭만에 온다고 생각하면 거의 SRAM 인터페이스라고 봐도 무방합니다.</p>
+<p>DUT 모듈이 버스 요청을 처리하기 때문에, <code>uvm_agent #1</code>이 먼저 테스트 순서를 정해서 던져줍니다. <code>uvm_agent</code>가 먼저 시작하므로 이걸 proactive agent라고 부릅니다.</p>
+<h2 id="interrupt-interface">Interrupt Interface</h2>
+<p><code>riscv_plic</code> 모듈이 만들어내는 신호는 아래와 같다고 가정해 보겠습니다.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode verilog"><code class="sourceCode verilog"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="kw">module</span> riscv_plic (</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>  <span class="co">// clk</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>  <span class="co">// Bus Interface</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>  <span class="co">// ...</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>  <span class="co">// Interrupt Interface</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a>  <span class="dt">output</span> logic       irq,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a>  <span class="dt">output</span> logic [<span class="dv">5</span>:<span class="dv">0</span>] irq_id</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a>);</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a><span class="kw">endmodule</span></span></code></pre></div>
+<p>DUT에서 요청이 나오고 이에 대한 응답은 없네요. 검증 환경은 IRQ 입력을 받기만 하고 이 이벤트에 따른 처리는 버스 인터페이스를 통해서 처리합니다. 인터럽트가 뜨면 해당 인터럽트를 수행하고 마지막에 인터럽트를 클리어 하는 방식을 생각해 보면 되겠네요.</p>
+<p>그래서 이 <code>uvm_agent</code>는 버스 인터페이스에서 동작하는 이전 agent와는 좀 다른 방식입니다. 먼저 DUT가 시작을 하고 그에 따라 agent가 응답을 보내는 방식인데, 이런 agent를 reactive agent라고 부릅니다.</p>
+<h2 id="interface-vs-wire-or-struct">Interface vs wire or struct</h2>
+<p>DUT의 input/output 포트를 보면 systemverilog의 interface를 사용하지 않았습니다. 인터페이스를 쓸 수는 있겠지만 전 그다지 선호하지는 않아요. 만일 시그널이 너무 많다면 struct를 이용해서 하나로 묶는 것을 선호합니다.</p>
+<p>예를 들면 위의 버스 신호는 아래의 struct로 정의 후 선언하겠죠.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode verilog"><code class="sourceCode verilog"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a>typedef struct packed {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>  logic [<span class="dv">31</span>:<span class="dv">0</span>] address,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a>  logic        write,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>  logic [<span class="dv">31</span>:<span class="dv">0</span>] data</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>} bus_m2s_t;</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a>typedef struct packed {</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a>  logic [<span class="dv">31</span>:<span class="dv">0</span>] data,</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a>  logic        error</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a>} bus_s2m_t;</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true"></a><span class="kw">module</span> riscv_plic (</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true"></a>  <span class="co">// ...</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true"></a>  <span class="dt">input</span>        m2s_valid,</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true"></a>  <span class="dt">input</span>        bus_m2s_t m2s,</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true"></a>  <span class="dt">output</span> logic m2s_ready,</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true"></a>  <span class="dt">output</span> logic     s2m_valid,</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true"></a>  <span class="dt">output</span> bus_s2m_t s2m,</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true"></a>  <span class="dt">input</span>            s2m_ready,</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true"></a>  <span class="co">//...</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true"></a>);</span></code></pre></div>
+<p>아무튼 하드웨어 모듈은 이런 방식으로 정의되어 있다고 생각하고, UVM 검증환경에서 쓸 interface를 정의해 봅시다.</p>
+<p>Interface는 UVM driver에 DUT의 신호를 연결하기 위해서 필요합니다. 시그널 하나 하나 연결할 수 있겠지만 그보다 전체 묶음을 하나의 interface 로 건네줄 수 있으니 더 간편하죠. 그래서 <code>tb.sv</code>에서 DUT의 시그널 인 아웃 포트를 interface로 묶어줘야 합니다.</p>
+<p>일단 위에서 언급한 버스 인터페이스와 인터럽트 인터페이스를 정의해야겠습니다.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode verilog"><code class="sourceCode verilog"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a>interface bus_if (</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a>  <span class="dt">input</span> clk,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a>  <span class="dt">input</span> rst_n</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a>);</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a>  logic        m2s_valid;</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"></a>  logic [<span class="dv">31</span>:<span class="dv">0</span>] m2s_address;</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true"></a>  logic        m2s_write;</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true"></a>  logic [<span class="dv">31</span>:<span class="dv">0</span>] m2s_data;</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true"></a>  logic        m2s_ready;</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true"></a>  logic        s2m_valid;</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true"></a>  logic [<span class="dv">31</span>:<span class="dv">0</span>] s2m_data;</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true"></a>  logic        s2m_error;</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true"></a>  logic        s2m_ready;</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true"></a>  modport tb (</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true"></a>    <span class="dt">input</span> clk, rst_n,</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true"></a>    <span class="dt">output</span> m2s_valid, m2s_address, m2s_write, m2s_data, s2m_ready,</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true"></a>    <span class="dt">input</span>  m2s_ready, s2m_valid, s2m_data, s2m_error</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true"></a>  );</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true"></a></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true"></a>  modport dut (</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true"></a>    <span class="dt">input</span> clk, rst_n,</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true"></a>    <span class="dt">input</span> m2s_valid, m2s_address, m2s_write, m2s_data, s2m_ready,</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true"></a>    <span class="dt">output</span> m2s_ready, s2m_valid, s2m_data, s2m_error</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true"></a>  );</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true"></a></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true"></a>endinterface</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true"></a></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true"></a>interface intr_if (</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true"></a>  <span class="dt">input</span> clk</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true"></a>);</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true"></a></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true"></a>  logic       irq;</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true"></a>  logic [<span class="dv">5</span>:<span class="dv">0</span>] irq_id;</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true"></a></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true"></a>  modport tb ( <span class="dt">input</span> clk, irq, irq_id );</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true"></a></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true"></a>  modport dut ( <span class="dt">input</span> clk, <span class="dt">output</span> irq, irq_id );</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true"></a></span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true"></a>endinterface</span></code></pre></div>
+<h2 id="testbench-tb.sv">Testbench <code>tb.sv</code></h2>
+<p>DUT를 연결 할 준비가 되었으니, 이제 testbench를 만들어 보죠. 지금은 UVM 신경 쓰지 않고 DUT만 인스턴스를 만들어 볼게요. UVM은 사실 tb에서 신경쓸 것은 몇 군데 되지 않아요. <code>uvm_pkg</code>가 알아서 처리해 줍니다.</p>
+<p>이게 좀 처음에는 헷갈리더라구요. 명시적인 함수 호출이나 task 호출이 없으니 어디를 쫓아가야 할 지 몰라서 코드를 따라가질 못하겠더군요. 그래서 UVM 구조에 익숙해져야 합니다. 그렇지 않으면 코드만 봐서는 분석이 어려워요. 왜 이렇게 만들어놨는지 저는 아직 설명할 만큼 지식이 많지 않아서 설명을 드리진 못하겠지만, 지금 수박겉핥기 식으로 배운 입장에서는 장점보다 단점이 큰 것 같네요.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode verilog"><code class="sourceCode verilog"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a><span class="kw">module</span> tb ();</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a>logic clk, rst_n;</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true"></a><span class="co">// clock gen</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true"></a><span class="kw">initial</span> <span class="kw">begin</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true"></a>    <span class="co">// forever</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true"></a><span class="kw">end</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true"></a><span class="co">// reset gen</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true"></a><span class="kw">initial</span> <span class="kw">begin</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true"></a>  rst_n = <span class="bn">1'b0</span>;</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true"></a>  #RstPeriod rst_n = <span class="bn">1'b1</span>;</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true"></a><span class="kw">end</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true"></a>bus_if bus(clk, rst_n);</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true"></a>intr_if intr(clk);</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true"></a><span class="co">// DUT instance</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true"></a>riscv_plic dut (</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true"></a>    .clk,</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true"></a>    .rst_n,</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true"></a></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true"></a>    .m2s_valid   (bus.dut.m2s_valid),</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true"></a>    .m2s_address (bus.dut.m2s_address),</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true"></a>    <span class="co">//...</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true"></a></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true"></a>    .s2m_ready   (bus.dut.s2m_ready),</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true"></a></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true"></a>    .irq    (intr.dut.irq),</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true"></a>    .irq_id (intr.dut.irq_id)</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true"></a>);</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true"></a></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true"></a><span class="kw">endmodule</span></span></code></pre></div>
+<p>자.. 테스트벤치 모듈도 준비되었네요. 아직 <code>uvm_pkg</code>를 import하지는 않아서 그냥 elaboration이 되는지 검사할 정도밖에 안되겠지만 uvm에 뛰어들 준비가 이제 되어갑니다.</p>
+<!-- SKY LINKS -->
+
+
+<nav class="pagination is-small" role="navigation" aria-label="pagination">
+    
+    
+</nav>
+
+<div class="comment">
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+var disqus_config = function () {
+this.page.url = "https://www.eunchan.kim/research/uvm/dut.html";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "Design Under Test (DUT)"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://eunchan.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<!--    <p>Comment system is closed.
+        Please send email to <a href="javascript:location='mailto:\u006d\u0065\u0040\u0065\u0075\u006e\u0063\u0068\u0061\u006e\u002e\u006b\u0069\u006d';void 0"><script type="text/javascript">document.write('\u006d\u0065\u0040\u0065\u0075\u006e\u0063\u0068\u0061\u006e\u002e\u006b\u0069\u006d')</script></a>
+        if you have any question or advise.</p>-->
+</div>
+
+
+
+      </div><!--/@content-->
+
+
+    </section>
+  </div> <!--/@container-->
+</main>
+</div><!--/@docs-->
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p class="copyright">
+        <a href="../../eunchan/">E.K</a> | <a href="//creativecommons.org/licenses/by-nc-nd/4.0/"> CCL (BY-NC-ND) </a> except images and stated pages.
+    </p>
+  </div>
+</footer>
+<!-- Call Map.js later in order to load "map_canvas" correctly -->
+<script type="application/ecmascript" src="../../static/js/eunchan.js"></script>
+</body>
+</html>
