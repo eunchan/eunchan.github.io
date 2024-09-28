@@ -1,0 +1,32 @@
+site_name: Eli Kim
+site_url: https://www.eunchan.kim
+site_description: Eli's Personal Website.
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+  font:
+    text: Atkinson Hyperlegible, Pretendard
+    code: Monaspace Neon
+  language: ko
+  logo: static/img/logo2.png
+plugins:
+  - blog
+  - rss:
+      match_path: blog/posts/.*
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
+nav:
+  - index.md
+  - Log:
+    - blog/index.md
+extra:
+  alternate:
+    - name: English
+      link: /en/
+      lang: en
+repo_url: https://github.com/eunchan/elijah.kim
+repo_name: eunchan/elijah.kim
