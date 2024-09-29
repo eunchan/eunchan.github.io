@@ -1,17 +1,14 @@
-# Welcome to MkDocs
+---
+title: Eli Kim
+date: 2012-01-05
+---
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+# Eli Kim
 
-## Commands
+엔지니어 / 천체관측자 / 라이더.
+지금은 구글에서 머신러닝 칩 디자인 엔지니어로 재직중입니다.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+글쓰기를 좋아합니다. 그 중 만년필로 질 좋은 노트에 쓰는 걸 선호합니다. 글을 잘
+쓰지는 못합니다. 아마도 터무니없이 낮은 글쓰기 실력일 것 같습니다. 그러나
+만년필이 좋은 품질의 종이에서 서걱거리는 느낌을 좋아합니다. 이 개인 사이트에도
+글을 쓰려고 하지만 보시다시피 글이 잘 올라오지는 않는 편입니다.
