@@ -1,6 +1,5 @@
 ---
 title: My Camera Story
-date: 2012-09-04
 ---
 
 # My Camera Story
