@@ -1,6 +1,5 @@
 ---
 title: Eli Kim
-date: 2015-09-05
 ---
 
 # Eli Kim

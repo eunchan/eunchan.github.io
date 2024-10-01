@@ -1,6 +1,5 @@
 ---
 title: 'Wish List'
-date: 2012-12-29
 slug: 'wishlist'
 ---
 

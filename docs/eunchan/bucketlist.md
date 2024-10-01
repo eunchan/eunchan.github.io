@@ -1,6 +1,5 @@
 ---
 title: Bucket List
-date: 2012-12-29
 ---
 
 # Bucket List

@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
+# Custom git revision date localized plugin
+pip3 install git+https://github.com/eunchan/mkdocs-git-revision-date-localized-plugin.git#egg=mkdocs-git-revision-date-localized-plugin
 pip3 install "mkdocs-material[imaging]"
 brew install cairo freetype libffi libjpeg libpng zlib
