@@ -1,5 +1,7 @@
 ---
 title: articles
+hide:
+- toc
 ---
 
 # articles

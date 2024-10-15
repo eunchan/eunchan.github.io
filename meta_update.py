@@ -11,6 +11,8 @@ import frontmatter
 import os
 
 _META_FILE = ".meta.yml"
+# If doc has these fields, keep the doc fiels not override.
+_KEEP_FIELDS = ["hide"]
 
 def build_meta_struct(
     root: str = ".",
@@ -104,7 +106,11 @@ def update_md_with_meta(md: str, meta: dict, root: str, outdir: str):
 
 def merge_meta_to_md(post_meta, meta) -> dict:
   """Merge meta and post metadata."""
+  if not meta:
+    return
   for key, value in meta.items():
+    if key in _KEEP_FIELDS  and key in post_meta:
+      continue
     if key in post_meta and isinstance(value, list):
         post_meta[key] += value
     else:
