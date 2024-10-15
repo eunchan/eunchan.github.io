@@ -1,5 +1,5 @@
 ---
-title: articles
+title: Docs
 hide:
 - toc
 ---
