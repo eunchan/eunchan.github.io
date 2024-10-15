@@ -1,11 +1,10 @@
-----
+---
+comments: true
+date: 2012-01-05
 title: 'Romantic Paris #3'
-date: January 5, 2012
-public: true
-disqus: on
-----
+---
 
-![센 강의 고서점 거리](/media/page/travel/europe/europe-298.jpg)
+![센 강의 고서점 거리](../../media/page/travel/europe/europe-298.jpg)
 
 2007년 05월 26일 13:35 at Shakespeare & Company in Paris
 --------------------------------------------------------
@@ -16,7 +15,7 @@ Before Sunset 이야기의 시작점에 앉아있다. 영화에서 보던 이곳
 관광객들로 쉼없이 분주하게 돌아간다. 이제 그들이 이야기하며 걸었던 길 따라
 걸어보자. (그런데 처음 들어간 골목 다음부터는 생각이 안난다... )
 
-![파리의 거리](/media/page/travel/europe/europe-297.jpg)
+![파리의 거리](../../media/page/travel/europe/europe-297.jpg)
 
 동일 15:00 at 5th District in Paris
 -----------------------------------
@@ -28,7 +27,7 @@ Before Sunset 이야기의 시작점에 앉아있다. 영화에서 보던 이곳
 걸었다. 같은 행동이지만 그때와는 느낌이 사뭇 달랐다. 어제 갔었던 19구의 체취가
 남아서일까?
 
-![룩셈부르크 공원의 아이들](/media/page/travel/europe/europe-300.jpg)
+![룩셈부르크 공원의 아이들](../../media/page/travel/europe/europe-300.jpg)
 
 동일 17:00 at Luxemburg Park in Paris
 -------------------------------------
@@ -41,7 +40,7 @@ Before Sunset 이야기의 시작점에 앉아있다. 영화에서 보던 이곳
 남자들은 가벼운 주제로 웃으며 이야기 한다. 혼자 온 이들은 사진을 찍고 주변을
 둘러본다.
 
-![룩셈부르크 공원](/media/page/travel/europe/europe-301.jpg)
+![룩셈부르크 공원](../../media/page/travel/europe/europe-301.jpg)
 
 나는 이 모든 이들을 바라본다. 소설의 3인칭 시점처럼 바라보며 시간이 모두에게
 흐르는 것을 느낀다. 이 사람들이 움직이는 것을 느낀다. 그 순간 이어폰에서
@@ -49,16 +48,16 @@ Before Sunrise 의 OST 가 흘러 나온다. 나는 평화롭다. 이 순간 그
 끼어들 수 없다. 내 모습을 버리고 철저히 객관적인 눈으로 모든 것을 바라본다.
 그리고 지긋이 셔터를 누른다. 바라보는 모습 그대로 필름에 담긴다.
 
-![룩셈부르크 공원 풍경](/media/page/travel/europe/europe-304.jpg)
-![룩셈부르크 공원 풍경](/media/page/travel/europe/europe-307.jpg)
-![룩셈부르크 공원 풍경](/media/page/travel/europe/europe-308.jpg)
+![룩셈부르크 공원 풍경](../../media/page/travel/europe/europe-304.jpg)
+![룩셈부르크 공원 풍경](../../media/page/travel/europe/europe-307.jpg)
+![룩셈부르크 공원 풍경](../../media/page/travel/europe/europe-308.jpg)
 
 만족한다. 내가 원한 사진은 이런 사진이었다. 그냥 삶의 모습 그대로를 담아내는
 사진을 원했다. 내 사상이 정립되지 않았는데 나의 생각이 들어간다면 쓸모 없는
 사진만 나올 뿐이다. 보이는 그대로를, 그리고 그 순간을 담아야한다. 오늘은 겨우
 한장이지만 그런 사진을 찍을 수 있었다.
 
-![룩셈부르크 공원 풍경](/media/page/travel/europe/europe-303.jpg)
+![룩셈부르크 공원 풍경](../../media/page/travel/europe/europe-303.jpg)
 
 동일 21:20 at Ines in Paris
 ---------------------------
@@ -72,7 +71,7 @@ Before Sunrise 의 OST 가 흘러 나온다. 나는 평화롭다. 이 순간 그
 모르겠다. 나도 내가 여행을 하는지 아니면 생각속에서 산책을 하고있는지
 모르겠다.
 
-![센 강](/media/page/travel/europe/europe-312.jpg)
+![센 강](../../media/page/travel/europe/europe-312.jpg)
 
 나의 입장에서는 난 이 모든 여행을 만족하고 있다. 비록 좀 더 대담하게 다가가지
 못했고 동화되지 못했지만 담고 싶은 것을 속에 담았다. 주관적으로 보자면

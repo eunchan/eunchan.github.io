@@ -1,11 +1,10 @@
-----
+---
+comments: true
+date: 2012-01-05
 title: 'Romantic Paris #4'
-date: January 5, 2012
-public: true
-disqus: on
-----
+---
 
-![비오는 파리](/media/page/travel/europe/europe-315.jpg)
+![비오는 파리](../../media/page/travel/europe/europe-315.jpg)
 
 2007년 05월 27일 17:05 at Ines in Paris
 ---------------------------------------
@@ -14,7 +13,7 @@ disqus: on
 동반한 소나기 이후 어제부터 선선한 날씨가 이어지고 있다. 오늘은 다시 비가
 내린다. 런던에 가까워져 오니 런던 날씨를 슬슬 닮아가나 보다.
 
-![퐁네프의 연인](/media/page/travel/europe/europe-317.jpg)
+![퐁네프의 연인](../../media/page/travel/europe/europe-317.jpg)
 
 비가 내리면 살아있는 나무를 제외한 다른 모든 색들은 차분해진다. 좀 더
 안정적이며 때로는 우울하기까지 한 색을 지닌다. 사람들은 비를 피해 뛰어가기도
@@ -27,7 +26,7 @@ disqus: on
 비를 맞으며 걷는다. 카메라에 빗물이 들어가는 게 마음에 걸리긴 하지만 느긋하게
 걷는다. 그리고 주변을 둘러보며 비 내리는 파리를 바라본다.
 
-![비오는 파리](/media/page/travel/europe/europe-314.jpg)
+![비오는 파리](../../media/page/travel/europe/europe-314.jpg)
 
 이것 또한 파리의 모습이다. 맑은 날, 쨍한 햇살 아래 빛나는 에펠탑만이 파리
 전부가 아니다. 한순간, 심지어 지금처럼 비가 내리고 바람이 부는 날의 차분한
@@ -38,7 +37,7 @@ disqus: on
 샤이요 궁에서 은빛으로 화려하게 반짝이는 에펠탑을 볼 때도 느끼지 못했다.
 지금은 내가 파리의 삶, 그 가운데 서서 그들을 바라보고 있다.
 
-![비오는 파리의 카페](/media/page/travel/europe/europe-313.jpg)
+![비오는 파리의 카페](../../media/page/travel/europe/europe-313.jpg)
 
 떠날 날이 4일밖에 남지 않았지만 이제는 아쉽지 않다. 내가 보고 싶었던 것을
 보았다. 이탈리아의 삶을 보았고 프라하의 삶을 보았고 알프스의 산을 보았다.
@@ -56,7 +55,7 @@ disqus: on
 de Eiffel까지 걸어왔다. 벽에 Graffiti 를 하던 젊은 사람들이 기억에 남는다.
 그때 나는 더 다가갔어야 했다.
 
-![파리의 낙서](/media/page/travel/europe/europe-319.jpg)
+![파리의 낙서](../../media/page/travel/europe/europe-319.jpg)
 
 나는 왜 그들에게 다가가지 못했을까? 분명히 내가 다가갔다면 독특한 파리의 삶을
 담을 수 있었다. 길에 건널목이 없었다는 것은 핑계다. 실은 그들에게 말 거는 것이

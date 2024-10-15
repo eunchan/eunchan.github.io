@@ -1,16 +1,15 @@
-----
+---
+comments: true
+date: 2012-01-05
 title: 'Swiss #2'
-date: January 5, 2012
-public: true
-disqus: on
-----
+---
 
-![마테호른 가는 길](/media/page/travel/europe/europe-255.jpg)
+![마테호른 가는 길](../../media/page/travel/europe/europe-255.jpg)
 
 Zermatt
 -------
 
-![검은호수에서 바라본 체르마트](/media/page/travel/europe/europe-256.jpg)
+![검은호수에서 바라본 체르마트](../../media/page/travel/europe/europe-256.jpg)
 
 ### 2007년 05월 20일 14:05 at Schwarzsee in Zermatt
 
@@ -20,7 +19,7 @@ Matterhorn(마테호른)을 보기위해 Schwarzsee(검은호수:2600m)에 올�
 가파른 경사가 내 눈을 가득 채운다. 주변의 다른 산을 내려다보는 높이가
 경이롭다.
 
-![검은호수에서 바라본 체르마트](/media/page/travel/europe/europe-258.jpg)
+![검은호수에서 바라본 체르마트](../../media/page/travel/europe/europe-258.jpg)
 
 사진을 찍기위해 카메라를 들었다. 80mm 로 뷰파인더 안에 가득채울 수 있었다.
 그러나 셔터를 눌러도 카메라는 묵묵부답이었다. 배터리가 다 된것같았다. 기온이
@@ -28,7 +27,7 @@ Matterhorn(마테호른)을 보기위해 Schwarzsee(검은호수:2600m)에 올�
 결국 마테호른을 필름에 담는것은 포기해야 했다. 밴프에서 런들산을 처음오를때도
 배터리 때문에 사진을 거의 못 찍었는데, 이번에도 이런 경우를 겪다니...
 
-![검은호수에서 바라본 체르마트](/media/page/travel/europe/europe-257.jpg)
+![검은호수에서 바라본 체르마트](../../media/page/travel/europe/europe-257.jpg)
 
 바람이 세차게 불어서 결국 내려와야 했다. 내려오는길에 보니 구름한점 없던
 마테호른에 구름이 끼기시작했다. (나중에 들은 얘기로는 마테호른이 맑은날이 별로
@@ -45,7 +44,7 @@ Matterhorn(마테호른)을 보기위해 Schwarzsee(검은호수:2600m)에 올�
 p.s. 그나저나 오늘은 쉬엄쉬엄 다니기로 했는데 1000미터 이상을 올라와버렸다.
 다리가 점점 튼튼해지는것 같다.
 
-![체르마트의 거리](/media/page/travel/europe/europe-259.jpg)
+![체르마트의 거리](../../media/page/travel/europe/europe-259.jpg)
 
 ### 2007년 05월 20일 16:10 train to Geneve
 
@@ -65,7 +64,7 @@ Swiss Golden Path의 종착지 Montreux(몽뜨루)다. Luzern(루체른)에서 �
 Interlaken(인터라켄)을 거쳐 이곳 몽뜨루까지 이어지는 Golden Path. 이 호수의
 건너편은 프랑스이다. 5대호에 비하면 작지만 이 호수가 Geneve까지 연결된다.
 
-![제네바](/media/page/travel/europe/europe-262.jpg)
+![제네바](../../media/page/travel/europe/europe-262.jpg)
 
 ### 2007년 05월 20일 at the Youth Hostel in Geneve
 

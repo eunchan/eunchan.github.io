@@ -1,9 +1,8 @@
-----
+---
+comments: true
+date: 2012-10-06
 title: 'New Zealand Campervan Log #07'
-date: October 6, 2012
-public: true
-disqus: on
-----
+---
 
 오늘은 피곤함이 최고조에 달했던 날입니다.  아침에 눈을 뜨는것 조차 힘들고, 몸을
 일으키고 움직이는 것은 마치 지게를 지고 있는 것 마냥 힘들었습니다.  피곤이
@@ -18,7 +17,7 @@ Wanaka로 가는 것이었습니다.
 뛸리가 만무하고, 혼자 가서 뛰고 오기엔 피곤함이 극도에 달해 별 흥이 날것 같지
 않더군요.
 
-![Glenorchy 가는 길](/media/page/travel/new-zealand/newzealand-261.jpg)
+![Glenorchy 가는 길](../../media/page/travel/new-zealand/newzealand-261.jpg)
 
 Glenorchy
 ---------
@@ -27,9 +26,9 @@ Glenorchy
 에서부터 이어지는 호숫가를 따라 가는 길은 여전히 최고입니다.  한여름임에도
 사라지지 않는 만년설과 에메랄드빛 호수가 눈을 가득 채웁니다.
 
-![Glenorchy Lagoon](/media/page/travel/new-zealand/newzealand-263.jpg)
+![Glenorchy Lagoon](../../media/page/travel/new-zealand/newzealand-263.jpg)
 
-![Glenorchy에서 본 Lake Wakatipu](/media/page/travel/new-zealand/newzealand-272.jpg)
+![Glenorchy에서 본 Lake Wakatipu](../../media/page/travel/new-zealand/newzealand-272.jpg)
 
 전혀 예정없이 글레노키에 오다보니 무엇을 해야 할지도 몰라 차를 세우고 근처
 산책을 했습니다.  목적이 있어 온것이 아니기에 그저 느긋하게 걸으며 아내와
@@ -41,7 +40,7 @@ Glenorchy
 
 입구에서 사진 한번 찍어줍니다. 그래도 온 기억은 남겨야겠기에 ^^
 
-![Glenorchy 입구](/media/page/travel/new-zealand/newzealand-270.jpg)
+![Glenorchy 입구](../../media/page/travel/new-zealand/newzealand-270.jpg)
 
 Qeenstown
 ---------
@@ -50,8 +49,8 @@ Qeenstown
 먹어보기 위함입니다.  여기 Fish & Chips 중에서 새우가 그렇게 맛있다고 소문이
 났더라구요.
 
-![Queenstown Fish & Chips](/media/page/travel/new-zealand/newzealand-274.jpg)
-![Queenstown Fish & Chips](/media/page/travel/new-zealand/newzealand-275.jpg)
+![Queenstown Fish & Chips](../../media/page/travel/new-zealand/newzealand-274.jpg)
+![Queenstown Fish & Chips](../../media/page/travel/new-zealand/newzealand-275.jpg)
 
 가게를 찾고, 주문을 하려고 메뉴를 보았습니다.  Fish & Chips는 분명히 있는데,
 새우가 보이질않네요.  메뉴를 아무리 보고 또 보아도, Shrimp 는 전혀 보이질
@@ -89,7 +88,7 @@ Qeenstown
 prawn은 생김새가 약간 다르긴 하지만, 그저 지역별로 어디는 프론, 어디는
 쉬림프라고 부르는것 뿐이었습니다.
 
-![새우 메뉴](/media/page/travel/new-zealand/newzealand-278.jpg)
+![새우 메뉴](../../media/page/travel/new-zealand/newzealand-278.jpg)
 
 고생고생하며 주문한 prawns는, 그저 그런 대하구이 그 이상도 이하도 아니였습니다.
 맛있긴 한데, 땀을 뻘뻘흘리며 주문하며 기대했던 맛은 아니고 그냥 짭잘하고 살이
@@ -113,13 +112,13 @@ Arrowtown
 Arrowtown은 Queenstown에서 그다지 멀리 있지 않습니다.  15분 정도 차를 몰고가면
 나오는데, 예전 초창기 정착했던 곳을 이쁘게 꾸며놓았더군요.
 
-![Arrowtown](/media/page/travel/new-zealand/newzealand-283.jpg)
+![Arrowtown](../../media/page/travel/new-zealand/newzealand-283.jpg)
 
 네, 그저 이쁘게 **꾸며** 놓았을 뿐입니다.  여행 책자나, 여행기를 보아도
 Arrowtown은 정말 이쁘다, 좋은 기억이었다, 등등 칭찬 일색이었는데, 우리
 부부에게는 그냥 꾸며놓은 흔적만 가득해서 별로 좋은 인상을 받지 못했습니다.
 
-![Arrowtown](/media/page/travel/new-zealand/newzealand-288.jpg)
+![Arrowtown](../../media/page/travel/new-zealand/newzealand-288.jpg)
 
 아내와 저는 그냥 자연 그대로 풍경을 좋아하는 것이 확실합니다.  차라리
 애로우타운이 예전의 낡은 모습 그대로를 간직했다면 우리 부부는 더 좋아했을 것이

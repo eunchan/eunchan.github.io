@@ -1,9 +1,10 @@
-----
+---
+comments: true
+date: 2016-01-05
+hide:
+- toc
 title: Travel Sites in Northern California
-date: January 5, 2016
-public: true
-disqus: on
-----
+---
 
 북캘리포니아에 지내면서 돌아다닐 만한 장소를 모아보았습니다.
 
@@ -11,14 +12,14 @@ disqus: on
 
 *   Lombard Street
 
-    ![](/media/page/travel/nocal/lombard-street.jpg)\
+    ![](../../media/page/travel/nocal/lombard-street.jpg)
 
     영화에도 종종 나오곤 했던 꽃이 피어있는 언덕길입니다.
     보시면 '아~' 하실 거에요. 관광객이 많아서 정신이 없긴 하지만 잠깐 들렀다 가기엔 좋습니다.
 
 *   Golden Gate Bridge
 
-    ![](/media/page/travel/nocal/golden-gate-bridge.jpg)\
+    ![](../../media/page/travel/nocal/golden-gate-bridge.jpg)
 
     샌프란시스코의 상징이라 할 수 있죠.
     영화에서 몇번이나 부서진건지.. 앞으로도 계속 폭파되고 부서질것만 같은 금문교입니다.
@@ -73,7 +74,7 @@ disqus: on
 
 *   Palace of Fine Arts Theatre
 
-    ![](/media/page/travel/nocal/fine-arts-musium.jpg)\
+    ![](../../media/page/travel/nocal/fine-arts-musium.jpg)
 
     The Rock 영화에도 나오고, 2015년 Big Eyes 영화에도 나오는 등, 여러 영화에 자주 등장하는 장소입니다.
     Golden Gate Bridge 바로 옆에 있으니 꼭 들렀다 가세요.
@@ -87,7 +88,9 @@ disqus: on
     리츠 칼튼 호텔에서 바다를 바라보며 여유롭게 커피 한잔 할 수 있는 곳입니다.
     밤이되거나 겨울 시즌에는 모닥불 (개스로 켜는 불) 을 피우기에 마치 캠핑하는 듯한 느낌을 받으며 경치 구경을 할 수 있습니다.
 
-    조금 더 위쪽으로 가면 [매버릭(Maverick) 근처에서 게잡이][crabbing-at-half-moon-bay]도 할 수 있습니다.
+    조금 더 위쪽으로 가면 [매버릭(Maverick) 근처에서
+    게잡이](../../blog/posts/living/2017-01-28-crabbing-at-half-moon-bay.md)도
+    할 수 있습니다.
 
 *   Coffee Shops
 
@@ -109,7 +112,7 @@ disqus: on
 
 *   Vasona Park
 
-    ![](/media/page/travel/nocal/vasona-park.jpg)\
+    ![](../../media/page/travel/nocal/vasona-park.jpg)
 
     산타크루즈 가는 길에 있는 큰 호수 공원입니다.
     다른 공원과는 별반 다를 바 없지만, 하나 독특한 것이 있다면, 공원 내에 작은 증기기관차가 다닌다는 점입니다.
@@ -120,7 +123,7 @@ disqus: on
 
 *   Stanford University
 
-    ![](/media/page/travel/nocal/stanford.jpg)\
+    ![](../../media/page/travel/nocal/stanford.jpg)
 
     잘 알려진 스탠포드 대학교 교정을 걸어보면서 '내 자녀는 여길 다니면 좋겠다!' 라는 꿈을 한번 품어보는 즐거움을 누릴 수 있습니다(?).
     Oval Park가 유명하구요.
@@ -151,7 +154,7 @@ disqus: on
 
 *   Capitola
 
-    ![](/media/page/travel/nocal/capitola.jpg)\
+    ![](../../media/page/travel/nocal/capitola.jpg)
 
     좁은 지역이지만 외국의 분위기가 물씬 나는 해변가 도시입니다.
     저도 종종 가서 돗자리 펴고 아이들과 해변에서 노닥거리다 오는 곳인데요.
@@ -160,7 +163,7 @@ disqus: on
 
 *   New Brighton State Beach
 
-    ![](/media/page/travel/nocal/new-brighton-state-beach.jpg)\
+    ![](../../media/page/travel/nocal/new-brighton-state-beach.jpg)
 
     Capitola 바로 옆 주립공원인데요. 10달러를 내야지만 들어갈 수 있습니다.
     캠핑장을 예약했다면 내지 않아도 되구요.
@@ -181,7 +184,7 @@ disqus: on
 
 *   Fishermen's Wharf
 
-    ![](/media/page/travel/nocal/monterey-fishermens-warf.jpg)\
+    ![](../../media/page/travel/nocal/monterey-fishermens-warf.jpg)
 
     샌프란시스코의 Pier 39 과 비슷한 분위기의 부두입니다.
     역시나 먹을것 외에는 별다른 게 없구요.
@@ -189,7 +192,7 @@ disqus: on
 
 *   Lovers Point
 
-    ![](/media/page/travel/nocal/lovers-point.jpg)\
+    ![](../../media/page/travel/nocal/lovers-point.jpg)
 
     Pacific Grove 가 시작되는 지점인데, 여기가 멋진 풍경과 작은 해변이 어우러져 잠시 쉬기 정말 좋습니다.
     산타크루즈보다 좀 더 멀리 가고 싶을 때 이곳에 가서 아이들과 모래놀이도 하고 해안 도로를 따라 17 miles 까지 드라이브도 하고 옵니다.
@@ -210,23 +213,23 @@ disqus: on
 
 *   Big Sur
 
-    ![](/media/page/travel/nocal/bixby-bridge.jpg)\
+    ![](../../media/page/travel/nocal/bixby-bridge.jpg)
 
     PCH (Pacific Coast Highway) , 캘리포니아 하이웨이 1 으로 불리는 길을 따라 가면 Big Sur 지역이 나옵니다.
     이 도로를 타고 그대로 계속 내려가고 싶을 정도로 멋진 드라이브 길입니다.
     중간에 유명한 Bixby Bridge, McWay Falls 등 여러 볼거리도 많고, 시간이 된다면 하이킹 할 수 있는 곳도 무척 많습니다.
     1박 이상으로 여행 계획을 잡아서 몬터레이 + 빅서를 다녀오는 코스는 정말 강력히 추천합니다.
 
-    ![Bixby Bridge](/media/page/travel/nocal/big-sur-1.jpg)
+    ![Bixby Bridge](../../media/page/travel/nocal/big-sur-1.jpg)
 
-    ![McWay Fall](/media/page/travel/nocal/big-sur-mcway-fall.jpg)
+    ![McWay Fall](../../media/page/travel/nocal/big-sur-mcway-fall.jpg)
 
 
 ## East
 
 *   [Yosemite National Park][yosemite-np]
 
-    ![](/media/page/travel/nocal/yosemite-national-park.jpg)\
+    ![](../../media/page/travel/nocal/yosemite-national-park.jpg)
 
     캘리포니아를 대표하는 도시를 꼽으라면 San Francisco와 Los Angeles 가 비등한 수준입니다.
     캘리포니아 주도인 Sacramento는, 주도인지 모르는 사람이 많을 정도로 인지도가 없죠.
@@ -237,7 +240,7 @@ disqus: on
     그냥 방문해도 좋지만, 캠핑으로 2박3일 머문다면 매우 색다른 경험이 됩니다.
     많은 캠핑장이 요세미티 국립공원 내에 있음에도 불구하고, 그 모든 캠핑장이 예약이 시작되는 5개월 전부터 매진이 됩니다.
     사이트가 열리는 매달 15일 아침 7시 (PST)가 되자마자 1분만에 한달치 모든 캠핑 사이트가 바로 예약이 될 정도로 인기가 높습니다.
-    
+
     요세미티 국립공원에서 추천하는 볼거리는 Tenaya Lake, Glacier Point, Tuolomne Meadows, Mariposa Grove, Mono lake 정도인 것 같네요.
 
 *   Lake Tahoe
@@ -256,7 +259,7 @@ disqus: on
 *   Sonoma
 *   Sausalito
 
-    ![](/media/page/travel/nocal/sausalito.jpg)\
+    ![](../../media/page/travel/nocal/sausalito.jpg)
 
     부자동네인 Tiburon (네.. 그 현대의 티뷰론과 같은 이름이에요) 을 바라보며 바닷가를 걸을 수 있는 작은 도시입니다.
     사실 샌프란시스코를 멀리서 바라볼 수 있다는 것 말고는 그다지 특징적인 것이 없는 동네이기도 합니다.
@@ -264,7 +267,7 @@ disqus: on
 
 *   Muir Woods National Monument
 
-    ![](/media/page/travel/nocal/muirwoods-national-monument.jpg)\
+    ![](../../media/page/travel/nocal/muirwoods-national-monument.jpg)
 
     샌프란시스코에서 가장 가까이 있으면서 레드우드 원시림을 볼 수 있는 곳입니다.
     혹성탈출 진화의 시작에서 시저가 마지막에 샌프란시스코를 바라보는 그 숲입니다.

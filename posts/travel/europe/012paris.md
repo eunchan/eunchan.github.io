@@ -1,11 +1,10 @@
-----
+---
+comments: true
+date: 2012-01-05
 title: 'Romantic Paris #1'
-date: January 5, 2012
-public: true
-disqus: on
-----
+---
 
-![센 강의 꼬마 장사꾼](/media/page/travel/europe/europe-279.jpg)
+![센 강의 꼬마 장사꾼](../../media/page/travel/europe/europe-279.jpg)
 
 2007년 05월 21일 18:00 at TGV to Paris
 --------------------------------------
@@ -16,14 +15,14 @@ disqus: on
 만들었다. 게다가 제네바에서 Paris(파리)로 가는 TGV는 단돈 CHF 8 이었다. 결국
 파리로 가는 TGV에 몸을 싣고있다. 
 
-![에펠 탑에서 본 야경](/media/page/travel/europe/europe-277.jpg)
+![에펠 탑에서 본 야경](../../media/page/travel/europe/europe-277.jpg)
 
 이젠 마지막 여행지가 될지도 모르는 파리로 간다. 꽤 오랫동안 파리에 머물듯
 하다. 그동안 피렌체에서부터 급하게 달려온것 같다. 조금은 느긋하게 돌아보자.
 파리에서 런던가는 Eurosta는 Eurail Pass 가 만료가 되니 꽤 비쌀 듯 하다.
 프랑크푸르트에서 비행기를 탈 수 있는지 알아봐야 겠다.
 
-![센 강의 거리](/media/page/travel/europe/europe-278.jpg)
+![센 강의 거리](../../media/page/travel/europe/europe-278.jpg)
 
 파리는 어떤 곳일까? 나에게 파리하면 떠오르는 것은 에펠탑 밖에 없을 정도로
 파리, 그리고 프랑스에 대한 지식이 없다. 아.. “봉주르” “살류” “꼬모사바” 등
@@ -51,7 +50,7 @@ Canada)에만 있는줄 알았는데 알고보니 노틀담 의 뜻이 성모 �
 2007년 05월 23일 16:15 at Pont Neuf in Paris
 --------------------------------------------
 
-![센 강의 무심한 장사꾼](/media/page/travel/europe/europe-280.jpg)
+![센 강의 무심한 장사꾼](../../media/page/travel/europe/europe-280.jpg)
 
 루브르 박물관은 생각만큼 매우 크지는 않았지만 볼거리는 정말 많았다. Audio
 Guide도 구해서 아이팟에 넣고 들으면서 돌아다녔다. 그러나 역시 박물관은 나에겐
@@ -65,7 +64,7 @@ Guide도 구해서 아이팟에 넣고 들으면서 돌아다녔다. 그러나 �
 2007년 05월 24일 23:00 at Ines in Paris
 ---------------------------------------
 
-![샹띠이 성 앞에서](/media/page/travel/europe/europe-283.jpg)
+![샹띠이 성 앞에서](../../media/page/travel/europe/europe-283.jpg)
 
 샹띠이(Chantilly) 의 샹띠이 성(Châteu du Chantilly) 에 다녀왔다. 성 자체도
 멋지고 마을도 멋진 곳이었지만, 오늘 여행에서 가장하이라이트는 뭐니뭐니해도
@@ -81,7 +80,7 @@ Guide도 구해서 아이팟에 넣고 들으면서 돌아다녔다. 그러나 �
 앉아 우리를 응시하고 있으니 이게 우리랑 싸우자는 건지 아니면 이 길로 오면
 안된다고 경고하는 건지 구별이 안갔다.
 
-![샹띠이 숲](/media/page/travel/europe/europe-282.jpg)
+![샹띠이 숲](../../media/page/travel/europe/europe-282.jpg)
 
 결국 슬금슬금 우리 갈길을 가기로 마음먹었는데 그 녀석들은 우리 주변을 뱅글뱅글
 돌면서 떠나질 않았다. 누구에게 도움도 청하기도 힘든 환경에서 결국 물테면

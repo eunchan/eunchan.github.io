@@ -1,8 +1,7 @@
-----
+---
+date: 2012-01-05
 title: Backpacking
-date: January 5, 2012
-public: true
-----
+---
 
 목표 : 40리터 배낭에 모든 짐 다 넣기. -> 테스트 결과 충분히 가능
 
