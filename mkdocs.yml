@@ -18,6 +18,10 @@ theme:
     - navigation.footer
     - navigation.tabs
     - navigation.tabs.sticky
+    - navigation.expand
+    - navigation.path
+    - navigation.prune
+    - navigation.indexes
     - content.action.edit
   palette:
     scheme: default
@@ -56,7 +60,31 @@ nav:
     - review/index.md
   - journal:
     - blog/index.md
-  - travel
+  - travel:
+    - 캐나다 워홀:
+      - working-holiday/index.md
+      - 비자획득: working-holiday/01visaget.md
+      - 신체검사: working-holiday/02physicalcheckup.md
+      - 새로운 기회: working-holiday/03anotherchance.md
+      - 미국으로 가기: working-holiday/04gotoamerica.md
+      - 지원동기서: working-holiday/05essay.md
+      - 유용한 정보: working-holiday/06usefulinfo.md
+      - 준비할 것들: working-holiday/07prepare.md
+      - 미국비자 인터뷰: working-holiday/08usavisainterview.md
+      - 항공권 구하기: working-holiday/09ticket.md
+      - 짐싸기: working-holiday/10pack.md
+      - 밴쿠버 날아가기: working-holiday/11flytovancouver.md
+      - 빅토리아 여행: working-holiday/12victoria.md
+      - 밴프로 이동: working-holiday/13movetobanff.md
+      - Mt.Rundle 등산: working-holiday/14hikingtorundle.md
+      - into the Lakes: working-holiday/15intothelakes.md
+      - 스노우보딩: working-holiday/16snowboarding.md
+      - 만남, 그리고 이별: working-holiday/17meetingfarewell.md
+      - 만남, 그리고 이별 2: working-holiday/18meetingfarewell2.md
+      - 다른 방으로 이동: working-holiday/19movetoanotherroom.md
+      - 워킹퍼밋, 그리고 이민: working-holiday/20workingpermitandimmigration.md
+      - 워홀러에게 중요한 10가지 조언: working-holiday/22advisetoworholer.md
+      - 워홀을 마치며:  working-holiday/23finishingworkingholiday.md
   - hobby:
     - motorcycle/index.md
     - camping/index.md
