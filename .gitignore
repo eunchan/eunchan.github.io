@@ -3,3 +3,7 @@ site/
 .cache/
 docs/
 Makefile
+
+# But not these files
+!docs/media/
+
