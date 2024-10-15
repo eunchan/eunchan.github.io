@@ -2,3 +2,7 @@ links:
   - Nested:
     - External link: https://opentitan.org
 comments: true
+
+overrides:
+  hide:
+    - toc
