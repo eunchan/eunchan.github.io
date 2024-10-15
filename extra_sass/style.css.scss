@@ -31,10 +31,35 @@ $body-line-height: 1.8;
 $container-max-width: 850px;
 
 // Import rest of Bulma
-@import "bulma.sass";
+@use "bulma.sass" with (
+  $family-primary: '"Atkinson Hyperlegable", Pretendard, sans-serif',
+  $body-size: 14pt
+);
 
-// Later theme fix
+// Later theme fix of mkdocs-material
+div.md-sidebar--secondary {
+    display: none !important;
+}
 
+header.md-header {
+    background-color: #ffff !important;
+    color: #000 !important;
+
+    nav.md-tabs {
+        background-color: #ffff !important;
+        color: #000 !important;
+    }
+
+    .md-search__form {
+        background-color: #00000011 !important;
+        color: #00000066 !important;
+    }
+}
+
+header.md-header--shadow {
+    box-shadow: none !important;
+}
+/*
 // Heading a
 div.content {
     h1, h2, h3, h4, h5 {
@@ -90,3 +115,4 @@ div#map_canvas {
         padding: 0;
     }
 }
+*/

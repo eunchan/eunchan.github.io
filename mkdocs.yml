@@ -46,12 +46,15 @@ plugins:
       enable_creation_date: true
   - extra-sass
 nav:
-  - article/index.md
+  - articles:
+    - article/index.md
+    - review/index.md
   - journal:
     - blog/index.md
   - travel
-  - hobby
-  - night sky
+  - hobby:
+    - motorcycle/index.md
+    - night sky
   - eunchan/index.md
 extra:
   alternate:
