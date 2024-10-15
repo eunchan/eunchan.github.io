@@ -1,6 +1,8 @@
 ---
 title: "Motorcycle"
 slug: 'motorcycle'
+hide:
+- toc
 ---
 
 ## History
