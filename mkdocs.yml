@@ -61,6 +61,53 @@ nav:
   - journal:
     - blog/index.md
   - travel:
+    - travel/index.md
+    - travel/norcal/index.md
+    - 하와이 '15:
+      - travel/hawaii15/index.md
+      - travel/hawaii15/gallery.md
+    - 뉴질랜드 신혼여행 '10:
+      - travel/new-zealand/index.md
+      - travel/new-zealand/campervan.md
+      - travel/new-zealand/route.md
+      - travel/new-zealand/log01.md
+      - travel/new-zealand/log02.md
+      - travel/new-zealand/log03.md
+      - travel/new-zealand/log04.md
+      - travel/new-zealand/log05.md
+      - travel/new-zealand/log06.md
+      - travel/new-zealand/log07.md
+      - travel/new-zealand/log08.md
+      - travel/new-zealand/log09.md
+      - travel/new-zealand/log10.md
+      - travel/new-zealand/epilogue.md
+      - travel/new-zealand/gallery-wide.md
+      - travel/new-zealand/gallery.md
+    - 이집트 '09:
+      - travel/egypt09/index.md
+      - travel/egypt09/gallery.md
+    - 도쿄:
+      - travel/tokyo/index.md
+      - travel/tokyo/gallery.md
+    - 유럽 '07:
+      - travel/europe/index.md
+      - travel/europe/001backpacking.md
+      - travel/europe/002route.md
+      - travel/europe/003expense.md
+      - travel/europe/004depart.md
+      - travel/europe/005newyorknewyork.md
+      - travel/europe/006passionateitaly.md
+      - travel/europe/007passionateitaly.md
+      - travel/europe/008wienpraha.md
+      - travel/europe/009fussen.md
+      - travel/europe/010swiss.md
+      - travel/europe/011swiss.md
+      - travel/europe/012paris.md
+      - travel/europe/013paris.md
+      - travel/europe/014paris.md
+      - travel/europe/015paris.md
+      - travel/europe/016london.md
+      - travel/europe/gallery.md
     - 캐나다 워홀:
       - working-holiday/index.md
       - 비자획득: working-holiday/01visaget.md

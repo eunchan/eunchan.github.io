@@ -1,9 +1,10 @@
-----
+---
+comments: true
+date: 2012-01-05
+hide:
+- toc
 title: Cairo, White Desert
-date: January 5, 2012
-public: true
-disqus: on
-----
+---
 
 Summary
 -------
@@ -14,7 +15,7 @@ Summary
 To the Cairo
 ------------
 
-![Giza Pyramid](/media/page/travel/egypt/egypt-041.jpg)
+![Giza Pyramid](../../media/page/travel/egypt/egypt-041.jpg)
 
 갑작스러운 결정이었습니다.  전혀 예상하지도 못했는데, 교수님의 결정으로 석사
 1년차 4명이 2명은 이집트의 ICIP학회에 가고 나머지 2명이 하와이의 GLOBECOM
@@ -27,23 +28,23 @@ To the Cairo
 무엇하나 거리낄 것 없고 그저 주어진 시간에 세미나를 듣고 즐기고 오면 되는
 것이었죠.  그래서 그런지 더더욱 재미있었던 여행 같습니다.
 
-![Cairo 가는 비행기에서](/media/page/travel/egypt/egypt-004.jpg)
+![Cairo 가는 비행기에서](../../media/page/travel/egypt/egypt-004.jpg)
 
 15시간을 넘게 비행기를 타는 과정은 여전히 괴롭습니다.  좁은 이코노미 의자에서
 잠도 제대로 잘 수 없는 환경에서 15시간 동안 할 수 있는 일이라고는 글을
 끄적거리거나 책을 읽는 것 외에는 "Can you bring snacks for me?"라고 말하며
 음료와 땅콩과자를 먹는 것 밖에는 없었습니다.
 
-    내가 있는 곳은 중국 아니면 몽골 위를 날고있다.  
-    비행기는 우즈베키스탄의 타슈켄트를 향해 날아가고 있다.  
-    눈 아래 보이는 것은 끝없는 모래.  
-    나무는 거의 보이지 않는 산과 모래만 펼쳐있다.  
-    그러나 이곳에서도 마을이 보인다.  
-    척박한 곳에서 삶을 이어가는 이들이 놀랍다.  
-    놀라움은 여행을 통해 가장 많이 경험할 수 있는 것이다.  
+    내가 있는 곳은 중국 아니면 몽골 위를 날고있다.
+    비행기는 우즈베키스탄의 타슈켄트를 향해 날아가고 있다.
+    눈 아래 보이는 것은 끝없는 모래.
+    나무는 거의 보이지 않는 산과 모래만 펼쳐있다.
+    그러나 이곳에서도 마을이 보인다.
+    척박한 곳에서 삶을 이어가는 이들이 놀랍다.
+    놀라움은 여행을 통해 가장 많이 경험할 수 있는 것이다.
       -- 2009/11/7 16:30
 
-![기자의 세개의 피라미드](/media/page/travel/egypt/egypt-030.jpg)
+![기자의 세개의 피라미드](../../media/page/travel/egypt/egypt-030.jpg)
 
 카이로의 공항에 도착해서 택시기사들과 흥정을 시작했습니다.  이리 깎고 저리
 깎고 했지만, 사실 처음 이야기 했던 택시기사가 계속 따라오며 훼방을 놓는 바람에
@@ -53,7 +54,7 @@ To the Cairo
 수 있었습니다.  이국적인 모습에 정신이 팔릴법도 하지만 일행을 괴롭게 하는 큰
 적이 모든 주변 환경에 집중할 수 없게 만들었습니다.
 
-![매연 가득한 거리의 버스](/media/page/travel/egypt/egypt-009.jpg)
+![매연 가득한 거리의 버스](../../media/page/travel/egypt/egypt-009.jpg)
 
 그것은 바로 **매연** 이었습니다.  도로엔 수많은 차들이 다니고 있었습니다.  그
 차들의 대부분은 겉으로 보기에 20년은 넘어보이는 차들이었습니다.  녹슬고,
@@ -86,14 +87,14 @@ To the Cairo
 Giza Pyramid
 ------------
 
-![숙소에서 보이는 아침 풍경](/media/page/travel/egypt/egypt-007.jpg)
+![숙소에서 보이는 아침 풍경](../../media/page/travel/egypt/egypt-007.jpg)
 
 아침에 창 밖으로 들려오는 시끄러운 경적소리에 눈을 떴습니다.  시차로 인해 일찍
 눈을 떴는데, 그 아침부터 경적소리는 끊이질 않습니다.  커튼을 걷고 창문을 열어
 밖을 바라보는 순간, 눈 앞에 넓은 공사현장과 저 멀리 기자 피라미드가 보입니다.
 숙소를 기자지구에 잡은 탓에 바로 피라미드가 보이나 봅니다.
 
-![머물렀던 숙소](/media/page/travel/egypt/egypt-008.jpg)
+![머물렀던 숙소](../../media/page/travel/egypt/egypt-008.jpg)
 
 숙소는 허름하지만 그래도 아침은 줍니다.  식당에 가 보니 여러 빵과 독특한 향을
 풍기는 커피와 삶은 달걀등 아침을 때울만큼 충분하게 준비되어 있었습니다.
@@ -112,29 +113,29 @@ Giza Pyramid
 주었습니다.  조금은 비싼 가격이지만 일행들이 타보고 싶어하니 저도 덩달아 승락.
 말도 한번 타보지 못했는데 엉겁결에 낙타를 타고 피라미드를 돌게 생겼습니다. ^^
 
-![낙타로 기자 피라미드 구경](/media/page/travel/egypt/egypt-010.jpg)\
-![낙타로 기자 피라미드 구경](/media/page/travel/egypt/egypt-011.jpg)\
-![낙타로 기자 피라미드 구경](/media/page/travel/egypt/egypt-014.jpg)\
+![낙타로 기자 피라미드 구경](../../media/page/travel/egypt/egypt-010.jpg)
+![낙타로 기자 피라미드 구경](../../media/page/travel/egypt/egypt-011.jpg)
+![낙타로 기자 피라미드 구경](../../media/page/travel/egypt/egypt-014.jpg)
 
 낙타는 정말 많이 흔들거렸습니다.  곧장 떨어질 것 같아 안장을 단단하게 쥐느라
 나중엔 팔이 뻐근할 정도였습니다.  다리로 버티느라 나중엔 걷기 힘들 정도더군요.
 느릿느릿 할 줄만 알았던 낙타인데, 몰이꾼이 열심히 때리니 이 녀석이 은근히 빨리
 달립니다.  모래를 가로지르며 달리는게 재밌더군요.
 
-![낙타에 탄 연구실 동료](/media/page/travel/egypt/egypt-016.jpg)\
+![낙타에 탄 연구실 동료](../../media/page/travel/egypt/egypt-016.jpg)
 
 그렇게 피라미드 지역에 진입을 하니, 피라미드 경찰이 가로막습니다.  그리곤
 가이드가 얼마 돈을 쥐어줍니다.  강압적인 표정으로 무섭게 노려보던 경찰은
 그제서야 표정을 풀고 우릴 들여보내줍니다.
 
-![부패한 경찰들](/media/page/travel/egypt/egypt-020.jpg)\
-![부패한 경찰들](/media/page/travel/egypt/egypt-033.jpg)\
+![부패한 경찰들](../../media/page/travel/egypt/egypt-020.jpg)
+![부패한 경찰들](../../media/page/travel/egypt/egypt-033.jpg)
 
 가이드는 경찰이 부패했다고 막 욕을 합니다.  그런데 '당신들도 여행자 구슬려서
 바가지 씌우지 않아?'라는 생각이 듭니다.
 
-![기자 피라미드에서](/media/page/travel/egypt/egypt-036.jpg)\
-![기자 피라미드에서](/media/page/travel/egypt/egypt-038.jpg)\
+![기자 피라미드에서](../../media/page/travel/egypt/egypt-036.jpg)
+![기자 피라미드에서](../../media/page/travel/egypt/egypt-038.jpg)
 
 그렇지만 일단 들어온 것, 열심히 빨빨거리며 돌아다니고 사진을 찍습니다.
 이전처럼 고민 연속의 여행이 아닌, 정말 단순히 즐기기 위한 여행입니다.  사색도
@@ -144,7 +145,7 @@ Giza Pyramid
 Old Cairo
 ---------
 
-![Old Cairo에서 만난 소녀](/media/page/travel/egypt/egypt-086.jpg)
+![Old Cairo에서 만난 소녀](../../media/page/travel/egypt/egypt-086.jpg)
 
 어디를 가려고 했는지 모르겠습니다.  다만 택시를 타고 Mosque만 죽도록
 외친기억밖에 없네요.  택시기사와 제가 제대로 이야기를 주고받은지 조차
@@ -153,7 +154,7 @@ Old Cairo
 
 그렇게 올드 카이로와 만나게 되었습니다.
 
-![Old Cairo의 거리](/media/page/travel/egypt/egypt-077.jpg)
+![Old Cairo의 거리](../../media/page/travel/egypt/egypt-077.jpg)
 
 마치 베네치아의 골목길을 따라 이리 저리 방향도 모른체 정처없이 걸었던 그때를
 다시 보는 것 같았습니다.  올드 카이로의 골목 사이사이에는 삶이 넘칩니다.
@@ -161,14 +162,14 @@ Old Cairo
 속옷이 눈을 자극합니다.  외국인을 신기하다는 듯이 바라보는 사람들이 신경을
 자극합니다.  은은하게 울리는 아랍 특유의 음악이 저를 깨웁니다.
 
-![속옷을 팔고있는 청년](/media/page/travel/egypt/egypt-076.jpg)
+![속옷을 팔고있는 청년](../../media/page/travel/egypt/egypt-076.jpg)
 
 저는 이런 것들이즐겁습니다.  꾸며진 외관이 아닌, 진짜 사람이 사는 이런 곳을
 보는것이 즐겁습니다.  마치 처음 바다를 보는 어린아이마냥 신이 납니다.
 
-![줄에 널려있는 빨래](/media/page/travel/egypt/egypt-084.jpg)
+![줄에 널려있는 빨래](../../media/page/travel/egypt/egypt-084.jpg)
 
-![모스크](/media/page/travel/egypt/egypt-082.jpg)
+![모스크](../../media/page/travel/egypt/egypt-082.jpg)
 
 그렇게 걷고 있는데 어디선가 많이 봤던 모스크가 나타났습니다.  처음엔 몰랐다가
 익숙해서, 가져온 책을 펼쳐보았습니다.  우리가 가려고 했던 모스크는 아니지만,
@@ -185,12 +186,12 @@ Old Cairo
 그동안 방향치는 아니라고 생각했는데, 다시 생각을 고쳐먹어야겠습니다.  그렇게
 이리 저리 움직이면서 공원으로 가는중이라는 팻말을 찾았습니다.
 
-![Al Azhar Park 가는 골목길](/media/page/travel/egypt/egypt-081.jpg)\
-![Al Azhar Park 가는 골목길](/media/page/travel/egypt/egypt-087.jpg)\
+![Al Azhar Park 가는 골목길](../../media/page/travel/egypt/egypt-081.jpg)
+![Al Azhar Park 가는 골목길](../../media/page/travel/egypt/egypt-087.jpg)
 
 **AL AZHAR PARK**, 우리가 가려고 하는 공원입니다.
 
-![Al Azhar Park에서](/media/page/travel/egypt/egypt-101.jpg)\
+![Al Azhar Park에서](../../media/page/travel/egypt/egypt-101.jpg)
 
 공원엔 많은 사람들이 있었습니다.  카이로 시내에서는 거의 볼 수 없었던 커플들이
 자리를 가득 채우고 있었습니다.  다들 어디갔나 했더니 여기있군요.
@@ -199,7 +200,7 @@ AL AZHAR PARK에서 바라보는 일몰은 지금까지 매연 가득하고 매�
 방불케 하는 차들, 귀가 아플정도로 시끄러운 경적소리의 최악의 카이로를
 잊어버리게 할 만한 아름다운 일몰이었습니다.
 
-![Cairo의 아름다운 일몰 @ Al Azhar Park](/media/page/travel/egypt/egypt-091.jpg)\
+![Cairo의 아름다운 일몰 @ Al Azhar Park](../../media/page/travel/egypt/egypt-091.jpg)
 
 생각하지도 못했던 장소에 와서 생각하지도 못했던 완전 다른 모습의 카이로를
 발견했습니다.
@@ -208,14 +209,14 @@ AL AZHAR PARK에서 바라보는 일몰은 지금까지 매연 가득하고 매�
 생선을 직접 선택해서 먹을 수 있는 곳이었습니다. 추천합니다. 정말 맛있게 생선을
 구워주더군요. 나일강을 바라보면서 멋진 저녁을 즐길 수 있었습니다.)
 
-![Sea Gull의 일품 생선구이](/media/page/travel/egypt/egypt-107.jpg)\
-![Sea Gull의 일품 생선구이](/media/page/travel/egypt/egypt-108.jpg)\
+![Sea Gull의 일품 생선구이](../../media/page/travel/egypt/egypt-107.jpg)
+![Sea Gull의 일품 생선구이](../../media/page/travel/egypt/egypt-108.jpg)
 
 
 Bahariya Desert
 ---------------
 
-![Bahariya 사막 투어](/media/page/travel/egypt/egypt-151.jpg)
+![Bahariya 사막 투어](../../media/page/travel/egypt/egypt-151.jpg)
 
 이집트를 오기 전부터, 사막을 가보고 싶었습니다.  그래서 일정이 빠듯함에도
 일행을 설득해서 이집트의 사막 투어를 신청하게 되었습니다.  우리가 갈 곳은
@@ -223,13 +224,13 @@ Bahariya Desert
 설레입니다. 사막이라니, 제가 일생에 한번 갈 수 있을까 의심했던 그곳을
 가게됩니다.
 
-![담배연기 가득한 Munib 버스 정류장](/media/page/travel/egypt/egypt-113.jpg)
+![담배연기 가득한 Munib 버스 정류장](../../media/page/travel/egypt/egypt-113.jpg)
 
 바하리아로 가는 버스를 타기 위해 무닙 버스정류장으로 향합니다.  더이상
 카이로로 돌아올 일이 없기에 모든 짐을 다 끌고 가다보니 짐이 많군요.
 
-![담배연기 피하기 위해 두건 쓴 우리들](/media/page/travel/egypt/egypt-116.jpg)\
-![담배연기 피하기 위해 두건 쓴 우리들](/media/page/travel/egypt/egypt-110.jpg)\
+![담배연기 피하기 위해 두건 쓴 우리들](../../media/page/travel/egypt/egypt-116.jpg)
+![담배연기 피하기 위해 두건 쓴 우리들](../../media/page/travel/egypt/egypt-110.jpg)
 
 무닙의 공기는 정말 최악입니다.  숨을 쉬기 어려운매연에, 연신 피워대는
 담배연기까지 가세하니, 결국 마스크를 착용할 수 밖에 없었습니다.  버스가 올
@@ -239,28 +240,28 @@ Bahariya Desert
 넘게 지났을까, 그제서야 바하리아에 도착한 우리는 정신을 차리지도 못한 채 사막
 투어에 나섭니다.
 
-![유쾌한 가이드](/media/page/travel/egypt/egypt-135.jpg)\
+![유쾌한 가이드](../../media/page/travel/egypt/egypt-135.jpg)
 
 이젠 가이드 이름이 생각이 나질 않지만, 참 즐겁고 유쾌한 가이드였습니다.
 
-![백사막 가는 길](/media/page/travel/egypt/egypt-143.jpg)\
+![백사막 가는 길](../../media/page/travel/egypt/egypt-143.jpg)
 
 지금까지 탄 버스 5시간에 또 차를 타고 사막을 들어가지만, 지금은 즐겁습니다.
 풍경은 점점 변하고 황무지를 지나 시시각각 변합니다.
 
-![백사막 가는 길](/media/page/travel/egypt/egypt-150.jpg)\
+![백사막 가는 길](../../media/page/travel/egypt/egypt-150.jpg)
 
 조금 늦은 탓인지 많은 것을 보지는 못하고 가볍게 이리 저리 보며 돌아다니니
 어느덧 해는 지고 야영할 곳으로 갑니다.
 
-![백사막의 일몰](/media/page/travel/egypt/egypt-145.jpg)
+![백사막의 일몰](../../media/page/travel/egypt/egypt-145.jpg)
 
 백사막의 아름다움은 일몰에서도 드러납니다.
 
 그러나 백사막, 흑사막, 크리스탈 마운틴, 그 모든것을 앗아가버릴 만큼 멋드러진
 것은 야영장에서 보이는 밤하늘의 모래알처럼 수많은 별빛들이었습니다.
 
-![백사막의 밤하늘](/media/page/travel/egypt/egypt-156.jpg)
+![백사막의 밤하늘](../../media/page/travel/egypt/egypt-156.jpg)
 
 바하리아 사막은, 천체를 관측하는 광해 수준으로 보면 **0** 입니다.  즉 아무런
 광해가 없는, 별빛을 있는 그대로 받아들이는 곳입니다.
@@ -271,17 +272,17 @@ Bahariya Desert
 맑은 하늘이었습니다.  캠핑을 제외하면 주변 100km이내에는 불빛조차 없는 적막한
 곳, 그곳에서 별을 바라봅니다.  그믐달이어서 별을 보기에 최적이었습니다.
 
-![백사막의 야영지](/media/page/travel/egypt/egypt-158.jpg)
+![백사막의 야영지](../../media/page/travel/egypt/egypt-158.jpg)
 
 맛있는 저녁을 먹고 서로 이야기하며 시간을 보내고 하나 둘 자리에 들어갑니다.
 시간이 아까운 저는 이리 저리 더 돌아다니며, 사막여우를 보고 별을 봅니다.
 
-![백사막의 야영지](/media/page/travel/egypt/egypt-159.jpg)
+![백사막의 야영지](../../media/page/travel/egypt/egypt-159.jpg)
 
 평생에 볼 별을 다 본 기분입니다.  아는 별자리는 모두 찾았고, 희미하게
 안드로메다 은하까지 육안으로 확인했습니다.  더할 나위 없이 만족스러웠습니다.
 
-![백사막의 야영지와 밤하늘](/media/page/travel/egypt/egypt-157.jpg)
+![백사막의 야영지와 밤하늘](../../media/page/travel/egypt/egypt-157.jpg)
 
 하지만 사진으론 잘 남기지 못해서 아쉬움이 많습니다.  조금만 더 사진 찍는 법을
 잘 알아서 왔더라면, 제가 이렇게 느낀 그 감흥을 그대로 전달할 수 있었을 겁니다.
@@ -290,7 +291,7 @@ Bahariya Desert
 Leaving Cairo
 -------------
 
-![백사막에서의 일출](/media/page/travel/egypt/egypt-160.jpg)
+![백사막에서의 일출](../../media/page/travel/egypt/egypt-160.jpg)
 
 아침이 밝아오고 멋진 일출을 본 후, 일행은 다시 카이로 공항을 향합니다.  이제
 다시 한국으로 돌아갈 시간입니다.
@@ -301,10 +302,10 @@ Leaving Cairo
 다시 한번 와보고 싶습니다.  아부심벨도 보고, 룩소르도 가보고, 아스완도
 어떤곳인지 보고싶습니다.
 
-![사막 투어](/media/page/travel/egypt/egypt-131.jpg)
+![사막 투어](../../media/page/travel/egypt/egypt-131.jpg)
 
 
 Egypt Gallery
 -------------
 
-  - [Egypt Gallery](./gallery.html)
+  - [Egypt Gallery](gallery.md)

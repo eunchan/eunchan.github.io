@@ -1,11 +1,10 @@
-----
+---
+comments: true
+date: 2012-01-05
 title: to New York
-date: January 5, 2012
-public: true
-disqus: on
-----
+---
 
-![JFK Airport](/media/page/travel/europe/europe-001.jpg)
+![JFK Airport](../../media/page/travel/europe/europe-001.jpg)
 
 2007년 5월 2일
 --------------

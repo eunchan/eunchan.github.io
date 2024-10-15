@@ -1,11 +1,10 @@
-----
+---
+comments: true
+date: 2012-09-17
 title: 'New Zealand Campervan Log #04'
-date: September 17, 2012
-public: true
-disqus: on
-----
+---
 
-![Invercagill 해안](/media/page/travel/new-zealand/newzealand-104.jpg)
+![Invercagill 해안](../../media/page/travel/new-zealand/newzealand-104.jpg)
 
 [인버카길][] 에서 장좀 보고 곧장 길을 나섰습니다. 사실 스튜어트 아일랜드에
 가보고 싶었지만, 들어갔다 나오는데 걸리는 시간이 상당히 길 것 같아 다음으로
@@ -17,9 +16,9 @@ disqus: on
 쏟아집니다. 우비를 입으라는 건지, 선글라스를 쓰라는건지 모르겠습니다. 고지대
 산도 아닌데 이리 변덕스러우니 어찌 할 바를 모르겠습니다.
 
-![Colac Bay](/media/page/travel/new-zealand/newzealand-106.jpg)
-![Colac Bay](/media/page/travel/new-zealand/newzealand-107.jpg)
-![Colac Bay](/media/page/travel/new-zealand/newzealand-108.jpg)
+![Colac Bay](../../media/page/travel/new-zealand/newzealand-106.jpg)
+![Colac Bay](../../media/page/travel/new-zealand/newzealand-107.jpg)
+![Colac Bay](../../media/page/travel/new-zealand/newzealand-108.jpg)
 
 [테아나우][] 로 가는 길은 2방향이 있는데 우리는 남쪽 해안을 따라 가기로
 합니다. [마운트 쿡][] 으로 갈 예정이었기 때문에 여기에서 보는 바다가
@@ -33,8 +32,8 @@ disqus: on
 이제 바다가 보이는 곳의 거의 끝에 다가갑니다. 이대로 내륙으로 들어가면 이렇게
 멋진 바다는 다시 못 볼 지도 모른다는 생각에 좀 천천히 가고 싶습니다.
 
-![Te Anau 전의 마지막 바다](/media/page/travel/new-zealand/newzealand-109.jpg)
-![McCracken's Rest](/media/page/travel/new-zealand/newzealand-112.jpg)
+![Te Anau 전의 마지막 바다](../../media/page/travel/new-zealand/newzealand-109.jpg)
+![McCracken's Rest](../../media/page/travel/new-zealand/newzealand-112.jpg)
 
 지나가는 모든 곳이 다 사진속의 풍경같이 멋집니다. 절벽과 파도와 바람들, 그
 모든 것이 서로 섞여 강렬한 향수를 느끼듯 머릿속에 각인됩니다.
@@ -45,14 +44,14 @@ disqus: on
 표지판에 **Suspension Bridge** 가 보입니다. 흔들다리! 를 외치며 바로 핸들을
 꺾어 들어갑니다.
 
-![Clifden Suspension Bridge](/media/page/travel/new-zealand/newzealand-114.jpg)
+![Clifden Suspension Bridge](../../media/page/travel/new-zealand/newzealand-114.jpg)
 
 우리가 간 곳은 Clifden Suspension Bridge입니다. 전혀 생각지도 못했던 곳인데
 이곳이 이날 기억에 가장 많이 남습니다.
 
-![Clifden Suspension Bridge](/media/page/travel/new-zealand/newzealand-115.jpg)
-![Clifden Suspension Bridge](/media/page/travel/new-zealand/newzealand-116.jpg)
-![Clifden Suspension Bridge](/media/page/travel/new-zealand/newzealand-117.jpg)
+![Clifden Suspension Bridge](../../media/page/travel/new-zealand/newzealand-115.jpg)
+![Clifden Suspension Bridge](../../media/page/travel/new-zealand/newzealand-116.jpg)
+![Clifden Suspension Bridge](../../media/page/travel/new-zealand/newzealand-117.jpg)
 
 사진으로는 표현되지 못한 강렬함이 있었습니다. 주변의 강과 나무와 물과 바위의
 완벽한 자연 배경 위에 전혀 거슬림 없이 다리가 놓여 있었습니다. 이 길을 지나는
@@ -72,7 +71,7 @@ disqus: on
 되살아 날 수 있을 지도 모르겠습니다. 사진의 낮은 평지 부분을 실제 눈으로
 보았을 때 광활함은 넋을 놓고 보게 만들었습니다.
 
-![Wetland](/media/page/travel/new-zealand/newzealand-122.jpg)
+![Wetland](../../media/page/travel/new-zealand/newzealand-122.jpg)
 
 Glowworm Caves
 --------------
@@ -85,7 +84,7 @@ Glowworm Caves
 
 반딧불이 동굴은 Real Journey 회사를 통해서 배를 타야만 들어갈 수 있습니다.
 
-![Ferry to Glowworm Caves](/media/page/travel/new-zealand/newzealand-131.jpg)
+![Ferry to Glowworm Caves](../../media/page/travel/new-zealand/newzealand-131.jpg)
 
 저녁시간인데도 해는 아직 떠있습니다. 배안에 있기에 갑갑해서 갑판으로
 올라왔더니 시원한 바람에 쌀쌀함을 느낍니다. 여름이 여름이 아닌 것 같습니다.
@@ -100,4 +99,4 @@ Glowworm Caves
 배를타고 들어가면 아무것도 보이지 않는 칠흑같은 어둠속에서 별처럼 무수하게
 빛나는 Glowworm을 보게됩니다. 아름다움을 넘어선 경외로운 수준입니다.
 
-![Glowworm Caves Guide](/media/page/travel/new-zealand/newzealand-133.jpg)
+![Glowworm Caves Guide](../../media/page/travel/new-zealand/newzealand-133.jpg)

@@ -1,11 +1,10 @@
-----
+---
+comments: true
+date: 2012-01-05
 title: 'Romantic Paris #2'
-date: January 5, 2012
-public: true
-disqus: on
-----
+---
 
-![19구의 과일가게](/media/page/travel/europe/europe-286.jpg)
+![19구의 과일가게](../../media/page/travel/europe/europe-286.jpg)
 
 2007년 05월 25일 12:30 at 19th District in Paris
 ------------------------------------------------
@@ -17,14 +16,14 @@ disqus: on
 소르본을 권유했다. 그래서 오늘 정현이를 Saint-Michael 역에 데려다 주었다.
 (소르본과 출발지역이 같으므로)
 
-![19구의 거리](/media/page/travel/europe/europe-287.jpg)
+![19구의 거리](../../media/page/travel/europe/europe-287.jpg)
 
 그런데 어느새 나는 지하철을 타고 19구역 앞에서 내려 지금은 중앙에 들어와 있다.
 무엇이 나를 19구역으로 이끈것일까? 나도 그 이유를 잘 모르겠다. 일단 돌아다녀
 보면서 이유를 찾아봐야겠다.
 
-![19구의 공동묘지](/media/page/travel/europe/europe-290.jpg)
-![19구의 공동묘지](/media/page/travel/europe/europe-291.jpg)
+![19구의 공동묘지](../../media/page/travel/europe/europe-290.jpg)
+![19구의 공동묘지](../../media/page/travel/europe/europe-291.jpg)
 
 동일 13:45
 ----------
@@ -37,12 +36,12 @@ disqus: on
 있었다. 19구의 입구의 그 모습만 보고 발길을 돌리는 사람들은 발견하지 못했을
 지도 모른다. 
 
-![19구의 공원](/media/page/travel/europe/europe-293.jpg)
+![19구의 공원](../../media/page/travel/europe/europe-293.jpg)
 
 동일 15:15 at Montmartte in Paris
 ---------------------------------
 
-![몽마르뜨에서 본 파리 풍경](/media/page/travel/europe/europe-296.jpg)
+![몽마르뜨에서 본 파리 풍경](../../media/page/travel/europe/europe-296.jpg)
 
 몽마르뜨의 계단에 앉아서 사람들을 보고있다. 왜 모든 사람들은 이곳 몽마르뜨에
 오고 계단 앞에서 사진을 찍으며 기록을 남기려고 하는 것일까? 거의 대부분의
@@ -54,7 +53,7 @@ disqus: on
 과연 사원과 어울리는, 동화되는 사진을 찍는 사람이 몇명이나 있을까? 대부분은
 자기가 여기 몽마르뜨에 왔다는 것을 다른 사람에게 증명하기 위해 찍는 것 같다.
 
-![몽마르뜨의 분수](/media/page/travel/europe/europe-295.jpg)
+![몽마르뜨의 분수](../../media/page/travel/europe/europe-295.jpg)
 
 여행을 다녀온 후 “자신감”을 얻는다는 것도 위의 마지막 문장과 크게 벗어나지
 않는다. 다른 사람이 해보지 않은 것을 해봤다는 것, 다른 사람이 보지 못한 것을
@@ -64,7 +63,7 @@ disqus: on
 경쟁의식이라고 할 수도 있겠다. 자신을 당당하게 지탱해 줄 것이 자신의 내면의
 성숙이 아니라 겉으로 치장된 껍질뿐인 경험이 되어버렸다.
 
-![할머니와 아이](/media/page/travel/europe/europe-294.jpg)
+![할머니와 아이](../../media/page/travel/europe/europe-294.jpg)
 
 그렇다면 내가 사진을 찍는 목적은 무엇일까? 왜 나는 구지 남들이 가지 않는 곳을
 가려하고 경험하지 않은 것을 경험하려 할까? 이 행동은 내가 남들보다 뛰어나다는

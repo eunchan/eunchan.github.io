@@ -1,11 +1,10 @@
-----
+---
+comments: true
+date: 2012-09-13
 title: 'New Zealand Campervan Log #01'
-date: September 13, 2012
-public: true
-disqus: on
-----
+---
 
-![나리타 공항에서](/media/page/travel/new-zealand/newzealand-001.jpg)
+![나리타 공항에서](../../media/page/travel/new-zealand/newzealand-001.jpg)
 
 아침 9시 반에 [크라이스트처치][] 공항에 도착했습니다.
 입국 심사를 받는데 immigrate officer가 저를 따로 불러서 검사하더군요.
@@ -37,8 +36,8 @@ disqus: on
 뒤에 따라오는 컨버터블 스포츠카도 느긋하게 운전하는 모습을 보았습니다.
 이런 부분에서 뉴질랜드의 준법의식을 느낄 수 있었습니다.
 
-![오아마루 가는 길](/media/page/travel/new-zealand/newzealand-002.jpg)
-![오아마루 가는 길](/media/page/travel/new-zealand/newzealand-003.jpg)
+![오아마루 가는 길](../../media/page/travel/new-zealand/newzealand-002.jpg)
+![오아마루 가는 길](../../media/page/travel/new-zealand/newzealand-003.jpg)
 
 Ashburton을 지나니 점심시간이 훌쩍 지나버렸습니다.
 길가에 차를 세우고 라면을 끓입니다.
@@ -56,9 +55,9 @@ GPS 지도 상으로는 바로 옆이 바다로 표시되는데도 파도 소리
 그런 맹렬함 때문인지, 해안은 절벽으로 이루어져 있었습니다.
 바다를 가까이 보기 위해선 절벽 사이에 난 좁은 길로 내려가야만 했습니다.
 
-![Pareora의 해변](/media/page/travel/new-zealand/newzealand-006.jpg)
-![Pareora의 해변](/media/page/travel/new-zealand/newzealand-008.jpg)
-![Pareora의 해변](/media/page/travel/new-zealand/newzealand-010.jpg)
+![Pareora의 해변](../../media/page/travel/new-zealand/newzealand-006.jpg)
+![Pareora의 해변](../../media/page/travel/new-zealand/newzealand-008.jpg)
+![Pareora의 해변](../../media/page/travel/new-zealand/newzealand-010.jpg)
 
 좁은 길을 통해 내려간 그곳은 거센 파도가 치는 태평양 그대로를 보여주고 있었습니다.
 앞에는 바다밖에 보이지 않고 섬은 없는 끝없는 수평선만 있는 바다였습니다.
@@ -68,7 +67,7 @@ GPS 지도 상으로는 바로 옆이 바다로 표시되는데도 파도 소리
 그때 당시는 그곳은 그냥 스쳐 가는 곳이어서 이름조차 몰랐지만,
 나중에 그 지역을 찾아보니 Pareora 지명을 가진 곳입니다.
 
-![Oamaru Holiday Park](/media/page/travel/new-zealand/newzealand-011.jpg)
+![Oamaru Holiday Park](../../media/page/travel/new-zealand/newzealand-011.jpg)
 
 도쿄 나리타를 들러서 온, 하루가 넘는 기나긴 강행군 탓에 [오아마루][]에 도착할 즈음엔 눈꺼풀이 그 무게를 이기질 못할 지경이 되어버렸습니다.
 간신히 [오아마루][]에 도착해 [Holiday Park][]에 자리를 잡았습니다.
@@ -80,7 +79,7 @@ GPS 지도 상으로는 바로 옆이 바다로 표시되는데도 파도 소리
 결국, 치킨샐러드로만 배를 채우고 갈비는 건들지도 못하고 그대로 돌아왔습니다.
 맛있다는 말에 기대하고 갔는데 실망해서 앞으로의 먹거리가 걱정되는 순간입니다.
 
-![Fat Sally's](/media/page/travel/new-zealand/newzealand-014.jpg)
+![Fat Sally's](../../media/page/travel/new-zealand/newzealand-014.jpg)
 
 밤이 한참 지났음에도, 한여름 탓인지 주변은 밝습니다.
 스무 시간 전만 해도 두꺼운 외투를 입고 추위에 떨고 있었지만,

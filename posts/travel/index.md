@@ -1,9 +1,8 @@
-----
+---
+hide:
+- toc
 title: Travel
-date: January 5, 2012
-nodate: true
-public: true
-----
+---
 
 그동안 여행하면서 써왔던 글을 모아두었습니다. 해당 장소의 정보를
 제공하는데에는 많이 부적합합니다. 여행하면서 제가 느낀 것, 그리고 생각을
@@ -11,11 +10,11 @@ public: true
 
 ## Asia & Oceania
 
--   [Tokyo, Tokyo][08tokyo] (08, 10)
+-   [Tokyo, Tokyo](tokyo/index.md) (08, 10)
 
 -   China : Shanghai(08)
 
--   [New Zealand Campervan 여행][10newzealand]
+-   [New Zealand Campervan 여행](new-zealand/index.md)
 
     Christchurch(10), Timaru(10), Oamaru(10), Dunedin(10), Catlins(10),
     Invercagill(10), Te Anau(10), Milford Sound(10), Queenstown(10),
@@ -24,13 +23,13 @@ public: true
 
 ## Africa
 
--   [Egypt : Cairo and White desert][09egypt]
+-   [Egypt : Cairo and White desert](egypt09/index.md)
 
     Cairo(09), Baharia(White Desert)(09)
 
 ## Europe
 
--   [Europe with 40L Backpack][07europe]
+-   [Europe with 40L Backpack](europe/index.md)
 
     + England : London(07)
     + France : Paris(07), Chartres(07), Chantilly(07)
@@ -42,12 +41,14 @@ public: true
 
 ## America
 
--   [Canada Working Holiday][06canada], [Banff NP][17banff]
+-   [Canada Working Holiday](../working-holiday/index.md), Banff NP
 
     Vancouver(06), Victoria(06), Banff(06, 17), Calgary(06), Jasper(06)
 
--   USA : [New York(07)][07newyork], [Oahu, Hawaii (15)][hawaii15], [North
-    California][nocal], [Death Valley and Eastern Sierra('21)][21-eastern-sierra], [Lost Coast ('23)][trip:lost-coast]
+-   USA : [New York(07)][07newyork], [Oahu, Hawaii (15)](hawaii15/index.md),
+    [North California](norcal/index.md), [Death Valley and Eastern
+    Sierra('21)](21-eastern-sierra-death-valley.md), [Lost Coast
+    ('23)][trip:lost-coast]
 
 [trip:lost-coast]: https://www.youtube.com/watch?v=sYEnop5mbYs
 

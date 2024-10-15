@@ -1,11 +1,10 @@
-----
+---
+comments: true
+date: 2012-09-18
 title: 'New Zealand Campervan Log #06'
-date: September 18, 2012
-public: true
-disqus: on
-----
+---
 
-![Kingston Road to Queenstown](/media/page/travel/new-zealand/newzealand-210.jpg)
+![Kingston Road to Queenstown](../../media/page/travel/new-zealand/newzealand-210.jpg)
 
 잠을 푹 자고 [테아나우][] 에서 느긋하게 일어났습니다.  눈을 뜨니 10시가 거의 다
 되었습니다.  날씨는 [인버카길][] 이후로 항상 좋은 것 같네요.
@@ -16,7 +15,7 @@ disqus: on
 전화를 받지는 않지만, 어제 알아둔 교회 주소를 GPS에 찍고 [퀸스타운][] 으로
 달리기 시작합니다.
 
-![Lake Wakatipu](/media/page/travel/new-zealand/newzealand-211.jpg)
+![Lake Wakatipu](../../media/page/travel/new-zealand/newzealand-211.jpg)
 
 이제는 아무런 감흥도 없습니다.  지나가며 보는 풍경은 어제 보았던 [밀포드
 사운드][] 와 비교됩니다.  그 엄청난 산과 피오르드는 지금의 평평한 대지는 그냥
@@ -26,8 +25,8 @@ disqus: on
 감탄사를 연발했었습니다.  그런 것을 보면 사람이란 참 간사하다는 생각이 드네요.
 시간이 얼마나 지났다고 이렇게 무뎌지다니..
 
-![Kingston Road to Queenstown](/media/page/travel/new-zealand/newzealand-220.jpg)
-![Kingston Road to Queenstown](/media/page/travel/new-zealand/newzealand-221.jpg)
+![Kingston Road to Queenstown](../../media/page/travel/new-zealand/newzealand-220.jpg)
+![Kingston Road to Queenstown](../../media/page/travel/new-zealand/newzealand-221.jpg)
 
 지루한 풍경은 Kingston을 지나면서 급격하게 바뀝니다.  Lake Waitipu(와이티푸
 호수) 옆을 따라 달리는 도로는 그중 최고입니다.  이 호수가의 도로를 따라 달리면
@@ -46,15 +45,15 @@ disqus: on
 두시간이 훌쩍 지나버렸습니다.  예배는 물건너간 줄 알았는데 워킹홀리데이
 사람들을 위한 5시 예배가 있다고 해서 다행히 참석할 수 있었습니다.
 
-![Queenstown에서](/media/page/travel/new-zealand/newzealand-233.jpg)
+![Queenstown에서](../../media/page/travel/new-zealand/newzealand-233.jpg)
 
 그 사이 [퀸스타운][] 을 구경합니다.  사람들은 자유롭고 느긋한 생활을 하는 것
 같습니다.  많은 사람들이 관광객이겠지만 실제 사는 사람들또한 여유로워보입니다.
 우리나라에서는 이런 여유로운 생활을 하지 못하는게 안타깝습니다.  저 또한 지금은
 이렇게 즐기지만 다시 한국으로 돌아가면 치열하게 살아가야만 할 테지요.
 
-![Lake Wakatipu](/media/page/travel/new-zealand/newzealand-237.jpg)
-![Lake Wakatipu](/media/page/travel/new-zealand/newzealand-241.jpg)
+![Lake Wakatipu](../../media/page/travel/new-zealand/newzealand-237.jpg)
+![Lake Wakatipu](../../media/page/travel/new-zealand/newzealand-241.jpg)
 
 예배를 드린 후 이야기 하면서 세 유명한 가게를 알게 되었습니다.  첫째는
 **Fergburger** 햄버거 가게이고 둘째는 호숫가에 있는 **Fish & Chips** 의
@@ -63,9 +62,9 @@ Icecream 가게입니다.
 
 예배를 드린 후 [퀸스타운][] 곤돌라를 타고 타운 전체를 감상합니다.
 
-![Gondola에서 본 Queenstown 풍경](/media/page/travel/new-zealand/newzealand-250.jpg)
-![Gondola에서 본 Queenstown 풍경](/media/page/travel/new-zealand/newzealand-252.jpg)
-![Gondola에서 본 Queenstown 풍경](/media/page/travel/new-zealand/newzealand-255.jpg)
+![Gondola에서 본 Queenstown 풍경](../../media/page/travel/new-zealand/newzealand-250.jpg)
+![Gondola에서 본 Queenstown 풍경](../../media/page/travel/new-zealand/newzealand-252.jpg)
+![Gondola에서 본 Queenstown 풍경](../../media/page/travel/new-zealand/newzealand-255.jpg)
 
 이렇게 멋진 자연 풍경을 가진 곳에 정말 아름답게 마을이 들어서 있습니다.
 
@@ -77,8 +76,8 @@ Icecream 가게입니다.
 퍼그버거 앞에는 많은 사람들로 북적댑니다.  그중 유달리 중국인들이 많습니다.
 아마도 중국 여행 책자에 소개가 되어있나봅니다.
 
-![Fergburger](/media/page/travel/new-zealand/newzealand-258.jpg)
-![Fergburger](/media/page/travel/new-zealand/newzealand-259.jpg)
+![Fergburger](../../media/page/travel/new-zealand/newzealand-258.jpg)
+![Fergburger](../../media/page/travel/new-zealand/newzealand-259.jpg)
 
 퍼그버거에서 가장 기본적인 메뉴인 퍼그버거(NZ $10)는 지금까지 먹어보았던 그
 어떤 햄버거보다 맛있습니다.  크라제 버거는 이제 버거도 아닌 것 같네요.  외국의
@@ -86,4 +85,4 @@ Icecream 가게입니다.
 그대로 느껴지면서 그렇다고 퍽퍽하지도 않은, 정말 일품 햄버거입니다.  이대로
 퍼그버거를 한국에 가지고 가고 싶을 정도네요.
 
-![Fergburger 앞](/media/page/travel/new-zealand/newzealand-260.jpg)
+![Fergburger 앞](../../media/page/travel/new-zealand/newzealand-260.jpg)
