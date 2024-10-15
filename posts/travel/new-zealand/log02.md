@@ -1,18 +1,17 @@
-----
+---
+comments: true
+date: 2012-09-13
 title: 'New Zealand Campervan Log #02'
-date: September 13, 2012
-public: true
-disqus: on
-----
+---
 
-![Oamaru Holiday Park의 아침](/media/page/travel/new-zealand/newzealand-015.jpg)
+![Oamaru Holiday Park의 아침](../../media/page/travel/new-zealand/newzealand-015.jpg)
 
 9시간 가까이 잠을 자고 일어났지만, 전날의 피로는 풀리지 않았습니다.
 어제의 여행은 26시간, 아니 새벽에 인천공항으로 갔던 시간까지 포함하면 30시간의 강행군이었습니다.
 그렇게 무리하게 움직여서 생긴 피로가 쉽사리 풀리지 않은 것이 당연하겠지요.
 아침에 간단하게 먹고 9시에 출발하기로 했던 일정은 10시가 조금 넘어서야 [Holiday Park][]를 나설 수 있게 되었습니다.
 
-![Oamaru Holiday Park의 아침](/media/page/travel/new-zealand/newzealand-016.jpg)
+![Oamaru Holiday Park의 아침](../../media/page/travel/new-zealand/newzealand-016.jpg)
 
 밤에는 몰랐는데 아침에 보니 참 많은 캠핑카가 주차되어 있었습니다.
 이렇게 많은 캠핑카가 뉴질랜드 전역의 수많은 홀리데이 파크에 있을 것입니다.
@@ -34,7 +33,7 @@ Moeraki Boulders의 바다는 전날 보았던 Pareora의 바다와 다르지 �
 뉴질랜드의 동쪽 해안입니다. 그러나 Moeraki Boulders에는 독특한 것이 있어
 관광객의 발걸음을 잡습니다.
 
-![Moeraki Boulders](/media/page/travel/new-zealand/newzealand-017.jpg)
+![Moeraki Boulders](../../media/page/travel/new-zealand/newzealand-017.jpg)
 
 바로 **바위** 입니다.
 모에라키의 바위는 다른 바닷가에서 볼 수 있는 바위와 다릅니다.
@@ -45,20 +44,20 @@ Moeraki Boulders의 바다는 전날 보았던 Pareora의 바다와 다르지 �
 이 바위는 화학작용을 통해 내부에 핵이 만들어지고 주변에 단단한 물질이 생성되면서 공처럼 둥근 모양으로 자라난 바위입니다.
 깎여서 작아지는 바위가 아닌 자라난 바위라는 점이 특이합니다.
 
-![Moeraki Boulders 바위](/media/page/travel/new-zealand/newzealand-021.jpg)
-![Moeraki Boulders 바위](/media/page/travel/new-zealand/newzealand-023.jpg)
+![Moeraki Boulders 바위](../../media/page/travel/new-zealand/newzealand-021.jpg)
+![Moeraki Boulders 바위](../../media/page/travel/new-zealand/newzealand-023.jpg)
 
 실제로 보면 정말 놀랍습니다.
 이런 바위가 존재한다는 것도 뉴질랜드에 오기 전엔 알지 못했었습니다.
 그런데 눈앞에 바위가 있고, 깨어진 바위는 그 내부가 어떻게 생성되었는지를 가늠하게 해 줍니다.
 아내와 함께 신기한 눈으로 이리 찍고 저리 찍으며 시간을 보냈습니다.
 
-![Moeraki Boulders 풍경](/media/page/travel/new-zealand/newzealand-027.jpg)
+![Moeraki Boulders 풍경](../../media/page/travel/new-zealand/newzealand-027.jpg)
 
 Dunedin
 -------
 
-![Dunedin 시내 (Octagon)](/media/page/travel/new-zealand/newzealand-033.jpg)
+![Dunedin 시내 (Octagon)](../../media/page/travel/new-zealand/newzealand-033.jpg)
 
 [더니든][]에 도착하니 여기는 [오아마루][]와는 다르게 매우 큰 도시였습니다.
 뉴질랜드 남섬에서 [크라이스트처치][] 다음으로 큰 도시라 합니다.
@@ -67,7 +66,7 @@ Dunedin
 중심가인 Octagon에 주차하려니 주차할 공간이 없었습니다.
 8각형의 도로를 뱅글뱅글 돌다가 겨우 주차 공간이 생겨서 차를 세워두고 내릴 수 있었습니다.
 
-![Dunedin 시내](/media/page/travel/new-zealand/newzealand-034.jpg)
+![Dunedin 시내](../../media/page/travel/new-zealand/newzealand-034.jpg)
 
 [i-site][]에서 [Holiday Park][]를 예약하고 오늘의 주된 여행 루트인 [오타고][] 반도 관광신청을 하려 했습니다.
 오타고 반도관광이 유명한 이유는 알바트로스(Albatross, 신천옹) 때문입니다.
@@ -77,7 +76,7 @@ Dunedin
 그런데 버스가 떠나 버렸으니, 이대로 하루를 더 머물고 아침에 여행을 하든지 아니면 직접 차를 몰고 가든지 해야 할 수 밖에 없었죠.
 결국, 유람선을 타기 위해 덩치 큰 캠퍼밴을 이끌고 뉴질랜드에서 가장 구불구불한 길을 달리는 사태가 일어났습니다. ㅜ.ㅜ
 
-![High Cliff Road to Weller's Rock](/media/page/travel/new-zealand/newzealand-037.jpg)
+![High Cliff Road to Weller's Rock](../../media/page/travel/new-zealand/newzealand-037.jpg)
 
 차선은 좁을대로 좁아서 왼쪽 바퀴와 오른쪽 바퀴는 차선과 맞물려 돌아갑니다.
 급기야 High Cliff Road는 아예 중앙선조차 없었습니다.
@@ -86,7 +85,7 @@ Dunedin
 뉴질랜드 온 지 이틀 만에 이런 난관에 봉착하게 될 줄은 몰랐습니다.
 운전에 그래도 조금은 익숙한 저에게도 아직 우핸들 좌측통행을 경험한 지 이틀째에 낯선 교통환경의 뉴질랜드 도로, 그것도 한쪽은 절벽인 도로를 운전하려니 긴장감에 손에 땀이 납니다.
 
-![Weller's Rock](/media/page/travel/new-zealand/newzealand-039.jpg)
+![Weller's Rock](../../media/page/travel/new-zealand/newzealand-039.jpg)
 
 겨우겨우 유람선을 탈 장소인 Wellers Rock에 도착했습니다.
 안개가 자욱합니다.
@@ -107,7 +106,7 @@ Dunedin
 심지어 뉴질랜드에서 남 아메리카를 다녀오는 예도 있다고 합니다.
 그 거리가 왕복 15,000km가 넘는 거리이니 대단한 녀석들이죠.
 
-![알바트로스 서식지](/media/page/travel/new-zealand/newzealand-040.jpg)
+![알바트로스 서식지](../../media/page/travel/new-zealand/newzealand-040.jpg)
 
 하지만 그 알바트로스가 사라지고 다시는 날고 있는 알바트로스를 보지 못했습니다.
 유람선 관람을 마친 후, [오아마루][]에서 보지 못했던 펭귄을 보기 위해 Penguin Beach에 갔지만,
@@ -119,7 +118,7 @@ Dunedin
 그래도 차는 돌리라고 차단막을 올려주더군요.
 슬쩍 차 돌리면서 성으로 들어가는 길만 보며 눈물만 주룩주룩 흘리고 되돌아왔습니다.
 
-![Otago 반도](/media/page/travel/new-zealand/newzealand-043.jpg)
+![Otago 반도](../../media/page/travel/new-zealand/newzealand-043.jpg)
 
 오타고 반도 투어는 제대로 하지도 못했습니다.
 기억 속에 남아있는 것은 구불구불한 길, 절벽, 그리고 안개 낀 바다, 거친 파도밖에 없습니다.
@@ -145,8 +144,8 @@ Dunedin
 더니든 마트에서 스파게티도 샀고 신라면도 샀으니,
 길에서 다시 한번 잔치를 벌일 수 있을 것 같아 흐뭇합니다.
 
-![Dunedin Holiday Park에서 본 밤하늘](/media/page/travel/new-zealand/newzealand-044.jpg)
-![Dunedin Holiday Park에서 본 밤하늘](/media/page/travel/new-zealand/newzealand-045.jpg)
+![Dunedin Holiday Park에서 본 밤하늘](../../media/page/travel/new-zealand/newzealand-044.jpg)
+![Dunedin Holiday Park에서 본 밤하늘](../../media/page/travel/new-zealand/newzealand-045.jpg)
 
 [Holiday Park][]에서 자리를 펴고 차 뒷문을 열고 그대로 하늘을 보았습니다.
 구름은 조금 있었지만,

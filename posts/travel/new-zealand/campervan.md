@@ -1,8 +1,7 @@
-----
+---
+date: 2012-01-06
 title: Campervan
-date: January 6, 2012
-public: true
-----
+---
 
 Information
 -----------

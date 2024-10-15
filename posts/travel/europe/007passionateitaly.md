@@ -1,11 +1,10 @@
-----
+---
+comments: true
+date: 2012-01-05
 title: 'Passionate Italy #2'
-date: January 5, 2012
-public: true
-disqus: on
-----
+---
 
-![미켈란젤로 광장에서 본 피렌체](/media/page/travel/europe/europe-072.jpg)
+![미켈란젤로 광장에서 본 피렌체](../../media/page/travel/europe/europe-072.jpg)
 
 2007년 05월 10일, Firenze
 -------------------------
@@ -18,13 +17,13 @@ disqus: on
 [^1]: 나중에 다시 이야기해서 알아봤는데, 그쪽은 팀 사람이 많아서 30분정도
       기다리다가 관광을 나섰다고 했다.
 
-![피렌체](/media/page/travel/europe/europe-068.jpg)
+![피렌체](../../media/page/travel/europe/europe-068.jpg)
 
 그러다 문득 예전의 기억들이 떠올랐다. 자세한 기억은 나지 않지만 내가 지금까지
 약속을 어겼던 많은 사람들은 나를 어떻게 생각했을까? 애써 이해하려 노력했을까?
 아니면 욕 한번 내뱉고 돌아섰을까? 그렇지 않으면 두고 두고 마음에 담아두었을까?
 
-![피렌체 거리](/media/page/travel/europe/europe-069.jpg)
+![피렌체 거리](../../media/page/travel/europe/europe-069.jpg)
 
 지금의 나는 찾을 수 없는 그 사람들을 어떻게 생각하고 있나? 나조차 대답할 수
 없는 부분이다. 나도 내가 왜 지금까지 이렇게 강렬한 햇살을 맞으며[^2] 주변에서
@@ -34,14 +33,14 @@ disqus: on
 
 [^2]: 결국 이날 엄청나게 피부가 타버렸다.
 
-![로마에서의 인연](/media/page/travel/europe/europe-048.jpg)\
+![로마에서의 인연](../../media/page/travel/europe/europe-048.jpg)\
 
 멀리서 두오모의 지붕이 보인다. 뛰쳐나가 두오모로, 산타마리아 누벨라로,
 미켈란젤로의 광장으로 달려가고 싶다. 이렇게 아름다운 Firenze의 풍경을 놔두고
 앉아서 시간을 보내는 것은 힘들다.
 
 
-![두오모 올라가는 길](/media/page/travel/europe/europe-065.jpg)
+![두오모 올라가는 길](../../media/page/travel/europe/europe-065.jpg)
 
 두오모 꼭대기에서
 -----------------
@@ -65,19 +64,19 @@ disqus: on
 우리나라 사람들의 관람문화가 낮은 것 같아 기분이 안좋다. 다른 외국인이 와서
 보면 어떻게 생각할까.. 이러다 결국엔 한국인 입장 금지를 걸어놓을지도 모르겠다.
 
-![두오모의 낙서](/media/page/travel/europe/europe-067.jpg)
+![두오모의 낙서](../../media/page/travel/europe/europe-067.jpg)
 
 2007년 05월 11일 18:20 Treni Stazione in Venezia
 ------------------------------------------------
 
-![베네치아 골목길](/media/page/travel/europe/europe-086.jpg)
+![베네치아 골목길](../../media/page/travel/europe/europe-086.jpg)
 
 원하던 호스텔이 가득 찼다. 민박집에서 머물기는 싫다. 결국 오늘 바로 온
 베네치아를 오늘 바로 떠나기로 했다. 아쉬움만 가득하다.
 
-![베네치아](/media/page/travel/europe/europe-076.jpg)
-![베네치아](/media/page/travel/europe/europe-077.jpg)
-![베네치아](/media/page/travel/europe/europe-078.jpg)
+![베네치아](../../media/page/travel/europe/europe-076.jpg)
+![베네치아](../../media/page/travel/europe/europe-077.jpg)
+![베네치아](../../media/page/travel/europe/europe-078.jpg)
 
 베네치아는 골목길을 직접 걸어봐야 한다. 산 마르코 광장, 리알토다리는 유명한
 곳이라 많은 사람들로 북적대고 이런저런 가게들이 가득하지만 그 이외의 베네치아
@@ -88,19 +87,18 @@ disqus: on
 보고자 했던, 내가 꿈꿨던 여행의 모습이었다. 비록 짐을 맡기지 못해 배낭을 메고
 걷느라 어깨는 무거웠지만 마음은 가볍게 걸을 수 있었다. 
 
-![베네치아 골목길](/media/page/travel/europe/europe-081.jpg)
-![베네치아 골목길](/media/page/travel/europe/europe-082.jpg)
-![베네치아 골목길](/media/page/travel/europe/europe-089.jpg)
+![베네치아 골목길](../../media/page/travel/europe/europe-081.jpg)
+![베네치아 골목길](../../media/page/travel/europe/europe-082.jpg)
+![베네치아 골목길](../../media/page/travel/europe/europe-089.jpg)
 
 나는 여행을 찍고 가기 식으로 하고 싶지 않다. 삶을 보고싶다. '삶'은 유명한
 유적지에서도 발견할 수 없고 박물관에서도 볼 수 없다. '삶'은 '골목길'에서
 발견할 수 있었다. 앞으로의 여행은 골목길을 중심을 다녀야겠다.
 
-![베네치아 골목길](/media/page/travel/europe/europe-092.jpg)
-![베네치아 골목길](/media/page/travel/europe/europe-094.jpg)
-![베네치아 골목길](/media/page/travel/europe/europe-095.jpg)
-![베네치아 골목길](/media/page/travel/europe/europe-097.jpg)
-![베네치아 골목길](/media/page/travel/europe/europe-098.jpg)
-![베네치아 골목길](/media/page/travel/europe/europe-099.jpg)
-![베네치아 역 앞](/media/page/travel/europe/europe-101.jpg)
-
+![베네치아 골목길](../../media/page/travel/europe/europe-092.jpg)
+![베네치아 골목길](../../media/page/travel/europe/europe-094.jpg)
+![베네치아 골목길](../../media/page/travel/europe/europe-095.jpg)
+![베네치아 골목길](../../media/page/travel/europe/europe-097.jpg)
+![베네치아 골목길](../../media/page/travel/europe/europe-098.jpg)
+![베네치아 골목길](../../media/page/travel/europe/europe-099.jpg)
+![베네치아 역 앞](../../media/page/travel/europe/europe-101.jpg)

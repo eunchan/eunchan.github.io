@@ -1,8 +1,7 @@
-----
+---
+date: 2012-01-05
 title: Expense
-date: January 5, 2012
-public: true
-----
+---
 
 Stuff
 -----

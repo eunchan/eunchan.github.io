@@ -1,11 +1,10 @@
-----
+---
+comments: true
+date: 2012-01-05
 title: 'Swiss #1'
-date: January 5, 2012
-public: true
-disqus: on
-----
+---
 
-![클라이네샤이덱의 표지판](/media/page/travel/europe/europe-206.jpg)
+![클라이네샤이덱의 표지판](../../media/page/travel/europe/europe-206.jpg)
 
 Interlaken, Lauterbrunnen
 -------------------------
@@ -17,7 +16,7 @@ Interlaken, Lauterbrunnen
 스위스가 신이내린 자연을 가지고 있구나! 이 기찻길만 계속 왕복하고 싶다.
 체르마트 가는길에 여기 왔다 가면서 갈까?
 
-![융프라우의 구름](/media/page/travel/europe/europe-186.jpg)
+![융프라우의 구름](../../media/page/travel/europe/europe-186.jpg)
 
 이렇게 아름다운 자연이 있고 확실한 노후보장이 되는 스위스는 겨울에 추운것만
 빼면 정말 살기 좋은 곳이겠구나. 춥더라도 겨울에 Snowboard 타면 되니 더할 나위
@@ -29,14 +28,14 @@ Interlaken, Lauterbrunnen
 2007년 05월 18일 22:40 Balmer's Herberg in Interlaken
 ----------------------------------------------------
 
-![아이거 북벽(North Face)](/media/page/travel/europe/europe-199.jpg)
+![아이거 북벽(North Face)](../../media/page/travel/europe/europe-199.jpg)
 
-![융프라우](/media/page/travel/europe/europe-188.jpg)
+![융프라우](../../media/page/travel/europe/europe-188.jpg)
 
 융프라우요흐(Jungfraujoch)는 밴프의 로키와 크게 다르지 않았다. 하지만 그곳에
 올라서서 보면 로키와는 다르게 산 아래로 푸른 초원이 펼쳐진다.
 
-![융프라우에서](/media/page/travel/europe/europe-194.jpg)
+![융프라우에서](../../media/page/travel/europe/europe-194.jpg)
 
 융프라우 산악열차의 루트는 인터라켄 -> 그린덴발트(라우터브루넨) ->
 클라이네샤이덱 -> 융프라우요흐 이다. 올라갈때는 산악기차를 이용하고 내려올
@@ -48,13 +47,13 @@ Interlaken, Lauterbrunnen
 그리고 동유럽을 60일동안 돌고 온 한국의 사진작가(남작가)님. 그들과 여러
 이야기를 나눴다.
 
-![클라이네샤이덱에서 라우터브루넨으로](/media/page/travel/europe/europe-200.jpg)
-![클라이네샤이덱에서 라우터브루넨으로](/media/page/travel/europe/europe-203.jpg)
-![클라이네샤이덱에서 라우터브루넨으로](/media/page/travel/europe/europe-207.jpg)
-![클라이네샤이덱에서 라우터브루넨으로](/media/page/travel/europe/europe-208.jpg)
-![클라이네샤이덱에서 라우터브루넨으로](/media/page/travel/europe/europe-211.jpg)
-![클라이네샤이덱에서 라우터브루넨으로](/media/page/travel/europe/europe-215.jpg)
-![클라이네샤이덱에서 라우터브루넨으로](/media/page/travel/europe/europe-223.jpg)
+![클라이네샤이덱에서 라우터브루넨으로](../../media/page/travel/europe/europe-200.jpg)
+![클라이네샤이덱에서 라우터브루넨으로](../../media/page/travel/europe/europe-203.jpg)
+![클라이네샤이덱에서 라우터브루넨으로](../../media/page/travel/europe/europe-207.jpg)
+![클라이네샤이덱에서 라우터브루넨으로](../../media/page/travel/europe/europe-208.jpg)
+![클라이네샤이덱에서 라우터브루넨으로](../../media/page/travel/europe/europe-211.jpg)
+![클라이네샤이덱에서 라우터브루넨으로](../../media/page/travel/europe/europe-215.jpg)
+![클라이네샤이덱에서 라우터브루넨으로](../../media/page/travel/europe/europe-223.jpg)
 
 라우터브루넨은 내가 생각해오던 알프스의 모습을 그대로 보여주는 마을이었다.
 멀리 언덕에서 보이는 마을에는 100m 가 족히 넘을듯한 폭포가 장엄하게 물보라를
@@ -62,11 +61,11 @@ Interlaken, Lauterbrunnen
 정도였다. 나중에 신혼여행으로 다시 오고싶다. 산토리니, 베네치아, 프라하,
 라우터브루넨.
 
-![라우터브루넨](/media/page/travel/europe/europe-231.jpg)
-![라우터브루넨](/media/page/travel/europe/europe-238.jpg)
-![라우터브루넨](/media/page/travel/europe/europe-246.jpg)
-![라우터브루넨](/media/page/travel/europe/europe-248.jpg)
-![라우터브루넨](/media/page/travel/europe/europe-243.jpg)
+![라우터브루넨](../../media/page/travel/europe/europe-231.jpg)
+![라우터브루넨](../../media/page/travel/europe/europe-238.jpg)
+![라우터브루넨](../../media/page/travel/europe/europe-246.jpg)
+![라우터브루넨](../../media/page/travel/europe/europe-248.jpg)
+![라우터브루넨](../../media/page/travel/europe/europe-243.jpg)
 
 2007년 05월 19일 15:10 Ost Bahnhof in Interlaken
 -----------------------------------------------
