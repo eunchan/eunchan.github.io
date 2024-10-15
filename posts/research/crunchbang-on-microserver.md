@@ -1,10 +1,9 @@
-----
-title: Crunchbang on HP Microserver
-date: May 7, 2013
+---
+comments: true
+date: 2013-05-07
 tags: debian, crunchbang, kotex, latex
-public: true
-disqus: on
-----
+title: Crunchbang on HP Microserver
+---
 
 Making Bootable USB in Windows
 ------------------------------

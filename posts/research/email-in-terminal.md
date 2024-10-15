@@ -1,27 +1,26 @@
-----
-title: 'Checking email in terminal: neomutt + notmuch + lieer'
-date: November 16, 2019
-public: true
-disqus: true
+---
+comments: true
+date: 2019-11-16
+slug: email-in-terminal
 tags:
-    - neomutt
-    - mutt
-    - terminal
-    - email
-    - gmail
-    - notmuch
-    - afew
-    - multi-account
-    - lieer
-    - gmailieer
-    - gauteh
-    - oauth
-    - api
-    - gnupg
-    - pgp
-    - gpg
-slug: 'email-in-terminal'
-----
+- neomutt
+- mutt
+- terminal
+- email
+- gmail
+- notmuch
+- afew
+- multi-account
+- lieer
+- gmailieer
+- gauteh
+- oauth
+- api
+- gnupg
+- pgp
+- gpg
+title: 'Checking email in terminal: neomutt + notmuch + lieer'
+---
 
 Gmail이 나온 지 이제 15년이 넘었습니다. 2004년 만우절에 1GB 라는 깜짝 놀랄만 한
 용량을 들고 나오면서 이메일을 더이상 지울 필요 없다고 소개를 했었죠. 그때 당시
@@ -67,7 +66,7 @@ Mail을 이용헤 이메일을 사용해 왔습니다. Apple Mail을 쓰면서 G
 먼저 가장 메인이 되는 프로그램은 Mutt라는 터미널에서 동작하는 메일 관리
 앱입니다.
 
-![Mutt](/media/page/research/email_mutt.png)
+![Mutt](../../media/page/research/email_mutt.png)
 
 공돌이들만 쓸 것 같은 디자인 (터미널 앱에서 디자인을 따지는 게 우습긴 하지만)에
 기능은 엄청 많아서 파고들면 한도 끝도 없을 것 같은 모습의 이메일 앱 Mutt입니다.

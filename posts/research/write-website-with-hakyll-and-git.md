@@ -1,10 +1,9 @@
-----
+---
+comments: true
+date: 2012-09-20
+slug: write-website-with-hakyll-and-git
 title: Write website with Hakyll and Git
-date: September 20, 2012
-public: true
-disqus: on
-slug: 'write-website-with-hakyll-and-git'
-----
+---
 
 *Updated*: 지금은 아래의 방법을 이용하고 있지 않고 [Github Pages와 Cloudflare를
 이용한 웹사이트][github-pages-cloudflare]를 운용하고 있습니다. Github Pages가

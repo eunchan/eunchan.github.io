@@ -52,7 +52,7 @@ plugins:
 nav:
   - articles:
     - article/index.md
-    - review/index.md
+    - research/index.md
   - journal:
     - blog/index.md
   - travel
