@@ -19,6 +19,10 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - content.action.edit
+  palette:
+    scheme: default
+    primary: white
+    accent: teal
 plugins:
   # - meta
   - blog:
