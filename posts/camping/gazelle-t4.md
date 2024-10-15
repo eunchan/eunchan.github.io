@@ -103,7 +103,7 @@ COVID-19이 터지고 비행기를 타는 여행이 거의 금지되다시피 �
 방수가방과 바닥시트가 포함된 오버랜드 에디션으로 구매했습니다. 무게도 30파운드로
 Shiftpod이나 루프탑 텐트에 비해서 가볍습니다.
 
-![](../../../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_campground1.jpg)
+![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_campground1.jpg)
 
 설치는 무척이나 쉽습니다. 땅에 스테이크를 안박는다면 2분안에 끝납니다. 내부는
 가로 세로 7.5피트라 공간도 넉넉하고, 내부에서 성인이 일어서도 머리가 닿지
@@ -114,7 +114,7 @@ Shiftpod이나 루프탑 텐트에 비해서 가볍습니다.
 올리고 다른 쪽에 가젤 텐트를 묶으면 딱 맞습니다. 방수라서 밖에 묶어도 큰 걱정이
 들진 않네요.
 
-![](../../../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_entrance.jpg)
+![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_entrance.jpg)
 
 내부 공간은 넓직하고 불편함이 없습니다. 안에는 그물 포켓이 있고 천장에도
 그물망이 있어서 랜턴같은 걸 올려둘 수 있습니다. 들어가는 입구는 두곳인데, 허브

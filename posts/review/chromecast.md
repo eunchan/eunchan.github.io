@@ -37,7 +37,7 @@ Roku에 비해서 좋은 점은, Google Play Video를 스트리밍 할 수 있�
 때문에 별반 차이는 없지만 Google Photo, Play Video, Play Music이 된다는 점은
 축복이네요.
 
-![Chromecast Logo on TV](../media/page/review/chromecast-booting.jpg)
+![Chromecast Logo on TV](../media/page/review/chromecast-booting.jpeg)
 
 또한 Roku는 티비 전원을 끄더라도 상시 켜져있었는데 크롬캐스트는 티비의 USB
 포트에서 전원을 가져오기 때문에 티비를 켜면 그때 같이 켜집니다. 왠지 전기를
