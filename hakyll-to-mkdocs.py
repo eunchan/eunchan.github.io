@@ -69,7 +69,7 @@ def main():
     mds = [os.path.join(base, x) for x in files if x.endswith(".md")]
     for md in mds:
       # compute rel path
-      root_relpath = os.path.relpath(args.root, md)
+      root_relpath = os.path.relpath(args.root, os.path.dirname(md))
       process_hakyll_md(root_relpath, md)
 
 
