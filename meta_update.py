@@ -71,7 +71,7 @@ def get_parent_meta(meta_list: Dict[str, dict], root: str, dirname: str) -> dict
   return meta_list[os.path.dirname(dirname)]
 
 
-def process_md_with_meta(root: str, meta_list: Dict[str, dict]):
+def process_md_with_meta(root: str, meta_list: Dict[str, dict], outdir: str):
   """Visit every markdown and update meta field."""
   # os walk directories.
   mds: Dict[str, List[str]] = {}
@@ -81,18 +81,24 @@ def process_md_with_meta(root: str, meta_list: Dict[str, dict]):
       continue
     mds[base] = md_files
     for md in md_files:
-      update_md_with_meta(md, meta_list[base])
+      update_md_with_meta(md, meta_list[base], root, outdir)
 
   pprint.pprint(mds)
 
 
-def update_md_with_meta(md: str, meta: dict):
+def update_md_with_meta(md: str, meta: dict, root: str, outdir: str):
   """Read markdown and update meta field."""
   post = frontmatter.load(md)
   pprint.pprint(post.metadata)
   merge_meta_to_md(post.metadata, meta)
   #print(frontmatter.dumps(post))
-  with open(md, 'w') as f:
+  rel_path = os.path.relpath(md, root)
+  out_path = os.path.join(outdir, rel_path)
+  out_md_dir = os.path.dirname(out_path)
+  print(md, root, rel_path, out_md_dir, out_path)
+  if not os.path.exists(out_md_dir):
+    os.makedirs(out_md_dir)
+  with open(out_path, 'w') as f:
     f.write(frontmatter.dumps(post))
 
 
@@ -107,11 +113,12 @@ def merge_meta_to_md(post_meta, meta) -> dict:
 
 if __name__ == "__main__":
   parse = argparse.ArgumentParser(prog = "meta")
-  parse.add_argument("--dir", "-d", default=".")
+  parse.add_argument("--dir", "-d", default="posts")
   parse.add_argument("--meta", "-f", default=_META_FILE)
+  parse.add_argument("--outdir", "-o", default="docs")
 
   args = parse.parse_args()
   meta_list = build_meta_struct(args.dir, args.meta)
   pprint.pprint(meta_list)
 
-  process_md_with_meta(args.dir, meta_list)
+  process_md_with_meta(args.dir, meta_list, args.outdir)
