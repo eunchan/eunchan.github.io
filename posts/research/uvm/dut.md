@@ -1,26 +1,25 @@
-----
-title: "Design Under Test (DUT)"
-date: January 8, 2019
-public: true
-disqus: true
-slug: 'uvm-dut'
+---
+comments: true
+date: 2019-01-08
+slug: uvm-dut
 tags:
-    - systemverilog
-    - uvm
-    - dut
-    - design
-    - hardware
-    - verification
-----
+- systemverilog
+- uvm
+- dut
+- design
+- hardware
+- verification
+title: Design Under Test (DUT)
+---
 
-[UVM 첫화면][uvm-verification]
+[UVM 첫화면](index.md)
 
-1. [UVM 개요][uvm-introduction]
+1. [UVM 개요](uvm-introduction.md)
 2. Design Under Test (DUT)
-3. [UVM Test Flow][uvm-flow]
-4. [UVM Blocks][uvm-blocks]
+3. [UVM Test Flow](uvm-flow.md)
+4. [UVM Blocks](uvm-blocks.md)
 
-----
+---
 
 UVM을 구현해 보기에 앞서서, 앞으로 검증할 하드웨어 모듈에 대한 설명을 먼저
 하는게 나을 것 같네요. 어떤 모듈을 하는 게 좋을까 생각을 좀 해보았습니다.
@@ -37,7 +36,7 @@ reactive agent가 있는 모듈을 기반으로 이야기 해 볼까 합니다. 
 
 ## DUT 구조
 
-![DUT Block Diagram](/media/page/research/uvm/dut-blockdiagram.svg)
+![DUT Block Diagram](../../../media/page/research/uvm/dut-blockdiagram.svg)
 
 이 DUT는 하나의 Bus slave 포트와, 하나의 interrupt output을 가지고 있는
 모듈입니다. 특정한 버스 입력이 왔을 때 내부 동작으로 인터럽트가 발생하는 거죠.
@@ -62,7 +61,7 @@ reactive agent가 있는 모듈을 기반으로 이야기 해 볼까 합니다. 
 [이전 글에서 보여준 검증 환경 구조][uvm-introduction]가 사실 이 모듈에 곧장
 적용할 수 있는 구조입니다. 그 그림을 다시 보면,
 
-![UVM blocks](/media/page/research/uvm/uvm-overall.svg)
+![UVM blocks](../../../media/page/research/uvm/uvm-overall.svg)
 
 하나의 화살표는 DUT방향으로 향하고 다른 하나는 DUT에서 `uvm_agent #2`로 가는
 것을 볼 수 있습니다. 위의 하드웨어 모듈에 적용하면 `uvm_agent #1`의

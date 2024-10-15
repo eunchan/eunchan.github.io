@@ -1,17 +1,16 @@
-----
-title: "Introduction to UVM"
-date: January 5, 2019
-public: true
-disqus: true
-slug: 'uvm-introduction'
-----
+---
+comments: true
+date: 2019-01-05
+slug: uvm-introduction
+title: Introduction to UVM
+---
 
-[UVM 첫화면][uvm-verification]
+[UVM 첫화면](index.md)
 
 1. UVM 개요
-2. [Design Under Test (DUT)][uvm-dut]
-3. [UVM Test Flow][uvm-flow]
-4. [UVM Blocks][uvm-blocks]
+2. [Design Under Test (DUT)](dut.md)
+3. [UVM Test Flow](uvm-flow.md)
+4. [UVM Blocks](uvm-blocks.md)
 
 ## Motive
 
@@ -46,7 +45,7 @@ Time을 줄이기 위한 목적이 컸습니다. 덕분에 부담없이 가볍�
 
 ## UVM
 
-![UVM 기본 구조](/media/page/research/uvm/uvm-overall.svg)
+![UVM 기본 구조](../../../media/page/research/uvm/uvm-overall.svg)
 
 세부 사항이 빠져있긴 하지만, 위의 그림이 UVM을 이용하여 검증환경을 만드는 기본
 뼈대가 됩니다. UVM을 이용해서 어떤 하드웨어 모듈이든지 다 검증할 수는 있지만,
@@ -83,7 +82,7 @@ address write channel에 값을 기록하고 write channel에 데이터를 싣�
 이 과정 중 `uvm_driver`는 `uvm_sequence_item`을 가지고 동작할 뿐
 `uvm_sequencer`나 `uvm_agent`, 또는 `uvm_sequence` 모듈과 직접 통신할 필요가
 없습니다. 다른 모듈과 연계를 고민할 필요없이 `uvm_driver`만 규격에 맞게 디자인
-하면 되는거죠. 
+하면 되는거죠.
 
 다음에 `uvm_sequence`에 대해 이야기 할 때 자세한 데이터 흐름을 알려드릴테니
 지금은, 시퀀스가 시퀀스아이템(트랜잭션)을 시퀀서에게 주고 그걸 드라이버가 받아서

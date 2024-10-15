@@ -1,11 +1,16 @@
-----
-title: 'localparam in param port list'
-date: May 29, 2019
-disqus: true
-public: true
-slug: 'localparam'
-tags: ['verilog', 'systemverilog', 'sv2009', 'parameter', 'hdl', 'digital-design']
-----
+---
+comments: true
+date: 2019-05-29
+slug: localparam
+tags:
+- verilog
+- systemverilog
+- sv2009
+- parameter
+- hdl
+- digital-design
+title: localparam in param port list
+---
 
 Designing configurable hardware IP is hard but necessary to be flexible IPs. As
 design cost increases over time due to increasing the salaries of the designers,

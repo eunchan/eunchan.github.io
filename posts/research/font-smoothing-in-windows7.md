@@ -1,8 +1,7 @@
-----
+---
+date: 2012-01-03
 title: Font Smoothing
-date: January 3, 2012
-public: true
-----
+---
 
 Windows에서 Cleartype이 활성화되어있음에도 몇몇 폰트들, 예를들면 Helvetica나
 [Roboto][] 폰트같은 Manual hint가 포함되지 않은 글꼴들은 작은 폰트 크기에서

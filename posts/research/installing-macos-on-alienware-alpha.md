@@ -1,17 +1,16 @@
-----
-title: '에얼리언웨어 알파에 macOS 시에라 설치하기'
-date: November 17, 2016
-public: true
-disqus: on
+---
+comments: true
+date: 2016-11-17
+header-img: /media/page/research/hackintosh/hackintosh_sierra.svg
 tags:
-    - mac-os
-    - sierra
-    - hackintosh
-    - alienware-alpha
-    - dell
-    - bcm94352z
-header-img: '/media/page/research/hackintosh/hackintosh_sierra.svg'
-----
+- mac-os
+- sierra
+- hackintosh
+- alienware-alpha
+- dell
+- bcm94352z
+title: 에얼리언웨어 알파에 macOS 시에라 설치하기
+---
 
 Andrew Ng교수의 [Machine Learning 강의][coursera-ml]를 듣고 난 후 [Tensor Flow][tensor-flow]를 배워볼 생각입니다.
 머신러닝을 배우면서 내용도 재미있었고, 실생활에 적용할 만한 부분이 많이 있어서, 가장 잘 알려진 Tensor Flow 라이브러리를 이용할 생각입니다.
@@ -67,23 +66,23 @@ macOS가 BSD를 차용하면서 그 중간에서 줄타기를 잘 한 것이지�
 macOS 시에라를 설치하기 위해서는 macOS가 설치 된 컴퓨터와 8GB 이상의 USB 메모리가 필요합니다.
 저에겐 맥북프로가 있어서 이걸로 설치를 준비했네요.
 
-![](/media/page/research/hackintosh/hackintosh_app-store-sierra.jpg)\
+![](../../media/page/research/hackintosh/hackintosh_app-store-sierra.jpg)\
 
 앱스토어에서 macOS Sierra 를 다운로드 받습니다.
 그 후 설치화면이 나오는 데 설치하지 마시고 그대로 창을 닫고 USB를 준비합니다.
 
 Disk Utility (Cmd + Space 후 Disk Utility 검색하시면 나와요)에서 USB를 선택 후, Erase 해서 "Mac OS Extended", "Master Boot Record" 를 설정한 상태로 포맷합니다.
 
-![](/media/page/research/hackintosh/hackintosh_disk-utility.jpg)\
+![](../../media/page/research/hackintosh/hackintosh_disk-utility.jpg)\
 
 TonyMacX86에서 [Unibeast][] 를 다운 받고 실행하면 아래 화면이 나오는데, 여기서 "Legacy Boot", "Sierra" 를 선택 후 설치를 진행합니다.
 나중에 쓰이니 같은 다운로드 페이지에 Multibeast도 받아둡니다.
 
 [Unibeast]: https://www.tonymacx86.com/resources/categories/tonymacx86-downloads.3/
 
-![](/media/page/research/hackintosh/hackintosh_unibeast-1.jpg)\
-![](/media/page/research/hackintosh/hackintosh_unibeast-2.jpg)\
-![](/media/page/research/hackintosh/hackintosh_unibeast-3.jpg)\
+![](../../media/page/research/hackintosh/hackintosh_unibeast-1.jpg)\
+![](../../media/page/research/hackintosh/hackintosh_unibeast-2.jpg)\
+![](../../media/page/research/hackintosh/hackintosh_unibeast-3.jpg)\
 
 USB 속도에 따라 10분에서 20분 사이에 USB 준비가 완료됩니다.
 중간에 OS X Boot 이미지가 마운트되면서 파인더 창이 뜨는데, 그대로 두고 설치가 완료될 때 까지 기다립니다.
