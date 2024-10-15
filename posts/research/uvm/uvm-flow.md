@@ -1,24 +1,23 @@
-----
-title: "UVM Test Flow"
-date: January 15, 2019
-public: true
-disqus: true
+---
+comments: true
+date: 2019-01-15
+slug: uvm-flow
 tags:
-    - systemverilog
-    - uvm
-    - verification
-    - phase
-slug: 'uvm-flow'
-----
+- systemverilog
+- uvm
+- verification
+- phase
+title: UVM Test Flow
+---
 
-[UVM 첫화면][uvm-verification]
+[UVM 첫화면](index.md)
 
-1. [UVM 개요][uvm-introduction]
-2. [Design Under Test (DUT)][uvm-dut]
+1. [UVM 개요](uvm-introduction.md)
+2. [Design Under Test (DUT)](dut.md)
 3. UVM Test Flow
-4. [UVM Blocks][uvm-blocks]
+4. [UVM Blocks](uvm-blocks.md)
 
-----
+---
 
 UVM을 처음 보면 이해하기가 어렵다고 말했었는데, 그 이유를 좀 생각해 보니, 타이핑
 하는 코드 사이즈를 줄이기 위해 많은 축약이 들어간 것 때문이라는 생각이 듭니다.

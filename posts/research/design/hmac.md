@@ -1,10 +1,9 @@
-----
-title: 'HMAC'
-public: true
-disqus: true
-date: February 10, 2020
-slug: 'hmac'
-----
+---
+comments: true
+date: 2020-02-10
+slug: hmac
+title: HMAC
+---
 
 간단한 하드웨어 디자인 관련 글은 [블로그](/blog)에 기록합니다.
 그러나 조금 더 기술적인 글은 따로 모아두는 게 낫겠다 싶어, 블로그 포스트가 아닌 일반 페이지에 기록해 볼 생각입니다.
@@ -90,4 +89,3 @@ OpenTitan에서는 필요한 해시 알고리즘이 SHA2-256밖에 없어서 이
 그렇지 않다면 SHA256경우 512bit, 64byte의 각 바이트마다 padding을 추가해 주는 조건이 들어가야 하거든요.
 그러면 mux가 엄청 들어가겠죠.
 FIFO 앞단에서만 padding을 한다면, 4byte에 대한 패딩만 필요하므로 로직이 현재 패딩로직과 동일할 것으로 예상됩니다.
-

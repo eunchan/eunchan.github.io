@@ -1,28 +1,27 @@
-----
-title: "UVM Blocks"
-date: January 22, 2019
-public: true
-disqus: true
+---
+comments: true
+date: 2019-01-22
+slug: uvm-blocks
 tags:
-    - systemverilog
-    - uvm
-    - verification
-    - agent
-    - driver
-    - monitor
-    - sequence
-    - sequencer
-slug: 'uvm-blocks'
-----
+- systemverilog
+- uvm
+- verification
+- agent
+- driver
+- monitor
+- sequence
+- sequencer
+title: UVM Blocks
+---
 
-[UVM 첫화면][uvm-verification]
+[UVM 첫화면](index.md)
 
-1. [UVM 개요][uvm-introduction]
-2. [Design Under Test (DUT)][uvm-dut]
-3. [UVM Test Flow][uvm-flow]
+1. [UVM 개요](uvm-introduction.md)
+2. [Design Under Test (DUT)](dut.md)
+3. [UVM Test Flow](uvm-flow.md)
 4. UVM Blocks
 
-----
+---
 
 이번 글에서는 UVM 환경을 만들기 위한 블럭을 구현해 보겠습니다. 전체를 다
 구현하기엔 분량이 너무 많아서 오늘은 `uvm_agent`, `uvm_driver`, `uvm_sequencer`
@@ -292,5 +291,3 @@ endclass : bus_agent
 `seq_item_port`와 `bus_sequencer`의 `seq_item_export`를 연결하는 부분이겠네요.
 이렇게 둘이 연결해 줌으로써 `bus_driver`가 `get_next_item()`을 호출할 때
 `bus_sequencer`의 TLM FIFO에 접근하게 됩니다.
-
-

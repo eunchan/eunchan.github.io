@@ -1,8 +1,7 @@
-----
+---
+date: 2012-04-06
 title: Archlinux as Home Server
-date: April 6, 2012
-public: true
-----
+---
 
 Initial Setting
 ---------------

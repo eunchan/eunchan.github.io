@@ -1,20 +1,19 @@
-----
-title: 'AT&T Fiber ONT/ RG Bypass'
-date: August 5, 2023
-public: true
-disqus: true
-slug: 'att-bypass'
+---
+comments: true
+date: 2023-08-05
+slug: att-bypass
 tags:
-    - att
-    - fiber
-    - bypass
-    - firewalla
-    - unifi
-    - pfsense
-    - opnsense
-    - wpa_supplicant
-    - 802.1x
-----
+- att
+- fiber
+- bypass
+- firewalla
+- unifi
+- pfsense
+- opnsense
+- wpa_supplicant
+- 802.1x
+title: AT&T Fiber ONT/ RG Bypass
+---
 
 ## 개요
 
@@ -28,7 +27,7 @@ AT&T 광케이블을 사용하면 하얀색 박스 (ONT)와 검은색 AT&T
 게이트웨이(BGW320-500/505) 하나로 끝나는 것 같긴 한데, 제가 신청했을 땐 두
 기기를 연결해야만 했죠.
 
-![AT&T 광케이블 연결도](/media/page/research/att-bypass/att-topology-default.svg)
+![AT&T 광케이블 연결도](../../media/page/research/att-bypass/att-topology-default.svg)
 
 흰색 ONT 박스는 벽에 설치되어 광케이블 신호를 이더넷 신호로 변환시켜주는 역할을
 합니다. 검은색 게이트웨이는 이더넷 신호를 받아서 인증을 하고, 라우터 역할을
@@ -53,7 +52,7 @@ AT&T 광케이블을 사용하면 하얀색 박스 (ONT)와 검은색 AT&T
 
 ### VLAN 0 Forwarding
 
-![AT&T VLAN 0 Forwarding](/media/page/research/att-bypass/att-topology-forwarding.svg)
+![AT&T VLAN 0 Forwarding](../../media/page/research/att-bypass/att-topology-forwarding.svg)
 
 한가지 방법은, 고급 기능을 가지고 있는 라우터는 특정 패킷을 내부 디바이스로
 포워딩할 수 있습니다. 위에서 언급한 802.1X 인증은 VLAN ID 0로 들어오는 데, 이걸
@@ -71,7 +70,7 @@ AT&T 게이트웨이를 내부 이더넷 포트 하나에 연결하고, 다른 �
 네트웍 지식이 없는 사람은 따라하기 쉽진 않지만, 구성하고 나면 게이트웨이를
 완전히 없앨 수 있습니다.
 
-![Gateway Certificate](/media/page/research/att-bypass/att-topology-certificate.svg)
+![Gateway Certificate](../../media/page/research/att-bypass/att-topology-certificate.svg)
 
 802.1X 인증을 하기 위해선 인증서가 필요합니다. 이 인증서는 AT&T 게이트웨이 안에
 저장되어 있죠. 이 인증서 데이터는 보통의 방법으로는 접근할 수 없습니다.
@@ -128,7 +127,7 @@ SFP+ 포트를 가지고 있는 경우 (Unifi Dream Machine 등)에는 장점이
 라우터가 이더넷 포트 (RJ45)만 있을 경우엔 이 SFP+를 이더넷 신호로 변환해 주는
 Media Converter 장치가 필요해서 큰 이득은 없습니다.
 
-![PON ONU](/media/page/research/att-bypass/att-topology-pon.svg)
+![PON ONU](../../media/page/research/att-bypass/att-topology-pon.svg)
 
 Fiber 플랜이나 기타 상황에 따라 ONT 기기에서 인증이 이뤄질 수도 있고, 아니면
 AT&T의 OLT (ONT가 연결되는 기기)에서 802.1X 인증이 될 수도 있습니다. ONT 단에서
@@ -143,7 +142,7 @@ AT&T의 OLT (ONT가 연결되는 기기)에서 802.1X 인증이 될 수도 있�
 사용하는데 대부분은 인증이 필요합니다. 인증이 AT&T 단에서 이뤄지기 때문에,
 라우터에서 인증서를 이용해 `wpa_supplicant`를 실행해야 합니다.
 
-![DFP-34X-2C2](/media/page/research/att-bypass/dfp-34x-2c2.jpg)
+![DFP-34X-2C2](../../media/page/research/att-bypass/dfp-34x-2c2.jpg)
 
 DFP-34X-2C2 같은 SFP+ 소켓에 삽입하는 모듈이 GPON 프로토콜을 SFP로 바꿔줍니다.
 이 디바이스에 telnet이나 SSH로 접속해서 내부 정보를 AT&T의 ONT 모듈과 동일하게
@@ -213,4 +212,3 @@ _VlanFilterTypeData_ (`omcicli mib get 84`)값을 받아오면 OMCI 인증이 �
 - [PON Madness - AT&T GPON ONT Cloning/Bypass](https://docs.google.com/document/d/1gcT0sJKLmV816LK0lROCoywk9lXbPQ7l_4jhzGIgoTo/edit)
 - [PON Madness - Bypass ISP XGS-PON ONT with...a stick?](https://docs.google.com/document/d/1UIAgtxkImgFRwyaGDGtISD0JXnxWNvuuNDrnRac6wGc/)
 - [Github Anime4000/RTL960x](https://github.com/Anime4000/RTL960x)
-

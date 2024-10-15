@@ -1,12 +1,17 @@
-----
-title: 'Colemak 적응기'
-date: February 10, 2017
-public: true
-disqus: true
-slug: 'colemak'
-tags: ['keyboard', 'qwerty', 'dvorak', 'layout', 'nalgaeset', 'saenaru']
-header-img: '/media/page/research/keyboard.jpg'
-----
+---
+comments: true
+date: 2017-02-10
+header-img: /media/page/research/keyboard.jpg
+slug: colemak
+tags:
+- keyboard
+- qwerty
+- dvorak
+- layout
+- nalgaeset
+- saenaru
+title: Colemak 적응기
+---
 
 _Ergonomic layout은 적절한 선택일까?_
 
@@ -21,7 +26,7 @@ _Ergonomic layout은 적절한 선택일까?_
 Vim은 방향키를 hjkl로 쓰는데, 드보락에서는 이게 두 손으로 분산되어있고 본디 모양이 아니라 정말 어색했습니다.
 매핑 기능을 통해 이리저리 바꾸다보니 정말 너저분해져서 쓸 수 없는 상황이 오고나서야 드보락 자판을 버리게 되었네요.
 
-![Colemak(콜맥) 자판 배열](/media/page/research/colemak-layout.png)
+![Colemak(콜맥) 자판 배열](../../media/page/research/colemak-layout.png)
 
 이번에는 콜맥(Colemak)자판으로 변경해 볼까 합니다.
 그때와 다르게 윈도우 자판에서는 날개셋 입력기가 두벌식과 세벌식을 공유하는 편한 방법, 복벌식을 제공하고있고, 한영 전환키를 여러개를 다른 동작으로 지정할 수 있어서 Shift + Space는 콜맥과 세벌식, 오른쪽 알트키는 쿼티와 두벌식에 할당하여 다른 사람도 편하게 쓸 수 있게 되었습니다.
@@ -56,7 +61,7 @@ Vim은 방향키를 hjkl로 쓰는데, 드보락에서는 이게 두 손으로 �
 
 [^scancode]: <https://kldp.org/comment/521135#comment-521135> 의 새나루 개발자님 댓글 참조
 
-![스캔코드를 기본으로 설정하기](/media/page/research/colemak-scancode.png)
+![스캔코드를 기본으로 설정하기](../../media/page/research/colemak-scancode.png)
 
 맥에서는 기본 자판으로 지원하는 콜맥 자판과 390 자판이 서로 깔끔하게 작동해서 별 문제없이 사용하고 있습니다.
 이런 부분은 좋네요...

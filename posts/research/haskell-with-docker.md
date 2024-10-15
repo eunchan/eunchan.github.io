@@ -1,10 +1,9 @@
-----
-title: Haskell with Docker
-date: December 28, 2015
-public: true
+---
+comments: true
+date: 2015-12-28
 tags: docker, stack, haskell, yesod, virtualization
-disqus: on
-----
+title: Haskell with Docker
+---
 
 **주의: 아래의 내용은 Docker에 대해 배워가면서 작성한 글이기에 정확하지 않거나, 잘못된 내용이 있을 수 있습니다.
 실제 업무 환경에 적용하고자 하신다면 충분히 테스트 및 검증하기를 권장합니다**
