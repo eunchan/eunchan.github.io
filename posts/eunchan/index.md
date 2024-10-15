@@ -25,8 +25,6 @@ PCI Express IP 및 Low Power, NVMe host IP 일부 설계를 담당했습니다. 
 
 [꼭 해보고 싶은 일](bucketlist.md)도 있고 [사고싶은 것](wishlist.md)도 많습니다.
 
-제가 글을 쓰거나 프로그래밍시에 쓰는 방법은 [Workflow][]에 기록하였습니다.
-
 ## PGP Key
 
 몇번 Key 를 만들었다 지웠다가 했는데, 이번에 제대로 만들어서 관리할 생각입니다.
