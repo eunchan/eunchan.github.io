@@ -5,7 +5,7 @@ slug: hmac
 title: HMAC
 ---
 
-간단한 하드웨어 디자인 관련 글은 [블로그](/blog)에 기록합니다.
+간단한 하드웨어 디자인 관련 글은 [블로그](../../blog/index.md)에 기록합니다.
 그러나 조금 더 기술적인 글은 따로 모아두는 게 낫겠다 싶어, 블로그 포스트가 아닌 일반 페이지에 기록해 볼 생각입니다.
 
 이번에 이야기 하고 싶은 내용은, [OpenTitan][ext:opentitan]을 개발하면서 설계한 하드웨어 모듈 중 HMAC (Hash-based Message Authentication Code)입니다.
@@ -49,7 +49,7 @@ HMAC_SIGN = hash_func(opad_key, hash_func(ipad_key, m))
 ![HMAC Dataflow from OpenTitan](https://docs.opentitan.org/hw/ip/hmac/doc/hmac_dataflow.svg)
 
 Hash 자체가 메세지 데이터가 조금만 바뀌어도 결과 값이 매우 달라지는 구조라 메세지가 무엇인지 알아도 비밀키를 유추해 내는게 정말 어렵습니다.
-이 것을 hash의 보안난이도 (Securiy Strength)라고 부르는데, 일반적인 [SHA256/SHA512][sha2]는 128bit/256bit의 난이도를 가집니다. 
+이 것을 hash의 보안난이도 (Securiy Strength)라고 부르는데, 일반적인 [SHA256/SHA512][sha2]는 128bit/256bit의 난이도를 가집니다.
 
 그래서 HMAC을 설계할 때 HMAC 자체는 큰 문제가 아니였고 Hash 알고리즘을 설계하는 데에 시간을 더 쏟을 수 밖에 없었습니다.
 

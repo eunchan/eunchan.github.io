@@ -19,24 +19,26 @@ title: Camping
 
 **목차**
 
-1. [Kitchen system](#kitchen-system)
-    1. [Portable Electric Fridge](#portable-electric-fridge)
-    2. [Coleman Triton Burner](#coleman-triton-burner)
-    3. [MSR Pocket Rocket Deluxe](#msr-pocket-rocket-deluxe)
-2. [Jackery Explorer 500 + Solar](#jackery-explorer-500--solar)
-3. [Sleep System](#sleep-system)
-    1. [Diesel Heater](#diesel-heater)
-    2. [Enigma Quilt](#enigma-quilt)
-    3. [Big Agnes Pad](#big-agnes-pad)
-    4. [NEMO Tensor Insulated](#nemo-tensor-insulated)
-    5. [Exped Megamat 10 Duo](#exped-megamat-10-duo)
-    6. [Marmot Limelight 2P Tent](#marmot-limelight-2p-tent)
-    7. [Lone Rider ADV Tent](#lone-rider-adv-tent)
-    8. [(New Page) Gazelle T4 Tent](gazelle-t4.md)
-4. [Furniture](#furniture)
-    1. [REI Camping Table](#rei-camping-table)
-    2. [Helinox Chair One](#helinox-chair-one)
-    3. [Mount River 2 Step Chair](#mount-river-2-step-chair)
+- [Kitchen system](#kitchen-system)
+  - [Portable Electric Fridge](#portable-electric-fridge)
+  - [Coleman Triton Burner](#coleman-triton-burner)
+  - [MSR Pocket Rocket Deluxe](#msr-pocket-rocket-deluxe)
+- [Jackery Explorer 500](#jackery-explorer-500)
+- [Sleep System](#sleep-system)
+  - [Diesel Heater](#diesel-heater)
+  - [Enigma Quilt](#enigma-quilt)
+  - [Big Agnes Pad](#big-agnes-pad)
+  - [NEMO Tensor Insulated](#nemo-tensor-insulated)
+  - [Exped Megamat 10 Duo](#exped-megamat-10-duo)
+  - [Marmot Limelight 2P Tent](#marmot-limelight-2p-tent)
+  - [Lone Rider ADV Tent](#lone-rider-adv-tent)
+  - [Gazelle T4 Tent](#gazelle-t4-tent)
+- [Furniture](#furniture)
+  - [REI Camping Table](#rei-camping-table)
+  - [Helinox Chair One](#helinox-chair-one)
+  - [Mount River 2 Step Chair](#mount-river-2-step-chair)
+
+
 
 
 캠핑용 장비를 전반적으로 업그레이드 하면서 각각 리뷰를 만들기 보다, 한 페이지에
@@ -57,7 +59,7 @@ title: Camping
 
 ### Portable Electric Fridge
 
-![](../../../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_refrigandtable.jpg)
+![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_refrigandtable.jpg)
 
 기존에 쓰던 코스트코 아이스박스는 저렴한 가격 치곤 보냉 성능은 나쁘지
 않았습니다. 얼음 가득 채우면 열고 닫지 않으면 이틀은 충분히 얼음이
@@ -115,7 +117,7 @@ Jetboil 제품이 바람을 잘 견뎌서 그걸 살까 했는데, 이전에 샀
 또 사긴 그렇더라구요...
 
 
-## Jackery Explorer 500 + Solar
+## Jackery Explorer 500
 
 냉장고와 히터의 전원을 공급하기 위해 휴대용 리튬 이온 배터리 500Wh 짜리를
 장만했습니다. LiFePo4 배터리가 deep cycle 배터리라, 구하면 좋긴 한 데, 일단
@@ -203,7 +205,7 @@ Insulated 패드더군요. 그리고 눈에 들어 온 게 이 Big Agnes의 Insu
 ### Exped Megamat 10 Duo
 
 가족 캠핑(오토캠핑)에는 이전엔 코스트코에서 판매했던 에어매트리스를 두개
-썼었는데, 텐트를 [가젤텐트](#gazelle-t4-overland-edition)로 바꾼 뒤로 퀸사이즈
+썼었는데, 텐트를 [가젤텐트](./gazelle-t4.md)로 바꾼 뒤로 퀸사이즈
 에어매트리스 두개가 들어가지 않아서 구입한 매트입니다.
 
 오버랜딩 하는 사람들에게 루프탑텐트의 매트리스 업그레이드용으로 꽤 유명한
@@ -248,6 +250,10 @@ Dragonfly로 가서 백팩킹에도 쓸 수 있게 하던지 해야겠더라구�
 [마못 텐트](#marmot-limelight-2p-tent)를 결국엔 리턴하고 오토바이 캠핑용으로
 나온 Lone Rider ADV 텐트를 구입했습니다.
 
+### Gazelle T4 Tent
+
+[Gazelle T4 Tent](./gazelle-t4.md)
+
 ## Furniture
 
 ### REI Camping Table
@@ -258,7 +264,7 @@ Dragonfly로 가서 백팩킹에도 쓸 수 있게 하던지 해야겠더라구�
 
 ### Helinox Chair One
 
-![](../../../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_alabamahillscoffee.jpg)
+![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_alabamahillscoffee.jpg)
 
 두말할 필요가 없는, 백팩킹 의자로는 최고의 제품이죠. 작고 가볍고 짱짱합니다.
 기존 캠핑용 의자가 부피가 워낙에 커서, 캠핑장비가 늘어나며 그 부피가 부담이 되어

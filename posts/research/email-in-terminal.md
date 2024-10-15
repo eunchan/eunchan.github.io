@@ -66,7 +66,7 @@ Mail을 이용헤 이메일을 사용해 왔습니다. Apple Mail을 쓰면서 G
 먼저 가장 메인이 되는 프로그램은 Mutt라는 터미널에서 동작하는 메일 관리
 앱입니다.
 
-![Mutt](../../media/page/research/email_mutt.png)
+![Mutt](../media/page/research/email_mutt.png)
 
 공돌이들만 쓸 것 같은 디자인 (터미널 앱에서 디자인을 따지는 게 우습긴 하지만)에
 기능은 엄청 많아서 파고들면 한도 끝도 없을 것 같은 모습의 이메일 앱 Mutt입니다.
@@ -208,7 +208,7 @@ notmuch 용 태그로 변환을 시켜줍니다. 태그라서 이메일 중복 �
 
 결국 neomutt + notmuch + lieer + msmtp 조합으로 완성되었습니다. notmuch는
 lieer와 neomutt을 이어주는 역할을 하고 msmtp는 순전히 메일을 보내는 용도로만
-사용합니다. 
+사용합니다.
 
 ### afew
 

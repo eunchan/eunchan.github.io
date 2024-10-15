@@ -36,7 +36,7 @@ Minnewanka가 다른 호수와 동일한 자연 호수인줄 알았는데 인공
 캐나다의 대자연을 그대로 보여주고 있었다. 로키의 대자연, 바로 그것을 위해서 이
 캐나다에 왔다. 그 로키 안에서 내가 땀흘리며 페달을 밟고, 걷고, 산을 오른다.
 
-![Lake Minnewanka](./media/page/working-holiday/canada-045.jpg)
+![Lake Minnewanka](../media/page/working-holiday/canada-045.jpg)
 ![Lake Minnewanka](../media/page/working-holiday/canada-044.jpg)
 
 자전거를 길 옆에 올려놓고 걷기 시작했다. 목표지점은 Aylmer Pass , 거리는 약

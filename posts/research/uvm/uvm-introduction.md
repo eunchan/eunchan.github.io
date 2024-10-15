@@ -45,7 +45,7 @@ Time을 줄이기 위한 목적이 컸습니다. 덕분에 부담없이 가볍�
 
 ## UVM
 
-![UVM 기본 구조](../../../media/page/research/uvm/uvm-overall.svg)
+![UVM 기본 구조](../../media/page/research/uvm/uvm-overall.svg)
 
 세부 사항이 빠져있긴 하지만, 위의 그림이 UVM을 이용하여 검증환경을 만드는 기본
 뼈대가 됩니다. UVM을 이용해서 어떤 하드웨어 모듈이든지 다 검증할 수는 있지만,

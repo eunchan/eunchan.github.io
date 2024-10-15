@@ -41,7 +41,7 @@ macOS가 BSD를 차용하면서 그 중간에서 줄타기를 잘 한 것이지�
 
 ## Alienware Alpha
 
-서론이 길었네요. 
+서론이 길었네요.
 위에서 언급한 Tensor Flow를 설치하기 위해 에얼리언웨어 알파를 뒤집어 엎기로 합니다.
 
 {{Figure: Alienware Alpha}}
@@ -57,8 +57,8 @@ macOS가 BSD를 차용하면서 그 중간에서 줄타기를 잘 한 것이지�
 먼저 해킨토시를 설치하기 위해서는 가장 유명한 [TonyMacX86][tonymacx86]사이트를 알아두시는 것이 좋습니다.
 이 사이트에 왠만한 정보는 다 들어있구요.
 제가 설명하려고 하는 정보도 여기 사이트에 다 나옵니다.
-다만 영어를 읽기 귀찮으신 분들을 위해, 그리고 제가 작업한 내용을 저 스스로 잊어먹지 않기 위해 이 글을 씁니다. 
-또한 [X86(한글)][x86-kr] 사이트에도 좋은 정보가 정말 많습니다. 
+다만 영어를 읽기 귀찮으신 분들을 위해, 그리고 제가 작업한 내용을 저 스스로 잊어먹지 않기 위해 이 글을 씁니다.
+또한 [X86(한글)][x86-kr] 사이트에도 좋은 정보가 정말 많습니다.
 
 [tonymacx86]: https://www.tonymacx86.com/threads/unibeast-install-macos-sierra-on-any-supported-intel-based-pc.200564/
 [x86-kr]: https://x86.co.kr
@@ -66,23 +66,23 @@ macOS가 BSD를 차용하면서 그 중간에서 줄타기를 잘 한 것이지�
 macOS 시에라를 설치하기 위해서는 macOS가 설치 된 컴퓨터와 8GB 이상의 USB 메모리가 필요합니다.
 저에겐 맥북프로가 있어서 이걸로 설치를 준비했네요.
 
-![](../../media/page/research/hackintosh/hackintosh_app-store-sierra.jpg)\
+![](../media/page/research/hackintosh/hackintosh_app-store-sierra.jpg)
 
 앱스토어에서 macOS Sierra 를 다운로드 받습니다.
 그 후 설치화면이 나오는 데 설치하지 마시고 그대로 창을 닫고 USB를 준비합니다.
 
 Disk Utility (Cmd + Space 후 Disk Utility 검색하시면 나와요)에서 USB를 선택 후, Erase 해서 "Mac OS Extended", "Master Boot Record" 를 설정한 상태로 포맷합니다.
 
-![](../../media/page/research/hackintosh/hackintosh_disk-utility.jpg)\
+![](../media/page/research/hackintosh/hackintosh_disk-utility.jpg)
 
 TonyMacX86에서 [Unibeast][] 를 다운 받고 실행하면 아래 화면이 나오는데, 여기서 "Legacy Boot", "Sierra" 를 선택 후 설치를 진행합니다.
 나중에 쓰이니 같은 다운로드 페이지에 Multibeast도 받아둡니다.
 
 [Unibeast]: https://www.tonymacx86.com/resources/categories/tonymacx86-downloads.3/
 
-![](../../media/page/research/hackintosh/hackintosh_unibeast-1.jpg)\
-![](../../media/page/research/hackintosh/hackintosh_unibeast-2.jpg)\
-![](../../media/page/research/hackintosh/hackintosh_unibeast-3.jpg)\
+![](../media/page/research/hackintosh/hackintosh_unibeast-1.jpg)
+![](../media/page/research/hackintosh/hackintosh_unibeast-2.jpg)
+![](../media/page/research/hackintosh/hackintosh_unibeast-3.jpg)
 
 USB 속도에 따라 10분에서 20분 사이에 USB 준비가 완료됩니다.
 중간에 OS X Boot 이미지가 마운트되면서 파인더 창이 뜨는데, 그대로 두고 설치가 완료될 때 까지 기다립니다.
@@ -102,9 +102,9 @@ Clover를 Sierra나 High Sierra에서 설치해야 할 경우, SIP 를 꺼줘야
 여기서 터미널 (Utilities > Terminal)을 실행한 후
 
     $ csrutil disable
-    
+
 위 명령을 실행하면 SIP 를 끌 수 있습니다.
-그 후 재시작하고 Clover를 설치합니다. 
+그 후 재시작하고 Clover를 설치합니다.
 SIP가 활성화 되어있으면 Clover 설치시 에러가 나서 진행이 되질 않습니다.
 
 ## BIOS Setup
@@ -133,10 +133,10 @@ Disk Utility를 이용해 GUID partition으로 Mac OS Extended로 포맷하셔�
 ## 설정하기
 
 일단 시에라 설정화면까지 보이면 이제 조금 복잡해 집니다.
-유저이름, 비밀번호, 언어등을 설정하신 다음 Ethernet 으로 인터넷 연결을 합니다. 
+유저이름, 비밀번호, 언어등을 설정하신 다음 Ethernet 으로 인터넷 연결을 합니다.
 에얼리언웨어 알파에 들어있는 Wifi 모듈은 인텔 제조인데, 인텔이 OS X 드라이버를 제공하지 않아서 인식이 안됩니다.
 
-저같은 경우는 현재 Broadcom (경쟁사인데!) 의 [BCM94352Z NGFF M.2 모듈][bcm94352z-sierra]을 주문해두었습니다.
+저같은 경우는 현재 Broadcom (경쟁사인데!) 의 [BCM94352Z NGFF M.2 모듈](./bcm94352z-setup-on-macos-sierra.md)을 주문해두었습니다.
 macOS에서 가장 인식이 잘되는 무선랜 모듈이라고 하네요.
 
 ### Graphic, Audio (HDMI)
@@ -160,7 +160,7 @@ _Quick Start_ 메뉴에서 Legacy mode를 선택한 다음 _Build_ 탭에서 파
 
 ### EFI config.plist
 
-Clover 설치 후 EFI 파티션을 수정해야 합니다. 
+Clover 설치 후 EFI 파티션을 수정해야 합니다.
 수정하지 않아도 동작은 되지만, 좀 더 부드럽게 하기위해 config.plist를 수정합니다.
 
 먼저 EFI mounter로 EFI를 파인더에서 찾을 수 있게 마운트 합니다.
