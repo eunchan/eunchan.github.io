@@ -6,4 +6,5 @@ Makefile
 
 # But not these files
 !docs/media/
+!posts/sky/site/
 
