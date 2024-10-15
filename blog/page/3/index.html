@@ -1,0 +1,1299 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Eli's Personal Website." name="description"/>
+<link href="https://www.eunchan.kim/blog/page/3/index.html" rel="canonical"/>
+<link href="../../../tips/index.html" rel="prev"/>
+<link href="../../category/design.html" rel="next"/>
+<link href="../../../feed_rss_created.xml" rel="alternate" title="RSS 피드 생성완료" type="application/rss+xml"/>
+<link href="../../../feed_rss_updated.xml" rel="alternate" title="RSS 피드 업데이트완료" type="application/rss+xml"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.38" name="generator"/>
+<title>Log - Eli Kim</title>
+<link href="../../../assets/stylesheets/main.8c3ca2c6.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../../assets/stylesheets/extra-style.4a5pwuuc.min.css" rel="stylesheet"/></head>
+<body data-md-color-accent="teal" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#log">
+          콘텐츠로 이동
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="상단/헤더" class="md-header__inner md-grid">
+<a aria-label="Eli Kim" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Eli Kim">
+<img alt="logo" src="../../../static/img/logo2.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Eli Kim
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Log
+            
+          </span>
+</div>
+</div>
+</div>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="언어설정" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="/en/" hreflang="en">
+              English
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="검색" class="md-search__options">
+<button aria-label="지우기" class="md-search__icon md-icon" tabindex="-1" title="지우기" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            검색 초기화
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/eunchan/elijah.kim" title="저장소로 이동">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</div>
+<div class="md-source__repository">
+    eunchan/elijah.kim
+  </div>
+</a>
+</div>
+</nav>
+<nav aria-label="탭" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../article/index.html">
+          
+  
+    
+  
+  articles
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../../index.html">
+          
+  
+    
+  
+  journal
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../travel/index.html">
+          
+  
+    
+  
+  travel
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../motorcycle/index.html">
+          
+  
+    
+  
+  hobby
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../eunchan/index.html">
+        
+  
+    
+  
+  Eli Kim
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="네비게이션" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Eli Kim" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Eli Kim">
+<img alt="logo" src="../../../static/img/logo2.png"/>
+</a>
+    Eli Kim
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/eunchan/elijah.kim" title="저장소로 이동">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</div>
+<div class="md-source__repository">
+    eunchan/elijah.kim
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../article/index.html">
+<span class="md-ellipsis">
+    articles
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../index.html">
+<span class="md-ellipsis">
+    journal
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            journal
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../archive/2024.html">
+<span class="md-ellipsis">
+    아카이브
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../category/design.html">
+<span class="md-ellipsis">
+    카테고리
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../travel/index.html">
+<span class="md-ellipsis">
+    travel
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../../motorcycle/index.html">
+<span class="md-ellipsis">
+    hobby
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../eunchan/index.html">
+<span class="md-ellipsis">
+    Eli Kim
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden="">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<div class="md-content__inner">
+<header class="md-typeset">
+<h1 id="log">Log</h1>
+</header>
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+<header class="md-post__header">
+<!-- Post authors -->
+<!-- Post metadata -->
+<div class="md-post__meta md-meta">
+<ul class="md-meta__list">
+<!-- Post date -->
+<li class="md-meta__item">
+<time datetime="2020-06-06 00:00:00">2020년 6월 6일</time></li>
+<!-- Post categories -->
+<!-- Post readtime -->
+<li class="md-meta__item">
+            
+              읽는시간 2분
+            
+          </li>
+</ul>
+<!-- Draft marker -->
+</div>
+</header>
+<!-- Post content -->
+<div class="md-post__content md-typeset">
+<h2 id="_1"><a class="toclink" href="../../2020/%EB%8F%BC%EC%A7%80%EA%B3%A0%EA%B8%B0-%EA%B9%80%EC%B9%98%EC%B0%8C%EA%B0%9C.html">돼지고기 김치찌개</a></h2>
+<p>아이들 먹을 돈까스를 만들었다. 큰 등심살 한덩이 사와서 얇게 잘라서 두들기고
+밀깨빵을 뭍혀 얼려두면 조금씩 꺼내서 튀겨서 아이들에게 내놓기 딱 좋다.</p>
+<p>보통은 돈까스를 만들며 지방이 많은 부분을 잘라내어 버리곤 했는데, 이번엔 잘라낸
+지방 부분 중 괜찮은 부분을 남겨둬 돼지고기 김치찌개를 해먹었다. 아내가 찌개나
+국에 들어간 고기를 별로 좋아하지 않아 결혼 후 거의 항상 김치찌개에는 참치만
+들어갔었다.</p>
+<p>“돼지고기 김치찌개"는 단순하다. 김치 넣고 간 보고 돼지고기 넣으면 끝.
+단순하지만, 단순하기에 재료의 맛이 중요하다. 김치도 적당히 삭은 맛좋은 김치를
+써야하고, 고기도 잡내가 많이 느껴지지 않은 고기여야 좋다. 이번 김치찌개가
+그랬다. 꽤 적당히 삭은 전라도식 김치에 냉장 돼지 등심 부위에 잡내가 거의
+느껴지지 않았다.</p>
+<p>한숟가락 찌개를 떠먹고 김치맛 푹 절여진 돼지고기 한점을 같이 먹었다.</p>
+<p>불현듯 20년전의 대학 생활이 생각이 난다. 대학교 후문 앞 왕십리역 6번 출구 쪽에
+많은 음식점이 있었다. 대학생을 대상으로 한 음식점이라 비싸지 않았다. 그 때
+친구들과 자주가던, 지금은 이름이 기억나지 않는, 고기집이 있었다. 좁은 가게에
+앞으로 차양을 두르고 투명 비닐로 가려서 테이블 두개를 더 펼쳐놓은, 지금은
+불법이라 가능하지 않을 모습의 가게였다. 아마 삼겹살 1인분에 2천원 정도 했던 걸로
+기억이 난다. 주변의 다른 가게도 비슷한 금액의 가격이었는데 유독 그 가게만
+갔었다. 아마 주인아주머니의 친근함이 마음에 들었을 수도 있었던 것 같다.</p>
+<p>1학년때 같이 하숙을 했던 고향 친구들, 영삼이 희훈이 경국이와 종종 가서 먹곤 항상
+같이 주문을 했던 게 천원짜리 된장찌개와 김치찌개였다. 그 김치찌개에 돼지고기가
+들어가 있었다. 싼 가격에 팔아야 하는 가게에 무슨 좋은 고기를 썼을까.. 아마도
+싸구려 중국산 냉동 고기로 삼겹살을 팔았을 테고 팔고 남은 자투리 고기로
+김치찌개를 끓였을 거다. 조미료도 많이 들어갔겠지만 그땐 그 맛의 차이를 모르고
+강한 맛에 ‘맛있다'고 느꼈었다. 그 고기집과 된장찌개, 김치찌개가 떠올랐다.</p>
+<p>돌이켜보니 돼지고기 김치찌개를 먹은 지 10년이 넘었다. 그 긴 기간동안 머릿속에
+여전히 예전 대학시절의 맛이 남아있었나보다. 먹으며 옛 추억을 떠올렸다. 그 사이
+20년의 시간이 지났구나. 그 시절이 그리우면서 지나간 20년이 아쉽기만 하구나.</p>
+<!-- Continue reading link -->
+</div>
+</article>
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+<header class="md-post__header">
+<!-- Post authors -->
+<!-- Post metadata -->
+<div class="md-post__meta md-meta">
+<ul class="md-meta__list">
+<!-- Post date -->
+<li class="md-meta__item">
+<time datetime="2020-05-19 00:00:00">2020년 5월 19일</time></li>
+<!-- Post categories -->
+<!-- Post readtime -->
+<li class="md-meta__item">
+            
+              읽는시간 2분
+            
+          </li>
+</ul>
+<!-- Draft marker -->
+</div>
+</header>
+<!-- Post content -->
+<div class="md-post__content md-typeset">
+<h2 id="dunning-kruger-effect"><a class="toclink" href="../../2020/dunning-kruger-effect.html">Dunning-Kruger Effect</a></h2>
+<p><em>재택 근무 52일차</em></p>
+<p>지금 회사에 입사해서 첫날, 아직 신입사원 교육이 이주간 진행되어야 할 상황에,
+메니저가 얼굴 한번 보자고 연락을 했었죠. 그 전까진 메니저가 누군지 모르다가 처음
+보았는데, 제 인터뷰에서 점심 인터뷰를 한 사람이 메니져더군요.</p>
+<p>그 메니저가 앞으로 진행될 프로젝트에 대한 간단한 소개를 해 주면서 보여준 그림이
+하나 있었는데, 그게 아래의 Dunning-Kruger Effect 였습니다. 정확하게 아래 그림은
+아니였고 약간 변형된 그림이었죠. X 축이 시간인 그래프였는데, 본질은
+비슷했습니다. 구글에 워낙 뛰어난 사람이 많으니 Imposter Syndrome 을 겪을 확률이
+많다고, 내가 제일 일 못하고, 안좋은 점만 보이게 되는 그런 상황이 지나고 나면
+어느정도 원래의 실력이 나온다고 하는 말이었습니다.</p>
+<p><img alt="" src="/media/blog/dunning-kruger-effect.svg"/></p>
+<p>원래의 Dunning-Kruger Effect는 X축이 시간이 아니라 Competence, 경쟁력, 즉
+실력입니다. 실력이 늘어날 수록 변화하는 "분야에 대한 자신감"을 보여주는
+그래프죠. 처음 수박 겉핥기식으로 해당 분야에 대해 알았을 때, 우물 안 개구리처럼
+모든 것을 다 아는 줄 착각하고 자신감이 하늘을 찌르는 때가 있죠. 그러다 일 잘하는
+동료를 만나게 되고 (아니면 아무것도 모르는 줄 알았던 동료가 실상은 그 협소한
+부분을 제외하고 정말 잘 아는 사람이라는 걸 깨닫거나) 선배들이 메니징에서 벗어나
+시간이 있을 때 숨은 실력을 발휘하는 것을 보면서 점점 자신감을 잃게 되죠. 회의에
+들어가면 같은 분야의 사람들인데 내가 하나도 모르는 이야기들만 하고 있고, 그
+안에서 꿀먹은 벙어리가 되고 매일 매일 다 알고 있는 줄만 알았던 분야에 숨어있는
+모르는 것이 천지라는 것을 깨닫고 아무것도 못하고 좌절하게 됩니다.</p>
+<p>그 힘든 시간을 버텨내고 점점 더 경험이 쌓이면서 지난날 우러러보던 선배의 나이,
+연차가 되었을 때, 뒤 돌아보면 자신을 그렇게 보고 있는 후배들을 보며 그제서야,
+자신이 모든 것을 다 알고 있지는 않지만 후배들에게 길을 알려줄 수 있을 만큼은
+알고 있다는 걸 깨닫게 된다고 합니다.</p>
+<p>ASIC 디자인 분야에 뛰어든 저도 마찬가지 인 듯 합니다. 제 <strong>Peak of "Mount
+Stupid"</strong>는 전 직장에서 일했을 때 인것 같네요. ASIC 안에서도 제가 맡은 IP가
+워낙에 작다보니 다른 사람들은 거의 하고 있지 않아서, 제가 제일 잘난 줄 알고
+자신감이 넘쳤던 그 때가 딱 맞아떨어지는 것 같네요.</p>
+<p>그리곤 지금 회사에 입사해서는 메니져가 말한 것 처럼 계속 자신감은, 일에 대한 내
+자신의 확신은 점점 아래로 아래로 끝없이 추락하고만 있는 듯 합니다. 한참 뒤에
+들어온 동료가 일을 깔끔하게 잘 해내는 것을 보고, 기존에 팀에서 해온 엄청난
+프로젝트들을 보면서 사소한 것 하나, 프리젠테이션 하나에 쩔쩔매는 저와 비교되어
+점점 자존감은 하락하고 있는 것 같습니다. 내가 하고 있는 일이 경험을 쌓아줄련지도
+의문이 들고, 이 시간이 지난다고 과연 내가 유능한 동료와 어깨를 나란히 할 수 있을
+지 확신이 없네요.</p>
+<p>문제는 이게 계속 하락세이다 보니 바닥이 어디일 지 더 두려워지는 것 같습니다.
+메니져가 말한 그 바닥에서 다시 완만하게 상승하기 시작하는 변곡점이 오긴 할 지
+의구심도 들고요. 임포스터 신드롬은 자신이 일을 잘 처리하는 사람이 스스로를
+사기꾼이라 생각하는 것을 말하지만, 실제로 일을 잘 처리하지도 않고 자신감도
+하락하고, 스스로도 일을 잘 처리하지 못하고 있으면 이건 뱁새가 황새 쫓아가며
+다리가랑이를 찢고 있는 느낌이랄까요?</p>
+<p>몇가지 극복할 수 있는 방법이 있는 듯 한데 대부분은 어느정도 외향적인 사람들이 할
+수 있는 것이더군요. 그러다보니 선뜻 시도하기도 어렵게 느껴집니다.</p>
+<!-- Continue reading link -->
+</div>
+</article>
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+<header class="md-post__header">
+<!-- Post authors -->
+<!-- Post metadata -->
+<div class="md-post__meta md-meta">
+<ul class="md-meta__list">
+<!-- Post date -->
+<li class="md-meta__item">
+<time datetime="2020-05-11 00:00:00">2020년 5월 11일</time></li>
+<!-- Post categories -->
+<li class="md-meta__item">
+            카테고리
+            
+              <a class="md-meta__link" href="../../category/home.html">home</a></li>
+<!-- Post readtime -->
+<li class="md-meta__item">
+            
+              읽는시간 5분
+            
+          </li>
+</ul>
+<!-- Draft marker -->
+</div>
+</header>
+<!-- Post content -->
+<div class="md-post__content md-typeset">
+<h2 id="front-yard-fence"><a class="toclink" href="../../2020/front-yard-fence.html">Front Yard Fence</a></h2>
+<p><img alt="" src="/media/blog/frontyard-fence/frontyard-fence-10.jpg"/></p>
+<p>코로나바이러스 COVID-19로 인해 집에서 일하게 되면서, 그동안 밀린 집관리를 할 수
+있는 시간이 나더군요. 그래서 그동안 미뤄오던 앞마당에 울타리를 만들기로
+했습니다.</p>
+<p>4월 초 즈음에 땅을 파기 시작해서 지난 토요일(9일)에 마쳤으니 한달정도가
+걸렸네요. 울타리 만들기는 해본 적도 없어서 시작부터 막막했었습니다. 주변에
+울타리를 직접 만드신 분이 계셔서, 알음알음 묻고, 유투브 보면서 공부해 가며
+만들었네요.</p>
+<p>만드는 순서는 아래와 같습니다.</p>
+<ol>
+<li>울타리 기둥(post)을 심기위해 땅을 판다.</li>
+<li>포스트를 알맞은 길이로 자른다.</li>
+<li>땅에 포스트를 고정시키고 시멘트를 부어서 양생한다</li>
+<li>포스트 사이에 가로로 나무를 고정시킨다.</li>
+<li>포스트 가로 나무에 세로 갈빗살을 고정시킨다.</li>
+<li>페인트를 칠한다. 2~3 단계 사이에 해도 됨.</li>
+</ol>
+<h3 id="_1"><a class="toclink" href="../../2020/front-yard-fence.html#_1">땅파기</a></h3>
+<p>아쉽게도 땅을 파는 사진을 찍지 못했습니다. 간단히 6단계정도 되지만, 저에겐 가장
+힘들었던게 땅을 파는 것이었던 것 같네요. 저희 집 앞마당이 예전에 높은 단이
+있었습니다. 이전 집 주인이 그 단을 허물고 경사지게 만들어서 땅에 잔디를
+심어두었죠. 그런 이유 때문인지 바닥을 10센티미터 정도만 파면 자갈과 큰 돌이 무척
+많습니다.</p>
+<p>포스트를 심으려면 적어도 포스트 길이의 1/3 정도는 땅 속에 묻어야 포스트가 바람에
+넘어가지 않는다고 합니다. 만일 포스트 사이를 완전히 막으려고 한다면 길이의 절반
+정도까지 묻어야 합니다. 제가 살고 있는 도시의 코드가 앞마당은 3피트 (90센티)를
+넘으면 허가(퍼밋)가 필요해서, 퍼밋이 필요하지 않은 3피트로 울타리를 심기로
+했습니다. 즉, 땅속을 1피트(30센티)정도는 파야됩니다.</p>
+<p>10센티를 파고 그 밑으로 20센티를 더 파내는 작업이 무척 오래 걸렸습니다. 큰
+기계로 한방에 파내면 좋겠지만, 앞마당 펜스 만드는 데 300불 정도 들어가는데
+대여값만 그보다 더 비싼 기계를 빌려올 수는 없었죠. 결국 삽 하나로 돌을 깨가며 총
+12개의 구멍을 팠네요. 구멍은 약 1피트 넓이로 파야 합니다. 그래야 양쪽의 시멘트가
+포스트를 단단히 고정해 줍니다. 너무 좁게 파면 시멘트가 별로 뭉치지 않아서 쉽게
+넘어갑니다.</p>
+<p><img alt="홈디포에서 구입한 시멘트, 나무" src="/media/blog/frontyard-fence/frontyard-fence-1.jpg"/></p>
+<p>그리곤 제 최애 쇼핑몰 홈디포에 가서 필요한 나무를 사왔습니다. 포스트가 땅 위로
+3피트, 땅 속으로 1피트 들어가니 8피트짜리 pressure treated 4x4 나무를 6개
+사왔습니다. 땅에 심기는 나무는 물기에 썪기 쉬워서 잘 안썪는 Cedar, Redwood 같은
+비싼 나무나 아니면 약품 처리된 Pressure-treated 를 사야 합니다. 전 돈이 별로 없으므로 제일 저렴한 pressure-treated 나무로 사왔네요. :)</p>
+<p>가로로 포스트 사이를 연결할 2x3 8ft 나무 25개, 그리고 세로로 모양을 낼 갈빗살
+나무 1x2 8ft 짜리를 60개 사왔습니다. 세로 나무는 일단 울타리 길이를 재고 6인치당
+2.5피트짜리 나무 한개씩 세운다고 할 때 8피트에 3개를 만들 수 있으니 180개의
+2.5피트짜리 나무가 나옵니다. 이만큼은 필요가 없고, 조금 여유분을 가지고
+사왔습니다.</p>
+<h3 id="_2"><a class="toclink" href="../../2020/front-yard-fence.html#_2">포스트와 갈빗살 자르기</a></h3>
+<p>구입한 나무를 Miter Saw를 이용해 알맞은 길이로 자릅니다. 포스트는 4피트로 자르고, 세로 갈빗살은 2.5 피트로 자릅니다. 갈빗살이 길이가 딱 맞아떨어지게 잘라지진 않았네요. 마이터쏘를 그냥 땅에 두고 잘라서 길이를 딱 맞추기 어려웠습니다. 스탠드에 두고 길이 조정해가며 잘랐다면 좀 더 깔끔하게 잘랐을 것 같네요.</p>
+<p><img alt="4ft로 자른 포스트 나무" src="/media/blog/frontyard-fence/frontyard-fence-2.jpg"/>
+<img alt="2.5ft로 자른 갈빗살 나무" src="/media/blog/frontyard-fence/frontyard-fence-3.jpg"/></p>
+<p>가로 나무는 자르지 않았습니다. 포스트를 세울 때 정확하게 간격을 맞추기 어려울 것
+같아서 포스트 세운 다음 일일히 길이 재어서 딱 맞춰서 자르기 위해 미리 잘라두진
+않았네요.</p>
+<h3 id="_3"><a class="toclink" href="../../2020/front-yard-fence.html#_3">포스트 세우기</a></h3>
+<p>이제 땅도 팠고 포스트도 준비되었으니, 포스트를 세울 차례입니다. 여기서 시멘트를
+섞어서 포스트 바닥에 두어야 하는데, 전 <a href="https://www.quikrete.com/productlines/FastSettingConcreteMix.asp">Quikrete</a>라는 제품을 사용했습니다.
+Quikrete 제품이 정말 많은데, 그중에 미리 섞을 필요없이 땅에 붓고 물만 뿌리면
+되는 빨간색 Quikrete를 구매했네요. 시멘트를 모래와 섞고 물 부어서 젓는게 쉽다면
+쉬운 일인데, 구지 많은 시멘트를 써야하는 것도 아니기에 좀 간편한 녀석으로
+샀습니다. 다만 이녀석은 깊이가 2피트 이상 넘어가면 물이 밑으로 잘 흡수가 되질
+않아 깊은 곳은 안 굳을 수 있다고 하더군요. 그래도 제가 설치할 펜스 포스트는
+1피트 정도 깊이밖에 되질 않아서 안심하고 사용했습니다.</p>
+<p>먼저 코너에 포스트를 세웁니다. 이 때 유용하게 쓰였던 게 <a href="https://www.homedepot.com/p/Empire-5-1-4-in-Polycast-Post-Level-720/100124903">포스트용
+레벨</a>이었습니다. 직각으로 레벨이 달려있어서 양쪽의 레벨을 한번에
+잡기 편하더군요. 콘크리트 믹스를 붓고 레벨을 맞추고 3피트 높이로 나오게 해서
+물을 부어 코너 포스트를 설치했네요. 그리고 굳기를 기다린 다음에 그 사이를 실로
+팽팽하게 연결해 주었습니다. 이 실이 기준점이 되어 사이의 포스트를 설치할 때 높이를 쉽게 맞출 수 있었습니다.</p>
+<p><img alt="레벨 잡으며 포스트 설치" src="/media/blog/frontyard-fence/frontyard-fence-4.jpg"/></p>
+<p>콘크리트가 굳는데 4시간 정도 걸려서 한번에 포스트를 다 세우진 못했고, 하루에
+조금씩 해서 일주일 동안 틈틈히 설치했네요.</p>
+<p><img alt="앞쪽 포스트 설치 후" src="/media/blog/frontyard-fence/frontyard-fence-5.jpg"/></p>
+<h3 id="_4"><a class="toclink" href="../../2020/front-yard-fence.html#_4">가로로 나무 설치하기</a></h3>
+<p>포스트를 세웠으니 이제 그 사이를 연결 할 나무를 설치할 차례입니다. 위에 쓴것처럼
+가로 나무는 하나 하나 길이를 재 가며 잘라서 연결했습니다. 실제로 포스트 세우고
+보니 포스트 사이 거리가 제각각이더군요. 미리 잘라뒀으면 못 쓸 나무들이 많았을 것
+같네요. 게다가 집으로 들어가는 쪽 포스트는 직선도 아니라 정말 세심하게 재서
+잘라야 했습니다.</p>
+<p><img alt="전면에 가로로 나무를 설치한 모습" src="/media/blog/frontyard-fence/frontyard-fence-6.jpg"/></p>
+<p>가로로 나무를 설치할 때에도 실로 똑바르게 선을 맞춰서 연결하니 무척 편했습니다.
+덕분에 다 연결하고도 크게 삐뚤삐뚤하지 않더군요.</p>
+<h3 id="_5"><a class="toclink" href="../../2020/front-yard-fence.html#_5">세로 갈빗살 설치하기</a></h3>
+<p>가로로 나무를 전면만 설치하고 어떤 모양일지 궁금해서, 나머지 연결도 안하고 일단
+세로 갈빗살 나무를 설치해 보았습니다. 세로로 연결할 때도 마찬가지로, 윗부분에
+실로 수평을 맞춰둔 후 그 높이에 맞게 세로로 나무를 설치했네요. 이 때 세로는
+레벨을 이용해서 수직이 되게 맞췄습니다. 그렇게 하지 않으면 눈대중으로 세로로
+연결하게 되서 나중에 간격이 딱 맞지 않게 보기가 흉해진다고 하더군요. 뭐든 도구가
+최곱니다.</p>
+<p><img alt="전면 세로 갈빗살 설치한 모습" src="/media/blog/frontyard-fence/frontyard-fence-7.jpg"/></p>
+<h3 id="_6"><a class="toclink" href="../../2020/front-yard-fence.html#_6">페인트 칠하기</a></h3>
+<p>전면은 페인트를 칠하지 않고 먼저 나무부터 설치해서, 설치된 상태로 페인트를
+칠했습니다. 장장 5시간동안 아내와 둘이서 땀 뻘뻘흘리며 페인트를 칠하고 나니,
+'미리 페인트를 칠해둘 걸' 하는 생각이 절로 들더군요. 예전에 뒷마당 펜스에 페인트
+칠을 할 때 그 고생을 해두고 2년이 지났다고 벌써 잊어먹고 똑같은 실수를
+반복하네요.</p>
+<p><img alt="앞쪽 펜스 페인트 칠" src="/media/blog/frontyard-fence/frontyard-fence-8.jpg"/></p>
+<p>페인트는 홈디포에서 펜스용 페인트를 사서 칠했습니다. 흰색을 할지 나무색을 할 지
+고민했는데, 나무 재질이 좋은 것도 아니라서 나무색 보다는 흰색이 낫겠다 싶더군요.
+<a href="https://www.homedepot.com/p/BEHR-1-gal-White-Base-Solid-Color-House-and-Fence-Exterior-Wood-Stain-01101/203223466">페인트는 홈디포 브랜드</a>로 구매했습니다. 귀찮아서요..</p>
+<h3 id="_7"><a class="toclink" href="../../2020/front-yard-fence.html#_7">미리 페인트 칠해둔 갈빗살 설치</a></h3>
+<p>양쪽 옆은 미리 페인트를 칠하고 설치했습니다. 앞마당이 경사가 있다보니 경사지게 나무를 자르는 게 조금 어려웠는데 나무 하나 망치고 성공했네요. :)</p>
+<p><img alt="" src="/media/blog/frontyard-fence/frontyard-fence-9.jpg"/></p>
+<h3 id="_8"><a class="toclink" href="../../2020/front-yard-fence.html#_8">완성</a></h3>
+<p><img alt="" src="/media/blog/frontyard-fence/frontyard-fence-10.jpg"/></p>
+<p>완성된 펜스를 보니 뿌듯합니다. 처음엔 정말 막막하게만 느껴졌는데 한단계 한단계
+하다보니 결국 완성이 되네요. 너무 오랫동안 신경을 써서 그런지, 두달 정도는 된 줄
+알았는데 한달 걸렸더군요. 주말에만 할 수 있어서 길게 걸렸지 매일 할 수 있었다면
+일주일 안에는 할 수 있을 것 같습니다. 아직 겨울을 나지 않아서, 우기에 나무가
+뒤틀리진 않을까 걱정이 되긴 합니다. 그래도 어떻게 설치하는 지 감을 잡았으니 좀
+망가지더라도 다시 만들 수 있겠다는 생각이 들더군요.</p>
+<!-- Continue reading link -->
+</div>
+</article>
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+<header class="md-post__header">
+<!-- Post authors -->
+<!-- Post metadata -->
+<div class="md-post__meta md-meta">
+<ul class="md-meta__list">
+<!-- Post date -->
+<li class="md-meta__item">
+<time datetime="2020-04-27 00:00:00">2020년 4월 27일</time></li>
+<!-- Post categories -->
+<!-- Post readtime -->
+<li class="md-meta__item">
+            
+              읽는시간 2분
+            
+          </li>
+</ul>
+<!-- Draft marker -->
+</div>
+</header>
+<!-- Post content -->
+<div class="md-post__content md-typeset">
+<h2 id="work-from-home-3"><a class="toclink" href="../../2020/work-from-home-3.html">Work From Home 3</a></h2>
+<p>재택 근무 36일차</p>
+<p><img alt="집에서 보는 밤하늘 Pixel 3 Astrophotography Mode" src="/media/blog/2020-04-24-nightsky.jpg"/></p>
+<p>오늘 <a href="https://thehill.com/homenews/state-watch/494896-san-francisco-counties-extend-shelter-in-place-orders-through-the-end-of">캘리포니아 주 정부에서 Shelter-in-Place를 5월 말까지 연장한다고
+발표</a>했습니다. 기존 5월 3일까지로 계획되었던 재택근무가
+자연스럽게 5월 말로 연장되었네요. 그런데 아직 한달밖에 남지 않은 상황에서 여전히
+코로나 바이러스 환자는 증가세가 줄어들지 않고 있네요.</p>
+<p>5월 말이 아니라 더 연장될 가능성이 충분히 있어보입니다. 게다가 풀린다 하더라도
+혼돈을 피하기 위해 한번에 모두 갑자기 이전처럼 출근하게 할 수도 없겠죠. 그러면
+점진적으로 업소, 회사를 열게 될 텐데, 그 또한 상당한 시간이 소요되겠죠.
+식당에서는 가구 배치를 바꾸어서 손님끼리 최대한 떨어져서 앉을 수 있도록 해야
+할테고, 회사에서는 오픈 스페이스 사무실은 더이상 각광받지 않게 되겠죠. (이건 전
+환영할 만한 사항이긴 합니다) 회사 내 식당도 투고가 기본이 될테고 이전처럼 사내
+식당에 옹기종기 앉아 먹는 모습은 많이 사라지리라 생각됩니다. 간식과 음료수를
+무제한으로 먹을 수 있었던 구글의 Micro Kitchen은 더이상 볼 수 없는 모습이
+되겠죠. 심하면 올라가는 계단, 내려오는 계단이 따로 만들어질 수도 있겠습니다.</p>
+<p>다시 열린 사회의 모습은 많이 다르겠죠. 그에 따른 이득을 보는 사람도 있을테고,
+일자리를 잃어버리는 사람도 있겠죠. 많은 사람들이 고통을 받겠지만, 정부에서 잘
+지원해 주기를 바래봅니다.</p>
+<p>이번 주까지 일을 하게 되면 집에서 일을 한지 8주째가 됩니다. 네번이나 집에서 일을
+하며 이주급을 받는 셈이죠. 앞으로 적어도 5주, 많게는 지금까지 있었던 것 보다 더
+길게 있을 지도 모르는 상황에서 아직 회사에서 레이오프 이야기는 나오지 않아서 참
+다행이라는 생각이 듭니다. <a href="https://www.cnbc.com/2020/04/23/google-to-cut-marketing-budgets-hiring-freeze-expected.html">투자를 줄이고 신규채용을
+줄이겠다</a>는 뉴스는 나왔지만 왠지 그것으로 마무리 할 것
+같네요.</p>
+<!-- Continue reading link -->
+</div>
+</article>
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+<header class="md-post__header">
+<!-- Post authors -->
+<!-- Post metadata -->
+<div class="md-post__meta md-meta">
+<ul class="md-meta__list">
+<!-- Post date -->
+<li class="md-meta__item">
+<time datetime="2020-04-15 00:00:00">2020년 4월 15일</time></li>
+<!-- Post categories -->
+<!-- Post readtime -->
+<li class="md-meta__item">
+            
+              읽는시간 2분
+            
+          </li>
+</ul>
+<!-- Draft marker -->
+</div>
+</header>
+<!-- Post content -->
+<div class="md-post__content md-typeset">
+<h2 id="california-roadmap-to-modify-stay-at-home-order"><a class="toclink" href="../../2020/california-roadmap-to-modify-stay-at-home-order.html">California roadmap to modify stay-at-home order</a></h2>
+<p>재택근무 28일차 입니다.</p>
+<p>그동안은 똑같은 일상의 반복이었습니다. 일어나서 커피를 내리고 서재로 가서 일을
+시작하고, 아이들이 홈스쿨을 시작하면 컴퓨터가 잘 동작하는 지 봐주고, 점심 먹고
+일하고, 저녁되면 일을 멈추고 저녁을 준비하고 아이들을 재우고 잡니다. 이 일상이
+5주째를 넘어서 이제 6주째 중반이 되었습니다.</p>
+<p>6주째가 되어가는데 아직 미국 내 코로나 바이러스의 확산은 정점에 다다르지 않은 것
+같습니다. 여전히 <a href="https://www.worldometers.info/coronavirus/country/us/">매일 2만명이 넘는 환자가 발생하고 있고, 사망자도 2천명이
+넘어가고 있습니다.</a>
+다행히 캘리포니아는 동부의 뉴욕주나 뉴저지 주 만큼 상황이 심각한 것은 아닙니다.
+Stay-at-home을 선제적으로 시행한 것이 지금 효과를 보고 있어서, 병상이 부족할
+만큼 환자가 급격히 증가하고 있지는 않습니다.</p>
+<p>그러다 보니, 사람들이 언제쯤 일상으로 복귀를 하게 될 지 궁금해 하는 듯 합니다.
+오늘 주지사의 브리핑 중에 <a href="https://www.gov.ca.gov/wp-content/uploads/2020/04/California-Roadmap-to-Modify-the-Stay-at-Home-Order.pdf">Stay-at-home 명령을 수정하게 되는 기준에 대해
+언급했습니다.</a></p>
+<p><img alt="Flatten the Curve" src="/media/blog/2020-04-15_california-stay-at-home.png"/></p>
+<p>그 중 이 그래프가 눈에 띄이더군요. 하늘색 실선은 Stay-at-home 명령을 발효할 당시
+환자 증가 예측치이고, 주황색 점선은 실제 환자 수 입니다. 연한 회색 점선은
+stay-at-home 명령을 발효하지 않았을 때의 예상 환자 수 이고, 흰색 점선은 지금
+Stay-at-home 명령을 완화 했을 때 예상되는 환자 증가 수 입니다.</p>
+<p>이 그래프는 두가지 중요한 정보를 보여줍니다. Stay-at-home이 예상보다 더 효과를
+보여주고 있다는 점이 처음이고, Stay-at-home을 아직 완화하기에는 이르다는
+점입니다. 현재 가용한 병상 수치를 5월 초에 훌쩍 넘기고 기하급수적으로 늘어나게
+될 거라는 거죠.</p>
+<p>그러나 무한정 stay-at-home을 유지할 수는 없겠죠. 지금의 경제 상황이 표면에서
+보이는 것 보다 더 안 좋아지고 있다는 말이 들립니다. 광고가 주 수입원인
+페이스북이나 구글에서 오프라인 매장의 광고들이 대부분 사라져서 수입이
+급감하리라는 예측도 나옵니다. 아직 지난 주 실업자 수치는 발표되진 않은 것 같은데
+그 전주 수치와 별반 다를 바 없이 꾸준히 늘어날 것 같아보입니다.</p>
+<p>당장은 테크회사는 어느정도 버텨내고 있는 것 같습니다. 많은 회사들이 재택근무로
+전향하고, 학교도 온라인 수업으로 진행하게 되면서 서버 수요가 급증합니다. 그로
+인해 버텨내고 있지만, 이 상황이 계속 된다면 회사에서 레이오프가 진행될 테고 그
+줄어드는 사람만큼 서버 수요도 줄어들겠죠. 경제가 악화되면 테크 회사도 필연적으로
+하락할 수 밖에 없을 것 같네요. 가장 마지막이긴 하겠지만요.</p>
+<p>그래서 언젠가는 Stay-at-home 명령을 해제하거나 완화해야 하는 데, 오늘 발표에서
+그 추이를 아직은 알기 힘들고, 2주에서 4주정도 더 지켜봐야 결정할 수 있다고
+하더군요. 그리고 위의 슬라이드에서 나온 것 처럼, 몇가지 준비되어야 할 사항이
+있다고 합니다.</p>
+<p>그렇다면 적어도 4월말에서 5월 중순까지는 추이를 지켜봐야 할테고, 그 이후 완화
+시기를 결정한다면, 아마도 6월 말은 훌쩍 넘기진 않을까 합니다. 경제적인 위기도
+위기지만 고위험군 사망을 줄이기 위해선 어쩔 수 없는 방법인 것 같네요.</p>
+<p>올 한 해는 모두에게 힘든 시기가 될 것 같네요. 그 시기가 올해로 끝나면
+최고일테고, 몇년동안 지속될 확률이 많아 보입니다.</p>
+<!-- Continue reading link -->
+</div>
+</article>
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+<header class="md-post__header">
+<!-- Post authors -->
+<!-- Post metadata -->
+<div class="md-post__meta md-meta">
+<ul class="md-meta__list">
+<!-- Post date -->
+<li class="md-meta__item">
+<time datetime="2020-04-03 00:00:00">2020년 4월 3일</time></li>
+<!-- Post categories -->
+<!-- Post readtime -->
+<li class="md-meta__item">
+            
+              읽는시간 2분
+            
+          </li>
+</ul>
+<!-- Draft marker -->
+</div>
+</header>
+<!-- Post content -->
+<div class="md-post__content md-typeset">
+<h2 id="work-from-home"><a class="toclink" href="../../2020/work-from-home.html">Work From Home</a></h2>
+<p>재택근무 20일차.</p>
+<p><img alt="Silicon Valley from Villa Montalvo" src="/media/page/travel/nocal/montalvo.jpg"/></p>
+<p>Work From Home을 시작 한 지 4 주가 지났네요. 집에서만 일을 하고 두번을 급여를
+받으니 기분이 이상하네요. 일도 하긴 했는데 왠지 공돈을 받은 것 같은 느낌입니다.</p>
+<p>[이전 글][wfh-dpa]에서 언급한 대로 행하려고 노력하는 데, 지키기가 쉽지 않네요.
+아침에 일어나는 것은 가능 한 데 끊임없이 생기는 집안 일에, 아이들을 돌보고 하는
+과정에, 업무를 잘 못보게 되는 일이 빈번하게 생깁니다. 아내와 협의 해서 집중해서
+일해야 하는 시간에 일을 하는게 가능하긴 하지만, 꽤 많은 시간을 허비하게 되는
+경우가 많습니다. 그러다보니 급여 받는 게 감사하게 느껴지네요.</p>
+<p>게다가 요즘 들리는 소식이 꽤 좋지 않습니다. 처음 Shelter-in-place 명령이
+내려졌을 때, 공유 경제를 표방하는 Uber, Lyft, AirBnB 회사 등이 좀 어려울 거라
+생각했었네요. 오늘 보니 Hacker News에 <a href="https://www.businessinsider.com/bird-employees-locked-out-of-emails-layoffs-2020-4">스쿠터 공유 업체 Bird가 400여명의 직원을
+Zoom으로 해고</a>했다는 글이 올라왔네요.</p>
+<p>논란이 일어난 부분은 화상회의 앱 Zoom으로 Text-to-Speach 로 직원을 해고했다는
+부분이지만, 제가 보기에 더 심각한 것은 회사 사정이 좋지 않으니 30%나 되는 직원을
+한번에 해고했다는 부분이네요. 특히나 공유경제형 회사는 현재 적자를 보고 운영하는
+경우가 많은데, 이런 마켓 상황에서 버티기가 쉽지 않을 것 같네요.</p>
+<p>설령 이번 코로나바이러스 사태가 나아지더라도 당분간은 사람들이 경각심이 있을테고
+대중교통이나 우버나 관리가 잘 되지 않는 AirBnB같은 곳을 꺼려하게 될 것 같네요.
+그러면 다음 펀딩을 받지 못하면 순식간에 파산 절차를 밟을 수 밖에 없게 되겠죠.
+대마불사라고 지금 까지 펀딩된 돈 때문에라도 계속 투자를 할 수도 있겠지만, 마켓
+상황이 안좋으면 투자 회사조차도 자금 회수를 하려고 하겠죠. 이래 저래 좋은 상황은
+아닌 것 같습니다.</p>
+<p>[실업급여 신청에 관한 이전 글][wfh-unemployment]에 이어서, <a href="https://www.nbcnews.com/health/health-news/blog/2020-04-02-coronavirus-news-n1174651">지난 주까지 총
+660만명이 실업급여를 신청</a>했다고 하네요. 트럼프 정부에서
+각 가정에 긴급 재난 자금을 지급한다고는 하지만, Direct Deposit이 가능한 곳은
+우선적으로 받을 수 있고 그렇지 않은 가정은 Check로 받게되서 많이 늦어질 것
+같다는 뉴스도 보았네요. 20% 정도의 Tax Payer가 Direct Deposit을 하지 않는다고
+하니 그 여파도 꽤 크리라 봅니다. 긴급 재난 자금이 이 가정들에게 큰 도움이 되어야
+할 텐네 너무 시기가 늦을 수도 있겠네요.</p>
+<!-- Continue reading link -->
+</div>
+</article>
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+<header class="md-post__header">
+<!-- Post authors -->
+<!-- Post metadata -->
+<div class="md-post__meta md-meta">
+<ul class="md-meta__list">
+<!-- Post date -->
+<li class="md-meta__item">
+<time datetime="2020-03-26 00:00:00">2020년 3월 26일</time></li>
+<!-- Post categories -->
+<!-- Post readtime -->
+<li class="md-meta__item">
+            
+              읽는시간 2분
+            
+          </li>
+</ul>
+<!-- Draft marker -->
+</div>
+</header>
+<!-- Post content -->
+<div class="md-post__content md-typeset">
+<h2 id="unemployment-number"><a class="toclink" href="../../2020/wfh-unemployment.html">Unemployment Number</a></h2>
+<p>재택근무 14일째.</p>
+<p><a href="https://www.washingtonpost.com/business/2020/03/26/unemployment-claims-coronavirus-3-million/">오늘 Washington Post</a> 기사를 보았습니다. 지난 주 실업급여
+신청자가 3백30만명이나 되었다는 글인데요. 이 수치는 전에 유래가 없을 만큼 엄청
+난 숫자라는군요.</p>
+<p><img alt="Graph from Washington Post" src="/media/blog/2020-03-26_unemployment_number.webp"/></p>
+<p>기사 이미지를 보면 2008년 서브프라임 모기지 때 보다 5배 정도 많습니다. 그 중
+백만명 정도는 캘리포니아 주에 거주하는 사람이라고 하네요. 미국에서 많은 주가
+Lockdown 또는 그와 비슷한 정책을 시행하고 있어서 많은 가계들이 잠시 문을
+닫았습니다. 그로 인해 비정규직이 직장을 잃게되어 이 현상이 나타난 것 같네요.</p>
+<p>당장 미국 연방 정부에서 <a href="https://taxfoundation.org/cares-act-senate-coronavirus-bill-economic-relief-plan/">중산층 이하에 기본 소득 개념으로 돈을 지원하기로
+결정</a>했습니다. 지역 물가를 고려하지 않아서 뉴욕시나 실리콘
+벨리에서는 해당 되지 않는 사람들이 꽤 되겠지만 그 이외의 지역에는 큰 도움이
+되리라 생각되네요.</p>
+<p><img alt="Graph from Tax Foundation" src="/media/blog/2020-03-26_tax-foundation_cares-act.png"/></p>
+<p>위의 그래프에서 보여주듯이 2019년 Adjusted Gross Income이 20만불 근처가 되면 4인
+가족이라도 혜택이 거의 없게 되네요. 이 지역의 렌트비를 고려하면 좀 아쉽긴
+합니다만 나라 전체로 보면 그러한 세세한 조정은 힘들었으리라 생각됩니다.</p>
+<p>이것 뿐만이 아니라 경기부양책으로 미국에서만 2조 달러를 풀기로 합의했고, G20
+국가 전체로는 5조 달러가까이 시장에 돈을 풀겠다는 말도 들립니다. 그만큼 현재
+상황이 급박하게 돌아가고 있다는 말일테고, 정부에서 2008년의 연쇄작용을 다시는
+만들지 않겠다는 의지를 보여줬다고 할 수도 있겠네요. (그런 의미에서 오늘
+주식시장은 좋군요)</p>
+<p>그러나 하이퍼인플레이션 때문에 정부에서 한없이 돈을 풀 수 없기에, 정부에서 돈을
+푸는게 우세할 지, 위의 그래프에서 보는 것 처럼 실업으로 인한 경기 침체가 우세할
+지 아직은 확신할 수 없는 상황입니다. 꽤 많은 사람들은 이번 CARES Act로 인해
+잠깐은 한숨 돌리겠지만 결국에는 경기 침체가 다시 올 수 밖에 없을 것이라고
+예상하네요.</p>
+<p>시기가 시기인만큼, 가정에서도 최대한 긴축정책을 펼쳐야 할 것 같네요.
+긴급자금으로 모아둔 돈을 잘 간직해서 최악의 상황에서도 버틸 수 있어야겠지요.
+트럼프 대통령의 말을 들어보면 모기지도 특정 상황에서는 연기할 수 있도록 했다고
+하니 제가 산정하는 최악의 상황은 안 오긴 하겠지만요.</p>
+<!-- Continue reading link -->
+</div>
+</article>
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+<header class="md-post__header">
+<!-- Post authors -->
+<!-- Post metadata -->
+<div class="md-post__meta md-meta">
+<ul class="md-meta__list">
+<!-- Post date -->
+<li class="md-meta__item">
+<time datetime="2020-03-23 00:00:00">2020년 3월 23일</time></li>
+<!-- Post categories -->
+<!-- Post readtime -->
+<li class="md-meta__item">
+            
+              읽는시간 2분
+            
+          </li>
+</ul>
+<!-- Draft marker -->
+</div>
+</header>
+<!-- Post content -->
+<div class="md-post__content md-typeset">
+<h2 id="_1"><a class="toclink" href="../../2020/%EC%98%A8%EB%9D%BC%EC%9D%B8-%EC%88%98%EC%97%85.html">온라인 수업</a></h2>
+<p>재택 근무를 시작한 지 2주가 지났네요. 11일 째가 되었습니다. 아이들 학교가 문을
+닫은 지 일주일이 되었습니다. 처음 학교 문을 닫을 때 온라인 교육에 대한 이야기가
+나왔었는 데, 그 때만 해도 한 두 달은 걸린 후 원격 수업을 시작할 줄 알았죠.</p>
+<p>그런데, 일주일이 채 되지도 않아서 담임 선생님들이 원격 수업을 준비하더군요.
+첫째는 지난 주 목요일, 금요일에는 반 친구들과 짧은 영상을 올리고 서로 영상으로
+댓글을 달아주는 Flipgrid라는 것을 하며 컴퓨터를 통해 의견을 나누는 것을
+연습했고, 둘째는 밤에 잠자기 전 화상회의를 켜고 선생님이 들려주는 Bedtime
+story를 듣고 잠에 드는 연습을 했네요.</p>
+<p>그리고 이번 주 부터 본격적으로, 그러나 처음은 가볍게 원격 수업이 진행되네요. 꽤
+빠르게 진행이 된 터라 미국의 시스템을 고려해 볼 때 무척이나 놀랬습니다. 다행히도
+이미 학교에서 어느 정도 온라인 수업과 비슷하게 병행을 하고 있었더군요.</p>
+<p><a href="https://edu.google.com/products/gsuite-for-education/">gSuite for Education</a> 계정이 이미 두 아이에게 만들어져 있었고, 수업 중 이
+계정을 이용해서 Google Docs를 이용해 글을 쓰던지, 이 계정과 연동된 수학
+프로그램으로 문제를 풀던 지 했더라구요.</p>
+<p>원격 수업은 지금까지 해 왔던 것의 연장선인 듯 합니다. 처음엔 Zoom을 이용한
+화상회의로 선생님이 약간의 지도를 하고, Google Classroom을 이용해 하루 하루 해야
+할 공부 분량을 내어주고 Google Docs/ Slide로 답변을 적어서 제출하게
+되어있더라구요. 기존에 해오던 것에서 Classroom, 화상회의 정도만 추가된 것
+같네요.</p>
+<p>그래서 첫째도 별 무리없이 원격 수업을 진행할 수 있는 것 같네요. 둘째는 아무래도
+저학년에 컴퓨터가 익숙하지 않다고 생각하는 지 아이패드로 간단히 진행하는 것
+같네요.</p>
+<p>시국이 시국인 만큼 공부에 대한 것은 거의 포기하고 있었습니다. 여름까지 학교가
+열지 않을 거란 의견이 대다수라 이번 학기는 거의 포기하고 있었죠. 아이들이
+저학년이라 그다지 큰 문제는 되지 않았겠지만, 주변의 고학년 자녀를 둔 지인들은
+걱정이 이만 저만이 아니였더군요.</p>
+<p>효율은 좀 떨어지겠지만 다행히 이런 방식으로나마 수업을 진행할 수가 있어서 다행인
+듯 합니다. 바램으론 <a href="https://gsuite.google.com/products/meet/">Hangout Meet</a>이 좀 더 많이 퍼졌으면 좋았겠지만, 아직
+기능이 Zoom만큼 다양하게 지원하진 않아서 주류가 되진 못하는 것 같네요. 예를 들면
+수업 중 진행자가 전체를 음소거 한다던지, 학생이 손을 든다던지 하는 기능은 아직
+Hangout Meet에는 없습니다.</p>
+<p>이번 코로나 바이러스로 어려움도 많지만, 이 힘든 시기가 지나고 나면 교육에 관한
+부분도 많이 바뀔 것 같네요. 지금까지는 아이가 감기걸리거나 다른 이유로 수업에
+참석을 못할 경우 independent study라는 이름으로 수많은 종이로 출력된 숙제를 하는
+게 보통이었는데, 이 시기 이후엔 온라인 교육으로 많이 대체될 것 같은 느낌입니다.</p>
+<!-- Continue reading link -->
+</div>
+</article>
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+<header class="md-post__header">
+<!-- Post authors -->
+<!-- Post metadata -->
+<div class="md-post__meta md-meta">
+<ul class="md-meta__list">
+<!-- Post date -->
+<li class="md-meta__item">
+<time datetime="2020-03-18 00:00:00">2020년 3월 18일</time></li>
+<!-- Post categories -->
+<!-- Post readtime -->
+<li class="md-meta__item">
+            
+              읽는시간 5분
+            
+          </li>
+</ul>
+<!-- Draft marker -->
+</div>
+</header>
+<!-- Post content -->
+<div class="md-post__content md-typeset">
+<h2 id="defense-production-act"><a class="toclink" href="../../2020/wfh-dpa.html">Defense Production Act</a></h2>
+<p>재택근무 8일차에 접어들었습니다.</p>
+<p>현재 기준 미국과 유럽에서 확진자가 폭증하고 있네요. 이탈리아는 이제 매일 3천명을
+넘어서 4천명의 확진자가 발생하고 있고 사망률은 8% 가까이 됩니다. 이란의 상승세는
+꾸준한 듯 하고 스페인, 독일, 프랑스가 제대로 검사를 하고 있어서 확진자 증가폭이
+크네요. 미국과 마찬가지로 지역 감염이 될 동안 준비가 안되었다가 많이 퍼진 지금
+검사역량이 늘어나고 있어서 확진자 증가 폭이 크다고 하는데, 그래도 번지는 것을
+막기는 쉽지않아 보입니다.</p>
+<p>오늘 뉴스에서 미국 연방정부가 Defense Production Act를 공표할 지도 모른다는
+소식이 들려옵니다. 예전 전쟁시 군수물자를 빠르게 생산하기 위해 미국 내 공장을
+전시체제하에 군용물품 생산하는 공장으로 전환할 수 있도록 한 법안인데 지금은
+의료인들이 사용할 수 있는 방호복, 마스크, 장갑등을 생산하기 위함이라는 말이
+들리네요. 조금은 늦은 감이 있어보이지만 지금이나마 정부가 심각하게 받아들이고
+있어서 그나마 다행입니다.</p>
+<p>그 외에도 연준은 기준금리를 0%로 낮추었고, 양적완화(Quntitative Easing, QE)를
+하겠다고 발표했습니다. 정부는 긴급자금 수혈을, 소득 기준 중하위계층에 바로 돈을
+지급하는, 거의 기본소득 개념의 지원을 고려하고 있다고 하네요.</p>
+<p>그럼에도 불구하고 시장은 상황을 안좋게 보고 있는 듯 합니다. 다우 존스는
+서킷브레이커가 한번 발동되고 조금 상승해서 6.3% 하락한 19,898로 오늘 장을
+마감했습니다. 여전히 더 떨어질 것 같죠.</p>
+<p>그 와중에 그나마 다행인 것은, 지난 주 사재기로인해 텅텅 비었던 마트의 선반이
+다시 채워지고 있다는 점이겠네요. 아직 완벽하게 다 채워진 것은 아니지만, 마트마다
+중요한 물건은 구매 수량을 제한하고 있고, 사재기 할 사람은 이미 사재기를 한
+탓인지, 슬슬 물건 구하기가 쉬워집니다. 고기도 충분히 보이고, 화장지도 한가득
+벽면을 차지하도록 쌓아뒀더군요. 쌀은 코스트코에는 없었지만, 한국마트에서는 구할
+수 있어서 어떻게든 먹는 데에는 문제는 없을 듯 합니다.</p>
+<p>안 좋은 상황 이야기는 이쯤에서 그만하고, 그동안 재택근무했던 경험을 좀 더 정리해
+볼까 합니다. [며칠 전의 재택근무 글][wfh-2020]의 연장선인데, 재택근무를 하면서
+효율적으로 재택근무하기 위한 몇가지 중요한 부분을 이야기해 볼까 합니다.</p>
+<h3 id="_1"><a class="toclink" href="../../2020/wfh-dpa.html#_1">업무 환경은 확실히 준비</a></h3>
+<p>하루 이틀 재택근무 하는 것이라면 작은 랩탑 스크린에 랩탑의 키보드로 일하는 것이
+불편하긴 하겠지만 감내하지 못할 정도는 아닙니다. 그런데 최소 한달, 길게는
+여름까지 지속될 수도 있는 장기간 재택근무에서는 편하게 업무볼 수 있는 환경이
+정말 중요한 것 같습니다. 거의 회사의 자리(cubicle)를 그대로 집으로 옮겨올 정도로
+환경을 만들어둬야 효율적으로 일할 수 있다는 생각입니다.</p>
+<p>가장 중요한 부분은 쓸만한 모니터와 키보드 마우스, 그리고 화상회의에 필요한
+웹캠일 듯 합니다. 저희 회사에서는 회사에서 사용하던 모니터를 집으로 가지고 갈 수
+있도록 했는데, 저는 이참에 큰 모니터를 하나 장만했네요. 기존에 27인치 모니터를
+썼는데, 이번에 Built-in KVM 기능이 있는 델 U3419W 모니터를 장만했습니다. 편하게
+기존 데스크탑과 회사 랩탑을 번갈아가며 작업할 수 있고, Ultra-Wide 모니터로
+코딩하면서 자료띄워서 보거나, 화상 회의하면서 회의록 정리 또는 코드 수정할 수
+있었습니다. 키보드 마우스는 Ergonomic까지는 아니지만, 꽤 괜찮은 기계식 키보드에
+적당한 마우스를 사용하고 있어서 장시간 업무보는데에도 문제없었습니다.</p>
+<p>책상과 의자는 키보드 마우스, 모니터만큼이나 중요하죠. 회사에서 사용하는 의자가
+steelcase인데 집에도 steelcase를 중고로 얻어와서 사용하고 있어서 의자 자체는
+불편하지 않았습니다. 다만, 미리 서랍이라도 준비 해 뒀어야 하는데 서랍이 없어서
+책상이 서류로 너저분해 지는 것을 막을 수가 없네요. 그래서 자리가 깔끔하지 않다는
+느낌을 받아서 주의가 좀 산만한 것 같네요.</p>
+<p>또 하나 중요한 것은 화상회의를 원활히 하기 위한 웹캠인 것 같습니다. 회사 랩탑에
+내장된 웹캠을 써도 괜찮고, 저같은 경우는 기존에 사용하던 웹캠을 사용해서 좋은
+화질로 화상을 캡쳐하고 있습니다. 내 모습을 화상회의를 하는 상대방에게 보여주는
+것, 온라인으로 일하는 환경에서는 매우 중요하다고 생각이 드네요. 꽤 많은 사람들이
+화상회의에서 캠코더는 켜지않고 보이스로만 회의하는데 그러면 서로 유대감이 좀
+덜한 것 같네요. 아무래도 표정으로 느껴지는 뉘앙스와 음성으로만 받아들이는 게 좀
+다릅니다.</p>
+<h3 id="_2"><a class="toclink" href="../../2020/wfh-dpa.html#_2">매일 출근하는 기분으로 준비</a></h3>
+<p>가장 좋은 것은 집에 일을 하는 공간이 완전히 분리되어 있는 것이 좋습니다. 다만
+집이 정말 넓지 않은 이상, 이렇게 독립된 일하는 공간이 있는 게 거의 불가능하다고
+봐야 합니다. 그러나 한가지 도움이 되는 것은, 아침에 일어나서 그대로 일하는 것이
+아니라 회의가 없다 할 지라도 회사에 출근하는 기분으로 차려입고 일을 하는
+것입니다. 처음 재택근무를 하게되면 주의가 산만해지기 쉬운데, 씻고 옷을 입으면서
+일하는 모드로 점점 바뀌게 되는 것 같습니다. 그럼에도 불구하고 일을 하는 도중에
+일에 집중하지 못하게 하는 정말 많은 요소들이 있지만, 준비를 함으로써 그나마
+조금은 더 일을 한다는 느낌을 주는거죠.</p>
+<h3 id="_3"><a class="toclink" href="../../2020/wfh-dpa.html#_3">동료와 자주 의견교환을 하는 것</a></h3>
+<p>사람마다 성향은 제각각이죠. 어떤 사람은 아무에게도 방해받지 않고 조용히 묵묵하게
+8시간 일을 할 수 있는 반면, 혼자 놔두면 일도 손에 안잡히고 스마트폰을 보고 있기
+일쑤에다 일보다 집안일이 생각나서 집안일로 하루를 허비하기 쉬운 사람도 있습니다.
+네, 바로 저같은 사람이요.</p>
+<p>어떤 사람은 그날 할 일을 정해두고 일을 하면 낫다고 하는 데, 전 그게 크게 도움이
+되질 않았습니다. 오늘 할 일을 내일로 미루는 게 회사에서 일을 할 때에도 일상인
+터라 (그러고 어떻게 월급 받으며 잘 버티는지..) 집에서 일을 하게 될 때에는 더
+어렵더군요. 잠깐만 일을 해도 집 안에서 들려오는 아이들 소리 (학교가 휴교라),
+체크해야 하는 개인적인 이메일, 할일이 계속 생각나 일의 흐름이 끊기기 일쑤입니다.
+실제론 제가 먼저 이야기 걸지 않는 이상 동료로부터 방해 받을 일이 거의 없는
+상황인데도 집중하기가 매우 어렵습니다.</p>
+<p>저희 팀은, 재택근무로 변경되면서 채팅방을 하나 만들어서 이야기를 나눕니다. 이게
+꽤 효과적이더군요. 채팅방에 뭐 거창한 업무 이야기를 하는 것은 아니고, 오늘
+있었던 일, 사회 현상 토론 (바이러스는 언제 잠잠해질것인지), 아니면 간단하게 어떤
+부분에서 진행이 안되고 있을 때 그에 관해 채팅하는 것 정도입니다. 그런 이야기를
+동료들과 하면서 팀에 속해있다는 느낌도 들고, 다른 동료의 진행상황을 보면서 내가
+해야 할일에 대한 압박도 좀 느낍니다. 그러면서 일이 조금씩 진행이 되네요. 가끔은
+조용한 분위기에 일을 하면서 능률이 팍팍 오를때도 있지만, 방해가 덜 되는 선에서
+잦은 의견을 나누는 것은 확실히 도움이 되는 것 같네요. 특히 지금같은 시국에서는
+정신적으로 피폐해지기 쉬운데 동료들과 이야기 하면서 조금은 완화되는 경우도
+있습니다.</p>
+<p>회사에서 일을 할 때에는 바로 옆자리 동료에게 가볍게 물어보는 내용인데 재택을
+하면서 연락하는게 좀 꺼려질 수 있겠지만, 채팅이나 1:1 화상회의를 종종 하는 것이
+도움이 많이 되는 듯 합니다.</p>
+<h3 id="_4"><a class="toclink" href="../../2020/wfh-dpa.html#_4">캘린더 업데이트</a></h3>
+<p>이것은 내 업무를 돕는 것이 아니라 동료의 업무를 돕는 것인데, 재택근무를 하면서
+캘린더에 일하는 시간과 데스크에 앉아있지 않는, 집안일을 하거나 밖에 나가거나
+하는 시간을 기록해 두는 게 좋습니다. 원격으로 일을 하게 되면 자연적으로
+이메일이나 기타 피드백이 느려지게 되는 데 이때 상대방이 무작정 기다리는 게
+아니라 캘린더 일정을 보고 바로 응답할 수 있는 상황인 지 아닌지 쉽게 알 수
+있습니다. 캘린더가 공유된다는 가정이 있긴 하지만, 제가 사용하고 있는
+gSuite에서는 같은 그룹 내에서 캘린더가 자동으로 공유되서 이 부분은 무척
+편합니다.</p>
+<h3 id="_5"><a class="toclink" href="../../2020/wfh-dpa.html#_5">꾸준히 산책하기</a></h3>
+<p>이건 저도 잘 하지 못하는 부분이라 제 다짐이기도 한데, 일하면서 꼭 하루에 적어도
+한 번, 아니면 오전/오후 두번은 주변을 산책하면서 갇힌 느낌을 받지 않고, 체력도
+유지하는 게 좋은 것 같습니다. 날씨가 계속 비가 와서 못하고 있긴 한데, 날씨가 좀
+좋아지면 저도 꾸준히 주변 산책을 할 생각입니다.</p>
+<p>회사에서는 일하다 종종 커피를 마시러 내려가서 커피 받고 회사 건물 근처를 한바퀴
+돌고 오는데, 걷는 와중에 생각도 정리가 되고 좋더군요.</p>
+<hr/>
+<p>각설하고, 상황은 점점 안좋아지고 있는데 아직은 최악으로 치닫지는 않습니다.
+물건도 동나는 것도 아니고, 주변 사람들 모두 차분하게 대응하고 있네요. 간간히
+들리는 주변의 확진자 소식에 좀 안타깝고 가끔은 가슴이 철렁이기도 하지만
+재택근무를 하면서 다른 사람 접촉할 일이 확실히 줄어들어서 심적 안정에 도움은
+되는 것 같네요.</p>
+<p>좋은 소식으로 글을 쓸 날이 어서 오면 좋겠습니다.</p>
+<!-- Continue reading link -->
+</div>
+</article>
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+<header class="md-post__header">
+<!-- Post authors -->
+<!-- Post metadata -->
+<div class="md-post__meta md-meta">
+<ul class="md-meta__list">
+<!-- Post date -->
+<li class="md-meta__item">
+<time datetime="2020-03-16 00:00:00">2020년 3월 16일</time></li>
+<!-- Post categories -->
+<!-- Post readtime -->
+<li class="md-meta__item">
+            
+              읽는시간 1분
+            
+          </li>
+</ul>
+<!-- Draft marker -->
+</div>
+</header>
+<!-- Post content -->
+<div class="md-post__content md-typeset">
+<h2 id="virtual-lock-down"><a class="toclink" href="../../2020/virtual-lock-down.html">Virtual Lock Down</a></h2>
+<p>재택근무 2주차 (6일째)입니다. 오늘은 주 정부인지 카운티 정부인지 모르겠지만,
+정부에서 베이지역을 Lock down 했습니다. 락다운을 해서, 이제 삶에 필수적인 곳,
+예를 들면 마트, 주유소, 병원, 홈디포 같은 곳을 제외하곤 휴업해야 합니다. 그리고
+정부는 주민들이 집에서 지내야 하고 위에서 언급한 필수적인 곳을 가는 것 외에는
+돌아다니지 않기를 "권장"하고 있습니다.</p>
+<p>점점 코로나바이러스 확진자가 늘어나고 꽤 강력한 정책이 발효되다보니 시장의
+반응이 심상치 않네요. 다우 존스가 1914년 세계대전때와 1987년 Black Monday를
+제외하고는 가장 많이 하락한 날이 되었습니다. <a href="https://us.spindices.com/indexology/djia-and-sp-500/sizzlers-and-fizzlers">1987년에는 22%, 오늘은 13% 가까이
+떨어졌네요.</a> 경제 대공황이던 시절이 12.8%가 떨어졌으니 그때와
+맞먹는 파급력이라고 볼 수 있겠습니다. 2008년에 조차 하루 낙폭은 8%도 안되었으니
+이번 바이러스의 충격이 엄청난 걸 볼 수 있네요.</p>
+<p>그러나 이전 글에도 언급했지만, 아직은 끝나지 않은 것 같습니다. 실제로 바이러스는
+계속해서 급격하게 번지고 있고, 치료제는 1년간은 만나보기 쉽지 않을 것 같습니다.
+증시가 더 떨어질 수도 있다는 것이겠죠.</p>
+<p>이번 락다운으로 인해 피해를 크게 입을 계층은 베이지역의 테크회사를 다니는
+엔지니어가 아니라, 하루벌어먹고 살아가는 (paycheck-to-paycheck) 사람들일
+것입니다. 어떻게든 정부에서 이런 계층을 지원해 줄 수 있는 방안이 어서 나오면
+좋겠네요. 락다운 동안 식당도 영업하지 않고 사람들은 지출을 줄이고 하면, 몇주
+되지 않아 렌트비도 내지 못하게 될 터라 그 전에 빨리 방법이 강구되면 좋겠습니다.</p>
+<p>두번째 주간으로 들어서면서 WFH은 점점 더 익숙해 집니다. 익숙해지면서 조금
+헤이해지려 하는 데, 다시 집중해서 업무를 잘 처리해야겠네요. 아이들 학교도 4주간
+휴교를 결정한 터라 더욱이 집중이 어렵게 되었습니다. 그나마 다행인 것은 회사에서
+이런 부분을 충분히 인지한 덕분인지, 아이들로 인해 업무를 보지 못하게 되는
+상황에도 연차를 쓸 필요는 없다고 공지가 내려왔네요.</p>
+<p>연준과 정부는 꺼낼 수 있는 카드는 다 꺼낸 듯 한데, 이번 한주간 시장이 어떻게
+반응을 할 지 좀 지켜봐야겠습니다.</p>
+<!-- Continue reading link -->
+</div>
+</article>
+<nav class="md-pagination">
+<a class="md-pagination__link" href="../../index.html">1</a> <a class="md-pagination__link" href="../2/index.html">2</a> <span class="md-pagination__current">3</span> <a class="md-pagination__link" href="../4/index.html">4</a> <a class="md-pagination__link" href="../5/index.html">5</a> <span class="md-pagination__dots">..</span> <a class="md-pagination__link" href="../9/index.html">9</a>
+</nav>
+</div>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="하단/푸터" class="md-footer__inner md-grid">
+<a aria-label="이전: Tips and Tricks" class="md-footer__link md-footer__link--prev" href="../../../tips/index.html">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                이전
+              </span>
+<div class="md-ellipsis">
+                Tips and Tricks
+              </div>
+</div>
+</a>
+<a aria-label="다음: design" class="md-footer__link md-footer__link--next" href="../../category/design.html">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                다음
+              </span>
+<div class="md-ellipsis">
+                design
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2013 - 2024 Elijah Kim
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}}</script>
+<script src="../../../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+</body>
+</html>

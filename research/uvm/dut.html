@@ -1,94 +1,357 @@
-<!doctype html>
-<html lang="ko">
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Design Under Test (DUT)</title>
-  
-  <link rel="stylesheet" media="print" type="text/css" href="../../static/css/print.css">
-  <link rel="stylesheet" media="screen" type="text/css" href="../../static/css/eunchan.css">
-  <link rel="shortcut icon" href="../../static/img/favicon.png">
-
-  
-  
-  
-  <meta property="og:title" content="Design Under Test (DUT)" />
-  <meta property="og:site_name" content="Eunchan.Kim" />
-
-
-</head>
-
-<body>
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="../../">
-      <img src="../../static/img/logo2.png">
-    </a>
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Eli's Personal Website." name="description"/>
+<link href="https://www.eunchan.kim/research/uvm/dut.html" rel="canonical"/>
+<link href="../../feed_rss_created.xml" rel="alternate" title="RSS 피드 생성완료" type="application/rss+xml"/>
+<link href="../../feed_rss_updated.xml" rel="alternate" title="RSS 피드 업데이트완료" type="application/rss+xml"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.38" name="generator"/>
+<title>Design Under Test (DUT) - Eli Kim</title>
+<link href="../../assets/stylesheets/main.8c3ca2c6.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/stylesheets/extra-style.4a5pwuuc.min.css" rel="stylesheet"/></head>
+<body data-md-color-accent="teal" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#dut">
+          콘텐츠로 이동
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="상단/헤더" class="md-header__inner md-grid">
+<a aria-label="Eli Kim" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Eli Kim">
+<img alt="logo" src="../../static/img/logo2.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Eli Kim
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Design Under Test (DUT)
+            
+          </span>
+</div>
+</div>
+</div>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="언어설정" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="/en/" hreflang="en">
+              English
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="검색" class="md-search__options">
+<button aria-label="지우기" class="md-search__icon md-icon" tabindex="-1" title="지우기" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            검색 초기화
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/eunchan/elijah.kim" title="저장소로 이동">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</div>
+<div class="md-source__repository">
+    eunchan/elijah.kim
   </div>
+</a>
+</div>
+</nav>
+<nav aria-label="탭" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../article/index.html">
+          
+  
+    
+  
+  articles
 
-  <div id="navbarMain" class="navbar-menu">
-    <div class="navbar-start">
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../blog/index.html">
+          
+  
+    
+  
+  journal
 
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link" href="../../article/">article</a>
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../travel/index.html">
+          
+  
+    
+  
+  travel
 
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="../../article/">posts</a>
-          <a class="navbar-item" href="../../research/">research</a>
-          <a class="navbar-item" href="../../review/">review</a>
-          <a class="navbar-item" href="../../tips/">tips &amp; tricks</a>
-        </div>
-      </div>
-      <a class="navbar-item" href="../../blog/">journal</a>
-      <a class="navbar-item" href="../../travel/">travel</a>
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link" href="#">hobby</a>
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../motorcycle/index.html">
+          
+  
+    
+  
+  hobby
 
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="../../motorcycle/">motorcycle</a>
-          <a class="navbar-item" href="../../aviation/">aviation</a>
-        </div>
-      </div>
-      <a class="navbar-item" href="../../sky/">night sky</a>
-      <a class="navbar-item" href="../../eunchan/" rel="author">contact</a>
-    </div><!--/@navbar-start-->
-    <div class="navbar-end">
-    </div><!--/@navbar-end-->
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../eunchan/index.html">
+        
+  
+    
+  
+  Eli Kim
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden="">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="네비게이션" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Eli Kim" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Eli Kim">
+<img alt="logo" src="../../static/img/logo2.png"/>
+</a>
+    Eli Kim
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/eunchan/elijah.kim" title="저장소로 이동">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</div>
+<div class="md-source__repository">
+    eunchan/elijah.kim
   </div>
-</nav><!--/@navigation-->
-<div id="docs" class="docs">
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../article/index.html">
+<span class="md-ellipsis">
+    articles
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../blog/index.html">
+<span class="md-ellipsis">
+    journal
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../travel/index.html">
+<span class="md-ellipsis">
+    travel
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../motorcycle/index.html">
+<span class="md-ellipsis">
+    hobby
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../eunchan/index.html">
+<span class="md-ellipsis">
+    Eli Kim
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden="">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dut">
+<span class="md-ellipsis">
+      DUT 구조
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+<span class="md-ellipsis">
+      2`로 향하는 화살표는 인터럽트 출력 신호겠죠.
+    </span>
+</a>
+<nav aria-label="2`로 향하는 화살표는 인터럽트 출력 신호겠죠." class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bus-interface">
+<span class="md-ellipsis">
+      Bus Interface
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#interrupt-interface">
+<span class="md-ellipsis">
+      Interrupt Interface
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#interface-vs-wire-or-struct">
+<span class="md-ellipsis">
+      Interface vs wire or struct
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#testbench-tbsv">
+<span class="md-ellipsis">
+      Testbench tb.sv
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
 
-<main class="main">
-  <section class="section">
-    <h1 class="title">
-      Design Under Test (DUT)
-    </h1>
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
 
-    <p class="subtitle">
-      January 8, 2019
-    </p>
-
-
-  </section><!--/@hero-->
-  <div class="container is-max-desktop">
-    <section class="medium-section">
-
-
-      <div class="content"><!--only html tag-->
-<p><a href="../../research/uvm/">UVM 첫화면</a></p>
-<ol type="1">
-<li><a href="../../research/uvm/uvm-introduction.html">UVM 개요</a></li>
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Tags -->
+<!-- Actions -->
+<a class="md-content__button md-icon" href="https://github.com/eunchan/elijah.kim/edit/main/docs/research/uvm/dut.md" title="이 페이지를 편집">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"></path></svg>
+</a>
+<!--
+  Hack: check whether the content contains a h1 headline. If it doesn't, the
+  page title (or respectively site name) is used as the main headline.
+-->
+<!-- Source file information -->
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="마지막 업데이트">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024년 10월 15일</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="작성일">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2019년 1월 8일</span>
+</span>
+</aside>
+<!-- Page content -->
+<p><a href="index.html">UVM 첫화면</a></p>
+<ol>
+<li><a href="uvm-introduction.html">UVM 개요</a></li>
 <li>Design Under Test (DUT)</li>
-<li><a href="../../research/uvm/uvm-flow.html">UVM Test Flow</a></li>
-<li><a href="../../research/uvm/uvm-blocks.html">UVM Blocks</a></li>
+<li><a href="uvm-flow.html">UVM Test Flow</a></li>
+<li><a href="uvm-blocks.html">UVM Blocks</a></li>
 </ol>
-<hr />
+<hr/>
 <p>UVM을 구현해 보기에 앞서서, 앞으로 검증할 하드웨어 모듈에 대한 설명을 먼저
 하는게 나을 것 같네요. 어떤 모듈을 하는 게 좋을까 생각을 좀 해보았습니다.</p>
 <p>너무 간단한 것을 하면 UVM의 기본은 이해할 수 있으나 실제 검증에서 쓰이기 쉽지
@@ -99,11 +362,8 @@
 <p>그래서 제가 이해한 수준에서 적당히 구현해 볼 수 있는, 1 proactive agent, 1
 reactive agent가 있는 모듈을 기반으로 이야기 해 볼까 합니다. Proactive/ Reactive
 용어는 다음에 설명할게요.</p>
-<h2 id="dut-구조">DUT 구조</h2>
-<figure>
-<img src="//storage.eunchan.kim/media/page/research/uvm/dut-blockdiagram.svg" alt="DUT Block Diagram" />
-<figcaption aria-hidden="true">DUT Block Diagram</figcaption>
-</figure>
+<h2 id="dut">DUT 구조</h2>
+<p><img alt="DUT Block Diagram" src="../../media/page/research/uvm/dut-blockdiagram.svg"/></p>
 <p>이 DUT는 하나의 Bus slave 포트와, 하나의 interrupt output을 가지고 있는
 모듈입니다. 특정한 버스 입력이 왔을 때 내부 동작으로 인터럽트가 발생하는 거죠.</p>
 <p>이 모듈의 버스는 레지스터 접근을 위한 것이 주된 이유이고, 다른 하나는 버스
@@ -116,42 +376,41 @@ reactive agent가 있는 모듈을 기반으로 이야기 해 볼까 합니다. 
 <p>기본 골격은 RISC-V의 Platform-Level Interrupt Controller 구조를 따왔으나
 인터럽트 입력을 단순화하기 위해 Message Signaled Interrupt (MSI) 방법만 지원하는
 것을 가정했습니다.</p>
-<p>복잡한 용어가 몇개 등장했는데, 이게 검증에 핵심은 아니니, 그저 “테스트할 모듈이
-버스 트랜잭션을 받아서 인터럽트를 만들어내는 모듈” 이라고 이해하면 충분할 것
+<p>복잡한 용어가 몇개 등장했는데, 이게 검증에 핵심은 아니니, 그저 "테스트할 모듈이
+버스 트랜잭션을 받아서 인터럽트를 만들어내는 모듈" 이라고 이해하면 충분할 것
 같네요.</p>
-<p><a href="../../research/uvm/uvm-introduction.html">이전 글에서 보여준 검증 환경 구조</a>가 사실 이 모듈에 곧장
+<p>[이전 글에서 보여준 검증 환경 구조][uvm-introduction]가 사실 이 모듈에 곧장
 적용할 수 있는 구조입니다. 그 그림을 다시 보면,</p>
-<figure>
-<img src="//storage.eunchan.kim/media/page/research/uvm/uvm-overall.svg" alt="UVM blocks" />
-<figcaption aria-hidden="true">UVM blocks</figcaption>
-</figure>
+<p><img alt="UVM blocks" src="../../media/page/research/uvm/uvm-overall.svg"/></p>
 <p>하나의 화살표는 DUT방향으로 향하고 다른 하나는 DUT에서 <code>uvm_agent #2</code>로 가는
 것을 볼 수 있습니다. 위의 하드웨어 모듈에 적용하면 <code>uvm_agent #1</code>의
-<code>uvm_driver</code>에서 DUT로 전송되는 화살표는 버스 인터페이스이고 DUT에서 <code>uvm_agent #2</code>로 향하는 화살표는 인터럽트 출력 신호겠죠.</p>
+<code>uvm_driver</code>에서 DUT로 전송되는 화살표는 버스 인터페이스이고 DUT에서 `uvm_agent</p>
+<h1 id="2">2`로 향하는 화살표는 인터럽트 출력 신호겠죠.</h1>
 <h2 id="bus-interface">Bus Interface</h2>
 <p>버스는 간략화된 Register Interface라고 가정합시다. AXI protocol이나 TileLink
 프로토콜을 설명하는게 이 글의 목적은 아니니까요. 간단하게 버스 신호를 살펴보면,
 아래처럼 구현되어 있다고 해봅시다.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode verilog"><code class="sourceCode verilog"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">module</span> riscv_plic <span class="op">(</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">input</span> clk<span class="op">,</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">input</span> rst_n<span class="op">,</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Bus Interface</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">input</span>               m2s_valid<span class="op">,</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">input</span>        <span class="op">[</span><span class="dv">31</span><span class="op">:</span><span class="dv">0</span><span class="op">]</span> m2s_address<span class="op">,</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">input</span>               m2s_write<span class="op">,</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">input</span>        <span class="op">[</span><span class="dv">31</span><span class="op">:</span><span class="dv">0</span><span class="op">]</span> m2s_data<span class="op">,</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">output</span> logic        m2s_ready<span class="op">,</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">output</span> logic        s2m_valid<span class="op">,</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="dt">output</span> logic <span class="op">[</span><span class="dv">31</span><span class="op">:</span><span class="dv">0</span><span class="op">]</span> s2m_data<span class="op">,</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="dt">output</span> logic        s2m_error<span class="op">,</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">input</span>               s2m_ready<span class="op">,</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ...</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="op">);</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="kw">endmodule</span></span></code></pre></div>
+<pre><code class="language-verilog">module riscv_plic (
+  input clk,
+  input rst_n,
+
+  // Bus Interface
+  input               m2s_valid,
+  input        [31:0] m2s_address,
+  input               m2s_write,
+  input        [31:0] m2s_data,
+  output logic        m2s_ready,
+
+  output logic        s2m_valid,
+  output logic [31:0] s2m_data,
+  output logic        s2m_error,
+  input               s2m_ready,
+
+  // ...
+);
+
+endmodule
+</code></pre>
 <p>두개의 채널로 되어있고 <code>m2s_</code> 채널은 request와 write data가 있고, <code>s2m_</code> 채널은
 response와 read data로 이뤄져있습니다. <code>m2s_</code>에서 <code>s2m_</code> 응답이 한 클럭만에
 온다고 생각하면 거의 SRAM 인터페이스라고 봐도 무방합니다.</p>
@@ -160,17 +419,18 @@ response와 read data로 이뤄져있습니다. <code>m2s_</code>에서 <code>s2
 부릅니다.</p>
 <h2 id="interrupt-interface">Interrupt Interface</h2>
 <p><code>riscv_plic</code> 모듈이 만들어내는 신호는 아래와 같다고 가정해 보겠습니다.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode verilog"><code class="sourceCode verilog"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">module</span> riscv_plic <span class="op">(</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// clk</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Bus Interface</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ...</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Interrupt Interface</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">output</span> logic       irq<span class="op">,</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">output</span> logic <span class="op">[</span><span class="dv">5</span><span class="op">:</span><span class="dv">0</span><span class="op">]</span> irq_id</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="op">);</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="kw">endmodule</span></span></code></pre></div>
+<pre><code class="language-verilog">module riscv_plic (
+  // clk
+  // Bus Interface
+  // ...
+
+  // Interrupt Interface
+  output logic       irq,
+  output logic [5:0] irq_id
+);
+
+endmodule
+</code></pre>
 <p>DUT에서 요청이 나오고 이에 대한 응답은 없네요. 검증 환경은 IRQ 입력을 받기만
 하고 이 이벤트에 따른 처리는 버스 인터페이스를 통해서 처리합니다. 인터럽트가
 뜨면 해당 인터럽트를 수행하고 마지막에 인터럽트를 클리어 하는 방식을 생각해 보면
@@ -183,29 +443,30 @@ response와 read data로 이뤄져있습니다. <code>m2s_</code>에서 <code>s2
 인터페이스를 쓸 수는 있겠지만 전 그다지 선호하지는 않아요. 만일 시그널이 너무
 많다면 struct를 이용해서 하나로 묶는 것을 선호합니다.</p>
 <p>예를 들면 위의 버스 신호는 아래의 struct로 정의 후 선언하겠죠.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode verilog"><code class="sourceCode verilog"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>typedef struct packed <span class="op">{</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  logic <span class="op">[</span><span class="dv">31</span><span class="op">:</span><span class="dv">0</span><span class="op">]</span> address<span class="op">,</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  logic        write<span class="op">,</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  logic <span class="op">[</span><span class="dv">31</span><span class="op">:</span><span class="dv">0</span><span class="op">]</span> data</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> bus_m2s_t<span class="op">;</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>typedef struct packed <span class="op">{</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  logic <span class="op">[</span><span class="dv">31</span><span class="op">:</span><span class="dv">0</span><span class="op">]</span> data<span class="op">,</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  logic        error</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="op">}</span> bus_s2m_t<span class="op">;</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="kw">module</span> riscv_plic <span class="op">(</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ...</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="dt">input</span>        m2s_valid<span class="op">,</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">input</span>        bus_m2s_t m2s<span class="op">,</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="dt">output</span> logic m2s_ready<span class="op">,</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="dt">output</span> logic     s2m_valid<span class="op">,</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="dt">output</span> bus_s2m_t s2m<span class="op">,</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  <span class="dt">input</span>            s2m_ready<span class="op">,</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="op">);</span></span></code></pre></div>
+<pre><code class="language-verilog">typedef struct packed {
+  logic [31:0] address,
+  logic        write,
+  logic [31:0] data
+} bus_m2s_t;
+
+typedef struct packed {
+  logic [31:0] data,
+  logic        error
+} bus_s2m_t;
+
+module riscv_plic (
+  // ...
+  input        m2s_valid,
+  input        bus_m2s_t m2s,
+  output logic m2s_ready,
+
+  output logic     s2m_valid,
+  output bus_s2m_t s2m,
+  input            s2m_ready,
+
+  //...
+);
+</code></pre>
 <p>아무튼 하드웨어 모듈은 이런 방식으로 정의되어 있다고 생각하고, UVM 검증환경에서
 쓸 interface를 정의해 봅시다.</p>
 <p>Interface는 UVM driver에 DUT의 신호를 연결하기 위해서 필요합니다. 시그널 하나
@@ -213,150 +474,158 @@ response와 read data로 이뤄져있습니다. <code>m2s_</code>에서 <code>s2
 더 간편하죠. 그래서 <code>tb.sv</code>에서 DUT의 시그널 인 아웃 포트를 interface로 묶어줘야
 합니다.</p>
 <p>일단 위에서 언급한 버스 인터페이스와 인터럽트 인터페이스를 정의해야겠습니다.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode verilog"><code class="sourceCode verilog"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>interface bus_if <span class="op">(</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">input</span> clk<span class="op">,</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">input</span> rst_n</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="op">);</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  logic        m2s_valid<span class="op">;</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  logic <span class="op">[</span><span class="dv">31</span><span class="op">:</span><span class="dv">0</span><span class="op">]</span> m2s_address<span class="op">;</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  logic        m2s_write<span class="op">;</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  logic <span class="op">[</span><span class="dv">31</span><span class="op">:</span><span class="dv">0</span><span class="op">]</span> m2s_data<span class="op">;</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  logic        m2s_ready<span class="op">;</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  logic        s2m_valid<span class="op">;</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  logic <span class="op">[</span><span class="dv">31</span><span class="op">:</span><span class="dv">0</span><span class="op">]</span> s2m_data<span class="op">;</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  logic        s2m_error<span class="op">;</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  logic        s2m_ready<span class="op">;</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  modport tb <span class="op">(</span></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="dt">input</span> clk<span class="op">,</span> rst_n<span class="op">,</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="dt">output</span> m2s_valid<span class="op">,</span> m2s_address<span class="op">,</span> m2s_write<span class="op">,</span> m2s_data<span class="op">,</span> s2m_ready<span class="op">,</span></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    <span class="dt">input</span>  m2s_ready<span class="op">,</span> s2m_valid<span class="op">,</span> s2m_data<span class="op">,</span> s2m_error</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>  <span class="op">);</span></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>  modport dut <span class="op">(</span></span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    <span class="dt">input</span> clk<span class="op">,</span> rst_n<span class="op">,</span></span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    <span class="dt">input</span> m2s_valid<span class="op">,</span> m2s_address<span class="op">,</span> m2s_write<span class="op">,</span> m2s_data<span class="op">,</span> s2m_ready<span class="op">,</span></span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    <span class="dt">output</span> m2s_ready<span class="op">,</span> s2m_valid<span class="op">,</span> s2m_data<span class="op">,</span> s2m_error</span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>  <span class="op">);</span></span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>endinterface</span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>interface intr_if <span class="op">(</span></span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>  <span class="dt">input</span> clk</span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a><span class="op">);</span></span>
-<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>  logic       irq<span class="op">;</span></span>
-<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>  logic <span class="op">[</span><span class="dv">5</span><span class="op">:</span><span class="dv">0</span><span class="op">]</span> irq_id<span class="op">;</span></span>
-<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>  modport tb <span class="op">(</span> <span class="dt">input</span> clk<span class="op">,</span> irq<span class="op">,</span> irq_id <span class="op">);</span></span>
-<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>  modport dut <span class="op">(</span> <span class="dt">input</span> clk<span class="op">,</span> <span class="dt">output</span> irq<span class="op">,</span> irq_id <span class="op">);</span></span>
-<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>endinterface</span></code></pre></div>
-<h2 id="testbench-tb.sv">Testbench <code>tb.sv</code></h2>
+<pre><code class="language-verilog">interface bus_if (
+  input clk,
+  input rst_n
+);
+
+  logic        m2s_valid;
+  logic [31:0] m2s_address;
+  logic        m2s_write;
+  logic [31:0] m2s_data;
+  logic        m2s_ready;
+
+  logic        s2m_valid;
+  logic [31:0] s2m_data;
+  logic        s2m_error;
+  logic        s2m_ready;
+
+  modport tb (
+    input clk, rst_n,
+    output m2s_valid, m2s_address, m2s_write, m2s_data, s2m_ready,
+    input  m2s_ready, s2m_valid, s2m_data, s2m_error
+  );
+
+  modport dut (
+    input clk, rst_n,
+    input m2s_valid, m2s_address, m2s_write, m2s_data, s2m_ready,
+    output m2s_ready, s2m_valid, s2m_data, s2m_error
+  );
+
+endinterface
+
+interface intr_if (
+  input clk
+);
+
+  logic       irq;
+  logic [5:0] irq_id;
+
+  modport tb ( input clk, irq, irq_id );
+
+  modport dut ( input clk, output irq, irq_id );
+
+endinterface
+</code></pre>
+<h2 id="testbench-tbsv">Testbench <code>tb.sv</code></h2>
 <p>DUT를 연결 할 준비가 되었으니, 이제 testbench를 만들어 보죠. 지금은 UVM 신경
 쓰지 않고 DUT만 인스턴스를 만들어 볼게요. UVM은 사실 tb에서 신경쓸 것은 몇 군데
 되지 않아요. <code>uvm_pkg</code>가 알아서 처리해 줍니다.</p>
-<p>이게 좀 처음에는 헷갈리더라구요. 명시적인 함수 호출이나 task 호출이 없으니
+<p>이게 좀 처음에는 헷갈리더라구요.  명시적인 함수 호출이나 task 호출이 없으니
 어디를 쫓아가야 할 지 몰라서 코드를 따라가질 못하겠더군요. 그래서 UVM 구조에
 익숙해져야 합니다. 그렇지 않으면 코드만 봐서는 분석이 어려워요. 왜 이렇게
 만들어놨는지 저는 아직 설명할 만큼 지식이 많지 않아서 설명을 드리진 못하겠지만,
 지금 수박겉핥기 식으로 배운 입장에서는 장점보다 단점이 큰 것 같네요.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode verilog"><code class="sourceCode verilog"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">module</span> tb <span class="op">();</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>logic clk<span class="op">,</span> rst_n<span class="op">;</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">// clock gen</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">initial</span> <span class="kw">begin</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">// forever</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co">// reset gen</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="kw">initial</span> <span class="kw">begin</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  rst_n <span class="op">=</span> <span class="bn">1'b0</span><span class="op">;</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  #RstPeriod rst_n <span class="op">=</span> <span class="bn">1'b1</span><span class="op">;</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>bus_if bus<span class="op">(</span>clk<span class="op">,</span> rst_n<span class="op">);</span></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>intr_if intr<span class="op">(</span>clk<span class="op">);</span></span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="co">// DUT instance</span></span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>riscv_plic dut <span class="op">(</span></span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    .clk<span class="op">,</span></span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    .rst_n<span class="op">,</span></span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    .m2s_valid   <span class="op">(</span>bus.dut.m2s_valid<span class="op">),</span></span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    .m2s_address <span class="op">(</span>bus.dut.m2s_address<span class="op">),</span></span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...</span></span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    .s2m_ready   <span class="op">(</span>bus.dut.s2m_ready<span class="op">),</span></span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>    .irq    <span class="op">(</span>intr.dut.irq<span class="op">),</span></span>
-<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>    .irq_id <span class="op">(</span>intr.dut.irq_id<span class="op">)</span></span>
-<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="op">);</span></span>
-<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a><span class="kw">endmodule</span></span></code></pre></div>
+<pre><code class="language-verilog">
+module tb ();
+
+logic clk, rst_n;
+
+// clock gen
+initial begin
+    // forever
+end
+
+// reset gen
+initial begin
+  rst_n = 1'b0;
+  #RstPeriod rst_n = 1'b1;
+end
+
+bus_if bus(clk, rst_n);
+intr_if intr(clk);
+
+// DUT instance
+riscv_plic dut (
+    .clk,
+    .rst_n,
+
+    .m2s_valid   (bus.dut.m2s_valid),
+    .m2s_address (bus.dut.m2s_address),
+    //...
+
+    .s2m_ready   (bus.dut.s2m_ready),
+
+    .irq    (intr.dut.irq),
+    .irq_id (intr.dut.irq_id)
+);
+
+endmodule
+</code></pre>
 <p>자.. 테스트벤치 모듈도 준비되었네요. 아직 <code>uvm_pkg</code>를 import하지는 않아서 그냥
 elaboration이 되는지 검사할 정도밖에 안되겠지만 uvm에 뛰어들 준비가 이제
 되어갑니다.</p>
-<!-- SKY LINKS -->
-<!-- AVIATION LINKS -->
-
-
-<nav class="pagination is-small" role="navigation" aria-label="pagination">
-    
-    
-</nav>
-
-
-<div class="comment">
-<div id="disqus_thread"></div>
-<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-
-var disqus_config = function () {
-this.page.url = "https://www.eunchan.kim/research/uvm/dut.html";  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = "Design Under Test (DUT)"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://eunchan.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
+<!-- Was this page helpful? -->
+<!-- Comment system -->
+<h2 id="__comments">댓글</h2>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOM4oq_s4Ci4pi" data-emit-metadata="0" data-input-position="bottom" data-lang="ko" data-mapping="pathname" data-reactions-enabled="1" data-repo="eunchan/elijah.kim" data-repo-id="R_kgDOM4oq_g" data-strict="0" data-theme="preferred_color_scheme" src="https://giscus.app/client.js">
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<!-- Synchronize Giscus theme with palette -->
+<script>
+    var giscus = document.querySelector("script[src*=giscus]")
 
-<!--    <p>Comment system is closed.
-        Please send email to <a href="javascript:location='mailto:\u006d\u0065\u0040\u0065\u0075\u006e\u0063\u0068\u0061\u006e\u002e\u006b\u0069\u006d';void 0"><script type="text/javascript">document.write('\u006d\u0065\u0040\u0065\u0075\u006e\u0063\u0068\u0061\u006e\u002e\u006b\u0069\u006d')</script></a>
-        if you have any question or advise.</p>-->
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme)
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+</article>
 </div>
-
-
-
-      </div><!--/@content-->
-
-
-    </section>
-  </div> <!--/@container-->
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
 </main>
-</div><!--/@docs-->
-
-<footer class="footer">
-  <div class="content has-text-centered">
-    <p class="copyright">
-        <a href="../../eunchan/">E.K</a> | <a href="//creativecommons.org/licenses/by-nc-nd/4.0/"> CCL (BY-NC-ND) </a> except images and stated pages.
-    </p>
-  </div>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2013 - 2024 Elijah Kim
+    </div>
+</div>
+</div>
+</div>
 </footer>
-<!-- Call Map.js later in order to load "map_canvas" correctly -->
-<script type="application/ecmascript" src="../../static/js/eunchan.js"></script>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}}</script>
+<script src="../../assets/javascripts/bundle.d6f25eb3.min.js"></script>
 </body>
 </html>

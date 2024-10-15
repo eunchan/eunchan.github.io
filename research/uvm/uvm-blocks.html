@@ -1,101 +1,354 @@
-<!doctype html>
-<html lang="ko">
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UVM Blocks</title>
-  
-  <link rel="stylesheet" media="print" type="text/css" href="../../static/css/print.css">
-  <link rel="stylesheet" media="screen" type="text/css" href="../../static/css/eunchan.css">
-  <link rel="shortcut icon" href="../../static/img/favicon.png">
-
-  
-  
-  
-  <meta property="og:title" content="UVM Blocks" />
-  <meta property="og:site_name" content="Eunchan.Kim" />
-
-
-</head>
-
-<body>
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="../../">
-      <img src="../../static/img/logo2.png">
-    </a>
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Eli's Personal Website." name="description"/>
+<link href="https://www.eunchan.kim/research/uvm/uvm-blocks.html" rel="canonical"/>
+<link href="../../feed_rss_created.xml" rel="alternate" title="RSS 피드 생성완료" type="application/rss+xml"/>
+<link href="../../feed_rss_updated.xml" rel="alternate" title="RSS 피드 업데이트완료" type="application/rss+xml"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.38" name="generator"/>
+<title>UVM Blocks - Eli Kim</title>
+<link href="../../assets/stylesheets/main.8c3ca2c6.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../assets/stylesheets/extra-style.4a5pwuuc.min.css" rel="stylesheet"/></head>
+<body data-md-color-accent="teal" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#virtual-interface-uvm_confib_db">
+          콘텐츠로 이동
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="상단/헤더" class="md-header__inner md-grid">
+<a aria-label="Eli Kim" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Eli Kim">
+<img alt="logo" src="../../static/img/logo2.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Eli Kim
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              UVM Blocks
+            
+          </span>
+</div>
+</div>
+</div>
+<div class="md-header__option">
+<div class="md-select">
+<button aria-label="언어설정" class="md-header__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"></path></svg>
+</button>
+<div class="md-select__inner">
+<ul class="md-select__list">
+<li class="md-select__item">
+<a class="md-select__link" href="/en/" hreflang="en">
+              English
+            </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="검색" class="md-search__options">
+<button aria-label="지우기" class="md-search__icon md-icon" tabindex="-1" title="지우기" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            검색 초기화
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/eunchan/elijah.kim" title="저장소로 이동">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</div>
+<div class="md-source__repository">
+    eunchan/elijah.kim
   </div>
+</a>
+</div>
+</nav>
+<nav aria-label="탭" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../article/index.html">
+          
+  
+    
+  
+  articles
 
-  <div id="navbarMain" class="navbar-menu">
-    <div class="navbar-start">
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../blog/index.html">
+          
+  
+    
+  
+  journal
 
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link" href="../../article/">article</a>
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../travel/index.html">
+          
+  
+    
+  
+  travel
 
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="../../article/">posts</a>
-          <a class="navbar-item" href="../../research/">research</a>
-          <a class="navbar-item" href="../../review/">review</a>
-          <a class="navbar-item" href="../../tips/">tips &amp; tricks</a>
-        </div>
-      </div>
-      <a class="navbar-item" href="../../blog/">journal</a>
-      <a class="navbar-item" href="../../travel/">travel</a>
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link" href="#">hobby</a>
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../motorcycle/index.html">
+          
+  
+    
+  
+  hobby
 
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="../../motorcycle/">motorcycle</a>
-          <a class="navbar-item" href="../../aviation/">aviation</a>
-        </div>
-      </div>
-      <a class="navbar-item" href="../../sky/">night sky</a>
-      <a class="navbar-item" href="../../eunchan/" rel="author">contact</a>
-    </div><!--/@navbar-start-->
-    <div class="navbar-end">
-    </div><!--/@navbar-end-->
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../eunchan/index.html">
+        
+  
+    
+  
+  Eli Kim
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden="">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="네비게이션" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Eli Kim" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Eli Kim">
+<img alt="logo" src="../../static/img/logo2.png"/>
+</a>
+    Eli Kim
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/eunchan/elijah.kim" title="저장소로 이동">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</div>
+<div class="md-source__repository">
+    eunchan/elijah.kim
   </div>
-</nav><!--/@navigation-->
-<div id="docs" class="docs">
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../article/index.html">
+<span class="md-ellipsis">
+    articles
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../blog/index.html">
+<span class="md-ellipsis">
+    journal
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../travel/index.html">
+<span class="md-ellipsis">
+    travel
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+<a class="md-nav__link" href="../../motorcycle/index.html">
+<span class="md-ellipsis">
+    hobby
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../eunchan/index.html">
+<span class="md-ellipsis">
+    Eli Kim
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden="">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#virtual-interface-uvm_confib_db">
+<span class="md-ellipsis">
+      Virtual Interface &amp; uvm_confib_db
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sequence-item">
+<span class="md-ellipsis">
+      Sequence Item
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uvm-driver">
+<span class="md-ellipsis">
+      UVM Driver
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uvm-sequencer">
+<span class="md-ellipsis">
+      UVM Sequencer
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#agent">
+<span class="md-ellipsis">
+      Agent
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
 
-<main class="main">
-  <section class="section">
-    <h1 class="title">
-      UVM Blocks
-    </h1>
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
 
-    <p class="subtitle">
-      January 22, 2019
-    </p>
-
-
-  </section><!--/@hero-->
-  <div class="container is-max-desktop">
-    <section class="medium-section">
-
-
-      <div class="content"><!--only html tag-->
-<p><a href="../../research/uvm/">UVM 첫화면</a></p>
-<ol type="1">
-<li><a href="../../research/uvm/uvm-introduction.html">UVM 개요</a></li>
-<li><a href="../../research/uvm/dut.html">Design Under Test (DUT)</a></li>
-<li><a href="../../research/uvm/uvm-flow.html">UVM Test Flow</a></li>
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Tags -->
+<!-- Actions -->
+<a class="md-content__button md-icon" href="https://github.com/eunchan/elijah.kim/edit/main/docs/research/uvm/uvm-blocks.md" title="이 페이지를 편집">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"></path></svg>
+</a>
+<!--
+  Hack: check whether the content contains a h1 headline. If it doesn't, the
+  page title (or respectively site name) is used as the main headline.
+-->
+<h1>UVM Blocks</h1>
+<!-- Source file information -->
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="마지막 업데이트">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024년 10월 15일</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="작성일">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2019년 1월 22일</span>
+</span>
+</aside>
+<!-- Page content -->
+<p><a href="index.html">UVM 첫화면</a></p>
+<ol>
+<li><a href="uvm-introduction.html">UVM 개요</a></li>
+<li><a href="dut.html">Design Under Test (DUT)</a></li>
+<li><a href="uvm-flow.html">UVM Test Flow</a></li>
 <li>UVM Blocks</li>
 </ol>
-<hr />
+<hr/>
 <p>이번 글에서는 UVM 환경을 만들기 위한 블럭을 구현해 보겠습니다. 전체를 다
 구현하기엔 분량이 너무 많아서 오늘은 <code>uvm_agent</code>, <code>uvm_driver</code>, <code>uvm_sequencer</code>
 세개를 구현해 볼까 합니다. 이 세개를 구현한다고 해서 곧장 테스트를 할 수는
 없으니, 다음에 나올 <code>uvm_test</code>, <code>uvm_env</code>, <code>uvm_sequence</code> 까지는 구현해야 기본
 UVM 시뮬레이션을 실행해 볼 수 있겠네요.</p>
 <h2 id="virtual-interface-uvm_confib_db">Virtual Interface &amp; <code>uvm_confib_db</code></h2>
-<p><a href="../../research/uvm/dut.html">DUT</a> 글에서 언급했던 것 처럼, UVM 클래스와 DUT는 interface로 연결되어
+<p>[DUT][uvm-dut] 글에서 언급했던 것 처럼, UVM 클래스와 DUT는 interface로 연결되어
 있습니다. <code>tb.sv</code>에서 본것 처럼 실제 인터페이스는 tb module에 있고, 클래스는 그
 인터페이스의 reference를 받아서 사용합니다. C 언어의 포인터같은 개념으로
 생각하면 좀 쉬워요. 이걸 virtual interface라고 부릅니다.</p>
@@ -104,83 +357,91 @@ UVM 시뮬레이션을 실행해 볼 수 있겠네요.</p>
 등장합니다. <code>uvm_config_db</code> 인데, 이것은 공용 저장소라고 생각하면 될 것 같네요.
 <code>tb</code>에서 이곳에 virtual interface를 저장(set)하고, <code>uvm_driver</code>에서 virtual
 interface 를 가져옵니다(get). 일단 저장하는 코드를 볼까요.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode verilog"><code class="sourceCode verilog"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">module</span> tb<span class="op">;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dv">import uvm_pkg:</span><span class="op">:</span>*<span class="op">;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ...</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  bus_if bif<span class="op">(</span>clk<span class="op">,</span> rst_n<span class="op">);</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  intr_if iif<span class="op">(</span>clk<span class="op">);</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">initial</span> <span class="kw">begin</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    uvm_config_db#<span class="op">(</span>virtual bus_if<span class="op">)::</span>set<span class="op">(</span>null<span class="op">,</span><span class="st">&quot;*&quot;</span><span class="op">,</span><span class="st">&quot;bif&quot;</span><span class="op">,</span> bif<span class="op">);</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    uvm_config_db#<span class="op">(</span>virtual intr_if<span class="op">)::</span>set<span class="op">(</span>null<span class="op">,</span><span class="st">&quot;*&quot;</span><span class="op">,</span><span class="st">&quot;iif&quot;</span><span class="op">,</span> iif<span class="op">);</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">end</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ...</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="kw">endmodule</span></span></code></pre></div>
+<pre><code class="language-verilog">module tb;
+
+  import uvm_pkg::*;
+  // ...
+  bus_if bif(clk, rst_n);
+  intr_if iif(clk);
+
+  initial begin
+    uvm_config_db#(virtual bus_if)::set(null,"*","bif", bif);
+    uvm_config_db#(virtual intr_if)::set(null,"*","iif", iif);
+  end
+
+  // ...
+endmodule
+</code></pre>
 <p><code>tb</code>에 이전보다 몇 줄이 추가되었습니다. 일단 <code>uvm_config_db</code>를 사용하기 위해
 <code>tb</code>에 <code>import uvm_pkg::*;</code> 가 추가되었네요. 이건 systemverilog에 익숙하다면 알
 수 있을텐데 uvm_pkg 패키지에 선언된 클래스, 함수등을 불러오는 코드입니다. 이
 안에는 config db 클래스도 있는거죠.</p>
 <p>그럼 그 다음에 나오는 파라미터는 뭐냐면, 어느 타입의 config를 접근할 것인지
 알려주는 역할입니다. c++코드의 generic (template)이라고 보면 되구요. 그래서
-첫번째 <code>uvm_config_db</code>는 <code>virtual bus_if</code> 타입의 환경설정에 key는 <em>“bif”</em>로
+첫번째 <code>uvm_config_db</code>는 <code>virtual bus_if</code> 타입의 환경설정에 key는 <em>"bif"</em>로
 <code>bif</code> 인터페이스를 저장하는 코드이겠네요. 두번째는 <code>virtual intr_if</code> 타입의
 환경설정에 <code>iif</code> 인터페이스를 저장하겠구요.</p>
 <p>그러면 이것을 어떻게 불러오는지는 set 대신에 get 함수를 쓰면 되겠죠?</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode verilog"><code class="sourceCode verilog"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">// base/uvm_config_dv.svh</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">// @uvm-ieee 1800.2-2017 auto C.4.2.2.2</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  static <span class="kw">function</span> bit get<span class="op">(</span>uvm_component cntxt<span class="op">,</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                          string inst_name<span class="op">,</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>                          string field_name<span class="op">,</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>                          <span class="dt">inout</span> T value<span class="op">);</span></span></code></pre></div>
+<pre><code class="language-verilog">// base/uvm_config_dv.svh
+
+  // @uvm-ieee 1800.2-2017 auto C.4.2.2.2
+  static function bit get(uvm_component cntxt,
+                          string inst_name,
+                          string field_name,
+                          inout T value);
+</code></pre>
 <p>실제로 <code>uvm_driver</code>에서는 아래처럼 쓰입니다.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode verilog"><code class="sourceCode verilog"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>class bus_driver extends uvm_driver #<span class="op">(</span>bus_seq_item<span class="op">);</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ....</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  virtual bus_if vif<span class="op">;</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ...</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> void connect_phase<span class="op">(</span>uvm_phase phase<span class="op">);</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    super.connect_phase<span class="op">(</span>phase<span class="op">);</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> <span class="op">(!</span>uvm_config_db#<span class="op">(</span>virtual bus_if<span class="op">)::</span>get<span class="op">(</span>this<span class="op">,</span><span class="st">&quot;&quot;</span><span class="op">,</span><span class="st">&quot;bif&quot;</span><span class="op">,</span>vif<span class="op">))</span> <span class="kw">begin</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>      <span class="ot">`uvm_fatal</span><span class="op">(</span><span class="st">&quot;NO_VIF&quot;</span><span class="op">,</span> <span class="op">{</span><span class="st">&quot;virtual interface must be set for:&quot;</span><span class="op">,</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        get_full_name<span class="op">(),</span><span class="st">&quot;.vif&quot;</span><span class="op">});</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">end</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">endfunction</span> <span class="op">:</span> connect_phase</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ...</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>endclass</span></code></pre></div>
+<pre><code class="language-verilog">
+class bus_driver extends uvm_driver #(bus_seq_item);
+
+  // ....
+  virtual bus_if vif;
+
+  // ...
+  function void connect_phase(uvm_phase phase);
+    super.connect_phase(phase);
+    if (!uvm_config_db#(virtual bus_if)::get(this,"","bif",vif)) begin
+      `uvm_fatal("NO_VIF", {"virtual interface must be set for:",
+        get_full_name(),".vif"});
+    end
+  endfunction : connect_phase
+
+  // ...
+endclass
+</code></pre>
 <h2 id="sequence-item">Sequence Item</h2>
 <p>위의 코드에서 <code>bus_seq_item</code> 이라는 새로운게 등장했네요. 이것은 버스
 인터페이스를 동작시키기 위한 레시피입니다. 버스 트랜잭션을 한번 동작하기 위해
 충분한 정보가 있어야 하니 아래처럼 기술해 봅시다.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode verilog"><code class="sourceCode verilog"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>class bus_seq_item extends uvm_sequence_item<span class="op">;</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  rand bit <span class="op">[</span><span class="dv">31</span><span class="op">:</span><span class="dv">0</span><span class="op">]</span> address<span class="op">;</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  rand bit        write<span class="op">;</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  rand bit <span class="op">[</span><span class="dv">31</span><span class="op">:</span><span class="dv">0</span><span class="op">]</span> wdata<span class="op">;</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>       bit <span class="op">[</span><span class="dv">31</span><span class="op">:</span><span class="dv">0</span><span class="op">]</span> rdata<span class="op">;</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="ot">`uvm_object_utils_begin</span><span class="op">(</span>bus_seq_item<span class="op">)</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="ot">`uvm_field_int</span> <span class="op">(</span>address<span class="op">,</span> UVM_DEFAULT<span class="op">)</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="ot">`uvm_field_int</span> <span class="op">(</span>write<span class="op">,</span>   UVM_DEFAULT<span class="op">)</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="ot">`uvm_field_int</span> <span class="op">(</span>wdata<span class="op">,</span>   UVM_DEFAULT<span class="op">)</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="ot">`uvm_field_int</span> <span class="op">(</span>rdata<span class="op">,</span>   UVM_DEFAULT<span class="op">)</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="ot">`uvm_object_utils_end</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> new<span class="op">(</span>string name <span class="op">=</span> <span class="st">&quot;bus_seq_item&quot;</span><span class="op">);</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    super.new<span class="op">(</span>name<span class="op">);</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">endfunction</span> <span class="op">:</span> new</span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>endclass</span></code></pre></div>
+<pre><code class="language-verilog">class bus_seq_item extends uvm_sequence_item;
+
+  rand bit [31:0] address;
+  rand bit        write;
+  rand bit [31:0] wdata;
+       bit [31:0] rdata;
+
+  `uvm_object_utils_begin(bus_seq_item)
+    `uvm_field_int (address, UVM_DEFAULT)
+    `uvm_field_int (write,   UVM_DEFAULT)
+    `uvm_field_int (wdata,   UVM_DEFAULT)
+    `uvm_field_int (rdata,   UVM_DEFAULT)
+  `uvm_object_utils_end
+
+  function new(string name = "bus_seq_item");
+    super.new(name);
+  endfunction : new
+
+endclass
+</code></pre>
 <p>간단히 어드레스, 읽기/쓰기 상태, 쓰기값, 읽기값을 선언했습니다. 이 중에 처음
 세개는 <code>rand</code> 설정을 했는데요, 나중에 <code>uvm_sequence</code>에서 randomize 할 때 지정된
 필드가 랜덤값이 할당됩니다. 이 클래스에 systemverilog의 <code>constraint</code> 를 선언해서
 randomize 수행될 때 지정된 범위내에서 값이 할당되도록 설정할 수 있습니다.</p>
-<p>그 다음에 나오는 복잡한 <code>\</code>uvm_object_utils_begin(), `uvm_field_int()<code>같은 매크로는 무엇인지 이해가 안가실 수도 있겠습니다. 이것은</code>macros/uvm_object_defines.svh<code>에 정의되어 있는데요. 저는 저 매크로를 따라가기 벅차더군요. 대충 훑어본 바로는 UVM에서 공통으로 사용되는 함수에 맞춰서 각 field가 동작할 수 있도록 이런 저런 함수를 추가하는 매크로더군요. Copy를 하고, compare, pack, print를 하는 코드를 추가해 줍니다. 즉, 위의</code>bus_seq_item`은
+<p>그 다음에 나오는 복잡한 <code>\</code>uvm_object_utils_begin(), `uvm_field_int()<code>같은
+매크로는 무엇인지 이해가 안가실 수도 있겠습니다. 이것은</code>macros/uvm_object_defines.svh<code>에 정의되어 있는데요. 저는 저 매크로를 따라가기
+벅차더군요. 대충 훑어본 바로는 UVM에서 공통으로 사용되는 함수에 맞춰서 각
+field가 동작할 수 있도록 이런 저런 함수를 추가하는 매크로더군요. Copy를 하고,
+compare, pack, print를 하는 코드를 추가해 줍니다. 즉, 위의</code>bus_seq_item`은
 보이는 코드는 간단하지만 실제론 매우 복잡한 클래스라는거죠.</p>
 <h2 id="uvm-driver">UVM Driver</h2>
 <p>이제 sequence item도 선언했으니, 해당 아이템을 받은 <code>uvm_driver</code>가 어떻게 bus를
@@ -188,61 +449,62 @@ randomize 수행될 때 지정된 범위내에서 값이 할당되도록 설정�
 <p>위에서 언급한 대로 <code>connect_phase</code>에서 bus interface를 내부 <code>vif</code> 멤버변수에
 할당했으면, <code>run_phase</code>에서 <code>bus_seq_item</code>이 주어질 때 마다 버스를 동작시키면
 됩니다. 코드를 하나 하나 살펴보죠.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode verilog"><code class="sourceCode verilog"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>class bus_driver extends uvm_driver #<span class="op">(</span>bus_seq_item<span class="op">);</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  virtual bus_if vif<span class="op">;</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="ot">`uvm_component_utils</span><span class="op">(</span>bus_driver<span class="op">)</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> new<span class="op">(</span>string name<span class="op">,</span> uvm_component parent<span class="op">);</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    super.new<span class="op">(</span>name<span class="op">,</span> parent<span class="op">);</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">endfunction</span> <span class="op">:</span> new</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> void connect_phase<span class="op">(</span>uvm_phase phase<span class="op">);</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    super.connect_phase<span class="op">(</span>phase<span class="op">);</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> <span class="op">(!</span>uvm_config_db#<span class="op">(</span>virtual bus_if<span class="op">)::</span>get<span class="op">(</span>this<span class="op">,</span><span class="st">&quot;&quot;</span><span class="op">,</span><span class="st">&quot;bif&quot;</span><span class="op">,</span>vif<span class="op">))</span> <span class="kw">begin</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>      <span class="ot">`uvm_fatal</span><span class="op">(</span><span class="st">&quot;NO_VIF&quot;</span><span class="op">,</span> <span class="op">{</span><span class="st">&quot;virtual interface must be set for:&quot;</span><span class="op">,</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>        get_full_name<span class="op">(),</span><span class="st">&quot;.vif&quot;</span><span class="op">});</span></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">end</span></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">endfunction</span> <span class="op">:</span> connect_phase</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  virtual <span class="kw">task</span> run_phase<span class="op">(</span>uvm_phase phase<span class="op">);</span></span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="co">// One request at a time</span></span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    vif.m2s_valid <span class="op">=</span> <span class="bn">1'b0</span><span class="op">;</span></span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    vif.s2m_ready <span class="op">=</span> <span class="bn">1'b0</span><span class="op">;</span></span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">wait</span><span class="op">(</span>vif.rst_n <span class="op">==</span> <span class="bn">1'b0</span><span class="op">);</span></span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    <span class="kw">wait</span><span class="op">(</span>vif.rst_n <span class="op">==</span> <span class="bn">1'b1</span><span class="op">);</span></span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    <span class="op">@(</span><span class="kw">negedge</span> vif.clk<span class="op">);</span></span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    <span class="kw">forever</span> <span class="kw">begin</span></span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>      seq_item_port.get_next_item<span class="op">(</span>req<span class="op">);</span></span>
-<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>      <span class="co">// Send request</span></span>
-<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>      vif.m2s_address <span class="op">=</span> req.address<span class="op">;</span></span>
-<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>      vif.m2s_write   <span class="op">=</span> req.write<span class="op">;</span></span>
-<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>      vif.m2s_data    <span class="op">=</span> req.wdata<span class="op">;</span></span>
-<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>      vif.m2s_valid   <span class="op">=</span> <span class="bn">1'b1</span><span class="op">;</span></span>
-<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>      <span class="op">@(</span><span class="kw">posedge</span> vif.clk iff vif.m2s_ready <span class="op">==</span> <span class="bn">1'b1</span><span class="op">);</span></span>
-<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>      vif.m2s_valid   <span class="op">=</span> <span class="bn">1'b0</span><span class="op">;</span></span>
-<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>      <span class="co">// Receive response</span></span>
-<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>      vif.s2m_ready <span class="op">=</span> <span class="bn">1'b1</span><span class="op">;</span></span>
-<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>      <span class="op">@(</span><span class="kw">posedge</span> vif.clk iff vif.s2m_valid <span class="op">==</span> <span class="bn">1'b1</span><span class="op">);</span></span>
-<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>      assert <span class="op">(</span><span class="dv">0</span> <span class="op">==</span> vif.s2m_error<span class="op">)</span></span>
-<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>        <span class="kw">else</span> <span class="ot">`uvm_error</span><span class="op">(</span>get_name<span class="op">(),</span></span>
-<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>          <span class="dt">$sformatf</span><span class="op">(</span><span class="st">&quot;BUS Error occurs: ADDR('h%08x)&quot;</span><span class="op">,</span> req.address<span class="op">));</span></span>
-<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>      req.rdata <span class="op">=</span> vif.s2m_data<span class="op">;</span></span>
-<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>      vif.s2m_ready <span class="op">=</span> <span class="bn">1'b0</span><span class="op">;</span></span>
-<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>      <span class="co">// Return response to Sequencer (eventually goes to sequence)</span></span>
-<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>      seq_item_port.item_done<span class="op">(</span>req<span class="op">);</span></span>
-<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>    <span class="kw">end</span></span>
-<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>  <span class="kw">endtask</span> <span class="op">:</span> run_phase</span>
-<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a><span class="dv">endclass :</span> bus_driver</span></code></pre></div>
+<pre><code class="language-verilog">class bus_driver extends uvm_driver #(bus_seq_item);
+
+  virtual bus_if vif;
+
+  `uvm_component_utils(bus_driver)
+
+  function new(string name, uvm_component parent);
+    super.new(name, parent);
+  endfunction : new
+
+  function void connect_phase(uvm_phase phase);
+    super.connect_phase(phase);
+
+    if (!uvm_config_db#(virtual bus_if)::get(this,"","bif",vif)) begin
+      `uvm_fatal("NO_VIF", {"virtual interface must be set for:",
+        get_full_name(),".vif"});
+    end
+  endfunction : connect_phase
+
+  virtual task run_phase(uvm_phase phase);
+    // One request at a time
+    vif.m2s_valid = 1'b0;
+    vif.s2m_ready = 1'b0;
+
+    wait(vif.rst_n == 1'b0);
+    wait(vif.rst_n == 1'b1);
+
+    @(negedge vif.clk);
+
+    forever begin
+      seq_item_port.get_next_item(req);
+
+      // Send request
+      vif.m2s_address = req.address;
+      vif.m2s_write   = req.write;
+      vif.m2s_data    = req.wdata;
+      vif.m2s_valid   = 1'b1;
+      @(posedge vif.clk iff vif.m2s_ready == 1'b1);
+      vif.m2s_valid   = 1'b0;
+
+      // Receive response
+      vif.s2m_ready = 1'b1;
+      @(posedge vif.clk iff vif.s2m_valid == 1'b1);
+      assert (0 == vif.s2m_error)
+        else `uvm_error(get_name(),
+          $sformatf("BUS Error occurs: ADDR('h%08x)", req.address));
+      req.rdata = vif.s2m_data;
+      vif.s2m_ready = 1'b0;
+
+      // Return response to Sequencer (eventually goes to sequence)
+      seq_item_port.item_done(req);
+    end
+  endtask : run_phase
+
+endclass : bus_driver
+</code></pre>
 <p>이번 코드는 좀 길죠? 그래도 위에서 한번 봤던 부분이 있으니 그 부분을 넘어가고
 실제로 봐야 할 곳은 <code>run_phase</code> 밖에 없는 것 같네요. 여기서 첫줄과 마지막 줄을
 제외하고는 일반적인 forever loop task와 비슷합니다. 버스에 address, data를 싣고
@@ -263,106 +525,114 @@ parameter를하나가 아닌 두개, REQ, RSP 로 받는다던지 하는 것) �
 <code>bus_sequencer</code>를 만들어봅시다. Sequencer는 이정도 복잡도의 검증환경에서는
 딱히 할 일 없이 그저 <code>uvm_sequence</code>에서 전달해 주는 트랜잭션을 그대로 Driver가
 가져가게 해주는 역할만 합니다.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode verilog"><code class="sourceCode verilog"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>class bus_sequencer extends uvm_sequencer #<span class="op">(</span>bus_seq_item<span class="op">);</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="ot">`uvm_sequencer_utils</span><span class="op">(</span>bus_sequencer<span class="op">)</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> new<span class="op">(</span>string name<span class="op">,</span> uvm_component parent<span class="op">);</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    super.new<span class="op">(</span>name<span class="op">,</span> parent<span class="op">);</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">endfunction</span> <span class="op">:</span> new</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="dv">endclass :</span> bus_sequencer</span></code></pre></div>
+<pre><code class="language-verilog">class bus_sequencer extends uvm_sequencer #(bus_seq_item);
+
+  `uvm_sequencer_utils(bus_sequencer)
+
+  function new(string name, uvm_component parent);
+    super.new(name, parent);
+  endfunction : new
+
+endclass : bus_sequencer
+</code></pre>
 <p>간단하죠? 상속받은 클래스인 <code>uvm_sequencer</code> 안에 왠만한 함수가 다 들어가 있어서
 특별히 수정할 필요가 없네요. 그러면 이제 <code>bus_driver</code>와 <code>bus_sequencer</code>를
 관리하는 <code>bus_agent</code> 클래스를 만들면 proactive agent 구현은 거의 끝나게 됩니다.
 <code>bus_monitor</code>는 나중에 scoreboard를 만들 때 같이 구현하도록 할게요.</p>
 <h2 id="agent">Agent</h2>
 <p>Agent도 사실 거의 형식적이고 그다지 수정할 부분이 없습니다.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode verilog"><code class="sourceCode verilog"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>class bus_agent extends uvm_agent<span class="op">;</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  bus_driver     m_drv<span class="op">;</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  bus_sequencer  m_seqr<span class="op">;</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="ot">`uvm_component_utils</span><span class="op">(</span>bus_agent<span class="op">)</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> new <span class="op">(</span>string name<span class="op">,</span> uvm_component parent<span class="op">);</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    super.new<span class="op">(</span>name<span class="op">,</span> parent<span class="op">);</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">endfunction</span> <span class="op">:</span> new</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> void build_phase<span class="op">(</span>uvm_phase phase<span class="op">);</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    super.build_phase<span class="op">(</span>phase<span class="op">);</span></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> <span class="op">(</span>get_is_active<span class="op">()</span> <span class="op">==</span> UVM_ACTIVE<span class="op">)</span> <span class="kw">begin</span></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>      m_drv  <span class="op">=</span> bus_driver<span class="op">::</span>type_id<span class="op">::</span>create<span class="op">(</span><span class="st">&quot;m_drv&quot;</span><span class="op">,</span> this<span class="op">);</span></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>      m_seqr <span class="op">=</span> bus_sequencer<span class="op">::</span>type_id<span class="op">::</span>create<span class="op">(</span><span class="st">&quot;m_seqr&quot;</span><span class="op">,</span> this<span class="op">);</span></span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">end</span></span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">endfunction</span> <span class="op">:</span> build_phase</span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> void connect_phase<span class="op">(</span>uvm_phase phase<span class="op">);</span></span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> <span class="op">(</span>get_is_active<span class="op">()</span> <span class="op">==</span> UVM_ACTIVE<span class="op">)</span> <span class="kw">begin</span></span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>      m_drv.seq_item_port.connect<span class="op">(</span>m_seqr.seq_item_export<span class="op">);</span></span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">end</span></span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">endfunction</span> <span class="op">:</span> connect_phase</span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="dv">endclass :</span> bus_agent</span></code></pre></div>
+<pre><code class="language-verilog">class bus_agent extends uvm_agent;
+  bus_driver     m_drv;
+  bus_sequencer  m_seqr;
+
+  `uvm_component_utils(bus_agent)
+
+  function new (string name, uvm_component parent);
+    super.new(name, parent);
+  endfunction : new
+
+  function void build_phase(uvm_phase phase);
+    super.build_phase(phase);
+
+    if (get_is_active() == UVM_ACTIVE) begin
+      m_drv  = bus_driver::type_id::create("m_drv", this);
+      m_seqr = bus_sequencer::type_id::create("m_seqr", this);
+    end
+  endfunction : build_phase
+
+  function void connect_phase(uvm_phase phase);
+    if (get_is_active() == UVM_ACTIVE) begin
+      m_drv.seq_item_port.connect(m_seqr.seq_item_export);
+    end
+  endfunction : connect_phase
+
+endclass : bus_agent
+</code></pre>
 <p>여기서 한가지 눈에 띄이는 것이 있다면 <code>connect_phase</code>에서 <code>bus_driver</code>의
 <code>seq_item_port</code>와 <code>bus_sequencer</code>의 <code>seq_item_export</code>를 연결하는 부분이겠네요.
 이렇게 둘이 연결해 줌으로써 <code>bus_driver</code>가 <code>get_next_item()</code>을 호출할 때
 <code>bus_sequencer</code>의 TLM FIFO에 접근하게 됩니다.</p>
-<!-- SKY LINKS -->
-<!-- AVIATION LINKS -->
-
-
-<nav class="pagination is-small" role="navigation" aria-label="pagination">
-    
-    
-</nav>
-
-
-<div class="comment">
-<div id="disqus_thread"></div>
-<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-
-var disqus_config = function () {
-this.page.url = "https://www.eunchan.kim/research/uvm/uvm-blocks.html";  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = "UVM Blocks"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://eunchan.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
+<!-- Was this page helpful? -->
+<!-- Comment system -->
+<h2 id="__comments">댓글</h2>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOM4oq_s4Ci4pi" data-emit-metadata="0" data-input-position="bottom" data-lang="ko" data-mapping="pathname" data-reactions-enabled="1" data-repo="eunchan/elijah.kim" data-repo-id="R_kgDOM4oq_g" data-strict="0" data-theme="preferred_color_scheme" src="https://giscus.app/client.js">
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<!-- Synchronize Giscus theme with palette -->
+<script>
+    var giscus = document.querySelector("script[src*=giscus]")
 
-<!--    <p>Comment system is closed.
-        Please send email to <a href="javascript:location='mailto:\u006d\u0065\u0040\u0065\u0075\u006e\u0063\u0068\u0061\u006e\u002e\u006b\u0069\u006d';void 0"><script type="text/javascript">document.write('\u006d\u0065\u0040\u0065\u0075\u006e\u0063\u0068\u0061\u006e\u002e\u006b\u0069\u006d')</script></a>
-        if you have any question or advise.</p>-->
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme)
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+</article>
 </div>
-
-
-
-      </div><!--/@content-->
-
-
-    </section>
-  </div> <!--/@container-->
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
 </main>
-</div><!--/@docs-->
-
-<footer class="footer">
-  <div class="content has-text-centered">
-    <p class="copyright">
-        <a href="../../eunchan/">E.K</a> | <a href="//creativecommons.org/licenses/by-nc-nd/4.0/"> CCL (BY-NC-ND) </a> except images and stated pages.
-    </p>
-  </div>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2013 - 2024 Elijah Kim
+    </div>
+</div>
+</div>
+</div>
 </footer>
-<!-- Call Map.js later in order to load "map_canvas" correctly -->
-<script type="application/ecmascript" src="../../static/js/eunchan.js"></script>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}}</script>
+<script src="../../assets/javascripts/bundle.d6f25eb3.min.js"></script>
 </body>
 </html>
