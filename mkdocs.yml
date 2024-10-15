@@ -53,11 +53,13 @@ nav:
   - articles:
     - article/index.md
     - research/index.md
+    - review/index.md
   - journal:
     - blog/index.md
   - travel
   - hobby:
     - motorcycle/index.md
+    - camping/index.md
   - eunchan/index.md
 extra:
   alternate:
