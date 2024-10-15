@@ -1,7 +1,7 @@
 ---
 hide:
 - toc
-title: Research Articles
+title: Research
 ---
 
 - [AT&T Fiber ONT/ Gateway Bypass](att-bypass.md) - August 5, 2023
