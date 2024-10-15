@@ -37,28 +37,6 @@ $container-max-width: 850px;
 );
 
 // Later theme fix of mkdocs-material
-div.md-sidebar--secondary {
-    display: none !important;
-}
-/*
-header.md-header {
-    background-color: #ffff !important;
-    color: #000 !important;
-
-    nav.md-tabs {
-        background-color: #ffff !important;
-        color: #000 !important;
-    }
-
-    .md-search__form {
-        background-color: #00000011 !important;
-        color: #00000066 !important;
-    }
-}
-
-header.md-header--shadow {
-    box-shadow: none !important;
-}*/
 [data-md-color-primary="white"] {
   --md-primary-fg-color: #fff;
   --md-primary-fg-color--light: #fff;
