@@ -1,7 +1,8 @@
 ---
 date: 2014-03-28
 comments: true
-tags: apartment, rent, north-park, silicon-valley
+tags: ['apartment', 'rent', 'north-park', 'silicon-valley']
+slug: 'two-bed-apartment'
 ---
 
 # Two Bedrooms Apartment

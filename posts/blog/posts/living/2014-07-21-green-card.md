@@ -2,7 +2,8 @@
 title: Green Card Application
 date: 2014-07-21
 comments: true
-tags: silicon-valley, green-card, visa
+tags: ['silicon-valley', 'green-card', 'visa']
+slug: 'green-card'
 ---
 
 # Green Card Application

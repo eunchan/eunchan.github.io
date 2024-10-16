@@ -3,6 +3,7 @@ date: 2018-12-13
 tags: ['ace', 'specification', 'language']
 categories: ['design']
 comments: true
+slug: 'specification'
 ---
 
 # Specification Language

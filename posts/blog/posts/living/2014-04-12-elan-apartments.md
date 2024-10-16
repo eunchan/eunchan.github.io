@@ -2,7 +2,8 @@
 title: Elan at River Oaks
 date: 2014-04-12
 comments: true
-tags: apartment, rent, river-oaks, silicon-valley, elan
+tags: ['apartment', 'rent', 'river-oaks', 'silicon-valley', 'elan']
+slug: 'elan-apartment'
 ---
 
 # Elan at River Oaks

@@ -2,6 +2,7 @@
 date: 2014-02-06
 tags: driver-license, dmv, california, exam
 comments: true
+slug: 'driver-license-paper-exam'
 ---
 
 #  Paper Exam for Driver License

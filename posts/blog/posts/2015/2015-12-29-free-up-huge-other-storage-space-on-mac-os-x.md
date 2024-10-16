@@ -5,6 +5,7 @@ tags:
   - crashplan
   - other-storage
   - out-of-space
+slug: 'free-up-huge-other-storage-space-on-mac-os-x'
 ---
 
 # OS X Other 공간 비우기

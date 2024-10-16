@@ -6,6 +6,7 @@ tags:
   - us
   - h-1b
   - interview
+slug: 'us-jobs-qna'
 ---
 
 # 미국 취업에 관한 질답

@@ -2,6 +2,7 @@
 date: 2019-10-08
 comments: true
 tags: ['hongkong', 'hkmap-live', 'apple', 'blizzard', 'democracy']
+slug: 'hkmap-live'
 ---
 
 # HKmap.Live
