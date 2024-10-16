@@ -19,26 +19,24 @@ title: Camping
 
 **목차**
 
-- [Kitchen system](#kitchen-system)
-  - [Portable Electric Fridge](#portable-electric-fridge)
-  - [Coleman Triton Burner](#coleman-triton-burner)
-  - [MSR Pocket Rocket Deluxe](#msr-pocket-rocket-deluxe)
-- [Jackery Explorer 500](#jackery-explorer-500)
-- [Sleep System](#sleep-system)
-  - [Diesel Heater](#diesel-heater)
-  - [Enigma Quilt](#enigma-quilt)
-  - [Big Agnes Pad](#big-agnes-pad)
-  - [NEMO Tensor Insulated](#nemo-tensor-insulated)
-  - [Exped Megamat 10 Duo](#exped-megamat-10-duo)
-  - [Marmot Limelight 2P Tent](#marmot-limelight-2p-tent)
-  - [Lone Rider ADV Tent](#lone-rider-adv-tent)
-  - [Gazelle T4 Tent](#gazelle-t4-tent)
-- [Furniture](#furniture)
-  - [REI Camping Table](#rei-camping-table)
-  - [Helinox Chair One](#helinox-chair-one)
-  - [Mount River 2 Step Chair](#mount-river-2-step-chair)
-
-
+1. [Kitchen system](#kitchen-system)
+   1. [Portable Electric Fridge](#portable-electric-fridge)
+   1. [Coleman Triton Burner](#coleman-triton-burner)
+   1. [MSR Pocket Rocket Deluxe](#msr-pocket-rocket-deluxe)
+1. [Jackery Explorer 500](#jackery-explorer-500)
+1. [Sleep System](#sleep-system)
+   1. [Diesel Heater](#diesel-heater)
+   1. [Enigma Quilt](#enigma-quilt)
+   1. [Big Agnes Pad](#big-agnes-pad)
+   1. [NEMO Tensor Insulated](#nemo-tensor-insulated)
+   1. [Exped Megamat 10 Duo](#exped-megamat-10-duo)
+   1. [Marmot Limelight 2P Tent](#marmot-limelight-2p-tent)
+   1. [Lone Rider ADV Tent](#lone-rider-adv-tent)
+   1. [Gazelle T4 Tent](./gazelle-t4.md)
+1. [Furniture](#furniture)
+   1. [REI Camping Table](#rei-camping-table)
+   1. [Helinox Chair One](#helinox-chair-one)
+   1. [Mount River 2 Step Chair](#mount-river-2-step-chair)
 
 
 캠핑용 장비를 전반적으로 업그레이드 하면서 각각 리뷰를 만들기 보다, 한 페이지에
@@ -249,10 +247,6 @@ Dragonfly로 가서 백팩킹에도 쓸 수 있게 하던지 해야겠더라구�
 
 [마못 텐트](#marmot-limelight-2p-tent)를 결국엔 리턴하고 오토바이 캠핑용으로
 나온 Lone Rider ADV 텐트를 구입했습니다.
-
-### Gazelle T4 Tent
-
-[Gazelle T4 Tent](./gazelle-t4.md)
 
 ## Furniture
 
