@@ -1,7 +1,7 @@
 ---
 comments: true
 date: 2012-09-13
-title: 'New Zealand Campervan Log #01'
+title: '크라이스트처치에 도착해서 오아마루로'
 ---
 
 ![나리타 공항에서](../../media/page/travel/new-zealand/newzealand-001.jpg)
@@ -100,3 +100,20 @@ GPS 지도 상으로는 바로 옆이 바다로 표시되는데도 파도 소리
 그러나 뉴질랜드에서 보는 별은 다시 어릴 적 기억을 떠올리게 하는 별이었습니다.
 
 쉽사리 잠들지 못할 것 같았던 신혼여행의 첫날은 눕자마자 잠이 들어버린 우리 부부의 숨소리만큼 가볍게 지나갔습니다.
+
+[크라이스트처치]:   log01.md
+[오아마루]:         log01.md
+[더니든]:           log03.md#dunedin
+[오타고]:           log02.md
+[캐틀린스]:         log03.md#catlins
+[테아나우]:         log05.md
+[그레이마우스]:     log09.md
+[밀포드 사운드]:    log05.md#milford-sound
+[인버카길]:         log04.md
+[퀸스타운]:         log06.md
+[와나카]:           log06.md
+[글레노키]:         log07.md
+[애로우타운]:       log07.md#arrowtown
+[폭스빙하]:         log09.md
+[호키티카]:         log09.md
+[아서스패스]:       log10.md

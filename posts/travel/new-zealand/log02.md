@@ -1,7 +1,7 @@
 ---
 comments: true
 date: 2012-09-13
-title: 'New Zealand Campervan Log #02'
+title: '모에라키, 오타고 반도'
 ---
 
 ![Oamaru Holiday Park의 아침](../../media/page/travel/new-zealand/newzealand-015.jpg)
@@ -159,3 +159,20 @@ Star tracker나 Toast같은 간이 적도의 만이라도 있었으면 좀 더 �
 
 그렇게 아내와 이런저런 이야기를 하며 이틀째 밤을 마무리합니다.
 생각보다 편한 침대 위에서 하늘을 보며 이야기하는 느낌은 경험해보지 않으면 잘 모를 편안함을 안겨주더군요.
+
+[크라이스트처치]:   log01.md
+[오아마루]:         log01.md
+[더니든]:           log03.md#dunedin
+[오타고]:           log02.md
+[캐틀린스]:         log03.md#catlins
+[테아나우]:         log05.md
+[그레이마우스]:     log09.md
+[밀포드 사운드]:    log05.md#milford-sound
+[인버카길]:         log04.md
+[퀸스타운]:         log06.md
+[와나카]:           log06.md
+[글레노키]:         log07.md
+[애로우타운]:       log07.md#arrowtown
+[폭스빙하]:         log09.md
+[호키티카]:         log09.md
+[아서스패스]:       log10.md

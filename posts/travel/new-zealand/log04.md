@@ -1,7 +1,7 @@
 ---
 comments: true
 date: 2012-09-17
-title: 'New Zealand Campervan Log #04'
+title: '테아나우, 반딧불이 동굴'
 ---
 
 ![Invercagill 해안](../../media/page/travel/new-zealand/newzealand-104.jpg)
@@ -100,3 +100,20 @@ Glowworm Caves
 빛나는 Glowworm을 보게됩니다. 아름다움을 넘어선 경외로운 수준입니다.
 
 ![Glowworm Caves Guide](../../media/page/travel/new-zealand/newzealand-133.jpg)
+
+[크라이스트처치]:   log01.md
+[오아마루]:         log01.md
+[더니든]:           log03.md#dunedin
+[오타고]:           log02.md
+[캐틀린스]:         log03.md#catlins
+[테아나우]:         log05.md
+[그레이마우스]:     log09.md
+[밀포드 사운드]:    log05.md#milford-sound
+[인버카길]:         log04.md
+[퀸스타운]:         log06.md
+[와나카]:           log06.md
+[글레노키]:         log07.md
+[애로우타운]:       log07.md#arrowtown
+[폭스빙하]:         log09.md
+[호키티카]:         log09.md
+[아서스패스]:       log10.md

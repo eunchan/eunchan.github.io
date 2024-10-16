@@ -1,7 +1,7 @@
 ---
 comments: true
 date: 2012-10-17
-title: 'New Zealand Campervan Log #09'
+title: '빙하투어, 호키티카'
 ---
 
 ![Fox Glacier](../../media/page/travel/new-zealand/newzealand-339.jpg)
@@ -86,3 +86,20 @@ Holiday Park로 달립니다.
 기억속엔 강렬하게 남아있으니 그것으로 만족합니다.
 
 ![Greymouth의 일몰](../../media/page/travel/new-zealand/newzealand-376.jpg)
+
+[크라이스트처치]:   log01.md
+[오아마루]:         log01.md
+[더니든]:           log03.md#dunedin
+[오타고]:           log02.md
+[캐틀린스]:         log03.md#catlins
+[테아나우]:         log05.md
+[그레이마우스]:     log09.md
+[밀포드 사운드]:    log05.md#milford-sound
+[인버카길]:         log04.md
+[퀸스타운]:         log06.md
+[와나카]:           log06.md
+[글레노키]:         log07.md
+[애로우타운]:       log07.md#arrowtown
+[폭스빙하]:         log09.md
+[호키티카]:         log09.md
+[아서스패스]:       log10.md
