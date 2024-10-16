@@ -1,7 +1,7 @@
 ---
 comments: true
 date: 2012-10-17
-title: 'New Zealand Campervan Log #10'
+title: '다시 크라이스트처치'
 ---
 
 ![Greymouth의 해변](../../media/page/travel/new-zealand/newzealand-377.jpg)
@@ -47,3 +47,20 @@ km, 아서스패스에서 크라이스트처치까지 150여km, 운전 시간만
 재밌는 사진들도 찍고요 ^^
 
 ![Christchurch](../../media/page/travel/new-zealand/newzealand-403.jpg)
+
+[크라이스트처치]:   log01.md
+[오아마루]:         log01.md
+[더니든]:           log03.md#dunedin
+[오타고]:           log02.md
+[캐틀린스]:         log03.md#catlins
+[테아나우]:         log05.md
+[그레이마우스]:     log09.md
+[밀포드 사운드]:    log05.md#milford-sound
+[인버카길]:         log04.md
+[퀸스타운]:         log06.md
+[와나카]:           log06.md
+[글레노키]:         log07.md
+[애로우타운]:       log07.md#arrowtown
+[폭스빙하]:         log09.md
+[호키티카]:         log09.md
+[아서스패스]:       log10.md

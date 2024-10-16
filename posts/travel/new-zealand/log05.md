@@ -1,7 +1,7 @@
 ---
 comments: true
 date: 2012-09-18
-title: 'New Zealand Campervan Log #05'
+title: '밀포드 사운드'
 ---
 
 ![road to Milford Sound](../../media/page/travel/new-zealand/newzealand-136.jpg)
@@ -158,3 +158,20 @@ Homer 터널을 지나니 터널 이전과는 완전히 다른 세상이 펼쳐�
 반짝이며 더 달릴 수 있다고 말하는 것 같습니다. ^^
 
 ![Te Anau에서의 밤하늘](../../media/page/travel/new-zealand/newzealand-207.jpg)
+
+[크라이스트처치]:   log01.md
+[오아마루]:         log01.md
+[더니든]:           log03.md#dunedin
+[오타고]:           log02.md
+[캐틀린스]:         log03.md#catlins
+[테아나우]:         log05.md
+[그레이마우스]:     log09.md
+[밀포드 사운드]:    log05.md#milford-sound
+[인버카길]:         log04.md
+[퀸스타운]:         log06.md
+[와나카]:           log06.md
+[글레노키]:         log07.md
+[애로우타운]:       log07.md#arrowtown
+[폭스빙하]:         log09.md
+[호키티카]:         log09.md
+[아서스패스]:       log10.md
