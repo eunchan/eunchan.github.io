@@ -3,6 +3,7 @@ title: 'Power Outage'
 date: 2017-02-20
 comments: true
 tags: ['storm', 'power-outage', 'pg&e']
+slug: 'power-outage'
 ---
 
 # Power Outage

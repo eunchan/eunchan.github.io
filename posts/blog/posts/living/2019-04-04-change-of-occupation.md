@@ -3,6 +3,7 @@ title: '두번째 이직'
 date: 2019-04-04
 comments: true
 tags: ['job', 'change', 'employment', 'google']
+slug: 'change-of-occupation'
 ---
 
 # 두번째 이직

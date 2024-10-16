@@ -2,6 +2,7 @@
 date: 2020-04-15
 comments: true
 tags: ['covid-19', 'coronavirus', 'stay-at-home', 'wfh', 'pandemic']
+slug: 'covid-roadmap-california'
 ---
 
 # California roadmap to modify stay-at-home order

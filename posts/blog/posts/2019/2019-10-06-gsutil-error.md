@@ -3,6 +3,7 @@ date: 2019-10-06
 comments: true
 tags: ['google', 'cloud-storage', 'rsync', 'restore', 'backup']
 language: en
+slug: 'gsutil-error'
 ---
 
 # gcloud storage error

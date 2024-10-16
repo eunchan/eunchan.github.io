@@ -3,6 +3,7 @@ date: 2020-05-11
 tags: ['diy', 'home', 'fence', 'front-yard', 'wfh']
 categories: ['home']
 comments: true
+slug: 'front-yard-fence'
 ---
 
 # Front Yard Fence

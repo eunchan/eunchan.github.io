@@ -4,6 +4,7 @@ comments: true
 tags:
   - samsung
   - resign
+slug: 'last-day-at-samsung'
 ---
 
 # Last Day at Samsung Electornics

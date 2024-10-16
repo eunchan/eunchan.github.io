@@ -2,6 +2,7 @@
 date: 2020-03-16
 comments: true
 tags: ['coronavirus', 'pandemic', 'wfh', 'lockdown']
+slug: 'virtual-lock-down'
 ---
 
 # Virtual Lock Down

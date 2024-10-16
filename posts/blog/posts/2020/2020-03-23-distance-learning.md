@@ -2,6 +2,7 @@
 date: 2020-03-23
 comments: true
 tags: ["distance-learning", "school", "educatin", "online-learning", "google-classroom"]
+slug: 'distance-learning'
 ---
 
 # 온라인 수업

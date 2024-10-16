@@ -6,6 +6,7 @@ tags:
     - 돼지고기
     - 추억
     - 왕십리
+slug: 'kimchi-jjigae'
 ---
 
 # 돼지고기 김치찌개
