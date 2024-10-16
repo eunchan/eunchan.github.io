@@ -93,6 +93,8 @@ you!][ext:tovalds-nvidia-fu] 한 일도 유명하죠.
 나왔는데, 그 중 가장 그럴 듯 한 의견이, 데이터센터 용 서버 아키텍처를 만들겠다는
 의견이었습니다.
 
+[risc-v-mainstream]: ../blog/posts/2016/2016-01-08-can-risc-v-ride-on-mainstream-in-industry.md
+
 올해 초 [엔비디아가 하나의 회사를 인수][ext:nvidia-acquire-mellanox]했었습니다.
 꽤 이름이 퍼지고 있었던 네트워킹 관련 회사인데, Mellanox라고 하는 회사입니다. 그
 회사를 인수하면서 밝힌 포부가 데이터센터용 서버 아키텍쳐를 새롭게 만들겠다는

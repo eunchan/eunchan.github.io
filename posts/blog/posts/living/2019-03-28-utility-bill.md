@@ -3,6 +3,7 @@ title: '살인적인 공과금'
 date: 2019-03-28
 comments: true
 tags: ['san-jose-water', 'sjw', 'utility-bill', 'electric', 'pge']
+slug: 'utility-bill'
 ---
 
 # 살인적인 공과금

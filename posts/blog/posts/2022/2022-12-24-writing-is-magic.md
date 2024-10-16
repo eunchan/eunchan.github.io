@@ -2,6 +2,7 @@
 date: 2022-12-24
 tags: ['writing', 'design-doc']
 comments: true
+slug: 'writing-is-magic'
 ---
 
 # Writing is Magic

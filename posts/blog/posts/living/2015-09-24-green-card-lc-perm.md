@@ -2,7 +2,8 @@
 title: Green Card LC PERM
 date: 2015-09-24
 comments: true
-tags: silicon-valley, green-card, visa, lc-perm, dol
+tags: ['silicon-valley', 'green-card', 'visa', 'lc-perm', 'dol']
+slug: 'green-card-lc-perm'
 ---
 
 # Green Card LC PERM

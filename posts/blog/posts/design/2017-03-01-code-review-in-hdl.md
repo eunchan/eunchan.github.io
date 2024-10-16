@@ -10,6 +10,7 @@ tags:
 categories:
   - design
 comments: true
+slug: 'code-review-in-hdl'
 ---
 
 # 하드웨어 디자인 코드리뷰

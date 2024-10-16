@@ -2,7 +2,8 @@
 title: Settled in San Jose
 date: 2014-07-07
 comments: true
-tags: silicon-valley, san-jose, california
+tags: ['silicon-valley', 'san-jose', 'california']
+slug: 'settle-in-san-jose'
 ---
 
 # Settled in San Jose

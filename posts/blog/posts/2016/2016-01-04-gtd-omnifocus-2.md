@@ -6,6 +6,7 @@ tags:
   - get-things-done
   - resolution
 comments: true
+slug: 'gtd-omnifocus-2'
 ---
 
 # GTD: Omnigroup의 Omnifocus 2
