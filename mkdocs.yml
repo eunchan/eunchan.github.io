@@ -134,8 +134,8 @@ nav:
       - 워홀러에게 중요한 10가지 조언: working-holiday/22advisetoworholer.md
       - 워홀을 마치며:  working-holiday/23finishingworkingholiday.md
   - hobby:
-    - motorcycle/index.md
-    - camping/index.md
+    - Motorcycle: motorcycle/index.md
+    - Camping: camping/index.md
   - eunchan/index.md
 extra:
   alternate:
