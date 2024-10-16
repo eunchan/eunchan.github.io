@@ -1,7 +1,7 @@
 ---
 comments: true
 date: 2012-12-19
-title: 'New Zealand Campervan #EPILOGUE'
+title: '에필로그'
 ---
 
 ![Tokyo Tower from Park Hotel Tokyo](../../media/page/travel/new-zealand/newzealand-417.jpg)
