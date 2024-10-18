@@ -58,6 +58,10 @@ $container-max-width: 850px;
   --md-text-font: '"Atkinson Hyperlegible", Pretendard, sans-serif';
 }
 
+.md-typeset {
+    font-size: 0.9rem !important;
+}
+
 /*
 // Heading a
 div.content {
