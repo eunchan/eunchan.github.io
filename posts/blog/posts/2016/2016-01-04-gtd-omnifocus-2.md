@@ -25,7 +25,7 @@ slug: 'gtd-omnifocus-2'
 개인서버에 Starter Edition을 설치해서 사용하곤 했었는데, 일단 Java 기반이라 성능이 느린 제 서버에서는 정말 느렸었고,
 Microsoft Project 만큼이나 방대한 점, 프로젝트별로만 관리해야 되는 점 등이 1인 사용을 위한 도구로는 부적합했습니다.
 
-![Omnifocus 2](/media/blog/2016-01-04-omnifocus-2.png)
+![Omnifocus 2](../../../media/blog/2016-01-04-omnifocus-2.png)
 
 작년 12월 중순부터 사용하기 시작한 도구가 있습니다.
 [Omnifocus 2][omnifocus-2]라는 도구인데요.

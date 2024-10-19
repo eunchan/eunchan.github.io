@@ -24,7 +24,7 @@ Computer Architecture의 교과서 책을 집필하신 두 분 (헤네시 스탠
 그러나 강의를 통해 RISC-V의 개발과정을 듣고 있으니, 이게 정말 한 팀이 해낸 일이 맞는지 의심스러울 정도로 방대한 양을 다루고 있었습니다.
 ISA(Instruction Set Architecture)를 재 정립하는 것은 뭐 그렇다치지만, verilog의 귀찮은 반복작업들이나 기타 단점을 보완하기 위해 chisel이라는 언어를 만든 것, 컴파일러 디버거를 포팅한 것 뿐만아니라 이미 Linux 운영체제까지 올린 것 부터 해서 여러 일을 진행을 했었다고 발표한 것이 기억이 납니다.
 
-![Implementation of RISC-V](/media/blog/2016-01-08-riscv.orgworkshop-jun2015riscv-zscale-workshop-june2015.png)
+![Implementation of RISC-V](../media/blog/2016-01-08-riscv.orgworkshop-jun2015riscv-zscale-workshop-june2015.png)
 
 정말 대단한 일이죠! 이쪽 업계에 수십년간 몸담아 오셨던 David Patterson 교수님의 지도 아래에 만들어진 프로세서니 충분히 관심을 기울일만한 일이었습니다.
 게다가 복잡해져만 가던 ARM 과 대비해서 간결한 ISA는 관심이 갈만한 이야기였습니다.

@@ -8,11 +8,13 @@ slug: 'front-yard-fence'
 
 # Front Yard Fence
 
-![](/media/blog/frontyard-fence/frontyard-fence-10.jpg)
+![](../../../media/blog/frontyard-fence/frontyard-fence-10.jpg)
 
 코로나바이러스 COVID-19로 인해 집에서 일하게 되면서, 그동안 밀린 집관리를 할 수
 있는 시간이 나더군요. 그래서 그동안 미뤄오던 앞마당에 울타리를 만들기로
 했습니다.
+
+<!-- more -->
 
 4월 초 즈음에 땅을 파기 시작해서 지난 토요일(9일)에 마쳤으니 한달정도가
 걸렸네요. 울타리 만들기는 해본 적도 없어서 시작부터 막막했었습니다. 주변에
@@ -49,7 +51,7 @@ slug: 'front-yard-fence'
 포스트를 단단히 고정해 줍니다. 너무 좁게 파면 시멘트가 별로 뭉치지 않아서 쉽게
 넘어갑니다.
 
-![홈디포에서 구입한 시멘트, 나무](/media/blog/frontyard-fence/frontyard-fence-1.jpg)
+![홈디포에서 구입한 시멘트, 나무](../../../media/blog/frontyard-fence/frontyard-fence-1.jpg)
 
 그리곤 제 최애 쇼핑몰 홈디포에 가서 필요한 나무를 사왔습니다. 포스트가 땅 위로
 3피트, 땅 속으로 1피트 들어가니 8피트짜리 pressure treated 4x4 나무를 6개
@@ -66,8 +68,8 @@ slug: 'front-yard-fence'
 
 구입한 나무를 Miter Saw를 이용해 알맞은 길이로 자릅니다. 포스트는 4피트로 자르고, 세로 갈빗살은 2.5 피트로 자릅니다. 갈빗살이 길이가 딱 맞아떨어지게 잘라지진 않았네요. 마이터쏘를 그냥 땅에 두고 잘라서 길이를 딱 맞추기 어려웠습니다. 스탠드에 두고 길이 조정해가며 잘랐다면 좀 더 깔끔하게 잘랐을 것 같네요.
 
-![4ft로 자른 포스트 나무](/media/blog/frontyard-fence/frontyard-fence-2.jpg)
-![2.5ft로 자른 갈빗살 나무](/media/blog/frontyard-fence/frontyard-fence-3.jpg)
+![4ft로 자른 포스트 나무](../../../media/blog/frontyard-fence/frontyard-fence-2.jpg)
+![2.5ft로 자른 갈빗살 나무](../../../media/blog/frontyard-fence/frontyard-fence-3.jpg)
 
 가로 나무는 자르지 않았습니다. 포스트를 세울 때 정확하게 간격을 맞추기 어려울 것
 같아서 포스트 세운 다음 일일히 길이 재어서 딱 맞춰서 자르기 위해 미리 잘라두진
@@ -90,12 +92,12 @@ Quikrete 제품이 정말 많은데, 그중에 미리 섞을 필요없이 땅에
 물을 부어 코너 포스트를 설치했네요. 그리고 굳기를 기다린 다음에 그 사이를 실로
 팽팽하게 연결해 주었습니다. 이 실이 기준점이 되어 사이의 포스트를 설치할 때 높이를 쉽게 맞출 수 있었습니다.
 
-![레벨 잡으며 포스트 설치](/media/blog/frontyard-fence/frontyard-fence-4.jpg)
+![레벨 잡으며 포스트 설치](../../../media/blog/frontyard-fence/frontyard-fence-4.jpg)
 
 콘크리트가 굳는데 4시간 정도 걸려서 한번에 포스트를 다 세우진 못했고, 하루에
 조금씩 해서 일주일 동안 틈틈히 설치했네요.
 
-![앞쪽 포스트 설치 후](/media/blog/frontyard-fence/frontyard-fence-5.jpg)
+![앞쪽 포스트 설치 후](../../../media/blog/frontyard-fence/frontyard-fence-5.jpg)
 
 [Quikrete]: https://www.quikrete.com/productlines/FastSettingConcreteMix.asp
 [post-level]: https://www.homedepot.com/p/Empire-5-1-4-in-Polycast-Post-Level-720/100124903
@@ -108,7 +110,7 @@ Quikrete 제품이 정말 많은데, 그중에 미리 섞을 필요없이 땅에
 같네요. 게다가 집으로 들어가는 쪽 포스트는 직선도 아니라 정말 세심하게 재서
 잘라야 했습니다.
 
-![전면에 가로로 나무를 설치한 모습](/media/blog/frontyard-fence/frontyard-fence-6.jpg)
+![전면에 가로로 나무를 설치한 모습](../../../media/blog/frontyard-fence/frontyard-fence-6.jpg)
 
 가로로 나무를 설치할 때에도 실로 똑바르게 선을 맞춰서 연결하니 무척 편했습니다.
 덕분에 다 연결하고도 크게 삐뚤삐뚤하지 않더군요.
@@ -122,7 +124,7 @@ Quikrete 제품이 정말 많은데, 그중에 미리 섞을 필요없이 땅에
 연결하게 되서 나중에 간격이 딱 맞지 않게 보기가 흉해진다고 하더군요. 뭐든 도구가
 최곱니다.
 
-![전면 세로 갈빗살 설치한 모습](/media/blog/frontyard-fence/frontyard-fence-7.jpg)
+![전면 세로 갈빗살 설치한 모습](../../../media/blog/frontyard-fence/frontyard-fence-7.jpg)
 
 ## 페인트 칠하기
 
@@ -132,7 +134,7 @@ Quikrete 제품이 정말 많은데, 그중에 미리 섞을 필요없이 땅에
 칠을 할 때 그 고생을 해두고 2년이 지났다고 벌써 잊어먹고 똑같은 실수를
 반복하네요.
 
-![앞쪽 펜스 페인트 칠](/media/blog/frontyard-fence/frontyard-fence-8.jpg)
+![앞쪽 펜스 페인트 칠](../../../media/blog/frontyard-fence/frontyard-fence-8.jpg)
 
 페인트는 홈디포에서 펜스용 페인트를 사서 칠했습니다. 흰색을 할지 나무색을 할 지
 고민했는데, 나무 재질이 좋은 것도 아니라서 나무색 보다는 흰색이 낫겠다 싶더군요.
@@ -144,11 +146,11 @@ Quikrete 제품이 정말 많은데, 그중에 미리 섞을 필요없이 땅에
 
 양쪽 옆은 미리 페인트를 칠하고 설치했습니다. 앞마당이 경사가 있다보니 경사지게 나무를 자르는 게 조금 어려웠는데 나무 하나 망치고 성공했네요. :)
 
-![](/media/blog/frontyard-fence/frontyard-fence-9.jpg)
+![](../../../media/blog/frontyard-fence/frontyard-fence-9.jpg)
 
 ## 완성
 
-![](/media/blog/frontyard-fence/frontyard-fence-10.jpg)
+![](../../../media/blog/frontyard-fence/frontyard-fence-10.jpg)
 
 완성된 펜스를 보니 뿌듯합니다. 처음엔 정말 막막하게만 느껴졌는데 한단계 한단계
 하다보니 결국 완성이 되네요. 너무 오랫동안 신경을 써서 그런지, 두달 정도는 된 줄

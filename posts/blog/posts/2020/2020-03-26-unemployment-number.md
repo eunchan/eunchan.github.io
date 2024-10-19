@@ -15,7 +15,9 @@ comments: true
 
 [Washington Post]: https://www.washingtonpost.com/business/2020/03/26/unemployment-claims-coronavirus-3-million/
 
-![Graph from [Washington Post][]](/media/blog/2020-03-26_unemployment_number.webp)
+<!-- more -->
+
+![Graph from [Washington Post][]](../../../media/blog/2020-03-26_unemployment_number.webp)
 
 기사 이미지를 보면 2008년 서브프라임 모기지 때 보다 5배 정도 많습니다. 그 중
 백만명 정도는 캘리포니아 주에 거주하는 사람이라고 하네요. 미국에서 많은 주가
@@ -29,7 +31,7 @@ Lockdown 또는 그와 비슷한 정책을 시행하고 있어서 많은 가계�
 
 [Tax Foundation]: https://taxfoundation.org/cares-act-senate-coronavirus-bill-economic-relief-plan/
 
-![Graph from [Tax Foundation][]](/media/blog/2020-03-26_tax-foundation_cares-act.png)
+![Graph from [Tax Foundation][]](../../../media/blog/2020-03-26_tax-foundation_cares-act.png)
 
 위의 그래프에서 보여주듯이 2019년 Adjusted Gross Income이 20만불 근처가 되면 4인
 가족이라도 혜택이 거의 없게 되네요. 이 지역의 렌트비를 고려하면 좀 아쉽긴

@@ -55,7 +55,7 @@ title: Oahu Island in Hawaii
 물놀이를 끝내고 근처에 있는 알라모아나 쇼핑센터로 가봅니다.
 어느새 해가 뉘엇뉘엇 지고 있네요.
 
-![카약](../../media/page/travel/hawaii15/hawaii15-009.jpg)\
+![카약](../../media/page/travel/hawaii15/hawaii15-009.jpg)
 
 
 알라 모아나 쇼핑센터는 산호세의 평범한 몰과 별반 다르지 않네요.

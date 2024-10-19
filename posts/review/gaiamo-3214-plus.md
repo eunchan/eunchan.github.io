@@ -4,7 +4,7 @@ date: 2012-12-02
 title: GAIAMO Airwasher 3214 Plus
 ---
 
-![Gaiamo 3214 Plus](../media/page/review/gaiamo-3214-plus-01.jpg)\
+![Gaiamo 3214 Plus](../media/page/review/gaiamo-3214-plus-01.jpg)
 
 지금까지 [Venta][] 를 가습기로 사용하고 있었습니다. 그런데 방과 거실을 모두
 가습하기엔 부족하더군요. 방과 거실이 좁은 문을 통해 연결되다보니 거실에서
@@ -41,7 +41,7 @@ Impression
 하네요. 벤타도 비용을 줄일려면 해외 구매로 2만원 근처까지 줄일 수 있으므로
 비용이 비슷하다고 보면 될 것 같습니다.
 
-![Gaiamo 3214 Plus](../media/page/review/gaiamo-3214-plus-02.jpg)\
+![Gaiamo 3214 Plus](../media/page/review/gaiamo-3214-plus-02.jpg)
 
 
 Advantage

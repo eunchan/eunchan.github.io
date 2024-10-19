@@ -15,7 +15,7 @@ slug: 'settle-in-san-jose'
 처음엔 아이들 시차 적응에 고생하고, 시차 적응 할 때 쯤 아이들이 아퍼서 고생하고,
 그러다 점점 좋아져서 이젠 아이들도 잘 놀고 잘 먹고 활달해졌네요.
 
-![Elan at River Oaks의 수영장](/media/blog/2014-06-22-elan-village-pool.jpg)
+![Elan at River Oaks의 수영장](../../../media/blog/2014-06-22-elan-village-pool.jpg)
 
 어차피 수원에서도 아내와 둘이서 두 아이를 키웠던 터라, 여기서 둘을 키우는게 그다지 어렵지는 않은 것 같네요.
 다만 아직 아내가 적응 기간이라 운전이 익숙하지 않아 제 손길이 좀 필요한 것은 있지만 이건 차차 나아질 거라 시간이 지나면 괜찬을 것 같습니다.
@@ -24,7 +24,7 @@ slug: 'settle-in-san-jose'
 일단 한국만큼 모임을 자주 가지지 않아도 된다는 것과 매일 매일 맑은 하늘을 볼 수 있다는 것이 가장 큽니다.
 맑은 날씨 덕분인지 아이들 얼굴도 매일 매일 밝아서 좋습니다. (얼굴과 팔이 제 피부같이 까맣게 타 들어가는 건 그다지 좋지 않은 보너스 이지만요. ㅎㅎ)
 
-![Coyote Creek Trail](/media/blog/2014-07-06-coyote-creek-trail.jpg)
+![Coyote Creek Trail](../../../media/blog/2014-07-06-coyote-creek-trail.jpg)
 
 
 

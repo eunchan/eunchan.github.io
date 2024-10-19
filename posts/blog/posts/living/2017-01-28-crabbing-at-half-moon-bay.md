@@ -13,7 +13,7 @@ tags: ['crab', 'red-rock-crab', 'dungeness-crab', 'half-moon-bay', 'fishing']
 한국에서는 꽃게, 가끔씩 매우 비싼 베링해 근처에서 잡힌 킹크랩을 보는게 전부인데요.
 이곳 캘리포니아에서는 가장 유명한 게를 꼽으라면 던저니스 크랩(Dungeness Crab)일 겁니다.
 
-![Dungeness Crag](/media/blog/2017-01-28-dungeness-crab.jpg)
+![Dungeness Crag](../../../media/blog/2017-01-28-dungeness-crab.jpg)
 
 정말 큰 크기에 깜짝 놀라고 살이 킹 크랩만큼 많이 들어있어서 또 한번 놀란 게 입니다.
 지역이 다르니 먹거리도 다르구나.. 라는 생각을 들게 한 녀석이죠.
@@ -29,7 +29,7 @@ tags: ['crab', 'red-rock-crab', 'dungeness-crab', 'half-moon-bay', 'fishing']
 게잡이나 낚시도 면허가 필요합니다.
 그러나 면허가 없이 낚을 수 있는 곳이 있는데, 바로 공공 부두입니다.
 
-![Pacifica 공공부두: 출처 [Fishermenneverlie][]](/media/blog/2017-01-28-pacifica-public-pier.jpg)
+![Pacifica 공공부두: 출처 [Fishermenneverlie][]](../../../media/blog/2017-01-28-pacifica-public-pier.jpg)
 
 이곳에서는 정해진 규칙 안에 자유롭게 낚시와 게잡이가 가능합니다.
 제가 사는 곳에서는 게잡이로 위 사진에 보이는 퍼시피카 부두로 가는게 보통인데, 저기는 전문적인 기술이 없으면 쉽지 않다고 해서 초보자에게 인기가 있는 하프 문 베이로 가보았습니다.
@@ -41,7 +41,7 @@ tags: ['crab', 'red-rock-crab', 'dungeness-crab', 'half-moon-bay', 'fishing']
 
 ## 하프 문 베이 피어
 
-![Pillar Point Harbor](/media/blog/2017-01-28-pillar-point-harbor.jpg)
+![Pillar Point Harbor](../../../media/blog/2017-01-28-pillar-point-harbor.jpg)
 
 물이 찰 때 게를 잡아야 잘 잡힌다고 해서 일찍 서두른다고 했는데 하프문 베이 피어(위의 사진에서 보이는 필라 포인트 항구가 하프 문 베이 피어입니다)에 도착하니 9시 30분이 되어버렸네요.
 서둘러 빌려온 낚시대 두개와 통발에 준비해 온 닭고기를 썰어 넣고 던졌습니다.

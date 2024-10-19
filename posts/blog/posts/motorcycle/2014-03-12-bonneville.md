@@ -9,7 +9,7 @@ categories: ['motorcycle']
 
 # 2014 Triumph Bonneville SE
 
-![2014 Triumph Bonneville SE](/media/page/eunchan/bonneville-01.jpg)
+![2014 Triumph Bonneville SE](../../../media/page/eunchan/bonneville-01.jpg)
 
 바이크 면허(Class M1)를 딴 뒤, 그동안 사고 싶었던 바이크, Triumph Bonneville을 구매하였습니다.
 처음 인터넷에서 본네빌을 본 것이 2009년 정도였던 것 같은데 그 때부터 5년이 지나서 결국 손에 얻게 되었네요.

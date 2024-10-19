@@ -8,8 +8,10 @@ comments: true
 
 # Lawn Aeration
 
-[뒷마당 공사][landscaping-1]가 끝나고 나니 잔디가 많이 죽었네요.
+[뒷마당 공사](./2018-05-17-landscaping.md)가 끝나고 나니 잔디가 많이 죽었네요.
 무거운 밥캣이 뒷마당에 돌아다니다보니, 잔디 흙이 많이 눌려서 땅이 단단해졌습니다.
+
+<!-- more -->
 
 ![밥캣 (회사 사진 펌)](../../../media/blog/lawn-aeration/bobcat-s570-bucket-built-tough_fc_one_col.jpg)
 

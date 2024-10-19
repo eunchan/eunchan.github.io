@@ -11,6 +11,8 @@ comments: true
 집을 구입할 때, 뒷마당이 정말 숲속에 있는 것 같은 느낌이었습니다.
 우거진 나무에 덤불에 파릇파릇한 잔디까지, 아늑한 느낌을 주는 뒷마당이었죠.
 
+<!-- more -->
+
 이사 후 보니, 그 덤불이 모두 English Ivy더군요.
 엄청나게 활동적으로 자라는 덤불에다가, 나무까지 감고 올라가고 있어서 제거할 수 밖에 없었습니다.
 제거해 보니, 제게 옻이 오르더군요.
@@ -26,18 +28,18 @@ comments: true
 
 남쪽 펜스에 아이비가 자라면서, 실제 펜스는 보이지도 않고 아이비 가지만 보였던 상태였습니다.
 
-![English Ivy on south side](/media/blog/landscaping/landscaping-ivy.jpg)
+![English Ivy on south side](../../../media/blog/landscaping/landscaping-ivy.jpg)
 
 이걸 제거하는게 급선무였는데, 밥캣을 이용해 수월하게 없애더군요.
 없애고보니 아이비의 뿌리가 펜스를 망치고 있었네요.
 뒤틀리고 포스트는 깨지고, 난리도 아니였는데, 치우고 레벨을 잡고 흙을 치워내고 나니 정말 넓어보이고 깔끔해보이네요.
 
-![Fence post](/media/blog/landscaping/landscaping-fencepost.jpg)
+![Fence post](../../../media/blog/landscaping/landscaping-fencepost.jpg)
 
 펜스는 레드우드로 했습니다. Cedar 나무보다는 좀 더 뒤틀림에 강하다고 해서 선택했는데, 재료비는 꽤 비싸네요.
 뭐 펜스는 대부분 인건비라 크게 구애받진 않았는데, 설치하고 보니 색도 마음에 들고 깔끔한게 보기 좋네요.
 
-![South side fence](/media/blog/landscaping/landscaping-southfence.jpg)
+![South side fence](../../../media/blog/landscaping/landscaping-southfence.jpg)
 
 펜스 설치 후엔 나무 보존제를 칠해주었습니다.
 보존제를 칠하면 습기가 잘 스며들지 않아서 잘 썪지 않고 오래가게 하는 효과도 있지만,
@@ -61,7 +63,7 @@ comments: true
 그걸 다 갈아내고 자르고 한 후 새 벽을 쌓습니다.
 Hard landscaping이면 철골에 콘크리트를 부어서 만드는데, 전 소프트 랜드스케이핑 업자분께 맡겨서, 땅을 약간 파고 자갈을 부어서 그 위에 벽돌을 쌓았어요.
 
-![Retaining Block](/media/blog/landscaping/landscaping-retainingblock.jpg)
+![Retaining Block](../../../media/blog/landscaping/landscaping-retainingblock.jpg)
 
 벽돌은 뒤쪽 아래가 튀어나와있어서 밑단 벽돌에 걸려 앞으로 나오지 않게 되어있는 벽돌을 쓰는 데, 단순한 모양에서부터 제가 쓴 약간 자연적인 모습의 벽돌도 있고, 더 다채로운 벽돌도 정말 많더라구요.
 이 벽돌을 수평을 잘 맞춰서 한단 한단 쌓아 5단을 쌓고 그 위에 캡 스톤을 잘라서 모양에 맞춰서 얹더군요.
@@ -70,7 +72,7 @@ Hard landscaping이면 철골에 콘크리트를 부어서 만드는데, 전 소
 
 리테인 월과 단풍나무, 그리고 보존제를 칠한 펜스까지 어우러지니 그 앞 잔디가 다 망가졌지만 정말 분위기가 많이 달라졌네요.
 
-![Japanese Maple Tree](/media/blog/landscaping/landscaping-maple.jpg)
+![Japanese Maple Tree](../../../media/blog/landscaping/landscaping-maple.jpg)
 
 ## Sidewalk 콘크리트
 
@@ -78,7 +80,7 @@ Hard landscaping이면 철골에 콘크리트를 부어서 만드는데, 전 소
 하는김에 drain pipe 설치하는것까지 하고, 그러다보니 기왕에 땅 판 김에 드라이브웨이도 확장했네요.
 이렇게 공사비는 훅훅 늘어납니다. -_-
 
-![Driveway concrete](/media/blog/landscaping/landscaping-driveway.jpg)
+![Driveway concrete](../../../media/blog/landscaping/landscaping-driveway.jpg)
 
 땅을 깊게 파고 자갈을 넣고 다지고, 철근을 깔고 그 위에 콘크리트를 붓는 모습을 보니, '만만찮은 작업이구나..' 하는 생각이 드네요.
 
@@ -88,15 +90,15 @@ Hard landscaping이면 철골에 콘크리트를 부어서 만드는데, 전 소
 퍼르골라로 거실과 다이닝룸의 분위기를 살려주는 것인데, 이게 생각보다 비쌉니다.
 나무도 좋은 나무를 골라서 사고, 들어가는 재료 양도 엄청나서 공사비의 거의 반이 퍼르골라에 들어가네요.
 
-![Pergola post](/media/blog/landscaping/landscaping-pergolapost.jpg)
+![Pergola post](../../../media/blog/landscaping/landscaping-pergolapost.jpg)
 
 펜스와 비슷하게, 땅을 파서 포스트를 박는데, 퍼르골라는 앵커를 설치해서 고정을 하네요. 좀 더 튼튼하고, 교체가 좀 더 쉬울 듯 합니다.
 그리고 그 위에 3단으로 나무를 올립니다.
 
 레드우드를 사용해서, 페인트를 칠하진 않았는데, stain은 해야 되서 하루 날 잡고 열심히 작업해야 겠네요.
 
-![Pergola](/media/blog/landscaping/landscaping-pergola1.jpg)
-![Pergola](/media/blog/landscaping/landscaping-pergola2.jpg)
+![Pergola](../../../media/blog/landscaping/landscaping-pergola1.jpg)
+![Pergola](../../../media/blog/landscaping/landscaping-pergola2.jpg)
 
 ## Italian Cypress
 
@@ -105,11 +107,11 @@ Hard landscaping이면 철골에 콘크리트를 부어서 만드는데, 전 소
 
 이걸 너무 일찍 사두는 바람에 뒷마당에 화분으로 장장 5개월을 버티느라 많이 시들시들해졌네요.
 
-![Auger Hole](/media/blog/landscaping/landscaping-plantinghole.jpg)
+![Auger Hole](../../../media/blog/landscaping/landscaping-plantinghole.jpg)
 
 땅에 구멍을 파고 나무를 심는데, 기계가 아니였으면 거의 불가능 할 것 같은 난이도네요.
 땅속에 아이비 뿌리도 많았고, 기존에 베어버린 나무가 뿌리도 다 캐지지 않아서 기계의 도움으로 겨우 심을 수 있었네요.
 
 이틀에 한번 꼴로 물을 주고 있는데, 슬슬 나무가 살아나는게 보입니다. 색이 조금씩 진해지니 뒷마당 뷰도 점점 좋아지네요.
 
-![Italian Cypress](/media/blog/landscaping/landscaping-cypress.jpg)
+![Italian Cypress](../../../media/blog/landscaping/landscaping-cypress.jpg)

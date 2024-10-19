@@ -10,7 +10,7 @@ slug: 'free-up-huge-other-storage-space-on-mac-os-x'
 
 # OS X Other 공간 비우기
 
-![Disk Utility](/media/blog/2015-12-29-disk-utility-status.png)
+![Disk Utility](../../../media/blog/2015-12-29-disk-utility-status.png)
 
 오늘에서야 발견했는데, "Disk Utility"에서 Other 공간이 170GB를 차지하고 있는 것을 보았습니다.
 어느 녀석이 이리 잡아먹나 알아보기 위해 [OmniDiskSweeper][]를 설치해서 살펴보았는데 이상한 점이 발견됩니다.

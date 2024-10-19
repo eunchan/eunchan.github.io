@@ -8,7 +8,7 @@ slug: 'change-of-occupation'
 
 # 두번째 이직
 
-![Coffee Lab](/media/blog/living/coffee-lab.jpg)\
+![Coffee Lab](../../../media/blog/living/coffee-lab.jpg)
 
 처음 미국으로 이직한 지 거의 5년이 되고, 영주권을 받은 지 3년이 되었을 때, 정든
 이전 직장을 떠나 새로운 직장으로 이직을 했네요. 남들은 왜 이제서야 옮기냐고
