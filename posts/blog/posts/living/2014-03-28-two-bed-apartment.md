@@ -11,7 +11,7 @@ slug: 'two-bed-apartment'
 가족이 지낼 곳이 필요하기에 요즈음 아파트를 보러 다녔습니다.
 미국에 오자마자 아파트를 보러다녔다가 지금 잠시 지내고 있는 Los Altos에 머물게 되면서 잠시동안 신경을 끄고 있었죠.
 
-![The Redwoods](/media/blog/2014-03-28/redwoods-modelhouse-1.jpg)
+![The Redwoods](../../../media/blog/2014-03-28/redwoods-modelhouse-1.jpg)
 
 그 때, 처음 집을 보러 돌아다닐 때 봐둔 아파트 단지가 있었습니다.
 넓은 잔디가 있고 분위기도 참 좋아보였던 아파트입니다.
@@ -19,7 +19,7 @@ slug: 'two-bed-apartment'
 타지에 처음 와서 저야 일을 하지만 집에만 있어야 하는 아내와 아이들에게는 사람을 만나는 것이 매우 중요하다는 것을 알기에 별다른 선택지가 없었다고 할까요..
 이집 저집 보았지만 결국은 여기로 정하겠구나.. 하는 생각이 들었는데 결국 그 아파트 단지로 정하게 되었네요.
 
-![Swimming Pool](/media/blog/2014-03-28/redwoods-modelhouse-2.jpg)
+![Swimming Pool](../../../media/blog/2014-03-28/redwoods-modelhouse-2.jpg)
 
 미국에는 연봉이 일정 기준 이하인 사람에 대한 혜택이 어느정도 있습니다.
 한국의 공공임대 아파트와 비슷한데 그 기준이 꽤 많이 세분화 되어있습니다.
@@ -35,7 +35,7 @@ slug: 'two-bed-apartment'
 
 그나마 Moderate BMR 혜택을 받아서 2400달러 근처로 얻게되는 거지 아니였으면.. 집값이 감당이 안되었을 것 같네요.
 
-![Barbeque Area](/media/blog/2014-03-28/redwoods-modelhouse-3.jpg)
+![Barbeque Area](../../../media/blog/2014-03-28/redwoods-modelhouse-3.jpg)
 
 그래도 저 돈은 내 돈이 아니구나.. 생각합니다.
 어차피 부자가 아닌 이상에야 월세는 당연히 살아야 하는 것이라 그냥 월급에서 미리부터 없는 돈이다.. 생각하려 합니다.

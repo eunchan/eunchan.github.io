@@ -5,6 +5,10 @@ slug: 'ham-license'
 comments: true
 ---
 
+**TL;DR** HAM Technician 자격증을 취득했습니다.
+
+<!-- more -->
+
 # HAM License
 
 한국에는 아마추어무선기사 자격증이 있고, 미국에는 비슷한 과정으로  Amateur Radio

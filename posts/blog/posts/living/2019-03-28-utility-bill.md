@@ -26,7 +26,7 @@ slug: 'utility-bill'
 
 주거에 관해서 볼까요?
 
-![Case-Shiller Home Price Index](/media/blog/living/bayarea-homepriceindex.jpg)
+![Case-Shiller Home Price Index](../../../media/blog/living/bayarea-homepriceindex.jpg)
 
 위의 도표는 2000년 주택 평균 가격을 기준으로 한 상대적인 집값을 나타낸
 도표입니다. 2007년까지 주택 시장이 버블이 끼어서 서브프라임 모기지가 터지기

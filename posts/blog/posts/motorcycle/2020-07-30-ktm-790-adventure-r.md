@@ -20,6 +20,8 @@ categories: ['motorcycle']
 계속 있었습니다. 그러다 사정도 좀 풀리고 하면서 5년 반만에 다시 장만하게
 되었네요.
 
+<!-- more -->
+
 ![KTM 790 Adventure R](../../../media/motorcycle/ktm-790-adventure-r.jpg)
 
 이번에 장만한 모터사이클은 이전의 도심형 클래식 바이크와는 다르게 어드벤쳐

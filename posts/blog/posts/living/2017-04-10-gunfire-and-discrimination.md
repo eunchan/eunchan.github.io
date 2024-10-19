@@ -16,7 +16,7 @@ slug: 'gunfire-and-discrimination'
 같은 캘리포니아 안에서 일어난 사고라 그런지, 아이들 걱정이 많이 됩니다.
 출근길에 항상 총기 판매상을 지나가는데, 이런 일련의 사건들이 꾸준히 발생하는 데도 총기 규제가 좀처럼 안되고 있어서 정말 아쉽습니다.
 
-![North Park Elementary](/media/blog/2017-04-10-san-bernardino.jpg)
+![North Park Elementary](../../../media/blog/2017-04-10-san-bernardino.jpg)
 
 두번째 사건은 유나이티드 항공사에서 승객을 물건취급하듯이 비행기에서 끌어내린 사건인데요.
 항공사 직원을 태우기 위해 이미 탑승한 승객을 하차시키려고, 완력을 사용해서 끌어내렸는데 그 영상이 인터넷에 오르면서 심각해 진 것 같습니다.
