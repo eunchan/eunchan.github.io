@@ -4,7 +4,7 @@ date: 2012-02-23
 title: Microserver N36L
 ---
 
-![HP Microserver](../media/page/review/hp-proliant-microserver-n36l.jpg)\
+![HP Microserver](../media/page/review/hp-proliant-microserver-n36l.jpg)
 
 
 Motivation

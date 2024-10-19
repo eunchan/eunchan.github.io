@@ -19,7 +19,7 @@ slug: 'elan-apartment'
 
 나오질 않게 되니 결국 적당한 가격에 방2칸짜리 아파트를 구할 수 밖에 없었습니다.
 
-![Elan Apartments Sapphire Living Room](/media/blog/2014-04-12-elan-living-room.jpg)
+![Elan Apartments Sapphire Living Room](../../../media/blog/2014-04-12-elan-living-room.jpg)
 
 아이들이 제대로 스트레스 받지않고 놀려면 1층이 필수인 덕분에 선택이 많이 제약이 되었네요.
 초기 생각했던 가격보다 많이 비싸지만 그래도 이왕에 구한 것 가족과 즐겁게 지내보려 합니다.

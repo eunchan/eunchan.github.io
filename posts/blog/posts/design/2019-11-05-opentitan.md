@@ -14,7 +14,7 @@ comments: true
 
 # Open Source Hardware
 
-[![OpenTitan](/media/page/article/opentitan/opentitan-logo.png)](https://opentitan.org)
+[![OpenTitan](../../../media/page/article/opentitan/opentitan-logo.png)](https://opentitan.org)
 
 우리가 흔히 사용하는 컴퓨터의 운영체제는 윈도우 입니다. 이 윈도우는
 마이크로소프트 회사에서 개발한 운영체제입니다. 다양한 하드웨어를 지원하면서도
@@ -95,11 +95,11 @@ LSF 멤버이면 개발에 참여할 자격이 주어지는 걸로 아는데 확
 있습니다. (RISC-V Stream Generator는 구글 깃헙에 공개되어 있습니다.)
 
 그리고 오늘 또 다른 오픈소스 프로젝트가 공개되었습니다.
-[OpenTitan][ext:opentitan] 프로젝트인데 lowRISC가 중심이 되어, 구글, Western
-Digital, G+D, Nuovoton이 같이 참여해서, 오픈소스 개발방식으로 소스코드에서부터
-실제 칩을 받는데까지 전 과정을 투명하게 공개해서 개발하는 것을 목표로 합니다.
-실제 실리콘 프로세스 라이브러리는 공개할 수는 없겠지만, 현재 업계에서 최대한
-공개할 수 있는 부분은 공개해서 개발하려고 합니다.
+[OpenTitan](https://opentitan.org) 프로젝트인데 lowRISC가 중심이 되어, 구글,
+Western Digital, G+D, Nuovoton이 같이 참여해서, 오픈소스 개발방식으로
+소스코드에서부터 실제 칩을 받는데까지 전 과정을 투명하게 공개해서 개발하는 것을
+목표로 합니다. 실제 실리콘 프로세스 라이브러리는 공개할 수는 없겠지만, 현재
+업계에서 최대한 공개할 수 있는 부분은 공개해서 개발하려고 합니다.
 
 완성된 버전을 공개하는 것은 아닙니다. 아직은 기본적인, 다르게 보면
 취미활동이라고 불러도 별반 다를 것 같지 않은 기본적인 peripheral IP와 코어,

@@ -11,7 +11,11 @@ tags: ['hakyll', 'mkdocs', 'ssg']
 [이에 관해 글](../../../research/write-website-with-hakyll-and-git.md)을 쓴 적도
 있습니다.
 
-Hakyll은 Static Site Generator라기보다는, 라이브러리에 가까운 도구입니다. hakyll 라이브러리를 이용해서 입맛에 맞게 사이트를 꾸밀 수가 있죠. 그래서 제 사이트에는 몇가지 제 입맛에 맞는 커스텀 기능이 들어가 있었습니다.
+<!-- more -->
+
+Hakyll은 Static Site Generator라기보다는, 라이브러리에 가까운 도구입니다. hakyll
+라이브러리를 이용해서 입맛에 맞게 사이트를 꾸밀 수가 있죠. 그래서 제 사이트에는
+몇가지 제 입맛에 맞는 커스텀 기능이 들어가 있었습니다.
 
 Hakyll을 선택했던 이유는 Haskell 언어를 배우고자 하는 마음이 컸기
 때문이었습니다. 덕분에 함수형 언어가 뭔지 알 수 있었고 간단한 Haskell 프로그램은

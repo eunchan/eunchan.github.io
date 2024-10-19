@@ -17,7 +17,7 @@ title: '다시 크라이스트처치'
 하루를 기록해 놓은 수첩과 순간 순간을 기록해 놓은 사진만이 우리 신혼여행의
 10일을 증명하고 있습니다.
 
-![Kia 새](../../media/page/travel/new-zealand/newzealand-379.jpg)\
+![Kia 새](../../media/page/travel/new-zealand/newzealand-379.jpg)
 
 오늘도 꽤 먼 거리를 달려야 합니다.  그레이마우스에서 Arthur's Pass까지 100여
 km, 아서스패스에서 크라이스트처치까지 150여km, 운전 시간만 3시간 반이 걸리는

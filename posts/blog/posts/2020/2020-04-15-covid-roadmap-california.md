@@ -14,6 +14,8 @@ slug: 'covid-roadmap-california'
 일하고, 저녁되면 일을 멈추고 저녁을 준비하고 아이들을 재우고 잡니다. 이 일상이
 5주째를 넘어서 이제 6주째 중반이 되었습니다.
 
+<!-- more -->
+
 6주째가 되어가는데 아직 미국 내 코로나 바이러스의 확산은 정점에 다다르지 않은 것
 같습니다. 여전히 [매일 2만명이 넘는 환자가 발생하고 있고, 사망자도 2천명이
 넘어가고 있습니다.](https://www.worldometers.info/coronavirus/country/us/)
@@ -25,7 +27,7 @@ Stay-at-home을 선제적으로 시행한 것이 지금 효과를 보고 있어�
 오늘 주지사의 브리핑 중에 [Stay-at-home 명령을 수정하게 되는 기준에 대해
 언급했습니다.](https://www.gov.ca.gov/wp-content/uploads/2020/04/California-Roadmap-to-Modify-the-Stay-at-Home-Order.pdf)
 
-![Flatten the Curve](/media/blog/2020-04-15_california-stay-at-home.png)
+![Flatten the Curve](../../../media/blog/2020-04-15_california-stay-at-home.png)
 
 그 중 이 그래프가 눈에 띄이더군요. 하늘색 실선은 Stay-at-home 명령을 발효할 당시
 환자 증가 예측치이고, 주황색 점선은 실제 환자 수 입니다. 연한 회색 점선은

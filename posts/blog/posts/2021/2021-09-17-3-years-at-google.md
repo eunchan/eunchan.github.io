@@ -9,6 +9,8 @@ comments: true
 구글에 입사한 지 3년이 되었습니다. 2년이 되었다고 페이스북에 글을 썼던 게 얼마
 안된 것 같은데, COVID 덕분에 집에 계속 있으면서 시간 가는 줄 몰랐네요.
 
+<!-- more -->
+
 2년차에는 많이 보람차다고 생각했고, 배운게 많다고 적어뒀네요. 디자인만 하는게
 아니라 Methodology도 하고 할 수 있는 일, 해야만 하는 일은 종류 불문 닥치고
 일했습니다.
@@ -58,4 +60,4 @@ comments: true
 되었으면 좋겠지만, 앞길이 밝은 것은 아니라 저라도 맡은 일은 잘 끝내둬야 할 것
 같네요.
 
-![at Pear Lake in Sequoia National Park](/media/blog/2021-07-18-pear-lake.jpg)
+![at Pear Lake in Sequoia National Park](../../../media/blog/2021-07-18-pear-lake.jpg)
