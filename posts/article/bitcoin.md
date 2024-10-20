@@ -5,8 +5,6 @@ tags: ['bitcoin', 'satoshi', 'paper', 'technical']
 comments: true
 ---
 
-# Dive into Bitcoin
-
 요즘 비트코인이 한창 인기입니다. [버냉키의 비트코인 관련
 발언][bernanke-bitcoin]으로 두달 사이에 비트코인의 가치가 열배가까이
 급등했습니다. 예전 1 BTC (비트코인 단위) 당 100 USD 미만하던 때부터 지켜본

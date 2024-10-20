@@ -6,8 +6,6 @@ tags: ['machine-learning', 'naver', 'samsung']
 slug: 'naver-and-samsung-collaboration'
 ---
 
-# 네이버와 삼성의 머신러닝칩 협업
-
 **TL;DR** [네이버와 삼성이 머신러닝 생태계를 위해 칩 제작 협업][1]을 하기로 했습니다.
 실제 쓰이는 거대 모델을 기반으로 제작하기에 긍정적입니다.
 

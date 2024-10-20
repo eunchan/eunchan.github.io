@@ -2,8 +2,6 @@
 title: Bucket List
 ---
 
-# Bucket List
-
 꼭 해보고 싶은 것, 이루고 싶은 것.
 
 1. 히말라야 3주간 트래킹

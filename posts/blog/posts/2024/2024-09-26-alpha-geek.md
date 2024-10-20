@@ -3,9 +3,8 @@ date: 2024-09-26
 slug: 'alpha-geek'
 tags: ['mentor', 'manager', 'alpha-geek', 'camille-fournier', 'the-managers-path']
 comments: true
+title: 'Alpha Geek'
 ---
-
-# Alpha Geek
 
 "The Manager's Path" 라는 책을 최근에 읽고 있습니다. Rent the Runway라는 회사의
 CTO였던 Camille Fournier 라는 저자가 쓴 책인데, 엔지니어링 부분에서 멘토에서부터

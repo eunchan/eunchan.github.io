@@ -1,11 +1,8 @@
 ---
 title: 'Book'
 date: 2017-01-29
-comment: true
 slug: 'book'
 ---
-
-# Book
 
 ## Wishlist
 
