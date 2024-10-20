@@ -3,8 +3,6 @@ title: Comics
 slug: 'comics'
 ---
 
-# Comics
-
 지금까지 본 만화책 목록을 보관하는 페이지 입니다.
 
 ## Super String (YLAB)

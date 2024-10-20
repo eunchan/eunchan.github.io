@@ -3,8 +3,6 @@ title: 'Wish List'
 slug: 'wishlist'
 ---
 
-# Wish List
-
 ## Sony A7s2
 
 Rx100m3를 사용하고 있긴 하지만, 역시나 판형 큰게 하나 있으면 좋겠다 싶네요.

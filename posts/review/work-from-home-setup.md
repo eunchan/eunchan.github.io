@@ -45,6 +45,8 @@ title: 재택근무 영상+사운드 셋업
 
 ![WFH Desk](../media/page/workflow/wfh-desk.jpg)
 
+<!-- more -->
+
 ## 최종 셋업
 
 일단 가구, 주변기기에 대해 설명할게요. 테이블은 높낮이 조절이 가능한 테이블로

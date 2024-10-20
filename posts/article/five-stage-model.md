@@ -4,8 +4,6 @@ date: 2016-08-16
 language: en
 ---
 
-# A Five-Stage Model of the Mental Activities
-
 by Stuart E. Dreyfus and Hubert L. Drefus
 
 ## Abstract

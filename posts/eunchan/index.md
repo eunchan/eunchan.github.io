@@ -2,8 +2,6 @@
 title: Eli Kim
 ---
 
-# Eli Kim
-
 ## Introduction
 
 ![Pinnacle N.P.](../media/page/eunchan/personal-banner.jpg)

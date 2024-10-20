@@ -6,8 +6,6 @@ tags: ['nvidia', 'arm', 'datacenter', 'processor', 'gpu', 'ai', 'ml']
 slug: 'nvidia-to-purchase-arm'
 ---
 
-# NVIDIA to Purchase ARM
-
 2020년 9월 13일, [엔비디아가 ARM을 소프트뱅크로부터 인수하기로
 합의][ext:nvidia-to-acquire-arm]했습니다. 주식과 현찰 포함해서 총 400억 달러,
 한화로 47조 정도의 금액에 ARM을 인수하기로 합의 했습니다. 소프트뱅크, 정확히
