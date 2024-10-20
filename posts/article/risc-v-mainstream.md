@@ -8,9 +8,8 @@ tags:
   - berkeley
 slug: risc-v-mainstream
 comments: true
+title: 'RISC-V 가 주류로 올라설 수 있을까?'
 ---
-
-# RISC-V 가 주류로 올라설 수 있을까?
 
 4년전, 예전 직장에서 Berkeley 박사과정 한 분을 초청해서 강연을 들었던 기억이 납니다.
 강연의 주제는 [RISC-V][] 라는 이전의 RISC 를 계승한 새로운 open architecture 프로세서 였습니다.

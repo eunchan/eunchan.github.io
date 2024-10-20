@@ -3,9 +3,8 @@ date: 2023-12-31
 slug: '2024-nye'
 tags: ['new-year', 'new-year-eve']
 comments: true
+title: '2024 New Year Eve'
 ---
-
-# 2024 New Year Eve
 
 ![](../../../media/blog/2024-new-year-eve.jpg)
 
