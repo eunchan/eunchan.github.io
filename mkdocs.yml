@@ -21,7 +21,7 @@ theme:
     - navigation.expand
     - navigation.path
     - navigation.prune
-    - navigation.indexes
+    # - navigation.indexes
     - content.action.edit
   palette:
     scheme: default
@@ -31,6 +31,14 @@ plugins:
   # - meta
   - blog:
       post_url_date_format: yyyy
+      categories_toc: false
+      archive_toc: false
+  - blog:
+      blog_dir: sky
+      post_url_date_format: yyyy
+      post_dir: "{blog}/log"
+      categories_toc: false
+      archive_toc: false
   - search
   # - social
   - rss:
@@ -136,12 +144,14 @@ nav:
   - hobby:
     - Motorcycle: motorcycle/index.md
     - Camping: camping/index.md
+    - Nightsky:
+      - sky/index.md
   - eunchan/index.md
 extra:
-  alternate:
-    - name: English
-      link: /en/
-      lang: en
+  #alternate:
+  #  - name: English
+  #    link: /en/
+  #    lang: en
   generator: false
   #social:
   #  - type: "linkedin"
