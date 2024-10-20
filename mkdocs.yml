@@ -62,14 +62,14 @@ plugins:
       enable_creation_date: true
   - extra-sass
 nav:
-  - articles:
-    - article/index.md
+  - Articles:
+    - Posts: article/index.md
     - research/index.md
     - review/index.md
     - tips/index.md
-  - journal:
+  - Journal:
     - blog/index.md
-  - travel:
+  - Travel:
     - travel/index.md
     - travel/norcal/index.md
     - 하와이 '15:
@@ -141,12 +141,12 @@ nav:
       - 워킹퍼밋, 그리고 이민: working-holiday/20workingpermitandimmigration.md
       - 워홀러에게 중요한 10가지 조언: working-holiday/22advisetoworholer.md
       - 워홀을 마치며:  working-holiday/23finishingworkingholiday.md
-  - hobby:
+  - Hobby:
     - Motorcycle: motorcycle/index.md
     - Camping: camping/index.md
     - Nightsky:
       - sky/index.md
-  - eunchan/index.md
+  - About: eunchan/index.md
 extra:
   #alternate:
   #  - name: English
