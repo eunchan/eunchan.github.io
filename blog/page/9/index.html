@@ -1,0 +1,1489 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Eli's Personal Website." name="description"/>
+<link href="https://www.eunchan.kim/blog/page/9/index.html" rel="canonical"/>
+<link href="../../../tips/index.html" rel="prev"/>
+<link href="../../category/design.html" rel="next"/>
+<link href="../../../feed_rss_created.xml" rel="alternate" title="RSS 피드 생성완료" type="application/rss+xml"/>
+<link href="../../../feed_rss_updated.xml" rel="alternate" title="RSS 피드 업데이트완료" type="application/rss+xml"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.41" name="generator"/>
+<title>Log - Eli Kim</title>
+<link href="../../../assets/stylesheets/main.0253249f.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../../assets/stylesheets/extra-style.min.css" rel="stylesheet"/></head>
+<body data-md-color-accent="teal" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#log">
+          콘텐츠로 이동
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="상단/헤더" class="md-header__inner md-grid">
+<a aria-label="Eli Kim" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Eli Kim">
+<img alt="logo" src="../../../static/img/logo2.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Eli Kim
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Log
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="검색" class="md-search__options">
+<button aria-label="지우기" class="md-search__icon md-icon" tabindex="-1" title="지우기" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            검색 초기화
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/eunchan/elijah.kim" title="저장소로 이동">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</div>
+<div class="md-source__repository">
+    eunchan/elijah.kim
+  </div>
+</a>
+</div>
+</nav>
+<nav aria-label="탭" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../article/index.html">
+          
+  
+  Articles
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../../index.html">
+          
+  
+  Journal
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../travel/index.html">
+          
+  
+  Travel
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../motorcycle/index.html">
+          
+  
+  Hobby
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../eunchan/index.html">
+        
+  
+    
+  
+  About
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="네비게이션" class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Eli Kim" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Eli Kim">
+<img alt="logo" src="../../../static/img/logo2.png"/>
+</a>
+    Eli Kim
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/eunchan/elijah.kim" title="저장소로 이동">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</div>
+<div class="md-source__repository">
+    eunchan/elijah.kim
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Articles
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            Articles
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../article/index.html">
+<span class="md-ellipsis">
+    Posts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../research/index.html">
+<span class="md-ellipsis">
+    Research
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../review/index.html">
+<span class="md-ellipsis">
+    Reviews
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tips/index.html">
+<span class="md-ellipsis">
+    Tips and Tricks
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    Journal
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Journal
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="../../index.html">
+<span class="md-ellipsis">
+    Log
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    아카이브
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            아카이브
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../archive/2024.html">
+<span class="md-ellipsis">
+    2024
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../archive/2023.html">
+<span class="md-ellipsis">
+    2023
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../archive/2022.html">
+<span class="md-ellipsis">
+    2022
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../archive/2021.html">
+<span class="md-ellipsis">
+    2021
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../archive/2020.html">
+<span class="md-ellipsis">
+    2020
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../archive/2019.html">
+<span class="md-ellipsis">
+    2019
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../archive/2018.html">
+<span class="md-ellipsis">
+    2018
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../archive/2017.html">
+<span class="md-ellipsis">
+    2017
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../archive/2016.html">
+<span class="md-ellipsis">
+    2016
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../archive/2015.html">
+<span class="md-ellipsis">
+    2015
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../archive/2014.html">
+<span class="md-ellipsis">
+    2014
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../archive/2013.html">
+<span class="md-ellipsis">
+    2013
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    카테고리
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+            카테고리
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../category/design.html">
+<span class="md-ellipsis">
+    design
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../category/home.html">
+<span class="md-ellipsis">
+    home
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../category/living.html">
+<span class="md-ellipsis">
+    living
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../category/motorcycle.html">
+<span class="md-ellipsis">
+    motorcycle
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Travel
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Travel
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/index.html">
+<span class="md-ellipsis">
+    Travel
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/norcal/index.html">
+<span class="md-ellipsis">
+    Travel Sites in Northern California
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+<span class="md-ellipsis">
+    하와이 '15
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+            하와이 '15
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/hawaii15/index.html">
+<span class="md-ellipsis">
+    Oahu Island in Hawaii
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/hawaii15/gallery.html">
+<span class="md-ellipsis">
+    Hawaii Gallery
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+<span class="md-ellipsis">
+    뉴질랜드 신혼여행 '10
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_4">
+<span class="md-nav__icon md-icon"></span>
+            뉴질랜드 신혼여행 '10
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/new-zealand/index.html">
+<span class="md-ellipsis">
+    Campervan in New Zealand
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/new-zealand/campervan.html">
+<span class="md-ellipsis">
+    Campervan
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/new-zealand/route.html">
+<span class="md-ellipsis">
+    Travel Route
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/new-zealand/log01.html">
+<span class="md-ellipsis">
+    크라이스트처치에 도착해서 오아마루로
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/new-zealand/log02.html">
+<span class="md-ellipsis">
+    모에라키, 오타고 반도
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/new-zealand/log03.html">
+<span class="md-ellipsis">
+    더니든, 캐틀린스
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/new-zealand/log04.html">
+<span class="md-ellipsis">
+    테아나우, 반딧불이 동굴
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/new-zealand/log05.html">
+<span class="md-ellipsis">
+    밀포드 사운드
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/new-zealand/log06.html">
+<span class="md-ellipsis">
+    퀸스타운
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/new-zealand/log07.html">
+<span class="md-ellipsis">
+    글레노키, 와나카
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/new-zealand/log08.html">
+<span class="md-ellipsis">
+    와나카에서 폭스빙하로
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/new-zealand/log09.html">
+<span class="md-ellipsis">
+    빙하투어, 호키티카
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/new-zealand/log10.html">
+<span class="md-ellipsis">
+    다시 크라이스트처치
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/new-zealand/epilogue.html">
+<span class="md-ellipsis">
+    에필로그
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/new-zealand/gallery-wide.html">
+<span class="md-ellipsis">
+    New-zealand Wide pictures
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/new-zealand/gallery.html">
+<span class="md-ellipsis">
+    New Zealand Gallery
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+<span class="md-ellipsis">
+    이집트 '09
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+            이집트 '09
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/egypt09/index.html">
+<span class="md-ellipsis">
+    Cairo, White Desert
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/egypt09/gallery.html">
+<span class="md-ellipsis">
+    Egypt Gallery
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+<span class="md-ellipsis">
+    도쿄
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_6_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+            도쿄
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/tokyo/index.html">
+<span class="md-ellipsis">
+    어설펐던 도쿄 여행
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/tokyo/gallery.html">
+<span class="md-ellipsis">
+    Tokyo Gallery
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+<span class="md-ellipsis">
+    유럽 '07
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_7_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_7">
+<span class="md-nav__icon md-icon"></span>
+            유럽 '07
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/europe/index.html">
+<span class="md-ellipsis">
+    Europe with 40L Backpack
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/europe/001backpacking.html">
+<span class="md-ellipsis">
+    Backpacking
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/europe/002route.html">
+<span class="md-ellipsis">
+    Travel Route
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/europe/003expense.html">
+<span class="md-ellipsis">
+    Expense
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/europe/004depart.html">
+<span class="md-ellipsis">
+    to New York
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/europe/005newyorknewyork.html">
+<span class="md-ellipsis">
+    New York! New York!
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/europe/006passionateitaly.html">
+<span class="md-ellipsis">
+    Passionate Italy #1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/europe/007passionateitaly.html">
+<span class="md-ellipsis">
+    Passionate Italy #2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/europe/008wienpraha.html">
+<span class="md-ellipsis">
+    Wien? Prague!
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/europe/009fussen.html">
+<span class="md-ellipsis">
+    Füssen, Schuwangau
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/europe/010swiss.html">
+<span class="md-ellipsis">
+    Swiss #1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/europe/011swiss.html">
+<span class="md-ellipsis">
+    Swiss #2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/europe/012paris.html">
+<span class="md-ellipsis">
+    Romantic Paris #1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/europe/013paris.html">
+<span class="md-ellipsis">
+    Romantic Paris #2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/europe/014paris.html">
+<span class="md-ellipsis">
+    Romantic Paris #3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/europe/015paris.html">
+<span class="md-ellipsis">
+    Romantic Paris #4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/europe/016london.html">
+<span class="md-ellipsis">
+    Astor Victoria in London
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../travel/europe/gallery.html">
+<span class="md-ellipsis">
+    Europe Gallery
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+<span class="md-ellipsis">
+    캐나다 워홀
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_8_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_8">
+<span class="md-nav__icon md-icon"></span>
+            캐나다 워홀
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../working-holiday/index.html">
+<span class="md-ellipsis">
+    Canada Working Holiday
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../working-holiday/01visaget.html">
+<span class="md-ellipsis">
+    비자획득
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../working-holiday/02physicalcheckup.html">
+<span class="md-ellipsis">
+    신체검사
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../working-holiday/03anotherchance.html">
+<span class="md-ellipsis">
+    새로운 기회
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../working-holiday/04gotoamerica.html">
+<span class="md-ellipsis">
+    미국으로 가기
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../working-holiday/05essay.html">
+<span class="md-ellipsis">
+    지원동기서
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../working-holiday/06usefulinfo.html">
+<span class="md-ellipsis">
+    유용한 정보
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../working-holiday/07prepare.html">
+<span class="md-ellipsis">
+    준비할 것들
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../working-holiday/08usavisainterview.html">
+<span class="md-ellipsis">
+    미국비자 인터뷰
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../working-holiday/09ticket.html">
+<span class="md-ellipsis">
+    항공권 구하기
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../working-holiday/10pack.html">
+<span class="md-ellipsis">
+    짐싸기
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../working-holiday/11flytovancouver.html">
+<span class="md-ellipsis">
+    밴쿠버 날아가기
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../working-holiday/12victoria.html">
+<span class="md-ellipsis">
+    빅토리아 여행
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../working-holiday/13movetobanff.html">
+<span class="md-ellipsis">
+    밴프로 이동
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../working-holiday/14hikingtorundle.html">
+<span class="md-ellipsis">
+    Mt.Rundle 등산
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../working-holiday/15intothelakes.html">
+<span class="md-ellipsis">
+    into the Lakes
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../working-holiday/16snowboarding.html">
+<span class="md-ellipsis">
+    스노우보딩
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../working-holiday/17meetingfarewell.html">
+<span class="md-ellipsis">
+    만남, 그리고 이별
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../working-holiday/18meetingfarewell2.html">
+<span class="md-ellipsis">
+    만남, 그리고 이별 2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../working-holiday/19movetoanotherroom.html">
+<span class="md-ellipsis">
+    다른 방으로 이동
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../working-holiday/20workingpermitandimmigration.html">
+<span class="md-ellipsis">
+    워킹퍼밋, 그리고 이민
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../working-holiday/22advisetoworholer.html">
+<span class="md-ellipsis">
+    워홀러에게 중요한 10가지 조언
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../working-holiday/23finishingworkingholiday.html">
+<span class="md-ellipsis">
+    워홀을 마치며
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Hobby
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Hobby
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../motorcycle/index.html">
+<span class="md-ellipsis">
+    Motorcycle
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../camping/index.html">
+<span class="md-ellipsis">
+    Camping
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Nightsky
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_3">
+<span class="md-nav__icon md-icon"></span>
+            Nightsky
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sky/index.html">
+<span class="md-ellipsis">
+    Nightsky
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3_2" id="__nav_4_3_2_label" tabindex="0">
+<span class="md-ellipsis">
+    아카이브
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_3_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_3_2">
+<span class="md-nav__icon md-icon"></span>
+            아카이브
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sky/archive/2017.html">
+<span class="md-ellipsis">
+    2017
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sky/archive/2016.html">
+<span class="md-ellipsis">
+    2016
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sky/archive/2015.html">
+<span class="md-ellipsis">
+    2015
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sky/archive/2014.html">
+<span class="md-ellipsis">
+    2014
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sky/archive/2013.html">
+<span class="md-ellipsis">
+    2013
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sky/archive/2011.html">
+<span class="md-ellipsis">
+    2011
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../sky/archive/2010.html">
+<span class="md-ellipsis">
+    2010
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../eunchan/index.html">
+<span class="md-ellipsis">
+    About
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<div class="md-content__inner">
+<header class="md-typeset">
+<h1 id="log">Log</h1>
+</header>
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+<header class="md-post__header">
+<!-- Post authors -->
+<!-- Post metadata -->
+<div class="md-post__meta md-meta">
+<ul class="md-meta__list">
+<!-- Post date -->
+<li class="md-meta__item">
+<time datetime="2014-02-06 00:00:00">2014년 2월 6일</time></li>
+<!-- Post categories -->
+<li class="md-meta__item">
+            카테고리
+            
+              <a class="md-meta__link" href="../../category/living.html">living</a></li>
+<!-- Post readtime -->
+<li class="md-meta__item">
+            
+              읽는시간 1분
+            
+          </li>
+</ul>
+<!-- Draft marker -->
+</div>
+</header>
+<!-- Post content -->
+<div class="md-post__content md-typeset">
+<h2 id="paper-exam-for-driver-license"><a class="toclink" href="../../2014/driver-license-paper-exam.html">Paper Exam for Driver License</a></h2>
+<p>Social Security Number(SSN)가 어제 나오자마자 바로 오늘 운전면허 필기시험을 보러 DMV를 방문했습니다.
+최대한 빨리 운전면허증이 나와야 ID 역할을 하는 여권을 들고다니는 불편함이 사라지기에 조금 서둘렀습니다.
+저번 차량 등록시 방문한 DMV는 San Jose Downtown 인데 오늘은 Los Gatos에 있는 DMV로 갔습니다.
+9시에 도착하니 사람이 얼마 없어서 그다지 많이 기다리지 않고 시험을 치를 수 있었습니다.</p>
+<p>먼저 DMV 도착하면 Form을 하나 작성하고 그 후 번호표를 받은 다음 창구에서 응시료 $33 을 냅니다.
+그후 사진을 찍고 운전면서 시험지를 받아서 시험문제를 풀고 제출 후 결과를 기다리면 됩니다.
+간단하긴 한데 기다리는 사람들이 있으면 하염없이 시간이 걸리기도 한다고 하네요.
+아무튼 기출문제를 유심히 두세번 정도 보면 왠만큼 통과 할 수 있습니다.</p>
+<p>전 간 김에 Motorcycle 필기시험도 같이 보았는데, 모터사이클용 시험지는 한국어 시험지가 없고,
+게다가 기출문제를 찾을래야 찾을 수가 없어서 긴장하고 보았네요.
+총 30여 문제 중에 4문제 이하로 틀려야 통과인데, 딱 턱걸이 했습니다. :)</p>
+<p>통과 후 Instruction Permit 이 발급되거나 Temporal Driver License가 발급됩니다.
+퍼밋이 발급되었다면 <a href="http://www.dmv.ca.gov">DMV 웹사이트</a>에서 실기시험을 예약할 수 있으나,
+Temporal Driver License만 발급되었다면 전화로만 예약이 가능합니다.</p>
+<p>전 Temporal Driver License만 나와서 전화로 예약하느라 진땀을 흘렸네요.</p>
+<p>이제 Behind-the-wheel Test 보고 모터사이클 Basic Rider Course(BRC)만 들으면 운전면허는 해방입니다. ㅎㅎ</p>
+<!-- Continue reading link -->
+</div>
+</article>
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+<header class="md-post__header">
+<!-- Post authors -->
+<!-- Post metadata -->
+<div class="md-post__meta md-meta">
+<ul class="md-meta__list">
+<!-- Post date -->
+<li class="md-meta__item">
+<time datetime="2014-01-28 00:00:00">2014년 1월 28일</time></li>
+<!-- Post categories -->
+<li class="md-meta__item">
+            카테고리
+            
+              <a class="md-meta__link" href="../../category/living.html">living</a></li>
+<!-- Post readtime -->
+<li class="md-meta__item">
+            
+              읽는시간 1분
+            
+          </li>
+</ul>
+<!-- Draft marker -->
+</div>
+</header>
+<!-- Post content -->
+<div class="md-post__content md-typeset">
+<h2 id="rent-a-room"><a class="toclink" href="../../2014/rent-a-room.html">Rent a Room</a></h2>
+<p>실리콘벨리에 들어온지 벌써 이주가 되었습니다.
+아무것도 한 것이 없는 것 같은데 시간이 이주가 지나고 벌써 회사에서 일하고 있게 되었네요.
+그동안 한 것이라고는 은행 계좌 만들고 차량 구입한 것 뿐입니다.</p>
+<p>오늘, 가족이 오기 전까지 지낼 단칸방을 구했습니다.
+그동안 여러 집을 돌아다녔는데 가족이 언제 올지 몰라 6개월 미만으로 계약하려 했으나 번번히 실패했습니다.
+그러다 이번 집 주인분과는 이야기가 잘 되서 지내기로 결정하였습니다.</p>
+<p>오늘 집을 보러 갔는데, 집 주소를 찾아 갈수록 제가 잠시동안 머무는 산타클라라와는 분위기가 완전히 달라지더군요.
+가로수가 울창하고 산에 나무가 푸릅니다. (현재 산타클라라는 가뭄이 심해서 산이 민둥산 같습니다.)
+집에 도착하니 게이트가 가로막고 자동으로 열리는 게이트를 지나니 다시 차를 타고 언덕을 올라가야 합니다.
+코너를 돌아 보이는 집은 3층짜리 아주 큰 저택같은 집이었습니다.
+아이보리색 벽과 갈색 지붕으로 이루어진 멋진 집, 이정도 집을 소유할 정도면 꽤 큰 재력이 있어야 할 텐데 이런집에서 왠 렌트인가.. 싶은 생각이 들더군요.</p>
+<p>주인분을 만나서 소개를 받고 이리저리 둘러보는데 방 자체는 그다지 다를 건 없었습니다.
+그러나 언덕이 거의 없는 실리콘 벨리에서 언덕에 집이 위치해 있다보니 보이는 풍경이 참 아름다웠습니다.
+평지에 가득한 나무와 건물들, 낮게 깔린 안개가 있는 그 풍경이 참 마음에 들었습니다.</p>
+<p>이곳에서 몇달을 머물게 될 텐데 앞으로 로또가 터지지 않는 이상 못 살아볼 Los Altos의 분위기를 좀 느껴봐야겠습니다. :)</p>
+<h3 id="february-1-2014"><a class="toclink" href="../../2014/rent-a-room.html#february-1-2014">February 1, 2014</a></h3>
+<p>처음 이곳 방에 들어와서 잠을 자려고 합니다.
+침대에 기대어 컴퓨터를 보고 있는데 창 밖으로 산호세 야경이 펼쳐져 있네요.
+방 한켠이 전부 창이라 덕분에 약간 쌀쌀하긴 하지만 이 덕분에 멋진 풍경을 보면서 잠을 잘 수 있을 것 같습니다.
+주인 분의 인상도 좋으시고 방도 잘 정돈되어 있어 지내기 부족함이 없을 것 같습니다.</p>
+<p>이제 새벽 2시가 되니 어서 잠을 자야겠네요. :)</p>
+<!-- Continue reading link -->
+</div>
+</article>
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+<header class="md-post__header">
+<!-- Post authors -->
+<!-- Post metadata -->
+<div class="md-post__meta md-meta">
+<ul class="md-meta__list">
+<!-- Post date -->
+<li class="md-meta__item">
+<time datetime="2013-12-26 00:00:00">2013년 12월 26일</time></li>
+<!-- Post categories -->
+<li class="md-meta__item">
+            카테고리
+            
+              <a class="md-meta__link" href="../../category/living.html">living</a></li>
+<!-- Post readtime -->
+<li class="md-meta__item">
+            
+              읽는시간 1분
+            
+          </li>
+</ul>
+<!-- Draft marker -->
+</div>
+</header>
+<!-- Post content -->
+<div class="md-post__content md-typeset">
+<h2 id="last-day-at-samsung-electornics"><a class="toclink" href="../../2013/last-day-at-samsung.html">Last Day at Samsung Electornics</a></h2>
+<p>오늘이 삼성에서 마지막으로 일하는 날입니다.
+퇴사일은 12월 31일이지만 그사이 3일은 남은 연차를 사용하기에 오늘까지만 출근하면 되었습니다.
+이미 대부분의 짐을 정리했는데 사실 대부분이 보안에 걸리는 물품이라 가지고 나오지 못하고 폐기처분했고 정작 가지고 나오는 짐은 종이가방 하나에 가득 채우지도 못할만큼 작은 양이었습니다.</p>
+<p>2년반의 시간이 종이가방 하나로 압축이 되는 것 같아 마음이 심숭샘숭합니다.
+그래도 프로젝트는 제대로 마무리짓고 나가기에 그나마 다행이라는 생각이 듭니다.</p>
+<p>앞으로 일어날 일이 험난하겠지만 그래도 삼성에서 일했던 것을 생각하며 마음을 다잡으려고 합니다.</p>
+<p>때가되면 같이 일했던 동료 모두 알게 되겠죠.
+그 때 저를 원망할 지도 모르겠네요. :)</p>
+<!-- Continue reading link -->
+</div>
+</article>
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+<header class="md-post__header">
+<!-- Post authors -->
+<!-- Post metadata -->
+<div class="md-post__meta md-meta">
+<ul class="md-meta__list">
+<!-- Post date -->
+<li class="md-meta__item">
+<time datetime="2013-11-28 00:00:00">2013년 11월 28일</time></li>
+<!-- Post categories -->
+<li class="md-meta__item">
+            카테고리
+            
+              <a class="md-meta__link" href="../../category/living.html">living</a></li>
+<!-- Post readtime -->
+<li class="md-meta__item">
+            
+              읽는시간 2분
+            
+          </li>
+</ul>
+<!-- Draft marker -->
+</div>
+</header>
+<!-- Post content -->
+<div class="md-post__content md-typeset">
+<h2 id="resigned-from-samsung"><a class="toclink" href="../../2013/resigned-from-samsung.html">Resigned from Samsung</a></h2>
+<p>12월 31일은 2년 반 동안 다니던 삼성을 그만두는 날입니다.
+그동안 재미있는 일도 많았고, 짜증 나는 일도 많았었는데
+이 모든 것을 내려두고 이제 다시 삼성의 출입문에 사원증을 찍을 일이 없다는 것이 조금은 어색하게 느껴집니다.</p>
+<p>이전의 퇴사하는 사람은 참 쉽게 그만두는 것처럼 보였는데
+막상 제가 결심을 하기까지는 긴 시간이 필요했습니다.
+과거 그만두던 사람들도 또한 속으로는 그러했겠죠.
+남들이 하는 것은 쉬워 보여도 막상 제가 하려니 쉽지 않네요.</p>
+<p>이것이 회사를 그만두는 것에만 국한되지는 않는 것 같습니다.
+세상 모든 일이 다 그러하듯, 타인의 업적은 쉽게 성취한 것으로 보이고
+내 업적은 갖은 노력을 다해서 얻어낸 것처럼 느껴집니다.
+그러나 그 사람도 갖은 고생을 해가며, 밤새 머리를 긁적이며 고심하여 만들어낸 결과일 겁니다.</p>
+<p>퇴사를 결심하게 된 이유는 여러 가지가 있지만 아무래도 가장 큰 이유는 작업환경입니다.
+무계획일 것 같은 느낌을 주는 계획과 개발 중 급변하는 목표 성능 등 많은 부분이 체계적이지 못한 느낌을 받았습니다.
+연구과제라는 이유로 말도 안 되는 성능 목표치와 일정을 잡고,
+그 과제가 양산과제로 바뀌어도 결국 일정은 변하지 않았고,
+일정을 지키기 위해 미처 발견하지 못했던 것으로 인해 성능이 떨어지자 비난은 개발한 당사자에게 향했습니다.
+비록 프로젝트가 성공적으로 완료되고 시장에 좋은 평가를 받았지만,
+그 과정이 제게는 전혀 체계적이지 않게 보였습니다.</p>
+<p>삼성에서 일하는 동안 맘에 들지 않았던 것만은 아닙니다.
+일하는 그 자체는 재미있었습니다.
+새로운 제품을 설계하고 어떻게 성능을 높일지 토의하고 생각하고 구현하고 예측하고 결과를 보고 수정을 하는 과정에서 많이 배웠고 재미를 찾을 수 있었습니다.</p>
+<p>그래서 삼성이 고맙기도 하고 안타깝기도 합니다.
+위에서 말한 문제가 고쳐지기엔 긴 시간이 필요하기에 아쉬움을 접고 그만둘 결심을 하였습니다.
+그러나 그 2년 반 동안 해왔던 일을 통해 제가 성장하였고 많은 경험을 쌓은 것은 정말 다행입니다.
+적어도 헛된 시간은 보내지 않았으니까요.</p>
+<p>앞으로 어떤 길이 있을지 알지 못하지만 그래도 삼성에서의 2년 반은 쉽게 잊지는 못할 겁니다.</p>
+<p><img alt="2011년 7월 산청연수원에서" src="../../../media/blog/2013-11-28-sancheong.jpg"/></p>
+<!-- Continue reading link -->
+</div>
+</article>
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+<header class="md-post__header">
+<!-- Post authors -->
+<!-- Post metadata -->
+<div class="md-post__meta md-meta">
+<ul class="md-meta__list">
+<!-- Post date -->
+<li class="md-meta__item">
+<time datetime="2013-11-19 00:00:00">2013년 11월 19일</time></li>
+<!-- Post categories -->
+<!-- Post readtime -->
+<li class="md-meta__item">
+            
+              읽는시간 1분
+            
+          </li>
+</ul>
+<!-- Draft marker -->
+</div>
+</header>
+<!-- Post content -->
+<div class="md-post__content md-typeset">
+<h2 id="beginning"><a class="toclink" href="../../2013/beginning.html">Beginning</a></h2>
+<p>계속 위키 형식의 페이지만 고집해오다가 블로그를 한 번 만들어 보았습니다.
+아무래도 편하게 쓰는 블로그이다보니 개인사가 종종 들어갈 것 같네요.</p>
+<p>블로그를 만든 가장 큰 목적은 글쓰기 연습입니다.
+스스로 느끼기에 글쓰기 실력이 많이 부족하다고 생각되어,
+글쓰기를 자주 하기로 다짐했습니다.
+많이 읽고 많이 쓰는 것이 글쓰기 실력 향상에서 가장 중요하다고 믿습니다.</p>
+<!-- Continue reading link -->
+</div>
+</article>
+<nav class="md-pagination">
+<a class="md-pagination__link" href="../../index.html">1</a> <span class="md-pagination__dots">..</span> <a class="md-pagination__link" href="../7/index.html">7</a> <a class="md-pagination__link" href="../8/index.html">8</a> <span class="md-pagination__current">9</span>
+</nav>
+</div>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="하단/푸터" class="md-footer__inner md-grid">
+<a aria-label="이전: Tips and Tricks" class="md-footer__link md-footer__link--prev" href="../../../tips/index.html">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                이전
+              </span>
+<div class="md-ellipsis">
+                Tips and Tricks
+              </div>
+</div>
+</a>
+<a aria-label="다음: design" class="md-footer__link md-footer__link--next" href="../../category/design.html">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                다음
+              </span>
+<div class="md-ellipsis">
+                design
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2013 - 2024 Elijah Kim
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.tabs", "navigation.tabs.sticky", "content.action.edit", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}}</script>
+<script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+</body>
+</html>

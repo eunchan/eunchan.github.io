@@ -1,0 +1,1346 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Eli's Personal Website." name="description"/>
+<link href="https://www.eunchan.kim/research/att-bypass.html" rel="canonical"/>
+<link href="../feed_rss_created.xml" rel="alternate" title="RSS 피드 생성완료" type="application/rss+xml"/>
+<link href="../feed_rss_updated.xml" rel="alternate" title="RSS 피드 업데이트완료" type="application/rss+xml"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.5.41" name="generator"/>
+<title>AT&amp;T Fiber ONT/ RG Bypass - Eli Kim</title>
+<link href="../assets/stylesheets/main.0253249f.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../assets/stylesheets/extra-style.min.css" rel="stylesheet"/></head>
+<body data-md-color-accent="teal" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          콘텐츠로 이동
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<nav aria-label="상단/헤더" class="md-header__inner md-grid">
+<a aria-label="Eli Kim" class="md-header__button md-logo" data-md-component="logo" href=".." title="Eli Kim">
+<img alt="logo" src="../static/img/logo2.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Eli Kim
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              AT&amp;T Fiber ONT/ RG Bypass
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="검색" class="md-search__options">
+<button aria-label="지우기" class="md-search__icon md-icon" tabindex="-1" title="지우기" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            검색 초기화
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/eunchan/elijah.kim" title="저장소로 이동">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</div>
+<div class="md-source__repository">
+    eunchan/elijah.kim
+  </div>
+</a>
+</div>
+</nav>
+<nav aria-label="탭" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../article/index.html">
+          
+  
+  Articles
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../blog/index.html">
+          
+  
+  Journal
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../travel/index.html">
+          
+  
+  Travel
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../motorcycle/index.html">
+          
+  
+  Hobby
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../eunchan/index.html">
+        
+  
+    
+  
+  About
+
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden="">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="네비게이션" class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Eli Kim" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Eli Kim">
+<img alt="logo" src="../static/img/logo2.png"/>
+</a>
+    Eli Kim
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/eunchan/elijah.kim" title="저장소로 이동">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+</div>
+<div class="md-source__repository">
+    eunchan/elijah.kim
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Articles
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            Articles
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../article/index.html">
+<span class="md-ellipsis">
+    Posts
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="index.html">
+<span class="md-ellipsis">
+    Research
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../review/index.html">
+<span class="md-ellipsis">
+    Reviews
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tips/index.html">
+<span class="md-ellipsis">
+    Tips and Tricks
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Journal
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Journal
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../blog/index.html">
+<span class="md-ellipsis">
+    Log
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    아카이브
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            아카이브
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../blog/archive/2024.html">
+<span class="md-ellipsis">
+    2024
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../blog/archive/2023.html">
+<span class="md-ellipsis">
+    2023
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../blog/archive/2022.html">
+<span class="md-ellipsis">
+    2022
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../blog/archive/2021.html">
+<span class="md-ellipsis">
+    2021
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../blog/archive/2020.html">
+<span class="md-ellipsis">
+    2020
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../blog/archive/2019.html">
+<span class="md-ellipsis">
+    2019
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../blog/archive/2018.html">
+<span class="md-ellipsis">
+    2018
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../blog/archive/2017.html">
+<span class="md-ellipsis">
+    2017
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../blog/archive/2016.html">
+<span class="md-ellipsis">
+    2016
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../blog/archive/2015.html">
+<span class="md-ellipsis">
+    2015
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../blog/archive/2014.html">
+<span class="md-ellipsis">
+    2014
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../blog/archive/2013.html">
+<span class="md-ellipsis">
+    2013
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    카테고리
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+            카테고리
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../blog/category/design.html">
+<span class="md-ellipsis">
+    design
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../blog/category/home.html">
+<span class="md-ellipsis">
+    home
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../blog/category/living.html">
+<span class="md-ellipsis">
+    living
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../blog/category/motorcycle.html">
+<span class="md-ellipsis">
+    motorcycle
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Travel
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Travel
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/index.html">
+<span class="md-ellipsis">
+    Travel
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/norcal/index.html">
+<span class="md-ellipsis">
+    Travel Sites in Northern California
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+<span class="md-ellipsis">
+    하와이 '15
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+            하와이 '15
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/hawaii15/index.html">
+<span class="md-ellipsis">
+    Oahu Island in Hawaii
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/hawaii15/gallery.html">
+<span class="md-ellipsis">
+    Hawaii Gallery
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+<span class="md-ellipsis">
+    뉴질랜드 신혼여행 '10
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_4">
+<span class="md-nav__icon md-icon"></span>
+            뉴질랜드 신혼여행 '10
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/new-zealand/index.html">
+<span class="md-ellipsis">
+    Campervan in New Zealand
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/new-zealand/campervan.html">
+<span class="md-ellipsis">
+    Campervan
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/new-zealand/route.html">
+<span class="md-ellipsis">
+    Travel Route
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/new-zealand/log01.html">
+<span class="md-ellipsis">
+    크라이스트처치에 도착해서 오아마루로
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/new-zealand/log02.html">
+<span class="md-ellipsis">
+    모에라키, 오타고 반도
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/new-zealand/log03.html">
+<span class="md-ellipsis">
+    더니든, 캐틀린스
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/new-zealand/log04.html">
+<span class="md-ellipsis">
+    테아나우, 반딧불이 동굴
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/new-zealand/log05.html">
+<span class="md-ellipsis">
+    밀포드 사운드
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/new-zealand/log06.html">
+<span class="md-ellipsis">
+    퀸스타운
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/new-zealand/log07.html">
+<span class="md-ellipsis">
+    글레노키, 와나카
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/new-zealand/log08.html">
+<span class="md-ellipsis">
+    와나카에서 폭스빙하로
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/new-zealand/log09.html">
+<span class="md-ellipsis">
+    빙하투어, 호키티카
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/new-zealand/log10.html">
+<span class="md-ellipsis">
+    다시 크라이스트처치
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/new-zealand/epilogue.html">
+<span class="md-ellipsis">
+    에필로그
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/new-zealand/gallery-wide.html">
+<span class="md-ellipsis">
+    New-zealand Wide pictures
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/new-zealand/gallery.html">
+<span class="md-ellipsis">
+    New Zealand Gallery
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+<span class="md-ellipsis">
+    이집트 '09
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+            이집트 '09
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/egypt09/index.html">
+<span class="md-ellipsis">
+    Cairo, White Desert
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/egypt09/gallery.html">
+<span class="md-ellipsis">
+    Egypt Gallery
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+<span class="md-ellipsis">
+    도쿄
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_6_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+            도쿄
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/tokyo/index.html">
+<span class="md-ellipsis">
+    어설펐던 도쿄 여행
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/tokyo/gallery.html">
+<span class="md-ellipsis">
+    Tokyo Gallery
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+<span class="md-ellipsis">
+    유럽 '07
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_7_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_7">
+<span class="md-nav__icon md-icon"></span>
+            유럽 '07
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/europe/index.html">
+<span class="md-ellipsis">
+    Europe with 40L Backpack
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/europe/001backpacking.html">
+<span class="md-ellipsis">
+    Backpacking
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/europe/002route.html">
+<span class="md-ellipsis">
+    Travel Route
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/europe/003expense.html">
+<span class="md-ellipsis">
+    Expense
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/europe/004depart.html">
+<span class="md-ellipsis">
+    to New York
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/europe/005newyorknewyork.html">
+<span class="md-ellipsis">
+    New York! New York!
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/europe/006passionateitaly.html">
+<span class="md-ellipsis">
+    Passionate Italy #1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/europe/007passionateitaly.html">
+<span class="md-ellipsis">
+    Passionate Italy #2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/europe/008wienpraha.html">
+<span class="md-ellipsis">
+    Wien? Prague!
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/europe/009fussen.html">
+<span class="md-ellipsis">
+    Füssen, Schuwangau
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/europe/010swiss.html">
+<span class="md-ellipsis">
+    Swiss #1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/europe/011swiss.html">
+<span class="md-ellipsis">
+    Swiss #2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/europe/012paris.html">
+<span class="md-ellipsis">
+    Romantic Paris #1
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/europe/013paris.html">
+<span class="md-ellipsis">
+    Romantic Paris #2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/europe/014paris.html">
+<span class="md-ellipsis">
+    Romantic Paris #3
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/europe/015paris.html">
+<span class="md-ellipsis">
+    Romantic Paris #4
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/europe/016london.html">
+<span class="md-ellipsis">
+    Astor Victoria in London
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../travel/europe/gallery.html">
+<span class="md-ellipsis">
+    Europe Gallery
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+<span class="md-ellipsis">
+    캐나다 워홀
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_8_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_8">
+<span class="md-nav__icon md-icon"></span>
+            캐나다 워홀
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working-holiday/index.html">
+<span class="md-ellipsis">
+    Canada Working Holiday
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working-holiday/01visaget.html">
+<span class="md-ellipsis">
+    비자획득
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working-holiday/02physicalcheckup.html">
+<span class="md-ellipsis">
+    신체검사
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working-holiday/03anotherchance.html">
+<span class="md-ellipsis">
+    새로운 기회
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working-holiday/04gotoamerica.html">
+<span class="md-ellipsis">
+    미국으로 가기
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working-holiday/05essay.html">
+<span class="md-ellipsis">
+    지원동기서
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working-holiday/06usefulinfo.html">
+<span class="md-ellipsis">
+    유용한 정보
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working-holiday/07prepare.html">
+<span class="md-ellipsis">
+    준비할 것들
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working-holiday/08usavisainterview.html">
+<span class="md-ellipsis">
+    미국비자 인터뷰
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working-holiday/09ticket.html">
+<span class="md-ellipsis">
+    항공권 구하기
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working-holiday/10pack.html">
+<span class="md-ellipsis">
+    짐싸기
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working-holiday/11flytovancouver.html">
+<span class="md-ellipsis">
+    밴쿠버 날아가기
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working-holiday/12victoria.html">
+<span class="md-ellipsis">
+    빅토리아 여행
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working-holiday/13movetobanff.html">
+<span class="md-ellipsis">
+    밴프로 이동
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working-holiday/14hikingtorundle.html">
+<span class="md-ellipsis">
+    Mt.Rundle 등산
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working-holiday/15intothelakes.html">
+<span class="md-ellipsis">
+    into the Lakes
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working-holiday/16snowboarding.html">
+<span class="md-ellipsis">
+    스노우보딩
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working-holiday/17meetingfarewell.html">
+<span class="md-ellipsis">
+    만남, 그리고 이별
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working-holiday/18meetingfarewell2.html">
+<span class="md-ellipsis">
+    만남, 그리고 이별 2
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working-holiday/19movetoanotherroom.html">
+<span class="md-ellipsis">
+    다른 방으로 이동
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working-holiday/20workingpermitandimmigration.html">
+<span class="md-ellipsis">
+    워킹퍼밋, 그리고 이민
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working-holiday/22advisetoworholer.html">
+<span class="md-ellipsis">
+    워홀러에게 중요한 10가지 조언
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../working-holiday/23finishingworkingholiday.html">
+<span class="md-ellipsis">
+    워홀을 마치며
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Hobby
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Hobby
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../motorcycle/index.html">
+<span class="md-ellipsis">
+    Motorcycle
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../camping/index.html">
+<span class="md-ellipsis">
+    Camping
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Nightsky
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_3">
+<span class="md-nav__icon md-icon"></span>
+            Nightsky
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../sky/index.html">
+<span class="md-ellipsis">
+    Nightsky
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3_2" id="__nav_4_3_2_label" tabindex="0">
+<span class="md-ellipsis">
+    아카이브
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_3_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_4_3_2">
+<span class="md-nav__icon md-icon"></span>
+            아카이브
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../sky/archive/2017.html">
+<span class="md-ellipsis">
+    2017
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../sky/archive/2016.html">
+<span class="md-ellipsis">
+    2016
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../sky/archive/2015.html">
+<span class="md-ellipsis">
+    2015
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../sky/archive/2014.html">
+<span class="md-ellipsis">
+    2014
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../sky/archive/2013.html">
+<span class="md-ellipsis">
+    2013
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../sky/archive/2011.html">
+<span class="md-ellipsis">
+    2011
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../sky/archive/2010.html">
+<span class="md-ellipsis">
+    2010
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../eunchan/index.html">
+<span class="md-ellipsis">
+    About
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Tags -->
+<!-- Actions -->
+<a class="md-content__button md-icon" href="https://github.com/eunchan/elijah.kim/edit/main/docs/research/att-bypass.md" title="이 페이지를 편집">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"></path></svg>
+</a>
+<!--
+  Hack: check whether the content contains a h1 headline. If it doesn't, the
+  page title (or respectively site name) is used as the main headline.
+-->
+<h1>AT&amp;T Fiber ONT/ RG Bypass</h1>
+<!-- Source file information -->
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="마지막 업데이트">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024년 10월 15일</span>
+</span>
+<span class="md-source-file__fact">
+<span class="md-icon" title="작성일">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023년 8월 5일</span>
+</span>
+</aside>
+<!-- Page content -->
+<h2 id="_1">개요</h2>
+<p>저는 홈 인터넷을 <a href="https://att.com/fiber">AT&amp;T Fiber</a> 플랜을 사용하고 있습니다.
+운이 좋게도, 가정집인데도 광케이블이 집 앞까지 들어와서 4년째 사용중입니다.
+처음엔 300Mbps 플랜을 쓰다가, 코비드 기간동안 재택근무를 하게 되면서 1Gbps로
+업그레이드 해서 사용하고 있습니다.</p>
+<p>AT&amp;T 광케이블을 사용하면 하얀색 박스 (ONT)와 검은색 AT&amp;T
+게이트웨이(BGW210-700)가 제공됩니다. 요즘 신청하면 하얀색 덩치 큰
+게이트웨이(BGW320-500/505) 하나로 끝나는 것 같긴 한데, 제가 신청했을 땐 두
+기기를 연결해야만 했죠.</p>
+<p><img alt="AT&amp;T 광케이블 연결도" src="../media/page/research/att-bypass/att-topology-default.svg"/></p>
+<p>흰색 ONT 박스는 벽에 설치되어 광케이블 신호를 이더넷 신호로 변환시켜주는 역할을
+합니다. 검은색 게이트웨이는 이더넷 신호를 받아서 인증을 하고, 라우터 역할을
+하죠. Wifi 네트웍도 제공합니다.</p>
+<p>그러나 저는 이 기능이 마음에 들지 않아서 게이트웨이는 IP Passthrough 모드로 두고
+와이파이는 끈 후 내부에 라우터 (혹은 메시 네트웍 라우터)를 따로 두고
+사용했습니다. 게이트웨이의 와이파이 성능이 좋지도 않을 뿐더러, 메시 네트웍도
+되지 않고, Firewall 기능이나 필터링 기능이 부족해서 거추장스러웠죠.</p>
+<p>게이트웨이가 아무 역할을 하지 않다보니 이걸 켜 두는게 보기 그렇더군요. 부피도
+상당한 것도 있지만, 파워어댑터를 하나를 더 쓰고 있는 게 싫었습니다. ONT에서
+이더넷 케이블이 직접 나오니 그걸 라우터에 연결 해 보았지만, IP를 받아오질 못하고
+인터넷이 되질 않더군요. 검색을 좀 해 보니 802.1X 인증을 통과해야지만 인터넷을
+사용할 수 있다네요. 즉, AT&amp;T에서 제공한 게이트웨이를 쓰지 않으면 공용IP를 받아올
+수 없습니다. 게이트웨이를 떼버리고 싶어도 이 인증때문에 계속 쓸 수 밖에 없었죠.</p>
+<h2 id="_2">게이트웨이 없애기</h2>
+<p>몇년을 그렇게 사용해 왔습니다. 그러다 최근에 우연히 Gateway를 인터넷 라인에서 빼
+버리는 방법을 알게되었습니다.</p>
+<h3 id="vlan-0-forwarding">VLAN 0 Forwarding</h3>
+<p><img alt="AT&amp;T VLAN 0 Forwarding" src="../media/page/research/att-bypass/att-topology-forwarding.svg"/></p>
+<p>한가지 방법은, 고급 기능을 가지고 있는 라우터는 특정 패킷을 내부 디바이스로
+포워딩할 수 있습니다. 위에서 언급한 802.1X 인증은 VLAN ID 0로 들어오는 데, 이걸
+그림과 같이 게이트웨이로 포워딩 하면, 게이트웨이는 인증만 하고 IP를 받아오거나
+인터넷 트래픽을 라우팅하는 것은 개인 라우터에서 가능합니다.</p>
+<p>그러나 이 방법은 파워어댑터를 하나를 줄이지 못합니다. 그냥 게이트웨이의 제약을
+넘어서는 정도죠. pfSense 소프트웨어를 쓰는 라우터는 이 기능이 내장되어있습니다.
+AT&amp;T 게이트웨이를 내부 이더넷 포트 하나에 연결하고, 다른 내부 이더넷 포트에 일반
+스위치나 AP를 연결하면 인증용으로만 게이트웨이를 사용합니다.</p>
+<h3 id="_3">게이트웨이 인증</h3>
+<p>조금 더 발전된 방법은 게이트웨이가 하는 인증을 라우터가 대신 하는 방법입니다.
+네트웍 지식이 없는 사람은 따라하기 쉽진 않지만, 구성하고 나면 게이트웨이를
+완전히 없앨 수 있습니다.</p>
+<p><img alt="Gateway Certificate" src="../media/page/research/att-bypass/att-topology-certificate.svg"/></p>
+<p>802.1X 인증을 하기 위해선 인증서가 필요합니다. 이 인증서는 AT&amp;T 게이트웨이 안에
+저장되어 있죠. 이 인증서 데이터는 보통의 방법으로는 접근할 수 없습니다.
+게이트웨이를 루팅해서 관리자 권한을 얻은 후에 추출해 내거나, 아니면 기기를
+분해해서 인증서가 저장 된 플래시 장치를 디솔더링 한 후 얻어내야 합니다.</p>
+<p>전 루팅하는 방법을 시도했습니다. 인터넷에 몇가지 방법이 나와있는데 대부분
+펌웨어를 1.19.2로 다운그레이드 한 후 그 버전에 있는 취약점을 이용해서 루팅하는
+방법입니다.</p>
+<p>아쉽게도 제 게이트웨이는 최신 버전 (4.23.4)이라 다운그레이드가 되질 않더군요.
+그래서 포기하고 기기를 다른 것으로 바꾸었는 데, 나중에 성공 후에 보니
+4.23.4에서도 다운그레이드가 가능한 펌웨어 이미지가 있었습니다. (3.18.2_EN)</p>
+<h3 id="_4">인증파일 구입</h3>
+<p>만일 루팅이나 디솔더링이 어렵다면 이베이에서 50~80 달러 정도에 인증서를
+구입하셔도 됩니다. 인증서는 게이트웨이마다 고유한 데이터라서 중복이 되면
+안되는데, 판매하는 업자는 오래된 BGW210-700 게이트웨이를 구해서 인증서를 추출한
+후 파기하더군요.</p>
+<h3 id="_5">인증서를 라우터에서 사용하기</h3>
+<p>이렇게 받은 인증서 데이터를 <a href="https://github.com/iwleonards/extract-mfg">mfg_dat_decode</a>를 이용해서 <code>.pem</code> 파일로 변환해
+주면 됩니다. 이 인증파일로 802.1X 인증을 주기적으로 해 줘야 인터넷 연결을 유지할
+수 있습니다. 라우터중에 리눅스나 FreeBSD 운영체제가 실행되고, SSH 연결을
+지원하는 라우터들이 있습니다. 그런 라우터 안에서 <code>wpa_supplicant</code> 프로그램을
+실행해서 인증을 할 수 있습니다. 가능한 라우터는 <a href="https://store.ui.com/us/en/collections/unifi-dream-machine">Unifi Dream Machine</a> 시리즈나
+<a href="https://www.pfsense.org/">pfSense</a>, <a href="https://opnsense.org/">OPNsense</a>, <a href="https://firewalla.com/products/firewalla-gold">Firewalla</a> 같은 제품입니다.</p>
+<p><a href="https://github.com/iwleonards/extract-mfg">mfg_dat_decode</a> 를 실행하면 <code>wpa_supplicant.conf</code> 파일이 만들어지는 데, 이게
+<code>wpa_supplicant</code>를 실행하는 설정파일입니다. 각 라우터에 맞게 조금 수정을 한 후
+라우터에서 실행을 하면 인증이 되고 곧바로 IP를 받아 오게 됩니다. 게이트웨이 MAC
+주소와 라우터의 MAC 주소가 다르면 시간이 최대 20분 소요되니 미리 라우터 인터넷
+포트의 MAC 주소를 게이트웨이 MAC 주소로 변경하는 것을 추천합니다.</p>
+<p>이 단계까지만 진행해도 이미 충분히 쓸만합니다. 게이트웨이가 사라져서 연결이
+깔끔해졌고 라우터의 성능을 십분 발휘할 수 있습니다.</p>
+<p>여기에 더 나아가서 AT&amp;T ONT 까지 없앨 수도 있습니다.</p>
+<h2 id="ont">ONT와 게이트웨이 없애기</h2>
+<p>최종 버전으로는 ONT와 게이트웨이 모두 없애는 방법입니다. AT&amp;T 의 ONT 박스를
+없애고 광케이블용 소켓인 SFP+ 에 바로 연결하는 방법입니다. 이 방법은 라우터가
+SFP+ 포트를 가지고 있는 경우 (Unifi Dream Machine 등)에는 장점이 있습니다.
+라우터가 이더넷 포트 (RJ45)만 있을 경우엔 이 SFP+를 이더넷 신호로 변환해 주는
+Media Converter 장치가 필요해서 큰 이득은 없습니다.</p>
+<p><img alt="PON ONU" src="../media/page/research/att-bypass/att-topology-pon.svg"/></p>
+<p>Fiber 플랜이나 기타 상황에 따라 ONT 기기에서 인증이 이뤄질 수도 있고, 아니면
+AT&amp;T의 OLT (ONT가 연결되는 기기)에서 802.1X 인증이 될 수도 있습니다. ONT 단에서
+게이트웨이와 인증이 진행되는 경우라면, ONT를 바꿈으로써 더이상 인증이 필요 없을
+수도 있습니다.</p>
+<p>2Gbps, 5Gbps 플랜은 광케이블 통신에 XGS-PON 프로토콜을 사용합니다. 이 경우에는
+아래의 모듈(EN-XGSFPP-OMAC-V2)을 사용할 경우 인증이 필요하지 않습니다. 위의
+인증서를 추출하거나 구입할 필요가 없는거죠.</p>
+<p>1Gbps 이하의 플랜의 경우에는 복불복입니다. 1Gbps 이하의 플랜은 GPON 프로토콜을
+사용하는데 대부분은 인증이 필요합니다. 인증이 AT&amp;T 단에서 이뤄지기 때문에,
+라우터에서 인증서를 이용해 <code>wpa_supplicant</code>를 실행해야 합니다.</p>
+<p><img alt="DFP-34X-2C2" src="../media/page/research/att-bypass/dfp-34x-2c2.jpg"/></p>
+<p>DFP-34X-2C2 같은 SFP+ 소켓에 삽입하는 모듈이 GPON 프로토콜을 SFP로 바꿔줍니다.
+이 디바이스에 telnet이나 SSH로 접속해서 내부 정보를 AT&amp;T의 ONT 모듈과 동일하게
+바꿔주면 AT&amp;T에서는 자기 장비로 인식하고 인터넷을 접속할 수 있게 해 줍니다. 이
+과정을 OMCI Provision이라고 합니다. 자세한 정보는 아래 References 항목에 GPON
+링크를 따라가서 참조하시면 됩니다.</p>
+<p>2Gbps, 5Gbps는 XGS-PON 프로토콜을 사용한다고 언급했는데, 그 XGS-PON을 지원하는
+모듈은 EN-XGSFPP-OMAC-V2 같은 모듈이 있습니다. 방법은 GPON 모듈과 동일합니다.</p>
+<p>Serial Number, HW Version, SW Version을 잘 입력했다면, OMCI provision이 잘 되고
+인터넷을 사용할 수 있습니다. 위에서 언급했듯이, 라우터가 RJ45 이더넷 포트만
+있다면, SFP+를 이더넷으로 변환해주는 장치가 필요합니다.</p>
+<h3 id="firewalla">Firewalla</h3>
+<p>전 이 부분에서 많이 헤맸습니다. AT&amp;T ONT와 제 라우터 (Firewalla Gold)와 문제없이
+잘 동작했는데, GPON ONU와 연결하면 인증이 되질 않고 Timeout만 되더군요. 이런
+저런 방법을 써보고 했지만 며칠동안 성공하질 못했습니다.</p>
+<p>VLAN ID는 제대로 받아왔었는데, VLAN ID를 받아왔다는 것은 AT&amp;T에서 제 GPON ONU를
+잘 인식해서 할당해 줬다는 의미더군요. 그래서 문제는 802.1X 인증을 하는
+<code>wpa_supplicant</code> 프로그램의 문제였습니다.</p>
+<p>기존 AT&amp;T ONT를 이용해서 인증을 하면 802.1X 인증의 VLAN ID를 신경 쓸 필요가
+없다고 하네요. ONT 기기가 알아서 처리해 줍니다. 그러나 GPON ONU를 사용하게 되면
+wpa_supplicant도 VLAN ID를 잘 처리해야 합니다.</p>
+<p>해결 방법이 두가지가 있습니다.</p>
+<ol>
+<li>인증 프로그램을 패치해서 VLAN 0 트래픽도 잘 처리하게 만드는 것</li>
+<li>VLAN 0 가상인터페이스를 만들어서 VLAN 0 필드를 처리 후 인증 프로그램에 넘겨주는 것</li>
+</ol>
+<p>첫번째 방법은 재컴파일을 해야 합니다. 대신에 가상 인터페이스를 추가로 만들
+필요가 없으니 시스템 구성이 간단해 집니다. 두번째 방법은 가상 인터페이스를 하나
+더 추가해서 쓰지만, 프로그램을 패치할 필요가 없습니다. 다만 라우터마다 구성
+방법이 다르고, 재부팅 하면 다시 설정해야 하는 경우도 있습니다.</p>
+<p>저는 일단 임시로 두번째 방법으로 설정했습니다. 먼저 가상 인터넷을 하나 추가합니다.</p>
+<pre><code class="language-shell">$ sudo ip link add link eth0 name eth0.0 type vlan id 0
+$ sudo ip link set eth0.0 up
+</code></pre>
+<p>그리고 <code>wpa_supplicant</code>를 <code>eth0.0</code>에서 동작하게 다시 실행하고 DHCP 클라이언트는
+할당받은 vlan에서 실행되게 했습니다.</p>
+<p>이 과정을 거치고 나니 인증이 완료되고 제대로 공용 IP도 받아올 수 있었습니다.</p>
+<h2 id="_6">결론</h2>
+<p>글로는 짧지만 거의 일주일을 밤마다 씨름해가며 해결했네요. 나머지 과정은 꽤
+순조로웠지만 AT&amp;T ONT를 없애는 과정에서 <code>wpa_supplicant</code>가 패치 안되어 있는 지
+모르고 GPON ONU만 탓하며 그 쪽 설정만 계속 바꿔가며 시도한 게 문제였습니다.</p>
+<p><em>VlanFilterTypeData</em> (<code>omcicli mib get 84</code>)값을 받아오면 OMCI 인증이 잘 되었다는
+것을 의미하는 것만 알았어도 GPON ONU와 씨름하지 않고 <code>wpa_supplicant</code> 인증을 좀
+더 자세히 보았을 것 같네요. 그랬다면 답을 좀 더 일찍 찾았겠죠.</p>
+<p>그러나 아직은 media converter가 있어서, 원래의 목적인 어댑터 수를 줄이는 것은
+반만 성공입니다. 나중에, 지금 사용하는 <a href="https://firewalla.com/products/firewalla-gold">Firewalla</a> Gold가 SFP+ 포트를 달고
+출시되면 그 제품으로 업그레이드 해서 Media converter도 결국 없앨 수 있겠죠.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://docs.google.com/document/d/1gcT0sJKLmV816LK0lROCoywk9lXbPQ7l_4jhzGIgoTo/edit">PON Madness - AT&amp;T GPON ONT Cloning/Bypass</a></li>
+<li><a href="https://docs.google.com/document/d/1UIAgtxkImgFRwyaGDGtISD0JXnxWNvuuNDrnRac6wGc/">PON Madness - Bypass ISP XGS-PON ONT with...a stick?</a></li>
+<li><a href="https://github.com/Anime4000/RTL960x">Github Anime4000/RTL960x</a></li>
+</ul>
+<!-- Was this page helpful? -->
+<!-- Comment system -->
+<h2 id="__comments">댓글</h2>
+<script async="" crossorigin="anonymous" data-category="General" data-category-id="DIC_kwDOM4oq_s4Ci4pi" data-emit-metadata="0" data-input-position="bottom" data-lang="ko" data-mapping="pathname" data-reactions-enabled="1" data-repo="eunchan/elijah.kim" data-repo-id="R_kgDOM4oq_g" data-strict="0" data-theme="preferred_color_scheme" src="https://giscus.app/client.js">
+</script>
+<!-- Synchronize Giscus theme with palette -->
+<script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme)
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2013 - 2024 Elijah Kim
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer", "navigation.tabs", "navigation.tabs.sticky", "content.action.edit", "toc.integrate"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}}</script>
+<script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+</body>
+</html>
