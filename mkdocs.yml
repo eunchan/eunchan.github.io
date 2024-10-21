@@ -19,8 +19,8 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.expand
-    - navigation.path
-    - navigation.prune
+    # - navigation.path
+    # - navigation.prune
     # - navigation.indexes
     - content.action.edit
   palette:
