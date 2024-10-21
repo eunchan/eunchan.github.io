@@ -18,11 +18,18 @@ theme:
     - navigation.footer
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.expand
+    # expand: Open all collapsable in nav sidebar.
+    # - navigation.expand
+    # path: breadcrumb. Insiders only
     # - navigation.path
+    # prune: Remove other navigation further down to reduce the html size.
+    #  If true, quite hard to navigate in mobile page.
     # - navigation.prune
+    # indexes: First item is directly used as the link. Inconvenient if the first item is sub category item.
     # - navigation.indexes
     - content.action.edit
+    # toc.integrate: Combine nav and toc together.
+    - toc.integrate
   palette:
     scheme: default
     primary: white
