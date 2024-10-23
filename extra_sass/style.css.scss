@@ -65,6 +65,23 @@ $container-max-width: 850px;
     font-size: 0.9rem !important;
 }
 
+// Disable the font-size change when the screen is wide.
+@media screen and (min-width: 100em) {
+    html {
+        font-size: 125% !important;
+    }
+}
+@media screen and (min-width: 125em) {
+    html {
+        font-size: 125% !important;
+    }
+}
+// Display logo always.
+@media screen and (max-width: 76.2344em) {
+    .md-header__button.md-logo {
+        display: block;
+    }
+}
 /*
 // Heading a
 div.content {
