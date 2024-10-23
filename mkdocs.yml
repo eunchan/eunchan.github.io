@@ -13,6 +13,7 @@ theme:
   #  code: Monaspace Neon
   language: ko
   logo: static/img/logo2.png
+  favicon: static/img/favicon.png
   custom_dir: overrides
   features:
     - navigation.footer
