@@ -176,4 +176,4 @@ validation:
   absolute_links: relative_to_docs
   unrecognized_links: warn
   anchors: warn
-copyright: Copyright &copy; 2013 - 2024 Elijah Kim
+copyright: "&copy; 2013 Elijah Kim"
