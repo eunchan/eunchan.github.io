@@ -1161,6 +1161,103 @@
 <ul class="md-meta__list">
 <!-- Post date -->
 <li class="md-meta__item">
+<time datetime="2018-12-13 00:00:00">2018년 12월 13일</time></li>
+<!-- Post categories -->
+<li class="md-meta__item">
+            카테고리
+            
+              <a class="md-meta__link" href="../../category/design.html">design</a></li>
+<!-- Post readtime -->
+<li class="md-meta__item">
+            
+              읽는시간 2분
+            
+          </li>
+</ul>
+<!-- Draft marker -->
+</div>
+</header>
+<!-- Post content -->
+<div class="md-post__content md-typeset">
+<h2 id="specification-language"><a class="toclink" href="../../2018/specification.html">Specification Language</a></h2>
+<p>그동안 글이 뜸했었네요. 최근에 이직을 하게 되어서 정신이 없기도 했었고 (그런 것
+치고는 3월 이후로 글이 없긴 했네요 :) ) 회사노트북만 사용하면서 글을 쓸 환경을
+만드는 게 여의치 않았기도 했네요. 웹 브라우저를 켜고 바로 글을 쓸수 있는 환경이
+아니라 haskell도 설치해야 하고, static site generator도 컴파일 해야 하고, 키도
+만들어야 하고, 이미지 파일 싱크도 해야 하고 여러 복잡한 준비과정이 필요하다 보니
+아예 처음부터 발걸음이 떼지지 않았다고 할까요?</p>
+<p>얼마 전 날 잡고 작업을 했습니다. 이미지는 구글 드라이브에서 싱크하던 걸 아예
+도메인을 새로 파서 이미지는 따로 CDN 을 통해서 불러오게 바꿨구요. 회사 노트북
+보안 단계도 한단계 낮춰서 [Homebrew][]를 사용할 수 있게 해뒀네요.</p>
+<p>이런 과정을 거치고 나니 무언가 글을 하나라도 써야겠다는 의무감이 좀 생깁니다.
+그래서 오늘은 지인들과 모여서 이야기 했던걸 풀어놓을까 합니다.</p>
+<p>이전 회사에서 일할 때에는 문서를 작성할 상황이 많지 않았는데, 이직을 하고 난 후
+문서 작성, 그중에서 스펙문서(Specification)를 작성하는 경우가 많네요. 회사
+분위기가 다르다보니 일하는 방법도 많이 다르네요. 제가 영어권 사람이 아니다보니
+스펙 문서를 쓰는게 항상 부담이 많이 됩니다. 말도 제대로 못하는 외노자인데,
+문서로 다른사람을 이해하게 하는 글을 써야 하는게 정말 어렵더라구요.</p>
+<p>영어권 사람들과 스펙을 보완하고 수정해 가는게 정말 기나긴 시간이 걸립니다.
+하드웨어 디자인은 순식간에 만들었는데, 문서를 보완해가다보니 두달이 지나도
+문서가 완성될 기미가 안보이더라구요. 그러다 보니 힘들기도 하고, 지치기도 하고,
+무슨 좋은 방법이 없을까 지인들과 이야기를 하게 되었네요.</p>
+<p>그런 부분을 해결할 방법을 찾아보게 되면서 자연스레 영어 기술을 효과적으로 하는
+방법을 궁리하기 시작했습니다. 가장 중요한 것은 표현을 제약하는 것이더군요.
+스펙을 작성하거나 읽다보면 항상 접하는 조동사가 몇개 있는데, 이런 조동사는
+스펙에서 정해진 의미로만 쓰인다고 암묵적으로 합의 되어 있습니다. 그 조동사는
+shall, should, may 등이 있는데, 강제(mandatory)하는 것에서부터 점점
+추천(recommendation)하는 것까지 표현하려고 사용됩니다. <code>shall</code>은 반드시 지켜야
+하는 조건을 이야기하지요.</p>
+<p>이게 어디서 나왔는지 알아보니, <a href="https://www.ietf.org/rfc/rfc2119.txt">IETF RFC 2119</a>에서 제안된 내용이더군요. 그런데
+이 RFC를 만들 때 왜 조동사만 정의 했을까 의문이 들더군요. 이 제안을 할 때 문서의
+작성 규칙이나, 아니면 다른 부분까지 제한하는 것은 왜 하지 않았는지 궁금해집니다.</p>
+<p>그래서 그런 규칙을 만들어야 하나.. 고민하면서 이야기 하다보니, 차라리
+<a href="http://esperanto.net">Esperanto</a> 언어같이 단순한 규칙을 가지고 하나의 단어가 하나의 뜻만을 가지고
+있는 언어로 기술하는 것도 낫겠다.. 라는 생각도 해보고, 그러면 Esperanto와 1:1로
+매칭되는 단어사전을 이용해서 그 단어만 가지고 영어로 기술하는 것도 괜찮지
+않을까? 하는 이야기도 했네요.</p>
+<p>그러다 링크를 하나 받았는데, 이미 20년 전에 그에 관해 토의가 꽤 있었더군요. 꽤
+다양한 스펙 언어가 이미 공개되어 있었네요. 대략 훑어보니 저희가 의도한 것과
+비슷하게 단어와 표현법을 제약하는 게 주된 방법인 것 같습니다.</p>
+<p>그중에 <a href="http://attempto.ifi.uzh.ch/site/">Attempo Controlled English</a>가 꽤
+눈길을 끕니다. 이제 문서를 읽어보기 시작하는데, 저희의 의도와 비슷한 말을 하고
+있다보니 더 관심이 가나봅니다.</p>
+<p>제 메니져에게 지나가는 듯이 말했더니, 아니나 다를까 영어 네이티브인 메니져는
+아무런 관심이 없군요. 영어로 글을 쓰는게 물 흐르듯이 되다보니 이런 것에 관심이
+갈 리가... 그래서 그런지 ACE도 스위스 취리히 대학에서 만든거군요.</p>
+<p>역시 영어 네이티브가 아니여야 이런 궁리를 하는거구나... 싶네요.</p>
+<!-- Continue reading link -->
+</div>
+</article>
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+<header class="md-post__header">
+<!-- Post authors -->
+<!-- Post metadata -->
+<div class="md-post__meta md-meta">
+<ul class="md-meta__list">
+<!-- Post date -->
+<li class="md-meta__item">
 <time datetime="2018-06-19 00:00:00">2018년 6월 19일</time></li>
 <!-- Post categories -->
 <li class="md-meta__item">
@@ -1803,127 +1900,6 @@ DeWalt string trimmer의 단점이라고 하면 가장자리를 편하게 자르
 <a href="../../2017/pitfall-of-design-change.html">이전 글</a>에서도 언급한 것이지만, <strong>꼼꼼함</strong>이 정말 중요하다는 거죠.</p>
 <p>일을 하다보면, 창의적인 능력이 중요한 분야도 더러 있지만, 실수없이 해내야 하는 일이 더 많다는 것을 느낍니다.
 이 글을 쓴 임백준님도 비슷한 생각이신 것 같네요.</p>
-<!-- Continue reading link -->
-</div>
-</article>
-<!--
-  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-<!-- Post excerpt -->
-<article class="md-post md-post--excerpt">
-<header class="md-post__header">
-<!-- Post authors -->
-<!-- Post metadata -->
-<div class="md-post__meta md-meta">
-<ul class="md-meta__list">
-<!-- Post date -->
-<li class="md-meta__item">
-<time datetime="2017-06-14 00:00:00">2017년 6월 14일</time></li>
-<!-- Post categories -->
-<li class="md-meta__item">
-            카테고리
-            
-              <a class="md-meta__link" href="../../category/design.html">design</a></li>
-<!-- Post readtime -->
-<li class="md-meta__item">
-            
-              읽는시간 3분
-            
-          </li>
-</ul>
-<!-- Draft marker -->
-</div>
-</header>
-<!-- Post content -->
-<div class="md-post__content md-typeset">
-<h2 id="pitfall-of-design-change"><a class="toclink" href="../../2017/pitfall-of-design-change.html">Pitfall of Design Change</a></h2>
-<p>하드웨어 설계는 한번 실수에 대한 비용이 정말 큰 것 같습니다.
-공정이 세밀화 되면서 실수 하나로 인해 작게는 Metal ECO에서 크게는 Re-synthesis 까지 가게 되면 비용은 수십억이 소요될 수도 있죠.</p>
-<p>최근에 겪었던 일화를 하나 소개할까 합니다.</p>
-<p>새로운 프로젝트가 진행되면서 기존에 있던 디자인을 개선을 하게 되었습니다.
-이 모듈은 주변의 몇몇 모듈과 서로 신호를 주고 받고 있었죠.
-개선을 하면서, 내보내는 신호의 특성을 바꾸게 되었는데, 이 수정되는 부분을 통신하는 반대편 모듈에도 적용을 하였습니다.
-이상없이 잘 동작하는 것을 보고 칩을 Tape-out했죠.</p>
-<p>문제는 다른데서 터집니다.
-또다른 개선버전 프로젝트가 Original project에서 갈라져 나오게 되었는데,
-이 프로젝트에서 개선된 디자인을 <strong>하나만</strong> 가져다 쓰게 된거죠.
-서로 바뀐 프로토콜을 이해하고 수정된 디자인이 아니니, 기존 디자인은 예전 방식으로 신호가 올 것이라 기대를 하고 새로운 디자인은 새로 정의된 방식으로 신호를 주게 됩니다.</p>
-<p>일반적인 상황에서는 이 부분이 보이지 않았으나 예외의 상황 -- 버퍼가 가득찼다던지, 버퍼가 비었다던지 -- 에서 문제가 발생합니다.
-결국 이 프로젝트도 칩이 이미 나와버려서, 이 부분을 수정하려면 Metal ECO 외에는 선택지가 없었고 큰 비용을 지불하고 새로운 마스크를 만들어야만 했습니다.</p>
-<h3 id="_1"><a class="toclink" href="../../2017/pitfall-of-design-change.html#_1">어떻게 미리 막을 수 있을까요?</a></h3>
-<p>어떻게 이런 불상사를 미리 막을 수 있을까요?</p>
-<h4 id="design-stage"><a class="toclink" href="../../2017/pitfall-of-design-change.html#design-stage">Design Stage</a></h4>
-<p>일단, 디자인 단계에서부터 차근차근 방법을 생각해 봅시다.
-디자인을 할 때, 양쪽 어디든 한 곳에서 <a href="https://www.doulos.com/knowhow/sysverilog/tutorial/assertions/">SVA(System Verilog Assertion)</a>을 사용 해, 기대하는 신호의 특성을 기술했었다면 디자인을 검증하는 단계에서 이 문제를 미리 찾을 수 있었을 겁니다.
-예를 들면, 신호가 <code>req/grant</code> 방식에서 <code>pulse</code> 방식으로 바뀌었다고 하면, 양쪽의 SVA는 이렇게 달랐을 겁니다.</p>
-<pre><code class="language-verilog">// Old Design (In)
-property p_req_grant;
-    @(posedge clk) disable iff (!rst_n) I_REQ |-&gt; ##[1:3] I_REQ &amp;&amp; O_GRANT;
-endproperty
-ap_req_grant: assert property (p_req_grant);
-</code></pre>
-<pre><code class="language-verilog">// New Design (Out)
-property p_pulse;
-    @(posedge clk) disable iff (!rst_n) O_REQ |-&gt; ##1 !O_REQ;
-endproperty
-ap_pulse: assert property (p_pulse);
-</code></pre>
-<p>그러면, 받는 쪽에서 의도하지 않은 신호가 왔을 경우 Assertion Error가 났을겁니다.</p>
-<p>다른 한 방법은 신호의 특성이 바뀌었으니 port 이름도 바꾸었다면 두 디자인을 엮을 때 발견할 수도 있었을 겁니다.
-위의 예를 들면 <code>O_REQ</code>가 <code>O_REQ_PULSE</code> 로 바뀌는 것을 예로 들 수 있겠네요.</p>
-<h4 id="ip-verification-soc-verification"><a class="toclink" href="../../2017/pitfall-of-design-change.html#ip-verification-soc-verification">IP Verification, SoC Verification</a></h4>
-<p>만일 디자인 단계에서 이 부분을 걸러내지 못했다면, 그 다음에 있을 검증 단계에서는 어떻게 찾을 수 있었을까요?
-IP 검증이나 SoC 검증에서 <a href="http://www.asic-world.com/systemverilog/coverage1.html">Functional Coverage</a>가 잘 기술되어 있었다면, 이 문제를 발견할 수 있었으리라 봅니다.
-너무나 단순한 실수임에도 불구하고, 그 상황이 예외적인 상황이었다면 그 문제를 발견하지 못하고 진행될 경우가 많습니다.</p>
-<p>그러나 시작은 이 한 부분이었을지라도 그것에 영향을 끼치는 부분은 꽤 많이 있습니다.
-위에서 예를 들었던, 버퍼가 가득찬 상태를 보죠.</p>
-<p>만일 <code>covgroup</code>이 buffer full 상태를 포함하고 있었다면, 검증 엔지니어가 coverage report에서 부족한 부분을 발견하고 해당 testcase를 추가했을 겁니다.
-그러면 문제가 조기 발견될 수 있었겠죠.</p>
-<pre><code class="language-verilog">covergroup buffer @(posedge push_req);
-    full: coverpoint buf_full {
-        bins not_full = {0};
-        bins full     = {1};
-    }
-    empty: coverpoint buf_empty {
-        bins not_empty = {0};
-        bins empty     = {1};
-    }
-endgroup
-</code></pre>
-<h3 id="closing"><a class="toclink" href="../../2017/pitfall-of-design-change.html#closing">Closing</a></h3>
-<p>디자인을 할 때에나, 디자인을 수정할 때에 엔지니어에게 가장 중요한 것은 아무리 봐도 <strong>꼼꼼함</strong> 인 것 같습니다.
-저도 시간에 쫓기며 워낙에 덜렁대다보니 이런 저런 실수를 종종 해왔는데요.
-저부터 반성을 많이 하게 됩니다.</p>
-<p>하드웨어 디자인 엔지니어 대부분이 systemverilog의 <code>assertion</code> 이나 <code>covergroup</code>을 들어본 적도 없다는 사실에 깜짝 놀랄 때가 많습니다.
-이미 수십년간 하드웨어 디자인 언어가 발전해 오면서 가장 빈번하게 발생하는 사람에 의한 실수를 막을 수 있는 많은 방법이 언어에 녹아들어있습니다.
-이런 새롭게 추가된 기능을 툴이 허용하는 한도 내에서 충분히 활용한다면, <strong>꼼꼼함</strong>이 부족한 저같은 사람에게 큰 도움이 될 것 같네요.</p>
-<p>새로운 기능을 시도할 때 주의할 점은, 이 기능이 현재의 디자인 프로세스에 모두 적용될 수 있는 지 검토하는 것 일것 같습니다.
-SystemVerilog 가 Hardware Description 기능도 많이 추가되었는데, 그 중 몇몇은 현행 버전 도구에서도 아직 지원하지 않는 것이 있습니다.
-이게 Design Compiler가 지원을 하지 않으면 합성 전에 수정이 되어 괜찮은데, Design Compiler는 지원을 하고, FPGA Synthesis 도구는 지원을 하지 않거나, LEC(Logic Equivalent Check) 도구가 지원을 하지 않게 되면 나중에 이러지도 저러지도 못하는 상황이 발생할 수 있습니다.</p>
-<p>모두 꼼꼼함을 최 우선 덕목으로 삼고 버그 없는 칩을 잘 만들어 봐요.</p>
-<h3 id="reference"><a class="toclink" href="../../2017/pitfall-of-design-change.html#reference">Reference</a></h3>
-<ul>
-<li><a href="https://www.doulos.com/knowhow/sysverilog/tutorial/assertions/">SystemVerilog Assertions</a></li>
-<li><a href="http://www.asic-world.com/systemverilog/coverage1.html">Functional Coverage</a></li>
-</ul>
 <!-- Continue reading link -->
 </div>
 </article>

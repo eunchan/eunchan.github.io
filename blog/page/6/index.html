@@ -1161,6 +1161,127 @@
 <ul class="md-meta__list">
 <!-- Post date -->
 <li class="md-meta__item">
+<time datetime="2017-06-14 00:00:00">2017년 6월 14일</time></li>
+<!-- Post categories -->
+<li class="md-meta__item">
+            카테고리
+            
+              <a class="md-meta__link" href="../../category/design.html">design</a></li>
+<!-- Post readtime -->
+<li class="md-meta__item">
+            
+              읽는시간 3분
+            
+          </li>
+</ul>
+<!-- Draft marker -->
+</div>
+</header>
+<!-- Post content -->
+<div class="md-post__content md-typeset">
+<h2 id="pitfall-of-design-change"><a class="toclink" href="../../2017/pitfall-of-design-change.html">Pitfall of Design Change</a></h2>
+<p>하드웨어 설계는 한번 실수에 대한 비용이 정말 큰 것 같습니다.
+공정이 세밀화 되면서 실수 하나로 인해 작게는 Metal ECO에서 크게는 Re-synthesis 까지 가게 되면 비용은 수십억이 소요될 수도 있죠.</p>
+<p>최근에 겪었던 일화를 하나 소개할까 합니다.</p>
+<p>새로운 프로젝트가 진행되면서 기존에 있던 디자인을 개선을 하게 되었습니다.
+이 모듈은 주변의 몇몇 모듈과 서로 신호를 주고 받고 있었죠.
+개선을 하면서, 내보내는 신호의 특성을 바꾸게 되었는데, 이 수정되는 부분을 통신하는 반대편 모듈에도 적용을 하였습니다.
+이상없이 잘 동작하는 것을 보고 칩을 Tape-out했죠.</p>
+<p>문제는 다른데서 터집니다.
+또다른 개선버전 프로젝트가 Original project에서 갈라져 나오게 되었는데,
+이 프로젝트에서 개선된 디자인을 <strong>하나만</strong> 가져다 쓰게 된거죠.
+서로 바뀐 프로토콜을 이해하고 수정된 디자인이 아니니, 기존 디자인은 예전 방식으로 신호가 올 것이라 기대를 하고 새로운 디자인은 새로 정의된 방식으로 신호를 주게 됩니다.</p>
+<p>일반적인 상황에서는 이 부분이 보이지 않았으나 예외의 상황 -- 버퍼가 가득찼다던지, 버퍼가 비었다던지 -- 에서 문제가 발생합니다.
+결국 이 프로젝트도 칩이 이미 나와버려서, 이 부분을 수정하려면 Metal ECO 외에는 선택지가 없었고 큰 비용을 지불하고 새로운 마스크를 만들어야만 했습니다.</p>
+<h3 id="_1"><a class="toclink" href="../../2017/pitfall-of-design-change.html#_1">어떻게 미리 막을 수 있을까요?</a></h3>
+<p>어떻게 이런 불상사를 미리 막을 수 있을까요?</p>
+<h4 id="design-stage"><a class="toclink" href="../../2017/pitfall-of-design-change.html#design-stage">Design Stage</a></h4>
+<p>일단, 디자인 단계에서부터 차근차근 방법을 생각해 봅시다.
+디자인을 할 때, 양쪽 어디든 한 곳에서 <a href="https://www.doulos.com/knowhow/sysverilog/tutorial/assertions/">SVA(System Verilog Assertion)</a>을 사용 해, 기대하는 신호의 특성을 기술했었다면 디자인을 검증하는 단계에서 이 문제를 미리 찾을 수 있었을 겁니다.
+예를 들면, 신호가 <code>req/grant</code> 방식에서 <code>pulse</code> 방식으로 바뀌었다고 하면, 양쪽의 SVA는 이렇게 달랐을 겁니다.</p>
+<pre><code class="language-verilog">// Old Design (In)
+property p_req_grant;
+    @(posedge clk) disable iff (!rst_n) I_REQ |-&gt; ##[1:3] I_REQ &amp;&amp; O_GRANT;
+endproperty
+ap_req_grant: assert property (p_req_grant);
+</code></pre>
+<pre><code class="language-verilog">// New Design (Out)
+property p_pulse;
+    @(posedge clk) disable iff (!rst_n) O_REQ |-&gt; ##1 !O_REQ;
+endproperty
+ap_pulse: assert property (p_pulse);
+</code></pre>
+<p>그러면, 받는 쪽에서 의도하지 않은 신호가 왔을 경우 Assertion Error가 났을겁니다.</p>
+<p>다른 한 방법은 신호의 특성이 바뀌었으니 port 이름도 바꾸었다면 두 디자인을 엮을 때 발견할 수도 있었을 겁니다.
+위의 예를 들면 <code>O_REQ</code>가 <code>O_REQ_PULSE</code> 로 바뀌는 것을 예로 들 수 있겠네요.</p>
+<h4 id="ip-verification-soc-verification"><a class="toclink" href="../../2017/pitfall-of-design-change.html#ip-verification-soc-verification">IP Verification, SoC Verification</a></h4>
+<p>만일 디자인 단계에서 이 부분을 걸러내지 못했다면, 그 다음에 있을 검증 단계에서는 어떻게 찾을 수 있었을까요?
+IP 검증이나 SoC 검증에서 <a href="http://www.asic-world.com/systemverilog/coverage1.html">Functional Coverage</a>가 잘 기술되어 있었다면, 이 문제를 발견할 수 있었으리라 봅니다.
+너무나 단순한 실수임에도 불구하고, 그 상황이 예외적인 상황이었다면 그 문제를 발견하지 못하고 진행될 경우가 많습니다.</p>
+<p>그러나 시작은 이 한 부분이었을지라도 그것에 영향을 끼치는 부분은 꽤 많이 있습니다.
+위에서 예를 들었던, 버퍼가 가득찬 상태를 보죠.</p>
+<p>만일 <code>covgroup</code>이 buffer full 상태를 포함하고 있었다면, 검증 엔지니어가 coverage report에서 부족한 부분을 발견하고 해당 testcase를 추가했을 겁니다.
+그러면 문제가 조기 발견될 수 있었겠죠.</p>
+<pre><code class="language-verilog">covergroup buffer @(posedge push_req);
+    full: coverpoint buf_full {
+        bins not_full = {0};
+        bins full     = {1};
+    }
+    empty: coverpoint buf_empty {
+        bins not_empty = {0};
+        bins empty     = {1};
+    }
+endgroup
+</code></pre>
+<h3 id="closing"><a class="toclink" href="../../2017/pitfall-of-design-change.html#closing">Closing</a></h3>
+<p>디자인을 할 때에나, 디자인을 수정할 때에 엔지니어에게 가장 중요한 것은 아무리 봐도 <strong>꼼꼼함</strong> 인 것 같습니다.
+저도 시간에 쫓기며 워낙에 덜렁대다보니 이런 저런 실수를 종종 해왔는데요.
+저부터 반성을 많이 하게 됩니다.</p>
+<p>하드웨어 디자인 엔지니어 대부분이 systemverilog의 <code>assertion</code> 이나 <code>covergroup</code>을 들어본 적도 없다는 사실에 깜짝 놀랄 때가 많습니다.
+이미 수십년간 하드웨어 디자인 언어가 발전해 오면서 가장 빈번하게 발생하는 사람에 의한 실수를 막을 수 있는 많은 방법이 언어에 녹아들어있습니다.
+이런 새롭게 추가된 기능을 툴이 허용하는 한도 내에서 충분히 활용한다면, <strong>꼼꼼함</strong>이 부족한 저같은 사람에게 큰 도움이 될 것 같네요.</p>
+<p>새로운 기능을 시도할 때 주의할 점은, 이 기능이 현재의 디자인 프로세스에 모두 적용될 수 있는 지 검토하는 것 일것 같습니다.
+SystemVerilog 가 Hardware Description 기능도 많이 추가되었는데, 그 중 몇몇은 현행 버전 도구에서도 아직 지원하지 않는 것이 있습니다.
+이게 Design Compiler가 지원을 하지 않으면 합성 전에 수정이 되어 괜찮은데, Design Compiler는 지원을 하고, FPGA Synthesis 도구는 지원을 하지 않거나, LEC(Logic Equivalent Check) 도구가 지원을 하지 않게 되면 나중에 이러지도 저러지도 못하는 상황이 발생할 수 있습니다.</p>
+<p>모두 꼼꼼함을 최 우선 덕목으로 삼고 버그 없는 칩을 잘 만들어 봐요.</p>
+<h3 id="reference"><a class="toclink" href="../../2017/pitfall-of-design-change.html#reference">Reference</a></h3>
+<ul>
+<li><a href="https://www.doulos.com/knowhow/sysverilog/tutorial/assertions/">SystemVerilog Assertions</a></li>
+<li><a href="http://www.asic-world.com/systemverilog/coverage1.html">Functional Coverage</a></li>
+</ul>
+<!-- Continue reading link -->
+</div>
+</article>
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+<header class="md-post__header">
+<!-- Post authors -->
+<!-- Post metadata -->
+<div class="md-post__meta md-meta">
+<ul class="md-meta__list">
+<!-- Post date -->
+<li class="md-meta__item">
 <time datetime="2017-06-08 00:00:00">2017년 6월 8일</time></li>
 <!-- Post categories -->
 <li class="md-meta__item">
@@ -1798,140 +1919,6 @@ pull request 전에 이 small regression을 통과하고 (아니면 적어도 co
 <p>3년동안 있었던 많은 일들이 추억으로 느껴질 만큼 아련하면서도 눈을 감으면 떠오를 만큼 선명하네요.
 지나온 3년이 우리 가족에게 적응의 시간이어서 힘든 때도 있었지만, 그래도 나름 좋은 일이 가득했었던것 같습니다.
 그래서, 앞으로 얼마나 길게 미국에 거주하게 될 지 모르겠지만, 앞으로의 시간도 좋은 일만 가득할 것 같다는 생각이 드네요.</p>
-<!-- Continue reading link -->
-</div>
-</article>
-<!--
-  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-<!-- Post excerpt -->
-<article class="md-post md-post--excerpt">
-<header class="md-post__header">
-<!-- Post authors -->
-<!-- Post metadata -->
-<div class="md-post__meta md-meta">
-<ul class="md-meta__list">
-<!-- Post date -->
-<li class="md-meta__item">
-<time datetime="2016-12-15 00:00:00">2016년 12월 15일</time></li>
-<!-- Post categories -->
-<!-- Post readtime -->
-<li class="md-meta__item">
-            
-              읽는시간 3분
-            
-          </li>
-</ul>
-<!-- Draft marker -->
-</div>
-</header>
-<!-- Post content -->
-<div class="md-post__content md-typeset">
-<h2 id="2016"><a class="toclink" href="../../2016/stuff-in-2016.html">2016년도 지름 결산</a></h2>
-<p>작년에 <a href="../../2015/stuff-in-2015.html">2015년도 지름 결산</a> 글을 쓴 적이 있습니다.
-올해도 지름 결산을 해보려고 합니다.</p>
-<p>임의 순서입니다.</p>
-<ol>
-<li>
-<p>[Orion 8 inch Dobsonian Telescope][xt8]</p>
-<p><img alt="" src="../../../media/sky/equipt/orion-xt8.png"/></p>
-<p>미국와서 벼르고 벼르던 돕소니안 망원경을 사서 뒷마당에서 성운, 성단을 훑고 있습니다.
-생각만큼 어두운 하늘은 아니라 은하는 잘 보이진 않지만, 그래도 충분히 가치를 하는 중입니다.</p>
-</li>
-<li>
-<p>Costco Industrial Rack</p>
-<p><img alt="" src="../../../media/blog/2016_stuff/costco-whale-industrial-rack.jpg"/></p>
-<p>렌트를 옮기고 개러지에 적재할 선반용으로 구입했습니다.
-무거운 무게가 말해 주듯, 아주 튼튼하고 지진에도 버텨낼 것 같은 모습입니다.</p>
-</li>
-<li>
-<p>Ryobi 18V Drill</p>
-</li>
-<li>
-<p>Fire Starter (Chimny)</p>
-</li>
-<li>
-<p>Skywalker 12ft Trampoline</p>
-<p><img alt="" src="../../../media/blog/2016_stuff/skywalker-trampoline.jpg"/></p>
-<p>이사를 한 김에 넓은 뒷마당을 채우려고 구입하였습니다.
-아이들이 정말 좋아하고, 다른 가정을 초대했을 때 아이들이 놀면서 시간을 보낼 수 있어서 아주 잘 구입한 것 같아요.
-가격은 조금 비싸지만 ($249) 그만큼 가치는 하는 것 같네요.</p>
-</li>
-<li>
-<p>[Amazon Echo][alexa] + TP-Link Kasa</p>
-<p>보이스로 명령을 내리는 게 얼마나 유용할까 란 의구심으로 기기를 사용했으나, 실제로는 꽤 만족하며 사용중입니다.
-일단 아이들이 궁금해 하는 것을 이민자인 제가 잘 모르는게 있는데 검색을 해도 되지만 간단하게 Alexa에게 물어봐도 되고, 기타 소소한 기능들과 IoT 기기를 연동하는 기능이 풍부해서 이것 저것 종종 사용하게 되네요.</p>
-</li>
-<li>
-<p>[Google Home][google-home]</p>
-<p><img alt="" src="../../../media/page/review/google-home.jpg"/></p>
-<p>2016년 10월 Google I/O에서 구글 홈이 발표되었습니다.
-자칭 구글빠라서 일단 아마존 에코와 비교해 보기 위해 주문하였습니다.
-아마존 에코와 거의 기능상으로 동일하지만, 아직 IoT 와 연동은 부족합니다.
-Nest, Phillips Hue, Samsung Smartthings 정도만 지원이 되서 기존에 있던 TP-Link Smart plug를 사용하지 못하네요.
-다만, Youtube Red, Google Assistant, Google Cast를 구글홈과 연동해서 쓸 수 있는 점은 큰 장점입니다.</p>
-</li>
-<li>
-<p>Canon PIXMA MX922 Wireless All-in-One Printer</p>
-<p>생각보다 큰 덩치에 놀라긴 했지만, 인쇄 품질도 좋고, ADF 까지 있어서 자동으로 여러장 스캔이 가능하니 정말 편합니다.
-Google Cloud Print도 지원하고, Apple Air Print도 지원해서 연결하고 Wifi router에 접속하면 곧장 사용할 수 있습니다.
-가정에서 쓸 수 있는 꽤 괜찮은 선택지 인것 같네요.</p>
-</li>
-<li>
-<p>Venta LW-15</p>
-<p><img alt="" src="../../../media/blog/2016_stuff/venta-lw15.jpg"/></p>
-<p>한국에서 구입했던 벤타는 LW-44 모델이라 아이들 방에 사용하기엔 너무 컸습니다.
-습도를 적당히 조절하기 위해 작은 녀석으로 하나 장만했습니다.
-자세한 리뷰는 [Venta LW-44][venta] 를 참조하세요.</p>
-</li>
-<li>
-<p>Volkswagen e-Golf</p>
-<p><img alt="" src="../../../media/blog/2016_stuff/e-golf.jpg"/></p>
-<p>기존에 타던 Passat을 처분하고 리스 한 전기차, 폭스바겐 e-Golf입니다.
-아주 괜찮은 특가로 나와서, 파삿을 팔고 넘어가도 손해가 없을 정도였거든요.
-충전은 회사에서 제공하기에 전기 걱정없이 출퇴근을 편하게 할 수 있습니다.
-캘리포니아에서는 전기차에 대해 카풀차선 이용을 허용하기에 출퇴근 시간을 상당히 줄일 수 있습니다.
-이게 구매를 결정하게 된 가장 큰 요인이었네요.</p>
-</li>
-<li>
-<p>Lenovo Yoga 700</p>
-<p>Core M 시리즈 CPU는 별 문제가 아니나, 뭔가 적응이 안되는 키감은 도저히 사용할 수 없을 정도네요.
-클릭 느낌이 들었는데 키는 입력이 안됩니다. 바닥을 꾹꾹 눌러주지 않으면 키가 인식이 안되서
-오타가 너무 많이 나네요. 결국 다시 코스트코에 환불!</p>
-</li>
-<li>
-<p>Dell XPS 13 Skylake</p>
-<p>블랙프라이데이에 Ebay에서 저렴하게 작년에 출시된 제품이 올라와서 구매했네요.
-Kabylake 제품과 크게 달라진게 없어서 구매했습니다. QHD + Touchscreen 에 8GB RAM, 256GB PCIe SSD 라서 사양은 충분합니다.
-다만 베젤을 최소한으로 줄이기 위해 카메라가 아래 왼쪽에 박혀있는 건 도저히 용서가 안됩니다.
-화상채팅을 할 생각이 있다면 웹캠을 따로 구입하는 걸 추천합니다.</p>
-</li>
-<li>
-<p>Firepit</p>
-<p><img alt="" src="../../../media/blog/2016_stuff/fire_pit.jpg"/></p>
-<p>집안에 있는 벽난로를 사용할 수 없어서 밖에서나마 즐기려고 홈디포에서 구입했습니다.
-장작 피우고 고구마 구워먹거나 마시멜로 구워먹기 아주 좋아요!
-싱글하우스의 또 하나의 장점이네요.</p>
-</li>
-</ol>
 <!-- Continue reading link -->
 </div>
 </article>
