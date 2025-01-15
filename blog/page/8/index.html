@@ -1161,6 +1161,72 @@
 <ul class="md-meta__list">
 <!-- Post date -->
 <li class="md-meta__item">
+<time datetime="2015-11-19 00:00:00">2015년 11월 19일</time></li>
+<!-- Post categories -->
+<!-- Post readtime -->
+<li class="md-meta__item">
+            
+              읽는시간 1분
+            
+          </li>
+</ul>
+<!-- Draft marker -->
+</div>
+</header>
+<!-- Post content -->
+<div class="md-post__content md-typeset">
+<h2 id="cross-compiling-go-program"><a class="toclink" href="../../2015/cross-compiling-go-program.html">Cross Compiling Go program</a></h2>
+<p>오늘은 뜬금없이 Go 언어에 관해서 글을 써 볼까 합니다.
+제가 Synology NAS (정확히는 N36L을 이용한 해놀로지)를 사용하고 있는데,
+이 NAS에서 Go로 만들어진 프로그램을  실행해야 할 상황이 되어 몇가지 알아보았습니다.</p>
+<p>크로스 컴파일은 일반적인 컴파일러에서 자주 사용되는 기법인데,
+개발 PC에서 ARM 용 코드를 ARM 에서 실행될 수 있는 바이너리로 컴파일 하는 것이 가장 많이 접해볼 수 있는 크로스 컴파일 상황일 것 같습니다.</p>
+<p>일단 golang을 linux/amd64 용으로 만들어야 합니다.
+Mac 에서 Homebrew를 사용하고 있으면 Source directory로 가서 아래의 문구를 실행해 봅시다.</p>
+<pre><code>$ cd $(brew --prefix go)/libexec/src
+$ export GOROOT_BOOTSTRAP=$(brew --prefix go)/libexec
+$ GOOS=linux GOARCH=amd64 CGO_ENABLED=0 ./make.bash --no-clean
+</code></pre>
+<p>이 컴파일 과정이 끝나면 linux/amd64용 go 컴파일러가 <code>../bin/go</code> 에 만들어 집니다.
+현재 맥에서 사용하는 go와 구별하기 위해서 이 파일을 카피해서 파일명을 <code>syno.go</code> 로 변경하도록 합시다.</p>
+<p>그 후 컴파일 할 프로그램이 있는 곳으로 가서 빌드를 합니다.</p>
+<pre><code>GOOS=linux GOARCH=amd64 syno.go build
+</code></pre>
+<p>그러면 해당 디렉토리에 실행파일이 만들어지는데, 실제 실행해 보면 executable이 아니라고 에러가 나면서 실행이 되지 않습니다.
+이 파일은 synology에서 실행될 수 있는 파일이므로 synology NAS에 복사 후 실행해 보면 실행이 잘 되는 것을 볼 수 있습니다.</p>
+<!-- Continue reading link -->
+</div>
+</article>
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+<header class="md-post__header">
+<!-- Post authors -->
+<!-- Post metadata -->
+<div class="md-post__meta md-meta">
+<ul class="md-meta__list">
+<!-- Post date -->
+<li class="md-meta__item">
 <time datetime="2015-10-26 00:00:00">2015년 10월 26일</time></li>
 <!-- Post categories -->
 <li class="md-meta__item">
@@ -1832,83 +1898,6 @@ rpm까지 꾸준한 토크밴드 덕분에 기어 변속에 대한 스트레스 
 <p>아이들이 제대로 스트레스 받지않고 놀려면 1층이 필수인 덕분에 선택이 많이 제약이 되었네요.
 초기 생각했던 가격보다 많이 비싸지만 그래도 이왕에 구한 것 가족과 즐겁게 지내보려 합니다.</p>
 <p>이제부터 제대로 된 미국 생활 적응이 시작되겠네요.</p>
-<!-- Continue reading link -->
-</div>
-</article>
-<!--
-  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-<!-- Post excerpt -->
-<article class="md-post md-post--excerpt">
-<header class="md-post__header">
-<!-- Post authors -->
-<!-- Post metadata -->
-<div class="md-post__meta md-meta">
-<ul class="md-meta__list">
-<!-- Post date -->
-<li class="md-meta__item">
-<time datetime="2014-03-28 00:00:00">2014년 3월 28일</time></li>
-<!-- Post categories -->
-<li class="md-meta__item">
-            카테고리
-            
-              <a class="md-meta__link" href="../../category/living.html">living</a></li>
-<!-- Post readtime -->
-<li class="md-meta__item">
-            
-              읽는시간 2분
-            
-          </li>
-</ul>
-<!-- Draft marker -->
-</div>
-</header>
-<!-- Post content -->
-<div class="md-post__content md-typeset">
-<h2 id="two-bedrooms-apartment"><a class="toclink" href="../../2014/two-bed-apartment.html">Two Bedrooms Apartment</a></h2>
-<p>가족이 오는 날이 가까워 옵니다.
-가족이 지낼 곳이 필요하기에 요즈음 아파트를 보러 다녔습니다.
-미국에 오자마자 아파트를 보러다녔다가 지금 잠시 지내고 있는 Los Altos에 머물게 되면서 잠시동안 신경을 끄고 있었죠.</p>
-<p><img alt="The Redwoods" src="../../../media/blog/2014-03-28/redwoods-modelhouse-1.jpg"/></p>
-<p>그 때, 처음 집을 보러 돌아다닐 때 봐둔 아파트 단지가 있었습니다.
-넓은 잔디가 있고 분위기도 참 좋아보였던 아파트입니다.
-무엇보다 맘에 들었던 것은, 한국 분들이 많아 아내와 아이들이 좀 더 쉽게 적응할 수 있을 것 같았던 점입니다.
-타지에 처음 와서 저야 일을 하지만 집에만 있어야 하는 아내와 아이들에게는 사람을 만나는 것이 매우 중요하다는 것을 알기에 별다른 선택지가 없었다고 할까요..
-이집 저집 보았지만 결국은 여기로 정하겠구나.. 하는 생각이 들었는데 결국 그 아파트 단지로 정하게 되었네요.</p>
-<p><img alt="Swimming Pool" src="../../../media/blog/2014-03-28/redwoods-modelhouse-2.jpg"/></p>
-<p>미국에는 연봉이 일정 기준 이하인 사람에 대한 혜택이 어느정도 있습니다.
-한국의 공공임대 아파트와 비슷한데 그 기준이 꽤 많이 세분화 되어있습니다.
-거의 노숙자 근처까지 상황 안좋은 Section 8, 그 위로 Lowest, Lower, Low, 그리고 Moderate BMR (Below Market Rate)로 분류됩니다.</p>
-<p>미국 건너온지 얼마 되지 않아 연봉도 적은 편에다 가족 구성원 수도 4명이 되는 덕분에 Moderate BMR 기준인 $126,000 달러에는 턱없이 부족하여 가볍게 기준을 통과할 수 있었네요.
-연봉이 낮아서 슬퍼해야 할지 Moderate BMR이 되서 좋아해야 할지.. ^^</p>
-<p>저 Moderate BMR 혜택을 받지 않으면 한달에 2700달러 이상을 월세로 내야 합니다.
-0 하나 더 붙은거 아니냐고요? 아닙니다. 진짜 2700달러에요. 월 삼백만원.
-삼성에서 받던 월급보다 더 많은 돈을 월세로 내야 합니다.
-여기 실리콘벨리 집값이 미친듯이 올라서 왠만큼 살만한 곳이면 방 두칸은 죄다 저가격 근처입니다.</p>
-<p>그나마 Moderate BMR 혜택을 받아서 2400달러 근처로 얻게되는 거지 아니였으면.. 집값이 감당이 안되었을 것 같네요.</p>
-<p><img alt="Barbeque Area" src="../../../media/blog/2014-03-28/redwoods-modelhouse-3.jpg"/></p>
-<p>그래도 저 돈은 내 돈이 아니구나.. 생각합니다.
-어차피 부자가 아닌 이상에야 월세는 당연히 살아야 하는 것이라 그냥 월급에서 미리부터 없는 돈이다.. 생각하려 합니다.
-그냥 돈에 연연하지 않고 주변 환경 보고 온 것, 즐겁게 지낼 연구부터 해야죠.</p>
-<p>아파트가 결정되었으니 이제 힘 내서 어떻게 하면 집을 살 지 계획을 세워야 겠습니다.</p>
 <!-- Continue reading link -->
 </div>
 </article>
