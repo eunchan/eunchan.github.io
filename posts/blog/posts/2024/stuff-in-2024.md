@@ -1,11 +1,10 @@
-----
+---
 title: '2024년도 지름 결산'
 date: 2024-12-31
 comments: true
-draft: true
 tags: []
 slug: 'stuff-in-2024'
-----
+---
 
 여전히 매해 연말 지름보고 입니다.
 
