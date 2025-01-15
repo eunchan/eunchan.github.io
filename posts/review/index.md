@@ -26,6 +26,7 @@ title: Reviews
 
 ### 지름목록
 
+- [2024년 지름결산](../blog/posts/2024/stuff-in-2024.md)
 - [2023년 지름결산](../blog/posts/2023/2023-12-31-stuff-in-2023.md)
 - [2022년 지름결산](../blog/posts/2022/2022-12-31-stuff-in-2022.md)
 - [2021년 지름결산](../blog/posts/2021/2021-12-31-stuff-in-2021.md)
