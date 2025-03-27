@@ -164,8 +164,8 @@ extra:
   #social:
   #  - type: "linkedin"
   #    link: "https://linkedin.com/in/eunchankim"
-repo_url: https://github.com/eunchan/elijah.kim
-repo_name: eunchan/elijah.kim
+repo_url: https://github.com/eunchan/eunchan.github.io
+repo_name: GitHub
 edit_uri: edit/main/docs/
 markdown_extensions:
   - attr_list
