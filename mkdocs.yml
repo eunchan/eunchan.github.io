@@ -36,7 +36,7 @@ theme:
     primary: white
     accent: teal
 plugins:
-  # - meta
+  - meta
   - blog:
       post_url_date_format: yyyy
       categories_toc: false
