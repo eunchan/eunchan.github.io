@@ -10,18 +10,28 @@ import yaml
 import frontmatter
 import os
 
+# Define the default meta file name.
 _META_FILE = ".meta.yml"
-# If doc has these fields, keep the doc fiels not override.
+# Define fields that should be kept from the document and not overridden.
 _KEEP_FIELDS = ["hide"]
 
 def build_meta_struct(
     root: str = ".",
     meta_file: str = _META_FILE) -> Dict[str, dict]:
-  """Build meta tree."""
+  """
+  Builds a metadata tree by walking through the directory structure.
+
+  :param root: The root directory to start building the metadata tree from. Defaults to the current directory.
+  :param meta_file: The name of the metafile to look for in each directory. Defaults to '.meta.yml'.
+  :return: A dictionary representing the metadata tree, where keys are directory paths and values are metadata dictionaries.
+  """
   # os walk directories.
   meta_list: Dict[str, dict] = {}
   for base, dirs, files in os.walk(root):
+
+    # Get the parent's metadata.
     parent_meta = get_parent_meta(meta_list, root, base)
+
     if meta_file in files:
       meta_path = os.path.join(base, meta_file)
       meta = get_meta(parent_meta, meta_path)
@@ -38,7 +48,14 @@ def build_meta_struct(
   return meta_list
 
 def get_meta(parent: dict, filename: str):
-  """Read from filename and merge with parent."""
+  """
+  Reads metadata from a file and merges it with the parent metadata.
+
+  :param parent: The parent metadata dictionary. Can be None if there's no parent.
+  :param filename: The path to the metadata file.
+  :return: A dictionary containing the merged metadata.
+  """
+
   with open(filename, 'r') as f:
     data = yaml.safe_load(f)
 
@@ -68,13 +85,25 @@ def get_meta(parent: dict, filename: str):
 
 
 def get_parent_meta(meta_list: Dict[str, dict], root: str, dirname: str) -> dict:
+  """
+  Retrieves the parent's metadata from the meta_list.
+  :param meta_list: A dictionary containing metadata for different directories.
+  :param root: The root directory of the metadata structure.
+  :param dirname: The directory for which to find the parent's metadata.
+  """
   if dirname == root:
     return None
   return meta_list[os.path.dirname(dirname)]
 
 
 def process_md_with_meta(root: str, meta_list: Dict[str, dict], outdir: str):
-  """Visit every markdown and update meta field."""
+  """
+  Processes markdown files by updating their metadata with the corresponding metadata from the meta_list.
+
+  :param root: The root directory to start processing markdown files from.
+  :param meta_list: The metadata tree dictionary.
+  :param outdir: The directory to write the updated markdown files to.
+  """
   # os walk directories.
   mds: Dict[str, List[str]] = {}
   for base, dirs, files in os.walk(root):
@@ -89,7 +118,14 @@ def process_md_with_meta(root: str, meta_list: Dict[str, dict], outdir: str):
 
 
 def update_md_with_meta(md: str, meta: dict, root: str, outdir: str):
-  """Read markdown and update meta field."""
+  """
+  Updates a single markdown file with the given metadata.
+
+  :param md: The path to the markdown file.
+  :param meta: The metadata dictionary to merge into the markdown file's metadata.
+  :param root: The root directory (used for calculating the output path).
+  :param outdir: The directory to write the updated markdown file to.
+  """
   post = frontmatter.load(md)
   pprint.pprint(post.metadata)
   merge_meta_to_md(post.metadata, meta)
@@ -105,7 +141,12 @@ def update_md_with_meta(md: str, meta: dict, root: str, outdir: str):
 
 
 def merge_meta_to_md(post_meta, meta) -> dict:
-  """Merge meta and post metadata."""
+  """
+  Merges metadata from a meta dictionary into the post_meta dictionary.
+
+  :param post_meta: The metadata dictionary from the markdown post.
+  :param meta: The metadata dictionary to merge in.
+  """
   if not meta:
     return
   for key, value in meta.items():
