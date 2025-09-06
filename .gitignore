@@ -1,7 +1,7 @@
 .DS_Store
 site/
 .cache/
-docs/
+docs/static/
 Makefile
 
 # But not these files
