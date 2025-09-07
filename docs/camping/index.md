@@ -1,6 +1,6 @@
 ---
 comments: true
-date: 2021-09-10
+date: 2025-09-05
 hide:
 - toc
 slug: camping-gear
@@ -15,13 +15,11 @@ tags:
 title: Camping
 ---
 
-(Updated: 2021-10-24)
-
 **목차**
 
 1. [Kitchen system](#kitchen-system)
    1. [Portable Electric Fridge](#portable-electric-fridge)
-   1. [Coleman Triton Burner](#coleman-triton-burner)
+   1. [Jetboil Genesys](#jetboil-genesys)
    1. [MSR Pocket Rocket Deluxe](#msr-pocket-rocket-deluxe)
 1. [Jackery Explorer 500](#jackery-explorer-500)
 1. [Sleep System](#sleep-system)
@@ -98,11 +96,14 @@ Dometic에서 보조배터리를 파는 데, 40Ah 짜리 배터리를 850 달러
 효율이 바닥이긴 하지만, 캠핑장에서 죽치고 있는게 아니라 주변 구경가고 하면,
 차량으로도 충전이 되서 불편함 없이 쓸수 있습니다.
 
-### Coleman Triton Burner
+### Jetboil Genesys
 
-2구 버너 중 그나마 저렴한 버너입니다. 프로판 가스를 써서 고지대에서도 잘
-작동하구요. 화력은 꽤 쎕니다. 문제는 그 화력이 거의 On/Off 수준이라는 거겠네요.
-적당한 화력으로 조절하기가 힘듭니다. 살짝만 돌려도 이미 풀파워에요.
+2구 버너 중 가장 부피가 작은 버너일 것 같습니다. 제가 사용하고 있는 것은 냄비와
+팬이 포함된 제품인데, 버너가 냄비 안에 들어가서 같이 들고 다닐 수 있습니다.
+
+부피가 작은 것도 장점이지만, 더 큰 장점은 불 조절이 매우 세밀하게 된다는
+점입니다. 다른 프로판 버너는 거의 온 오프 수준으로 불 조절이 어려운데,
+제네시스는 정말 미세하게 불 조절이 가능해서 팬을 태워먹을 염려는 없습니다.
 
 ### MSR Pocket Rocket Deluxe
 
@@ -114,6 +115,14 @@ Dometic에서 보조배터리를 파는 데, 40Ah 짜리 배터리를 850 달러
 Jetboil 제품이 바람을 잘 견뎌서 그걸 살까 했는데, 이전에 샀다가 잊어먹는 바람에
 또 사긴 그렇더라구요...
 
+### Skotti Portable Grill
+
+Weber 작은 그릴을 들고 다녔는데, 그게 부피도 있고 재도 날리고 해서 접이식 프로판
+개스를 사용하는 그릴을 하나 장만했습니다. 접이식이라 안정성이 떨어질 줄
+알았는데, 두꺼운 스테인리스 스틸을 써서 흔들거리지 않고 단단합니다.
+
+개스를 써서 숯불 피우는 시간이 없고, 분해가 되서 청소도 간편합니다 (식기세척기에
+넣으면 됩니다)
 
 ## Jackery Explorer 500
 
