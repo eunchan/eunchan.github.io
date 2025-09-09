@@ -17,6 +17,7 @@ title: Camping
 
 **목차**
 
+<!--
 1. [Kitchen system](#kitchen-system)
    1. [Portable Electric Fridge](#portable-electric-fridge)
    1. [Jetboil Genesys](#jetboil-genesys)
@@ -35,7 +36,7 @@ title: Camping
    1. [REI Camping Table](#rei-camping-table)
    1. [Helinox Chair One](#helinox-chair-one)
    1. [Mount River 2 Step Chair](#mount-river-2-step-chair)
-
+-->
 
 캠핑용 장비를 전반적으로 업그레이드 하면서 각각 리뷰를 만들기 보다, 한 페이지에
 같이 리뷰하는 게 낫겠다 싶어서 페이지로 정리해 보았습니다. 추가로 다른 품목도
