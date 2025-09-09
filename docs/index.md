@@ -1,5 +1,7 @@
 ---
 title: Eli Kim
+hide:
+  - navigation
 ---
 
 # Eli Kim
