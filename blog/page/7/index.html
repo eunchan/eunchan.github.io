@@ -1285,6 +1285,102 @@
 <ul class="md-meta__list">
 <!-- Post date -->
 <li class="md-meta__item">
+<time datetime="2017-03-01 00:00:00+00:00">2017년 3월 1일</time></li>
+<!-- Post categories -->
+<li class="md-meta__item">
+            카테고리
+            
+              <a class="md-meta__link" href="../../category/design.html">design</a></li>
+<!-- Post readtime -->
+<li class="md-meta__item">
+            
+              읽는시간 3분
+            
+          </li>
+</ul>
+<!-- Draft marker -->
+</div>
+</header>
+<!-- Post content -->
+<div class="md-post__content md-typeset">
+<h2 id="_1"><a class="toclink" href="../../2017/code-review-in-hdl.html">하드웨어 디자인 코드리뷰</a></h2>
+<p>소프트웨어 분야는 하루가 다르게 새로운 기술이 쏟아져 나옵니다.
+특히 웹 관련 기술은 최근에 트렌드가 정신없이 계속 바뀌고 있죠.
+오죽하면 <a href="http://www.looah.com/article/view/2054">자바스크립트 기술 변화에 대한 유머</a>까지 등장했겠어요.</p>
+<p>이런 발빠른 변화를 쫓아가는 게 정말 벅찰 듯 합니다.
+그런데 하드웨어 분야는 기술은 계속 바뀌어 가는데 개발 플로우는 십수년 째 전혀 바뀌지 않고 있어요.
+개발 언어인 Verilog HDL 언어도 구닥다리 1995 버전을 쓰는 경우가 태반이고,
+실제 칩 디자인에 SystemVerilog 2012를 사용하는 걸 본 적이 없네요.
+검증은 대부분 SystemVerilog로 넘어가긴 했지만, 아직 설계는 여전히 Vim으로 한땀 한땀 정성들여 Verilog 포맷으로 코딩합니다.
+수백개가 넘는 port를 연결하는 걸 보고 있으면 마치 수공예를 보는 것 같기도 하고, 어셈블리 코딩을 하는 것과 비슷한 느낌을 받기도 합니다.</p>
+<p>사실 하드웨어는 한번 버그가 발생하면 수정하는 데 비용이 상당히 많이 들기에 항상 조심스러운 접근을 할 수 밖에 없다는 게 이해가 안되는 것은 아닌데, 그 정도가 심해도 너무 심하다는 생각이 듭니다.</p>
+<h3 id="version-control-system"><a class="toclink" href="../../2017/code-review-in-hdl.html#version-control-system">Version Control System</a></h3>
+<p>이전 회사에 근무할 때에는 소스 코드 관리를 Clearcase라고 상용 툴을 썼는데, 거의 SVN과 유사한 시스템이었습니다.
+SVN만 되어도 사실 감사할 따름인데, 이 CC를 그냥 branch도 없고 tag도 없고 그냥 fetch, commit만 하는 수준으로 사용하고 있었어요.
+거의 백업을 위해서 쓰는 정도였죠.</p>
+<p>게다가 IP 디자인은 Clearcase도 아니고 초창기 파일 기반 버전 관리 도구인 CVS를 사용하고 있었습니다.
+CVS를 보았던 그때의 충격과 공포는 아직도 생각 나네요.</p>
+<p>옮긴 회사는 더 충격적이게도 CVS에 GUI를 입힌 것 같은 도구를 사용합니다.
+태그와 브랜치 기능이 있긴 한데 사용하기 까다롭고 한눈에 들어오지 않아서, 주변에서 브랜치를 쓰는 걸 본 적이 없네요.
+파일 별로 버전관리가 따로 되다보니 하나의 IP가 여러 프로젝트에 쓰일 경우 점점 서로 뒤엉켜가는 걸 보게 됩니다.</p>
+<h3 id="code-review"><a class="toclink" href="../../2017/code-review-in-hdl.html#code-review">Code Review</a></h3>
+<p>상황이 이런 지경인데, RTL (Register Transfer Level) 코드를 기술하고 소스코드 저장소에 업데이트 할 때 멤버라면 아무나 올릴 수 있습니다.
+브랜치도 아니고, main에 올릴 수 있게되서, 하나의 잘못된 커밋이 전체 테스트를 fail 하게 되는 경우도 가끔 봅니다.</p>
+<p>이런 일련의 경험을 하면서, <em>'왜 하드웨어 디자인은 소프트웨어의 기법을 적용하지 않을까?'</em> 하는 의구심이 계속 듭니다.</p>
+<p>소프트웨어는 일찌감치 코드 리뷰에 대해 많은 고민을 해 왔습니다.
+심지어 CVS 를 사용할 때에도 maintainer가 patch를 받아서 CVS에 업데이트 하는 것이 일반적이었고, 그래서 코드 리뷰는 자연스럽게 usenet이나 email 을 통해 이뤄지곤 했습니다.</p>
+<p>그것조차 비효율 적이라 코드리뷰를 편하게 하기위한 시스템이 등장했지요.
+[Gerrit][ext:gerrit]은 구글이 코드리뷰를 하고자 Git 기반으로 만들어진 코드리뷰 도구이고,
+Github의 Pull Request는 email로 주고 받던 패치를 시스템상에서 간편하게 적용할 수있게 만든 도구입니다.</p>
+<p>이 두 시스템 모두 main 저장소에 업데이트 할 수 있는 사람은 몇 안되고 나머지 사람은 각자의 branch나 저장소에서 작업 후 메인에 반영하기 위해 코드를 리뷰해야만 합니다.
+이로 인해 약간의 지연이 발생하긴 하지만, 결과적으로 깔끔한 코드가 유지될 수 있습니다.
+급한 경우엔 Gerrit은 main에도 곧장 업데이트 할 수 있도록 하고 있구요.</p>
+<p>그러나 하드웨어는 이런 과정이 거의 없다고 봐도 무방합니다.
+저장소에서 이러한 기능을 지원하지도 않을 뿐더러, 코드 리뷰를 한다고 하면 (리뷰하는 일도 거의 드물지만) 회의실에 모여서 소스코드 창을 띄우고 한줄 한줄 보는게 보통입니다.
+시간을 가지고 코드를 깊게 볼 기회가 거의 없다고 봐도 되죠.</p>
+<h3 id="how-to-improve"><a class="toclink" href="../../2017/code-review-in-hdl.html#how-to-improve">How to Improve?</a></h3>
+<p>일단은 코드리뷰가 가능하도록 저장소와 코드 리뷰 도구를 재정비하는 게 필요한 것 같아요.
+지금은 웍스테이션 안에서만 코딩이 가능하다보니, JIRA와도 연동이 되지 않는게 보통입니다.
+즉, 이슈와 실제 디자인 수정을 연결할 방법이 거의 없다고 봐도 되죠. (로그도 파일별로 남다보니..)</p>
+<p>가장 우선은 Git based 저장소로 바꾸고 gerrit이나 pull-request가 가능한 GitLab이라도 써야 할 것 같아요.
+Subversion도 나쁘지 않은 선택이나, branch를 빈번하게 사용하고 코드 리뷰 요청을 넣는 flow에서는 조금 비효율적이라 git이나 mercurial이 더 나은 선택인 것 같아요.</p>
+<p>여기에 더해서 Continuous Integration 을 이용해 바로 small set regression test를 돌릴 수 있게 설정해 둔다면 더욱 좋겠죠. (라이센스 비용은 좀 나가겠네요)
+pull request 전에 이 small regression을 통과하고 (아니면 적어도 compile과 elab까지만이라도) 그 후에 merge되는 게 정말 중요한 부분인 것 같습니다.</p>
+<p>외부에서 받는 IP 같은 경우는 코드를 수정할 일이 거의 없다보니, IP는 release에 두던지 하고 configuration만 저장소에 두어서 리뷰를 할 수 있게 해야 합니다.
+파라미터 세팅을 잘못 해서 빈번하게 실수가 발생하는 것을 봐서 (NIC CDAS scheme이라던지, outstanding capability라던지) 세팅 리뷰는 반드시 필요합니다.</p>
+<!-- Continue reading link -->
+</div>
+</article>
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+<header class="md-post__header">
+<!-- Post authors -->
+<!-- Post metadata -->
+<div class="md-post__meta md-meta">
+<ul class="md-meta__list">
+<!-- Post date -->
+<li class="md-meta__item">
 <time datetime="2017-02-20 00:00:00+00:00">2017년 2월 20일</time></li>
 <!-- Post categories -->
 <li class="md-meta__item">
@@ -2008,76 +2104,6 @@ readTimeFromMetadataString dateString = parseTimeOrError False defaultTimeLocale
 <p>아무튼, 무탈히 진행되어 다행입니다.
 이제 신분 문제도 해결되었으니, 자기계발에 힘을 써서 몸값을 올리는 데 주력해야 겠네요.</p>
 <p>그동안 이리 저리 걱정해 주신 모든 분에게 감사 드립니다.</p>
-<!-- Continue reading link -->
-</div>
-</article>
-<!--
-  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-<!-- Post excerpt -->
-<article class="md-post md-post--excerpt">
-<header class="md-post__header">
-<!-- Post authors -->
-<!-- Post metadata -->
-<div class="md-post__meta md-meta">
-<ul class="md-meta__list">
-<!-- Post date -->
-<li class="md-meta__item">
-<time datetime="2016-01-04 00:00:00+00:00">2016년 1월 4일</time></li>
-<!-- Post categories -->
-<!-- Post readtime -->
-<li class="md-meta__item">
-            
-              읽는시간 2분
-            
-          </li>
-</ul>
-<!-- Draft marker -->
-</div>
-</header>
-<!-- Post content -->
-<div class="md-post__content md-typeset">
-<h2 id="gtd-omnigroup-omnifocus-2"><a class="toclink" href="../../2016/gtd-omnifocus-2.html">GTD: Omnigroup의 Omnifocus 2</a></h2>
-<p>지금까지 일과 기타 해야만 하는 일을 어떻게 관리할 것인지 많이 고민해보고 이것 저것 써 보았습니다.</p>
-<p>예전에 잠깐 Microsoft Project를 사용했었는데요.
-정말 기가 질릴정도로 다양한 기능에 압도되어 아무것도 하지 못하는 일이 종종 벌어지곤 했습니다.
-너무 세세하게 관리를 해야만 흐트러짐없이 정돈이 되기에 오히려 하나 삐긋하면 포기해버리기 일쑤였습니다.</p>
-<p>그 전에는 Trac, Redmine 등 온라인 툴을 썼었네요.
-다만 이 도구는 Source code repository 와 연동되어야만 강력한 힘을 발휘하기에 특정 프로젝트에 한정되어 쓸 수 밖에 없는 점이 문제였습니다.
-마일스톤을 정한다거나 이슈에 대한 추적은 매우 좋은 기능이었다고 생각합니다.</p>
-<p>이 Trac의 상용버전 쯤 되는 것이 JIRA인데 호주의 Atlassian 회사에서 만들고 있는 도구입니다.
-개인서버에 Starter Edition을 설치해서 사용하곤 했었는데, 일단 Java 기반이라 성능이 느린 제 서버에서는 정말 느렸었고,
-Microsoft Project 만큼이나 방대한 점, 프로젝트별로만 관리해야 되는 점 등이 1인 사용을 위한 도구로는 부적합했습니다.</p>
-<p><img alt="Omnifocus 2" src="../../../media/blog/2016-01-04-omnifocus-2.png"/></p>
-<p>작년 12월 중순부터 사용하기 시작한 도구가 있습니다.
-<a href="https://www.omnigroup.com/omnifocus">Omnifocus 2</a>라는 도구인데요.
-David Allen의 Get Things Done (이하 GTD) 개념을 도입한 소프트웨어 도구입니다.
-GTD는 다시 말하면 조금 복잡한 Todo list 라 할수 있는데요.
-여기에 책임 영역이나 컨텍스트, Due date, Defer 같은 개념을 도입해서, 너무 간단하지는 않지만 MS Project같이 Overkill 은 되지 않는 한도내에서 적절한 지점을 찾은 것 같습니다.</p>
-<p>그 전에 사용하던 Wunderlist는 공유되서 하나의 프로젝트를 여러명이서 관리할 수 있는 점은 매우 좋았으나 세부적인 설정이 거의 없다시피 해서 아쉬웠습니다.
-Omnifocus는 공유는 없지만, 매주 Review를 하는 부분이라던지 Forecast로 앞으로 할 일에 대한 전체 요약을 할수 있다는 것과 Focus 모드로 해야할 부분 하나에 집중하게 한다는 점이 강점입니다.</p>
-<p>트라이얼로 사용해 보다가 새해 새 출발 기념으로 구매 후 본격적으로 사용하려고 Android용 3rd party app인 Focus GTD 도 구매했네요.
-지금까지 2주간의 경험은 만족스러웠습니다.
-구매를 했으니 조금 더 사용해보고 평가를 내려볼게요.</p>
-<p>아참, 모두 새해 복 많이 받으세요~</p>
 <!-- Continue reading link -->
 </div>
 </article>
