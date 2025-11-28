@@ -29,13 +29,13 @@ sort_by = "none"
 
 - **[천체관측](/sky/)**: 8인치 돕소니안 망원경으로 뒷마당에서 밤하늘의 성운과
   행성을 관찰합니다.
-- **아웃도어**: 근처 산으로 [오프로드 바이크](../motorcycle/_index.md)를 타러
-  가거나, 조용한 강가에서 플라이 낚시를 즐깁니다.
+- **아웃도어**: 근처 산으로 [오프로드 바이크](/motorcycle/_index.md)를 타러
+  가거나, 조용한 강가에서 [플라이 낚시](/fly-fishing/_index.md)를 즐깁니다.
 - **[여행](/travel/_index.md) & [사진](./camera/_index.md)**: 새로운 길을 걷고
   그 순간을 카메라에 담습니다.
 - **[책](./book.md) & [만화](./comics.md)**: 느긋한 시간에는 글과 그림을
   즐깁니다.
-- [꼭 해보고 싶은 일](bucketlist.md)도 있고 [사고싶은 것](wishlist.md)도 많습니다.
+- [꼭 해보고 싶은 일](bucketlist.md)도 있고 [사고싶은 것](./wishlist.md)도 많습니다.
 
  ## Connect
 
