@@ -3,11 +3,12 @@
 
 
 body {
-    max-width: 882px;
+    max-width: 1024px;
     margin: 0 auto !important;
 }
+
 .md-grid {
-    max-width: 850px;
+    max-width: 1024px;
 }
 
 // Bulma configurations: https://bulma.io/documentation/customize/variables/
@@ -27,38 +28,36 @@ $title-family: $family-sans-serif;
 $title-size: 2.5rem;
 
 // body
-$body-font-size: 1.1rem;
+$body-font-size: 1rem;
 $body-line-height: 1.8;
 
 // Max-width
-$container-max-width: 850px;
+$container-max-width: 1024px;
 
 // Import rest of Bulma
-@use "bulma.sass" with (
-  $family-primary: '"Atkinson Hyperlegable", Pretendard, sans-serif',
-  $body-size: 14pt
-);
+@use "bulma.sass" with ($family-primary: 'Pretendard, sans-serif',
+    $body-size: 14pt);
 
 // Later theme fix of mkdocs-material
 [data-md-color-primary="white"] {
-  --md-primary-fg-color: #fff;
-  --md-primary-fg-color--light: #fff;
-  --md-primary-fg-color--dark:  #fff;
-  --md-primary-bg-color: #000;
-  --md-primary-bg-color--light: #000;
+    --md-primary-fg-color: #fff;
+    --md-primary-fg-color--light: #fff;
+    --md-primary-fg-color--dark: #fff;
+    --md-primary-bg-color: #000;
+    --md-primary-bg-color--light: #000;
 
-  --md-typeset-a-color: #037c6e;
+    --md-typeset-a-color: #037c6e;
 
-  --md-accent-fg-color: #025043;
-  --md-accent-fg-color--transparent: #02504366;
-  --md-accent-bg-color: #fff;
-  --md-accent-bg-color--light: #fff;
+    --md-accent-fg-color: #025043;
+    --md-accent-fg-color--transparent: #02504366;
+    --md-accent-bg-color: #fff;
+    --md-accent-bg-color--light: #fff;
 
-  --md-footer-bg-color: #fff;
-  --md-footer-bg-color--dark: #fff;
-  --md-footer-fg-color: #333;
-  --md-footer-fg-color--light: #333;
-  --md-text-font: '"Atkinson Hyperlegible", Pretendard, sans-serif';
+    --md-footer-bg-color: #fff;
+    --md-footer-bg-color--dark: #fff;
+    --md-footer-fg-color: #333;
+    --md-footer-fg-color--light: #333;
+    --md-text-font: 'Pretendard, sans-serif';
 }
 
 .md-typeset {
@@ -68,20 +67,27 @@ $container-max-width: 850px;
 // Disable the font-size change when the screen is wide.
 @media screen and (min-width: 100em) {
     html {
-        font-size: 125% !important;
+        font-size: 100% !important;
     }
 }
+
 @media screen and (min-width: 125em) {
     html {
-        font-size: 125% !important;
+        font-size: 100% !important;
     }
 }
+
+html {
+    font-size: 100% !important;
+}
+
 // Display logo always.
 @media screen and (max-width: 76.2344em) {
     .md-header__button.md-logo {
         display: block;
     }
 }
+
 /*
 // Heading a
 div.content {
