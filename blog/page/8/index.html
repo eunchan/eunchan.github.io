@@ -298,6 +298,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="../../archive/2026.html">
+<span class="md-ellipsis">
+    2026
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../archive/2025.html">
 <span class="md-ellipsis">
     2025
@@ -1285,6 +1293,107 @@
 <ul class="md-meta__list">
 <!-- Post date -->
 <li class="md-meta__item">
+<time datetime="2016-03-11 00:00:00+00:00">2016년 3월 11일</time></li>
+<!-- Post categories -->
+<!-- Post readtime -->
+<li class="md-meta__item">
+            
+              읽는시간 3분
+            
+          </li>
+</ul>
+<!-- Draft marker -->
+</div>
+</header>
+<!-- Post content -->
+<div class="md-post__content md-typeset">
+<h2 id="hakyll-route-for-metadata-date-field"><a class="toclink" href="../../2016/parse-metadata-date-field-to-route.html">Hakyll Route for Metadata <code>date</code> Field</a></h2>
+<p>블로그 URL을 보면 이전과는 좀 달라졌습니다.
+예전엔 url이 <code>blog/YYYY-MM-DD-post.html</code> 방식이었다면, 새로운 URL은 <code>blog/YYYY/MM/DD/post.html</code> 형태로 바뀌었습니다.</p>
+<p>변경을 한 이유는, 블로그 글이라면 제목과 연관된 URL이 유지되어야 하는데 그 앞에 항상 년,월,일 이 디렉토리 형태도 아니고 같은 묶음으로 다니는게 조금은 이치에 맞지 않는 것 같았기 때문입니다.
+그래서 아카이브 형태로 년,월,일 을 디렉토리로 구분하였습니다.
+글을 자주 쓰는 게 아니니 년,월,일 보다 2016, 2015 해서 년만 넣어도 충분하겠지만 일단은 이렇게 가는 걸로 하죠. ㅎㅎ</p>
+<p>기존에 블로그에 글을 쓸 때에는 <code>blog/</code> 디렉토리 밑에 URL과 동일했던 마크다운 파일을 두고 글을 썼습니다.
+지금이야 글이 꼴랑 20개 남짓이라 문제가 없지만, 나중에,, 아마 한 5년은 걸리겠지만, 나중에 100개 이상이 되었을 때 한 폴더에 모든 글을 다 보관한다는 건 조금은 번거로운 일이 될 것 같아서 방식을 바꾸기로 했습니다.</p>
+<p>새로운 방식은, <code>blog/</code> 밑에 어느 폴더에 두더라도 <code>blog/YYYY/MM/DD/post.html</code> 형태로 바꾸도록 변경했습니다.
+Hakyll에서는 URL을 결정하는 Rule을 <code>Route</code>라는 이름으로 만들었습니다.
+이 Route에 원하는 규칙을 넣으면 그 규칙대로 대상 URL이 결정됩니다.</p>
+<p>아래의 코드는 위의 <code>blog/</code> 를 위해 만든 규칙입니다.</p>
+<pre><code class="language-haskell">-- | Route based on metadata field 'date' -------------------------------------
+dateRoute :: FilePath -&gt; Routes
+dateRoute prefix = metadataRoute (f prefix)
+  where
+    f p md = customRoute $ pullDateToFilePath p md
+
+-- | Add prefix then compose YYYY/MM/DD/post.html format ----------------------
+pullDateToFilePath :: FilePath -&gt; Metadata -&gt; Identifier -&gt; FilePath
+pullDateToFilePath p m i = p &lt;/&gt; (convertDateToFilePath m i)
+  where
+    convertDateToFilePath md id' = convertLocalTimetoISO (md M.! "date") (M.lookup "slug" md) $ toFilePath id'
+    -- convertLocalTimetoISO :: String -&gt; Maybe String -&gt; FilePath -&gt; FilePath
+    convertLocalTimetoISO d (Just s) _ = toISO d &lt;/&gt; s &lt;.&gt; ".html"
+    convertLocalTimetoISO d Nothing fp = toISO d &lt;/&gt; chopDayFromFileName fp
+    chopDayFromFileName fp' = replaceAll "[0-9]{4}-[0-9]{2}-[0-9]{2}-" (const "") $ takeFileName fp'
+    toISO dateString = formatTime defaultTimeLocale "%Y/%m/%d" $ readTimeFromMetadataString dateString
+
+-- TODO: Make more format
+readTimeFromMetadataString :: String -&gt; UTCTime
+readTimeFromMetadataString dateString = parseTimeOrError False defaultTimeLocale "%B %e, %Y" dateString
+</code></pre>
+<p>일단 post 내의 메타데이터 <code>date</code> 를 이용하기 위해 <code>metadataRoute</code> 가 사용됩니다.
+이 <code>metadataRoute</code> 는 함수 인자를 받는데 <code>Metadata -&gt; Route</code>, 즉 <code>Metadata</code>를 입력으로 받고 결과가 <code>Route</code>인 함수를 인자로 받습니다.</p>
+<p><code>Metadata</code>를 이용해 <code>YYYY/MM/DD</code> 형식으로 변경해야 하므로 <code>customRoute</code>를 사용해서 원하는 형태로 바꿔주도록 합니다.
+<code>customRoute</code>는 <code>metadataRoute</code>와 비슷하게 함수 하나를 인자로 받습니다.
+이 함수는 <code>Identifier -&gt; FilePath</code> 타입으로 <code>Identifier</code>를 입력으로 받고 최종 URL인 <code>FilePath</code>를 결과로 내는 함수입니다.</p>
+<pre><code class="language-haskell">f p md = customRoute $ pullDateToFilePath p md
+</code></pre>
+<p>Higher Order Function을 이용해서 <code>pullDateToFilePath</code> 함수를 <code>Identifier -&gt; FilePath</code> 처럼 인식되게 했습니다.
+실제 <code>pullDateToFilePath</code>의 타입은 <code>pullDateToFilePath :: FilePath -&gt; Metadata -&gt; Identifier -&gt; FilePath</code> 이죠.
+즉, FilePath, Metadata, Identifier를 입력 받아서 FilePath를 리턴하는 함수입니다.</p>
+<p><code>Metadata</code>는 <code>Data.Map</code> 타입이라 원하는 필드, <code>date</code>, <code>slug</code> 를 검색할 수 있습니다.
+이를 검색해서 <code>date</code>는 YYYY/MM/DD 형태로 바꿔주도록 하고 <code>slug</code>가 있다면 사용하고 없다면 파일 이름을 사용하도록 합니다.</p>
+<p>그래서 <code>slug</code>를 검색할 때는 <code>M.lookup "slug" md</code> 로 해서 <code>Maybe</code> Monad로 결과를 받고 <code>Just</code> 또는 <code>Nothing</code>으로 처리합니다.</p>
+<pre><code class="language-haskell">    convertDateToFilePath md id' = convertLocalTimetoISO (md M.! "date") (M.lookup "slug" md) $ toFilePath id'
+    -- convertLocalTimetoISO :: String -&gt; Maybe String -&gt; FilePath -&gt; FilePath
+    convertLocalTimetoISO d (Just s) _ = toISO d &lt;/&gt; s &lt;.&gt; ".html"
+    convertLocalTimetoISO d Nothing fp = toISO d &lt;/&gt; chopDayFromFileName fp
+</code></pre>
+<p>이 방식을, <code>sky/log/</code> 에도 적용해서 그 부분도 YYYY/MM/DD 형식으로 저장되도록 했습니다.</p>
+<p>이번 수정을 하면서 Haskell의 깔끔한 구현 방식이 논리적으로 생각하는 흐름에 맞게 잘 되어있구나, 라는 생각이 다시 한번 들었습니다.
+생각의 흐름 그대로 top down이나 bottom up 구현을 해 나갈 수 있어서 큰 무리 없이 수정이 가능했습니다.</p>
+<!-- Continue reading link -->
+</div>
+</article>
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+<!-- Post excerpt -->
+<article class="md-post md-post--excerpt">
+<header class="md-post__header">
+<!-- Post authors -->
+<!-- Post metadata -->
+<div class="md-post__meta md-meta">
+<ul class="md-meta__list">
+<!-- Post date -->
+<li class="md-meta__item">
 <time datetime="2016-03-07 00:00:00+00:00">2016년 3월 7일</time></li>
 <!-- Post categories -->
 <li class="md-meta__item">
@@ -2057,67 +2166,6 @@ L1 (주재원 비자)나 O1(특기자 비자)같은 경우도 있지만 이 보�
 어렵게 나왔는데 한국은 다시 못 들어가겠고 여기 생활은 맞지 않고 이러지도 저러지도 못하는 경우를 봅니다.</p>
 <p>잘 생각하시고 준비하시고 좋은 일 가득하길 바라겠습니다.
 모두 화이팅!!</p>
-<!-- Continue reading link -->
-</div>
-</article>
-<!--
-  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-<!-- Post excerpt -->
-<article class="md-post md-post--excerpt">
-<header class="md-post__header">
-<!-- Post authors -->
-<!-- Post metadata -->
-<div class="md-post__meta md-meta">
-<ul class="md-meta__list">
-<!-- Post date -->
-<li class="md-meta__item">
-<time datetime="2015-01-19 00:00:00+00:00">2015년 1월 19일</time></li>
-<!-- Post categories -->
-<!-- Post readtime -->
-<li class="md-meta__item">
-            
-              읽는시간 1분
-            
-          </li>
-</ul>
-<!-- Draft marker -->
-</div>
-</header>
-<!-- Post content -->
-<div class="md-post__content md-typeset">
-<h2 id="2015-new-year"><a class="toclink" href="../../2015/2015-new-year.html">2015 New Year</a></h2>
-<p><img alt="Muir Woods National Monument" src="../../../media/blog/2015-01-19-new-year.jpg"/></p>
-<p>새해가 밝은지 19일이 지난 지금에서야 새해 인사를 하네요.
-여기 방문하시는 몇 안되시는 모든 분들 새해 복 많이 받으시고 뜻하신 일 다 잘 이루어 지면 좋겠습니다.
-(짤방은 이번 주말에 놀러간 Muir Woods 사진입니다. 산책으로 최고!)</p>
-<p>저는 요새 그냥 저냥 평온한 날을 보내고 있습니다.
-특별히 큰 문제도 없이 점점 미국 생활에 적응해 가고 있습니다.
-이전 글에 올렸던 영주권 관련 일도 어느 정도 잘 풀려서 1년 뒤로 늦춰질 줄만 알았던 일이 조금 앞당겨져 마음이 놓입니다.
-얼마 전 <a href="https://www.congress.gov/bill/114th-congress/house-bill/213/all-info">EB series 이민의 국가별 쿼터 제한을 푸는 법안</a>이 올라와서 걱정이 되었는데 앞당겨 진 일정 덕분에 이 법안과는 상관없이 일이 진행될 것 같네요.
-그렇지 않았으면 저 법안이 통과되면 아마도 2~3년은 기다려야 했을 지도 모르겠습니다.</p>
-<p>좋은 일도 있는 반면, 조만간 모터사이클 생활을 1년만에 접어야 할 수도 있을 것 같은 슬픈 일도 있습니다.
-뭐 사는 것이 다 좋을 수 만은 없으니, 그냥 그러려니.. 하고 받아들이려 합니다.
-다음에 다시 탈 기회가 생기겠죠.</p>
-<p>다음 글은 좀 더 유익한 글로 이야기를 풀었으면 좋겠네요. :)</p>
 <!-- Continue reading link -->
 </div>
 </article>
