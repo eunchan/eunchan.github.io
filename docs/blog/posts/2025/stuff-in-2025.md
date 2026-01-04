@@ -23,7 +23,7 @@ slug: 'stuff-in-2025'
 
 1.  Skotti Portable Grill + Cap
 
-    ![](../../../media/blog/2025-stuff/skottigrill.webp)
+    ![](../../../media/blog/2025-stuff/skottigrill.jpg)
 
     캠핑 다닐때 스테이크 굽는 용도로 작은 Weber grill을 가지고 다녔습니다.
     캠핑장에 있는 그릴은 녹슬고 지저분 해서 따로 가지고 다니긴 했는데, 이게
