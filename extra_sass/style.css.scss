@@ -28,15 +28,15 @@ $title-family: $family-sans-serif;
 $title-size: 2.5rem;
 
 // body
-$body-font-size: 1rem;
+$body-font-size: 1.1rem;
 $body-line-height: 1.8;
 
 // Max-width
 $container-max-width: 1024px;
 
 // Import rest of Bulma
-@use "bulma.sass" with ($family-primary: 'Pretendard, sans-serif',
-    $body-size: 14pt);
+//@use "bulma.sass" with ($family-primary: 'Pretendard, sans-serif',
+//    $body-size: 14pt);
 
 // Later theme fix of mkdocs-material
 [data-md-color-primary="white"] {
@@ -67,18 +67,18 @@ $container-max-width: 1024px;
 // Disable the font-size change when the screen is wide.
 @media screen and (min-width: 100em) {
     html {
-        font-size: 100% !important;
+        font-size: 14pt !important;
     }
 }
 
 @media screen and (min-width: 125em) {
     html {
-        font-size: 100% !important;
+        font-size: 14pt !important;
     }
 }
 
 html {
-    font-size: 100% !important;
+    font-size: 14pt !important;
 }
 
 // Display logo always.
