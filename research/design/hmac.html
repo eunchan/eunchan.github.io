@@ -1080,7 +1080,7 @@
 <span class="md-icon" title="마지막 업데이트">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2025년 7월 28일 04:53:18 UTC">2025년 7월 28일</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026년 1월 10일 19:32:03 UTC">2026년 1월 10일</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="작성일">
@@ -1092,8 +1092,10 @@
 <!-- Page content -->
 <p>간단한 하드웨어 디자인 관련 글은 <a href="../../blog/index.html">블로그</a>에 기록합니다.
 그러나 조금 더 기술적인 글은 따로 모아두는 게 낫겠다 싶어, 블로그 포스트가 아닌 일반 페이지에 기록해 볼 생각입니다.</p>
-<p>이번에 이야기 하고 싶은 내용은, [OpenTitan][ext:opentitan]을 개발하면서 설계한 하드웨어 모듈 중 HMAC (Hash-based Message Authentication Code)입니다.
-HMAC은 송신자, 수신자가 비밀키를 알고 있다는 가정에서 주어진 메세지가 실제로 상대방이 보냈는 지 알 수 있게 하는 서명 알고리즘입니다.</p>
+<p>이번에 이야기 하고 싶은 내용은, <a href="https://opentitan.org">OpenTitan</a>을 개발하면서
+설계한 하드웨어 모듈 중 HMAC (Hash-based Message Authentication Code)입니다.
+HMAC은 송신자, 수신자가 비밀키를 알고 있다는 가정에서 주어진 메세지가 실제로
+상대방이 보냈는 지 알 수 있게 하는 서명 알고리즘입니다.</p>
 <p>예를 들면 A라는 사람이 B라는 사람에게 편지를 쓴다고 생각해봅시다.
 편지를 손글씨로 썼다면 편지를 쓴 사람의 독특한 필체가 보낸사람을 나타낼 수도 있습니다.
 받는 사람이 그 사람의 글씨체를 안다면요.
@@ -1128,7 +1130,7 @@ HMAC은 송신자, 수신자가 비밀키를 알고 있다는 가정에서 주�
 <p>그래서 HMAC을 설계할 때 HMAC 자체는 큰 문제가 아니였고 Hash 알고리즘을 설계하는 데에 시간을 더 쏟을 수 밖에 없었습니다.</p>
 <p>OpenTitan에서는 필요한 해시 알고리즘이 SHA2-256밖에 없어서 이것을 가정하고 설계하였습니다.
 다만 추후에 SHA512나 SHA3 가 추가로 지원될 수도 있을 것 같네요.</p>
-<p>자세한 해시 설계는 [SHA2 페이지][sha2]를 참고하여주세요.</p>
+<!-- 자세한 해시 설계는 [SHA2 페이지][sha2]를 참고하여주세요. -->
 <h2 id="architecture">Architecture</h2>
 <p>위의 내용을 바탕으로 간단한 데이터 패스를 아래처럼 설계하였습니다.</p>
 <p><img alt="HMAC Block Diagram from OpenTitan" src="https://docs.opentitan.org/hw/ip/hmac/doc/hmac_block_diagram.svg"/></p>
@@ -1139,10 +1141,10 @@ HMAC은 송신자, 수신자가 비밀키를 알고 있다는 가정에서 주�
 무슨 일을 하냐면, 소프트웨어가 어떤 순서대로 어느 바이트 위치에 값을 쓰던지 그걸 차곡차곡 32bit 하나로 모아서 FIFO에 넣어주는 역할을 합니다.
 들어오는 데이터, 예를 들면 소프트웨어의 struct가 하나가 아니라 여러개 일 때에는 두번째, 세번째 struct는 앞 데이터에 맞춰서 shift 시켜줘야 하는데, packer가 있으면 그런거 무시하고 항상 byte0 부터 시작하게 넣어도 됩니다. :)</p>
 <p>그리고 HMAC Core 안에서는 순서에 따라 ipad_key를 이용해 hash를 실행시키고, 들어오는 메세지를 이용해 그 다음 hash를 실행시키고, 모든 메세지가 다 들어왔으면 패딩하고 나온 해시값으로 두번째 해시 (opad_key, 1st_round_hash_result)를 실행시킵니다.
-간단한 스테이트 머신으로 되어있고 [SHA2][sha2]에서 설명하겠지만 message length가 ipad_key, opad_key 길이만큼 추가되므로, 그 부분을 처리하는 로직이 있습니다.</p>
+간단한 스테이트 머신으로 되어있고 message length가 ipad_key, opad_key 길이만큼 추가되므로, 그 부분을 처리하는 로직이 있습니다.</p>
 <p>영어로 된 문서에 조금 익숙하시다면 <a href="https://docs.opentitan.org/hw/ip/hamc/doc/">OpenTitan HMAC Spec</a> 문서를 읽어보시는 것도 좋을 것 같습니다.</p>
 <h2 id="_1">개선점</h2>
-<p>이 부분은 [SHA2][sha2]를 이해 한 후에 읽으면 좋을 것 같네요.
+<p>이 부분은 SHA2를 이해 한 후에 읽으면 좋을 것 같네요.
 현재 HMAC/SHA256 구조에서는 들어온 데이터를 SHA engine에 넣는 것을 FIFO에서 하나씩 뽑아서 넣는 구조로 되어있습니다.
 그런데 FIFO가 레지스터로 이루어져있다보니, 구지 그럴 필요가 없이 한방에 SHA engine으로 넘길 수도 있습니다.
 그러면 메세지를 SHA engine 내부의 저장소로 옮기는 16사이클을 절약할 수 있죠.
