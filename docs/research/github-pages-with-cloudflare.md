@@ -14,7 +14,7 @@ title: Github Pages와 Cloudflare 이용한 정적 사이트 구축
 예전에 [Write Website with Hakyll and Git][write-website-with-hakyll-and-git] 글을 쓰면서, 정적인 사이트를 배포하는 방법에 대해 언급한 적이 있습니다.
 그 사이 사이트 주소도 eunchan.net에서 eunchan.kim으로 바뀌었고, 배포도 [Amazon S3][ext:amazon-s3] 를 사용하다가 Amazon S3 + [Cloudfront][ext:cloudfront] 로 변경되었습니다.
 
-그러다 최근에 내용은 그대로 두고 [Github Pages][] 옮겨서 S3 버킷을 사용하지 않게 변경하였고, Cloudfront 서비스도 제거하였습니다.
+그러다 최근에 내용은 그대로 두고 Github Pages 옮겨서 S3 버킷을 사용하지 않게 변경하였고, Cloudfront 서비스도 제거하였습니다.
 Github Pages가 단일 파일 용량의 제한이 있긴 하지만, 그 사이즈 (100MB)를 넘기기 쉽지 않고, 정적 웹사이트가 1GB를 넘길일도 거의 없어서 괜찮겠다 싶어서 넘어갔습니다.
 (그런데 웹사이트 사이즈가 벌써 400MB인건 함정..)
 
@@ -26,7 +26,7 @@ CDN(Contents Delivery Network) 서비스임에도 개인용으로 가볍게 쓰�
 
 ## Github Page 생성하기
 
-[Github Pages][]는 Github에서 유저들에게 제공하는 정적웹사이트 서비스 입니다.
+Github Pages는 Github에서 유저들에게 제공하는 정적웹사이트 서비스 입니다.
 어느 유저나 쓸 수 있습니다.
 일단 Github에 가입되어있다고 가정할게요.
 

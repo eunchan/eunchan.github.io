@@ -8,13 +8,13 @@ title: Crunchbang on HP Microserver
 Making Bootable USB in Windows
 ------------------------------
 
-일단 [크런치뱅][] 에서 ISO를 다운받고
+일단 크런치뱅에서 ISO를 다운받고
 [Win32DiskImager](http://sourceforge.net/projects/win32diskimager/) 프로그램을
 이용해 남아도는 2GB USB 드라이브에 설치 ISO를 구웠습니다. 이 프로그램으로
 간단하게 구울 수 있었습니다. 중간에 사용중이라고 에러가 간혹 나는데 이때는
-관리자 권한이나 호환성모드로 실행해 보시고 그래도 안되면 리부팅 등을 계속
-하면서 시도하면 되더군요. UNetBootIn 같은 프로그램은 [크런치뱅][] 을 지원하지
-않아서 포기했습니다.
+관리자 권한이나 호환성모드로 실행해 보시고 그래도 안되면 리부팅 등을 계속 하면서
+시도하면 되더군요. UNetBootIn 같은 프로그램은 크런치뱅을 지원하지 않아서
+포기했습니다.
 
 추가적인 정보를 드리자면 설치 후 USB를 기존으로 복구하고 싶을 때는 아래의
 방법으로 복구하시면 됩니다.
@@ -34,7 +34,8 @@ Configuring Crunchbang for Web developing
 
 제 홈페이지 및 기타 문서 작업을 위해 몇가지 설정을 추가로 하였습니다.
 
-먼저 [Hakyll][] 을 위해서 Haskell package를 설치했습니다
+먼저 [Hakyll](https://jaspervdj.be/hakyll/)을 위해서 Haskell package를
+설치했습니다
 
     $ sudo apt-get install ghc libghc-zlib-dev cabal-install alex happy
     $ cabal update

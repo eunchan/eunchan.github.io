@@ -65,6 +65,6 @@ shall, should, may 등이 있는데, 강제(mandatory)하는 것에서부터 점
 
 역시 영어 네이티브가 아니여야 이런 궁리를 하는거구나... 싶네요.
 
-
+[Homebrew]: https://brew.sh
 [IETF RFC 2119]: https://www.ietf.org/rfc/rfc2119.txt
 [Esperanto]: http://esperanto.net
