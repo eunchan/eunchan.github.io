@@ -37,3 +37,5 @@ metadataFieldIs key value metadata =
 
 다른 하나는, 이건 YAML에 관련된 이야기 인데, YAML은 on, yes 등의 값을 무조건 Bool로 인식해서 true로 변경하더군요.
 그래서 disqus를 표시하는 metadata field가 on 에서 true로 바뀌는 바람에 disqus가 사라져 버려서 찾느라 고생좀 했습니다.
+
+[Hakyll]: https://jaspervdj.be/hakyll/

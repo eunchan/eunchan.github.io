@@ -8,7 +8,7 @@ title: My Camera Story
 
 | Period      | Type    | Camera Name                      | Serial                | Description          |
 | ----------- | ------- | -------------------------------- | --------------------- | -------------------- |
-| 2014 ~      | P&S     | Sony RX100 III                   |  0993289              |                      |
+| 2014 ~ 2025 | P&S     | Sony RX100 III                   |  0993289              | Broken               |
 | 2009 ~ 2023 | DSL     | Panasonic G1 + 14-45             |                       |                      |
 | 2009 ~ 2023 | DSL     | [Olympus E-P1 17mm kit][]        | H47501330 / AAC214880 |                      |
 | 2008 ~ 2009 | DSLR    | [Nikon D40][]                    | 5663788               | 21.10.2008           |

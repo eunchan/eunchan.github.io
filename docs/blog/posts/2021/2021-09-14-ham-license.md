@@ -3,6 +3,7 @@ date: 2021-09-14
 tags: ['ham', 'radio', 'handheld', 'license', 'fcc', 'callsign']
 slug: 'ham-license'
 comments: true
+title: 'HAM License'
 ---
 
 **TL;DR** HAM Technician 자격증을 취득했습니다.

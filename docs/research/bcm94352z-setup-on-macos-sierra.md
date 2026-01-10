@@ -15,8 +15,11 @@ tags:
 title: Broadcom BCM94352Z, macOS 시에라에서 설정하기
 ---
 
-[에얼리언웨어 알파 해킨토시 설치][alpha-hackintosh] 글에서 잠깐 언급했는데, 알파에 기본으로 내장된 WIFI 모듈은 인텔 제조라 macOS에서 드라이버가 없어서 동작을 못합니다.
-그래서 인터넷을 수소문 한 결과, 브로드컴의 BCM94352Z가 문제없이 잘 동작한다길래 [아마존에서 주문][bcm-amazon]해서 막 받았네요.
+[에얼리언웨어 알파 해킨토시 설치](./installing-macos-on-alienware-alpha.md)
+글에서 잠깐 언급했는데, 알파에 기본으로 내장된 WIFI 모듈은 인텔 제조라 macOS에서
+드라이버가 없어서 동작을 못합니다. 그래서 인터넷을 수소문 한 결과, 브로드컴의
+BCM94352Z가 문제없이 잘 동작한다길래 [아마존에서 주문][bcm-amazon]해서 막
+받았네요.
 
 [bcm-amazon]: https://www.amazon.com/BCM94352Z-NGFF-WiFi-Bluetooth-802-11ac/dp/B00JGFA50U
 

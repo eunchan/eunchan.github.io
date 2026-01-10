@@ -20,7 +20,7 @@ Sony A7s2가 비싸다보니, 그 바디가격만으로 구성할 수 있는 2.8
 
 2020년에 구입하였습니다. [구입기](../blog/posts/motorcycle/2020-07-30-ktm-790-adventure-r.md)
 
-## [Orion XT-8][xt8]
+## [Orion XT-8](../sky/equip/xt8.md)
 
 Meade는 Orion 돕을 구하게 되어 패스합니다.
 
