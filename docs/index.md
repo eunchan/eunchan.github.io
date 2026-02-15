@@ -16,6 +16,7 @@ hide:
 
 ## 최근 글
 
+- [Home Network](research/home-network.md) - 2026-02-15
 - [2026년 새해](blog/posts/2026/2026-01-04-new-year.md) - 2026-01-04
 - [2025년도 지름 결산](blog/posts/2025/stuff-in-2025.md) - 2025-12-31
 - [Gemini 3 Pro and Antigravity](blog/posts/2025/2025-11-24-antigravity.md) - 2025-11-24
@@ -25,4 +26,3 @@ hide:
 - [The Stargate Project - Datacenter for AI](article/the-stargate-project.md) - 2025-01-22
 - [2024년도 지름 결산](blog/posts/2024/stuff-in-2024.md) - 2024-12-31
 - [End of 2024](blog/posts/2024/2024-12-18-end-of-the-year.md) - 2024-12-18
-- [Switch to Mkdocs](blog/posts/2024/2024-10-15-swich-to-mkdocs.md) - 2024-10-15

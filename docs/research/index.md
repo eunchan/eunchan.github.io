@@ -4,6 +4,7 @@ hide:
 title: Research
 ---
 
+- [Home Network Configuration](home-network.md) - February 15, 2026
 - [AT&T Fiber ONT/ Gateway Bypass](att-bypass.md) - August 5, 2023
 - [neomutt + notmuch + lieer + msmtp + gpg](email-in-terminal.md) - July 4, 2019
 - [localparam in parameter port list](localparam.md) - May 29, 2019
