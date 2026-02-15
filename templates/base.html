@@ -10,12 +10,12 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap">
   <link rel="stylesheet" href="{{ get_url(path="style.css", cachebust=true) }}">
-  
-  {% if config.generate_feeds %}
+
+  {% if config.generate_feeds -%}
   <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
-  {% endif %}
-  
-  {% block extra_head %}{% endblock extra_head %}
+  {%- endif %}
+
+  {% block extra_head -%}{%- endblock extra_head -%}
   <script>
     (function() {
       const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
@@ -32,27 +32,27 @@
           <span class="site-title">{{ config.title }}</span>
         </a>
       </div>
-      
+
       <!-- Desktop Navigation with Dropdowns -->
       <nav class="site-nav">
-        {% for item in config.extra.menu %}
-          {% if item.children %}
+        {%- for item in config.extra.menu %}
+          {%- if item.children %}
           <div class="nav-item has-dropdown">
             <a href="{{ item.url }}" class="nav-link">{{ item.name }} <span class="arrow">▾</span></a>
             <div class="dropdown-menu">
-              {% for child in item.children %}
+              {%- for child in item.children %}
               <a href="{{ child.url }}" class="dropdown-item">{{ child.name }}</a>
-              {% endfor %}
+              {%- endfor -%}
             </div>
           </div>
-          {% else %}
+          {% else -%}
           <div class="nav-item">
             <a href="{{ item.url }}" class="nav-link">{{ item.name }}</a>
           </div>
-          {% endif %}
-        {% endfor %}
+          {%- endif %}
+        {%- endfor %}
       </nav>
-      
+
       <div class="header-actions">
         <div id="search-box" class="search-box">
           <button id="search-toggle" class="search-toggle-btn" aria-label="검색창 열기" type="button">
@@ -84,89 +84,90 @@
         </button>
       </div>
     </div>
-    {% block subnav %}
-    {% set is_sky = false %}
-    {% set sky_sub = "sky" %}
-    {% if page and page.path is starting_with(pat="/sky") %}
-      {% set is_sky = true %}
-      {% if page.path is starting_with(pat="/sky/log") %}{% set sky_sub = "log" %}
-      {% elif page.path is starting_with(pat="/sky/body") %}{% set sky_sub = "body" %}
-      {% elif page.path is starting_with(pat="/sky/site") %}{% set sky_sub = "site" %}
-      {% elif page.path is starting_with(pat="/sky/equip") %}{% set sky_sub = "equip" %}
-      {% elif page.path is containing(pat="limiting-magnitude") %}{% set sky_sub = "lm" %}
-      {% endif %}
-    {% elif section and section.path is starting_with(pat="/sky") %}
-      {% set is_sky = true %}
-      {% if section.path is starting_with(pat="/sky/log") %}{% set sky_sub = "log" %}
-      {% elif section.path is starting_with(pat="/sky/body") %}{% set sky_sub = "body" %}
-      {% elif section.path is starting_with(pat="/sky/site") %}{% set sky_sub = "site" %}
-      {% elif section.path is starting_with(pat="/sky/equip") %}{% set sky_sub = "equip" %}
-      {% endif %}
-    {% endif %}
+    {%- block subnav %}
+    {%- set is_sky = false %}
+    {%- set sky_sub = "sky" %}
+    {%- if page and page.path is starting_with(pat="/sky") %}
+      {%- set is_sky = true %}
+      {%- if page.path is starting_with(pat="/sky/log") %}{% set sky_sub = "log" %}
+      {%- elif page.path is starting_with(pat="/sky/body") %}{% set sky_sub = "body" %}
+      {%- elif page.path is starting_with(pat="/sky/site") %}{% set sky_sub = "site" %}
+      {%- elif page.path is starting_with(pat="/sky/equip") %}{% set sky_sub = "equip" %}
+      {%- elif page.path is containing(pat="limiting-magnitude") %}{% set sky_sub = "lm" %}
+      {%- endif %}
+    {%- elif section and section.path is starting_with(pat="/sky") %}
+      {%- set is_sky = true %}
+      {%- if section.path is starting_with(pat="/sky/log") %}{% set sky_sub = "log" %}
+      {%- elif section.path is starting_with(pat="/sky/body") %}{% set sky_sub = "body" %}
+      {%- elif section.path is starting_with(pat="/sky/site") %}{% set sky_sub = "site" %}
+      {%- elif section.path is starting_with(pat="/sky/equip") %}{% set sky_sub = "equip" %}
+      {%- endif %}
+    {%- endif %}
 
-    {% set is_travel = false %}
-    {% set is_travel_overview = false %}
-    {% if page %}
-      {% if page.path is starting_with(pat="/travel") or page.path is starting_with(pat="/working-holiday") %}
-        {% set is_travel = true %}
-      {% endif %}
-    {% elif section %}
-      {% if section.path is starting_with(pat="/travel") or section.path is starting_with(pat="/working-holiday") %}
-        {% set is_travel = true %}
-        {% if section.path == "/travel/" %}
-          {% set is_travel_overview = true %}
-        {% endif %}
-      {% endif %}
-    {% endif %}
+    {%- set is_travel = false %}
+    {%- set is_travel_overview = false %}
+    {%- if page %}
+      {%- if page.path is starting_with(pat="/travel") or page.path is starting_with(pat="/working-holiday") %}
+        {%- set is_travel = true %}
+      {%- endif %}
+    {%- elif section %}
+      {%- if section.path is starting_with(pat="/travel") or section.path is starting_with(pat="/working-holiday") %}
+        {%- set is_travel = true %}
+        {%- if section.path == "/travel/" %}
+          {%- set is_travel_overview = true %}
+        {%- endif %}
+      {%- endif %}
+    {%- endif %}
 
-    {% set is_article = false %}
-    {% set article_sub = "overview" %}
-    {% if page and page.path is starting_with(pat="/article") %}
-      {% set is_article = true %}
-      {% if page.path is starting_with(pat="/article/silicon") %}{% set article_sub = "silicon" %}
-      {% elif page.path is starting_with(pat="/article/systems") %}{% set article_sub = "systems" %}
-      {% elif page.path is starting_with(pat="/article/review") %}{% set article_sub = "review" %}
-      {% endif %}
-    {% elif section and section.path is starting_with(pat="/article") %}
-      {% set is_article = true %}
-      {% if section.path is starting_with(pat="/article/silicon") %}{% set article_sub = "silicon" %}
-      {% elif section.path is starting_with(pat="/article/systems") %}{% set article_sub = "systems" %}
-      {% elif section.path is starting_with(pat="/article/review") %}{% set article_sub = "review" %}
-      {% endif %}
-    {% endif %}
-    {% set is_hobby = false %}
-    {% set hobby_sub = "overview" %}
-    {% if page %}
-      {% if page.path is starting_with(pat="/hobby") %}
-        {% set is_hobby = true %}
-        {% set hobby_sub = "overview" %}
-      {% elif page.path is starting_with(pat="/motorcycle") %}
-        {% set is_hobby = true %}
-        {% set hobby_sub = "motorcycle" %}
-      {% elif page.path is starting_with(pat="/camping") %}
-        {% set is_hobby = true %}
-        {% set hobby_sub = "camping" %}
-      {% elif page.path is starting_with(pat="/fly-fishing") %}
-        {% set is_hobby = true %}
-        {% set hobby_sub = "fly-fishing" %}
-      {% endif %}
-    {% elif section %}
-      {% if section.path is starting_with(pat="/hobby") %}
-        {% set is_hobby = true %}
-        {% set hobby_sub = "overview" %}
-      {% elif section.path is starting_with(pat="/motorcycle") %}
-        {% set is_hobby = true %}
-        {% set hobby_sub = "motorcycle" %}
-      {% elif section.path is starting_with(pat="/camping") %}
-        {% set is_hobby = true %}
-        {% set hobby_sub = "camping" %}
-      {% elif section.path is starting_with(pat="/fly-fishing") %}
-        {% set is_hobby = true %}
-        {% set hobby_sub = "fly-fishing" %}
-      {% endif %}
-    {% endif %}
+    {%- set is_article = false %}
+    {%- set article_sub = "overview" %}
+    {%- if page and page.path is starting_with(pat="/article") %}
+      {%- set is_article = true %}
+      {%- if page.path is starting_with(pat="/article/silicon") %}{% set article_sub = "silicon" %}
+      {%- elif page.path is starting_with(pat="/article/systems") %}{% set article_sub = "systems" %}
+      {%- elif page.path is starting_with(pat="/article/review") %}{% set article_sub = "review" %}
+      {%- endif %}
+    {%- elif section and section.path is starting_with(pat="/article") %}
+      {%- set is_article = true %}
+      {%- if section.path is starting_with(pat="/article/silicon") %}{% set article_sub = "silicon" %}
+      {%- elif section.path is starting_with(pat="/article/systems") %}{% set article_sub = "systems" %}
+      {%- elif section.path is starting_with(pat="/article/review") %}{% set article_sub = "review" %}
+      {%- endif %}
+    {%- endif %}
 
-    {% if is_sky %}
+    {%- set is_hobby = false %}
+    {%- set hobby_sub = "overview" %}
+    {%- if page %}
+      {%- if page.path is starting_with(pat="/hobby") %}
+        {%- set is_hobby = true %}
+        {%- set hobby_sub = "overview" %}
+      {%- elif page.path is starting_with(pat="/motorcycle") %}
+        {%- set is_hobby = true %}
+        {%- set hobby_sub = "motorcycle" %}
+      {%- elif page.path is starting_with(pat="/camping") %}
+        {%- set is_hobby = true %}
+        {%- set hobby_sub = "camping" %}
+      {%- elif page.path is starting_with(pat="/fly-fishing") %}
+        {%- set is_hobby = true %}
+        {%- set hobby_sub = "fly-fishing" %}
+      {%- endif %}
+    {%- elif section %}
+      {%- if section.path is starting_with(pat="/hobby") %}
+        {%- set is_hobby = true %}
+        {%- set hobby_sub = "overview" %}
+      {%- elif section.path is starting_with(pat="/motorcycle") %}
+        {%- set is_hobby = true %}
+        {%- set hobby_sub = "motorcycle" %}
+      {%- elif section.path is starting_with(pat="/camping") %}
+        {%- set is_hobby = true %}
+        {%- set hobby_sub = "camping" %}
+      {%- elif section.path is starting_with(pat="/fly-fishing") %}
+        {%- set is_hobby = true %}
+        {%- set hobby_sub = "fly-fishing" %}
+      {%- endif %}
+    {%- endif %}
+
+    {%- if is_sky %}
     <div class="sub-header">
       <div class="sub-header-inner">
         <nav class="sub-nav">
@@ -179,28 +180,28 @@
         </nav>
       </div>
     </div>
-    {% elif is_travel %}
+    {%- elif is_travel %}
     <div class="sub-header">
       <div class="sub-header-inner">
         <nav class="sub-nav">
-          {% if is_travel_overview %}
+          {%- if is_travel_overview %}
           <a href="{{ get_url(path="travel/") }}" class="sub-nav-item active">전체보기</a>
           <a href="#travel-map-section" class="sub-nav-item">🗺️ 세계지도</a>
           <a href="#featured-series" class="sub-nav-item">📖 대형 연재</a>
           <a href="#travel-timeline-section" class="sub-nav-item">⏳ 연대기</a>
-          {% else %}
+          {%- else %}
           <a href="{{ get_url(path="travel/") }}" class="sub-nav-item">&larr; Travel</a>
           <span class="sub-nav-item active">{% if page %}{{ page.title }}{% elif section %}{{ section.title }}{% endif %}</span>
-          {% if section and section.extra.subnav %}
-            {% for item in section.extra.subnav %}
+          {%- if section and section.extra.subnav %}
+            {%- for item in section.extra.subnav %}
             <a href="{{ item.url }}" class="sub-nav-item">{{ item.name }}</a>
-            {% endfor %}
-          {% endif %}
-          {% endif %}
+            {%- endfor %}
+          {%- endif %}
+          {%- endif %}
         </nav>
       </div>
     </div>
-    {% elif is_article %}
+    {%- elif is_article %}
     <div class="sub-header">
       <div class="sub-header-inner">
         <nav class="sub-nav">
@@ -211,7 +212,7 @@
         </nav>
       </div>
     </div>
-    {% elif is_hobby and not is_sky %}
+    {%- elif is_hobby and not is_sky %}
     <div class="sub-header">
       <div class="sub-header-inner">
         <nav class="sub-nav">
@@ -223,8 +224,8 @@
         </nav>
       </div>
     </div>
-    {% endif %}
-    {% endblock subnav %}
+    {%- endif %}
+    {%- endblock subnav %}
   </header>
 
   <!-- Mobile Drawer Overlay & Sidebar -->
@@ -238,37 +239,37 @@
       <button id="drawer-close" class="drawer-close-btn" aria-label="Close menu">&times;</button>
     </div>
     <nav class="drawer-nav">
-      {% for item in config.extra.menu %}
-        {% if item.children %}
+      {%- for item in config.extra.menu %}
+        {%- if item.children %}
         <div class="drawer-group">
           <div class="drawer-group-title">
             <a href="{{ item.url }}">{{ item.name }}</a>
           </div>
           <div class="drawer-group-items">
-            {% for child in item.children %}
+            {%- for child in item.children %}
             <a href="{{ child.url }}" class="drawer-item">{{ child.name }}</a>
-            {% endfor %}
+            {%- endfor %}
           </div>
         </div>
-        {% else %}
+        {%- else %}
         <a href="{{ item.url }}" class="drawer-link">{{ item.name }}</a>
-        {% endif %}
-      {% endfor %}
+        {%- endif %}
+      {%- endfor %}
     </nav>
   </aside>
 
   <main class="main-container">
-    {% block content %}
-    {% endblock content %}
+    {%- block content %}
+    {%- endblock content %}
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      {% if config.extra.copyright_start_year %}
+      {%- if config.extra.copyright_start_year %}
       <p>&copy; {{ config.extra.copyright_start_year }}&ndash;{{ now() | date(format="%Y") }} {{ config.extra.copyright_name | default(value=config.extra.author) }}</p>
-      {% elif config.extra.copyright %}
+      {%- elif config.extra.copyright %}
       <p>{{ config.extra.copyright | safe }}</p>
-      {% endif %}
+      {%- endif %}
     </div>
   </footer>
 
@@ -389,6 +390,6 @@
   </script>
   <script src="{{ get_url(path="js/search.js", cachebust=true) }}" defer></script>
   <script src="{{ get_url(path="js/mermaid.js") }}" defer></script>
-  {% block extra_scripts %}{% endblock extra_scripts %}
+  {%- block extra_scripts %}{% endblock extra_scripts %}
 </body>
 </html>
