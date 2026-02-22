@@ -11,6 +11,7 @@ tags:
 - battery
 - solar
 - jackery
+- ecoflow
 - sleeping-bag
 title: Camping
 ---
@@ -19,7 +20,99 @@ title: Camping
 같이 리뷰하는 게 낫겠다 싶어서 페이지로 정리해 보았습니다. 추가로 다른 품목도
 업글 하게 되면 업데이트 하겠습니다.
 
-## Kitchen system
+## Backpacking Gear
+
+- 가방: Mystery Ranch Radix 55L
+- 텐트: Durston X-Dome 1+
+- 침낭: Enlightened Equipment Revelation 20F
+- 매트: NEMO Tensor Insulated Regular
+- 버너/코펠: MSR Pocket Rocket Deluxe / FireMaple Petrel + GreenPeak
+- 식기: Teak Utensil
+- 물통: Smart Bottle
+- 정수: Sawyer Squeeze + CNOC Vecto 2L
+
+### MSR Pocket Rocket Deluxe
+
+백팩킹용 부피가 작은 버너 + 작은 팟 셋트입니다. 오토바이 캠핑에 가지고 다니려고
+구입했는데 거의 커피 물 끓이는 용도로만 사용중이네요 :) 바람에 취약한 게 아쉽고
+바람만 잔잔하면 화력 좋습니다. 스타터가 달려있어서 따로 라이터가 필요하진
+않아요.
+
+Jetboil 제품이 바람을 잘 견뎌서 그걸 살까 했는데, 이전에 샀다가 잊어먹는 바람에
+또 사긴 그렇더라구요...
+
+### [FireMaple Stove set][firemaple-stove]
+
+백팩킹용으로 MSR Pocket Rocket을 사용하고 있었는 데, 심심해서 하나 더
+장만했습니다. FireMaple의 Petrel Pot과 GreenPeak 버너입니다. 이 제품은 Jetboil
+Flash와 비슷하게 바닥에 열을 잘 전달하는 부분이 있으면서도 부피가 작아서 꽤
+괜찮아보이더라구요.
+
+[firemaple-stove]: https://firemaplegear.com/products/petrel-ultralight-pot-750ml?variant=41485598392416
+
+### [Durston X-Dome 1+][durston-x-dome-1p]
+
+![](../media/blog/2025-stuff/x-dome-1p.jpg)
+
+백팩킹을 해보려고 산 텐트인데, 정작 어깨 때문에 백팩킹은 하지도 못하고, 오토캠핑
+갔을 때 써본게 전부네요. 1kg 미만의 자립형 텐트입니다. 자립형 텐트중에 이만큼
+가벼운건 거의 없는데, 내부 공간도 넉넉하고, 스테이크도 폴대 네곳 빼고는 박지
+않아도 됩니다.
+
+사용해보니 바람 좀 불 때 펄럭이는것 빼고는 만족하네요. 바람 부는 날에는
+가이라인으로 좀 더 고정해 주면 될 것 같습니다. 괜히 백팩킹 커뮤니티에서 인기
+있는 제품이 아니더군요.
+
+[durston-x-dome-1p]: https://durstongear.com/products/x-dome-1-plus-ultralight-backpacking-tent
+
+### [Enigma Quilt][enigma-quilt]
+
+침낭을 사려고 했는데, 머미 침낭은 자면서 움직이기 불편해서 다른 방법이 없을까
+고민을 많이 했었죠. 그러다 발견한 게 Quilt 입니다. 3면만 감싸고 바닥은
+슬리핑패드에 의존하는 방식인 데, 사실 거위털 침낭이라고 하더라도 바닥은 몸무게에
+눌려서 보온 효과가 없으니 3면만 쓰는 게 납득이 되더군요. 그래서 Custom 주문하고
+4주를 기다린 끝에 Enlightened Equiptment 의 Enigma 20F 퀼트를 샀습니다.
+
+평상시엔 큰 색에 보관하다, 부피를 줄일 때 같이 들어있는 압축 팩에 넣고 갑니다.
+850 거위털이라 부피가 매우 작고, 가볍습니다.
+
+화씨 35도~40도 에서 아래에 있는 [슬리핑 패드](#big-agnes-pad)와 함께 사용했는
+데, 정말 추운 줄 모르고 잘 잤습니다. 머리부분은 좀 더 쌀쌀하면 얇은 파타고니아
+패딩을 입고 자거나, 비니를 쓰고 자면 될 것 같네요. 패드만 살짝 더 넓으면 편하게
+잘 수 있을 것 같습니다.
+
+[enigma-quilt]: https://enlightenedequipment.com/revelation-sleeping-quilt/
+
+### [NEMO Tensor Insulated][nemo-tensor]
+
+결국 Big Agnes 슬리핑 패드 환불하고 NEMO 슬리핑 패드로 왔습니다. 이건 정말
+만족합니다. 바람 채우는게 정말 편하구요. 잠자리도 Big Agnes 패드랑 비슷하게
+편하게 잘 수 있습니다.
+
+퀼트와 연결해서 잠을 자면 추위가 거의 느껴지지 않네요. 3계절은 충분히 쓸것
+같습니다.
+
+[nemo-tensor]: https://www.nemoequipment.com/collections/tensor%E2%84%A2-sleeping-pads/products/tensor-trail-insulated-ultralight-sleeping-pad
+
+## Motorcycle Camping Gear
+
+- 가방: Mosko Moto Reckless 40L / Kriega Trail 18
+- 텐트: Lone Rider ADV Tent
+- 침낭: Enlightened Equipment Revelation 20F
+- 매트: NEMO Tensor Insulated
+- 버너/코펠: MSR Pocket Rocket Deluxe / FireMaple Petrel + GreenPeak
+- 식기: Teak Utensil
+- 물통: Smart Bottle
+- 정수: Sawyer Squeeze + CNOC Vecto 2L
+
+### Lone Rider ADV Tent
+
+[마못 텐트](#marmot-limelight-2p-tent)를 결국엔 리턴하고 오토바이 캠핑용으로
+나온 Lone Rider ADV 텐트를 구입했습니다.
+
+## Car/Travel Trailer Camping Gear
+
+### Kitchen system
 
 먼저 장비를 바꾸기 전에 쓰던 캠핑용 주방 시스템은 정말 여기저기서 긁어다 모은
 물건들입니다. 뭐 새로 산 것도 마찬가지지만요. 냄비는 집에 있는 굴러다니는 이케아
@@ -31,7 +124,7 @@ title: Camping
 불러요)를 사용하고 있었습니다. 캠핑 가는 날, 근처 마트에 들러서 얼음 큰 한봉지
 사서 채우고 음식물 상하지 않게 보관하고, 캠핑 내내 그 얼음으로 버티는 식이었죠.
 
-### Portable Electric Fridge
+#### Portable Electric Fridge
 
 ![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_refrigandtable.jpg)
 
@@ -74,7 +167,7 @@ Dometic에서 보조배터리를 파는 데, 40Ah 짜리 배터리를 850 달러
 효율이 바닥이긴 하지만, 캠핑장에서 죽치고 있는게 아니라 주변 구경가고 하면,
 차량으로도 충전이 되서 불편함 없이 쓸수 있습니다.
 
-### Jetboil Genesys
+#### Jetboil Genesys
 
 2구 버너 중 가장 부피가 작은 버너일 것 같습니다. 제가 사용하고 있는 것은 냄비와
 팬이 포함된 제품인데, 버너가 냄비 안에 들어가서 같이 들고 다닐 수 있습니다.
@@ -83,17 +176,7 @@ Dometic에서 보조배터리를 파는 데, 40Ah 짜리 배터리를 850 달러
 점입니다. 다른 프로판 버너는 거의 온 오프 수준으로 불 조절이 어려운데,
 제네시스는 정말 미세하게 불 조절이 가능해서 팬을 태워먹을 염려는 없습니다.
 
-### MSR Pocket Rocket Deluxe
-
-백팩킹용 부피가 작은 버너 + 작은 팟 셋트입니다. 오토바이 캠핑에 가지고 다니려고
-구입했는데 거의 커피 물 끓이는 용도로만 사용중이네요 :) 바람에 취약한 게 아쉽고
-바람만 잔잔하면 화력 좋습니다. 스타터가 달려있어서 따로 라이터가 필요하진
-않아요.
-
-Jetboil 제품이 바람을 잘 견뎌서 그걸 살까 했는데, 이전에 샀다가 잊어먹는 바람에
-또 사긴 그렇더라구요...
-
-### Skotti Portable Grill
+#### Skotti Portable Grill
 
 ![](../media/blog/2025-stuff/skottigrill.jpg)
 
@@ -110,7 +193,7 @@ Jetboil 제품이 바람을 잘 견뎌서 그걸 살까 했는데, 이전에 샀
 가장 좋은 점은 분해해서 깔끔하게 청소할 수 있다는 점이랄까요. 스테인리스스틸이라
 그냥 분해해서 식기세척기에 넣으면 기름기도 사라지고 좋네요.
 
-## Jackery Explorer 500
+### Jackery Explorer 500
 
 냉장고와 히터의 전원을 공급하기 위해 휴대용 리튬 이온 배터리 500Wh 짜리를
 장만했습니다. LiFePo4 배터리가 deep cycle 배터리라, 구하면 좋긴 한 데, 일단
@@ -124,41 +207,23 @@ Jetboil 제품이 바람을 잘 견뎌서 그걸 살까 했는데, 이전에 샀
 한가지 아쉬운 건 AC inverter가 500W 출력이라, 응급상황에서 전열기를 쓰거나 하지
 못하는 게 아쉽긴 한데, 그럴 일이 얼마나 있을 까 싶네요.
 
-## Sleep System
+### Ecoflow Delta 2
 
-### Enigma Quilt
+Jackery 500은 500Wh 용량이라, 냉장고만 돌리면 2박 3일 정도는 버틸 수 있는데,
+스타링크까지 돌리면 하루도 못 버티더라구요. 그래서 용량을 늘리기 위해 Ecoflow
+Delta 2를 구입했습니다. Jackery로는 스타링크를 돌리는 데 쓰고, Ecoflow는
+냉장고나 다른 장비를 돌리는 데 쓰고 있습니다.
 
-침낭을 사려고 했는데, 머미 침낭은 자면서 움직이기 불편해서 다른 방법이 없을까
-고민을 많이 했었죠. 그러다 발견한 게 Quilt 입니다. 3면만 감싸고 바닥은
-슬리핑패드에 의존하는 방식인 데, 사실 거위털 침낭이라고 하더라도 바닥은 몸무게에
-눌려서 보온 효과가 없으니 3면만 쓰는 게 납득이 되더군요. 그래서 Custom 주문하고
-4주를 기다린 끝에 Enlightened Equiptment 의 Enigma 20F 퀼트를 샀습니다.
+### Sleep System
 
-평상시엔 큰 색에 보관하다, 부피를 줄일 때 같이 들어있는 압축 팩에 넣고 갑니다.
-850 거위털이라 부피가 매우 작고, 가볍습니다.
-
-화씨 35도~40도 에서 아래에 있는 [슬리핑 패드](#big-agnes-pad)와 함께 사용했는
-데, 정말 추운 줄 모르고 잘 잤습니다. 머리부분은 좀 더 쌀쌀하면 얇은 파타고니아
-패딩을 입고 자거나, 비니를 쓰고 자면 될 것 같네요. 패드만 살짝 더 넓으면 편하게
-잘 수 있을 것 같습니다.
-
-### 12V Heated Blanket + Wool Blanket
+#### 12V Heated Blanket + Wool Blanket
 
 추운날 차에서 잘 때를 대비해 구매한 제품입니다. 12V전기담요와 그 위에 모직담요를
 덮어서 열이 빠져나가는 걸 막아주면, 꽤 추운 날씨에도 차안에서 자기 무리
 없습니다. 전기담요는 시간에 30Wh-40Wh정도 쓰는데, Ecoflow Delta 2로 충분히 감당
 가능합니다.
 
-### NEMO Tensor Insulated
-
-결국 Big Agnes 슬리핑 패드 환불하고 NEMO 슬리핑 패드로 왔습니다. 이건 정말
-만족합니다. 바람 채우는게 정말 편하구요. 잠자리도 Big Agnes 패드랑 비슷하게
-편하게 잘 수 있습니다.
-
-퀼트와 연결해서 잠을 자면 추위가 거의 느껴지지 않네요. 3계절은 충분히 쓸것
-같습니다.
-
-### Exped Megamat 10 Duo
+#### Exped Megamat 10 Duo
 
 가족 캠핑(오토캠핑)에는 이전엔 코스트코에서 판매했던 에어매트리스를 두개
 썼었는데, 텐트를 [가젤텐트](./gazelle-t4.md)로 바꾼 뒤로 퀸사이즈
@@ -171,24 +236,6 @@ Self-inflating(혼자서 부풀어오르는) 매트라 가만히 놔두면 한�
 오르긴 하는데, 좀 너무 푹신푹신해서 같이 동봉된 펌프로 몇분 눌러줘야 합니다.
 그게 귀찮으면 전동 펌프를 하나 같이 가지고 다니는 것도 좋죠. 저도 전동 펌프로
 마무리 하고 있습니다.
-
-### Lone Rider ADV Tent
-
-[마못 텐트](#marmot-limelight-2p-tent)를 결국엔 리턴하고 오토바이 캠핑용으로
-나온 Lone Rider ADV 텐트를 구입했습니다.
-
-### Durston X-Dome 1+
-
-![](../media/blog/2025-stuff/x-dome-1p.jpg)
-
-백팩킹을 해보려고 산 텐트인데, 정작 어깨 때문에 백팩킹은 하지도 못하고, 오토캠핑
-갔을 때 써본게 전부네요. 1kg 미만의 자립형 텐트입니다. 자립형 텐트중에 이만큼
-가벼운건 거의 없는데, 내부 공간도 넉넉하고, 스테이크도 폴대 네곳 빼고는 박지
-않아도 됩니다.
-
-사용해보니 바람 좀 불 때 펄럭이는것 빼고는 만족하네요. 바람 부는 날에는
-가이라인으로 좀 더 고정해 주면 될 것 같습니다. 괜히 백팩킹 커뮤니티에서 인기
-있는 제품이 아니더군요.
 
 ### Havnby Car Mattress
 
@@ -214,15 +261,15 @@ Self-inflating(혼자서 부풀어오르는) 매트라 가만히 놔두면 한�
 
 ### [Gazelle Tent](./gazelle-t4.md)
 
-## Furniture
+### Furniture
 
-### REI Camping Table
+#### REI Camping Table
 
 튼튼한 제품에 만듦새도 마음에 드는 데, 캠핑의자 (헬리녹스)와 높이가 맞지 않네요.
 일단은 요리용 테이블로 사용하고 있습니다. 의자와 곁들이는 테이블은 아무래도
 헬리녹스 테이블원 으로 가야겠네요.
 
-### Helinox Chair One
+#### Helinox Chair One
 
 ![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_alabamahillscoffee.jpg)
 
@@ -230,7 +277,7 @@ Self-inflating(혼자서 부풀어오르는) 매트라 가만히 놔두면 한�
 기존 캠핑용 의자가 부피가 워낙에 커서, 캠핑장비가 늘어나며 그 부피가 부담이 되어
 장만했는데, 마음에 듭니다.
 
-### Mount River 2 Step Chair
+#### Mount River 2 Step Chair
 
 헬리녹스 체어를 두개 가지고 있었고, 아이들 의자를 따로 가지고 다녔습니다. 그러다
 한국 방문한 김에 요즘 뜨고 있다는 [마운트리버 2 STEP
