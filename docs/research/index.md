@@ -4,6 +4,7 @@ hide:
 title: Research
 ---
 
+- [Gemini + Obsidian: AI가 보조하는 지식 관리 시스템](gemini-obsidian.md) - 2026년 4월 22일
 - [Home Network Configuration](home-network.md) - February 15, 2026
 - [AT&T Fiber ONT/ Gateway Bypass](att-bypass.md) - August 5, 2023
 - [neomutt + notmuch + lieer + msmtp + gpg](email-in-terminal.md) - July 4, 2019
