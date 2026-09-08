@@ -1,7 +1,8 @@
-.PHONY: build deploy gen_md recent
+.PHONY: build deploy gen_md recent zola-migrate zola-build zola-serve
 
 REPO_TOP=$(shell git rev-parse --show-toplevel)
 MKDOCS=/opt/homebrew/bin/mkdocs
+ZOLA=./tools/zola/target/release/zola
 
 #gen_md:
 #	find docs -type f -name "*.md" -delete
@@ -29,12 +30,12 @@ recent:  # Add recent posts in docs/index.md
 	python3 scripts/collect_dates.py -m -n 10 >> /tmp/index.md.head
 	mv /tmp/index.md.head docs/index.md
 
-# Zola commands
+# Zola commands (using custom patched Zola with automatic relative link resolution)
 zola-migrate:
 	python3 scripts/migrate_to_zola.py
 
 zola-build: zola-migrate
-	zola build
+	${ZOLA} build
 
 zola-serve:
-	zola serve
+	${ZOLA} serve

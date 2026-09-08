@@ -9,3 +9,4 @@ Makefile
 !posts/sky/site/
 
 public/
+tools/zola/target/

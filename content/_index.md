@@ -15,13 +15,13 @@ hide = ["navigation"]
 
 ## 최근 글
 
-- [Gemini + Obsidian: AI가 보조하는 지식 관리 시스템](/research/gemini-obsidian/) - 2026-04-22
-- [달리기](/blog/posts/2026/running-1month/) - 2026-03-22
-- [Home Network](/research/home-network/) - 2026-02-15
-- [2026년 새해](/blog/posts/2026/2026-new-year/) - 2026-01-04
-- [2025년도 지름 결산](/blog/posts/2025/stuff-in-2025/) - 2025-12-31
-- [Gemini 3 Pro and Antigravity](/blog/posts/2025/gemini-3-pro-antigravity/) - 2025-11-24
-- [Camping](/camping/) - 2025-09-05
-- [Visiting Korea](/blog/posts/2025/visiting-korea-2025/) - 2025-04-22
-- [6 months into workout](/blog/posts/2025/workout-6-months/) - 2025-03-12
-- [The Stargate Project - Datacenter for AI](/article/the-stargate-project/) - 2025-01-22
+- [Gemini + Obsidian: AI가 보조하는 지식 관리 시스템](research/gemini-obsidian.md) - 2026-04-22
+- [달리기](blog/posts/2026/2026-03-22-running.md) - 2026-03-22
+- [Home Network](research/home-network.md) - 2026-02-15
+- [2026년 새해](blog/posts/2026/2026-01-04-new-year.md) - 2026-01-04
+- [2025년도 지름 결산](blog/posts/2025/stuff-in-2025.md) - 2025-12-31
+- [Gemini 3 Pro and Antigravity](blog/posts/2025/2025-11-24-antigravity.md) - 2025-11-24
+- [Camping](camping/index.md) - 2025-09-05
+- [Visiting Korea](blog/posts/2025/2025-04-22-visiting-korea.md) - 2025-04-22
+- [6 months into workout](blog/posts/2025/2025-03-12-workout.md) - 2025-03-12
+- [The Stargate Project - Datacenter for AI](article/the-stargate-project.md) - 2025-01-22

@@ -8,7 +8,7 @@ tags = ["google", "google-assistant", "google-home", "iot", "ifttt", "amazon-ech
 comments = true
 header-img = "/media/page/review/google-home.svg"
 +++
-[아마존 에코, 알렉사](/review/alexa/)를 사용한 지도 여러달이 되었네요.
+[아마존 에코, 알렉사](amazon-echo.md)를 사용한 지도 여러달이 되었네요.
 구글 홈이 출시된다는 소식을 듣자마자 알렉사를 버리고 구글홈을 예약 주문 했습니다.
 129달러 가격이 에코보다는 저렴하지만 그렇다고 많이 저렴하진 않은데, 나온 지 한달도 채 안되서
 베스트 바이에서 75불에 살 수 있는 할인 행사를 하더군요 (ㅜ.ㅜ 그놈의 블랙프라이데이...)
@@ -24,7 +24,7 @@ header-img = "/media/page/review/google-home.svg"
 대중적인 Philips Hue나 삼성의 SmartThing 뿐만이 아니라 TP-Link의 Kasa, WeMo등 왠만큼 유명한 IoT 기기는 다 지원합니다.
 게다가 Skill 이라는 기능이 있어서 개발사가 에코 스킬을 만들어두면 얼마든지 에코가 스킬을 배우고, 기기를 찾아서 사용할 수 있습니다.
 
-반면에, 구글 홈은 출시 초기에 [Nest](/review/nest/), Philips Hue, 삼성 SmartThing만 지원해서, 기존에 사용하뎐 TP-Link의 Kasa를 사용할 수 없었습니다.
+반면에, 구글 홈은 출시 초기에 [Nest](nest.md), Philips Hue, 삼성 SmartThing만 지원해서, 기존에 사용하뎐 TP-Link의 Kasa를 사용할 수 없었습니다.
 최근에 WeMo가 가세했다고는 하지만 여전히 지원기기가 턱없이 부족합니다.
 구글이 나서서 개발환경을 편하게 만들고 자유롭게 앱을 추가할 수 있는 에코시스템을 적극적으로 만들어야 할 것 같네요.
 
