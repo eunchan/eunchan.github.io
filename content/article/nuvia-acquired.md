@@ -7,7 +7,7 @@ tags = ["nuvia", "arm", "qualcomm", "cpu", "silicon"]
 [extra]
 comments = true
 +++
-4개월 전 [NVidia가 ARM을 인수했다는 글](nvidia-to-purchase-arm.md)을 썼습니다.
+4개월 전 [NVidia가 ARM을 인수했다는 글](nvidia-to-purchase-arm/)을 썼습니다.
 그 뒤로 쓰는 글이 또 다른 칩 제작 하드웨어 회사의 인수 관련 글이네요. 1월 13일,
 Nuvia가 퀄컴에 인수되었다는 소식이 들렸습니다. 인수 금액은 $1.4B, 한화로 1.6조
 정도 되는 금액이네요. (현대의 10조로 이런 회사 6개를 살 수 있는데...)

@@ -307,4 +307,4 @@ Leaving Cairo
 Egypt Gallery
 -------------
 
-  - [Egypt Gallery](gallery.md)
+  - [Egypt Gallery](gallery/)

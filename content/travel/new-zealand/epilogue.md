@@ -7,7 +7,7 @@ comments = true
 ![Tokyo Tower from Park Hotel Tokyo](../../media/page/travel/new-zealand/newzealand-417.jpg)
 
 Park Hotel Tokyo에서 바라보는 도쿄타워는 예전 롯본기로 걸어가면서 본
-[도쿄타워](../tokyo/index.md) 와 아무런 차이가 없는데 내 감정은 매우 다르다.
+[도쿄타워](../tokyo/) 와 아무런 차이가 없는데 내 감정은 매우 다르다.
 그때에는 도쿄타워를 본다는 벅찬 기대감이 가득했다.
 
 지금 내가 호텔방에서 편하게 의자에 앉아 느끼는 감정은 추억을 떠올리는
