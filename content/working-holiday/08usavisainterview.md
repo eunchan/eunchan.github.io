@@ -11,7 +11,7 @@ Preparing
 
 미국비자를 신청할 때에는 많은 서류들이 필요합니다. 캐나다 워킹홀리데이
 비자보다 미국 관광비자에서 필요한 서류가 훨씬 더 많더군요. 서류의 목록은
-[Working Holiday #04 Go to America](/working-holiday/04gotoamerica/) 을 참조하세요.
+[Working Holiday #04 Go to America](04gotoamerica.md) 을 참조하세요.
 
 Reservation of Interview
 ------------------------

@@ -3,9 +3,9 @@
 Reusable migration script from MkDocs to Zola for eunchan.kim.
 
 Features:
-- Pre-indexes all documents to build a complete link resolution map:
-  Resolves relative markdown file links (.md) to their final destination URL,
-  taking custom slugs and section index files into account.
+- Pure content copy without touching markdown links:
+  Relative markdown links (e.g. `[Post](../2026/2026-03-22-running.md)`)
+  are preserved 100% untouched so our patched Zola natively resolves them!
 - Converts YAML frontmatter to TOML frontmatter (+++ ... +++)
 - Sets transparent = true for sub-blog sections like blog/posts and its years
 - Generates required Zola `_index.md` for sections
@@ -172,93 +172,19 @@ def convert_frontmatter(yaml_data, is_section=False):
     lines.append("+++\n")
     return "\n".join(lines)
 
-def build_file_map():
-    """
-    Builds a lookup mapping from normalized file paths (relative to docs)
-    to final absolute URLs (e.g. /blog/posts/2026/running-1month/).
-    """
-    url_map = {}
-    for p in DOCS_DIR.rglob("*.md"):
-        rel_path = str(p.relative_to(DOCS_DIR)).replace("\\", "/")
-        text = p.read_text(encoding="utf-8", errors="replace")
-        m = FRONT_MATTER_RE.match(text) or FOUR_DASH_RE.match(text)
-        slug = None
-        if m:
-            try:
-                data = yaml.safe_load(m.group(1)) or {}
-                slug = data.get("slug")
-            except:
-                pass
-                
-        parent = str(p.relative_to(DOCS_DIR).parent).replace("\\", "/")
-        if parent == ".":
-            parent = ""
-        else:
-            parent = parent + "/"
-            
-        if p.name == "index.md":
-            final_url = f"/{parent}"
-        else:
-            final_name = str(slug) if slug else p.stem
-            final_url = f"/{parent}{final_name}/"
-            
-        url_map[rel_path] = final_url
-        
-    return url_map
-
-def sanitize_body(body: str, current_doc_path: str, url_map: dict) -> str:
+def sanitize_body(body: str) -> str:
     # 1. Remove empty markdown links like [text]()
     body = re.sub(r'\[([^\]]+)\]\(\)', r'\1', body)
     
-    # 2. Escape any literal {{...}} that Tera tries to interpret as variable
+    # 2. Escape literal {{...}} that Tera tries to interpret
     body = re.sub(r'(\{\{[^}]*\}\})', r'{% raw %}\1{% endraw %}', body)
     
-    # 3. Resolve relative markdown links to final URLs
-    current_dir = Path(current_doc_path).parent
-
-    def link_replacer(match):
-        prefix = match.group(1) # [text](
-        target = match.group(2).strip() # link target
-        
-        # External or non-file links
-        if re.match(r'^(https?://|mailto:|#|ftp:)', target):
-            return match.group(0)
-            
-        if ".md" in target:
-            parts = target.split("#", 1)
-            target_file_path = parts[0]
-            anchor = ("#" + parts[1]) if len(parts) > 1 else ""
-            
-            # Resolve relative target against current_dir
-            resolved_rel = os.path.normpath(str(current_dir / target_file_path)).replace("\\", "/")
-            
-            # Look up in url_map
-            if resolved_rel in url_map:
-                dest_url = url_map[resolved_rel]
-                return f"{prefix}{dest_url}{anchor})"
-            else:
-                # Fallback: simple strip
-                fallback = target_file_path
-                if fallback == "index.md":
-                    fallback = "./"
-                elif fallback.endswith("/index.md"):
-                    fallback = fallback[:-9] + "/"
-                elif fallback.endswith(".md"):
-                    fallback = fallback[:-3] + "/"
-                return f"{prefix}{fallback}{anchor})"
-
-        return match.group(0)
-
-    body = re.sub(r'(\[[^\]]+\]\()([^\)]+)\)', link_replacer, body)
+    # Note: Relative links are untouched! Patched Zola resolves them automatically.
     return body
 
 def migrate():
     print(f"Starting migration from {DOCS_DIR} to {CONTENT_DIR}...")
     CONTENT_DIR.mkdir(exist_ok=True)
-    
-    print("Building link resolution map...")
-    url_map = build_file_map()
-    print(f"Mapped {len(url_map)} markdown files.")
     
     for root, dirs, files in os.walk(DOCS_DIR):
         rel_root = Path(root).relative_to(DOCS_DIR)
@@ -310,9 +236,7 @@ def migrate():
                         yaml_data[cfg_k] = cfg_v
                         
             new_fm = convert_frontmatter(yaml_data, is_section=is_index)
-            
-            rel_file_path = str(src_file.relative_to(DOCS_DIR)).replace("\\", "/")
-            new_content = new_fm + sanitize_body(body, rel_file_path, url_map)
+            new_content = new_fm + sanitize_body(body)
             
             dst_file.write_text(new_content, encoding="utf-8")
             

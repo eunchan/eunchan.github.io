@@ -14,7 +14,7 @@ Summary
 * 일정 : 1(한국 -> 일본), 2(GRE시험), 3(신주쿠, 간다),
   4(이다바시,마루노우치,도쿄타워,록폰기), 5(우에노, 긴자, 지우가오카),
   6(닌교초, 일본 -> 한국)
-* [Gallery](/travel/tokyo/gallery/)
+* [Gallery](gallery.md)
 
 travel
 ------

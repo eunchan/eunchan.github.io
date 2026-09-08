@@ -131,7 +131,7 @@ Disk Utility를 이용해 GUID partition으로 Mac OS Extended로 포맷하셔�
 유저이름, 비밀번호, 언어등을 설정하신 다음 Ethernet 으로 인터넷 연결을 합니다.
 에얼리언웨어 알파에 들어있는 Wifi 모듈은 인텔 제조인데, 인텔이 OS X 드라이버를 제공하지 않아서 인식이 안됩니다.
 
-저같은 경우는 현재 Broadcom (경쟁사인데!) 의 [BCM94352Z NGFF M.2 모듈](/research/bcm94352z-setup-on-macos-sierra/)을 주문해두었습니다.
+저같은 경우는 현재 Broadcom (경쟁사인데!) 의 [BCM94352Z NGFF M.2 모듈](./bcm94352z-setup-on-macos-sierra.md)을 주문해두었습니다.
 macOS에서 가장 인식이 잘되는 무선랜 모듈이라고 하네요.
 
 ### Graphic, Audio (HDMI)
