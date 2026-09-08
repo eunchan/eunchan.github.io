@@ -7,12 +7,12 @@ tags = ["systemverilog", "uvm", "verification", "phase"]
 [extra]
 comments = true
 +++
-[UVM 첫화면](./)
+[UVM 첫화면](/research/uvm/)
 
-1. [UVM 개요](uvm-introduction/)
-2. [Design Under Test (DUT)](dut/)
+1. [UVM 개요](/research/uvm/uvm-introduction/)
+2. [Design Under Test (DUT)](/research/uvm/uvm-dut/)
 3. UVM Test Flow
-4. [UVM Blocks](uvm-blocks/)
+4. [UVM Blocks](/research/uvm/uvm-blocks/)
 
 ---
 
@@ -70,7 +70,7 @@ systemverilog에 익숙하다면, 처음 UVM을 배울 때 [UVM source code][uvm
 
 [uvm-src]: https://www.accellera.org/downloads/standards/uvm
 
-그러면 [UVM 소개](uvm-introduction/)글에서 간략히 설명했던 UVM 클래스를 자세히
+그러면 [UVM 소개](/research/uvm/uvm-introduction/)글에서 간략히 설명했던 UVM 클래스를 자세히
 설명하기 전에, `run_test`에서부터 UVM 시뮬레이션이 끝나는 때 까지 어떤 단계로
 진행되는 지 이해해 보는 게 좋겠네요. 저도 배우면서 기록하는 거라 설명이
 자세하지는 않을 것 같아요.
@@ -144,7 +144,7 @@ Phases로 지칭하는데, 이 세 단계에서 검증코드가 하는 일은 �
     `base/uvm_registry.svh` 파일에서 찾을 수 있어요.
 
 -   **`connect_phase`**: 클래스간의 인터페이스를 연결합니다. 다음에
-    설명하겠지만, [이전글](uvm-introduction/)에서 설명한 '빵굽는 레시피'를
+    설명하겠지만, [이전글](/research/uvm/uvm-introduction/)에서 설명한 '빵굽는 레시피'를
     전달하는 TLM FIFO를 연결합니다. `uvm_sequencer`가 `uvm_sequence_item`을
     받아서 `uvm_driver`에게 전해주는데, 이 연결을 `connect_phase`에서 합니다.
     또한 `uvm_scoreboard`로 전달되는 analysis port 연결도 이 단계에서

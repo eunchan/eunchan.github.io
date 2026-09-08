@@ -5,7 +5,7 @@ title = "Vornado 633"
 Air Circulator
 --------------
 
-[Venta](venta-lw44/) 를 사면서 같이 딸려온 Vornado 633
+[Venta](/review/venta-lw44/) 를 사면서 같이 딸려온 Vornado 633
 
 Impression
 ----------

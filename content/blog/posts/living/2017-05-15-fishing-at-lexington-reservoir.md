@@ -20,7 +20,7 @@ comments = true
 따뜻한 5월 봄날이라 전혀 생각지 못했다가 어린 아이들도 있고 해서 추운 날씨에 결국 캠핑 계획을 접었습니다.
 
 캘리포니아에서는 [Crabbing at Half Moon
-Bay](./2017-01-28-crabbing-at-half-moon-bay/) 글에서 언급한 바와 같이, Pier가
+Bay](/blog/posts/living/crabbing-at-half-moon-bay/) 글에서 언급한 바와 같이, Pier가
 아닌 곳에서 낚시를 하려면 면허가 필요합니다. 파인크레스트 호수도 Pier가 있긴
 하지만, 카약과 보트가 주변에 많아 낚시하기가 껄끄러워 1-Day 라이센스를
 구입했었는데, 그게 그대로 허공에 날아가 버릴 참이었죠. 하루짜리 라이센스는
