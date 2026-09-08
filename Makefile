@@ -28,3 +28,13 @@ recent:  # Add recent posts in docs/index.md
 	echo '' >> /tmp/index.md.head
 	python3 scripts/collect_dates.py -m -n 10 >> /tmp/index.md.head
 	mv /tmp/index.md.head docs/index.md
+
+# Zola commands
+zola-migrate:
+	python3 scripts/migrate_to_zola.py
+
+zola-build: zola-migrate
+	zola build
+
+zola-serve:
+	zola serve

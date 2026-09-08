@@ -1,0 +1,248 @@
+:root {
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+  --font-mono: "Inconsolata", monospace;
+  --bg-color: #ffffff;
+  --text-color: #2e3440;
+  --text-muted: #6c757d;
+  --border-color: #e5e9f0;
+  --primary: #037c6e;
+  --primary-hover: #025043;
+  --header-bg: rgba(255, 255, 255, 0.9);
+  --card-bg: #ffffff;
+  --code-bg: #f8f9fa;
+  --container-max-width: 960px;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1b26;
+  --text-color: #c0caf5;
+  --text-muted: #7aa2f7;
+  --border-color: #292e42;
+  --primary: #7aa2f7;
+  --primary-hover: #bb9af7;
+  --header-bg: rgba(26, 27, 38, 0.9);
+  --card-bg: #24283b;
+  --code-bg: #1f2335;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--header-bg);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header-inner {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+  gap: 1rem;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  text-decoration: none !important;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+.nav-link:hover {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.theme-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.main-container {
+  max-width: var(--container-max-width);
+  margin: 2rem auto;
+  padding: 0 1.25rem;
+  min-height: 70vh;
+}
+
+.page-body, .section-body {
+  margin-top: 1.5rem;
+}
+
+.page-body h1, .page-body h2, .page-body h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.page-body p {
+  margin-bottom: 1.25rem;
+}
+
+.page-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 1.5rem 0;
+}
+
+.post-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.post-meta {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.post-list {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+.post-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.post-item-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.post-item-date {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.posts-list .post-card {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.post-card-header h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-card-meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-weight: 600;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border-color);
+  padding: 2rem 1.25rem;
+  margin-top: 4rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.footer-inner {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Search UI */
+.search-box {
+  position: relative;
+}
+.search-box input {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--card-bg);
+  color: var(--text-color);
+  font-size: 0.9rem;
+  outline: none;
+}
+.search-results-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: none;
+  z-index: 200;
+}

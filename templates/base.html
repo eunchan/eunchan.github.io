@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="{{ lang | default(value="ko") }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{% if page %}{{ page.title }}{% elif section %}{{ section.title }}{% else %}{{ config.title }}{% endif %} - {{ config.title }}{% endblock title %}</title>
+  <meta name="description" content="{% if page %}{{ page.description | default(value=config.description) }}{% elif section %}{{ section.description | default(value=config.description) }}{% else %}{{ config.description }}{% endif %}">
+  
+  <link rel="icon" type="image/png" href="{{ get_url(path="img/favicon.png") }}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap">
+  <link rel="stylesheet" href="{{ get_url(path="css/style.css") }}">
+  
+  {% if config.generate_feeds %}
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
+  {% endif %}
+  
+  {% block extra_head %}{% endblock extra_head %}
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="{{ config.base_url }}" class="site-logo">
+        <img src="{{ get_url(path="img/logo2.png") }}" alt="{{ config.title }}" height="32">
+        <span class="site-title">{{ config.title }}</span>
+      </a>
+      
+      <nav class="site-nav">
+        {% for item in config.extra.menu %}
+        <a href="{{ item.url }}" class="nav-link">{{ item.name }}</a>
+        {% endfor %}
+      </nav>
+      
+      <div class="header-actions">
+        <div class="search-box">
+          <input id="search" type="search" placeholder="검색..." autocomplete="off">
+          <div id="search-results" class="search-results-dropdown"></div>
+        </div>
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">🌓</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-container">
+    {% block content %}
+    {% endblock content %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>{{ config.extra.copyright | safe }}</p>
+      <p>Powered by <a href="https://www.getzola.org" target="_blank" rel="noopener">Zola</a></p>
+    </div>
+  </footer>
+
+  <script src="{{ get_url(path="elasticlunr.min.js") }}" defer></script>
+  <script src="{{ get_url(path="search_index.ko.js") }}" defer></script>
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    if (currentTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    
+    toggleBtn.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const nextTheme = isDark ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', nextTheme);
+      localStorage.setItem('theme', nextTheme);
+    });
+  </script>
+  <script src="{{ get_url(path="js/search.js") }}" defer></script>
+  {% block extra_scripts %}{% endblock extra_scripts %}
+</body>
+</html>
