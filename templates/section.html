@@ -2,17 +2,19 @@
 
 {% block content %}
 <section class="section-container">
-  {% if section.content %}
-  <div class="section-body">
-    {{ section.content | safe }}
-  </div>
-  {% else %}
+  {% if not section.content is containing(pat="<h1") %}
   <header class="section-header">
     <h1>{{ section.title }}</h1>
     {% if section.description %}
     <p class="section-desc">{{ section.description }}</p>
     {% endif %}
   </header>
+  {% endif %}
+
+  {% if section.content %}
+  <div class="section-body">
+    {{ section.content | safe }}
+  </div>
   {% endif %}
 
   {# Only show auto-generated list if explicit extra.auto_list is true #}

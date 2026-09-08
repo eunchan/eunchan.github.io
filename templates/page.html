@@ -3,7 +3,9 @@
 {% block content %}
 <article class="content-page">
   <header class="post-header">
+    {% if not page.content is containing(pat="<h1") %}
     <h1 class="post-title">{{ page.title }}</h1>
+    {% endif %}
     {% if page.date %}
     <div class="post-meta">
       <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
