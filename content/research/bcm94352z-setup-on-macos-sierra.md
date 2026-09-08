@@ -7,7 +7,7 @@ tags = ["mac-os", "sierra", "hackintosh", "alienware-alpha", "bcm94352z", "wifi"
 comments = true
 header-img = "/media/page/research/hackintosh/hackintosh_sierra.svg"
 +++
-[에얼리언웨어 알파 해킨토시 설치](./installing-macos-on-alienware-alpha/)
+[에얼리언웨어 알파 해킨토시 설치](/research/installing-macos-on-alienware-alpha/)
 글에서 잠깐 언급했는데, 알파에 기본으로 내장된 WIFI 모듈은 인텔 제조라 macOS에서
 드라이버가 없어서 동작을 못합니다. 그래서 인터넷을 수소문 한 결과, 브로드컴의
 BCM94352Z가 문제없이 잘 동작한다길래 [아마존에서 주문][bcm-amazon]해서 막

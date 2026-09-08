@@ -307,4 +307,4 @@ Leaving Cairo
 Egypt Gallery
 -------------
 
-  - [Egypt Gallery](gallery/)
+  - [Egypt Gallery](/travel/egypt09/gallery/)

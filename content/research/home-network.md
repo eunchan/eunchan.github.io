@@ -7,7 +7,7 @@ tags = ["fiber", "firewalla", "unifi", "camera", "security"]
 [extra]
 comments = true
 +++
-[AT&T Bypass](./att-bypass/) 글에서 예전 홈 네트워크 구성을 간단히
+[AT&T Bypass](/research/att-bypass/) 글에서 예전 홈 네트워크 구성을 간단히
 다뤘었는데요. 그 이후로 장비를 몇 가지 교체하고 구성을 조금 더 다듬었습니다.
 아직 100% 만족하는 최종 설정은 아니지만, 어느 정도 안정화된 현재 구성을 기록해
 봅니다.

@@ -4,4 +4,4 @@ sort_by = "none"
 +++
 ## Posts
 
-- [Estimating Limiting Magnitude](../sky/limiting-magnitude/)
+- [Estimating Limiting Magnitude](/sky/limiting-magnitude/)

@@ -9,7 +9,7 @@ public = true
 +++
 ## Overview
 
-한 5년 전 즈음에 [FOAM](../blog/posts/2020/2020-06-30-foam/)에 대해서 언급한
+한 5년 전 즈음에 [FOAM](/blog/posts/2020/foam/)에 대해서 언급한
 적이 있습니다. 그때 즈음에 Personal Knowledge Management System (PKMS)에 대해
 접하고 Zettelkasten, ROAM 같은 개념들을 알게 되었죠. 당시에는 VS Code 기반의
 FOAM에 안착해 노트를 관리해왔습니다.

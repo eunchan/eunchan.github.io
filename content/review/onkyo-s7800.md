@@ -7,7 +7,7 @@ tags = ["home-theater", "onkyo", "surround", "s7800", "dolby", "atmos", "dts-x",
 [extra]
 comments = true
 +++
-TV를 둘 곳을 못 찾아 홈시어터를 구성하기로 하고 [BenQ HT2050 프로젝터](benq-ht2050/)와 함께 여러 사운드 시스템을 알아보았습니다.
+TV를 둘 곳을 못 찾아 홈시어터를 구성하기로 하고 [BenQ HT2050 프로젝터](/review/benq-ht2050/)와 함께 여러 사운드 시스템을 알아보았습니다.
 프로젝터 사운드도 괜찮다는 평이 많았는데, 그럼에도 불구하고 사운드 시스템을 찾은 이유가 있어요.
 
 1.  천장에 장착한 프로젝터에 HDMI 케이블로 영상을 연결해야 하는데, Xbox, Notebook, Chromecase, NAS 를 번갈아가며 연결하는게 매우 번거로움
