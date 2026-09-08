@@ -2,9 +2,11 @@
 
 {% block content %}
 <div class="blog-container">
+  {% if not section.content is containing(pat="<h1") %}
   <header class="section-header">
     <h1>{{ section.title }}</h1>
   </header>
+  {% endif %}
 
   {% if section.content %}
   <div class="section-body">
