@@ -88,7 +88,7 @@ hide = ["toc"]
     밤이되거나 겨울 시즌에는 모닥불 (개스로 켜는 불) 을 피우기에 마치 캠핑하는 듯한 느낌을 받으며 경치 구경을 할 수 있습니다.
 
     조금 더 위쪽으로 가면 [매버릭(Maverick) 근처에서
-    게잡이](../../blog/posts/living/2017-01-28-crabbing-at-half-moon-bay.md)도
+    게잡이](../../blog/posts/living/2017-01-28-crabbing-at-half-moon-bay/)도
     할 수 있습니다.
 
 *   Coffee Shops

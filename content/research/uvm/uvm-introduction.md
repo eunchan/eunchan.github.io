@@ -5,12 +5,12 @@ title = "Introduction to UVM"
 [extra]
 comments = true
 +++
-[UVM 첫화면](index.md)
+[UVM 첫화면](./)
 
 1. UVM 개요
-2. [Design Under Test (DUT)](dut.md)
-3. [UVM Test Flow](uvm-flow.md)
-4. [UVM Blocks](uvm-blocks.md)
+2. [Design Under Test (DUT)](dut/)
+3. [UVM Test Flow](uvm-flow/)
+4. [UVM Blocks](uvm-blocks/)
 
 ## Motive
 

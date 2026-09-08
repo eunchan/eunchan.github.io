@@ -9,7 +9,7 @@ comments = true
 +++
 제 웹사이트는 [Hakyll](https://jaspervdj.be/hakyll/)을 오랬동안 사용해 왔습니다.
 예전 도메인을 버리고 새 도메인을 얻기 시작 한 2012년 부터 사용했던 것 같네요.
-[이에 관해 글](../../../research/write-website-with-hakyll-and-git.md)을 쓴 적도
+[이에 관해 글](../../../research/write-website-with-hakyll-and-git/)을 쓴 적도
 있습니다.
 
 <!-- more -->

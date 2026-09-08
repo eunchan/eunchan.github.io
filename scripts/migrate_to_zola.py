@@ -5,8 +5,9 @@ Reusable migration script from MkDocs to Zola for eunchan.kim.
 Features:
 - Scans `docs/` and converts markdown files to `content/`
 - Converts YAML frontmatter to TOML frontmatter (+++ ... +++)
+- Sets transparent = true for sub-blog sections like blog/posts and its years
+- Rewrites internal markdown links to proper URLs (.md -> /)
 - Generates required Zola `_index.md` for sections
-- Automatically fixes internal links, escapes tera raw blocks, and ignores empty links
 """
 
 import os
@@ -34,9 +35,7 @@ SECTION_CONFIGS = {
     "blog/posts": {
         "title": "Posts",
         "sort_by": "date",
-        "paginate_by": 10,
-        "template": "blog.html",
-        "page_template": "blog-page.html",
+        "transparent": True,
     },
     "sky/log": {
         "title": "Night Sky Observation Log",
@@ -172,9 +171,43 @@ def convert_frontmatter(yaml_data, is_section=False):
     lines.append("+++\n")
     return "\n".join(lines)
 
+def convert_markdown_links(match):
+    prefix = match.group(1) # [text](
+    target = match.group(2) # link
+    
+    # Don't touch external links, mailto, anchor only
+    if re.match(r'^(https?://|mailto:|#|ftp:)', target):
+        return match.group(0)
+        
+    # If link targets a markdown file
+    if ".md" in target:
+        parts = target.split("#", 1)
+        url_part = parts[0]
+        anchor_part = ("#" + parts[1]) if len(parts) > 1 else ""
+        
+        if url_part == "index.md":
+            new_url = "./"
+        elif url_part.endswith("/index.md"):
+            new_url = url_part[:-9] + "/"
+        elif url_part.endswith(".md"):
+            new_url = url_part[:-3] + "/"
+        else:
+            new_url = url_part
+            
+        return f"{prefix}{new_url}{anchor_part})"
+        
+    return match.group(0)
+
 def sanitize_body(body: str) -> str:
+    # 1. Remove empty markdown links like [text]()
     body = re.sub(r'\[([^\]]+)\]\(\)', r'\1', body)
+    
+    # 2. Escape any literal {{...}} that Tera tries to interpret as variable
     body = re.sub(r'(\{\{[^}]*\}\})', r'{% raw %}\1{% endraw %}', body)
+    
+    # 3. Transform relative markdown links: [text](foo.md) -> [text](foo/)
+    body = re.sub(r'(\[[^\]]+\]\()([^\)]+)\)', convert_markdown_links, body)
+    
     return body
 
 def migrate():
@@ -236,6 +269,7 @@ def migrate():
             
             dst_file.write_text(new_content, encoding="utf-8")
             
+    # Subsections inside content
     for root, dirs, files in os.walk(CONTENT_DIR):
         rel_root = Path(root).relative_to(CONTENT_DIR)
         rel_path_str = str(rel_root).replace("\\", "/")
@@ -253,6 +287,12 @@ def migrate():
                 f'title = "{title}"',
                 f'sort_by = "{sort_by}"',
             ]
+            
+            if rel_path_str.startswith("blog/posts"):
+                fm.append("transparent = true")
+                
+            if "transparent" in cfg:
+                fm.append(f'transparent = {"true" if cfg["transparent"] else "false"}')
             if "paginate_by" in cfg:
                 fm.append(f'paginate_by = {cfg["paginate_by"]}')
             if "template" in cfg:
@@ -261,6 +301,29 @@ def migrate():
                 fm.append(f'page_template = "{cfg["page_template"]}"')
             fm.append("+++\n")
             index_file.write_text("\n".join(fm), encoding="utf-8")
+        else:
+            if rel_path_str.startswith("blog/posts"):
+                content = index_file.read_text(encoding="utf-8")
+                if "transparent = true" not in content:
+                    content = content.replace("+++\n", "+++\ntransparent = true\n", 1)
+                    index_file.write_text(content, encoding="utf-8")
+
+    # Ensure Hobby hub exists
+    hobby_dir = CONTENT_DIR / "hobby"
+    hobby_dir.mkdir(exist_ok=True)
+    hobby_index = hobby_dir / "_index.md"
+    if not hobby_index.exists():
+        hobby_index.write_text("""+++
+title = "Hobby"
+sort_by = "none"
++++
+
+취미 관련 카테고리입니다.
+
+* [Motorcycle](/motorcycle/)
+* [Camping](/camping/)
+* [Nightsky](/sky/)
+""", encoding="utf-8")
 
     print("Migration completed successfully!")
 

@@ -7,11 +7,11 @@ tags = ["systemverilog", "uvm", "verification", "agent", "driver", "monitor", "s
 [extra]
 comments = true
 +++
-[UVM 첫화면](index.md)
+[UVM 첫화면](./)
 
-1. [UVM 개요](uvm-introduction.md)
-2. [Design Under Test (DUT)](dut.md)
-3. [UVM Test Flow](uvm-flow.md)
+1. [UVM 개요](uvm-introduction/)
+2. [Design Under Test (DUT)](dut/)
+3. [UVM Test Flow](uvm-flow/)
 4. UVM Blocks
 
 ---
@@ -24,7 +24,7 @@ UVM 시뮬레이션을 실행해 볼 수 있겠네요.
 
 ## Virtual Interface & `uvm_confib_db`
 
-[DUT](dut.md) 글에서 언급했던 것 처럼, UVM 클래스와 DUT는 interface로 연결되어
+[DUT](dut/) 글에서 언급했던 것 처럼, UVM 클래스와 DUT는 interface로 연결되어
 있습니다. `tb.sv`에서 본것 처럼 실제 인터페이스는 tb module에 있고, 클래스는 그
 인터페이스의 reference를 받아서 사용합니다. C 언어의 포인터같은 개념으로
 생각하면 좀 쉬워요. 이걸 virtual interface라고 부릅니다.

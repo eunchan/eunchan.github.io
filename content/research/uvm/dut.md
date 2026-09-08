@@ -7,12 +7,12 @@ tags = ["systemverilog", "uvm", "dut", "design", "hardware", "verification"]
 [extra]
 comments = true
 +++
-[UVM 첫화면](index.md)
+[UVM 첫화면](./)
 
-1. [UVM 개요](uvm-introduction.md)
+1. [UVM 개요](uvm-introduction/)
 2. Design Under Test (DUT)
-3. [UVM Test Flow](uvm-flow.md)
-4. [UVM Blocks](uvm-blocks.md)
+3. [UVM Test Flow](uvm-flow/)
+4. [UVM Blocks](uvm-blocks/)
 
 ---
 
@@ -53,7 +53,7 @@ reactive agent가 있는 모듈을 기반으로 이야기 해 볼까 합니다. 
 버스 트랜잭션을 받아서 인터럽트를 만들어내는 모듈" 이라고 이해하면 충분할 것
 같네요.
 
-[이전 글에서 보여준 검증 환경 구조](uvm-introduction.md)가 사실 이 모듈에 곧장
+[이전 글에서 보여준 검증 환경 구조](uvm-introduction/)가 사실 이 모듈에 곧장
 적용할 수 있는 구조입니다. 그 그림을 다시 보면,
 
 ![UVM blocks](../../media/page/research/uvm/uvm-overall.svg)

@@ -10,11 +10,11 @@ hide = ["toc"]
 
 ## Asia & Oceania
 
--   [Tokyo, Tokyo](tokyo/index.md) (08, 10)
+-   [Tokyo, Tokyo](tokyo/) (08, 10)
 
 -   China : Shanghai(08)
 
--   [New Zealand Campervan 여행](new-zealand/index.md)
+-   [New Zealand Campervan 여행](new-zealand/)
 
     Christchurch(10), Timaru(10), Oamaru(10), Dunedin(10), Catlins(10),
     Invercagill(10), Te Anau(10), Milford Sound(10), Queenstown(10),
@@ -23,13 +23,13 @@ hide = ["toc"]
 
 ## Africa
 
--   [Egypt : Cairo and White desert](egypt09/index.md)
+-   [Egypt : Cairo and White desert](egypt09/)
 
     Cairo(09), Baharia(White Desert)(09)
 
 ## Europe
 
--   [Europe with 40L Backpack](europe/index.md)
+-   [Europe with 40L Backpack](europe/)
 
     + England : London(07)
     + France : Paris(07), Chartres(07), Chantilly(07)
@@ -41,13 +41,13 @@ hide = ["toc"]
 
 ## America
 
--   [Canada Working Holiday](../working-holiday/index.md), Banff NP
+-   [Canada Working Holiday](../working-holiday/), Banff NP
 
     Vancouver(06), Victoria(06), Banff(06, 17), Calgary(06), Jasper(06)
 
--   USA : [New York(07)][07newyork], [Oahu, Hawaii (15)](hawaii15/index.md),
-    [North California](norcal/index.md), [Death Valley and Eastern
-    Sierra('21)](21-eastern-sierra-death-valley.md), [Lost Coast
+-   USA : [New York(07)][07newyork], [Oahu, Hawaii (15)](hawaii15/),
+    [North California](norcal/), [Death Valley and Eastern
+    Sierra('21)](21-eastern-sierra-death-valley/), [Lost Coast
     ('23)][trip:lost-coast]
 
 [trip:lost-coast]: https://www.youtube.com/watch?v=sYEnop5mbYs
