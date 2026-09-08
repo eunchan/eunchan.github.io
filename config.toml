@@ -29,10 +29,28 @@ repo_url = "https://github.com/eunchan/eunchan.github.io"
 repo_name = "GitHub"
 
 menu = [
-    { name = "Articles", url = "/article/" },
+    { name = "Articles", url = "/article/", children = [
+        { name = "Posts", url = "/article/" },
+        { name = "Research", url = "/research/" },
+        { name = "Review", url = "/review/" },
+        { name = "Tips", url = "/tips/" },
+    ]},
     { name = "Journal", url = "/blog/" },
-    { name = "Travel", url = "/travel/" },
-    { name = "Hobby", url = "/hobby/" },
+    { name = "Travel", url = "/travel/", children = [
+        { name = "Overview", url = "/travel/" },
+        { name = "North California", url = "/travel/norcal/" },
+        { name = "Hawaii '15", url = "/travel/hawaii15/" },
+        { name = "New Zealand '10", url = "/travel/new-zealand/" },
+        { name = "Egypt '09", url = "/travel/egypt09/" },
+        { name = "Tokyo", url = "/travel/tokyo/" },
+        { name = "Europe '07", url = "/travel/europe/" },
+        { name = "Canada Working Holiday", url = "/working-holiday/" },
+    ]},
+    { name = "Hobby", url = "/hobby/", children = [
+        { name = "Motorcycle", url = "/motorcycle/" },
+        { name = "Camping", url = "/camping/" },
+        { name = "Nightsky", url = "/sky/" },
+    ]},
     { name = "About", url = "/eunchan/" },
 ]
 
