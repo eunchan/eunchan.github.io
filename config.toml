@@ -2,6 +2,7 @@ base_url = "https://www.eunchan.kim"
 title = "Eli Kim"
 description = "Eli's Personal Website."
 default_language = "ko"
+use_directory_urls = false
 
 compile_sass = false
 build_search_index = true
