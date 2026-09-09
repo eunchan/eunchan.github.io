@@ -99,7 +99,7 @@ comments = true
 
 1.  Unifi U7-Pro
 
-    ![Home Network](../../../media/page/research/home-network/home-network-new.png)
+    ![Home Network](/media/page/research/home-network/home-network-new.png)
 
     제가 설정한 네트워크는 위에처럼 되어있습니다. WiFi를 위해서 두 개의 U6+ POE
     AP를 사용하고 있었는데, 그 중 하나가 종종 뻗더군요. 아예 동작을 안하는 것은

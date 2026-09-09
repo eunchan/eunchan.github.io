@@ -10,7 +10,7 @@ hide = ["toc"]
 
 10일간의 여행이 길지는 않았지만 그동안의 느낀점을 솔직하게 담아보고자 합니다
 
-![Te Anau 가는 길](../../media/page/travel/new-zealand/new-zealand-wide-026.jpg)
+![Te Anau 가는 길](/media/page/travel/new-zealand/new-zealand-wide-026.jpg)
 
 * [CamperVan](campervan.md)
 * [여행 루트](route.md)

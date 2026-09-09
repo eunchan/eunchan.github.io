@@ -29,7 +29,7 @@ I changed my email address couple of times, beginning from `ekim@eunchan.net` to
 I found that the calendar notification email showed always `ekim@eunchan.net`
 and also on my Apple Calendar App too.
 
-![Wrong calendar name in Apple Calendar App](../media/page/tips/primary-calendar-issue1.png)
+![Wrong calendar name in Apple Calendar App](/media/page/tips/primary-calendar-issue1.png)
 
 I've tried changing the main calendar name from the calendar web interface, but
 didn't help. At the time, I wasn't using Google Apps for Business (subscription)
@@ -37,7 +37,7 @@ yet, so there was no way to get in contact with the customer service. After
 couple of tries, I literally gave up. And Android calendar app also began
 showing same issue.
 
-![Wrong calendar name in Android Calendar App](../media/page/tips/primary-calendar-issue2.png)
+![Wrong calendar name in Android Calendar App](/media/page/tips/primary-calendar-issue2.png)
 
 Then after switching to the purchased service, Google Apps for Business couple
 of years later, I contacted the customer service to get this resolved. After
@@ -61,25 +61,25 @@ foo@bar.com
     accept or authorize the API to access your account if it is first time to
     use.
 
-    ![Log in to APIs Explorer](../media/page/tips/primary-calendar-step1.png)
+    ![Log in to APIs Explorer](/media/page/tips/primary-calendar-step1.png)
 
-    ![Log in to APIs Explorer](../media/page/tips/primary-calendar-step2.png)
+    ![Log in to APIs Explorer](/media/page/tips/primary-calendar-step2.png)
 
 3.  You should get `Response` section below. Click on the arrow in `kind` field
     and select `calendar.calendarList.update`.
 
-    ![Authorize](../media/page/tips/primary-calendar-step3.png)
+    ![Authorize](/media/page/tips/primary-calendar-step3.png)
 
-    ![calendarList.update](../media/page/tips/primary-calendar-step4.png)
+    ![calendarList.update](/media/page/tips/primary-calendar-step4.png)
 
 4.  Copy in the calendarId block what's in the eid field. It should be same as
     your google account such as `foo@bar.com`.
 
-    ![calendarId](../media/page/tips/primary-calendar-step5.png)
+    ![calendarId](/media/page/tips/primary-calendar-step5.png)
 
 5.  Click the `x` button from the `summaryOverride` field. Then the field will
     be removed. This has the value of your old email address.
 
-    ![Remove `summaryOverride`](../media/page/tips/primary-calendar-step6.png)
+    ![Remove `summaryOverride`](/media/page/tips/primary-calendar-step6.png)
 
 6.  Click authorize to update the values.

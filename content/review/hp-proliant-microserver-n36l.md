@@ -4,7 +4,7 @@ title = "Microserver N36L"
 [extra]
 comments = true
 +++
-![HP Microserver](../media/page/review/hp-proliant-microserver-n36l.jpg)
+![HP Microserver](/media/page/review/hp-proliant-microserver-n36l.jpg)
 
 
 Motivation

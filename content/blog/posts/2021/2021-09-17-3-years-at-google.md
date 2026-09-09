@@ -61,4 +61,4 @@ comments = true
 되었으면 좋겠지만, 앞길이 밝은 것은 아니라 저라도 맡은 일은 잘 끝내둬야 할 것
 같네요.
 
-![at Pear Lake in Sequoia National Park](../../../media/blog/2021-07-18-pear-lake.jpg)
+![at Pear Lake in Sequoia National Park](/media/blog/2021-07-18-pear-lake.jpg)

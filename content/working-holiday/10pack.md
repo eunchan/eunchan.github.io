@@ -22,4 +22,4 @@ Require
 Image
 -----
 
-![](../media/page/working-holiday/packing.jpg)
+![](/media/page/working-holiday/packing.jpg)

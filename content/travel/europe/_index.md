@@ -8,7 +8,7 @@ hide = ["toc"]
 여행하고 한국으로 귀국했습니다. 이 여행을 하면서 남긴 기록들입니다. 일반적인
 여행기가 아닌 제 생각이 가득 들어간 여행기로 정보는 많지 않네요.
 
-![나보나 광장 골목길](../../media/page/travel/europe/europe-050.jpg)
+![나보나 광장 골목길](/media/page/travel/europe/europe-050.jpg)
 
 - [Europe #001 짐 싸기                                 ](001backpacking.md)
 - [Europe #002 여행 루트                               ](002route.md)

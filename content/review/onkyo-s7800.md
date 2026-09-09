@@ -24,7 +24,7 @@ TV를 둘 곳을 못 찾아 홈시어터를 구성하기로 하고 [BenQ HT2050 
 먼저 5.1 채널과 5.1.2 채널의 다른점이 뭔지 알아야 하는데, 5.1.2 채널은 Dolby Atmos 를 구현하기 위한 채널이에요.
 마지막 자리 **.2** 가 천장 스피커를 말하는데, 천장에 직접 스피커를 달면 위에서도 소리가 들리기 때문에 비 내릴때나 비행기가 위로 날아갈 때 정말 실감이 납니다.
 
-![Dolby Atmos 5.1.2](../media/page/review/dolby_speakerplacement_512.jpg)
+![Dolby Atmos 5.1.2](/media/page/review/dolby_speakerplacement_512.jpg)
 
 위의 그림에서 보이는 것 처럼, Onkyo S7800 시스템은 천장에 직접 스피커를 달기 어려워 하는 사람을 위해 Front speaker를 변형을 해서 천장을 향해 쏘는 high speaker를 한 모듈에 합쳤어요.
 그래서 전면 스피커에 그릴이 두 방향으로 나와있습니다.

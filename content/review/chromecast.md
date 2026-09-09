@@ -6,7 +6,7 @@ tags = ["chromecast", "roku", "google", "android", "streaming"]
 [extra]
 comments = true
 +++
-<img src="../media/page/review/chromecast-product.png" width="350px" align="left">
+<img src="/media/page/review/chromecast-product.png" width="350px" align="left">
 [구글이 크롬캐스트(Chromecast)를 발표][gigaom-chromecast]한 지 벌써 일년이
 지났습니다. 비록 하드웨어 성능은 좋다고 말할 수는 없었지만 35달러라는 가격은
 많은 사람들이 플레이스토어의 문을 두드리기에 충분했습니다.
@@ -38,7 +38,7 @@ Roku에 비해서 좋은 점은, Google Play Video를 스트리밍 할 수 있�
 때문에 별반 차이는 없지만 Google Photo, Play Video, Play Music이 된다는 점은
 축복이네요.
 
-![Chromecast Logo on TV](../media/page/review/chromecast-booting.jpeg)
+![Chromecast Logo on TV](/media/page/review/chromecast-booting.jpeg)
 
 또한 Roku는 티비 전원을 끄더라도 상시 켜져있었는데 크롬캐스트는 티비의 USB
 포트에서 전원을 가져오기 때문에 티비를 켜면 그때 같이 켜집니다. 왠지 전기를
@@ -62,7 +62,7 @@ Tips
 (Bitrate 10Mbps, fastdecode, mp4 container) Audio 탭은 AAC 코덱을 선택해서
 변환하시면 됩니다.
 
-![HandBrake Video Option](../media/page/review/chromecast-handbrake.png)
+![HandBrake Video Option](/media/page/review/chromecast-handbrake.png)
 
 터미널에서 작업하는 걸 좋아한다면 _ffmpeg_ 툴을 사용합니다. 이미 [Homebrew][]가
 깔려있다고 가정하고, 다음의 패키지를 깔아줍시다.

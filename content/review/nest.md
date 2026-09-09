@@ -7,7 +7,7 @@ tags = ["nest", "thermostat", "google", "self-learning", "it"]
 [extra]
 comments = true
 +++
-![Nest 1st Generation](../media/page/review/nest.jpg)
+![Nest 1st Generation](/media/page/review/nest.jpg)
 
 
 ## Motivation

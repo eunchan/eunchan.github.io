@@ -24,7 +24,7 @@ comments = true
 
 1.  Skotti Portable Grill + Cap
 
-    ![](../../../media/blog/2025-stuff/skottigrill.jpg)
+    ![](/media/blog/2025-stuff/skottigrill.jpg)
 
     캠핑 다닐때 스테이크 굽는 용도로 작은 Weber grill을 가지고 다녔습니다.
     캠핑장에 있는 그릴은 녹슬고 지저분 해서 따로 가지고 다니긴 했는데, 이게
@@ -42,7 +42,7 @@ comments = true
 
 2.  Durston X-Dome 1+
 
-    ![](../../../media/blog/2025-stuff/x-dome-1p.jpg)
+    ![](/media/blog/2025-stuff/x-dome-1p.jpg)
 
     백팩킹을 해보려고 산 텐트인데, 정작 어깨 때문에 백팩킹은 하지도 못하고,
     오토캠핑 갔을 때 써본게 전부네요. 1kg 미만의 자립형 텐트입니다. 자립형
@@ -62,7 +62,7 @@ comments = true
 
 4.  Heavnby
 
-    ![](../../../media/blog/2025-stuff/havnby.png)
+    ![](/media/blog/2025-stuff/havnby.png)
 
     트럭으로 산속 오지 캠핑을 가끔 가다보니, 잠자는 것에 관심이 많이 가더군요.
     그래서 가젤텐트에 Megamat Duo도 써서 편하게 자보기도 하고, X-Dome 1+ 로

@@ -30,7 +30,7 @@ slugs = "wfh-setup"
 - 마이크암: Blue Podcaster Boom Arm
 - 오디오 인터페이스: Zoom Podtrak P4
 
-![WFH Desk](../media/page/workflow/wfh-desk.jpg)
+![WFH Desk](/media/page/workflow/wfh-desk.jpg)
 
 <!-- more -->
 

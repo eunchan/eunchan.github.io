@@ -20,14 +20,14 @@ SQM](http://unihedron.com)을 사용하지 않는 이상 밤하늘의 밝기 수
 이 방법은 [obs.nineplanets.org](http://obs.nineplanets.org/lm/rjm.html) 에서
 설명한 방법입니다.
 
-[![](../media/sky/lm-map-thumb.png)](../media/sky/lm-map-big.png)
+[![](/media/sky/lm-map-thumb.png)](/media/sky/lm-map-big.png)
 
 ## 측정 방법
 
 1.  눈이 암적응을 할 때 까지 기다립니다. 보통 30분 정도면 암적응이 끝납니다.
 
 2.  위의 지도에서 현재 하늘에서 보이는 부분을 결정합니다. [큰
-    지도](../media/sky/lm-map-big.png) 는 이미지를 클릭하면 볼 수 있습니다.
+    지도](/media/sky/lm-map-big.png) 는 이미지를 클릭하면 볼 수 있습니다.
     자세한 지도 내용은 아래의 링크에 있습니다.
 
 3.  각 꼭지점의 별을 포함하여 해당 영역에서 보이는 별을 셉니다.
@@ -104,7 +104,7 @@ SQM](http://unihedron.com)을 사용하지 않는 이상 밤하늘의 밝기 수
 
 ### Area #1: Chi-Zeta-Delta-Xi Dra {#lm-area01}
 
-![](../media/sky/lm-region01.gif)
+![](/media/sky/lm-region01.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -134,7 +134,7 @@ SQM](http://unihedron.com)을 사용하지 않는 이상 밤하늘의 밝기 수
 
 ### Area #2: Beta-Delta-Zeta Per                    {#lm-area02}
 
-![](../media/sky/lm-region02.gif)
+![](/media/sky/lm-region02.gif)
 
  |Stars | Limiting Magnitude |
  |----- | ------------------ |
@@ -165,7 +165,7 @@ SQM](http://unihedron.com)을 사용하지 않는 이상 밤하늘의 밝기 수
 
 ### Area #3: 23-Theta-Beta UMa                      {#lm-area03}
 
-![](../media/sky/lm-region03.gif)
+![](/media/sky/lm-region03.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -199,7 +199,7 @@ SQM](http://unihedron.com)을 사용하지 않는 이상 밤하늘의 밝기 수
 
 ### Area #4: Alpha-Epsilon-Beta Gem                 {#lm-area04}
 
-![](../media/sky/lm-region04.gif)
+![](/media/sky/lm-region04.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -228,7 +228,7 @@ SQM](http://unihedron.com)을 사용하지 않는 이상 밤하늘의 밝기 수
 
 ### Area #5: Zeta-Gamma-Delta Aql                   {#lm-area05}
 
-![](../media/sky/lm-region05.gif)
+![](/media/sky/lm-region05.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -253,7 +253,7 @@ SQM](http://unihedron.com)을 사용하지 않는 이상 밤하늘의 밝기 수
 
 ### Area #6: Alpha And--Gamma-Alpha Peg             {#lm-area06}
 
-![](../media/sky/lm-region06.gif)
+![](/media/sky/lm-region06.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -282,7 +282,7 @@ SQM](http://unihedron.com)을 사용하지 않는 이상 밤하늘의 밝기 수
 
 ### Area #7: Alpha-Beta-Delta Cep                   {#lm-area07}
 
-![](../media/sky/lm-region07.gif)
+![](/media/sky/lm-region07.gif)
 
 Stars   Limiting Magnitude
 -----   ------------------
@@ -313,7 +313,7 @@ Stars   Limiting Magnitude
 
 ### Area #8: Alpha-Beta-Zeta Tau                    {#lm-area08}
 
-![](../media/sky/lm-region08.gif)
+![](/media/sky/lm-region08.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -342,7 +342,7 @@ Stars   Limiting Magnitude
 
 ### Area #9: Alpha-Beta-Gamma-Delta Leo             {#lm-area09}
 
-![](../media/sky/lm-region09.gif)
+![](/media/sky/lm-region09.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -371,7 +371,7 @@ Stars   Limiting Magnitude
 
 ### Area #10: Alpha-Zeta-Gamma Vir                  {#lm-area10}
 
-![](../media/sky/lm-region10.gif)
+![](/media/sky/lm-region10.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -396,7 +396,7 @@ Stars   Limiting Magnitude
 
 ### Area #11: Alpha CrB--Gamma-Alpha Boo            {#lm-area11}
 
-![](../media/sky/lm-region11.gif)
+![](/media/sky/lm-region11.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -432,7 +432,7 @@ Stars   Limiting Magnitude
 
 ### Area #12: Alpha Ser--Beta Lib--Delta Oph        {#lm-area12}
 
-![](../media/sky/lm-region12.gif)
+![](/media/sky/lm-region12.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -456,7 +456,7 @@ Stars   Limiting Magnitude
 
 ### Area #13: Beta-Zeta Lyr--Theta-Nu Her           {#lm-area13}
 
-![](../media/sky/lm-region13.gif)
+![](/media/sky/lm-region13.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -484,7 +484,7 @@ Stars   Limiting Magnitude
 
 ### Area #14: Epsilon-Eta-Gamma Cyg                 {#lm-area14}
 
-![](../media/sky/lm-region14.gif)
+![](/media/sky/lm-region14.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -516,7 +516,7 @@ Stars   Limiting Magnitude
 
 ### Area #15: Beta Dra--Tau-Pi Her                  {#lm-area15}
 
-![](../media/sky/lm-region15.gif)
+![](/media/sky/lm-region15.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -542,7 +542,7 @@ Stars   Limiting Magnitude
 
 ### Area #16: Alpha CVn--Epsilon-Eta UMa            {#lm-area16}
 
-![](../media/sky/lm-region16.gif)
+![](/media/sky/lm-region16.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -569,7 +569,7 @@ Stars   Limiting Magnitude
 
 ### Area #17: Epsilon-Theta-Delta Aur               {#lm-area17}
 
-![](../media/sky/lm-region17.gif)
+![](/media/sky/lm-region17.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -602,7 +602,7 @@ Stars   Limiting Magnitude
 
 ### Area #18: Mu-Gamma-Phi And                      {#lm-area18}
 
-![](../media/sky/lm-region18.gif)
+![](/media/sky/lm-region18.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -631,7 +631,7 @@ Stars   Limiting Magnitude
 
 ### Area #19: Kappa-Alpha Dra--Beta UMi             {#lm-area19}
 
-![](../media/sky/lm-region19.gif)
+![](/media/sky/lm-region19.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -655,7 +655,7 @@ Stars   Limiting Magnitude
 
 ### Area #20: 42-Beta-Gamma Cam                     {#lm-area20}
 
-![](../media/sky/lm-region20.gif)
+![](/media/sky/lm-region20.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -685,7 +685,7 @@ Stars   Limiting Magnitude
 
 ### Area #21: Alpha PsA--98-Delta Aqr               {#lm-area21}
 
-![](../media/sky/lm-region21.gif)
+![](/media/sky/lm-region21.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -704,7 +704,7 @@ Stars   Limiting Magnitude
 
 ### Area #22: Beta Lep--Beta Ori--53 Eri            {#lm-area22}
 
-![](../media/sky/lm-region22.gif)
+![](/media/sky/lm-region22.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -729,7 +729,7 @@ Stars   Limiting Magnitude
 
 ### Area #23: Delta-Gamma-Epsilon-Beta Crv          {#lm-area23}
 
-![](../media/sky/lm-region23.gif)
+![](/media/sky/lm-region23.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -745,7 +745,7 @@ Stars   Limiting Magnitude
 
 ### Area #24: Beta-Gamma-Sigma-Alpha Lib            {#lm-area24}
 
-![](../media/sky/lm-region24.gif)
+![](/media/sky/lm-region24.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -770,7 +770,7 @@ Stars   Limiting Magnitude
 
 ### Area #25: Alpha-Epsilon Sco--Chi Lup            {#lm-area25}
 
-![](../media/sky/lm-region25.gif)
+![](/media/sky/lm-region25.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -788,7 +788,7 @@ Stars   Limiting Magnitude
 
 ### Area #26: Gamma-Alpha TrA--Eta Ara--Alpha Cen   {#lm-area26}
 
-![](../media/sky/lm-region26.gif)
+![](/media/sky/lm-region26.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -817,7 +817,7 @@ Stars   Limiting Magnitude
 
 ### Area #27: Beta Cen-Alpha-Gamma Cru              {#lm-area27}
 
-![](../media/sky/lm-region27.gif)
+![](/media/sky/lm-region27.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -835,7 +835,7 @@ Stars   Limiting Magnitude
 
 ### Area #28: Beta-Epsilon-Iota Car                 {#lm-area28}
 
-![](../media/sky/lm-region28.gif)
+![](/media/sky/lm-region28.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -853,7 +853,7 @@ Stars   Limiting Magnitude
 
 ### Area #29: Gamma-Alpha-Beta Hyd                  {#lm-area29}
 
-![](../media/sky/lm-region29.gif)
+![](/media/sky/lm-region29.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |
@@ -875,7 +875,7 @@ Stars   Limiting Magnitude
 
 ### Area #30: Alpha Tuc--Alpha-Epsilon Pav          {#lm-area30}
 
-![](../media/sky/lm-region30.gif)
+![](/media/sky/lm-region30.gif)
 
 | Stars | Limiting Magnitude |
 | ----- | ------------------ |

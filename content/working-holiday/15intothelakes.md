@@ -4,7 +4,7 @@ title = "Into the Lakes"
 [extra]
 comments = true
 +++
-![Lake Minnewanka](../media/page/working-holiday/canada-042.jpg)
+![Lake Minnewanka](/media/page/working-holiday/canada-042.jpg)
 
 Day-off 인 어느날, 갑자기 호수가 보고싶어서 옷을 입고 장갑과 모자를 챙기고
 밖에 굴러다니는 자전거를 끌고 직원 숙소를 나섰다. 이전에 런들을 탈 때 Banff
@@ -21,14 +21,14 @@ Lake Minnewanka, Two Jack Lake, Vermilion Lake 세곳을 돌아보고 싶었다.
 Lake Minnewanka
 ---------------
 
-![Lake Minnewanka](../media/page/working-holiday/canada-041.jpg)
+![Lake Minnewanka](/media/page/working-holiday/canada-041.jpg)
 
 자전거의 기어를 1단으로 놓고 가장 빠른 속도로 페달을 밟았다. 목적지인
 Minnewanka 까지는 약 12km , 평지만 계속 된다면 쉽겠지만 고속도로를 지나면
 오르막길이 계속 된다. 페달을 밟고 밟고 계속 밟으며 땀을 쏟으며 밟기를 50여분,
 겨우 Lake Minnewanka 에 도착했다.
 
-![Lake Minnewanka](../media/page/working-holiday/canada-043.jpg)
+![Lake Minnewanka](/media/page/working-holiday/canada-043.jpg)
 
 Minnewanka가 다른 호수와 동일한 자연 호수인줄 알았는데 인공적으로 만들어진
 호수였다. 아주 긴 댐이 강을 막아서 생겨난 Lake Minnewanka , 주변을 한바퀴 도는
@@ -36,8 +36,8 @@ Minnewanka가 다른 호수와 동일한 자연 호수인줄 알았는데 인공
 캐나다의 대자연을 그대로 보여주고 있었다. 로키의 대자연, 바로 그것을 위해서 이
 캐나다에 왔다. 그 로키 안에서 내가 땀흘리며 페달을 밟고, 걷고, 산을 오른다.
 
-![Lake Minnewanka](../media/page/working-holiday/canada-045.jpg)
-![Lake Minnewanka](../media/page/working-holiday/canada-044.jpg)
+![Lake Minnewanka](/media/page/working-holiday/canada-045.jpg)
+![Lake Minnewanka](/media/page/working-holiday/canada-044.jpg)
 
 자전거를 길 옆에 올려놓고 걷기 시작했다. 목표지점은 Aylmer Pass , 거리는 약
 12km, 왕복은 24km 라는 만만찮은 거리다. 5~6시간이 걸리는 거리다. 이번길은
@@ -47,8 +47,8 @@ Minnewanka가 다른 호수와 동일한 자연 호수인줄 알았는데 인공
 이외에는 그 누구의 소리도 들리지 않았다. 그러나 외롭지 않았다. 고독을 느끼지도
 않았다. 그냥 내가 그곳에 있는 것일 뿐이고 내가 로키의 일부분일 뿐이다.
 
-![Closed Sign at Aylmer Pass](../media/page/working-holiday/canada-038.jpg)
-![Warning Sign for Grizzly Bears](../media/page/working-holiday/canada-039.jpg)
+![Closed Sign at Aylmer Pass](/media/page/working-holiday/canada-038.jpg)
+![Warning Sign for Grizzly Bears](/media/page/working-holiday/canada-039.jpg)
 
 한시간 30분을 걸었다. 8km를 걸어서 Lm.8 야영지에 도착했다. 이곳에서 Aylmer
 Pass가 갈라진다. 계속 Minnewanka를 따라 걷던지 3,200m 가까이 되는 Aylmer 산을
@@ -62,8 +62,8 @@ Pass가 갈라진다. 계속 Minnewanka를 따라 걷던지 3,200m 가까이 되
 Two Jack Lake
 -------------
 
-![Two Jack Lake](../media/page/working-holiday/canada-047.jpg)
-![Two Jack Lake](../media/page/working-holiday/canada-048.jpg)
+![Two Jack Lake](/media/page/working-holiday/canada-047.jpg)
+![Two Jack Lake](/media/page/working-holiday/canada-048.jpg)
 
 입구까지 오니 3시간이 약간 넘게 흘렀다. 다시 자전거를 타고 다음 목적지인 Two
 Jack 호수로 달렸다. 중간에 보이는 Mt.Cascade는 Cascade에 오르고 싶은 생각이
@@ -85,7 +85,7 @@ Two Jack 의 호숫가에 앉았다. 날씨는 더할 나위 없이 좋았다. �
 이라는 생각과 함께 밴프에서 일하면서 생활한다고 하니 그제서야 조금은 놀란다.
 워킹홀리데이를 설명해 주고 인사를 한 후 자전거를 타고 Two Jack을 벗어났다.
 
-![on the Road to Two Jack Lake](../media/page/working-holiday/canada-049.jpg)
+![on the Road to Two Jack Lake](/media/page/working-holiday/canada-049.jpg)
 
 다음목표인 Vermilion 호수에 가기 위해선 Trans-Canada Highway를 타고 가야한다.
 Two Jack에서 Trans-Canada Highway까지는 내리막길이라 아주 즐거운 마음으로
@@ -94,12 +94,12 @@ Two Jack에서 Trans-Canada Highway까지는 내리막길이라 아주 즐거운
 기어 변경도 잘 안되는 ) 자전거를 계속 타느라 엉덩이도 아프지만 그래도 기분은
 상쾌했다.
 
-![Canadian Highway](../media/page/working-holiday/canada-050.jpg)
+![Canadian Highway](/media/page/working-holiday/canada-050.jpg)
 
 Vermilion Lakes
 ---------------
 
-![Mt.Rundle view from Vermilion Lakes](../media/page/working-holiday/canada-052.jpg)
+![Mt.Rundle view from Vermilion Lakes](/media/page/working-holiday/canada-052.jpg)
 
 Trans-Canada Highway를 달리고 Banff 방향으로 접어들다 오른쪽 길로 빠지면 제 1
 Vermilion 호수가 보인다. Vermilion 호수는 3개의 호수로 이어져있다. Vermilion
@@ -107,7 +107,7 @@ Vermilion 호수가 보인다. Vermilion 호수는 3개의 호수로 이어져�
 아쉽게도 반영은 찍지 못했다. Vermilion은 밴프 바로 앞에 있는 것이니까 다음을
 노려야겠다.
 
-![Vermilion Lakes](../media/page/working-holiday/canada-053.jpg)
+![Vermilion Lakes](/media/page/working-holiday/canada-053.jpg)
 
 이젠 다리 힘도 거의 다 빠져나갔다. 자전거를 타고 밴프센터로 올라갔다. 자전거를
 타고 올라가는 게 쉬운 일은 아니였다. 총 자전거로 40km를 달렸다. 엉덩이도

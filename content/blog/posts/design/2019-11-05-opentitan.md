@@ -10,7 +10,7 @@ comments = true
 +++
 # Open Source Hardware
 
-[![OpenTitan](../../../media/page/article/opentitan/opentitan-logo.png)](https://opentitan.org)
+[![OpenTitan](/media/page/article/opentitan/opentitan-logo.png)](https://opentitan.org)
 
 우리가 흔히 사용하는 컴퓨터의 운영체제는 윈도우 입니다. 이 윈도우는
 마이크로소프트 회사에서 개발한 운영체제입니다. 다양한 하드웨어를 지원하면서도

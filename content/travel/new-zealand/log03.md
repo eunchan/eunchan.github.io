@@ -12,7 +12,7 @@ comments = true
 Dunedin
 -------
 
-![Dunedin Holiday Park의 아침](../../media/page/travel/new-zealand/newzealand-046.jpg)
+![Dunedin Holiday Park의 아침](/media/page/travel/new-zealand/newzealand-046.jpg)
 
 아침에 눈을 뜨고 캠퍼밴의 커튼을 젖히니 푸른 하늘이 우릴 맞이하고 있었습니다.
 3일 만에 드디어 뉴질랜드의 푸른 하늘을 보게 되었습니다.
@@ -27,35 +27,35 @@ Dunedin
 각종 투어를 예약할 수 있습니다.
 모든 지역 여행의 시작지점이라 할 수 있습니다.
 
-![Dunedin 기차역 앞 거리](../../media/page/travel/new-zealand/newzealand-047.jpg)
+![Dunedin 기차역 앞 거리](/media/page/travel/new-zealand/newzealand-047.jpg)
 
 i-Site를 통해 얻은 시내 볼거리 몇 개를 들고 돌아다니기 시작했습니다.
 
-![Dunedin 기차역](../../media/page/travel/new-zealand/newzealand-048.jpg)
-![Dunedin 기차역](../../media/page/travel/new-zealand/newzealand-050.jpg)
+![Dunedin 기차역](/media/page/travel/new-zealand/newzealand-048.jpg)
+![Dunedin 기차역](/media/page/travel/new-zealand/newzealand-050.jpg)
 
 더니든 기차역은 그 고풍스러운 디자인이 눈길을 끕니다.
 사실 이 건물 외에도 고풍스러운 건물은 더 많이 있지만,
 유달리 더니든 기차역이 눈에 들어오는 것은,
 주변에 아무런 건물도 없기 때문일 겁니다.
 
-![First Church](../../media/page/travel/new-zealand/newzealand-055.jpg)
+![First Church](/media/page/travel/new-zealand/newzealand-055.jpg)
 
 또한 옥타곤 거리 바로 옆에는 First Church가 있습니다.
 
-![First Church 풀밭](../../media/page/travel/new-zealand/newzealand-056.jpg)
+![First Church 풀밭](/media/page/travel/new-zealand/newzealand-056.jpg)
 
 건물도 아름답지만, 그 옆의 잔디밭 또한 멋집니다.
 그리고 내부에는 파이프 오르간이 설치되어 있어 아름다운 음악 소리를 들을 수 있었습니다.
 연주하시는 분이 여자분인 줄 알았는데 연주를 마치고 교회를 나서는 모습을 보니 나이 지긋하신 어르신이었습니다.
 
-![Octagon 거리의 까페](../../media/page/travel/new-zealand/newzealand-063.jpg)
+![Octagon 거리의 까페](/media/page/travel/new-zealand/newzealand-063.jpg)
 
 그리곤 거리에서 느긋하게 커피도 마시며 여행을 즐기는 흉내도 좀 내어봅니다.
 그래도 바쁜 마음에 가만히 한 시간을 있지를 못하겠더군요.
 둘이 서로 재촉하면서 결국 자리를 금방 일어납니다.
 
-![Otago University](../../media/page/travel/new-zealand/newzealand-071.jpg)
+![Otago University](/media/page/travel/new-zealand/newzealand-071.jpg)
 
 오전 내에 구경해야 된다는 압박감에 바로 오타고 대학으로 향합니다.
 날씨가 좋은 덕분인지 많은사람이 밖에서 일광욕을 즐기고 있었습니다.
@@ -63,8 +63,8 @@ i-Site를 통해 얻은 시내 볼거리 몇 개를 들고 돌아다니기 시�
 
 사진은 찍어야되니 한명씩 번갈아가면서 말이죠 ^^
 
-![Otago University 잔디밭](../../media/page/travel/new-zealand/newzealand-072.jpg)
-![Otago University 잔디밭](../../media/page/travel/new-zealand/newzealand-074.jpg)
+![Otago University 잔디밭](/media/page/travel/new-zealand/newzealand-072.jpg)
+![Otago University 잔디밭](/media/page/travel/new-zealand/newzealand-074.jpg)
 
 대학 주변을 돌아보며 사진을 찍습니다.
 "남는건 사진뿐이야" 라는 말에 더 부지런히 돌아다닙니다.
@@ -79,13 +79,13 @@ i-Site를 통해 얻은 시내 볼거리 몇 개를 들고 돌아다니기 시�
 아내는 신발도 안신고 삼선슬리퍼를 끌고 신 나게 돌아다닙니다.
 세상에서 가장 편한 신발이라나요.. :)
 
-![Dunedin Botanic Garden](../../media/page/travel/new-zealand/newzealand-077.jpg)
+![Dunedin Botanic Garden](/media/page/travel/new-zealand/newzealand-077.jpg)
 
 Catlins
 --------
 
-![Campervan way to Catlins](../../media/page/travel/new-zealand/newzealand-081.jpg)
-![Campervan way to Catlins](../../media/page/travel/new-zealand/newzealand-080.jpg)
+![Campervan way to Catlins](/media/page/travel/new-zealand/newzealand-081.jpg)
+![Campervan way to Catlins](/media/page/travel/new-zealand/newzealand-080.jpg)
 
 그렇게 얼렁뚱땅 더니든 유람을 한 후, 곧장 오늘의 하이라이트 캐틀린스로 가려고 했으나 배가 고프네요. -_-;;
 중간에 차를 세우고 밥을 먹습니다.
@@ -104,10 +104,10 @@ Catlins
 그렇게 가다 보니 어느새 카카포인트입니다.
 짙은 안개에 가득하지만, 그 풍경은 참 멋집니다.
 
-![Kaka Point 시리즈](../../media/page/travel/new-zealand/newzealand-083.jpg)
-![Kaka Point 시리즈](../../media/page/travel/new-zealand/newzealand-087.jpg)
-![Kaka Point 시리즈](../../media/page/travel/new-zealand/newzealand-089.jpg)
-![Kaka Point 시리즈](../../media/page/travel/new-zealand/newzealand-090.jpg)
+![Kaka Point 시리즈](/media/page/travel/new-zealand/newzealand-083.jpg)
+![Kaka Point 시리즈](/media/page/travel/new-zealand/newzealand-087.jpg)
+![Kaka Point 시리즈](/media/page/travel/new-zealand/newzealand-089.jpg)
+![Kaka Point 시리즈](/media/page/travel/new-zealand/newzealand-090.jpg)
 
 바다를 보다가 괜하게 장난기가 발동합니다.
 셀프타이머에 놓고 이리저리 사진을 찍는데 서로 찍으면서 웃느라 정신이 없네요.
@@ -121,7 +121,7 @@ Catlins
 너겟포인트가 캐틀린스에서 가장 아름답다고 하는데,
 제대로 된 모습을 보긴 힘들어 보입니다.
 
-![Nugget Point 등대에서](../../media/page/travel/new-zealand/newzealand-095.jpg)
+![Nugget Point 등대에서](/media/page/travel/new-zealand/newzealand-095.jpg)
 
 차를 주차하고 너겟포인트의 등대까지 걸어갑니다.
 너겟포인트의 등대는 희미한 안개에 싸여있음에도 멋진 장면을 보여줍니다.
@@ -143,7 +143,7 @@ GPS가 일반 도시와 관광지는 지도를 거의 정확하게 보여주지�
 차를 돌리기도 어려운 좁은 비포장도로라 한참을 더 들어가 겨우 돌려서 나옵니다.
 그리곤 다시 방향을 잡아 달려갑니다.
 
-![Long Point로 가는길에 Wrong Way](../../media/page/travel/new-zealand/newzealand-096.jpg)
+![Long Point로 가는길에 Wrong Way](/media/page/travel/new-zealand/newzealand-096.jpg)
 
 한 시간을 달렸는데도 여전히 푸라카우누이 만은 나오질 않습니다.
 한참을 달리는데 Long Point가 있다고 나오네요.
@@ -175,7 +175,7 @@ GPS가 일반 도시와 관광지는 지도를 거의 정확하게 보여주지�
 안개 자욱해서 이렇게 보이진 않았겠지만 지금 생각해보면 아쉬움이 많습니다.
 푸라카우누이 가는 길에 거의 다 갔을 때 위쪽으로 올라가는 길이 아닌 아래로 직진하는 길이 푸라카우누이 가는 길이고 위로 가면 우리가 헤맸던 Long Point 가는 길이었습니다.
 
-![way to Curio Bay](../../media/page/travel/new-zealand/newzealand-099.jpg)
+![way to Curio Bay](/media/page/travel/new-zealand/newzealand-099.jpg)
 
 아쉬움을 뒤로 한 채 큐리오 만으로 향합니다.
 날씨도 안 좋고 시간도 늦었지만 큐리오 만으로 가는 이유는,
@@ -184,7 +184,7 @@ GPS가 일반 도시와 관광지는 지도를 거의 정확하게 보여주지�
 여기를 벗어나면 펭귄을 볼 기회가 더는 없었습니다.
 그래서 반드시 가야 했습니다.
 
-![Penguinn at Curio Bay](../../media/page/travel/new-zealand/newzealand-100.jpg)
+![Penguinn at Curio Bay](/media/page/travel/new-zealand/newzealand-100.jpg)
 
 어둑어둑해진 큐리오 만에 달려가서 결국 펭귄을 보았습니다.
 슬슬 집으로 들어오는 때라 뛰기도 하고 고개도 갸우뚱하는 펭귄이 정말 귀엽습니다. ^^

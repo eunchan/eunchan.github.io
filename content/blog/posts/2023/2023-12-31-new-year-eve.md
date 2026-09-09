@@ -7,7 +7,7 @@ tags = ["new-year", "new-year-eve"]
 [extra]
 comments = true
 +++
-![](../../../media/blog/2024-new-year-eve.jpg)
+![](/media/blog/2024-new-year-eve.jpg)
 
 새해 전날 (여기선 New Year Eve, NYE로 부릅니다) 입니다. 지금까진 구글에서
 Anniversary가 되었을 때 리뷰하는 글을 썼었는데, 다사다난했던 한 해라, 그 보다는

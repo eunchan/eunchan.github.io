@@ -4,7 +4,7 @@ title = "Farewell"
 [extra]
 comments = true
 +++
-![Farewell](../media/page/working-holiday/canada-193.jpg)
+![Farewell](/media/page/working-holiday/canada-193.jpg)
 
 캐나다 온지 4달이 넘었다. 센터온지 오늘이 4달째(1월22일). 그동안 떠나간
 사람들은 7명, 이제 떠날 사람 3명.

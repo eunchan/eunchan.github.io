@@ -14,7 +14,7 @@ comments = true
 
 <!-- more -->
 
-![Home Network](../media/page/research/home-network/home-network-2026.png)
+![Home Network](/media/page/research/home-network/home-network-2026.png)
 
 ## 장비 구성
 
@@ -117,4 +117,4 @@ G6](https://store.ui.com/us/en/category/all-cameras-nvrs/products/uvc-g6-bullet)
 Rack](https://store.ui.com/us/en/category/accessories-rack-mount/products/toolless-mini-rack)
 두 개를 쌓아서 쓰는 방법도 고려 중입니다.
 
-![Home Network Plan](../media/page/research/home-network/home-network-plan.png)
+![Home Network Plan](/media/page/research/home-network/home-network-plan.png)

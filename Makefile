@@ -37,5 +37,5 @@ zola-migrate:
 zola-build: zola-migrate
 	${ZOLA} build
 
-zola-serve:
+zola-serve: zola-migrate
 	${ZOLA} serve

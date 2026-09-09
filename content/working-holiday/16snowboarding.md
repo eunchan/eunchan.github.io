@@ -11,8 +11,8 @@ comments = true
 BIG 3 Ski Resort
 ----------------
 
-![at the top of Sunshine Village](../media/page/working-holiday/canada-188.jpg)
-![Ski Rift](../media/page/working-holiday/canada-184.jpg)
+![at the top of Sunshine Village](/media/page/working-holiday/canada-188.jpg)
+![Ski Rift](/media/page/working-holiday/canada-184.jpg)
 
 밴프에는 3개의 세계에서 유명한 스키장이 있다. 밴프 타운 가까이 있는 Norquay ,
 그리고 타운에서 15분 거리인 Sunshine Village, 그리고 선샤인 빌리지의 1.5배 (
@@ -66,9 +66,9 @@ C$1800정도..
 갔다. (**2013-06-05** 이 한해 결국 시즌오프때까지 50번 넘게 스키장을
 갔었습니다. 본전 이상 뽑은 셈이지요.)
 
-![Ski Rift](../media/page/working-holiday/canada-186.jpg)
-![Back mountain of Lake Louis Resort](../media/page/working-holiday/canada-198.jpg)
-![Jump at Sunshine Village](../media/page/working-holiday/canada-199.jpg)
+![Ski Rift](/media/page/working-holiday/canada-186.jpg)
+![Back mountain of Lake Louis Resort](/media/page/working-holiday/canada-198.jpg)
+![Jump at Sunshine Village](/media/page/working-holiday/canada-199.jpg)
 
 지금의 나는 2000이라는 돈이 아깝지 않다. 그만큼 재미있게 즐기고 있고,
 한국에서는 경험해 볼 수 없는 일들을 경험하고 있기 때문이다. 자연그대로의 로키

@@ -23,7 +23,7 @@ checked bagage 로 부치고 백팩은 메고 수속을 밟았다. 표를 내고
 떠나서 아는 사람 아무도 없는 캐나다로 가는구나' 라는 생각이 들며 1년동안
 나갔다 온다는 것이 실감이 났다.
 
-![Vancouver행 비행기 안에서..](../media/page/working-holiday/canada-003.jpg)
+![Vancouver행 비행기 안에서..](/media/page/working-holiday/canada-003.jpg)
 
 San Francisco
 -------------
@@ -43,7 +43,7 @@ checked baggage 는 찾아서 다시 맞겨야 한다. (**2013-06-05** 이게 �
 아니였습니다. 샌프란시스코 공항이 독특하게도 transit에서도 짐을 찾아서 다시
 맞기는 구조였고 다른 환승공항 경우에는 자동으로 transit 비행기로 실립니다.)
 
-![Vancouver 공항 앞](../media/page/working-holiday/canada-004.jpg)
+![Vancouver 공항 앞](/media/page/working-holiday/canada-004.jpg)
 
 Vancouver
 ---------

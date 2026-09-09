@@ -4,7 +4,7 @@ title = "Venta LW-44"
 [extra]
 comments = true
 +++
-![Venta LW44](../media/page/review/venta-lw44.jpg)
+![Venta LW44](/media/page/review/venta-lw44.jpg)
 
 Buying Motive
 -------------
