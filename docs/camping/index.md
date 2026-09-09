@@ -1,8 +1,7 @@
 ---
 comments: true
 date: 2025-09-05
-hide:
-- toc
+toc: true
 slug: camping-gear
 tags:
 - heater
