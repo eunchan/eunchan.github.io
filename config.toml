@@ -25,7 +25,8 @@ index_format = "elasticlunr_javascript"
 
 [extra]
 author = "Eli Kim"
-copyright = "&copy; 2013 Elijah Kim"
+copyright_start_year = 2013
+copyright_name = "Elijah Kim"
 repo_url = "https://github.com/eunchan/eunchan.github.io"
 repo_name = "GitHub"
 
