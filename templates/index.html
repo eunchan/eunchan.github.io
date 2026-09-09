@@ -4,6 +4,13 @@
 <article class="content-page home-page">
   <div class="page-body">
     {{ section.content | safe }}
+    <h2 id="coegeun-geul">최근 글</h2>
+    <ul>
+      {% set recent_posts = get_pages(limit=10) %}
+      {% for post in recent_posts %}
+      <li><a href="{{ post.permalink }}">{{ post.title }}</a>{% if post.date %} - {{ post.date | date(format="%Y-%m-%d") }}{% endif %}</li>
+      {% endfor %}
+    </ul>
   </div>
 </article>
 {% endblock content %}
