@@ -23,7 +23,7 @@ comments = true
 
 <!-- more -->
 
-![KTM 790 Adventure R](../../../media/motorcycle/ktm-790-adventure-r.jpg)
+![KTM 790 Adventure R](/media/motorcycle/ktm-790-adventure-r.jpg)
 
 이번에 장만한 모터사이클은 이전의 도심형 클래식 바이크와는 다르게 어드벤쳐
 바이크로 장만했습니다. 실리콘벨리 근처에는 좋은 오프로드 코스가 없긴 하지만,

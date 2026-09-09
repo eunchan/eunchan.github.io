@@ -4,7 +4,7 @@ title = "Füssen, Schuwangau"
 [extra]
 comments = true
 +++
-![메리엔 다리에서 본 노이슈반슈타인 성](../../media/page/travel/europe/europe-152.jpg)
+![메리엔 다리에서 본 노이슈반슈타인 성](/media/page/travel/europe/europe-152.jpg)
 
 2007년 05월 16일 09:50 on the train to Füssen
 ----------------------------------------------
@@ -15,7 +15,7 @@ comments = true
 약한 심폐력과 지구력을 가졌으면서도 왜 하루하루 산에 오르는 꿈을 품고 사는
 것일까?
 
-![뮌헨의 기차](../../media/page/travel/europe/europe-148.jpg)
+![뮌헨의 기차](/media/page/travel/europe/europe-148.jpg)
 
 아직 눈이 녹지 않은 3000m 이상에는 만년설이 뒤덥여있는 거대한 산의 공동체
 Alps. 그 끝자락에 내가 서 있다. 밴프의 the Rockies 보다는 못하지만 내 눈은
@@ -25,7 +25,7 @@ Alps. 그 끝자락에 내가 서 있다. 밴프의 the Rockies 보다는 못하
 동일 17:10 Schwangau
 -------------------
 
-![테겔베르크 산에서 본 노이슈반슈타인 성](../../media/page/travel/europe/europe-156.jpg)
+![테겔베르크 산에서 본 노이슈반슈타인 성](/media/page/travel/europe/europe-156.jpg)
 
 엉겁결에 계획에 있지도 않았던 산을 탔다. Tegelberg 라는 1730m 산인데
 Hohenschwangau (790m) 보다 1000미터 정도 높다. 노이슈반슈타인 성(Schloβ
@@ -35,7 +35,7 @@ Neuschwanstein)을 보러 메리엔(?)다리를 올라갔다. 다리에서 보�
 투어시간도 놓쳤다)걸으니 Tegelberg 정상에서 케이블카를 발견하고 좌절했다는
 이야기다. 그리고 성 입장 티켓 €8 도 날렸다.
 
-![Hohenschwangau](../../media/page/travel/europe/europe-157.jpg)
+![Hohenschwangau](/media/page/travel/europe/europe-157.jpg)
 
 실은 뒤로 올라가면 [내가 예전에 보았던
 사진](http://www.neuschwanstein-hotel.com/ruebezahl/schloss/) 을 찍은 위치를
@@ -47,7 +47,7 @@ Neuschwanstein)을 보러 메리엔(?)다리를 올라갔다. 다리에서 보�
 몇 사람 발을 헛딛어 떨어져 죽은 곳이라고 극구 말렸다.) 그 위치가 '칸셀'이라고
 하셨는데 어떤 의미인지는 모르겠다.
 
-![노이슈반슈타인 성](../../media/page/travel/europe/europe-160.jpg)
+![노이슈반슈타인 성](/media/page/travel/europe/europe-160.jpg)
 
 겨우 고도차 1000m 이긴 하지만 오랫만에 산을 타니 기분이 날아갈 것 같다. 비록
 끝자락이긴 하지만 알프스를 등산했다는 것이 기분이 좋았다. 그냥 길이 있으니
@@ -56,10 +56,10 @@ Neuschwanstein)을 보러 메리엔(?)다리를 올라갔다. 다리에서 보�
 푸른 평야가 펼쳐진다는 점이다. 산, 평야. White, Green. 서로 상이한 두가지가
 만나는 곳이 이곳 Füssen-Schwangau.
 
-![Hohenschwangau](../../media/page/travel/europe/europe-166.jpg)
-![Hohenschwangau](../../media/page/travel/europe/europe-173.jpg)
-![Tegelberg](../../media/page/travel/europe/europe-178.jpg)
-![스위스로 가는 기차안에서](../../media/page/travel/europe/europe-180.jpg)
+![Hohenschwangau](/media/page/travel/europe/europe-166.jpg)
+![Hohenschwangau](/media/page/travel/europe/europe-173.jpg)
+![Tegelberg](/media/page/travel/europe/europe-178.jpg)
+![스위스로 가는 기차안에서](/media/page/travel/europe/europe-180.jpg)
 
 2007년 05월 17일 09:00 기차역(Bahnhof) in Füssen
 ----------------------------------------------
@@ -70,7 +70,7 @@ Neuschwanstein)을 보러 메리엔(?)다리를 올라갔다. 다리에서 보�
 정도가 더 심하다. 비오는 아침이면 잔디와 나뭇잎은 그 빛을 강하게 발한다. 진한
 녹색으로, 연녹색으로 자신이 살아있음을 알린다.
 
-![Füssen에서 만난 일본 친구들](../../media/page/travel/europe/europe-183.jpg)
+![Füssen에서 만난 일본 친구들](/media/page/travel/europe/europe-183.jpg)
 
 동일 12:20 기차역(Bahnhof) in Munchen
 -----------------------------------
@@ -79,8 +79,8 @@ Neuschwanstein)을 보러 메리엔(?)다리를 올라갔다. 다리에서 보�
 Isa, Keisuke 라는 친구들인데 한달동안 유럽을 여행할 예정이라고 한다. 오늘이
 4일째라는데 거의 초반의 여행으로 퓌센을 갔다는게 놀랍다.
 
-![Füssen가는 길](../../media/page/travel/europe/europe-184.jpg)
-![Füssen가는 길](../../media/page/travel/europe/europe-185.jpg)
+![Füssen가는 길](/media/page/travel/europe/europe-184.jpg)
+![Füssen가는 길](/media/page/travel/europe/europe-185.jpg)
 
 체르마트(Zermatt)를 가볼 생각을 하는데 기차비나 숙박이 꽤 많이 비싸다.
 유레일이 안통하는 곳이라 들어가고 나올 때 돈을 내야 되고 그쪽엔 숙박자체가

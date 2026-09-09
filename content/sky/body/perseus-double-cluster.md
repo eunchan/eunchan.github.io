@@ -5,7 +5,7 @@ title = "Perseus Double Cluster"
 apsize = 60.0
 j2000 = "02 20 00, +57 08 00"
 +++
-![Taki 성도의 Double Cluster](../../media/sky/celestial/perseus.svg)
+![Taki 성도의 Double Cluster](/media/sky/celestial/perseus.svg)
 
 **Perseus Double Cluster**는 **NGC 869** 와 **NGC 884** 두 산개성단을 부르는
 이름입니다. **Caldwell 14** 로도 불립니다.

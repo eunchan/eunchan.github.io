@@ -10,7 +10,7 @@ comments = true
 한 끼를 대체할 수 있는, 영양이 골고루 들어간 대체식품이었는데요.
 Soylent 1.5라는 파우더 제품이었습니다.
 
-![Soylent 1.5 Powder](../media/page/review/soylent-1.5.jpg)
+![Soylent 1.5 Powder](/media/page/review/soylent-1.5.jpg)
 
 비록 유기농이나 GMO free 음식물은 아니지만 영양소가 골고루 들어있고 먹기 간편해서 관심이 가던 제품이었습니다.
 다만 파우더로 되어있어서 물이나 우유에 타서 먹어야 합니다.
@@ -20,7 +20,7 @@ Soylent 1.5라는 파우더 제품이었습니다.
 
 그러다 얼마 뒤 액상으로 이미 섞여서 나온 Soylent 2.0 제품이 출시되었습니다.
 
-![Soylent 2.0](../media/page/review/soylent-2.0.jpg)
+![Soylent 2.0](/media/page/review/soylent-2.0.jpg)
 
 병으로 되어있어 더욱 간편해졌습니다.
 그래서 12병 기본을 주문해 보고, 괜찮아서 Subscription (매달 정기 구매)을 신청했습니다.

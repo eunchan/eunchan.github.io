@@ -4,7 +4,7 @@ title = "Hiking Mt.Rundle"
 [extra]
 comments = true
 +++
-![Mt.Rundle from Vermilion Lakes](../media/page/working-holiday/canada-051.jpg)
+![Mt.Rundle from Vermilion Lakes](/media/page/working-holiday/canada-051.jpg)
 
 Pastor Robert Rundle을 기념하며 붙여진 이름 Rundle 산. 정상이 2950m 정도 되는
 주변의 다른 산들과 비슷한 높이의 산이다. 밴프의 양대 산 ( Mt.Cascade,
@@ -28,7 +28,7 @@ Rundle은 시작된다. 이 Jct. Rundle Mountain에 도착하니 점심에 먹�
 하나뿐인 기회, 늦게 가면 놓치게 될 것 같아 강행을 시작했다. 이 때부터 내
 파란만장한 Rundle 이야기는 시작되었다.
 
-![Mt.Rundle peak from Gully](../media/page/working-holiday/canada-031.jpg)
+![Mt.Rundle peak from Gully](/media/page/working-holiday/canada-031.jpg)
 
 시작한지 1시간 20분 정도가 지나 gully(협곡) 에 도착했다. 협곡 이전까지는 잘
 닦여진 trail이 존재했으나 협곡 이후부터는 trail은 존재하지 않고 방향이
@@ -39,7 +39,7 @@ Rundle은 시작된다. 이 Jct. Rundle Mountain에 도착하니 점심에 먹�
 수목 한계선을 넘었다. 높은 고도로 인해 더 이상 나무가 자랄 수 없는 한계 수목
 한계선 그곳을 넘으니 나무는 모두 사라지고 앞에 보이는 것은 바위 뿐이었다.
 
-![Mt.Rundle peak](../media/page/working-holiday/canada-033.jpg)
+![Mt.Rundle peak](/media/page/working-holiday/canada-033.jpg)
 
 이미 물은 바닥이 났고 내게 남은 것은 오렌지 하나 뿐이었다. 이제 겨우 2000m를
 넘었을 뿐인데 힘은 들고, 공기가 희박해지는 것 같았다.(과장) 경사는 점점
@@ -67,7 +67,7 @@ Back에서는 미끄러지면 바로 낭떠러지다. 그래서 더욱 긴장되
 Second Hiking
 -------------
 
-![Mt.Rundle trails](../media/page/working-holiday/canada-109.jpg)
+![Mt.Rundle trails](/media/page/working-holiday/canada-109.jpg)
 
 10월 27일, 눈보라가 매섭게 부는 날. 난 또다시 런들을 탔다. 눈은 이미 런들에
 가득했다. 겨울 산행을 위해 내복도 입고 아이젠(여기에서는 crampon 이라 부른다
@@ -87,8 +87,8 @@ Magic Equipment ( Mountain Magic Sport 가 아니다 ) 에서 10불정도에 대
 갔다. 어차피 난관은 협곡까지 가는 평탄한 길이 아니라 협곡을 지나서 나오는
 급경사의 스크램블(scramble) 등산이다.
 
-![Gully 1](../media/page/working-holiday/canada-111.jpg)
-![Gully 2](../media/page/working-holiday/canada-110.jpg)
+![Gully 1](/media/page/working-holiday/canada-111.jpg)
+![Gully 2](/media/page/working-holiday/canada-110.jpg)
 
 협곡에서 간단히 사진을 찍고 경사40도를 넘는 길을 오르기 시작했다. 일단 처음
 목표는 수목한계선을 넘는 것. 오른지 얼마 되지않아 예상했던 대로 경오누나의
@@ -96,9 +96,9 @@ Magic Equipment ( Mountain Magic Sport 가 아니다 ) 에서 10불정도에 대
 힘드냐의 문제일 뿐이다. 속도를 더 늦췄다. 내 예상보다 등산 시간이 더 길어질 것
 같다. 이전 등산은 7시간이 걸렸지만 이번은 예상했던 8시간보다 더 걸릴 것 같다.
 
-![Timberline in Mt.Rundle](../media/page/working-holiday/canada-113.jpg)
-![Timberline in Mt.Rundle](../media/page/working-holiday/canada-114.jpg)
-![Timberline in Mt.Rundle](../media/page/working-holiday/canada-115.jpg)
+![Timberline in Mt.Rundle](/media/page/working-holiday/canada-113.jpg)
+![Timberline in Mt.Rundle](/media/page/working-holiday/canada-114.jpg)
+![Timberline in Mt.Rundle](/media/page/working-holiday/canada-115.jpg)
 
 한시간이 조금 더 지났을까? 우리는 수목한계선을 넘었다. 그리고 준비해온 점심을
 먹었다. 느끼하고 영양이 풍부하게 만든 주먹밥. 그것을 먹으니 힘이 다시 솟아나기
@@ -113,7 +113,7 @@ Magic Equipment ( Mountain Magic Sport 가 아니다 ) 에서 10불정도에 대
 못하는 산이다. 두려움을 이기고, 힘든 것을 참아내는 자만이 정상에 설 수있는
 권리를 얻는 것이다. 마치 런들이 그러지 못한 사람을 다시 떨쳐내는 것 같았다.
 
-![Dragon's Back](../media/page/working-holiday/canada-118.jpg)
+![Dragon's Back](/media/page/working-holiday/canada-118.jpg)
 
 용등을 넘고 나니 이제는 온통 눈이 가득하다. 크램폰을 꺼내야 할까 고민을 하다가
 일단은 그냥 올라가보기로 했다. (결국 크램폰은 정상에 갈때까지 사용하지
@@ -123,20 +123,20 @@ Magic Equipment ( Mountain Magic Sport 가 아니다 ) 에서 10불정도에 대
 힘들게 느껴지지 않았다. 이전의 등산에 비하면 정말 쉬운 등산이었다. 다만, 거친
 눈보라는 우리의 진을 더 빼놓기는 했다.
 
-![at top of Mt.Rundle](../media/page/working-holiday/canada-117.jpg)
-![at top of Mt.Rundle](../media/page/working-holiday/canada-116.jpg)
+![at top of Mt.Rundle](/media/page/working-holiday/canada-117.jpg)
+![at top of Mt.Rundle](/media/page/working-holiday/canada-116.jpg)
 
 그러나 눈보라를 뚫고, 떨어진 체력을 이겨내며 올랐다. 그리고 정상에 섰다.
 구름이 가득해서 바닥을 볼 순 없었지만 런들에서 아련히 보이는 그 로키의 광경
 하나만으로 충분했다.
 
-![at top of Mt.Rundle](../media/page/working-holiday/canada-125.jpg)
+![at top of Mt.Rundle](/media/page/working-holiday/canada-125.jpg)
 
 산, 왜 그곳에 오르는 것일까? 많은 사람들이 많은 이유를 가지고 있다. 간혹 내
 친구들은 이런 말을 한다. "다시 내려올꺼 왜 힘들게 올라가?" 지금 내가 해주고
 싶은 말은 이렇다. "산을 내려오면 나는 그자리 이지만, 내 추억은 산 정상에 두고
 온다." 잊을 수 없는 추억이 런들 정상에 묻혀있다.
 
-![way back to ground](../media/page/working-holiday/canada-119.jpg)
-![way back to ground](../media/page/working-holiday/canada-120.jpg)
-![way back to ground](../media/page/working-holiday/canada-122.jpg)
+![way back to ground](/media/page/working-holiday/canada-119.jpg)
+![way back to ground](/media/page/working-holiday/canada-120.jpg)
+![way back to ground](/media/page/working-holiday/canada-122.jpg)

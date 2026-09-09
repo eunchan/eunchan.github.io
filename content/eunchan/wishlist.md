@@ -25,7 +25,7 @@ Meade는 Orion 돕을 구하게 되어 패스합니다.
 
 ### Meade Lightbridge 12" Dob
 
-![Meade Lightbridge 12" Dobsonian](../media/sky/equipt/meade-lightbridge-12inch.jpg)
+![Meade Lightbridge 12" Dobsonian](/media/sky/equipt/meade-lightbridge-12inch.jpg)
 
 12인치 크기임에도 트러스 구조를 사용하여 이동시 부피를 매우 줄인 돕소니안 천체
 망원경. XQ-10보다 이동시 더 부피가 적다.
@@ -48,7 +48,7 @@ Bonfire는 가족과 캠핑갈 때에나 뒷마당에서 쓰기에 좋아보이�
 
 ## Triumph Bonneville T100
 
-![Triumph Bonneville T100](../media/page/eunchan/bonneville-t100.jpg)
+![Triumph Bonneville T100](/media/page/eunchan/bonneville-t100.jpg)
 
 Triumph사 의 클래식 바이크로 50여년을 넘게 지속되어온 모델입니다.
 
@@ -57,7 +57,7 @@ Triumph사 의 클래식 바이크로 50여년을 넘게 지속되어온 모델�
 
 ## Harley-Davidson Iron 883
 
-![Harley-Davidson Iron 883](../media/page/eunchan/harley-davidson-iron-883.jpg)
+![Harley-Davidson Iron 883](/media/page/eunchan/harley-davidson-iron-883.jpg)
 
 할리 데이비슨의 대표 모델 중 하나. 과하지 않고 깔끔한 디자인이 매력적입니다!
 

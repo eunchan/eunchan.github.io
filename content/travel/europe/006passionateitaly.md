@@ -4,7 +4,7 @@ title = "Passionate Italy #1"
 [extra]
 comments = true
 +++
-![나보나 광장의 골목길](../../media/page/travel/europe/europe-050.jpg)
+![나보나 광장의 골목길](/media/page/travel/europe/europe-050.jpg)
 
 2007년 5월 7일, Piazza Spagna in Roma
 -------------------------------------
@@ -18,14 +18,14 @@ world. 버스기사에게 아무것도 모르니까 그냥 "까르푸 까르푸~
 World에 EOS3000 + 28~80mm 번들 렌즈가 있었지만 가격이 터무니 없이 비쌌다.
 200유로, 우리 나라 돈으로 24만원이다. 그냥 카메라 없이 여행해야겠다.
 
-![Roma의 거리](../../media/page/travel/europe/europe-034.jpg)
+![Roma의 거리](/media/page/travel/europe/europe-034.jpg)
 
 사람들 사진을 못 찍는게 아쉽다. 하지만 방법이 없으니 눈으로 기억으로 찍을 수
 밖에 없다. 기억은 휘발성이라서 쉽게 사라지지만 또 쉽게 사라지지 않는다.
 기억으로 남기기위해선 유심히 모든것을 천천히 느긋하게 보는 수 밖에 없다.
 도시를 옮길때 마다 카메라를 알아보면서 느긋하게 구해야겠다.
 
-![Trevi 분수](../../media/page/travel/europe/europe-033.jpg)
+![Trevi 분수](/media/page/travel/europe/europe-033.jpg)
 
 동일, 민박 in Roma
 ------------------
@@ -35,7 +35,7 @@ X-300s가 150유로나 한다. 펜탁스 ME-super는 250유로다. 이걸 산다
 아주 지대한 영향을 미칠 것 같다. 그냥 지금 작동 잘 안되는 내 7sII 로 F8~16,
 1/60 ~ 1/500에서 조절해 가며 써야겠다.
 
-![Trevi 분수에서 싸우는 부부](../../media/page/travel/europe/europe-045.jpg)
+![Trevi 분수에서 싸우는 부부](/media/page/travel/europe/europe-045.jpg)
 
 이곳 로마에 와보니 이제서야 알겠다. 내가 영어로 말 했을 때 상대방이 알아듣지
 못하는 경우에 그것이 내 영어실력의 문제인지 상대방 영어실력의 문제인지 알
@@ -55,12 +55,12 @@ Trevi 분수에서 한국인 부부가 똑딱이 필카로 사진을 찍는 것�
 
 비록 결과를 장담할 수는 없지만 사진을 찍으니 여행이 즐거워진다.
 
-![콜로세움의 야경](../../media/page/travel/europe/europe-035.jpg)
+![콜로세움의 야경](/media/page/travel/europe/europe-035.jpg)
 
 2007년 5월 8일, Piazza Navona in Roma
 -------------------------------------
 
-![Palatino 언덕](../../media/page/travel/europe/europe-037.jpg)
+![Palatino 언덕](/media/page/travel/europe/europe-037.jpg)
 
 Colosseo Palatino, Foro Romano, Bocca Della Verita(진실의 입), Campidoglio,
 Pantheon, Piazza Navona, Fontana di Trevi, Piazza di Spagna, Piazza del
@@ -71,20 +71,20 @@ Popolo...
 최고의 장소를 꼽으라면 나는 Palatino 언덕을 꼽겠다. 폐허가 되어버린 유적지
 이지만 로마가 잘 보이는 곳, 그리고 로마를 느낄 수 있는 곳이었다.
 
-![스파게티를 먹은 음식점](../../media/page/travel/europe/europe-039.jpg)
+![스파게티를 먹은 음식점](/media/page/travel/europe/europe-039.jpg)
 
 점심으로 먹은 스파게티는 이제까지 먹어본 스파게티중 으뜸이라고 할 만 했다.
 그냥 길을 걷다가 아무 가게나 들어갔는데도 이렇게 맛있는데 제대로 알려진 곳을
 가면 얼마나 맛있을지 상상할 수 없을 것 같다.
 
-![나보나 광장의 화가](../../media/page/travel/europe/europe-043.jpg)
+![나보나 광장의 화가](/media/page/travel/europe/europe-043.jpg)
 
 많이 걸었고, 많이 보았고, 맛있게 먹었다. 그리고 많이 느꼈다. 그것으로 충분하지
 아니한가! 여행은 사람과의 만남이다. 유물, 유적, 명화의 감상은 디저트일 뿐이다.
 그것을 잊지말자. 바티칸의 천지창조, 최후의 심판을 보지 못해도 사람을 만나면
 그걸로 된 것이다.
 
-![Roma의 거리](../../media/page/travel/europe/europe-041.jpg)
+![Roma의 거리](/media/page/travel/europe/europe-041.jpg)
 
 2007년 5월 9일, Colosseo in Roma
 --------------------------------
@@ -93,14 +93,14 @@ Popolo...
 1:30 이후에 사야지 가능한 것이었다. 그래서 표 검사하는 직원이 막았는데 우겨서
 겨우 들어왔다.
 
-![콜로세움](../../media/page/travel/europe/europe-053.jpg)
+![콜로세움](/media/page/travel/europe/europe-053.jpg)
 
 이젠 다 허물어져가는 Colosseo, 바닥조차 남아있지 않지만 한때는 이곳에서 수많은
 군중이 모여서 사자들이  인간을 사냥하는 것을 보고 즐겼겠지. 살인, 섹스,
 퇴폐적인 문화로 가득했던 로마. 그 문화는 사라졌지만 폼페이와 로마의 유적들이
 지금까지 그 때의 로마를 알려주고있다.
 
-![콜로세움의 벽돌](../../media/page/travel/europe/europe-038.jpg)
+![콜로세움의 벽돌](/media/page/travel/europe/europe-038.jpg)
 
 Pantheon도 그렇고 여기 Colosseo도 그렇지만, 건물을 쌓을 때 불과 4cm도 안될
 듯한 얇고 긴 벽돌을 이용해서 쌓았다. Pantheon은 외벽조차 그 벽돌로 쌓아올렸다.
@@ -115,12 +115,12 @@ Pantheon도 그렇고 여기 Colosseo도 그렇지만, 건물을 쌓을 때 불�
 평범한 국가가 되어버렸다. 수많은 국보급 유물은 우리나라에 있지 않고 일본과
 영국에 있다.
 
-![Roma의 거리](../../media/page/travel/europe/europe-042.jpg)
-![Roma의 거리](../../media/page/travel/europe/europe-044.jpg)
-![Roma의 거리](../../media/page/travel/europe/europe-051.jpg)
-![Roma의 거리](../../media/page/travel/europe/europe-052.jpg)
+![Roma의 거리](/media/page/travel/europe/europe-042.jpg)
+![Roma의 거리](/media/page/travel/europe/europe-044.jpg)
+![Roma의 거리](/media/page/travel/europe/europe-051.jpg)
+![Roma의 거리](/media/page/travel/europe/europe-052.jpg)
 
-![Tivoli](../../media/page/travel/europe/europe-054.jpg)
-![Tivoli](../../media/page/travel/europe/europe-059.jpg)
-![Tivoli](../../media/page/travel/europe/europe-060.jpg)
-![Tivoli](../../media/page/travel/europe/europe-063.jpg)
+![Tivoli](/media/page/travel/europe/europe-054.jpg)
+![Tivoli](/media/page/travel/europe/europe-059.jpg)
+![Tivoli](/media/page/travel/europe/europe-060.jpg)
+![Tivoli](/media/page/travel/europe/europe-063.jpg)

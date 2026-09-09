@@ -4,7 +4,7 @@ sort_by = "none"
 +++
 ## Introduction
 
-![Pinnacle N.P.](../media/page/eunchan/personal-banner.jpg)
+![Pinnacle N.P.](/media/page/eunchan/personal-banner.jpg)
 
 삼성전자에서 Flash Storage Device (SSD) 하드웨어 설계 업무를 담당하였습니다. 좀
 더 자세히 말하면 SSD의 Host Interface 설계 및 검증을 하였습니다. 주로 담당한

@@ -21,7 +21,7 @@ comments = true
 많다고, 내가 제일 일 못하고, 안좋은 점만 보이게 되는 그런 상황이 지나고 나면
 어느정도 원래의 실력이 나온다고 하는 말이었습니다.
 
-![](../../../media/blog/dunning-kruger-effect.svg)
+![](/media/blog/dunning-kruger-effect.svg)
 
 원래의 Dunning-Kruger Effect는 X축이 시간이 아니라 Competence, 경쟁력, 즉
 실력입니다. 실력이 늘어날 수록 변화하는 "분야에 대한 자신감"을 보여주는

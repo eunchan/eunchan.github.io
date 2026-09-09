@@ -130,7 +130,7 @@ BES870XL 뿐만이 아니라 그 상위 Oracle (BES980XL), BES920XL, 그 외에 
 그점을 감안하고 가격을 감안할 때 가격에 비해 과분할 정도로 각각의 기능이 제 역할을 해주고 있는 것 같습니다.
 이로 인해 부담없이 에스프레소에 입문할 수 있는 최고의 머신이 아닐까 합니다.
 
-[illy-x7.1]: ../media/page/coffee/illy-x7.1.jpg
-[bes870xl-from-breville]: ../media/page/coffee/bes870xl-from-breville.jpg
-[bes870xl-unpack]: ../media/page/coffee/bes870xl-unpack.jpg
-[bes870xl-front]: ../media/page/coffee/bes870xl-front.jpg
+[illy-x7.1]: /media/page/coffee/illy-x7.1.jpg
+[bes870xl-from-breville]: /media/page/coffee/bes870xl-from-breville.jpg
+[bes870xl-unpack]: /media/page/coffee/bes870xl-unpack.jpg
+[bes870xl-front]: /media/page/coffee/bes870xl-front.jpg

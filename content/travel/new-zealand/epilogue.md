@@ -4,7 +4,7 @@ title = "에필로그"
 [extra]
 comments = true
 +++
-![Tokyo Tower from Park Hotel Tokyo](../../media/page/travel/new-zealand/newzealand-417.jpg)
+![Tokyo Tower from Park Hotel Tokyo](/media/page/travel/new-zealand/newzealand-417.jpg)
 
 Park Hotel Tokyo에서 바라보는 도쿄타워는 예전 롯본기로 걸어가면서 본
 [도쿄타워](../tokyo/index.md) 와 아무런 차이가 없는데 내 감정은 매우 다르다.
@@ -17,8 +17,8 @@ Park Hotel Tokyo에서 바라보는 도쿄타워는 예전 롯본기로 걸어�
 롯본기 힐스 옥상에서 매서운 찬바람을 맞으며 버텼었다.  그러나 지금은 큰 돈을
 지불한 대가로 편하고 아늑한 방에서 피곤한 눈꺼풀을 이겨내며 바라보고 있다.
 
-![라멘집에서](../../media/page/travel/new-zealand/newzealand-408.jpg)
-![Lobby of Park Hotel Tokyo](../../media/page/travel/new-zealand/newzealand-412.jpg)
+![라멘집에서](/media/page/travel/new-zealand/newzealand-408.jpg)
+![Lobby of Park Hotel Tokyo](/media/page/travel/new-zealand/newzealand-412.jpg)
 
 이렇게 여행은 마무리 되어간다.  일반적인 신혼여행과는 완전히 다른, 거의
 배낭여행이라 부를만한 신혼여행이었다.  그렇기에 쉽게 잊혀지지 않을 여행이 될 것
@@ -30,6 +30,6 @@ Park Hotel Tokyo에서 바라보는 도쿄타워는 예전 롯본기로 걸어�
 것이다.  그런 과정에서 여행의 즐거웠던 기억을 떠올리고 회상에 잠기며 제2의
 여행을 즐길 것이다. /FIN
 
-![Tokyo Tower](../../media/page/travel/new-zealand/newzealand-418.jpg)
+![Tokyo Tower](/media/page/travel/new-zealand/newzealand-418.jpg)
 
 -- 2010년 1월 29일 밤, 도쿄타워가 보이는 Park Hotel Tokyo 33층에서...

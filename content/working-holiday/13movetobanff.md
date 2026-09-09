@@ -4,7 +4,7 @@ title = "Move to Banff"
 [extra]
 comments = true
 +++
-![Mt.Cascade](../media/page/working-holiday/canada-022.jpg)
+![Mt.Cascade](/media/page/working-holiday/canada-022.jpg)
 
 밴쿠버에서의 1주일간의 아름다운 여행을 마치고 밴프로 이동했다. GreyHound 라는
 미주지역을 연결하는 버스를 타고 13시간을 이동하여 밴프에 아침 9시 조금 못되어
@@ -17,7 +17,7 @@ comments = true
 밴쿠버에서 극구 반대하는 몇몇 사람의 의견에 휘말려 결국 밴프로 선택하긴 했지만
 버스에서 내려서 풍경을 보고는 걱정이 모두 사라져버렸다.
 
-![View from the top of Mt.Tunnel](../media/page/working-holiday/canada-024.jpg)
+![View from the top of Mt.Tunnel](/media/page/working-holiday/canada-024.jpg)
 
 밴프는 정말 좁다. 다운타운이 단 두 블럭으로 끝나버린다. 그 단 두 블럭, 걸어서
 5분도 채 안걸리는 그 안에서 살아가고 지나가는 사람들, 그곳이 밴프다. 또한
@@ -28,7 +28,7 @@ comments = true
 하기로 결정되고 직원 숙소 공간도 구했다. Becker Hall, 내가 앞으로 몇개월 동안
 살아갈 곳.
 
-![Fairmont Banff Springs Resort](../media/page/working-holiday/canada-023.jpg)
+![Fairmont Banff Springs Resort](/media/page/working-holiday/canada-023.jpg)
 
 The Banff Centre
 ----------------

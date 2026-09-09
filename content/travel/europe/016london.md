@@ -4,7 +4,7 @@ title = "Astor Victoria in London"
 [extra]
 comments = true
 +++
-![런던의 거리](../../media/page/travel/europe/europe-323.jpg)
+![런던의 거리](/media/page/travel/europe/europe-323.jpg)
 
 2007년 05월 29일 21:20 at Astor Victoria in London
 --------------------------------------------------
@@ -19,7 +19,7 @@ Daily가 5.1파운드다. Waterloo 역에서 멀지않은 Victoria Line의 Pimli
 좌측으로 차가 다니고 운전석이 우측에 있었다. 그제서야 영국과 일본은 좌측통행에
 운전석이 우측이라는 사실이 생각났다.
 
-![런던의 거리](../../media/page/travel/europe/europe-322.jpg)
+![런던의 거리](/media/page/travel/europe/europe-322.jpg)
 
 길을 건너 St.George's Square길로 접어들었다. 한 구역의 건물이 하나로
 붙어있었다. 똑같은 모양의 기둥, 문으로 이루어진 집이 경계도 분명하지 않게
@@ -50,16 +50,16 @@ Receptionist에게 물어 방을 구했다. 하루에 18.5파운드, 캐나다 �
 그리고 누군가 "Hello"라고 말했다. 한 여자가 선글라스를 쓰고 나를 보고있었다.
 '여기 Mixed Room이었군'이라고 생각하며 “Hi”라고 대답했다./FIN
 
-![런던의 풍경](../../media/page/travel/europe/europe-320.jpg)
-![런던의 풍경](../../media/page/travel/europe/europe-325.jpg)
-![런던의 풍경](../../media/page/travel/europe/europe-329.jpg)
-![런던의 풍경](../../media/page/travel/europe/europe-330.jpg)
-![런던의 풍경](../../media/page/travel/europe/europe-332.jpg)
-![런던의 풍경](../../media/page/travel/europe/europe-337.jpg)
-![런던의 풍경](../../media/page/travel/europe/europe-342.jpg)
-![런던의 풍경](../../media/page/travel/europe/europe-343.jpg)
-![런던의 풍경](../../media/page/travel/europe/europe-344.jpg)
-![런던의 풍경](../../media/page/travel/europe/europe-326.jpg)
+![런던의 풍경](/media/page/travel/europe/europe-320.jpg)
+![런던의 풍경](/media/page/travel/europe/europe-325.jpg)
+![런던의 풍경](/media/page/travel/europe/europe-329.jpg)
+![런던의 풍경](/media/page/travel/europe/europe-330.jpg)
+![런던의 풍경](/media/page/travel/europe/europe-332.jpg)
+![런던의 풍경](/media/page/travel/europe/europe-337.jpg)
+![런던의 풍경](/media/page/travel/europe/europe-342.jpg)
+![런던의 풍경](/media/page/travel/europe/europe-343.jpg)
+![런던의 풍경](/media/page/travel/europe/europe-344.jpg)
+![런던의 풍경](/media/page/travel/europe/europe-326.jpg)
 
 2007년 06월 01일 09:55 Plane from Frankfurt to Incheon
 ------------------------------------------------------
@@ -67,7 +67,7 @@ Receptionist에게 물어 방을 구했다. 하루에 18.5파운드, 캐나다 �
 이제 한시간 반 가량이면 인천공항에 착륙한다. 지금은 아무런 생각이 들지 않는다.
 그냥 비행기 안 가득히 들리는 한국말이 신기하다.
 
-![한국가는 비행기에서](../../media/page/travel/europe/europe-346.jpg)
+![한국가는 비행기에서](/media/page/travel/europe/europe-346.jpg)
 
 이젠 여행에 관한 모든 것을 지워야한다. 머릿속에서 잊어버리라는 말은 아니다.
 다만 여행으로 자만하면 안된다. 여행에 관한 언급은 더 이상 하지 말자.

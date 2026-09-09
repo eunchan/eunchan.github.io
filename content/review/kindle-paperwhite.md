@@ -6,7 +6,7 @@ tags = ["review", "kindle", "e-book", "reading", "book"]
 [extra]
 comments = true
 +++
-![Kindle Paperwhite](../media/page/review/kindle-paperwhite.jpg)
+![Kindle Paperwhite](/media/page/review/kindle-paperwhite.jpg)
 
 
 Motivation

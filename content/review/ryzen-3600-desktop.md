@@ -21,7 +21,7 @@ comments = true
 
 [PCPartPicker](https://pcpartpicker.com/user/XMonad/saved/#view=dRVLP6)
 
-![Ryzen Desktop](../media/page/review/ryzen-2.jpg)
+![Ryzen Desktop](/media/page/review/ryzen-2.jpg)
 
 - **CPU**: Ryzen 3600을 갈지 3700x를 갈지 고민을 했는데, 큰 부하 걸릴만한 프로그램을 돌릴 일이 그다지 많지 않아서 3600으로 갔네요.
     나중에 4000시리즈 나오면 AM4소켓 마지막 버전일테니 그때 4700x를 고민해 볼 생각입니다.
@@ -56,7 +56,7 @@ comments = true
     예전엔 SATA cable, SATA power cable을 모두 연결했어야 했는데, M.2로 보드에 직접 장착하게 되면서 케이블 관리가 무척이나 편해졌네요.
     ITX 케이스이다 보니 케이블 정리가 정말 곤역인데, 이것 덕분에 그나마 조금은 나아진 듯 합니다. 그래도 아래 이미지에서 보다시피, 전원 케이블 연결은 막막할 정도네요 :)
 
-![Ryzen Desktop Inside](../media/page/review/ryzen-1.jpg)
+![Ryzen Desktop Inside](/media/page/review/ryzen-1.jpg)
 
 총 평은, 정말 더할 나위 없이 좋다... 로 요약가능하겠네요.
 성능도 이정도면 홈페이지 작업, 간단한 사진편집하기 충분하고, 녹투아 팬 조합으로 소음도 거의 없다시피 해서 아주 만족하면서 사용하고 있네요.

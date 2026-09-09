@@ -7,7 +7,7 @@ tags = ["death-valley", "national-park", "sierra", "alabama-hills", "lone-pine",
 [extra]
 comments = true
 +++
-![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_header.jpg)
+![](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_header.jpg)
 
 ## Itinery
 
@@ -51,7 +51,7 @@ Ridgecrest에서 데스벨리 가는 길에 Trona Pinnacles라는 오버랜딩�
 있어요. 독특한 바위로 유명한 곳인데, 거길 가려면 흙길로 좀 들어가야 해서 시간
 관계상 이번엔 패스했네요. 내년엔 꼭 가보기로...
 
-![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_panamintvalley.jpg)
+![](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_panamintvalley.jpg)
 
 Ridgecrest에서 데스벨리 Furnace Creek Visitor Center에 가는데만 두시간이 걸려요.
 그 사이엔 마을다운 마을이 없어서, 둘째날 두시간을 가는 수 밖에 다른 방법이
@@ -59,14 +59,14 @@ Ridgecrest에서 데스벨리 Furnace Creek Visitor Center에 가는데만 두�
 데스벨리의 광활한 자연을 느낄 수 있어요.
 
 ![Death Valley National Park
-Entrance](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_entrance.jpg)
+Entrance](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_entrance.jpg)
 
 그리고 얼마 더 운전을 하면 데스벨리의 입구가 나옵니다. 여기서 혼자서 가족 사진
 셀카를 스마트폰으로 찍으려는 관광객 가족에 도움을 주고 (사진을 찍어주고) 우리
 가족도 기념 사진을 찍습니다. 입구라곤 하지만, 이전과 풍경이 다를바 없긴 하네요.
 
 ![점심 @ Borax
-Works](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_refrigandtable.jpg)
+Works](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_refrigandtable.jpg)
 
 Furnace Creek 가기 바로 전 Harmony Borax Works 사이트에 들렀습니다. 계획은
 Badwater Basin에 가서 점심을 먹는 거였는데, 시간이 좀 걸리고 다들 배가 고파서
@@ -80,21 +80,21 @@ Borax Works는 말 그대로 Borax를 캐서 만들던 사이트인데, 거의 �
 
 그 뒤로 아이들이 데스벨리에서 노란색 땅만 보이면 보랙스라고 외치고 다니더라구요.
 
-![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_boraxworks.jpg)
+![](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_boraxworks.jpg)
 
 Furnace Creek Visitor Center에서 4학년 프리패스를 플라스틱 카드로 교횐하고 곧장
 Badwater Basin으로 이동했습니다. 배드워터는 데스벨리에서 아마도 가장 유명한 곳이
 아닐까 싶네요. 미국에서 가장 낮은 땅인데 (동굴 빼고), 실제로 가서 보면 "SEA LEVEL"
 간판이 너무 위에 있어서 놀랍니다.
 
-![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_badwater-sealevel.jpg)
+![](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_badwater-sealevel.jpg)
 
 그리고 배드워터 지역의 흙이 소금흙이라는 사실에 더 놀라고, 그 비 거의 오지 않는
 데스벨리에 배드워터에 물이 고여있다는 사실에 한번 더 놀라네요. 우리가 갔던
 10월에도 종종 100도(섭씨 40도)를 찍는 곳인데 물이 그늘에도 아니고 뙤약볕에
 남아있는 모습이 정말 불가사의네요.
 
-![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_badwaterbasin.jpg)
+![](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_badwaterbasin.jpg)
 
 Furnace Creek 방향으로 다시 돌아오는 길에 Artist Pallete에 들렀습니다. 층층이
 다양한 색상으로 알록달록한 산을 볼 수 있는 곳인데, 그 지형보다는 들어가고 나오는
@@ -102,20 +102,20 @@ Furnace Creek 방향으로 다시 돌아오는 길에 Artist Pallete에 들렀�
 운전하며 나오는 길인데, 정말 멋지더라구요. 사진으로는 그 멋있는게 잘 표현이
 안됩니다. 사실 데스벨리 대부분이 그렇더라구요. 그 광활한 크기가 사진에는 표현이 안되요.
 
-![Artist Palette](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_artistpalette.jpg)
+![Artist Palette](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_artistpalette.jpg)
 
 
 바닥 탐험은 이쯤에서 그만하고, 이제 산 위로 올라가서 구경을 합니다. Zabriskie
 Point는 Furnace Creek에서 가까워서 먼저 들르고 그 다음 배드워터에서 보이는 산
 꼭대기인 Dante's View를 갔습니다.
 
-![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_zabriskiepoint.jpg)
-![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_zabriskiepoint2.jpg)
+![](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_zabriskiepoint.jpg)
+![](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_zabriskiepoint2.jpg)
 
 Zabriskie point는 정말 독특한 침식 지형이 펼쳐진 곳이네요. 별로 높이 올라오지도
 않았는데 거기서 보이는 벨리 모습이 멋있습니다.
 
-![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_dantesview1.jpg)
+![](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_dantesview1.jpg)
 
 Dante's View는 배드워터 바로 위의 산인데, 그 높이가 5000피트가 넘어요. 가장
 낮은 땅인 배드워터가 해수면 밑으로 282 피트니, 아무튼 그 높이 차이가 1500미터가
@@ -126,7 +126,7 @@ Dante's View는 배드워터 바로 위의 산인데, 그 높이가 5000피트�
 들어오는 데만 두시간 반, 거기서 배드워터 30분, 돌아나오고 아티스트 팔렛
 구경하고 단테 다녀오니 거의 저녁이 되어버렸습니다.
 
-![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_campground1.jpg)
+![](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_campground1.jpg)
 
 오늘은 Furnace Creek의 캠핑장에서 캠핑을 합니다. 보통은 10월엔 너무 더워서
 캠핑을 하기 힘들다던데 저희가 여행하던 기간에는 낮 90도 정도로 선선한 편이라
@@ -145,7 +145,7 @@ Dante's View는 배드워터 바로 위의 산인데, 그 높이가 5000피트�
 여닫을 수 있더라구요. 아무튼 잘샀다는 생각이 듭니다. 루프랙에 묶고 다니니 뽀대도
 나는듯 하고.. ㅎㅎ
 
-![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_campground2.jpg)
+![](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_campground2.jpg)
 
 텐트 치고 저녁먹고 아이들과 이야기하며 별 보다가 잠들었네요. 기존에 쓰던 매트가 퀸
 매트 두개인데, 두개가 가젤텐트에 들어가지 않아 하나는 바람을 좀 빼고 접을수 밖에
@@ -156,7 +156,7 @@ Dante's View는 배드워터 바로 위의 산인데, 그 높이가 5000피트�
 
 ## Day 3
 
-![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_campground3.jpg)
+![](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_campground3.jpg)
 
 
 밤사이 춥진 않아서 텐트 레인플라이를 덮지도 않았는데 따뜻하게 잤네요. 아침은
@@ -170,7 +170,7 @@ Dante's View는 배드워터 바로 위의 산인데, 그 높이가 5000피트�
 여행은 마무리 하기로 했습니다. Titus Canyon은 다음에 제대로 된 오프로드 차량을
 구해서 다시 와야겠습니다. 아니면 오토바이로 오던지...
 
-![Keano Wonder Mine 가는 길](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_header.jpg)
+![Keano Wonder Mine 가는 길](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_header.jpg)
 
 고스트 타운 가는길에 데스벨리에서 가장 접근하기 쉬운 Keano Wonder Mine을 들렀습니다.
 이 버려진 탄광은 메인도로에서 3마일(5.5km)정도 흙길을 타고 들어가야하는 데, 자갈이
@@ -183,7 +183,7 @@ Dante's View는 배드워터 바로 위의 산인데, 그 높이가 5000피트�
 보입니다. 탄광은 내부가 불안정해서 들어갈 수는 없어서 아쉬웠지만 탄광에 걸어가며
 보이는 경치가 멋지네요!
 
-![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_keanowondermine.jpg)
+![](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_keanowondermine.jpg)
 
 다음 장소인 Rhyolite 고스트 타운은 데스벨리 경계 바로 바깥에 있습니다. 그 다음
 목적지인 Alabama Hills 쪽 방향과는 정 반대라 고스트 타운을 구경하고 데스벨리를 다시
@@ -194,7 +194,7 @@ Dante's View는 배드워터 바로 위의 산인데, 그 높이가 5000피트�
 타운은 흙길로 가야하거나 아예 오프로드 험한 길을 지나서 가야만 하는 곳이
 대부분이더라구요. 그런 곳은 다음에 오프로드 차 장만하면 가기로...
 
-![Rhyolite 은행 건물 잔해](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_rhyolite.jpg)
+![Rhyolite 은행 건물 잔해](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_rhyolite.jpg)
 
 데스벨리가 탄광으로 한창 성행할 때 가장 많은 사람이 살았던 마을이라는 데 지금은
 일반 주택은 다 무너지고 몇몇 벽돌로 지어진 건물의 외벽만 겨우 남아있는 수준이네요.
@@ -205,16 +205,16 @@ Dante's View는 배드워터 바로 위의 산인데, 그 높이가 5000피트�
 가로질러야 하는데, 그 시간만 두시간이 걸리네요. 정말 크긴 큽니다. 그 광활함은 직접
 가서 보기 전까진 이해하기가 힘들것 같아요.
 
-![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_alabamahills1.jpg)
+![](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_alabamahills1.jpg)
 
 지난 봄에 오지캠핑했던 앨러배마힐스에 들러 점심(그래봤자 가벼운 샌드위치)을 먹고
 여유있는 척 커피를 마셨습니다. 다 컨셉이죠 ㅋㅋ. 일정에 쪼들려 커피 겨우 마시고 이번
 여행의 주 목적, 단풍구경을 하러 갔네요. 진정한 찍고 땡! 여행이랄까요...
 
-![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_alabamahillscoffee.jpg)
+![](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_alabamahillscoffee.jpg)
 
 ![폼잡고 있는데 달려오는
-둘째](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_alabamahillsmovieroad.jpg)
+둘째](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_alabamahillsmovieroad.jpg)
 
 지난번 캠핑에선 앨러배마 힐스 입구근처에서 돌아다녔는데, 이번엔 아예 주구장창
 흙길을 이용해서 북쪽으로 갔습니다. 그렇게 이동하는 차는 우리밖에 없었고 간간히
@@ -223,13 +223,13 @@ Dante's View는 배드워터 바로 위의 산인데, 그 높이가 5000피트�
 제대로 SUV답게 즐기고 있는 것 같아요.
 
 ![Hwy
-395](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_hwy395.jpg)
+395](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_hwy395.jpg)
 
 Alabama Hills에서 Bishop가는 길은 395번 도로를 타고 올라갑니다. 이 도로가
 아름답기로 유명한 도로죠. 캘리포니아 서쪽 해안가에는 1번 도로가 있다면 동쪽에는
 이 395번 도로가 있죠. 캘리포니아의 양쪽 끝을 남북으로 가로지르는 멋진 도로입니다.
 
-![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_lakesabrina.jpg)
+![](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_lakesabrina.jpg)
 
 단풍 구경은 Bishop 근처에 있는 Lake Sabrina와 그 근처에서 했는데, Lake Sabrina는
 이미 단풍 정점을 지나 잎이 다 떨어져있었네요. 그럼에도 불구하고, 가뭄으로 물이
@@ -237,7 +237,7 @@ Alabama Hills에서 Bishop가는 길은 395번 도로를 타고 올라갑니다.
 뿌려진 빛이 시에라 산맥을 수묵화로 바꿨고, 잔잔한 호수에 비치는 산자락의 단풍이
 수채화를 만들고 있었어요.
 
-![Lake Sabrina에서 내려오는 길](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_intaketwo.jpg)
+![Lake Sabrina에서 내려오는 길](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_intaketwo.jpg)
 
 Bishop에 도착해선 저녁을 먹으러 일본식 레스토랑 Yamatani Japanese Restaurant에
 갔어요. 아이가 스시를 좋아해서 영양 보충좀 할 겸 들렀는데, 우리 가족 앞에 한 팀이
@@ -282,7 +282,7 @@ Lookout 인데, 올라가는 길에 이곳을 가보기로 합니다. Hwy 395 �
 됐습니다. 30마일만 넘어가도 스릴 넘치고 40마일 50마일을 찍으면 놀이기구 부럽지
 않아요. 그정도로 속도를 낼 수 있을만큼 평탄한 길이라 마음껏 달렸네요.
 
-![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_breeslookout.jpg)
+![](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_breeslookout.jpg)
 
 도착하고 나니 바로 사진같이 멋진 풍경을 보여줍니다. 데스벨리나 앨러배마 힐스 같은
 광활함이 있지는 않지만, 액자로 걸어둘만한 풍경이 눈앞에 펼쳐지네요. 사진으로
@@ -290,8 +290,8 @@ Lookout 인데, 올라가는 길에 이곳을 가보기로 합니다. Hwy 395 �
 채우는 크기로 인화를 하면 조금이나마 느낄 수 있을까? 그런데 이 Hot Creek은
 사진으로도 충분히 그 느낌이 표현되는 곳인듯 합니다.
 
-![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_hotcreek1.jpg)
-![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_hotcreek2.jpg)
+![](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_hotcreek1.jpg)
+![](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_hotcreek2.jpg)
 
 아래 냇가까지 걸어갈 수 있어서 그곳에서 온천 물에 손도 담가보고 (바로 기포
 올라오는 곳에 손 넣으면 손 데여요! 절대 금지!) 사진도 찍으며 재밌는 시간을
@@ -301,7 +301,7 @@ Lookout 인데, 올라가는 길에 이곳을 가보기로 합니다. Hwy 395 �
 돌고 갑니다. June Lake, Silver Lake 들러서 멋진 사진도 건지고 요세미티
 국립공원을 가로지르는 Tioga Road를 타고 시에라 산맥 서쪽으로 넘어갔네요.
 
-![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_tuolumnemeadow.jpg)
+![](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_tuolumnemeadow.jpg)
 
 Tuolume Meadows에서 이번 여행 처음으로 라면을 끓여 먹었는데, 아이들이 그 추운
 고지대에서 라면을 먹는 게 무척이나 좋았나봅니다. 거의 9000피트 되는 곳은 이미 꽤
@@ -310,7 +310,7 @@ Tuolume Meadows에서 이번 여행 처음으로 라면을 끓여 먹었는데, 
 
 ## 마무리
 
-![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_deathvalley.jpg)
+![](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_deathvalley.jpg)
 
 그렇게 1200 마일 (2000km)의 긴 로드트립을 마쳤습니다. 지금까진 아이들이 장거리
 여행을 좀 지루하게 생각해서 4시간 거리의 요세미티 정도로만 다녔었는데 이번에

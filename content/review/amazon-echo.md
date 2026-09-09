@@ -21,14 +21,14 @@ Amazon Echo 라고, 음성으로 명령을 내릴 수 있는 기기였죠.
 
 그러다 엉겁결에, 집에 [Nest 온도조절기][nest]가 있다는 이유만으로 아마존 에코를 떠맡게 되었네요.
 
-![Amazon Echo](../media/page/review/amazon-echo/amazon-echo-4.jpg)
+![Amazon Echo](/media/page/review/amazon-echo/amazon-echo-4.jpg)
 
 ## 개봉
 
 아마존 에코가 스피커까지 있다보니, 박스가 무게가 상당합니다.
 게다가 생각보다 박스의 부피도 꽤 큽니다.
 
-![Amazon Echo Package Box](../media/page/review/amazon-echo/amazon-echo-1.jpg)
+![Amazon Echo Package Box](/media/page/review/amazon-echo/amazon-echo-1.jpg)
 
 ## Connectivity
 

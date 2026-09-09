@@ -179,6 +179,9 @@ def sanitize_body(body: str) -> str:
     # 2. Escape literal {{...}} that Tera tries to interpret
     body = re.sub(r'(\{\{[^}]*\}\})', r'{% raw %}\1{% endraw %}', body)
     
+    # 3. Convert relative media paths (../media/, ../../media/, etc.) to root-relative /media/
+    body = re.sub(r'(?:\.\./)+media/', '/media/', body)
+    
     # Note: Relative links are untouched! Patched Zola resolves them automatically.
     return body
 

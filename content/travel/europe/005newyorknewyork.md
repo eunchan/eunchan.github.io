@@ -4,7 +4,7 @@ title = "New York! New York!"
 [extra]
 comments = true
 +++
-![New York Time Square](../../media/page/travel/europe/europe-013.jpg)
+![New York Time Square](/media/page/travel/europe/europe-013.jpg)
 
 2007년 5월 3일 World Trade Center
 ---------------------------------
@@ -24,7 +24,7 @@ Gordon M.Aaxmoth Jr. 부터 Igor Zukelman 까지...  The Heroes of September 11.
 쌍둥이가 아닌 단일 건물. Freedom Tower가 될 것이라고 한다. 그 높이는 쌍둥이
 빌딩을 합한 높이.
 
-![MOMA](../../media/page/travel/europe/europe-003.jpg)
+![MOMA](/media/page/travel/europe/europe-003.jpg)
 
 18:00 뉴욕은 생각했던 모습 그대로 였다. 침울한 회색의 도시. 무채색의 옷들,
 차분한 색의 건물들, 그리고 정신없이 바쁘게 돌아다니는 사람들, 꽉 막혀버린
@@ -35,16 +35,16 @@ Gordon M.Aaxmoth Jr. 부터 Igor Zukelman 까지...  The Heroes of September 11.
 덥다. 아침 14도 한낮 21~3도) 회색과 평화, 어울릴 것 같지 않은 두 단어가
 어울리는 도시, 뉴욕
 
-![브루클린](../../media/page/travel/europe/europe-009.jpg)
+![브루클린](/media/page/travel/europe/europe-009.jpg)
 
-![Union Square](../../media/page/travel/europe/europe-016.jpg)
+![Union Square](/media/page/travel/europe/europe-016.jpg)
 
-![Shake Shack](../../media/page/travel/europe/europe-018.jpg)
+![Shake Shack](/media/page/travel/europe/europe-018.jpg)
 
 2007년 5월 4일 17:00
 --------------------
 
-![Empire State 빌딩에서 본 맨하탄](../../media/page/travel/europe/europe-020.jpg)
+![Empire State 빌딩에서 본 맨하탄](/media/page/travel/europe/europe-020.jpg)
 
 Empire의 보안은 꽤 엄격했다. 공항에서만 했던 벨트 풀기를 해야했다. 덕분에 난
 또 바지춤을 부여잡고 금속탐지 문을 통과했다. 하지만 그렇게 엄격한 보안검사를
@@ -52,7 +52,7 @@ Empire의 보안은 꽤 엄격했다. 공항에서만 했던 벨트 풀기를 �
 없을 만큼 멋지다. Brooklyn Bridge, the Statue of Liberty, Skycraper(마천루),
 Central Park, 멀리보이는 Harlem, 뉴저지 그 모든것이 깨끗하게 보인다.
 
-![맨하탄의 거리](../../media/page/travel/europe/europe-023.jpg)
+![맨하탄의 거리](/media/page/travel/europe/europe-023.jpg)
 
 수많은 사람들이 이곳 86층에 있다. 수백명. 모두 한시간 가까이 되는 긴 줄을 참고
 이곳에 왔는지 더 많이 보려고 안간힘을 쓰고 더 많이 사진을 찍기위해 안간힘을
@@ -63,7 +63,7 @@ Central Park, 멀리보이는 Harlem, 뉴저지 그 모든것이 깨끗하게 �
 엉망진창의 사진을 찍는다. 나만의 눈을 만들어야 하는데 이 마음은 모든것을
 남아내고 싶어 한다.
 
-![더 보기위해 든 발꿈치](../../media/page/travel/europe/europe-022.jpg)
+![더 보기위해 든 발꿈치](/media/page/travel/europe/europe-022.jpg)
 
 SOHO의 Leica Gallery 에서 L.F(정확한 이름은 기억이 안난다) 사진작가의 전시회를
 하고 있길래 들어가서 관람했다. 그 작가는 보는 눈이 달랐다. 보는 위치도 달랐다.
@@ -75,7 +75,7 @@ D-Day 작전 사진을 보노라면 항상 경이로움을 느낀다. 초점도 
 있었다. 게다가 흔들리는 와중에도 확실히 보이는 병사의 살아있는 눈빛.. 실제로
 크게 인화한 Print를 보고싶지만 어디있는지도 모르겠다.
 
-![5번가](../../media/page/travel/europe/europe-005.jpg)
+![5번가](/media/page/travel/europe/europe-005.jpg)
 
 2007년 5월 6일
 --------------
@@ -87,19 +87,19 @@ Hi-matic 7sII가 망가졌다는 점이다. 조리개가 F11에 고정되어 움
 로마가자마자 중고 카메라 가게부터 찾아봐야 겠다. 일단 Hi-matic SD든 E든 F든
 Hi-matic으로 사고 한국가서 7sII 재구입해야겠다. 내 돈~
 
-![Central Park](../../media/page/travel/europe/europe-028.jpg)
+![Central Park](/media/page/travel/europe/europe-028.jpg)
 
 나는 점점 더 나와야겠다는 생각이 강하게 든다. 제대로 공부해보고 싶은 생각이
 커져간다. 어디까지가 내 능력의 한계일까? 뛰어보는거다. 능력을 시험해보기
 위해서라도... 내가 하고싶은 일을 하기 위해서라도..
 
-![브루클린 다리](../../media/page/travel/europe/europe-009.jpg)
+![브루클린 다리](/media/page/travel/europe/europe-009.jpg)
 
 난 Dreamholic 인가보다. 언제나 새로운 꿈을 만들어내며 그 꿈을 이루려 쬐~금만
 노력한다.(아니 조금 더? ;; ) 그리고 그 이외의 것은 과감히 포기한다. 나중에
 후회하더라도 그 당시에는 이후를 생각해보지 않는다. 
 
-![Wall Street](../../media/page/travel/europe/europe-012.jpg)
+![Wall Street](/media/page/travel/europe/europe-012.jpg)
 
 이탈리아 아저씨들 성격 급하다. 아직 순항궤도에 다다르지도 않았는데 안전벨트
 풀고 일어나서 짐꺼내고 돌아다닌다. 다른 외국인들은 이런적 한번도 없었다. 아~

@@ -98,7 +98,7 @@ Timestamp는 여러 거래를 하나의 블럭으로 연결짓고 해당 블럭�
 노드에게 퍼트리는 역할을 합니다. 비트코인의 흐름은 시간순서(chronicle)를
 따르지만 여러 비트코인 통화의 흐름은 동시다발적으로 일어납니다.
 
-![Timestamp Server](../media/page/article/bitcoin/bitcoin-timestamp-server.png)
+![Timestamp Server](/media/page/article/bitcoin/bitcoin-timestamp-server.png)
 
 Timestamp Server는 이 여러 거래를 시간단위로 묶어서 해당 거래 전체를 하나의
 hash로 표현합니다. 이 묶음(블럭) 또한 시간순서로 연결되어 이전 블럭의 Hash를
@@ -113,7 +113,7 @@ hash로 표현합니다. 이 묶음(블럭) 또한 시간순서로 연결되어 
 Timestamp를 이용해 거래를 검증하는 방법은 블럭의 헤더(80바이트)와 이전 거래
 블럭의 Hash를 이용해 새로운 Hash(SHA-256)를 만드는 과정입니다.
 
-![Block 구조 및 Proof-of-Work](../media/page/article/bitcoin/bitcoin-proof-of-work.png)
+![Block 구조 및 Proof-of-Work](/media/page/article/bitcoin/bitcoin-proof-of-work.png)
 
 Block의 hash는 연속된 0으로 시작합니다. 이 값이 결정되는데 영향을 미치는 것이
 **Target** 입니다. Target은 블럭이 만들어지는 목표 수치같은 것인데, Block의
@@ -210,7 +210,7 @@ Target을 이용해 Difficulty를 계산하는 공식은 Bitcoin wiki에서 소�
 
 ## Reclaiming Disk Space
 
-![Merkle Tree Prunning](../media/page/article/bitcoin/bitcoin-reclaim-disk-space.png)
+![Merkle Tree Prunning](/media/page/article/bitcoin/bitcoin-reclaim-disk-space.png)
 
 모든 거래를 다 보관하는 것은 데스크탑에서는 가능하겠지만 현재까지 4년정도의
 거래량이 수 GB를 넘은 것을 볼 때 모든 노드가 다 보관하는 것은 불가능합니다.

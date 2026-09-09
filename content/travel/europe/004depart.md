@@ -4,7 +4,7 @@ title = "to New York"
 [extra]
 comments = true
 +++
-![JFK Airport](../../media/page/travel/europe/europe-001.jpg)
+![JFK Airport](/media/page/travel/europe/europe-001.jpg)
 
 2007년 5월 2일
 --------------

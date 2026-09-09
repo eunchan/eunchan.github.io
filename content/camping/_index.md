@@ -44,7 +44,7 @@ Flash와 비슷하게 바닥에 열을 잘 전달하는 부분이 있으면서�
 
 ### [Durston X-Dome 1+][durston-x-dome-1p]
 
-![](../media/blog/2025-stuff/x-dome-1p.jpg)
+![](/media/blog/2025-stuff/x-dome-1p.jpg)
 
 백팩킹을 해보려고 산 텐트인데, 정작 어깨 때문에 백팩킹은 하지도 못하고, 오토캠핑
 갔을 때 써본게 전부네요. 1kg 미만의 자립형 텐트입니다. 자립형 텐트중에 이만큼
@@ -118,7 +118,7 @@ Flash와 비슷하게 바닥에 열을 잘 전달하는 부분이 있으면서�
 
 #### Portable Electric Fridge
 
-![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_refrigandtable.jpg)
+![](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_refrigandtable.jpg)
 
 기존에 쓰던 코스트코 아이스박스는 저렴한 가격 치곤 보냉 성능은 나쁘지
 않았습니다. 얼음 가득 채우면 열고 닫지 않으면 이틀은 충분히 얼음이
@@ -170,7 +170,7 @@ Dometic에서 보조배터리를 파는 데, 40Ah 짜리 배터리를 850 달러
 
 #### Skotti Portable Grill
 
-![](../media/blog/2025-stuff/skottigrill.jpg)
+![](/media/blog/2025-stuff/skottigrill.jpg)
 
 캠핑 다닐때 스테이크 굽는 용도로 작은 Weber grill을 가지고 다녔습니다. 캠핑장에
 있는 그릴은 녹슬고 지저분 해서 따로 가지고 다니긴 했는데, 이게 부피도 크고 숯도
@@ -231,7 +231,7 @@ Self-inflating(혼자서 부풀어오르는) 매트라 가만히 놔두면 한�
 
 ### Havnby Car Mattress
 
-![](../media/blog/2025-stuff/havnby.png)
+![](/media/blog/2025-stuff/havnby.png)
 
 트럭으로 산속 오지 캠핑을 가끔 가다보니, 잠자는 것에 관심이 많이 가더군요.
 그래서 가젤텐트에 Megamat Duo도 써서 편하게 자보기도 하고, X-Dome 1+ 로 부피를
@@ -263,7 +263,7 @@ Self-inflating(혼자서 부풀어오르는) 매트라 가만히 놔두면 한�
 
 #### Helinox Chair One
 
-![](../media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_alabamahillscoffee.jpg)
+![](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_alabamahillscoffee.jpg)
 
 두말할 필요가 없는, 백팩킹 의자로는 최고의 제품이죠. 작고 가볍고 짱짱합니다.
 기존 캠핑용 의자가 부피가 워낙에 커서, 캠핑장비가 늘어나며 그 부피가 부담이 되어

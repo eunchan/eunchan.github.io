@@ -7,7 +7,7 @@ tags = ["motorcycle", "youtube", "vlog", "motovlog", "lavalier", "mic", "gopro",
 [extra]
 comments = true
 +++
-![](../media/motorcycle/gopro-motovlog-setup.jpg)
+![](/media/motorcycle/gopro-motovlog-setup.jpg)
 
 TL;DR GoPro Hero8 + Media Mod + RODE Go Lavalier Mic / Zoom Recorder + Rode
 VideoMicro
@@ -123,7 +123,7 @@ DJI Osmo Action을 넘기고 고프로 Hero8에 Media Mod로 넘어왔습니다.
 위치도 턱으로 옮겼습니다. 불안정한 건 Sugru 를 사서 틈새를 메꾸니 단단하게
 고정되더군요. 좀 더 제 시점이랑 비슷해서 (살짝 아래긴 하지만), 마음에 듭니다.
 
-![](../media/motorcycle/sugru-gopro-mount.jpg)
+![](/media/motorcycle/sugru-gopro-mount.jpg)
 
 ## Exhaust Sound
 
@@ -141,7 +141,7 @@ DJI Osmo Action을 넘기고 고프로 Hero8에 Media Mod로 넘어왔습니다.
 찌그러지지 않고 깨지더군요. :) 이때다 싶어서 그동안 눈여겨봤던 필드레코더
 끝판왕으로 넘어갔습니다.
 
-![](../media/page/review/zoom-f6-rode-videomicro.jpg)
+![](/media/page/review/zoom-f6-rode-videomicro.jpg)
 
 바로 Zoom F6 인데요. 이 필드레코더는 마이크가 내장되어 있지는 않아서 예전에
 장만해 둔 Rode VideoMicro 를 사용하고 있습니다. F6는 다른 사운드레코더와는
