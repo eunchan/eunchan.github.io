@@ -103,7 +103,11 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
+      {% if config.extra.copyright_start_year %}
+      <p>&copy; {{ config.extra.copyright_start_year }}&ndash;{{ now() | date(format="%Y") }} {{ config.extra.copyright_name | default(value=config.extra.author) }}</p>
+      {% elif config.extra.copyright %}
       <p>{{ config.extra.copyright | safe }}</p>
+      {% endif %}
     </div>
   </footer>
 
