@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3079f100314bd5eb04aa3a976549333f50a09a4dccbddf8b3a43f1ae0b2e008f
-size 156
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://docs.opentitan.org/hw/ip/hmac/doc/
+HostUrl=https://docs.opentitan.org/hw/ip/hmac/doc/hmac_block_diagram.svg

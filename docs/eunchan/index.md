@@ -6,13 +6,25 @@ title: Eli Kim
 
 ![Pinnacle N.P.](../media/page/eunchan/personal-banner.jpg)
 
-삼성전자에서 Flash Storage Device (SSD) 하드웨어 설계 업무를 담당하였습니다.  좀
-더 자세히 말하면 SSD의 Host Interface 설계 및 검증을 하였습니다.  주로 담당한
-분야는 SATA Express(AHCI)와 SAS 12G 부분입니다.  이후 미국으로 넘어와서
-실리콘벨리에 있는 Marvell Semiconductor Inc.에 5년 정도 근무했습니다.  이곳에서
-PCI Express IP 및 Low Power, NVMe host IP 일부 설계를 담당했습니다. 구글에서
-[OpenTitan 프로젝트](https://opentitan.org)를 하고, 애플에서 잠시 근무 후 다시
-구글에서 TPU 머신러닝 칩 디자인을 하고 있습니다.
+삼성전자에서 Flash Storage Device (SSD) 하드웨어 설계 업무를 담당하였습니다. 좀
+더 자세히 말하면 SSD의 Host Interface 설계 및 검증을 하였습니다. 주로 담당한
+분야는 SATA Express(AHCI)와 SAS 12G 부분입니다. 참여한 제품이 2013 맥북프로
+레티나 버전과 소니 VAIO, 델 랩탑등 많은 곳에 탑재되었습니다.
+
+이후 미국으로 넘어와서 실리콘벨리에 있는 Marvell Semiconductor Inc.에 5년 정도
+근무했습니다. 이곳에서 PCI Express IP 및 Low Power, NVMe host IP 일부 설계를
+담당했습니다. 이 제품도 많은 랩탑 및 데이터센터에 탑재되었습니다.
+
+그 이후 구글에서 [OpenTitan 프로젝트](https://opentitan.org)를 하였고,
+오픈타이탄 칩은 픽셀, 크롬북, 구글 데이터센터의 많은 제품에 들어가서 RoT를
+담당하고 있습니다.
+
+애플에서 잠시 근무하며 Wireless MAC (UMAC) 일부분을 담당했고, 해당 제품은 N1
+으로 명명되어 아이폰 에어에서부터 맥스튜디오까지 애플 제품군 여러곳에 쓰이고
+있습니다.
+
+그 이후 구글에 돌아왔습니다. 구글에서 TPU 머신러닝 칩 SoC 디자인 및 리드를 하고
+(TPU8t+), 그 후엔 퀀텀컴퓨터 팀에서 디지털 디자인 연구를 하고 있습니다.
 
 다양한 것에 관심이 많은 편입니다. [사진](camera/index.md) 찍기도 좋아하고 음악을
 즐겨듣습니다. [천체관측](../sky/index.md)도 좋아해서 [8인치
