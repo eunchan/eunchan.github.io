@@ -144,6 +144,11 @@
     if (drawerToggle) drawerToggle.addEventListener('click', openDrawer);
     if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
     if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
+
+    // Mobile ToC collapse by default
+    if (window.innerWidth <= 860) {
+      document.querySelectorAll('.toc-collapsible').forEach(el => el.removeAttribute('open'));
+    }
   </script>
   <script src="{{ get_url(path="js/search.js") }}" defer></script>
   {% block extra_scripts %}{% endblock extra_scripts %}

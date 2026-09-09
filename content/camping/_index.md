@@ -4,7 +4,7 @@ sort_by = "none"
 [extra]
 comments = true
 date = "2025-09-05"
-hide = ["toc"]
+toc = true
 slug = "camping-gear"
 tags = ["heater", "fridge", "dometic", "battery", "solar", "jackery", "ecoflow", "sleeping-bag"]
 +++

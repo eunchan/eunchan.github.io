@@ -1,48 +1,89 @@
 {% extends "base.html" %}
 
 {% block content %}
-<article class="content-page">
-  <header class="post-header">
-    {% if not page.content is containing(pat="<h1") %}
-    <h1 class="post-title">{{ page.title }}</h1>
-    {% endif %}
-    {% if page.date %}
-    <div class="post-meta">
-      <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
-      {% if page.taxonomies.tags %}
-      <span class="meta-tags">
-        {% for tag in page.taxonomies.tags %}
-        <span class="tag">#{{ tag }}</span>
-        {% endfor %}
-      </span>
-      {% endif %}
-    </div>
-    {% endif %}
-  </header>
-
-  <div class="page-body">
-    {{ page.content | safe }}
-  </div>
-
-  {% if page.extra.comments | default(value=true) %}
-  <section class="comments-section" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
-    <h2>댓글</h2>
-    <script src="https://giscus.app/client.js"
-            data-repo="{{ config.extra.giscus.repo }}"
-            data-repo-id="{{ config.extra.giscus.repo_id }}"
-            data-category="{{ config.extra.giscus.category }}"
-            data-category-id="{{ config.extra.giscus.category_id }}"
-            data-mapping="{{ config.extra.giscus.mapping }}"
-            data-strict="0"
-            data-reactions-enabled="1"
-            data-emit-metadata="0"
-            data-input-position="bottom"
-            data-theme="{{ config.extra.giscus.theme }}"
-            data-lang="{{ config.extra.giscus.lang }}"
-            crossorigin="anonymous"
-            async>
-    </script>
-  </section>
+{% set show_toc = page.extra.toc | default(value=false) and page.toc and page.toc | length > 0 %}
+<div class="page-layout{% if show_toc %} has-toc{% endif %}">
+  {% if show_toc %}
+  <aside class="toc-sidebar">
+    <details class="toc-collapsible" open>
+      <summary class="toc-summary">
+        <span class="toc-title">목차</span>
+        <span class="toc-icon">▾</span>
+      </summary>
+      <nav class="toc-nav">
+        <ul>
+          {% for h1 in page.toc %}
+          <li>
+            <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
+            {% if h1.children %}
+            <ul>
+              {% for h2 in h1.children %}
+              <li>
+                <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
+                {% if h2.children %}
+                <ul>
+                  {% for h3 in h2.children %}
+                  <li><a href="{{ h3.permalink | safe }}">{{ h3.title }}</a></li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+              </li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </details>
+  </aside>
   {% endif %}
-</article>
+
+  <div class="page-content-area">
+    <article class="content-page">
+      <header class="post-header">
+        {% if not page.content is containing(pat="<h1") %}
+        <h1 class="post-title">{{ page.title }}</h1>
+        {% endif %}
+        {% if page.date %}
+        <div class="post-meta">
+          <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
+          {% if page.taxonomies.tags %}
+          <span class="meta-tags">
+            {% for tag in page.taxonomies.tags %}
+            <span class="tag">#{{ tag }}</span>
+            {% endfor %}
+          </span>
+          {% endif %}
+        </div>
+        {% endif %}
+      </header>
+
+      <div class="page-body">
+        {{ page.content | safe }}
+      </div>
+
+      {% if page.extra.comments | default(value=true) %}
+      <section class="comments-section" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+        <h2>댓글</h2>
+        <script src="https://giscus.app/client.js"
+                data-repo="{{ config.extra.giscus.repo }}"
+                data-repo-id="{{ config.extra.giscus.repo_id }}"
+                data-category="{{ config.extra.giscus.category }}"
+                data-category-id="{{ config.extra.giscus.category_id }}"
+                data-mapping="{{ config.extra.giscus.mapping }}"
+                data-strict="0"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="bottom"
+                data-theme="{{ config.extra.giscus.theme }}"
+                data-lang="{{ config.extra.giscus.lang }}"
+                crossorigin="anonymous"
+                async>
+        </script>
+      </section>
+      {% endif %}
+    </article>
+  </div>
+</div>
 {% endblock content %}
