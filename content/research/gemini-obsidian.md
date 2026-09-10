@@ -42,7 +42,7 @@ Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) 개념�
 
 카파시의 방식이 'AI가 주도하는 위키'라면, 제 방식은 제가 오랫동안 유지해온
 [**PARA(Project-Area-Resources-Archive)**](https://www.buildingasecondbrain.com/para)
-+ **Journal** 체계를 AI가 보조하는 '에이전틱 워크플로우(Agentic Workflow)'에
+\+ **Journal** 체계를 AI가 보조하는 '에이전틱 워크플로우(Agentic Workflow)'에
 가깝습니다.
 
 ## My Environment
