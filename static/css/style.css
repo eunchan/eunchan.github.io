@@ -580,6 +580,11 @@ img {
   line-height: 1.7;
 }
 
+.post-card-summary > h1:first-child,
+.page-body > h1:first-child {
+  display: none;
+}
+
 .read-more {
   display: inline-block;
   margin-top: 0.75rem;

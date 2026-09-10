@@ -34,9 +34,9 @@
       </header>
       <div class="post-card-summary">
         {% if page.summary %}
-          {{ page.summary | safe }}
+          {{ page.summary | regex_replace(pattern="(?s)^\\s*<h1[^>]*>.*?</h1>\\s*", rep="") | safe }}
         {% else %}
-          {{ page.content | striptags | truncate(length=200) }}
+          {{ page.content | regex_replace(pattern="(?s)^\\s*<h1[^>]*>.*?</h1>\\s*", rep="") | striptags | truncate(length=200) }}
         {% endif %}
       </div>
       <div class="post-card-footer">
