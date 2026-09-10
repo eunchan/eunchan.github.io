@@ -26,7 +26,16 @@ jobs:
       - name: Install custom Zola
         run: |
           ZOLA_VERSION="v0.23.4-custom"
-          curl -sSL "https://github.com/eunchan/zola/releases/download/${ZOLA_VERSION}/zola-linux-x86_64.tar.gz" | tar -xz
+          ZOLA_URL="https://github.com/eunchan/zola/releases/download/${ZOLA_VERSION}/zola-linux-x86_64.tar.gz"
+          echo "Checking for pre-built release at ${ZOLA_URL}..."
+          if curl -sSL -f "${ZOLA_URL}" | tar -xz 2>/dev/null; then
+            echo "Successfully downloaded pre-built custom Zola binary!"
+          else
+            echo "Pre-built binary not found. Falling back to compiling custom Zola from source..."
+            git clone --depth 1 --branch custom https://github.com/eunchan/zola.git /tmp/zola-src
+            cargo build --release --manifest-path /tmp/zola-src/Cargo.toml
+            cp /tmp/zola-src/target/release/zola .
+          fi
           chmod +x zola
           ./zola --version
 
