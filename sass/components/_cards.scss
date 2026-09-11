@@ -6,8 +6,15 @@
 }
 
 .post-title {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  line-height: 1.35;
   margin-top: 0;
+
+  @include mobile {
+    font-size: 2rem;
+  }
 }
 
 .post-meta {
@@ -47,7 +54,10 @@
 }
 
 .post-card-header h2 {
-  font-size: 1.5rem;
+  font-size: 1.45rem;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.4;
   border-bottom: none;
   margin-top: 0;
   margin-bottom: 0.35rem;
