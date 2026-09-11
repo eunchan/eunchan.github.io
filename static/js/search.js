@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const searchBox = document.getElementById("search-box");
   const searchInput = document.getElementById("search");
+  const searchToggle = document.getElementById("search-toggle");
+  const searchClose = document.getElementById("search-close");
   const resultsDiv = document.getElementById("search-results");
   if (!searchInput || !resultsDiv) return;
 
@@ -17,6 +20,34 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       index = elasticlunr.Index.load(window.searchIndex);
     }
+  }
+
+  function openSearch() {
+    if (searchBox) {
+      searchBox.classList.add("is-active");
+      initIndex();
+      setTimeout(() => {
+        searchInput.focus();
+      }, 50);
+    }
+  }
+
+  function closeSearch() {
+    if (searchBox) {
+      searchBox.classList.remove("is-active");
+      resultsDiv.style.display = "none";
+    }
+  }
+
+  if (searchToggle) {
+    searchToggle.addEventListener("click", openSearch);
+  }
+
+  if (searchClose) {
+    searchClose.addEventListener("click", (e) => {
+      e.stopPropagation();
+      closeSearch();
+    });
   }
 
   function renderResults() {
@@ -71,12 +102,18 @@ document.addEventListener("DOMContentLoaded", () => {
   searchInput.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       resultsDiv.style.display = "none";
+      if (window.innerWidth <= 768) {
+        closeSearch();
+      }
     }
   });
 
   document.addEventListener("click", (e) => {
-    if (!searchInput.contains(e.target) && !resultsDiv.contains(e.target)) {
+    if (searchBox && !searchBox.contains(e.target)) {
       resultsDiv.style.display = "none";
+      if (window.innerWidth <= 768) {
+        closeSearch();
+      }
     }
   });
 });

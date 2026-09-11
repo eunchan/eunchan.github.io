@@ -101,6 +101,7 @@ a:hover {
 .header-inner {
   max-width: var(--container-max-width);
   margin: 0 auto;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -241,6 +242,35 @@ a:hover {
 .search-box {
   position: relative;
 }
+
+.search-toggle-btn {
+  display: none;
+  background: none;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  color: var(--text-color);
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.search-toggle-btn:hover {
+  background: var(--code-bg);
+  border-color: var(--primary);
+}
+
+.search-input-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.search-close-btn {
+  display: none;
+}
+
 .search-box input {
   padding: 0.25rem 0.65rem;
   border: 1px solid var(--border-color);
@@ -252,8 +282,9 @@ a:hover {
   outline: none;
   width: 150px;
   height: 30px;
-  transition: width 0.2s;
+  transition: width 0.2s, border-color 0.2s;
 }
+
 .search-box input:focus {
   width: 200px;
   border-color: var(--primary);
@@ -446,11 +477,69 @@ a:hover {
   .drawer-btn {
     display: flex; /* Show hamburger button */
   }
-  .search-box input {
-    width: 120px;
+
+  /* Mobile Search: icon by default, full-width overlay when active */
+  .search-toggle-btn {
+    display: inline-flex;
   }
-  .search-box input:focus {
-    width: 160px;
+
+  .search-box:not(.is-active) .search-input-wrap {
+    display: none;
+  }
+
+  .search-box.is-active .search-toggle-btn {
+    display: none;
+  }
+
+  .search-box.is-active .search-input-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--header-bg);
+    display: flex;
+    align-items: center;
+    padding: 0 0.75rem;
+    gap: 0.5rem;
+    z-index: 120;
+  }
+
+  .search-box.is-active .search-input-wrap input {
+    flex: 1;
+    width: 100%;
+    height: 34px;
+    font-size: 0.95rem;
+  }
+
+  .search-box.is-active .search-close-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 0.3rem 0.5rem;
+    line-height: 1;
+    border-radius: 4px;
+  }
+
+  .search-box.is-active .search-close-btn:hover {
+    color: var(--text-color);
+  }
+
+  .search-box.is-active .search-results-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: calc(100vh - 52px);
+    border-radius: 0 0 8px 8px;
+    border-top: 1px solid var(--border-color);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
   }
 }
 
