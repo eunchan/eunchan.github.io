@@ -43,8 +43,9 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-weight: 700;
-  font-size: 1.15rem;
+  font-weight: 550;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
   color: var(--header-text);
   text-decoration: none !important;
   line-height: 1;
@@ -80,6 +81,7 @@
       .arrow {
         transform: rotate(180deg);
         color: var(--primary);
+        opacity: 1;
       }
     }
 
@@ -90,8 +92,9 @@
 }
 
 .nav-link {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 500;
+  letter-spacing: -0.01em;
   color: var(--header-text);
   padding: 0.3rem 0.2rem;
   display: flex;
@@ -105,9 +108,10 @@
   }
 
   .arrow {
-    font-size: 0.75rem;
+    font-size: 0.68rem;
     color: var(--text-muted);
-    transition: transform 0.2s;
+    opacity: 0.65;
+    transition: transform 0.2s, opacity 0.2s;
   }
 }
 
@@ -117,10 +121,10 @@
   left: 0;
   background: var(--dropdown-bg);
   border: 1px solid var(--border-color);
-  border-radius: 6px;
+  border-radius: 8px;
   box-shadow: var(--shadow-dropdown);
-  padding: 0.4rem 0;
-  min-width: 170px;
+  padding: 0.35rem 0;
+  min-width: 175px;
   display: none;
   z-index: $z-dropdown;
 }
@@ -128,10 +132,13 @@
 .dropdown-item {
   display: block;
   padding: 0.45rem 1rem;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
+  font-weight: 450;
+  letter-spacing: -0.005em;
   color: var(--text-color);
   text-decoration: none !important;
   white-space: nowrap;
+  transition: background-color 0.15s, color 0.15s;
 
   &:hover {
     background: var(--dropdown-hover);
