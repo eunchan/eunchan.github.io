@@ -36,6 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (searchBox) {
       searchBox.classList.remove("is-active");
       resultsDiv.style.display = "none";
+      resultsDiv.innerHTML = "";
+      searchInput.value = "";
     }
   }
 
