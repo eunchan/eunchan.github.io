@@ -4,7 +4,7 @@ description = "Eli's Personal Website."
 default_language = "ko"
 use_directory_urls = false
 
-compile_sass = false
+compile_sass = true
 build_search_index = true
 generate_feeds = true
 feed_filenames = ["rss.xml"]
@@ -16,6 +16,7 @@ taxonomies = [
 
 [markdown]
 render_emoji = true
+bottom_footnotes = true
 
 [search]
 include_title = true
