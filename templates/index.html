@@ -6,9 +6,9 @@
     {{ section.content | safe }}
     <h2 id="coegeun-geul">최근 글</h2>
     <ul>
-      {% set recent_posts = get_pages(limit=10) %}
+      {% set recent_posts = get_pages(limit=10, sort_by="update_date") %}
       {% for post in recent_posts %}
-      <li><a href="{{ post.permalink }}">{{ post.title }}</a>{% if post.date %} - {{ post.date | date(format="%Y-%m-%d") }}{% endif %}</li>
+      <li><a href="{{ post.permalink }}">{{ post.title }}</a>{% if post.date %} - {{ post.date | date(format="%Y-%m-%d") }}{% if post.updated and (post.updated | date(format="%Y-%m-%d") != post.date | date(format="%Y-%m-%d")) %} (수정: {{ post.updated | date(format="%Y-%m-%d") }}){% endif %}{% elif post.updated %} - 수정: {{ post.updated | date(format="%Y-%m-%d") }}{% endif %}</li>
       {% endfor %}
     </ul>
   </div>

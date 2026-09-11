@@ -23,6 +23,9 @@
           {% if page.date %}
           <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
           {% endif %}
+          {% if page.updated and (not page.date or page.updated | date(format="%Y-%m-%d") != page.date | date(format="%Y-%m-%d")) %}
+          <span class="post-updated">{% if page.date %}(수정: {% else %}수정: {% endif %}<time datetime="{{ page.updated }}">{{ page.updated | date(format="%Y-%m-%d") }}</time>{% if page.date %}){% endif %}</span>
+          {% endif %}
           {% if page.taxonomies.tags %}
           <span class="tags">
             {% for t in page.taxonomies.tags %}

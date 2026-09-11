@@ -1,5 +1,6 @@
 +++
 date = 2026-02-15
+updated = 2026-09-11
 slug = "home-network"
 title = "Home Network"
 [taxonomies]
@@ -7,6 +8,9 @@ tags = ["fiber", "firewalla", "unifi", "camera", "security"]
 [extra]
 comments = true
 +++
+
+# Home Network
+
 [AT&T Bypass](./att-bypass.md) 글에서 예전 홈 네트워크 구성을 간단히
 다뤘었는데요. 그 이후로 장비를 몇 가지 교체하고 구성을 조금 더 다듬었습니다.
 아직 100% 만족하는 최종 설정은 아니지만, 어느 정도 안정화된 현재 구성을 기록해
@@ -14,7 +18,7 @@ comments = true
 
 <!-- more -->
 
-![Home Network](/media/page/research/home-network/home-network-2026.png)
+![Home Network](/media/page/research/home-network/home-network-2026-2.png)
 
 ## 장비 구성
 
@@ -45,7 +49,7 @@ Firewalla를 고집했습니다. Unifi의 Gateway 제품군(UDM 등)은 상세�
 메인 스위치에 연결했습니다. 메인 스위치는 [**Unifi Enterprise 8
 PoE**](https://store.ui.com/us/en/pro/category/all-switching/products/usw-enterprise-8-poe)를
 사용 중입니다. (지금은 단종 수순이고, 비슷한 신제품으로 Pro XG 8 PoE가
-나왔더군요.)
+나왔습니다.)
 
 이 스위치는 모든 포트가 2.5Gbps와 PoE+를 지원해서 홈 네트워크의 허브 역할을
 톡톡히 하고 있습니다. 여기에 [Unifi U7 Pro AP
@@ -62,17 +66,26 @@ PoE**](https://store.ui.com/us/en/pro/category/all-switching/products/usw-enterp
 포트가 꽉 차버렸네요. 조만간 16포트나 24포트 스위치로 기변해야 할지도
 모르겠습니다.
 
-참고로 서재 방에는 컴퓨터가 여러 대 있어서, 벽면 포트에서 [**Flex 2.5G
+서재 방에는 컴퓨터가 여러 대 있어서, 벽면 포트에서 [**Flex 2.5G
 Mini**](https://store.ui.com/us/en/category/switching-utility/products/usw-flex-2-5g-5)스위치를
 통해 각 PC로 분배하고 있습니다. 이 스위치는 메인 스위치로부터 PoE+ 전원을 받아
 작동하므로 별도 전원 어댑터가 필요 없어 선정리가 깔끔합니다.
+
+메인 스위치의 SFP+ 포트 하나가 광케이블을 통해서 창고로 연결됩니다. 창고를
+오피스처럼 꾸며서, 서재방에는 아이들 공부 및 게임용으로 사용하고, 창고를 제
+사무실로 사용하고 있습니다. 창고에는 [**Unifi Pro XG 8
+PoE**](https://store.ui.com/us/en/products/usw-pro-xg-8-poe)를 설치했습니다.
+창고의 스위치에는 현재 AP하나와 PC 두대가 연결되어있습니다. 당장은 10G 속도가
+필요없지만, 나중에 메인 스위치를 Pro HD 24 PoE 같은 제품으로 변경할 예정이라
+NAS까지 10G 속도로 연결하기위해 거금을 투자했습니다. *Buy Once, Cry Once!*
 
 ### Access Point
 
 와이파이는 [**Unifi U7
 Pro**](https://store.ui.com/us/en/category/wifi-flagship/products/u7-pro-xg) AP
-두 대로 커버합니다. 하나는 거실 천장에, 다른 하나는 복도 쪽에 설치해서 모든 방과
-주방, 거실을 음영 지역 없이 커버하고 있습니다.
+세 대로 커버합니다. 하나는 거실 천장에, 다른 하나는 복도 쪽에 설치해서 모든 방과
+주방, 거실을 음영 지역 없이 커버하고 있고, 창고에 한대를 설치해서 뒷마당과
+창고를 커버하고 있습니다.
 
 U7 Pro는 WiFi 7을 지원하고 2.5Gbps 업링크 포트를 가지고 있어서, 메인 스위치와
 2.5Gbps로 연결해 무선에서도 기가비트 인터넷 속도를 병목 없이 쓸 수 있게 해
@@ -97,9 +110,11 @@ G6](https://store.ui.com/us/en/category/all-cameras-nvrs/products/uvc-g6-bullet)
 상태라, PoE 장비를 더 추가하려면 16포트나 24포트 스위치로 업그레이드가 불가피해
 보입니다.
 
-둘째는 **전원 안정성(UPS)** 확보입니다. 예전에 Unifi U6 AP가 두 번이나 고장 난
+~~둘째는 **전원 안정성(UPS)** 확보입니다. 예전에 Unifi U6 AP가 두 번이나 고장 난
 적이 있었는데, 둘 다 전원 문제로 의심되더군요. 갑작스러운 정전에 대비하고 장비를
-보호하기 위해 UPS(무정전 전원 장치)를 도입해 전원을 보강할 생각입니다.
+보호하기 위해 UPS(무정전 전원 장치)를 도입해 전원을 보강할 생각입니다.~~
+
+(Update 2026-09-11: 테슬라 파워월을 설치해서 더이상 UPS는 필요 없어졌습니다)
 
 셋째는 **출입문 자동화**입니다. 지금은 [네스트(Nest)
 도어벨](https://store.google.com/config/nest_doorbell_wired_3rd_gen)을 쓰고
