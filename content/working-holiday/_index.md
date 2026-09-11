@@ -1,6 +1,6 @@
 +++
 title = "Canada Working Holiday"
-sort_by = "none"
+sort_by = "date"
 [extra]
 date = "2012-01-04"
 header-img = "../media/page/working-holiday/canada-042.jpg"

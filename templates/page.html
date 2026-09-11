@@ -68,6 +68,32 @@
         {{ page.content | regex_replace(pattern="(?s)^\\s*<h1[^>]*>.*?</h1>\\s*", rep="") | safe }}
       </div>
 
+      {% if page.lower or page.higher %}
+      <nav class="post-nav">
+        {% if page.higher %}
+        <div class="post-nav-item post-nav-prev">
+          <a href="{{ page.higher.permalink | safe }}" rel="prev">
+            <span class="post-nav-label">&larr; 이전 글</span>
+            <span class="post-nav-title">{{ page.higher.title }}</span>
+          </a>
+        </div>
+        {% else %}
+        <div class="post-nav-placeholder"></div>
+        {% endif %}
+
+        {% if page.lower %}
+        <div class="post-nav-item post-nav-next">
+          <a href="{{ page.lower.permalink | safe }}" rel="next">
+            <span class="post-nav-label">다음 글 &rarr;</span>
+            <span class="post-nav-title">{{ page.lower.title }}</span>
+          </a>
+        </div>
+        {% else %}
+        <div class="post-nav-placeholder"></div>
+        {% endif %}
+      </nav>
+      {% endif %}
+
       {% if page.extra.comments | default(value=true) %}
       <section class="comments-section" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
         <h2>댓글</h2>
