@@ -274,6 +274,49 @@ a:hover {
   z-index: 200;
 }
 
+.search-result-item {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.15s ease;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover {
+  background-color: var(--dropdown-hover);
+}
+
+.search-result-item a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: block;
+}
+
+.search-result-item:hover a {
+  color: var(--primary);
+}
+
+.search-result-item small {
+  color: var(--text-muted);
+  display: block;
+  font-size: 0.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 2px;
+}
+
+.search-no-results {
+  padding: 12px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
 /* ==========================================================================
    Mobile Drawer Navigation
    ========================================================================== */

@@ -6,13 +6,22 @@ document.addEventListener("DOMContentLoaded", () => {
   let index = null;
   function initIndex() {
     if (!index && window.elasticlunr && window.searchIndex) {
+      // Register language-specific pipeline functions to prevent "Cannot load un-registered function" error
+      const pipelineFuncs = ["trimmer-ko", "stopWordFilter-ko", "stemmer-ko"];
+      pipelineFuncs.forEach((fnName) => {
+        try {
+          elasticlunr.Pipeline.get(fnName);
+        } catch {
+          elasticlunr.Pipeline.registerFunction(function(token) { return token; }, fnName);
+        }
+      });
       index = elasticlunr.Index.load(window.searchIndex);
     }
   }
 
-  searchInput.addEventListener("input", (e) => {
+  function renderResults() {
     initIndex();
-    const query = e.target.value.trim();
+    const query = searchInput.value.trim();
     if (!query || !index) {
       resultsDiv.style.display = "none";
       resultsDiv.innerHTML = "";
@@ -28,19 +37,41 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     if (results.length === 0) {
-      resultsDiv.innerHTML = '<div style="padding: 10px; color: var(--text-muted);">검색 결과가 없습니다.</div>';
+      resultsDiv.innerHTML = '<div class="search-no-results">검색 결과가 없습니다.</div>';
       resultsDiv.style.display = "block";
       return;
     }
 
     resultsDiv.innerHTML = results.slice(0, 8).map(res => {
       const doc = res.doc;
-      return `<div style="padding: 8px 12px; border-bottom: 1px solid var(--border-color);">
-        <a href="${doc.id}" style="font-weight: 600; display: block;">${doc.title || '제목 없음'}</a>
-        <small style="color: var(--text-muted); display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${(doc.body || '').substring(0, 80)}...</small>
+      let href = doc.id;
+      try {
+        const u = new URL(doc.id);
+        href = u.pathname + u.search + u.hash;
+      } catch {
+        href = doc.id;
+      }
+      const snippet = (doc.body || "").replace(/\s+/g, " ").trim().substring(0, 90);
+      return `<div class="search-result-item">
+        <a href="${href}">${doc.title || "제목 없음"}</a>
+        ${snippet ? `<small>${snippet}...</small>` : ""}
       </div>`;
     }).join("");
     resultsDiv.style.display = "block";
+  }
+
+  searchInput.addEventListener("input", renderResults);
+
+  searchInput.addEventListener("focus", () => {
+    if (searchInput.value.trim()) {
+      renderResults();
+    }
+  });
+
+  searchInput.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      resultsDiv.style.display = "none";
+    }
   });
 
   document.addEventListener("click", (e) => {
