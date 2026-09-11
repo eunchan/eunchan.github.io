@@ -1,5 +1,6 @@
 +++
 title = "Campervan in New Zealand"
+sort_by = "date"
 [extra]
 date = "2012-03-20"
 hide = ["toc"]
