@@ -11,6 +11,22 @@
       <li><a href="{{ post.permalink }}">{{ post.title }}</a>{% if post.date %} - {{ post.date | date(format="%Y-%m-%d") }}{% if post.updated and (post.updated | date(format="%Y-%m-%d") != post.date | date(format="%Y-%m-%d")) %} (수정: {{ post.updated | date(format="%Y-%m-%d") }}){% endif %}{% elif post.updated %} - 수정: {{ post.updated | date(format="%Y-%m-%d") }}{% endif %}</li>
       {% endfor %}
     </ul>
+
+    <h2 id="yeon-do-byeol-archive">연도별 아카이브</h2>
+    <div class="archive-years-nav">
+      {% set all_posts = get_pages(sort_by="date") %}
+      {% set year_groups = all_posts | group_by(attribute="year") | pairs | sort(attribute="0") | reverse %}
+      {% for group in year_groups %}
+        {% set year = group[0] %}
+        {% set posts = group[1] %}
+        {% if year != "null" and year != "" %}
+        <a href="{{ get_url(path='@/archive.md') }}#year-{{ year }}" class="year-link">{{ year }} <span class="count">({{ posts | length }})</span></a>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="archive-more">
+      <a href="{{ get_url(path='@/archive.md') }}" class="read-more">전체 아카이브 보기 &rarr;</a>
+    </div>
   </div>
 </article>
 {% endblock content %}
