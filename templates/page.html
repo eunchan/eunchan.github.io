@@ -43,9 +43,16 @@
     <article class="content-page">
       <header class="post-header">
         <h1 class="post-title">{{ page.title }}</h1>
-        {% if page.date %}
+        {% if page.date or page.updated %}
         <div class="post-meta">
-          <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
+          <span class="post-date-wrap">
+            {% if page.date %}
+            <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
+            {% endif %}
+            {% if page.updated and (not page.date or page.updated | date(format="%Y-%m-%d") != page.date | date(format="%Y-%m-%d")) %}
+            <span class="post-updated">{% if page.date %}(수정: {% else %}수정: {% endif %}<time datetime="{{ page.updated }}">{{ page.updated | date(format="%Y-%m-%d") }}</time>{% if page.date %}){% endif %}</span>
+            {% endif %}
+          </span>
           {% if page.taxonomies.tags %}
           <span class="meta-tags">
             {% for tag in page.taxonomies.tags %}

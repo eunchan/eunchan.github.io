@@ -538,6 +538,16 @@ img {
   gap: 0.9rem;
 }
 
+.post-date-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.post-updated {
+  color: var(--text-muted);
+}
+
 .tag {
   display: inline-block;
   font-size: 0.85rem;

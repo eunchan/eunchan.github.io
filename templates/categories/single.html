@@ -8,7 +8,9 @@
     <li class="post-item">
       <a href="{{ page.permalink }}">{{ page.title }}</a>
       {% if page.date %}
-      <span class="post-item-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+      <span class="post-item-date">{{ page.date | date(format="%Y-%m-%d") }}{% if page.updated and (page.updated | date(format="%Y-%m-%d") != page.date | date(format="%Y-%m-%d")) %} (수정: {{ page.updated | date(format="%Y-%m-%d") }}){% endif %}</span>
+      {% elif page.updated %}
+      <span class="post-item-date">수정: {{ page.updated | date(format="%Y-%m-%d") }}</span>
       {% endif %}
     </li>
     {% endfor %}
