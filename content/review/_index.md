@@ -2,26 +2,17 @@
 title = "Review"
 sort_by = "date"
 [extra]
+auto_list = true
 hide = ["toc"]
 +++
 많은 제품을 사용했지만, 그 중에 글로 남길만한 제품을 추려서 정리한 페이지
 입니다. 그 외의 제품은 각 년도의 "지름목록"에 간단히 소감을 정리해 두었습니다.
 
+<!-- items -->
+
+### 기타 목록
+
 - [캠핑 장비 목록](../camping/index.md) - 2021년 9월 10일
-- [Onkyo S7800 사운드 시스템](onkyo-s7800.md) - 2017년 9월 26일
-- [BenQ HT-2050 홈씨어터 프로젝터](benq-ht2050.md) - 2017년 9월 22일
-- [구글 홈](google-home.md) - 2016년 12월 16일
-- [아마존 에코](amazon-echo.md) - 2016년 8월 18일
-- [Soylent 2.0 하루 한 끼를 대체할 수 있는 식품](soylent.md) - 2016년 3월 31일
-- [Breville the Barista Express (BES870XL)](breville-the-barista-express.md) - 2014년 12월 18일
-- [Nest 온도 조절기 사용기](nest.md) - 2014년 9월 25일
-- [Google Chromecast](chromecast.md) - 2014년 7월 31일
-- [Nexus7 2013 간략사용기](nexus7-2013.md) - 2013년 12월 28일
-- [Kindle PaperWhite 사용기](kindle-paperwhite.md) - 2013년 2월 6일
-- [Gaiamo GAIA-3214 plus](gaiamo-3214-plus.md) - 2012년 12월 2일
-- [Vornado 633 Air Circulator](vornado-633.md) - 2012년 3월 20일
-- [HP Proliant Microserver N36L 사용기](hp-proliant-microserver-n36l.md) - 2012년 2월 23일
-- [Venta Airwasher LW-44](venta-lw44.md) - 2012년 1월 25일
 
 ### 지름목록
 
