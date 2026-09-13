@@ -52,21 +52,39 @@
 
       {% if section.content %}
       <div class="section-body">
-        {{ section.content | safe }}
+        {% if section.extra.auto_list | default(value=false) and section.content is containing(pat="<!-- items -->") %}
+          {% set parts = section.content | split(pat="<!-- items -->") %}
+          {{ parts[0] | safe }}
+
+          {% if section.pages %}
+          <ul class="post-list">
+            {% for post in section.pages %}
+            <li class="post-item">
+              <a href="{{ post.permalink }}" class="post-item-title">{{ post.title }}</a>
+              {% if post.date %}
+              <span class="post-item-date"> - {{ post.date | date(format="%Y년 %-m월 %-d일") }}</span>
+              {% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+
+          {{ parts[1] | safe }}
+        {% else %}
+          {{ section.content | safe }}
+        {% endif %}
       </div>
       {% endif %}
 
-      {# Only show auto-generated list if explicit extra.auto_list is true #}
-      {% if section.extra.auto_list | default(value=false) %}
+      {# Only show auto-generated list if explicit extra.auto_list is true and not placed via <!-- items --> #}
+      {% if section.extra.auto_list | default(value=false) and not section.content is containing(pat="<!-- items -->") %}
         {% if section.pages %}
         <ul class="post-list">
           {% for post in section.pages %}
           <li class="post-item">
             <a href="{{ post.permalink }}" class="post-item-title">{{ post.title }}</a>
             {% if post.date %}
-            <span class="post-item-date">{{ post.date | date(format="%Y-%m-%d") }}{% if post.updated and (post.updated | date(format="%Y-%m-%d") != post.date | date(format="%Y-%m-%d")) %} (수정: {{ post.updated | date(format="%Y-%m-%d") }}){% endif %}</span>
-            {% elif post.updated %}
-            <span class="post-item-date">수정: {{ post.updated | date(format="%Y-%m-%d") }}</span>
+            <span class="post-item-date"> - {{ post.date | date(format="%Y년 %-m월 %-d일") }}</span>
             {% endif %}
           </li>
           {% endfor %}
