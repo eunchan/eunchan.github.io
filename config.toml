@@ -14,6 +14,10 @@ taxonomies = [
     { name = "categories", feed = true },
 ]
 
+[permalinks]
+"blog/posts" = "blog/{year}/{slug}"
+
+
 [markdown]
 render_emoji = true
 bottom_footnotes = true
