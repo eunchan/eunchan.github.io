@@ -1,0 +1,51 @@
+.series-bar {
+  background-color: var(--accent-light);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--primary);
+  border-radius: 6px;
+  padding: 0.7rem 1rem;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+  line-height: 1.8;
+
+  p {
+    margin: 0;
+    color: var(--text-muted);
+  }
+
+  .series-label {
+    font-weight: 600;
+    color: var(--text-color);
+    margin-right: 0.5rem;
+    display: inline-block;
+
+    &::after {
+      content: ":";
+      margin-left: 2px;
+      margin-right: 0.35rem;
+    }
+  }
+
+  a {
+    color: var(--primary);
+    text-decoration: none;
+    padding: 0.15rem 0.3rem;
+    border-radius: 4px;
+    transition: background-color 0.15s ease, color 0.15s ease;
+
+    &:hover {
+      background-color: var(--code-bg);
+      text-decoration: underline;
+    }
+  }
+
+  .current {
+    font-weight: 700;
+    color: var(--primary);
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 0.15rem 0.45rem;
+    border-radius: 4px;
+    margin: 0 0.15rem;
+  }
+}
