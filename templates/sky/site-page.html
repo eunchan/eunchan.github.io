@@ -1,0 +1,89 @@
+{% extends "page.html" %}
+
+{% block page_before_body %}
+<nav class="sky-subnav">
+  <a href="{{ get_url(path="sky/") }}" class="sky-nav-link">Nightsky 홈</a>
+  <a href="{{ get_url(path="sky/log/") }}" class="sky-nav-link">관측일지</a>
+  <a href="{{ get_url(path="sky/body/") }}" class="sky-nav-link">천체 도감</a>
+  <a href="{{ get_url(path="sky/site/") }}" class="sky-nav-link active">관측 장소</a>
+  <a href="{{ get_url(path="sky/equip/") }}" class="sky-nav-link">관측 장비</a>
+</nav>
+
+{% if page.extra.lat or page.extra.bright or page.extra.descript %}
+<div class="sky-meta-box">
+  {% if page.extra.lat and page.extra.lng %}
+  <div class="sky-meta-row">
+    <span class="sky-meta-label">좌표 (위/경도)</span>
+    <span class="sky-meta-value">
+      {{ page.extra.lat }}, {{ page.extra.lng }}
+      <a href="https://www.google.com/maps/search/?api=1&query={{ page.extra.lat }},{{ page.extra.lng }}" target="_blank" rel="noopener noreferrer" style="margin-left: 0.5rem; font-size: 0.85rem;">(Google 지도에서 보기 ↗)</a>
+    </span>
+  </div>
+  {% endif %}
+  {% if page.extra.bright %}
+  <div class="sky-meta-row">
+    <span class="sky-meta-label">밤하늘 밝기</span>
+    <span class="sky-meta-value">Bortle {{ page.extra.bright }}</span>
+  </div>
+  {% endif %}
+  {% if page.extra.descript %}
+  <div class="sky-meta-row">
+    <span class="sky-meta-label">특징 요약</span>
+    <span class="sky-meta-value">{{ page.extra.descript }}</span>
+  </div>
+  {% endif %}
+</div>
+{% endif %}
+{% endblock page_before_body %}
+
+{% block page_after_body %}
+<section class="sky-history-section">
+  <h3>🔭 이 장소에서의 관측일지</h3>
+  {% set log_sec = get_section(path="sky/log/_index.md") %}
+  {% set current_slug = page.slug %}
+
+  {% set has_logs = false %}
+  {% for l in log_sec.pages %}
+    {% if l.extra.place and l.extra.place == current_slug %}
+      {% set_global has_logs = true %}
+    {% endif %}
+  {% endfor %}
+
+  {% if has_logs %}
+  <div class="sky-history-table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>관측일</th>
+          <th>관측일지 제목</th>
+          <th>관측 천체</th>
+          <th>사용 장비</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for l in log_sec.pages %}
+          {% if l.extra.place and l.extra.place == current_slug %}
+          <tr>
+            <td>{% if l.date %}{{ l.date | date(format="%Y-%m-%d") }}{% endif %}</td>
+            <td><a href="{{ l.permalink }}">{{ l.title }}</a></td>
+            <td>
+              {% if l.extra.skybody %}
+                {% set bodies = l.extra.skybody | split(pat=",") %}
+                {% for b in bodies %}
+                  {% set clean_b = b | trim %}
+                  <a href="{{ get_url(path="sky/body/" ~ clean_b ~ ".html") }}" class="sky-badge">{{ clean_b }}</a>
+                {% endfor %}
+              {% else %}-{% endif %}
+            </td>
+            <td>{{ l.extra.equip | default(value="-") }}</td>
+          </tr>
+          {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <p class="sky-empty-msg">이 장소에서 기록된 관측일지가 아직 없습니다.</p>
+  {% endif %}
+</section>
+{% endblock page_after_body %}

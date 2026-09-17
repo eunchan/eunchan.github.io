@@ -1,0 +1,59 @@
+{% extends "page.html" %}
+
+{% block page_before_body %}
+<nav class="sky-subnav">
+  <a href="{{ get_url(path="sky/") }}" class="sky-nav-link">Nightsky 홈</a>
+  <a href="{{ get_url(path="sky/log/") }}" class="sky-nav-link active">관측일지</a>
+  <a href="{{ get_url(path="sky/body/") }}" class="sky-nav-link">천체 도감</a>
+  <a href="{{ get_url(path="sky/site/") }}" class="sky-nav-link">관측 장소</a>
+  <a href="{{ get_url(path="sky/equip/") }}" class="sky-nav-link">관측 장비</a>
+</nav>
+
+{% if page.extra.place or page.extra.skybody or page.extra.equip or page.extra.bright %}
+<div class="sky-meta-box">
+  {% if page.extra.place %}
+  {% set place_page = get_page(path="sky/site/" ~ page.extra.place ~ ".md") %}
+  <div class="sky-meta-row">
+    <span class="sky-meta-label">관측 장소</span>
+    <span class="sky-meta-value">
+      📍 <a href="{{ place_page.permalink }}">{{ place_page.title }}</a>
+    </span>
+  </div>
+  {% endif %}
+
+  {% if page.extra.bright %}
+  <div class="sky-meta-row">
+    <span class="sky-meta-label">밤하늘 밝기</span>
+    <span class="sky-meta-value">🌌 Bortle {{ page.extra.bright }}/8</span>
+  </div>
+  {% endif %}
+
+  {% if page.extra.equip %}
+  <div class="sky-meta-row">
+    <span class="sky-meta-label">사용 장비</span>
+    <span class="sky-meta-value">
+      🔭
+      {% set equips = page.extra.equip | split(pat=",") %}
+      {% for eq in equips %}
+        {% set clean_eq = eq | trim %}
+        <span class="sky-badge">{{ clean_eq }}</span>
+      {% endfor %}
+    </span>
+  </div>
+  {% endif %}
+
+  {% if page.extra.skybody %}
+  <div class="sky-meta-row">
+    <span class="sky-meta-label">관측 대상</span>
+    <span class="sky-meta-value">
+      {% set bodies = page.extra.skybody | split(pat=",") %}
+      {% for b in bodies %}
+        {% set clean_b = b | trim %}
+        <a href="{{ get_url(path="sky/body/" ~ clean_b ~ ".html") }}" class="sky-badge">#{{ clean_b }}</a>
+      {% endfor %}
+    </span>
+  </div>
+  {% endif %}
+</div>
+{% endif %}
+{% endblock page_before_body %}

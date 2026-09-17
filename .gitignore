@@ -1,12 +1,13 @@
 .DS_Store
-site/
+/site/
 .cache/
 docs/static/
+/docs.old/
 Makefile
 
 # But not these files
 !docs/media/
-!posts/sky/site/
+!content/sky/site/
 
 public/
 tools/zola/target/
