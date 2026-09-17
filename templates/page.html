@@ -64,9 +64,13 @@
         {% endif %}
       </header>
 
+      {% block page_before_body %}{% endblock page_before_body %}
+
       <div class="page-body">
         {{ page.content | regex_replace(pattern="(?s)^\\s*<h1[^>]*>.*?</h1>\\s*", rep="") | safe }}
       </div>
+
+      {% block page_after_body %}{% endblock page_after_body %}
 
       {% if page.lower or page.higher %}
       <nav class="post-nav">

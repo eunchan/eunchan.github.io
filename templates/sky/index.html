@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{{ get_url(path="vendor/leaflet/leaflet.css") }}">
+{% endblock extra_head %}
+
+{% block content %}
+<div class="content-container">
+  <header class="section-header">
+    <h1>{{ section.title }}</h1>
+    {% if section.description %}
+    <p class="section-desc">{{ section.description }}</p>
+    {% endif %}
+  </header>
+
+  <!-- Sky Sub-Navigation -->
+  <nav class="sky-subnav">
+    <a href="{{ get_url(path="sky/") }}" class="sky-nav-link active">Nightsky 홈</a>
+    <a href="{{ get_url(path="sky/log/") }}" class="sky-nav-link">관측일지 (Logs)</a>
+    <a href="{{ get_url(path="sky/body/") }}" class="sky-nav-link">천체 도감 (Bodies)</a>
+    <a href="{{ get_url(path="sky/site/") }}" class="sky-nav-link">관측 장소 (Sites)</a>
+    <a href="{{ get_url(path="sky/equip/") }}" class="sky-nav-link">관측 장비 (Equipment)</a>
+    <a href="{{ get_url(path="sky/limiting-magnitude.html") }}" class="sky-nav-link">한계등급 계산</a>
+  </nav>
+
+  <!-- Observation Sites Map Section -->
+  <section class="sky-map-section">
+    <div class="sky-map-header">
+      <h2>관측 장소 지도</h2>
+      <div id="sky-map-controls" class="sky-map-controls">
+        <button type="button" data-region="all" class="active">전체 관측지</button>
+        <button type="button" data-region="kr">대한민국</button>
+        <button type="button" data-region="us">미국 (CA)</button>
+      </div>
+    </div>
+
+    <div class="sky-map-wrapper">
+      <div id="sky-map"></div>
+    </div>
+
+    <!-- JSON data payload for modular map controller -->
+    <script id="sky-places-data" type="application/json">
+    [
+      {% set site_sec = get_section(path="sky/site/_index.md") %}
+      {% for p in site_sec.pages %}
+        {% if p.extra.lat and p.extra.lng %}
+        {
+          "title": {{ p.title | json_encode | safe }},
+          "lat": {{ p.extra.lat }},
+          "lng": {{ p.extra.lng }},
+          "url": {{ p.permalink | json_encode | safe }},
+          "bright": {{ p.extra.bright | default(value="") | json_encode | safe }},
+          "descript": {{ p.extra.descript | default(value="") | json_encode | safe }}
+        }{% if not loop.last %},{% endif %}
+        {% endif %}
+      {% endfor %}
+    ]
+    </script>
+  </section>
+
+  <!-- Recent Observation Logs Section -->
+  <section class="sky-recent-logs">
+    <div class="sky-section-title-wrap">
+      <h2>최근 관측일지</h2>
+      <a href="{{ get_url(path="sky/log/") }}" class="sky-view-all">전체 관측일지 보기 &rarr;</a>
+    </div>
+
+    {% set log_sec = get_section(path="sky/log/_index.md") %}
+
+    <div class="sky-log-list">
+      {% for log in log_sec.pages %}
+      {% if loop.index <= 10 %}
+      <article class="sky-log-card">
+        <div class="sky-log-card-header">
+          <h3><a href="{{ log.permalink }}">{{ log.title }}</a></h3>
+          {% if log.date %}
+          <time class="sky-log-date" datetime="{{ log.date }}">{{ log.date | date(format="%Y년 %-m월 %-d일") }}</time>
+          {% endif %}
+        </div>
+
+        <div class="sky-log-card-meta">
+          {% if log.extra.place %}
+          {% set place_page = get_page(path="sky/site/" ~ log.extra.place ~ ".md") %}
+          <a href="{{ place_page.permalink }}" class="sky-log-place">
+            📍 {{ place_page.title }}
+          </a>
+          {% endif %}
+          {% if log.extra.bright %}
+          <span class="sky-log-bright">🌌 Bortle {{ log.extra.bright }}/8</span>
+          {% endif %}
+          {% if log.extra.equip %}
+          <span class="sky-log-equip">🔭 {{ log.extra.equip }}</span>
+          {% endif %}
+        </div>
+
+        {% if log.description %}
+        <p class="sky-log-card-desc">{{ log.description }}</p>
+        {% elif log.summary %}
+        <p class="sky-log-card-desc">{{ log.summary | striptags | truncate(length=140) }}</p>
+        {% endif %}
+
+        {% if log.extra.skybody %}
+        <div class="sky-log-bodies">
+          {% set body_slugs = log.extra.skybody | split(pat=",") %}
+          {% for b in body_slugs %}
+            {% set clean_b = b | trim %}
+            <a href="{{ get_url(path="sky/body/" ~ clean_b ~ ".html") }}" class="sky-body-tag">
+              #{{ clean_b }}
+            </a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </article>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  {% if section.content %}
+  <div class="section-body">
+    {{ section.content | safe }}
+  </div>
+  {% endif %}
+</div>
+{% endblock content %}
+
+{% block extra_scripts %}
+<script src="{{ get_url(path="vendor/leaflet/leaflet.js") }}" defer></script>
+<script src="{{ get_url(path="js/sky-map.js") }}" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    function initMapWhenReady() {
+      if (window.SkyMap && typeof L !== 'undefined') {
+        window.SkyMap.init({
+          containerId: 'sky-map',
+          dataElementId: 'sky-places-data',
+          buttonsContainerId: 'sky-map-controls'
+        });
+      } else {
+        setTimeout(initMapWhenReady, 50);
+      }
+    }
+    initMapWhenReady();
+  });
+</script>
+{% endblock extra_scripts %}

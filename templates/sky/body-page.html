@@ -1,0 +1,86 @@
+{% extends "page.html" %}
+
+{% block page_before_body %}
+<nav class="sky-subnav">
+  <a href="{{ get_url(path="sky/") }}" class="sky-nav-link">Nightsky 홈</a>
+  <a href="{{ get_url(path="sky/log/") }}" class="sky-nav-link">관측일지</a>
+  <a href="{{ get_url(path="sky/body/") }}" class="sky-nav-link active">천체 도감</a>
+  <a href="{{ get_url(path="sky/site/") }}" class="sky-nav-link">관측 장소</a>
+  <a href="{{ get_url(path="sky/equip/") }}" class="sky-nav-link">관측 장비</a>
+</nav>
+
+{% if page.extra.j2000 or page.extra.apsize %}
+<div class="sky-meta-box">
+  {% if page.extra.j2000 %}
+  <div class="sky-meta-row">
+    <span class="sky-meta-label">좌표 (J2000)</span>
+    <span class="sky-meta-value">{{ page.extra.j2000 }}</span>
+  </div>
+  {% endif %}
+  {% if page.extra.apsize %}
+  <div class="sky-meta-row">
+    <span class="sky-meta-label">겉보기 크기</span>
+    <span class="sky-meta-value">{{ page.extra.apsize }}'</span>
+  </div>
+  {% endif %}
+</div>
+{% endif %}
+{% endblock page_before_body %}
+
+{% block page_after_body %}
+<section class="sky-history-section">
+  <h3>🔭 관측 기록 (Observation Logs)</h3>
+  {% set log_sec = get_section(path="sky/log/_index.md") %}
+  {% set current_slug = page.slug %}
+
+  {% set has_logs = false %}
+  {% for l in log_sec.pages %}
+    {% if l.extra.skybody %}
+      {% set bodies = l.extra.skybody | split(pat=",") %}
+      {% for b in bodies %}
+        {% if b | trim == current_slug %}
+          {% set_global has_logs = true %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+
+  {% if has_logs %}
+  <div class="sky-history-table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>관측일</th>
+          <th>관측일지 제목</th>
+          <th>관측 장소</th>
+          <th>사용 장비</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for l in log_sec.pages %}
+          {% if l.extra.skybody %}
+            {% set bodies = l.extra.skybody | split(pat=",") %}
+            {% for b in bodies %}
+              {% if b | trim == current_slug %}
+              <tr>
+                <td>{% if l.date %}{{ l.date | date(format="%Y-%m-%d") }}{% endif %}</td>
+                <td><a href="{{ l.permalink }}">{{ l.title }}</a></td>
+                <td>
+                  {% if l.extra.place %}
+                  <a href="{{ get_url(path="sky/site/" ~ l.extra.place ~ ".html") }}">{{ l.extra.place }}</a>
+                  {% else %}-{% endif %}
+                </td>
+                <td>{{ l.extra.equip | default(value="-") }}</td>
+              </tr>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <p class="sky-empty-msg">이 천체에 대한 관측일지가 아직 등록되지 않았습니다.</p>
+  {% endif %}
+</section>
+{% endblock page_after_body %}
