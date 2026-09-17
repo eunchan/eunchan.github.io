@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content-container">
+  <header class="section-header">
+    <h1>{{ section.title }}</h1>
+    {% if section.description %}
+    <p class="section-desc">{{ section.description }}</p>
+    {% endif %}
+  </header>
+
+  {% if section.content %}
+  <div class="section-body" style="margin-bottom: 2rem;">
+    {{ section.content | safe }}
+  </div>
+  {% endif %}
+
+  {% if section.pages %}
+    {% if section.path is starting_with(pat="/sky/body") %}
+    <!-- Celestial Bodies Catalog -->
+    <div class="sky-history-table-wrap" style="margin-top: 1.5rem;">
+      <table>
+        <thead>
+          <tr>
+            <th>천체 이름</th>
+            <th>좌표 (J2000)</th>
+            <th>겉보기 크기</th>
+            <th>설명 요약</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for p in section.pages %}
+          <tr>
+            <td><strong><a href="{{ p.permalink }}">{{ p.title }}</a></strong></td>
+            <td>{{ p.extra.j2000 | default(value="-") }}</td>
+            <td>{% if p.extra.apsize %}{{ p.extra.apsize }}'{% else %}-{% endif %}</td>
+            <td style="color: var(--text-muted); font-size: 0.88rem;">
+              {% if p.description %}
+                {{ p.description }}
+              {% elif p.summary %}
+                {{ p.summary | striptags | truncate(length=80) }}
+              {% else %}
+                {{ p.content | striptags | truncate(length=80) }}
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    {% elif section.path is starting_with(pat="/sky/site") %}
+    <!-- Observation Sites List -->
+    <div class="sky-history-table-wrap" style="margin-top: 1.5rem;">
+      <table>
+        <thead>
+          <tr>
+            <th>관측 장소명</th>
+            <th>밤하늘 밝기</th>
+            <th>좌표 (위도, 경도)</th>
+            <th>특징 요약</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for p in section.pages %}
+          <tr>
+            <td><strong><a href="{{ p.permalink }}">📍 {{ p.title }}</a></strong></td>
+            <td>{% if p.extra.bright %}Bortle {{ p.extra.bright }}{% else %}-{% endif %}</td>
+            <td style="font-size: 0.85rem; font-variant-numeric: tabular-nums;">
+              {% if p.extra.lat and p.extra.lng %}{{ p.extra.lat }}, {{ p.extra.lng }}{% else %}-{% endif %}
+            </td>
+            <td style="color: var(--text-muted); font-size: 0.88rem;">{{ p.extra.descript | default(value="-") }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    {% elif section.path is starting_with(pat="/sky/equip") %}
+    <!-- Equipment List -->
+    <ul class="post-list" style="margin-top: 1.5rem;">
+      {% for p in section.pages %}
+      <li class="post-item" style="padding: 0.85rem 0; border-bottom: 1px solid var(--border-color);">
+        <a href="{{ p.permalink }}" class="post-item-title" style="font-size: 1.05rem; font-weight: 600;">{{ p.title }}</a>
+        {% if p.taxonomies.tags %}
+        <span class="tags" style="margin-left: 0.5rem;">
+          {% for t in p.taxonomies.tags %}
+          <span class="tag">#{{ t }}</span>
+          {% endfor %}
+        </span>
+        {% endif %}
+        {% if p.description %}
+        <p style="margin: 0.35rem 0 0 0; font-size: 0.88rem; color: var(--text-muted);">{{ p.description }}</p>
+        {% elif p.content %}
+        <p style="margin: 0.35rem 0 0 0; font-size: 0.88rem; color: var(--text-muted);">{{ p.content | striptags | truncate(length=120) }}</p>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+
+    {% else %}
+    <!-- Default Section Page List -->
+    <ul class="post-list" style="margin-top: 1.5rem;">
+      {% for p in section.pages %}
+      <li class="post-item">
+        <a href="{{ p.permalink }}" class="post-item-title">{{ p.title }}</a>
+        {% if p.date %}
+        <span class="post-item-date"> - {{ p.date | date(format="%Y년 %-m월 %-d일") }}</span>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  {% endif %}
+</div>
+{% endblock content %}

@@ -79,6 +79,41 @@
         <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">🌓</button>
       </div>
     </div>
+    {% block subnav %}
+    {% set is_sky = false %}
+    {% set sky_sub = "sky" %}
+    {% if page and page.path is starting_with(pat="/sky") %}
+      {% set is_sky = true %}
+      {% if page.path is starting_with(pat="/sky/log") %}{% set sky_sub = "log" %}
+      {% elif page.path is starting_with(pat="/sky/body") %}{% set sky_sub = "body" %}
+      {% elif page.path is starting_with(pat="/sky/site") %}{% set sky_sub = "site" %}
+      {% elif page.path is starting_with(pat="/sky/equip") %}{% set sky_sub = "equip" %}
+      {% elif page.path is containing(pat="limiting-magnitude") %}{% set sky_sub = "lm" %}
+      {% endif %}
+    {% elif section and section.path is starting_with(pat="/sky") %}
+      {% set is_sky = true %}
+      {% if section.path is starting_with(pat="/sky/log") %}{% set sky_sub = "log" %}
+      {% elif section.path is starting_with(pat="/sky/body") %}{% set sky_sub = "body" %}
+      {% elif section.path is starting_with(pat="/sky/site") %}{% set sky_sub = "site" %}
+      {% elif section.path is starting_with(pat="/sky/equip") %}{% set sky_sub = "equip" %}
+      {% endif %}
+    {% endif %}
+
+    {% if is_sky %}
+    <div class="sub-header">
+      <div class="sub-header-inner">
+        <nav class="sub-nav">
+          <a href="{{ get_url(path="sky/") }}" class="sub-nav-item{% if sky_sub == 'sky' %} active{% endif %}">Nightsky 홈</a>
+          <a href="{{ get_url(path="sky/log/") }}" class="sub-nav-item{% if sky_sub == 'log' %} active{% endif %}">관측일지</a>
+          <a href="{{ get_url(path="sky/body/") }}" class="sub-nav-item{% if sky_sub == 'body' %} active{% endif %}">천체 도감</a>
+          <a href="{{ get_url(path="sky/site/") }}" class="sub-nav-item{% if sky_sub == 'site' %} active{% endif %}">관측 장소</a>
+          <a href="{{ get_url(path="sky/equip/") }}" class="sub-nav-item{% if sky_sub == 'equip' %} active{% endif %}">관측 장비</a>
+          <a href="{{ get_url(path="sky/limiting-magnitude.html") }}" class="sub-nav-item{% if sky_sub == 'lm' %} active{% endif %}">한계등급 계산</a>
+        </nav>
+      </div>
+    </div>
+    {% endif %}
+    {% endblock subnav %}
   </header>
 
   <!-- Mobile Drawer Overlay & Sidebar -->
