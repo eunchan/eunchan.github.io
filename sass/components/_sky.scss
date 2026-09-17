@@ -1,39 +1,5 @@
 // Nightsky (Sky Log, Sky Site, Sky Body, Sky Equip) styling
 
-.sky-subnav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 1.5rem 0 2rem 0;
-  padding: 0.5rem;
-  background-color: var(--accent-light);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-
-  .sky-nav-link {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.4rem 0.85rem;
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--text-color);
-    text-decoration: none;
-    border-radius: 6px;
-    transition: all 0.15s ease;
-
-    &:hover {
-      background-color: var(--card-bg);
-      color: var(--primary);
-    }
-
-    &.active {
-      background-color: var(--primary);
-      color: #ffffff;
-      font-weight: 600;
-    }
-  }
-}
-
 .sky-map-section {
   margin: 2rem 0;
 

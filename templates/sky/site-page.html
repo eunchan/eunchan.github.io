@@ -1,14 +1,6 @@
 {% extends "page.html" %}
 
 {% block page_before_body %}
-<nav class="sky-subnav">
-  <a href="{{ get_url(path="sky/") }}" class="sky-nav-link">Nightsky 홈</a>
-  <a href="{{ get_url(path="sky/log/") }}" class="sky-nav-link">관측일지</a>
-  <a href="{{ get_url(path="sky/body/") }}" class="sky-nav-link">천체 도감</a>
-  <a href="{{ get_url(path="sky/site/") }}" class="sky-nav-link active">관측 장소</a>
-  <a href="{{ get_url(path="sky/equip/") }}" class="sky-nav-link">관측 장비</a>
-</nav>
-
 {% if page.extra.lat or page.extra.bright or page.extra.descript %}
 <div class="sky-meta-box">
   {% if page.extra.lat and page.extra.lng %}
