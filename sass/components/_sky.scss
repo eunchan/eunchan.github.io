@@ -65,6 +65,31 @@
   }
 }
 
+// Custom Sky SVG Pin
+.sky-pin-wrapper {
+  background: transparent !important;
+  border: none !important;
+
+  .sky-pin {
+    width: 24px;
+    height: 30px;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.45));
+    transition: transform 0.18s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover {
+      transform: translateY(-4px) scale(1.2);
+      filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.55));
+    }
+  }
+}
+
 // Leaflet Popup Customization
 .sky-popup {
   padding: 0.2rem;

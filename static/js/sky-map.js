@@ -37,6 +37,24 @@ class LeafletAdapter {
     this.featureGroup = L.featureGroup().addTo(this.map);
     this.markers = [];
 
+    function createSkyPin(place) {
+      const pinColor = '#0f766e';
+      return L.divIcon({
+        className: 'sky-pin-wrapper',
+        html: `
+          <div class="sky-pin" title="${place.title}">
+            <svg width="24" height="30" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 0C5.37258 0 0 5.37258 0 12C0 20.2 10.8 28.8 11.37 29.3C11.74 29.6 12.26 29.6 12.63 29.3C13.2 28.8 24 20.2 24 12C24 5.37258 18.6274 0 12 0Z" fill="${pinColor}"/>
+              <circle cx="12" cy="11.5" r="4.5" fill="#ffffff"/>
+            </svg>
+          </div>
+        `,
+        iconSize: [24, 30],
+        iconAnchor: [12, 30],
+        popupAnchor: [0, -28],
+      });
+    }
+
     places.forEach((place) => {
       if (place.lat == null || place.lng == null) return;
 
@@ -49,7 +67,9 @@ class LeafletAdapter {
         </div>
       `;
 
-      const marker = L.marker([place.lat, place.lng]).bindPopup(popupContent);
+      const marker = L.marker([place.lat, place.lng], {
+        icon: createSkyPin(place),
+      }).bindPopup(popupContent);
       marker.addTo(this.featureGroup);
       this.markers.push({ place, marker });
     });
