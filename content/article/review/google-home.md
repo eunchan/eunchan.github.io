@@ -2,6 +2,7 @@
 date = 2016-12-16
 slug = "google-home"
 title = "Google Home, Another IoT Hub at Home"
+aliases = ["review/google-home.html"]
 [taxonomies]
 tags = ["google", "google-assistant", "google-home", "iot", "ifttt", "amazon-echo", "alexa", "google-case", "chromecast", "youtube-red", "play-music"]
 [extra]

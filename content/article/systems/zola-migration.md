@@ -1,5 +1,6 @@
 +++
 title = "Migrating to Zola"
+aliases = ["blog/2026/zola-migration.html"]
 date = 2026-09-10
 slug = "zola-migration"
 [taxonomies]

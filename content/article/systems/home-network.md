@@ -3,6 +3,7 @@ date = 2026-02-15
 updated = 2026-09-11
 slug = "home-network"
 title = "Home Network"
+aliases = ["research/home-network.html"]
 [taxonomies]
 tags = ["fiber", "firewalla", "unifi", "camera", "security"]
 [extra]

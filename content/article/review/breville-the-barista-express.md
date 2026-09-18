@@ -1,5 +1,6 @@
 +++
 title = "Breville the Barista Express"
+aliases = ["review/breville-the-barista-express.html"]
 date = 2014-12-18
 [taxonomies]
 tags = ["breville", "bes870xl", "espresso", "coffee"]

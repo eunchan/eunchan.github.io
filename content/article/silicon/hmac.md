@@ -2,6 +2,7 @@
 date = 2020-02-10
 slug = "hmac"
 title = "HMAC"
+aliases = ["research/design/hmac.html", "research/hmac.html"]
 [extra]
 comments = true
 +++

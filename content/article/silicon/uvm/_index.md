@@ -1,5 +1,6 @@
 +++
 title = "UVM Verification"
+aliases = ["research/uvm"]
 sort_by = "date"
 [extra]
 disqus = false

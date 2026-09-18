@@ -2,6 +2,7 @@
 date = 2017-02-05
 slug = "github-pages-cloudflare"
 title = "Github Pages와 Cloudflare 이용한 정적 사이트 구축"
+aliases = ["research/github-pages-cloudflare.html"]
 [taxonomies]
 tags = ["github", "github-pages", "cloudflare", "cdn", "static-website"]
 [extra]

@@ -1,5 +1,6 @@
 +++
 title = "Nuvia Acquired by Qualcomm"
+aliases = ["article/nuvia-acquired.html"]
 date = 2021-01-14
 slug = "nuvia-acquired"
 [taxonomies]

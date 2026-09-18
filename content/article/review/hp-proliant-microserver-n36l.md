@@ -1,6 +1,7 @@
 +++
 date = 2012-02-23
 title = "Microserver N36L"
+aliases = ["review/hp-proliant-microserver-n36l.html"]
 [extra]
 comments = true
 +++

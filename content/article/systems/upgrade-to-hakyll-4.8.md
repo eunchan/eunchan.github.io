@@ -2,6 +2,7 @@
 date = 2016-09-20
 slug = "upgrade-to-hakyll-4.8"
 title = "Upgrade to Hakyll 4.8"
+aliases = ["blog/2016/upgrade-to-hakyll-4-8.html"]
 [taxonomies]
 tags = ["hakyll", "haskell", "metadata", "yaml"]
 [extra]

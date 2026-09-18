@@ -2,6 +2,7 @@
 date = 2017-09-22
 slug = "benq-ht2050"
 title = "BENQ HT-2050 Projector"
+aliases = ["review/benq-ht2050.html"]
 [taxonomies]
 tags = ["home-theater", "projector", "ht2050", "1080p"]
 [extra]

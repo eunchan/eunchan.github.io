@@ -1,5 +1,6 @@
 +++
 title = "2014 Triumph Bonneville SE"
+aliases = ["blog/2014/purchase-bonneville.html"]
 date = 2014-03-12
 slug = "purchase-bonneville"
 [taxonomies]

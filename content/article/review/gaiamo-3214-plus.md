@@ -1,6 +1,7 @@
 +++
 date = 2012-12-02
 title = "GAIAMO Airwasher 3214 Plus"
+aliases = ["review/gaiamo-3214-plus.html"]
 [extra]
 comments = true
 +++

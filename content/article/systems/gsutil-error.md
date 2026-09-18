@@ -2,6 +2,7 @@
 date = 2019-10-06
 slug = "gsutil-error"
 title = "gcloud storage error"
+aliases = ["blog/2019/gsutil-error.html"]
 [taxonomies]
 tags = ["google", "cloud-storage", "rsync", "restore", "backup"]
 [extra]

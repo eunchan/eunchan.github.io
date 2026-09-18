@@ -2,6 +2,7 @@
 date = 2019-01-08
 slug = "uvm-dut"
 title = "Design Under Test (DUT)"
+aliases = ["research/uvm/uvm-dut.html"]
 [taxonomies]
 tags = ["systemverilog", "uvm", "dut", "design", "hardware", "verification"]
 [extra]

@@ -2,6 +2,7 @@
 date = 2019-05-29
 slug = "localparam"
 title = "localparam in param port list"
+aliases = ["research/localparam.html"]
 [taxonomies]
 tags = ["verilog", "systemverilog", "sv2009", "parameter", "hdl", "digital-design"]
 [extra]

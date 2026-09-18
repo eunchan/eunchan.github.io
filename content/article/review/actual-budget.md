@@ -1,5 +1,6 @@
 +++
 title = "Actual Budget, YNAB 완벽 대체재"
+aliases = ["review/actual-budget.html"]
 slug = "actual-budget"
 date = 2026-09-13
 [taxonomies]

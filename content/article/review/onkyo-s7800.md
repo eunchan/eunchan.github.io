@@ -2,6 +2,7 @@
 date = 2017-09-30
 slug = "onkyo-s7800"
 title = "Onkyo Home Theater S7800"
+aliases = ["review/onkyo-s7800.html"]
 [taxonomies]
 tags = ["home-theater", "onkyo", "surround", "s7800", "dolby", "atmos", "dts-x", "chromcast"]
 [extra]

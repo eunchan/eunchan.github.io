@@ -1,6 +1,7 @@
 +++
 date = 2015-12-28
 title = "Haskell with Docker"
+aliases = ["research/haskell-with-docker.html"]
 [taxonomies]
 tags = ["docker", "stack", "haskell", "yesod", "virtualization"]
 [extra]

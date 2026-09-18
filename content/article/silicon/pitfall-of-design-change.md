@@ -2,6 +2,7 @@
 date = 2017-06-14
 slug = "pitfall-of-design-change"
 title = "Pitfall of Design Change"
+aliases = ["blog/2017/pitfall-of-design-change.html"]
 [taxonomies]
 tags = ["verilog", "design-change", "naming-convention", "coding-guide"]
 categories = ["design"]

@@ -2,6 +2,7 @@
 date = 2018-12-13
 slug = "specification"
 title = "Specification Language"
+aliases = ["blog/2018/specification.html"]
 [taxonomies]
 tags = ["ace", "specification", "language"]
 categories = ["design"]

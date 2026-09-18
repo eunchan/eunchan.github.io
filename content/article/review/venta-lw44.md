@@ -1,6 +1,7 @@
 +++
 date = 2012-01-25
 title = "Venta LW-44"
+aliases = ["review/venta-lw44.html"]
 [extra]
 comments = true
 +++

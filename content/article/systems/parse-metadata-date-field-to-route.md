@@ -2,6 +2,7 @@
 date = 2016-03-11
 slug = "parse-metadata-date-field-to-route"
 title = "Hakyll Route for Metadata `date` Field"
+aliases = ["blog/2016/parse-metadata-date-field-to-route.html"]
 [taxonomies]
 tags = ["hakyll", "haskell", "metadata", "customRoute"]
 [extra]

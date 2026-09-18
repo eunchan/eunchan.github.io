@@ -1,5 +1,6 @@
 +++
 title = "Switch to Mkdocs"
+aliases = ["blog/2024/switch-to-mkdocs.html"]
 date = 2024-10-15
 slug = "switch-to-mkdocs"
 [taxonomies]

@@ -2,6 +2,7 @@
 date = 2016-12-20
 slug = "ynab"
 title = "You Need A Budget"
+aliases = ["review/ynab.html"]
 [taxonomies]
 tags = ["ynab", "budget", "mint", "finance", "give-every-dollar-a-job"]
 [extra]

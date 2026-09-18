@@ -1,5 +1,6 @@
 +++
 title = "마당 쉐드(Shed)를 홈오피스로: 두 달간의 DIY 개조기"
+aliases = ["review/shed-office.html"]
 date = 2026-09-20
 slug = "shed-office"
 draft = true

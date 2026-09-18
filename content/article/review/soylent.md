@@ -1,6 +1,7 @@
 +++
 date = 2016-03-31
 title = "Soylent 2.0"
+aliases = ["review/soylent.html"]
 [taxonomies]
 tags = ["soylent", "drink", "nutrition"]
 [extra]

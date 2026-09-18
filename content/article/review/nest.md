@@ -2,6 +2,7 @@
 date = 2014-09-25
 slug = "nest"
 title = "Nest Thermostat"
+aliases = ["review/nest.html"]
 [taxonomies]
 tags = ["nest", "thermostat", "google", "self-learning", "it"]
 [extra]

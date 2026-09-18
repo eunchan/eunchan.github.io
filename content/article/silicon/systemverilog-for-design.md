@@ -2,6 +2,7 @@
 date = 2017-03-02
 slug = "sv-for-design"
 title = "SystemVerilog for Design"
+aliases = ["blog/2017/sv-for-design.html"]
 [taxonomies]
 tags = ["hdl", "systemverilog", "design", "asic", "synthesis"]
 categories = ["design"]

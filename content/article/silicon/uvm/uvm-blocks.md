@@ -2,6 +2,7 @@
 date = 2019-01-22
 slug = "uvm-blocks"
 title = "UVM Blocks"
+aliases = ["research/uvm/uvm-blocks.html"]
 [taxonomies]
 tags = ["systemverilog", "uvm", "verification", "agent", "driver", "monitor", "sequence", "sequencer"]
 [extra]

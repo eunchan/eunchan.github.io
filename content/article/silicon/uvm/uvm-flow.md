@@ -2,6 +2,7 @@
 date = 2019-01-15
 slug = "uvm-flow"
 title = "UVM Test Flow"
+aliases = ["research/uvm/uvm-flow.html"]
 [taxonomies]
 tags = ["systemverilog", "uvm", "verification", "phase"]
 [extra]

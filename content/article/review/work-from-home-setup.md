@@ -1,6 +1,7 @@
 +++
 date = 2022-01-01
 title = "재택근무 영상+사운드 셋업"
+aliases = ["review/work-from-home-setup.html"]
 [taxonomies]
 tags = ["work-from-home", "webcam", "video", "atem-mini", "camera", "audio", "podtrak-p4", "rode-nt5", "rode-podmic", "blue-yeti", "zoom-f6", "keylight-air", "sony-rx100", "rycote-mount"]
 [extra]

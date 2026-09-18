@@ -2,6 +2,7 @@
 date = 2019-12-09
 slug = "ryzen-3600-desktop"
 title = "Ryzen 3600 Desktop"
+aliases = ["review/ryzen-3600-desktop.html"]
 [taxonomies]
 tags = ["amd", "ryzen", "ryzen-3600", "noctua", "nh-u9s", "corsair", "sf600", "vengence-lpx"]
 [extra]

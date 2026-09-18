@@ -1,5 +1,6 @@
 +++
 title = "Daily Commuting on Bonneville"
+aliases = ["blog/2014/commuting-on-bonneville.html"]
 date = 2014-04-17
 slug = "commuting-on-bonneville"
 [taxonomies]
