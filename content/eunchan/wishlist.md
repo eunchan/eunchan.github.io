@@ -31,7 +31,7 @@ Leica에서 나온 렌즈 일체형 풀프레임 카메라입니다. 기능상�
 
 ### KTM 790 Adventure / Adventure R
 
-2020년에 구입하였습니다. [구입기](../blog/posts/motorcycle/2020-07-30-ktm-790-adventure-r.md)
+2020년에 구입하였습니다. [구입기](../motorcycle/ktm-790-adventure-r.md)
 
 ### [Orion XT-8](../sky/equip/xt8.md)
 
@@ -63,4 +63,4 @@ Bonfire는 가족과 캠핑갈 때에나 뒷마당에서 쓰기에 좋아보이�
 Triumph사 의 클래식 바이크로 50여년을 넘게 지속되어온 모델입니다.
 
 **March 8, 2014** T100의 스포크휠을 뒤로 하고 일반 모델 Bonneville을 구입하였습니다.
-[Bonneville 구입](../blog/posts/motorcycle/2014-03-12-bonneville.md) 글 참조.
+[Bonneville 구입](../motorcycle/bonneville.md) 글 참조.

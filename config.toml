@@ -37,10 +37,10 @@ repo_name = "GitHub"
 
 menu = [
     { name = "Articles", url = "/article/", children = [
-        { name = "Posts", url = "/article/" },
-        { name = "Research", url = "/research/" },
-        { name = "Review", url = "/review/" },
-        { name = "Tips", url = "/tips/" },
+        { name = "Overview", url = "/article/" },
+        { name = "Silicon & Hardware", url = "/article/silicon/" },
+        { name = "Systems & Tools", url = "/article/systems/" },
+        { name = "Reviews & Setups", url = "/article/review/" },
     ]},
     { name = "Journal", url = "/blog/" },
     { name = "Travel", url = "/travel/" },

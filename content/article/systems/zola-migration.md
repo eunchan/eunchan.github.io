@@ -102,9 +102,9 @@ Actions에서 Linux와 macOS용 릴리즈 바이너리로 자동 빌드해 배�
 이제 툴 세팅도 끝났으니, 다시 가벼운 마음으로 글쓰기에 집중해야겠습니다.
 
 [Hakyll]: https://jaspervdj.be/hakyll/
-[Switch-to-MkDocs]: ../2024/2024-10-15-swich-to-mkdocs.md
+[Switch-to-MkDocs]: switch-to-mkdocs.md
 [Zola]: https://www.getzola.org/
 [Hugo]: https://gohugo.io/
-[Antigravity-Post]: ../2025/2025-11-24-antigravity.md
+[Antigravity-Post]: ../../blog/posts/2025/2025-11-24-antigravity.md
 [Zola-Fork]: https://github.com/eunchan/zola
 

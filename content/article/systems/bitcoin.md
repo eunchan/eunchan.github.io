@@ -59,7 +59,7 @@ Satoshi는 아직도 그 정체가 밝혀지지 않았습니다. 심지어 일�
 
 조금 어렵죠? 일단 아래의 그림을 봅시다.
 
-![Bitcoin Transaction Chain](..//media/page/article/bitcoin/bitcoin-transaction.png)
+![Bitcoin Transaction Chain](/media/page/article/bitcoin/bitcoin-transaction.png)
 
 이 그림이 거래의 가장 간단한 1 input - 1 output 으로 엮여진 거래사슬 그림입니다.
 하나의 거래는 기존 거래를 입력으로 받고 보낼 대상 주소를 출력으로 합니다. 모든
