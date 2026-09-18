@@ -14,14 +14,14 @@ trip_badge = "사막 탐방 에세이"
 header_img = "/media/page/travel/egypt/egypt-041.jpg"
 summary = "학회 참석 차 갑작스럽게 떠난 이집트. 카이로의 이국적인 번잡함, 기자 피라미드의 위용, 그리고 밤하늘 별이 쏟아지던 바하리아 백사막의 침묵."
 +++
-Summary
--------
+
+## Summary
 
 * 일정 : 2009년 11월 7일 ~ 2009년 11월 12일
 * 장소 : 이집트 카이로, 바하리아
+* [Egypt Gallery](gallery.md)
 
-To the Cairo
-------------
+## To Cairo
 
 ![Giza Pyramid](/media/page/travel/egypt/egypt-041.jpg)
 
@@ -92,8 +92,7 @@ To the Cairo
 첫날부터 이집트는 제 모든 상식을 깨버립니다.  예상 밖의 환경과 시설, 이젠 모든
 것을 포기하고 그저 구경에 몰입하게 되었습니다.
 
-Giza Pyramid
-------------
+## Giza Pyramid
 
 ![숙소에서 보이는 아침 풍경](/media/page/travel/egypt/egypt-007.jpg)
 
@@ -150,8 +149,7 @@ Giza Pyramid
 없고 음미도 없습니다.  막국수를 후루룩 먹듯, 풍경을, 그리고 삶을, 장면을
 집어삼킵니다.
 
-Old Cairo
----------
+## Old Cairo
 
 ![Old Cairo에서 만난 소녀](/media/page/travel/egypt/egypt-086.jpg)
 
@@ -221,8 +219,7 @@ AL AZHAR PARK에서 바라보는 일몰은 지금까지 매연 가득하고 매�
 ![Sea Gull의 일품 생선구이](/media/page/travel/egypt/egypt-108.jpg)
 
 
-Bahariya Desert
----------------
+## Bahariya Desert
 
 ![Bahariya 사막 투어](/media/page/travel/egypt/egypt-151.jpg)
 
@@ -296,8 +293,7 @@ Bahariya Desert
 잘 알아서 왔더라면, 제가 이렇게 느낀 그 감흥을 그대로 전달할 수 있었을 겁니다.
 그런 아쉬움이 가장 컸습니다.
 
-Leaving Cairo
--------------
+## Leaving Cairo
 
 ![백사막에서의 일출](/media/page/travel/egypt/egypt-160.jpg)
 
@@ -311,9 +307,3 @@ Leaving Cairo
 어떤곳인지 보고싶습니다.
 
 ![사막 투어](/media/page/travel/egypt/egypt-131.jpg)
-
-
-Egypt Gallery
--------------
-
-  - [Egypt Gallery](gallery.md)
