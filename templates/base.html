@@ -114,6 +114,22 @@
       {% endif %}
     {% endif %}
 
+    {% set is_article = false %}
+    {% set article_sub = "overview" %}
+    {% if page and page.path is starting_with(pat="/article") %}
+      {% set is_article = true %}
+      {% if page.path is starting_with(pat="/article/silicon") %}{% set article_sub = "silicon" %}
+      {% elif page.path is starting_with(pat="/article/systems") %}{% set article_sub = "systems" %}
+      {% elif page.path is starting_with(pat="/article/review") %}{% set article_sub = "review" %}
+      {% endif %}
+    {% elif section and section.path is starting_with(pat="/article") %}
+      {% set is_article = true %}
+      {% if section.path is starting_with(pat="/article/silicon") %}{% set article_sub = "silicon" %}
+      {% elif section.path is starting_with(pat="/article/systems") %}{% set article_sub = "systems" %}
+      {% elif section.path is starting_with(pat="/article/review") %}{% set article_sub = "review" %}
+      {% endif %}
+    {% endif %}
+
     {% if is_sky %}
     <div class="sub-header">
       <div class="sub-header-inner">
@@ -145,6 +161,17 @@
             {% endfor %}
           {% endif %}
           {% endif %}
+        </nav>
+      </div>
+    </div>
+    {% elif is_article %}
+    <div class="sub-header">
+      <div class="sub-header-inner">
+        <nav class="sub-nav">
+          <a href="{{ get_url(path="article/") }}" class="sub-nav-item{% if article_sub == 'overview' %} active{% endif %}">Overview</a>
+          <a href="{{ get_url(path="article/silicon/") }}" class="sub-nav-item{% if article_sub == 'silicon' %} active{% endif %}">Silicon &amp; Hardware</a>
+          <a href="{{ get_url(path="article/systems/") }}" class="sub-nav-item{% if article_sub == 'systems' %} active{% endif %}">Systems &amp; Tools</a>
+          <a href="{{ get_url(path="article/review/") }}" class="sub-nav-item{% if article_sub == 'review' %} active{% endif %}">Reviews &amp; Setups</a>
         </nav>
       </div>
     </div>
