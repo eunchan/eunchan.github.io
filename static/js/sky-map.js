@@ -26,6 +26,8 @@ class LeafletAdapter {
 
     this.map = L.map(this.containerId, {
       scrollWheelZoom: false,
+      center: [37.5, -177],
+      zoom: 3,
     });
 
     // Standard OpenStreetMap tile layer (zero API key needed)
@@ -36,6 +38,7 @@ class LeafletAdapter {
 
     this.featureGroup = L.featureGroup().addTo(this.map);
     this.markers = [];
+    this.pacificPoints = [];
 
     function createSkyPin(place) {
       const pinColor = '#0f766e';
@@ -67,18 +70,44 @@ class LeafletAdapter {
         </div>
       `;
 
+      // 1. Primary marker (standard coordinates)
       const marker = L.marker([place.lat, place.lng], {
         icon: createSkyPin(place),
       }).bindPopup(popupContent);
       marker.addTo(this.featureGroup);
       this.markers.push({ place, marker });
+
+      // 2. Pacific view coordinate:
+      // Korea (lng ~ +127) wrapped across the date line to west of Pacific -> lng - 360 (~ -233)
+      // California (lng ~ -121) is east of Pacific -> lng (~ -121)
+      const pacificLng = place.lng > 0 ? place.lng - 360 : place.lng;
+      this.pacificPoints.push([place.lat, pacificLng]);
+
+      // Add duplicate marker so pins are visible in both Pacific-centered view and individual continental views
+      if (place.lng > 0) {
+        const pacificMarker = L.marker([place.lat, place.lng - 360], {
+          icon: createSkyPin(place),
+        }).bindPopup(popupContent);
+        pacificMarker.addTo(this.featureGroup);
+      } else {
+        const eastMarker = L.marker([place.lat, place.lng + 360], {
+          icon: createSkyPin(place),
+        }).bindPopup(popupContent);
+        eastMarker.addTo(this.featureGroup);
+      }
     });
 
     this.fitAll();
   }
 
   fitAll() {
-    if (this.markers.length > 0) {
+    if (this.pacificPoints && this.pacificPoints.length > 0) {
+      const bounds = L.latLngBounds(this.pacificPoints);
+      this.map.fitBounds(bounds, {
+        padding: [40, 40],
+        maxZoom: 5,
+      });
+    } else if (this.markers.length > 0) {
       this.map.fitBounds(this.featureGroup.getBounds(), {
         padding: [40, 40],
         maxZoom: 11,
