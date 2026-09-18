@@ -17,7 +17,7 @@ hide = ["toc"]
 - [스타게이트 프로젝트 - AI 데이터센터](silicon/the-stargate-project.md)
 - [네이버와 삼성의 ML 칩&시스템 협업](silicon/naver-and-samsung-collaboration.md)
 - [하드웨어 디자인 코드리뷰](silicon/code-review-in-hdl.md)
-- [SystemVerilog for Design](silicon/systemverilog-for-design.md)
+- [설계 변경의 함정 (Pitfall of Design Change)](silicon/pitfall-of-design-change.md)
 - [OpenTitan: 오픈소스 실리콘 RoT 프로젝트](silicon/opentitan.md)
 - [UVM Verification 시리즈](silicon/uvm/)
 
