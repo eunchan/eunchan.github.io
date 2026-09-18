@@ -116,7 +116,7 @@
 
 {% block extra_scripts %}
 <script src="{{ get_url(path="vendor/leaflet/leaflet.js") }}" defer></script>
-<script src="{{ get_url(path="js/sky-map.js") }}" defer></script>
+<script src="{{ get_url(path="js/sky-map.js", cachebust=true) }}" defer></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     function initMapWhenReady() {
