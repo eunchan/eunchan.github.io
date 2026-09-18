@@ -147,6 +147,24 @@
     const featureGroup = L.featureGroup().addTo(map);
     const markerMap = {};
 
+    function createTravelPin(trip) {
+      const pinColor = trip.featured ? '#d97706' : '#0f766e';
+      return L.divIcon({
+        className: 'travel-pin-wrapper',
+        html: `
+          <div class="travel-pin" title="${trip.title}">
+            <svg width="24" height="30" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 0C5.37258 0 0 5.37258 0 12C0 20.2 10.8 28.8 11.37 29.3C11.74 29.6 12.26 29.6 12.63 29.3C13.2 28.8 24 20.2 24 12C24 5.37258 18.6274 0 12 0Z" fill="${pinColor}"/>
+              <circle cx="12" cy="11.5" r="4.5" fill="#ffffff"/>
+            </svg>
+          </div>
+        `,
+        iconSize: [24, 30],
+        iconAnchor: [12, 30],
+        popupAnchor: [0, -28],
+      });
+    }
+
     trips.forEach(function (t) {
       if (t.lat == null || t.lng == null || (t.lat === 0 && t.lng === 0)) return;
 
@@ -173,7 +191,9 @@
         </div>
       `;
 
-      const marker = L.marker([t.lat, t.lng]).bindPopup(popupContent, {
+      const marker = L.marker([t.lat, t.lng], {
+        icon: createTravelPin(t),
+      }).bindPopup(popupContent, {
         maxWidth: 320,
         className: 'travel-custom-popup',
       });
