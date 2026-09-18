@@ -4,7 +4,6 @@ title = "Oahu Island in Hawaii"
 comments = true
 date = "2015-08-20"
 trip_date = "2015-04-20"
-hide = ["toc"]
 tags = "Hawaii, Oahu, travel"
 lat = 21.3069
 lng = -157.8583
