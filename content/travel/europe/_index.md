@@ -14,6 +14,7 @@ featured = true
 header_img = "/media/page/travel/europe/europe-050.jpg"
 summary = "워킹홀리데이를 마치고 40L 배낭 하나 메고 떠난 유럽 7개국 기차 여행. 나보나 광장의 골목길부터 알프스 설산, 파리의 낭만과 런던까지."
 +++
+
 [Working Holiday](../../working-holiday/index.md)를 마치고 뉴욕과 유럽을
 여행하고 한국으로 귀국했습니다. 이 여행을 하면서 남긴 기록들입니다. 일반적인
 여행기가 아닌 제 생각이 가득 들어간 여행기로 정보는 많지 않네요.
@@ -37,7 +38,6 @@ summary = "워킹홀리데이를 마치고 40L 배낭 하나 메고 떠난 유�
 - [Europe #015 낭만의 파리-4                           ](015paris.md)
 - [Europe #016 or Finale Astor Victoria in London      ](016london.md)
 
-Europe Gallery
---------------
+## Europe Gallery
 
 - [Europe Gallery](gallery.md)

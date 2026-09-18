@@ -4,7 +4,6 @@ title = "어설펐던 도쿄 여행"
 comments = true
 date = "2012-01-15"
 trip_date = "2008-09-15"
-header-img = "/media/page/travel/tokyo/tokyo-header_vector.svg"
 header_img = "/media/page/travel/tokyo/tokyo-067.jpg"
 hide = ["toc"]
 lat = 35.6762
@@ -15,8 +14,8 @@ period = "2008.09 & 2010.02"
 trip_badge = "여행 에세이"
 summary = "GRE 시험 차 엉겁결에 떠나 풋풋하게 마주했던 도쿄의 가을 거리, 롯폰기와 도쿄타워의 야경, 그리고 느낀 점들을 담은 에세이."
 +++
-Summary
--------
+
+## Summary
 
 * 기간 : 5박 6일, 9월
 * 여행비용 : 80만원(항공권 40, 준비 5, 여행 35)
@@ -25,8 +24,7 @@ Summary
   6(닌교초, 일본 -> 한국)
 * [Gallery](gallery.md)
 
-travel
-------
+## 도쿄 여행기
 
 ![Tokyo Tower](/media/page/travel/tokyo/tokyo-067.jpg)
 

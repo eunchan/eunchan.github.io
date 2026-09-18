@@ -1,5 +1,5 @@
 +++
-title = "Lost Coast Off-road & Backpacking"
+title = "Lost Coast"
 date = 2023-06-15
 [extra]
 comments = true
@@ -8,7 +8,7 @@ lat = 40.0436
 lng = -124.0728
 country = "🇺🇸 USA (California)"
 location = "Lost Coast, Mendocino / Humboldt County"
-period = "2023.06"
+period = "2023.11"
 trip_badge = "오프로드 모험 · 영상"
 summary = "캘리포니아에서 가장 고립되고 거친 해안선, 로스트 코스트(Lost Coast)를 뚫고 들어간 오프로드 캠핑과 백패킹 모험 기록입니다."
 +++
