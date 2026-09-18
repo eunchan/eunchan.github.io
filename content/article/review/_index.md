@@ -4,7 +4,6 @@ aliases = ["review"]
 sort_by = "date"
 [extra]
 auto_list = true
-hide = ["toc"]
 +++
 많은 제품을 사용했지만, 그 중에 글로 남길만한 제품을 추려서 정리한 페이지
 입니다. 그 외의 제품은 각 년도의 "지름목록"에 간단히 소감을 정리해 두었습니다.
