@@ -4,7 +4,6 @@ title = "Cairo, White Desert"
 comments = true
 date = "2012-01-05"
 trip_date = "2009-11-07"
-hide = ["toc"]
 lat = 29.9792
 lng = 31.1342
 country = "🇪🇬 Egypt"

@@ -4,7 +4,6 @@ sort_by = "date"
 [extra]
 date = "2012-03-20"
 trip_date = "2010-01-19"
-hide = ["toc"]
 lat = -44.6714
 lng = 167.9256
 country = "🇳🇿 New Zealand"
