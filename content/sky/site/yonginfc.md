@@ -1,14 +1,13 @@
 +++
-title = "용인 축구 센터"
 date = 2013-11-01
+description = "수원 근교에서 가장 무난한 곳"
+title = "용인 축구 센터"
 [extra]
+bright = "2/8"
 lat = 37.151184
 lng = 127.314804
-bright = "2/8"
-descript = "수원 근교에서 가장 무난한 곳"
 map = true
 +++
-
 ![Yongin FC](/media/sky/yonginfc.jpg)
 
 수원에서 30~40분 거리에 있는 관측하기 적당한 장소인 듯 합니다. 서쪽은 서울

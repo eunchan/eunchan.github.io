@@ -1,14 +1,13 @@
 +++
-title = "양평 벗고개"
 date = 2013-11-01
+description = "동천, 서천 막힘. 거의 밝기 4 수준의 3"
+title = "양평 벗고개"
 [extra]
+bright = "4/8"
 lat = 37.501019
 lng = 127.731341
-bright = "4/8"
-descript = "동천, 서천 막힘. 거의 밝기 4 수준의 3"
 map = true
 +++
-
 밝기 기준
 ---------
 

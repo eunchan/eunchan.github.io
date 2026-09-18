@@ -1,5 +1,6 @@
 +++
 title = "Europe with 40L Backpack"
+sort_by = "date"
 [extra]
 date = "2012-01-05"
 trip_date = "2007-05-15"
