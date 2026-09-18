@@ -4,8 +4,18 @@ sort_by = "date"
 [extra]
 date = "2012-01-04"
 header-img = "../media/page/working-holiday/canada-042.jpg"
+header_img = "/media/page/working-holiday/canada-042.jpg"
 hide = ["toc"]
 slug = "06canada"
+trip_date = "2006-09-17"
+lat = 51.1784
+lng = -115.5708
+country = "🇨🇦 Canada"
+location = "Vancouver, Victoria, Banff, Jasper, Calgary"
+period = "2006.09 – 2007.05"
+trip_badge = "장편 연재 · 23편"
+featured = true
+summary = "20대 청년의 도전. 비자 획득부터 밴쿠버 정착, 밴프 국립공원에서의 근무와 생활, 런들산 등반, 스노우보딩, 귀국까지 1년의 이야기."
 +++
 캐나다 워킹홀리데이 프로그램으로 2006년부터 2007년까지 캐나다에서 지냈습니다.
 아래의 글은 캐나다 워킹홀리데이 프로그램 중 쓴 글입니다.

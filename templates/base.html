@@ -99,6 +99,21 @@
       {% endif %}
     {% endif %}
 
+    {% set is_travel = false %}
+    {% set is_travel_overview = false %}
+    {% if page %}
+      {% if page.path is starting_with(pat="/travel") or page.path is starting_with(pat="/working-holiday") %}
+        {% set is_travel = true %}
+      {% endif %}
+    {% elif section %}
+      {% if section.path is starting_with(pat="/travel") or section.path is starting_with(pat="/working-holiday") %}
+        {% set is_travel = true %}
+        {% if section.path == "/travel/" %}
+          {% set is_travel_overview = true %}
+        {% endif %}
+      {% endif %}
+    {% endif %}
+
     {% if is_sky %}
     <div class="sub-header">
       <div class="sub-header-inner">
@@ -109,6 +124,27 @@
           <a href="{{ get_url(path="sky/site/") }}" class="sub-nav-item{% if sky_sub == 'site' %} active{% endif %}">관측 장소</a>
           <a href="{{ get_url(path="sky/equip/") }}" class="sub-nav-item{% if sky_sub == 'equip' %} active{% endif %}">관측 장비</a>
           <a href="{{ get_url(path="sky/limiting-magnitude.html") }}" class="sub-nav-item{% if sky_sub == 'lm' %} active{% endif %}">한계등급 계산</a>
+        </nav>
+      </div>
+    </div>
+    {% elif is_travel %}
+    <div class="sub-header">
+      <div class="sub-header-inner">
+        <nav class="sub-nav">
+          {% if is_travel_overview %}
+          <a href="{{ get_url(path="travel/") }}" class="sub-nav-item active">전체보기</a>
+          <a href="#travel-map-section" class="sub-nav-item">🗺️ 세계지도</a>
+          <a href="#featured-series" class="sub-nav-item">📖 대형 연재</a>
+          <a href="#travel-timeline-section" class="sub-nav-item">⏳ 연대기</a>
+          {% else %}
+          <a href="{{ get_url(path="travel/") }}" class="sub-nav-item">&larr; Travel</a>
+          <span class="sub-nav-item active">{% if page %}{{ page.title }}{% elif section %}{{ section.title }}{% endif %}</span>
+          {% if section and section.extra.subnav %}
+            {% for item in section.extra.subnav %}
+            <a href="{{ item.url }}" class="sub-nav-item">{{ item.name }}</a>
+            {% endfor %}
+          {% endif %}
+          {% endif %}
         </nav>
       </div>
     </div>

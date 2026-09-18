@@ -3,7 +3,17 @@ title = "Campervan in New Zealand"
 sort_by = "date"
 [extra]
 date = "2012-03-20"
+trip_date = "2010-01-19"
 hide = ["toc"]
+lat = -44.6714
+lng = 167.9256
+country = "🇳🇿 New Zealand"
+location = "Christchurch, Oamaru, Milford Sound, Queenstown, Wanaka, Fox Glacier"
+period = "2010.01"
+trip_badge = "장편 연재 · 10편"
+featured = true
+header_img = "/media/page/travel/new-zealand/new-zealand-wide-026.jpg"
+summary = "일반적인 휴양 대신 선택한 10일간의 남섬 일주 캠퍼밴 로드트립. 피오르드의 장엄함과 빙하, 대자연 속 둘만의 잊지 못할 기록."
 +++
 신혼여행으로 휴양보다는 구경하는걸 선택했습니다. 아내와 같이 뉴질랜드를
 구경하기로 하였고 일반적인 것 보다는 조금은 독특하게 캠퍼밴으로 돌아보기로

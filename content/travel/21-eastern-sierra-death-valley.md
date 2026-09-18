@@ -6,6 +6,15 @@ title = "Death Valley and Eastern Sierra"
 tags = ["death-valley", "national-park", "sierra", "alabama-hills", "lone-pine", "bishop", "fall-colors", "lake-sabrina", "brees-lookout", "june-lake", "silver-lake", "tuoloume-meadows'", "road-trip"]
 [extra]
 comments = true
+trip_date = "2021-10-23"
+lat = 36.5054
+lng = -117.0794
+country = "🇺🇸 USA (California/Nevada)"
+location = "Death Valley, Badwater, Alabama Hills, Bishop, Lake Sabrina"
+period = "2021.10.23 – 2021.10.26"
+trip_badge = "3박 4일 로드트립"
+header_img = "/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_header.jpg"
+summary = "해수면 아래 배드워터의 극한 대지부터 시에라 네바다 산맥의 황금빛 가을 단풍, 앨라배마 힐스의 바위산까지 달린 3박 4일 가족 로드트립."
 +++
 ![](/media/page/travel/21-deathvalley-sierra/21-deathvalley-sierra_header.jpg)
 
