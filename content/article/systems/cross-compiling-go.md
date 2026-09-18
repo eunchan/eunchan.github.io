@@ -1,6 +1,7 @@
 +++
 date = 2015-11-19
 title = "Cross Compiling Go program"
+aliases = ["blog/2015/cross-compiling-go.html"]
 [taxonomies]
 tags = ["go", "golang", "mac", "osx", "cross-compile"]
 +++

@@ -1,6 +1,7 @@
 +++
 date = 2012-03-20
 title = "Vornado 633"
+aliases = ["review/vornado-633.html"]
 +++
 Air Circulator
 --------------

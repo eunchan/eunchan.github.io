@@ -2,6 +2,7 @@
 date = 2023-08-05
 slug = "att-bypass"
 title = "AT&T Fiber ONT/ RG Bypass"
+aliases = ["research/att-bypass.html"]
 [taxonomies]
 tags = ["att", "fiber", "bypass", "firewalla", "unifi", "pfsense", "opnsense", "wpa_supplicant", "802.1x"]
 [extra]

@@ -1,6 +1,7 @@
 +++
 date = 2016-11-17
 title = "에얼리언웨어 알파에 macOS 시에라 설치하기"
+aliases = ["research/installing-macos-on-alienware-alpha.html"]
 [taxonomies]
 tags = ["mac-os", "sierra", "hackintosh", "alienware-alpha", "dell", "bcm94352z"]
 [extra]

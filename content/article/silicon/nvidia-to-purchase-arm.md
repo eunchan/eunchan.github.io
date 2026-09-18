@@ -1,5 +1,6 @@
 +++
 title = "NVIDIA to Purchase ARM"
+aliases = ["article/nvidia-to-purchase-arm.html"]
 date = 2020-09-16
 slug = "nvidia-to-purchase-arm"
 [taxonomies]

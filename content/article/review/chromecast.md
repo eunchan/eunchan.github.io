@@ -1,6 +1,7 @@
 +++
 date = 2014-07-31
 title = "Google Chromecast"
+aliases = ["review/chromecast.html"]
 [taxonomies]
 tags = ["chromecast", "roku", "google", "android", "streaming"]
 [extra]

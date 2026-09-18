@@ -2,6 +2,7 @@
 date = 2019-01-05
 slug = "uvm-introduction"
 title = "Introduction to UVM"
+aliases = ["research/uvm/uvm-introduction.html"]
 [extra]
 comments = true
 +++

@@ -2,6 +2,7 @@
 date = 2015-12-29
 slug = "free-up-huge-other-storage-space-on-mac-os-x"
 title = "OS X Other 공간 비우기"
+aliases = ["blog/2015/free-up-huge-other-storage-space-on-mac-os-x.html"]
 [taxonomies]
 tags = ["os-x", "crashplan", "other-storage", "out-of-space"]
 +++

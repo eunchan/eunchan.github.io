@@ -1,5 +1,6 @@
 +++
 title = "Reviews & Setups"
+aliases = ["review"]
 sort_by = "date"
 [extra]
 auto_list = true

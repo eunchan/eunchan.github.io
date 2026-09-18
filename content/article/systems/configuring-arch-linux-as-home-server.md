@@ -1,6 +1,7 @@
 +++
 date = 2012-04-06
 title = "Archlinux as Home Server"
+aliases = ["research/configuring-arch-linux-as-home-server.html"]
 +++
 Initial Setting
 ---------------

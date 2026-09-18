@@ -2,6 +2,7 @@
 date = 2019-11-05
 slug = "opentitan"
 title = "Open Source Hardware"
+aliases = ["blog/2019/opentitan.html"]
 [taxonomies]
 tags = ["opensource", "hardware", "SoC", "opentitan", "systemverilog", "uvm"]
 categories = ["design"]

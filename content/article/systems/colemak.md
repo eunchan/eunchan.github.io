@@ -2,6 +2,7 @@
 date = 2017-02-10
 slug = "colemak"
 title = "Colemak 적응기"
+aliases = ["research/colemak.html"]
 [taxonomies]
 tags = ["keyboard", "qwerty", "dvorak", "layout", "nalgaeset", "saenaru"]
 [extra]

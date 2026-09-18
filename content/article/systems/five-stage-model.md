@@ -1,5 +1,6 @@
 +++
 title = "A Five-Stage Model of the Mental Activities"
+aliases = ["article/five-stage-model.html"]
 date = 2016-08-16
 [extra]
 language = "en"

@@ -2,6 +2,7 @@
 date = 2019-11-16
 slug = "email-in-terminal"
 title = "Checking email in terminal: neomutt + notmuch + lieer"
+aliases = ["research/email-in-terminal.html"]
 [taxonomies]
 tags = ["neomutt", "mutt", "terminal", "email", "gmail", "notmuch", "afew", "multi-account", "lieer", "gmailieer", "gauteh", "oauth", "api", "gnupg", "pgp", "gpg"]
 [extra]

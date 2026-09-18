@@ -1,5 +1,6 @@
 +++
 title = "Dive into Bitcoin"
+aliases = ["article/bitcoin.html"]
 date = 2013-12-04
 [taxonomies]
 tags = ["bitcoin", "satoshi", "paper", "technical"]

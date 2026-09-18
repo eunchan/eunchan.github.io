@@ -2,6 +2,7 @@
 date = 2019-05-22
 slug = "renaming-primary-calendar"
 title = "Renaming Primary Google Calendar for Apps for Business"
+aliases = ["tips/renaming-primary-calendar.html"]
 [taxonomies]
 tags = ["google", "calendar", "apps-for-business", "custom-domain"]
 [extra]

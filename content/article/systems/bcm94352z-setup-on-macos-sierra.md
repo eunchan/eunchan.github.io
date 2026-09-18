@@ -1,6 +1,7 @@
 +++
 date = 2016-11-19
 title = "Broadcom BCM94352Z, macOS 시에라에서 설정하기"
+aliases = ["research/bcm94352z-setup-on-macos-sierra.html"]
 [taxonomies]
 tags = ["mac-os", "sierra", "hackintosh", "alienware-alpha", "bcm94352z", "wifi", "bluetooth", "fake-pciid", "clover"]
 [extra]

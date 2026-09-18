@@ -1,5 +1,6 @@
 +++
 title = "네이버와 삼성의 머신러닝칩 협업"
+aliases = ["article/naver-and-samsung-collaboration.html"]
 date = 2022-12-07
 slug = "naver-and-samsung-collaboration"
 [taxonomies]

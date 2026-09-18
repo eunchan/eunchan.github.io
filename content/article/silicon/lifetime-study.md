@@ -2,6 +2,7 @@
 date = 2017-06-20
 slug = "lifetime-study"
 title = "개발자의 평생공부"
+aliases = ["blog/2017/lifetime-study.html"]
 [taxonomies]
 tags = ["developer", "principle"]
 categories = ["design"]

@@ -1,5 +1,6 @@
 +++
 title = "Jujutsu VCS (JJ)"
+aliases = ["blog/2026/jujutsu-vcs.html"]
 date = 2026-09-08
 slug = "jujutsu-vcs"
 [taxonomies]

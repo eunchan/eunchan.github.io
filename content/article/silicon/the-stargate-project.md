@@ -1,5 +1,6 @@
 +++
 title = "The Stargate Project - Datacenter for AI"
+aliases = ["article/the-stargate-project.html"]
 date = 2025-01-22
 slug = "the-stargate-project"
 [taxonomies]

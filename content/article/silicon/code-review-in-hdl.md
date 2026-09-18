@@ -2,6 +2,7 @@
 date = 2017-03-01
 slug = "code-review-in-hdl"
 title = "하드웨어 디자인 코드리뷰"
+aliases = ["blog/2017/code-review-in-hdl.html"]
 [taxonomies]
 tags = ["hdl", "code-review", "git", "gerrit", "github", "pull-request"]
 categories = ["design"]

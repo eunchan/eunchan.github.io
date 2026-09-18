@@ -2,6 +2,7 @@
 date = 2016-01-08
 slug = "risc-v-mainstream"
 title = "RISC-V 가 주류로 올라설 수 있을까?"
+aliases = ["article/risc-v-mainstream.html"]
 [taxonomies]
 tags = ["risc-v", "arm", "microprocessor", "david-patterson", "berkeley"]
 [extra]

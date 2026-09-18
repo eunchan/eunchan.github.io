@@ -1,5 +1,6 @@
 +++
 title = "Gemini + Obsidian: AI가 보조하는 지식 관리 시스템"
+aliases = ["research/gemini-obsidian.html"]
 date = 2026-04-22
 slug = "gemini-obsidian"
 [taxonomies]

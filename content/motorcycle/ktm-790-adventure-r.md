@@ -1,5 +1,6 @@
 +++
 title = "KTM 790 어드벤쳐 R"
+aliases = ["blog/2020/purchase-ktm790advr.html"]
 date = 2020-07-30
 slug = "purchase-ktm790advr"
 [taxonomies]

@@ -2,6 +2,7 @@
 date = 2016-08-18
 slug = "alexa"
 title = "집안의 IoT 중심, Amazon Echo"
+aliases = ["review/alexa.html"]
 [taxonomies]
 tags = ["amazon", "amazon-echo", "iot", "ifttt", "voice-recognition", "google-home"]
 [extra]

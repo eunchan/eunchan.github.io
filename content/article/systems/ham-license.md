@@ -2,6 +2,7 @@
 date = 2021-09-14
 slug = "ham-license"
 title = "HAM License"
+aliases = ["blog/2021/ham-license.html"]
 [taxonomies]
 tags = ["ham", "radio", "handheld", "license", "fcc", "callsign"]
 [extra]

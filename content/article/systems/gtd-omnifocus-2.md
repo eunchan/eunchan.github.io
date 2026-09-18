@@ -2,6 +2,7 @@
 date = 2016-01-04
 slug = "gtd-omnifocus-2"
 title = "GTD: Omnigroup의 Omnifocus 2"
+aliases = ["blog/2016/gtd-omnifocus-2.html"]
 [taxonomies]
 tags = ["omnifocus", "gtd", "get-things-done", "resolution"]
 [extra]

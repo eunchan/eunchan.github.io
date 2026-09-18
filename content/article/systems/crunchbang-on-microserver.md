@@ -1,6 +1,7 @@
 +++
 date = 2013-05-07
 title = "Crunchbang on HP Microserver"
+aliases = ["research/crunchbang-on-microserver.html"]
 [taxonomies]
 tags = ["debian", "crunchbang", "kotex", "latex"]
 [extra]

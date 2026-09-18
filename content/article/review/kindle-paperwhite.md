@@ -1,6 +1,7 @@
 +++
 date = 2013-02-06
 title = "Kindle Paperwhite"
+aliases = ["review/kindle-paperwhite.html"]
 [taxonomies]
 tags = ["review", "kindle", "e-book", "reading", "book"]
 [extra]
