@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{{ get_url(path="vendor/leaflet/leaflet.css") }}">
+{% endblock extra_head %}
+
+{% block content %}
+<div class="content-container travel-page-container">
+  <!-- Section Header -->
+  <header class="section-header travel-header">
+    <h1>{{ section.title }}</h1>
+    {% if section.description %}
+    <p class="section-desc">{{ section.description }}</p>
+    {% endif %}
+    <div class="travel-intro-prose">
+      {{ section.content | safe }}
+    </div>
+  </header>
+
+  <!-- World Map Section -->
+  <section id="travel-map-section" class="travel-map-section">
+    <div class="travel-map-header">
+      <div class="travel-section-title-wrap">
+        <h2>🗺️ 세계 여행 지도</h2>
+        <span class="travel-subtitle">지도를 확대하거나 거점 핀을 클릭하여 여행기를 확인하세요.</span>
+      </div>
+      <div id="travel-map-controls" class="travel-map-controls">
+        <button type="button" data-region="all" class="active">전체</button>
+        <button type="button" data-region="americas">아메리카</button>
+        <button type="button" data-region="europe">유럽</button>
+        <button type="button" data-region="asia_oceania">아시아 &amp; 오세아니아</button>
+        <button type="button" data-region="africa">아프리카</button>
+      </div>
+    </div>
+
+    <div class="travel-map-wrapper">
+      <div id="travel-map"></div>
+    </div>
+  </section>
+
+  <!-- Featured Epic Series Section -->
+  <section id="featured-series" class="travel-featured-section">
+    <div class="travel-section-title-wrap">
+      <h2>📖 대표 장편 서사 (Epic Series)</h2>
+      <span class="travel-subtitle">인생의 전환점과 깊은 호흡으로 연재된 3대 대작 여행기입니다.</span>
+    </div>
+    <div id="featured-cards-grid" class="featured-cards-grid">
+      <!-- Populated dynamically via travel-map.js from frontmatter data -->
+    </div>
+  </section>
+
+  <!-- Chronological Timeline Section -->
+  <section id="travel-timeline-section" class="travel-timeline-section">
+    <div class="travel-section-title-wrap">
+      <h2>⏳ 연대기 여행기 (2006 &rarr; 2023)</h2>
+      <span class="travel-subtitle">시간의 흐름에 따라 걸어온 발자취를 연대순으로 읽어내려갑니다.</span>
+    </div>
+    <div id="travel-timeline" class="travel-timeline">
+      <!-- Populated dynamically via travel-map.js sorted chronologically -->
+    </div>
+  </section>
+
+  <!-- Dynamic JSON Payload from Section frontmatters -->
+  <script id="travel-places-data" type="application/json">
+  [
+    {% set_global first = true %}
+    {% if section.extra.include_sections %}
+      {% for inc_path in section.extra.include_sections %}
+        {% set s = get_section(path=inc_path) %}
+        {% if s.extra.lat and s.extra.lng %}
+          {% if not first %},{% endif %}
+          {% set_global first = false %}
+          {
+            "id": {{ s.path | slugify | json_encode | safe }},
+            "title": {{ s.title | json_encode | safe }},
+            "permalink": {{ s.permalink | json_encode | safe }},
+            "date": {{ s.extra.trip_date | default(value=s.extra.date | default(value="2000-01-01")) | json_encode | safe }},
+            "lat": {{ s.extra.lat }},
+            "lng": {{ s.extra.lng }},
+            "country": {{ s.extra.country | default(value="") | json_encode | safe }},
+            "location": {{ s.extra.location | default(value="") | json_encode | safe }},
+            "period": {{ s.extra.period | default(value="") | json_encode | safe }},
+            "badge": {{ s.extra.trip_badge | default(value="") | json_encode | safe }},
+            "featured": {{ s.extra.featured | default(value=false) | json_encode | safe }},
+            "image": {{ s.extra.header_img | default(value=s.extra["header-img"] | default(value="")) | json_encode | safe }},
+            "summary": {{ s.extra.summary | default(value="") | json_encode | safe }}
+          }
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    {% for sub_path in section.subsections %}
+      {% set s = get_section(path=sub_path) %}
+      {% if s.extra.lat and s.extra.lng %}
+        {% if not first %},{% endif %}
+        {% set_global first = false %}
+        {
+          "id": {{ s.path | slugify | json_encode | safe }},
+          "title": {{ s.title | json_encode | safe }},
+          "permalink": {{ s.permalink | json_encode | safe }},
+          "date": {{ s.extra.trip_date | default(value=s.extra.date | default(value="2000-01-01")) | json_encode | safe }},
+          "lat": {{ s.extra.lat }},
+          "lng": {{ s.extra.lng }},
+          "country": {{ s.extra.country | default(value="") | json_encode | safe }},
+          "location": {{ s.extra.location | default(value="") | json_encode | safe }},
+          "period": {{ s.extra.period | default(value="") | json_encode | safe }},
+          "badge": {{ s.extra.trip_badge | default(value="") | json_encode | safe }},
+          "featured": {{ s.extra.featured | default(value=false) | json_encode | safe }},
+          "image": {{ s.extra.header_img | default(value=s.extra["header-img"] | default(value="")) | json_encode | safe }},
+          "summary": {{ s.extra.summary | default(value="") | json_encode | safe }}
+        }
+      {% endif %}
+    {% endfor %}
+    {% for p in section.pages %}
+      {% if p.extra.lat and p.extra.lng %}
+        {% if not first %},{% endif %}
+        {% set_global first = false %}
+        {
+          "id": {{ p.slug | default(value="page-" ~ loop.index) | json_encode | safe }},
+          "title": {{ p.title | json_encode | safe }},
+          "permalink": {{ p.permalink | json_encode | safe }},
+          "date": {{ p.extra.trip_date | default(value=p.date | default(value="2000-01-01")) | json_encode | safe }},
+          "lat": {{ p.extra.lat }},
+          "lng": {{ p.extra.lng }},
+          "country": {{ p.extra.country | default(value="") | json_encode | safe }},
+          "location": {{ p.extra.location | default(value="") | json_encode | safe }},
+          "period": {{ p.extra.period | default(value="") | json_encode | safe }},
+          "badge": {{ p.extra.trip_badge | default(value="") | json_encode | safe }},
+          "featured": {{ p.extra.featured | default(value=false) | json_encode | safe }},
+          "image": {{ p.extra.header_img | default(value=p.extra["header-img"] | default(value="")) | json_encode | safe }},
+          "summary": {{ p.extra.summary | default(value="") | json_encode | safe }}
+        }
+      {% endif %}
+    {% endfor %}
+  ]
+  </script>
+
+  <script src="{{ get_url(path="vendor/leaflet/leaflet.js") }}"></script>
+  <script src="{{ get_url(path="js/travel-map.js") }}"></script>
+</div>
+{% endblock content %}

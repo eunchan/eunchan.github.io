@@ -3,8 +3,17 @@ title = "Oahu Island in Hawaii"
 [extra]
 comments = true
 date = "2015-08-20"
+trip_date = "2015-04-20"
 hide = ["toc"]
 tags = "Hawaii, Oahu, travel"
+lat = 21.3069
+lng = -157.8583
+country = "🇺🇸 USA (Hawaii)"
+location = "Oahu, Honolulu, Waikiki"
+period = "2015.04 – 2015.05"
+trip_badge = "가족 여행"
+header_img = "/media/page/travel/hawaii15/hawaii15-004.jpg"
+summary = "어린 두 아이와 함께 떠난 4박 5일 첫 하와이 가족 여행. 산호세에서 날아가 만난 태평양의 에메랄드빛 바다와 따뜻한 추억."
 +++
 * 여행기간 : April 2015 to May 2015
 

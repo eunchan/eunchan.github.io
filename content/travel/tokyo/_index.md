@@ -3,8 +3,17 @@ title = "어설펐던 도쿄 여행"
 [extra]
 comments = true
 date = "2012-01-15"
+trip_date = "2008-09-15"
 header-img = "/media/page/travel/tokyo/tokyo-header_vector.svg"
+header_img = "/media/page/travel/tokyo/tokyo-067.jpg"
 hide = ["toc"]
+lat = 35.6762
+lng = 139.6503
+country = "🇯🇵 Japan"
+location = "Tokyo (신주쿠, 간다, 도쿄타워, 롯폰기, 긴자)"
+period = "2008.09 & 2010.02"
+trip_badge = "여행 에세이"
+summary = "GRE 시험 차 엉겁결에 떠나 풋풋하게 마주했던 도쿄의 가을 거리, 롯폰기와 도쿄타워의 야경, 그리고 느낀 점들을 담은 에세이."
 +++
 Summary
 -------

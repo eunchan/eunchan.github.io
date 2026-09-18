@@ -3,7 +3,16 @@ title = "Cairo, White Desert"
 [extra]
 comments = true
 date = "2012-01-05"
+trip_date = "2009-11-07"
 hide = ["toc"]
+lat = 29.9792
+lng = 31.1342
+country = "🇪🇬 Egypt"
+location = "Cairo, Giza, Baharia (White Desert)"
+period = "2009.11"
+trip_badge = "사막 탐방 에세이"
+header_img = "/media/page/travel/egypt/egypt-041.jpg"
+summary = "학회 참석 차 갑작스럽게 떠난 이집트. 카이로의 이국적인 번잡함, 기자 피라미드의 위용, 그리고 밤하늘 별이 쏟아지던 바하리아 백사막의 침묵."
 +++
 Summary
 -------

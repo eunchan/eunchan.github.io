@@ -3,7 +3,16 @@ title = "Travel Sites in Northern California"
 [extra]
 comments = true
 date = "2016-01-05"
+trip_date = "2016-01-05"
 hide = ["toc"]
+lat = 37.7749
+lng = -122.4194
+country = "🇺🇸 USA (California)"
+location = "SF, Silicon Valley, Monterey, Big Sur, Yosemite, Tahoe"
+period = "2016 ~ 현재"
+trip_badge = "로컬 큐레이션 가이드"
+header_img = "/media/page/travel/nocal/golden-gate-bridge.jpg"
+summary = "북캘리포니아에 살아가며 틈틈이 찾아다닌 보석 같은 명소들. 금문교, 롬바드, 빅서 해안, 요세미티 국립공원과 레이크 타호까지."
 +++
 북캘리포니아에 지내면서 돌아다닐 만한 장소를 모아보았습니다.
 
