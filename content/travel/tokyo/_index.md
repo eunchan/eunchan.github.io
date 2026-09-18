@@ -5,7 +5,6 @@ comments = true
 date = "2012-01-15"
 trip_date = "2008-09-15"
 header_img = "/media/page/travel/tokyo/tokyo-067.jpg"
-hide = ["toc"]
 lat = 35.6762
 lng = 139.6503
 country = "🇯🇵 Japan"

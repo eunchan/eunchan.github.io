@@ -4,7 +4,6 @@ aliases = ["research/uvm"]
 sort_by = "date"
 [extra]
 disqus = false
-hide = ["toc"]
 slug = "uvm-verification"
 tags = ["uvm", "design", "systemverilog", "verification"]
 +++

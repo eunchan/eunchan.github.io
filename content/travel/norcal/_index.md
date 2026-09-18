@@ -4,7 +4,6 @@ title = "Travel Sites in Northern California"
 comments = true
 date = "2016-01-05"
 trip_date = "2016-01-05"
-hide = ["toc"]
 lat = 37.7749
 lng = -122.4194
 country = "🇺🇸 USA (California)"

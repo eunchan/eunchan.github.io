@@ -3,7 +3,6 @@ title = "Motorcycle"
 sort_by = "none"
 [extra]
 slug = "motorcycle"
-hide = ["toc"]
 +++
 ## History
 

@@ -5,7 +5,6 @@ template = "section.html"
 page_template = "page.html"
 [extra]
 slug = "article"
-hide = ["toc"]
 +++
 엔지니어링, 시스템 구축, 테크놀로지 및 제품 리뷰에 관한 기술 문서와 아티클 모음입니다. 관심 있는 주제별 카테고리를 선택해 읽어보실 수 있습니다.
 
