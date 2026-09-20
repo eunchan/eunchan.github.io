@@ -11,7 +11,7 @@ country = "🇮🇹 Italy"
 location = "Rome, Florence, Venice, Dolomites, Cinque Terre, Amalfi, Assisi, Lake Como"
 period = "2024.06"
 trip_badge = "한달살기"
-featured = true
+featured = false
 header_img = "/media/travel/24italy/header.jpg"
 summary = "2024년 6월, 더워지기 시작하는 이탈리아 로마로 떠나 한달을 지냈습니다. 역사와 자연, 그리고 사람이 어우러진 이탈리아 이야기입니다."
 +++
