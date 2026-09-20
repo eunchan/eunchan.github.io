@@ -11,7 +11,7 @@ country = "🇺🇸 East Coast"
 location = "Boston, New York, Washington D.C."
 period = "2022.06 ~ 2022.07"
 trip_badge = "동부 3부작"
-featured = true
+featured = false
 header_img = "/media/travel/22eastcoast/header.jpg"
 summary = "2022년 여름, 3주간 떠났던 미국 동부 세 도시 이야기. 지성과 사색의 보스턴, 15년 만에 다시 마주한 역동의 뉴욕, 그리고 역사와 자연이 교차하는 워싱턴 D.C.와 근교 로드트립."
 +++
