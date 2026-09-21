@@ -35,15 +35,6 @@ Leica에서 나온 렌즈 일체형 풀프레임 카메라입니다. 기능상�
 
 ### [Orion XT-8](../sky/equip/xt8.md)
 
-Meade는 Orion 돕을 구하게 되어 패스합니다.
-
-### Meade Lightbridge 12" Dob
-
-![Meade Lightbridge 12" Dobsonian](/media/sky/equipt/meade-lightbridge-12inch.jpg)
-
-12인치 크기임에도 트러스 구조를 사용하여 이동시 부피를 매우 줄인 돕소니안 천체
-망원경. XQ-10보다 이동시 더 부피가 적다.
-
 ### Sky Quality Meter - L
 
 관측시 하늘의 상태가 어떻게 되는지는 항상 육안과 추측에 의존하는데 이 기계는
