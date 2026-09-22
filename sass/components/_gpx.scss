@@ -1,0 +1,221 @@
+// GPX Map Viewer Styling
+
+.gpx-map-container {
+  margin: 2rem 0;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background-color: var(--card-bg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  .gpx-map-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    padding: 0.85rem 1.2rem;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+
+    .gpx-map-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .gpx-icon {
+        font-size: 1.2rem;
+        line-height: 1;
+      }
+
+      h3 {
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--text-color);
+        line-height: 1.3;
+      }
+    }
+
+    .gpx-map-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+
+      @include mobile {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+
+    .gpx-layer-toggle {
+      display: flex;
+      gap: 0.2rem;
+      background-color: var(--code-bg);
+      padding: 0.2rem;
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+
+      .gpx-layer-btn {
+        padding: 0.25rem 0.55rem;
+        font-size: 0.75rem;
+        border: none;
+        background: transparent;
+        color: var(--text-muted);
+        cursor: pointer;
+        border-radius: 4px;
+        font-weight: 500;
+        transition: all 0.15s ease;
+
+        &:hover:not(.active) {
+          color: var(--text-color);
+        }
+
+        &.active {
+          background-color: var(--primary);
+          color: #ffffff;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .gpx-download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 0.3rem 0.65rem;
+      border-radius: 6px;
+      background-color: var(--accent-light);
+      color: var(--primary);
+      border: 1px solid transparent;
+      text-decoration: none;
+      transition: all 0.15s ease;
+
+      &:hover {
+        border-color: var(--primary);
+        text-decoration: none;
+        transform: translateY(-1px);
+      }
+    }
+  }
+
+  .gpx-stats-bar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    padding: 0.65rem 1.2rem;
+    background-color: var(--code-bg);
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.85rem;
+
+    @include mobile {
+      gap: 0.8rem 1.2rem;
+    }
+
+    .gpx-stat-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+
+      .gpx-stat-label {
+        color: var(--text-muted);
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+      }
+
+      .gpx-stat-val {
+        font-weight: 600;
+        color: var(--text-color);
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .gpx-map-viewport {
+    width: 100%;
+    min-height: 380px;
+    z-index: 1;
+    background-color: var(--code-bg);
+
+    // Override Leaflet container styles to match theme
+    .leaflet-control-zoom {
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      border-radius: 6px;
+      overflow: hidden;
+
+      a {
+        background-color: var(--card-bg);
+        color: var(--text-color);
+        border-bottom-color: var(--border-color);
+
+        &:hover {
+          background-color: var(--code-bg);
+          color: var(--primary);
+        }
+      }
+    }
+
+    .leaflet-control-attribution {
+      background: rgba(255, 255, 255, 0.75);
+      font-size: 0.68rem;
+      color: #666;
+
+      [data-theme="dark"] & {
+        background: rgba(0, 0, 0, 0.75);
+        color: #aaa;
+      }
+    }
+  }
+}
+
+// Markers for Start (S) and End (E)
+.gpx-marker-wrapper {
+  background: transparent !important;
+  border: none !important;
+
+  .gpx-marker {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 12px;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: transform 0.15s ease;
+
+    &:hover {
+      transform: scale(1.15);
+    }
+
+    &.gpx-start-marker {
+      background-color: #10b981; // emerald green
+    }
+
+    &.gpx-end-marker {
+      background-color: #ef4444; // vibrant red
+    }
+  }
+}
