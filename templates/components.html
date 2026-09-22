@@ -1,0 +1,45 @@
+{% component gpx_map(src, title="GPS Track", height="480px", color="#ff5722") %}
+<link rel="stylesheet" href="{{ get_url(path="vendor/leaflet/leaflet.css") }}">
+<script src="{{ get_url(path="vendor/leaflet/leaflet.js") }}" defer></script>
+<script src="{{ get_url(path="vendor/leaflet-gpx/gpx.min.js") }}" defer></script>
+<script src="{{ get_url(path="js/gpx-viewer.js", cachebust=true) }}" defer></script>
+
+<div class="gpx-map-container" data-gpx-src="{{ get_url(path=src) }}" data-track-color="{{ color }}">
+  <div class="gpx-map-header">
+    <div class="gpx-map-title">
+      <span class="gpx-icon">🏍️</span>
+      <h3>{{ title }}</h3>
+    </div>
+    <div class="gpx-map-actions">
+      <div class="gpx-layer-toggle">
+        <button type="button" class="gpx-layer-btn" data-layer="topo">산악지형 (Topo)</button>
+        <button type="button" class="gpx-layer-btn" data-layer="osm">표준 (OSM)</button>
+        <button type="button" class="gpx-layer-btn" data-layer="dark">다크 (Dark)</button>
+      </div>
+      <button type="button" class="gpx-layer-btn gpx-reset-btn" title="트랙 전체보기">⟲ 리셋</button>
+      <a href="{{ get_url(path=src) }}" download class="gpx-download-btn">📥 GPX 다운로드</a>
+    </div>
+  </div>
+
+  <div class="gpx-stats-bar">
+    <div class="gpx-stat-item">
+      <span class="gpx-stat-label">총 거리</span>
+      <span class="gpx-stat-val" data-stat="distance">계산 중...</span>
+    </div>
+    <div class="gpx-stat-item" style="display: none;">
+      <span class="gpx-stat-label">누적 상승</span>
+      <span class="gpx-stat-val" data-stat="elevation-gain">-</span>
+    </div>
+    <div class="gpx-stat-item" style="display: none;">
+      <span class="gpx-stat-label">최고 고도</span>
+      <span class="gpx-stat-val" data-stat="elevation-max">-</span>
+    </div>
+    <div class="gpx-stat-item" style="display: none;">
+      <span class="gpx-stat-label">이동 시간</span>
+      <span class="gpx-stat-val" data-stat="moving-time">-</span>
+    </div>
+  </div>
+
+  <div class="gpx-map-viewport" style="height: {{ height }};"></div>
+</div>
+{% endcomponent gpx_map %}

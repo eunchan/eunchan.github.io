@@ -12,6 +12,8 @@ comments = true
 합류하면서 난이도가 급격히 상승하는 섹션2 상급코스를 타고 기간도 2박3일로
 늘어났네요.
 
+{{ <gpx_map src="/gpx/norcal-bdr-2024.gpx" title="NorCal BDR Section 1 & 2 GPS Track" /> }}
+
 Angels Camp에서 바이크를 트럭에서 내린 후 타기 시작했습니다. Angels Camp는
 시에라 산맥 서쪽 초입이라 시에라 산맥을 넘어가야 합니다. 도로로만 가도 두시간
 정도 걸리는 길인데, 이번에는 흙길 + 도로를 섞어서 갔네요.

@@ -135,6 +135,37 @@
       {% elif section.path is starting_with(pat="/article/review") %}{% set article_sub = "review" %}
       {% endif %}
     {% endif %}
+    {% set is_hobby = false %}
+    {% set hobby_sub = "overview" %}
+    {% if page %}
+      {% if page.path is starting_with(pat="/hobby") %}
+        {% set is_hobby = true %}
+        {% set hobby_sub = "overview" %}
+      {% elif page.path is starting_with(pat="/motorcycle") %}
+        {% set is_hobby = true %}
+        {% set hobby_sub = "motorcycle" %}
+      {% elif page.path is starting_with(pat="/camping") %}
+        {% set is_hobby = true %}
+        {% set hobby_sub = "camping" %}
+      {% elif page.path is starting_with(pat="/fly-fishing") %}
+        {% set is_hobby = true %}
+        {% set hobby_sub = "fly-fishing" %}
+      {% endif %}
+    {% elif section %}
+      {% if section.path is starting_with(pat="/hobby") %}
+        {% set is_hobby = true %}
+        {% set hobby_sub = "overview" %}
+      {% elif section.path is starting_with(pat="/motorcycle") %}
+        {% set is_hobby = true %}
+        {% set hobby_sub = "motorcycle" %}
+      {% elif section.path is starting_with(pat="/camping") %}
+        {% set is_hobby = true %}
+        {% set hobby_sub = "camping" %}
+      {% elif section.path is starting_with(pat="/fly-fishing") %}
+        {% set is_hobby = true %}
+        {% set hobby_sub = "fly-fishing" %}
+      {% endif %}
+    {% endif %}
 
     {% if is_sky %}
     <div class="sub-header">
@@ -178,6 +209,18 @@
           <a href="{{ get_url(path="article/silicon/") }}" class="sub-nav-item{% if article_sub == 'silicon' %} active{% endif %}">Silicon &amp; Hardware</a>
           <a href="{{ get_url(path="article/systems/") }}" class="sub-nav-item{% if article_sub == 'systems' %} active{% endif %}">Systems &amp; Tools</a>
           <a href="{{ get_url(path="article/review/") }}" class="sub-nav-item{% if article_sub == 'review' %} active{% endif %}">Reviews &amp; Setups</a>
+        </nav>
+      </div>
+    </div>
+    {% elif is_hobby and not is_sky %}
+    <div class="sub-header">
+      <div class="sub-header-inner">
+        <nav class="sub-nav">
+          <a href="{{ get_url(path="hobby/") }}" class="sub-nav-item{% if hobby_sub == 'overview' %} active{% endif %}">Hobby 전체보기</a>
+          <a href="{{ get_url(path="sky/") }}" class="sub-nav-item">🔭 Nightsky</a>
+          <a href="{{ get_url(path="motorcycle/") }}" class="sub-nav-item{% if hobby_sub == 'motorcycle' %} active{% endif %}">🏍️ Motorcycle</a>
+          <a href="{{ get_url(path="camping/") }}" class="sub-nav-item{% if hobby_sub == 'camping' %} active{% endif %}">⛺ Camping</a>
+          <a href="{{ get_url(path="fly-fishing/") }}" class="sub-nav-item{% if hobby_sub == 'fly-fishing' %} active{% endif %}">🎣 Fly Fishing</a>
         </nav>
       </div>
     </div>

@@ -1,0 +1,325 @@
+// Hobby Section & Dashboard Styling
+
+.hobby-dashboard {
+  max-width: 100%;
+}
+
+.hobby-hero {
+  margin-bottom: 2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--border-color);
+
+  .hobby-hero-title {
+    font-size: 2.2rem;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+    margin: 0 0 0.5rem 0;
+    color: var(--text-color);
+
+    @include mobile {
+      font-size: 1.8rem;
+    }
+  }
+
+  .hobby-hero-desc {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
+// 2x2 Grid on Desktop/Tablet -> 1 Column Stack on Mobile
+.hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+}
+
+.hobby-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.4rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary);
+  }
+
+  .hobby-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    margin-bottom: 0.8rem;
+
+    .hobby-card-icon-wrap {
+      font-size: 1.9rem;
+      line-height: 1;
+      padding: 0.5rem;
+      background-color: var(--accent-light);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+    }
+
+    .hobby-card-title-group {
+      flex: 1;
+      min-width: 0;
+
+      h2 {
+        margin: 0;
+        font-size: 1.35rem;
+        font-weight: 500;
+        line-height: 1.3;
+
+        a {
+          color: var(--text-color);
+          text-decoration: none;
+
+          &:hover {
+            color: var(--primary);
+          }
+        }
+      }
+
+      .hobby-card-subtitle {
+        font-size: 0.82rem;
+        color: var(--text-muted);
+        margin-top: 0.2rem;
+      }
+    }
+  }
+
+  .hobby-card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .hobby-card-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin: 0 0 1rem 0;
+    }
+
+    .hobby-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: auto;
+      margin-bottom: 1rem;
+
+      .hobby-tag-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        font-size: 0.78rem;
+        padding: 0.25rem 0.55rem;
+        border-radius: 6px;
+        background-color: var(--code-bg);
+        color: var(--text-color);
+        border: 1px solid var(--border-color);
+        text-decoration: none;
+        transition: all 0.15s ease;
+
+        &:hover {
+          background-color: var(--accent-light);
+          color: var(--primary);
+          border-color: var(--primary);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .hobby-card-footer {
+    border-top: 1px solid var(--border-color);
+    padding-top: 0.75rem;
+    font-size: 0.82rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+
+    .hobby-latest-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      flex-shrink: 0;
+    }
+
+    .hobby-latest-link {
+      color: var(--primary);
+      text-decoration: none;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-align: right;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Cross-over / Hybrid outdoor themes
+.hobby-crossover {
+  background-color: var(--card-bg);
+  border: 1px dashed var(--border-color);
+  border-radius: 12px;
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 2.5rem;
+
+  .hobby-crossover-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0 0 0.35rem 0;
+    color: var(--text-color);
+  }
+
+  .hobby-crossover-desc {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin: 0 0 0.8rem 0;
+    line-height: 1.5;
+  }
+
+  .hobby-crossover-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    .hobby-crossover-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      background-color: var(--accent-light);
+      color: var(--primary);
+      font-size: 0.82rem;
+      font-weight: 500;
+      border: 1px solid transparent;
+      text-decoration: none;
+      transition: all 0.15s ease;
+
+      &:hover {
+        border-color: var(--primary);
+        transform: translateY(-1px);
+      }
+    }
+  }
+}
+
+// Recent Unified Activity Section
+.hobby-recent-section {
+  margin-top: 1rem;
+
+  .hobby-recent-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 400;
+      margin: 0;
+      color: var(--text-color);
+    }
+  }
+
+  .hobby-recent-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+
+    .hobby-recent-item {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.75rem 1rem;
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      transition: border-color 0.15s ease, transform 0.15s ease;
+
+      @include mobile {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+      }
+
+      &:hover {
+        border-color: var(--primary);
+        transform: translateX(3px);
+      }
+
+      .hobby-recent-left {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        flex: 1;
+        min-width: 0;
+
+        .hobby-item-category {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.25rem;
+          font-size: 0.75rem;
+          font-weight: 600;
+          padding: 0.15rem 0.5rem;
+          border-radius: 4px;
+          background-color: var(--accent-light);
+          color: var(--primary);
+          flex-shrink: 0;
+        }
+
+        .hobby-item-title {
+          font-size: 0.95rem;
+          color: var(--text-color);
+          text-decoration: none;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+
+          &:hover {
+            color: var(--primary);
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .hobby-item-date {
+        font-size: 0.82rem;
+        color: var(--text-muted);
+        flex-shrink: 0;
+      }
+    }
+  }
+}

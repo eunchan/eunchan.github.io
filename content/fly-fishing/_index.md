@@ -1,27 +1,37 @@
 +++
 title = "Fly Fishing"
+description = "맑은 계류와 강가에서의 캐스팅, 장비 셋업과 플라이 낚시 입문 기록"
+sort_by = "none"
 +++
 
-어깨를 다치고 바이크를 잘 못 타게 되면서 그동안 생각만 해 왔던 플라이 피싱에
-발을 들였습니다. 매번 스피닝릴이나 베잇캐스터릴만으로 낚시를 했는데, 안그래도 잘
-못잡는 고기, 더 어려운 플라이피싱으로 핑계라도 그럴듯 하게 대자는 생각으로
-시작했네요.
+어깨를 다치고 바이크를 잘 못 타게 되면서 그동안 생각만 해 왔던 플라이 피싱에 발을 들였습니다.
+매번 스피닝릴이나 베이트릴만으로 낚시를 했는데, 더 섬세하고 자연과 밀접하게 호흡하는 플라이 피싱의 매력을 조금씩 알아가고 있습니다.
 
-## Fly Fishing Gear
+## 1. Fly Fishing Gear (장비 & 셋업)
 
-플라이 피싱하는데 대부분의 장비가 일반 낚시 장비와 겹치질 않아서 많은 것을 새로
-사야 합니다. 아래는 제가 차근차근 (그러나 짧은 몇달 안에) 사 모은 장비인데,
-이정도면 충분히 즐길 수 있다고 봅니다. 사실 플라이 낚시대, 릴, 낚시줄 정도만
-준비해도 강변에서 충분히 즐길 수 있다고 생각합니다. 그래도 웨이더가 있다면 강
-가운데서 던질 수 있는데, 그 기분이 꽤 좋더라구요.
+플라이 피싱은 대부분의 장비가 일반 낚시 장비와 겹치지 않아 차근차근 새로 준비해야 하는 부분이 많습니다.
+현재 갖추어 둔 기본 필드 장비들입니다:
 
-- Redington Field Kit 9ft 5 wt
-- Redington Wrangler Kit 9ft 5wt
-- Patagonia Swiftcurrent Traverse Zip front wader
-- Patagonia Swiftcurrent Wading Jacket
-- Korkers Bantam Lite Wading Boots
-- 기타 용품
+- **Rods & Reels**:
+  - Redington Field Kit 9ft 5wt
+  - Redington Wrangler Kit 9ft 5wt
+- **Wading & Apparel**:
+  - Patagonia Swiftcurrent Traverse Zip front wader
+  - Patagonia Swiftcurrent Wading Jacket
+  - Korkers Bantam Lite Wading Boots
+- **Accessories & Tools**:
   - Aventik Long Handle Fly net
   - Fishpond Tippet Holder
-  - Floatant
-  - Dry shake
+  - Floatant & Dry shake
+
+## 2. Flies & Tying (플라이 훅 & 패턴)
+
+*추후 자주 사용하는 드라이 플라이(Adams, Elk Hair Caddis), 님프, 스트리머 패턴 소개 및 자작 타잉 기록을 업데이트할 예정입니다.*
+
+## 3. Waters & Spots (출조지 & 계류 포인트)
+
+*북캘리포니아 주요 강과 계류 출조 포인트, 접근성 및 수계 정보를 정리할 예정입니다.*
+
+## 4. Fishing Journal (조행기)
+
+*현장에서의 캐스팅, 날씨와 수온, 곤충 해치(Hatch) 및 조과 기록이 이어집니다.*

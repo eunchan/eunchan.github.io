@@ -45,9 +45,11 @@ menu = [
     { name = "Journal", url = "/blog/" },
     { name = "Travel", url = "/travel/" },
     { name = "Hobby", url = "/hobby/", children = [
+        { name = "Overview", url = "/hobby/" },
+        { name = "Nightsky", url = "/sky/" },
         { name = "Motorcycle", url = "/motorcycle/" },
         { name = "Camping", url = "/camping/" },
-        { name = "Nightsky", url = "/sky/" },
+        { name = "Fly Fishing", url = "/fly-fishing/" },
     ]},
     { name = "About", url = "/eunchan/" },
 ]

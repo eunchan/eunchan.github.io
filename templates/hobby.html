@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content-container">
+  <div class="hobby-dashboard">
+    <!-- Hero Header -->
+    <header class="hobby-hero">
+      <h1 class="hobby-hero-title">{{ section.title }}</h1>
+      {% if section.description %}
+      <p class="hobby-hero-desc">{{ section.description }}</p>
+      {% endif %}
+    </header>
+
+    {% if section.content %}
+    <div class="section-body" style="margin-bottom: 2rem;">
+      {{ section.content | safe }}
+    </div>
+    {% endif %}
+
+    <!-- 4-Hobby Showcase Cards (Responsive 2x2 on Desktop, 1 Column on Mobile) -->
+    <div class="hobby-grid">
+      <!-- 1. Nightsky -->
+      {% set sky_log_sec = get_section(path="sky/log/_index.md") %}
+      <div class="hobby-card">
+        <div class="hobby-card-header">
+          <div class="hobby-card-icon-wrap">🔭</div>
+          <div class="hobby-card-title-group">
+            <h2><a href="{{ get_url(path="sky/") }}">Nightsky</a></h2>
+            <div class="hobby-card-subtitle">천체관측 &bull; 밤하늘 아카이브</div>
+          </div>
+        </div>
+        <div class="hobby-card-body">
+          <p class="hobby-card-desc">밤하늘 관측 기록, 관측 장소 지도, 그리고 딥스카이(DSO) 천체 도감 아카이브입니다.</p>
+          <div class="hobby-card-tags">
+            <a href="{{ get_url(path="sky/") }}#sky-map" class="hobby-tag-chip">🗺️ 관측지 지도</a>
+            <a href="{{ get_url(path="sky/log/") }}" class="hobby-tag-chip">📝 관측일지</a>
+            <a href="{{ get_url(path="sky/body/") }}" class="hobby-tag-chip">✨ 천체 도감</a>
+            <a href="{{ get_url(path="sky/equip/") }}" class="hobby-tag-chip">🔭 관측 장비</a>
+          </div>
+        </div>
+        {% if sky_log_sec.pages and sky_log_sec.pages | length > 0 %}
+        {% set latest_sky = sky_log_sec.pages[0] %}
+        <div class="hobby-card-footer">
+          <span class="hobby-latest-label">최근 관측</span>
+          <a href="{{ latest_sky.permalink }}" class="hobby-latest-link">{{ latest_sky.title }}</a>
+        </div>
+        {% endif %}
+      </div>
+
+      <!-- 2. Motorcycle -->
+      {% set moto_log_sec = get_section(path="motorcycle/log/_index.md") %}
+      <div class="hobby-card">
+        <div class="hobby-card-header">
+          <div class="hobby-card-icon-wrap">🏍️</div>
+          <div class="hobby-card-title-group">
+            <h2><a href="{{ get_url(path="motorcycle/") }}">Motorcycle</a></h2>
+            <div class="hobby-card-subtitle">모터사이클 &bull; 어드벤처 라이딩</div>
+          </div>
+        </div>
+        <div class="hobby-card-body">
+          <p class="hobby-card-desc">온/오프로드 어드벤처 라이딩, 기종 변천사, 라이딩 기어 및 투어 일지입니다.</p>
+          <div class="hobby-card-tags">
+            <a href="{{ get_url(path="motorcycle/") }}#history" class="hobby-tag-chip">🏍️ 기종 변천사</a>
+            <a href="{{ get_url(path="motorcycle/gear-adventure.html") }}" class="hobby-tag-chip">🛡️ 라이딩 기어</a>
+            <a href="{{ get_url(path="motorcycle/log/") }}" class="hobby-tag-chip">🗺️ 투어 일지</a>
+            <a href="{{ get_url(path="motorcycle/motovlog-setup.html") }}" class="hobby-tag-chip">📹 모토브이로그</a>
+          </div>
+        </div>
+        {% if moto_log_sec.pages and moto_log_sec.pages | length > 0 %}
+        {% set latest_moto = moto_log_sec.pages[0] %}
+        <div class="hobby-card-footer">
+          <span class="hobby-latest-label">최근 투어</span>
+          <a href="{{ latest_moto.permalink }}" class="hobby-latest-link">{{ latest_moto.title }}</a>
+        </div>
+        {% endif %}
+      </div>
+
+      <!-- 3. Camping -->
+      <div class="hobby-card">
+        <div class="hobby-card-header">
+          <div class="hobby-card-icon-wrap">⛺</div>
+          <div class="hobby-card-title-group">
+            <h2><a href="{{ get_url(path="camping/") }}">Camping</a></h2>
+            <div class="hobby-card-subtitle">캠핑 &bull; 백패킹 &bull; 모토캠핑</div>
+          </div>
+        </div>
+        <div class="hobby-card-body">
+          <p class="hobby-card-desc">미니멀 백패킹, 모토캠핑부터 안락한 오토캠핑까지의 장비와 필드 경험을 공유합니다.</p>
+          <div class="hobby-card-tags">
+            <a href="{{ get_url(path="camping/") }}#backpacking-gear" class="hobby-tag-chip">🎒 백패킹 기어</a>
+            <a href="{{ get_url(path="camping/gazelle-t4.html") }}" class="hobby-tag-chip">⛺ 텐트 &amp; 쉘터</a>
+            <a href="{{ get_url(path="camping/") }}#msr-pocket-rocket-deluxe" class="hobby-tag-chip">🍳 취사 &amp; 화기</a>
+          </div>
+        </div>
+        <div class="hobby-card-footer">
+          <span class="hobby-latest-label">대표 장비</span>
+          <a href="{{ get_url(path="camping/gazelle-t4.html") }}" class="hobby-latest-link">Gazelle T4 Hub Tent 리뷰</a>
+        </div>
+      </div>
+
+      <!-- 4. Fly Fishing -->
+      <div class="hobby-card">
+        <div class="hobby-card-header">
+          <div class="hobby-card-icon-wrap">🎣</div>
+          <div class="hobby-card-title-group">
+            <h2><a href="{{ get_url(path="fly-fishing/") }}">Fly Fishing</a></h2>
+            <div class="hobby-card-subtitle">플라이 낚시 &bull; 계류 캐스팅</div>
+          </div>
+        </div>
+        <div class="hobby-card-body">
+          <p class="hobby-card-desc">맑은 계류와 강가에서의 캐스팅, 장비 셋업과 플라이 낚시 입문 기록입니다.</p>
+          <div class="hobby-card-tags">
+            <a href="{{ get_url(path="fly-fishing/") }}#fly-fishing-gear" class="hobby-tag-chip">🎣 로드 &amp; 릴 셋업</a>
+            <a href="{{ get_url(path="fly-fishing/") }}" class="hobby-tag-chip">🥾 웨이더 &amp; 부츠</a>
+            <a href="{{ get_url(path="fly-fishing/") }}" class="hobby-tag-chip">🌊 필드 &amp; 조행기</a>
+          </div>
+        </div>
+        <div class="hobby-card-footer">
+          <span class="hobby-latest-label">장비 소개</span>
+          <a href="{{ get_url(path="fly-fishing/") }}" class="hobby-latest-link">Redington &amp; Patagonia Kit</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cross-over Outdoor Themes -->
+    <div class="hobby-crossover">
+      <div class="hobby-crossover-title">
+        <span>🔗</span> 취미의 교집합 (Cross-over Outdoors)
+      </div>
+      <p class="hobby-crossover-desc">
+        자연 속으로 떠나는 여정에서 여러 취미가 만나는 특별한 순간들을 기록합니다.
+      </p>
+      <div class="hobby-crossover-tags">
+        <a href="{{ get_url(path="tags/moto-camping/") }}" class="hobby-crossover-chip">🏍️⛺ #모토캠핑 (바이크 + 캠핑)</a>
+        <a href="{{ get_url(path="tags/sky/") }}" class="hobby-crossover-chip">⛺🔭 #스타게이징캠핑 (캠핑 + 밤하늘)</a>
+        <a href="{{ get_url(path="tags/fly-fishing/") }}" class="hobby-crossover-chip">🏍️🎣 #바이크피싱 (바이크 + 낚시)</a>
+      </div>
+    </div>
+
+    <!-- Unified Recent Activity Feed -->
+    <section class="hobby-recent-section">
+      <div class="hobby-recent-header">
+        <h2>최근 취미 활동</h2>
+      </div>
+
+      <div class="hobby-recent-list">
+        {% set all_posts = get_pages(sort_by="date") %}
+        {% for p in all_posts %}
+          {%- if p.path is starting_with(pat="/motorcycle/log/") or p.path is starting_with(pat="/sky/log/") or p.path is starting_with(pat="/camping/gazelle") -%}
+          <div class="hobby-recent-item">
+            <div class="hobby-recent-left">
+              {% if p.path is starting_with(pat="/sky") %}
+                <span class="hobby-item-category">🔭 Nightsky</span>
+              {% elif p.path is starting_with(pat="/motorcycle") %}
+                <span class="hobby-item-category">🏍️ Motorcycle</span>
+              {% elif p.path is starting_with(pat="/camping") %}
+                <span class="hobby-item-category">⛺ Camping</span>
+              {% elif p.path is starting_with(pat="/fly-fishing") %}
+                <span class="hobby-item-category">🎣 Fly Fishing</span>
+              {% endif %}
+              <a href="{{ p.permalink }}" class="hobby-item-title">{{ p.title }}</a>
+            </div>
+            {% if p.date %}
+            <time class="hobby-item-date" datetime="{{ p.date }}">{{ p.date | date(format="%Y-%m-%d") }}</time>
+            {% endif %}
+          </div>
+          {%- endif -%}
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+</div>
+{% endblock content %}
