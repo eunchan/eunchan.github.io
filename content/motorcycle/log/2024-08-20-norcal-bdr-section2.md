@@ -1,6 +1,7 @@
 +++
 title = "NorCal BDR Section 2"
 date = 2024-08-20
+description = "3일간의 NorCal BDR (Backcountry Discovery Route) 섹션 1, 2 어드벤처 라이딩 기록. Angels Camp부터 시에라 산맥, Lundy Lake, Masonic Mountain 및 Mt. Patterson 상급 코스 주행기."
 slug = "norcal-bdr-2"
 [taxonomies]
 tags = ["norcan-bdr", "bdr", "ktm-390-adventure", "mt.patterson", "sierra", "lundy-lake"]
@@ -11,6 +12,8 @@ comments = true
 계획은 섹션2 주 도로를 타고 캠핑을 하고 오는 거였는데, 바이크를 잘 타는 동생이
 합류하면서 난이도가 급격히 상승하는 섹션2 상급코스를 타고 기간도 2박3일로
 늘어났네요.
+
+<!-- more -->
 
 {{ <gpx_map src="/gpx/norcal-bdr-2024.gpx" title="NorCal BDR Section 1 & 2 GPS Track" /> }}
 

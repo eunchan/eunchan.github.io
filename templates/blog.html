@@ -36,7 +36,9 @@
         </div>
       </header>
       <div class="post-card-summary">
-        {% if page.summary %}
+        {% if page.description %}
+          <p>{{ page.description }}</p>
+        {% elif page.summary %}
           {{ page.summary | regex_replace(pattern="(?s)^\\s*<h1[^>]*>.*?</h1>\\s*", rep="") | safe }}
         {% else %}
           {{ page.content | regex_replace(pattern="(?s)^\\s*<h1[^>]*>.*?</h1>\\s*", rep="") | striptags | truncate(length=200) }}

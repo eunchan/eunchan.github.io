@@ -76,6 +76,7 @@
       </div>
 
       <!-- 3. Camping -->
+      {% set camp_sec = get_section(path="camping/_index.md") %}
       <div class="hobby-card">
         <div class="hobby-card-header">
           <div class="hobby-card-icon-wrap">⛺</div>
@@ -93,12 +94,18 @@
           </div>
         </div>
         <div class="hobby-card-footer">
-          <span class="hobby-latest-label">대표 장비</span>
-          <a href="{{ get_url(path="camping/gazelle-t4.html") }}" class="hobby-latest-link">Gazelle T4 Hub Tent 리뷰</a>
+          <span class="hobby-latest-label">최근 기록</span>
+          {% if camp_sec.pages and camp_sec.pages | length > 0 %}
+            {% set latest_camp = camp_sec.pages[0] %}
+            <a href="{{ latest_camp.permalink }}" class="hobby-latest-link">{{ latest_camp.title }}</a>
+          {% else %}
+            <a href="{{ get_url(path="camping/") }}" class="hobby-latest-link">캠핑 기어 &amp; 셋업</a>
+          {% endif %}
         </div>
       </div>
 
       <!-- 4. Fly Fishing -->
+      {% set fly_sec = get_section(path="fly-fishing/_index.md") %}
       <div class="hobby-card">
         <div class="hobby-card-header">
           <div class="hobby-card-icon-wrap">🎣</div>
@@ -110,14 +117,19 @@
         <div class="hobby-card-body">
           <p class="hobby-card-desc">맑은 계류와 강가에서의 캐스팅, 장비 셋업과 플라이 낚시 입문 기록입니다.</p>
           <div class="hobby-card-tags">
-            <a href="{{ get_url(path="fly-fishing/") }}#fly-fishing-gear" class="hobby-tag-chip">🎣 로드 &amp; 릴 셋업</a>
+            <a href="{{ get_url(path="fly-fishing/") }}#1-fly-fishing-gear" class="hobby-tag-chip">🎣 로드 &amp; 릴 셋업</a>
             <a href="{{ get_url(path="fly-fishing/") }}" class="hobby-tag-chip">🥾 웨이더 &amp; 부츠</a>
             <a href="{{ get_url(path="fly-fishing/") }}" class="hobby-tag-chip">🌊 필드 &amp; 조행기</a>
           </div>
         </div>
         <div class="hobby-card-footer">
-          <span class="hobby-latest-label">장비 소개</span>
-          <a href="{{ get_url(path="fly-fishing/") }}" class="hobby-latest-link">Redington &amp; Patagonia Kit</a>
+          <span class="hobby-latest-label">최근 기록</span>
+          {% if fly_sec.pages and fly_sec.pages | length > 0 %}
+            {% set latest_fly = fly_sec.pages[0] %}
+            <a href="{{ latest_fly.permalink }}" class="hobby-latest-link">{{ latest_fly.title }}</a>
+          {% else %}
+            <a href="{{ get_url(path="fly-fishing/") }}" class="hobby-latest-link">장비 소개 &amp; 입문기</a>
+          {% endif %}
         </div>
       </div>
     </div>
