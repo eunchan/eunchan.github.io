@@ -219,3 +219,74 @@
     }
   }
 }
+
+// Custom Waypoint Pin
+.gpx-wpt-wrapper {
+  background: transparent !important;
+  border: none !important;
+
+  .gpx-wpt-pin {
+    width: 26px;
+    height: 34px;
+    display: block;
+    line-height: 0;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.45));
+    transition: transform 0.15s ease, filter 0.15s ease;
+    cursor: pointer;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover {
+      transform: scale(1.22);
+      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.6));
+    }
+  }
+}
+
+// Custom Waypoint Popup
+.leaflet-popup.gpx-waypoint-custom-popup {
+  margin-bottom: 5px;
+
+  .leaflet-popup-content-wrapper {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+    padding: 0;
+  }
+
+  .leaflet-popup-content {
+    margin: 0.65rem 0.85rem;
+    line-height: 1.45;
+    font-size: 0.88rem;
+  }
+
+  .leaflet-popup-tip {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+  }
+
+  .gpx-waypoint-title {
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 0.92rem;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .gpx-waypoint-notes {
+    margin-top: 0.4rem;
+    padding-top: 0.4rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.45;
+    white-space: pre-line;
+  }
+}
