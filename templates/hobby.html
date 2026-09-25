@@ -156,7 +156,7 @@
       </div>
 
       <div class="hobby-recent-list">
-        {% set all_posts = get_pages(sort_by="date") %}
+        {% set all_posts = get_pages(sort_by="update_date") %}
         {% for p in all_posts %}
           {%- if p.path is starting_with(pat="/motorcycle/log/") or p.path is starting_with(pat="/sky/log/") or p.path is starting_with(pat="/camping/gazelle") -%}
           <div class="hobby-recent-item">
@@ -172,9 +172,21 @@
               {% endif %}
               <a href="{{ p.permalink }}" class="hobby-item-title">{{ p.title }}</a>
             </div>
-            {% if p.date %}
-            <time class="hobby-item-date" datetime="{{ p.date }}">{{ p.date | date(format="%Y-%m-%d") }}</time>
-            {% endif %}
+            {%- if p.extra and p.extra.trip_date -%}
+              {%- if p.updated and (p.updated | date(format="%Y-%m-%d") != p.date | date(format="%Y-%m-%d")) -%}
+                <span class="hobby-item-date">여행: {{ p.date | date(format="%Y-%m-%d") }} (발행: {{ p.updated | date(format="%Y-%m-%d") }})</span>
+              {%- elif p.extra.trip_date != (p.date | date(format="%Y-%m-%d")) -%}
+                <span class="hobby-item-date">여행: {{ p.extra.trip_date }} (발행: {{ p.date | date(format="%Y-%m-%d") }})</span>
+              {%- elif p.date -%}
+                <time class="hobby-item-date" datetime="{{ p.date }}">{{ p.date | date(format="%Y-%m-%d") }}</time>
+              {%- endif -%}
+            {%- else -%}
+              {%- if p.date -%}
+                <time class="hobby-item-date" datetime="{{ p.date }}">{{ p.date | date(format="%Y-%m-%d") }}{% if p.updated and (p.updated | date(format="%Y-%m-%d") != p.date | date(format="%Y-%m-%d")) %} (수정: {{ p.updated | date(format="%Y-%m-%d") }}){% endif %}</time>
+              {%- elif p.updated -%}
+                <time class="hobby-item-date" datetime="{{ p.updated }}">수정: {{ p.updated | date(format="%Y-%m-%d") }}</time>
+              {%- endif -%}
+            {%- endif -%}
           </div>
           {%- endif -%}
         {% endfor %}

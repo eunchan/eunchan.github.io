@@ -43,15 +43,27 @@
     <article class="content-page">
       <header class="post-header">
         <h1 class="post-title">{{ page.title }}</h1>
-        {% if page.date or page.updated %}
+        {% if page.date or page.updated or (page.extra and page.extra.trip_date) %}
         <div class="post-meta">
           <span class="post-date-wrap">
-            {% if page.date %}
-            <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
-            {% endif %}
-            {% if page.updated and (not page.date or page.updated | date(format="%Y-%m-%d") != page.date | date(format="%Y-%m-%d")) %}
-            <span class="post-updated">{% if page.date %}(수정: {% else %}수정: {% endif %}<time datetime="{{ page.updated }}">{{ page.updated | date(format="%Y-%m-%d") }}</time>{% if page.date %}){% endif %}</span>
-            {% endif %}
+            {%- if page.extra and page.extra.trip_date -%}
+              {%- if page.updated and (page.updated | date(format="%Y-%m-%d") != page.date | date(format="%Y-%m-%d")) -%}
+                <span class="post-trip-date">여행: <time datetime="{{ page.date }}">{{ page.extra.trip_date }}</time></span>
+                <span class="post-published">(발행: <time datetime="{{ page.updated }}">{{ page.updated | date(format="%Y-%m-%d") }}</time>)</span>
+              {%- elif page.extra.trip_date != (page.date | date(format="%Y-%m-%d")) -%}
+                <span class="post-trip-date">여행: <time>{{ page.extra.trip_date }}</time></span>
+                <span class="post-published">(발행: <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time>)</span>
+              {%- elif page.date -%}
+                <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
+              {%- endif -%}
+            {%- else -%}
+              {% if page.date %}
+              <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
+              {% endif %}
+              {% if page.updated and (not page.date or page.updated | date(format="%Y-%m-%d") != page.date | date(format="%Y-%m-%d")) %}
+              <span class="post-updated">{% if page.date %}(수정: {% else %}수정: {% endif %}<time datetime="{{ page.updated }}">{{ page.updated | date(format="%Y-%m-%d") }}</time>{% if page.date %}){% endif %}</span>
+              {% endif %}
+            {%- endif -%}
           </span>
           {% if page.taxonomies.tags %}
           <span class="meta-tags">

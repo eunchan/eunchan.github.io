@@ -8,7 +8,19 @@
     <ul>
       {% set recent_posts = get_pages(limit=10, sort_by="update_date") %}
       {% for post in recent_posts %}
-      <li><a href="{{ post.permalink }}">{{ post.title }}</a>{% if post.date %} - {{ post.date | date(format="%Y-%m-%d") }}{% if post.updated and (post.updated | date(format="%Y-%m-%d") != post.date | date(format="%Y-%m-%d")) %} (수정: {{ post.updated | date(format="%Y-%m-%d") }}){% endif %}{% elif post.updated %} - 수정: {{ post.updated | date(format="%Y-%m-%d") }}{% endif %}</li>
+      <li><a href="{{ post.permalink }}">{{ post.title }}</a>
+        {%- if post.extra and post.extra.trip_date -%}
+          {%- if post.updated and (post.updated | date(format="%Y-%m-%d") != post.date | date(format="%Y-%m-%d")) %} - 여행: {{ post.date | date(format="%Y-%m-%d") }} (발행: {{ post.updated | date(format="%Y-%m-%d") }})
+          {%- elif post.extra.trip_date != (post.date | date(format="%Y-%m-%d")) %} - 여행: {{ post.extra.trip_date }} (발행: {{ post.date | date(format="%Y-%m-%d") }})
+          {%- elif post.date %} - {{ post.date | date(format="%Y-%m-%d") }}
+          {%- endif -%}
+        {%- else -%}
+          {%- if post.date %} - {{ post.date | date(format="%Y-%m-%d") }}
+            {%- if post.updated and (post.updated | date(format="%Y-%m-%d") != post.date | date(format="%Y-%m-%d")) %} (수정: {{ post.updated | date(format="%Y-%m-%d") }}){% endif -%}
+          {%- elif post.updated %} - 수정: {{ post.updated | date(format="%Y-%m-%d") }}
+          {%- endif -%}
+        {%- endif -%}
+      </li>
       {% endfor %}
     </ul>
 
