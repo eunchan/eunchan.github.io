@@ -6,6 +6,7 @@ slug = "norcal-bdr-2"
 [taxonomies]
 tags = ["norcan-bdr", "bdr", "ktm-390-adventure", "mt.patterson", "sierra", "lundy-lake"]
 [extra]
+trip_date = "2024-08-17 ~ 2024-08-19"
 comments = true
 +++
 3일의 NorCal BDR (Backcountry Discovery Route) 섹션 1, 2 여행을 했습니다. 처음
