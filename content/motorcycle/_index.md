@@ -23,10 +23,11 @@ slug = "motorcycle"
 - **Urban Gear**: Rev'it Lombard 2 Jeans
 - **Communications**: Sena Bluetooth Intercom
 
-## 3. Tour & Ride Logs (투어 일지)
+## 3. [Tour & Ride Logs (투어 일지)](log/)
 
 - [NorCal BDR Section 2](log/2024-08-20-norcal-bdr-section2.md) (2024-08-20)
+- [로스트코스트 오토바이 여행](log/2023-07-22-moto-lost-coast.md) (2023-07-22)
 - [790 Adventure R 오프로드 연습](log/2020-09-13-790r-offroad.md) (2020-09-13)
 - [본네빌로 출퇴근하기](log/2014-04-17-commuting-on-bonneville.md) (2014-04-17)
 
-👉 [전체 모터사이클 일지 목록 보기](log/)
+<!-- 👉 [전체 모터사이클 일지 목록 보기](log/) -->
