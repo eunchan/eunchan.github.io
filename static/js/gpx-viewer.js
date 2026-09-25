@@ -5,6 +5,43 @@
 (function () {
   'use strict';
 
+  function escapeHtml(str) {
+    if (!str) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function extractNotes(rawDesc) {
+    if (!rawDesc) return '';
+
+    // Check if onX key-value format (contains "name=" or "notes=" or "id=")
+    if (/notes=/i.test(rawDesc) || /id=[0-9a-f-]{36}/i.test(rawDesc)) {
+      const match = rawDesc.match(/notes=(.*?)(?=(?:\r?\n[a-z_]+=|[\r\n]*$))/is);
+      if (match && match[1]) {
+        return match[1].trim();
+      }
+      return '';
+    }
+
+    // Normal description: return trimmed text
+    return rawDesc.trim();
+  }
+
+  function formatWaypointPopup(name, rawDesc) {
+    const note = extractNotes(rawDesc);
+    let html = '<div class="gpx-waypoint-popup">';
+    html += '<div class="gpx-waypoint-title">📍 ' + escapeHtml(name) + '</div>';
+    if (note) {
+      html += '<div class="gpx-waypoint-notes">' + escapeHtml(note).replace(/\n/g, '<br>') + '</div>';
+    }
+    html += '</div>';
+    return html;
+  }
+
   function initGpxMaps() {
     if (typeof L === 'undefined' || typeof L.GPX === 'undefined') {
       setTimeout(initGpxMaps, 100);
@@ -28,6 +65,37 @@
         maxZoom: 19,
         attribution: '&copy; <a href="https://carto.com/">CARTO</a>, &copy; OpenStreetMap'
       })
+    });
+
+    // Custom SVG Waypoint Pin (Bottom tip exact at x=13, y=34)
+    const wptIcon = L.divIcon({
+      className: 'gpx-wpt-wrapper',
+      html: `<div class="gpx-wpt-pin" title="경유지">
+        <svg width="26" height="34" viewBox="0 0 26 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 0C5.82 0 0 5.82 0 13C0 22.75 13 34 13 34C13 34 26 22.75 26 13C26 5.82 20.18 0 13 0Z" fill="#e11d48"/>
+          <circle cx="13" cy="13" r="5" fill="#ffffff"/>
+        </svg>
+      </div>`,
+      iconSize: [26, 34],
+      iconAnchor: [13, 34], // Anchored precisely at bottom tip
+      popupAnchor: [0, -32]
+    });
+
+    // Custom Start and End Markers (Circle badges centered at x=13, y=13)
+    const startIcon = L.divIcon({
+      className: 'gpx-marker-wrapper',
+      html: '<div class="gpx-marker gpx-start-marker" title="출발점"><span>S</span></div>',
+      iconSize: [26, 26],
+      iconAnchor: [13, 13],
+      popupAnchor: [0, -14]
+    });
+
+    const endIcon = L.divIcon({
+      className: 'gpx-marker-wrapper',
+      html: '<div class="gpx-marker gpx-end-marker" title="도착점"><span>E</span></div>',
+      iconSize: [26, 26],
+      iconAnchor: [13, 13],
+      popupAnchor: [0, -14]
     });
 
     containers.forEach((container, index) => {
@@ -80,21 +148,6 @@
         });
       });
 
-      // Custom Start and End Markers
-      const startIcon = L.divIcon({
-        className: 'gpx-marker-wrapper',
-        html: '<div class="gpx-marker gpx-start-marker" title="출발점"><span>S</span></div>',
-        iconSize: [26, 26],
-        iconAnchor: [13, 13]
-      });
-
-      const endIcon = L.divIcon({
-        className: 'gpx-marker-wrapper',
-        html: '<div class="gpx-marker gpx-end-marker" title="도착점"><span>E</span></div>',
-        iconSize: [26, 26],
-        iconAnchor: [13, 13]
-      });
-
       // Stat elements
       const distEl = container.querySelector('[data-stat="distance"]');
       const eleGainEl = container.querySelector('[data-stat="elevation-gain"]');
@@ -105,10 +158,10 @@
       const gpx = new L.GPX(gpxSrc, {
         async: true,
         marker_options: {
-          startIcon: startIcon,
-          endIcon: endIcon,
+          startIconUrl: null,
+          endIconUrl: null,
           shadowUrl: null,
-          wptIcons: {}
+          wptIcons: { '': '' } // Prevents missing pin-icon-wpt.png 404
         },
         polyline_options: {
           color: trackColor,
@@ -116,6 +169,38 @@
           weight: 4.5,
           lineCap: 'round',
           lineJoin: 'round'
+        }
+      });
+
+      // Intercept and customize markers on creation
+      gpx.on('addpoint', function (e) {
+        if (e.point_type === 'waypoint') {
+          e.point.setIcon(wptIcon);
+          e.point.closePopup();
+
+          const nameEl = e.element.getElementsByTagName('name');
+          const name = nameEl.length ? nameEl[0].textContent : '';
+          const descEl = e.element.getElementsByTagName('desc');
+          const rawDesc = descEl.length ? descEl[0].textContent : '';
+
+          const popupContent = formatWaypointPopup(name, rawDesc);
+          e.point.bindPopup(popupContent, {
+            offset: [0, -28],
+            className: 'gpx-waypoint-custom-popup',
+            autoPan: true
+          });
+        } else if (e.point_type === 'start') {
+          e.point.setIcon(startIcon);
+          e.point.bindPopup('<div class="gpx-waypoint-title">🟢 출발점 (Start)</div>', {
+            offset: [0, -10],
+            className: 'gpx-waypoint-custom-popup'
+          });
+        } else if (e.point_type === 'end') {
+          e.point.setIcon(endIcon);
+          e.point.bindPopup('<div class="gpx-waypoint-title">🏁 도착점 (Finish)</div>', {
+            offset: [0, -10],
+            className: 'gpx-waypoint-custom-popup'
+          });
         }
       });
 
@@ -164,7 +249,7 @@
 
       gpx.addTo(map);
 
-      // Fit bounds button if present
+      // Fit bounds button
       const resetBtn = container.querySelector('.gpx-reset-btn');
       if (resetBtn) {
         resetBtn.addEventListener('click', () => {
