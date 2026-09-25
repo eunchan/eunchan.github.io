@@ -27,15 +27,6 @@
   <header class="site-header">
     <div class="header-inner">
       <div class="header-left">
-        <!-- Mobile Drawer Toggle -->
-        <button id="drawer-toggle" class="drawer-btn" aria-label="Open menu">
-          <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none">
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
-
         <a href="{{ config.base_url }}" class="site-logo">
           <img src="{{ get_url(path="img/logo2.png") }}" alt="{{ config.title }}" height="26">
           <span class="site-title">{{ config.title }}</span>
@@ -83,6 +74,14 @@
           <div id="search-results" class="search-results-dropdown"></div>
         </div>
         <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">🌓</button>
+        <!-- Mobile Drawer Toggle -->
+        <button id="drawer-toggle" class="drawer-btn" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
       </div>
     </div>
     {% block subnav %}
