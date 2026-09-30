@@ -3,9 +3,9 @@
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border-color);
+  margin-top: 3.5rem;
+  padding-top: 0;
+  border-top: none;
 
   @include small-mobile {
     flex-direction: column;
@@ -37,7 +37,7 @@
   gap: 0.35rem;
   padding: 0.85rem 1.1rem;
   border-radius: 8px;
-  border: 1px solid var(--border-color);
+  // border: 1px solid var(--border-color);
   background-color: var(--card-bg);
   text-decoration: none;
   transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
@@ -45,7 +45,7 @@
   box-sizing: border-box;
 
   &:hover {
-    border-color: var(--primary);
+    // border-color: var(--primary);
     background-color: var(--dropdown-hover);
     text-decoration: none;
     box-shadow: var(--shadow-sm);

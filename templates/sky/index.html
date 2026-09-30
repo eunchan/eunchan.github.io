@@ -57,53 +57,127 @@
 
     {% set log_sec = get_section(path="sky/log/_index.md") %}
 
-    <div class="posts-list">
+    <ul class="archive-list">
+      {% set_global sky_year = "" %}
+      {% set_global sky_month = "" %}
+      {% set_global sky_day = "" %}
+
       {% for page in log_sec.pages %}
       {% if loop.index <= 10 %}
-      <article class="post-card">
-        <header class="post-card-header">
-          <h2><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
-          <div class="post-card-meta">
-            {% if page.date %}
-            <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
-            {% endif %}
-            {% if page.extra.place %}
-            {% set place_page = get_page(path="sky/site/" ~ page.extra.place ~ ".md") %}
-            <span class="meta-place" style="margin-left: 0.5rem;">📍 <a href="{{ place_page.permalink }}" style="color: var(--primary); text-decoration: none;">{{ place_page.title }}</a></span>
-            {% endif %}
-            {% if page.extra.bright %}
-            <span class="meta-bright" style="margin-left: 0.5rem;">🌌 Bortle {{ page.extra.bright }}/8</span>
-            {% endif %}
-            {% if page.extra.equip %}
-            <span class="meta-equip" style="margin-left: 0.5rem;">🔭 {{ page.extra.equip }}</span>
-            {% endif %}
-            {% if page.extra.skybody %}
-            <span class="tags" style="margin-left: 0.5rem;">
-              {% set body_slugs = page.extra.skybody | split(pat=",") %}
-              {% for b in body_slugs %}
-                {% set clean_b = b | trim %}
-                <a href="{{ get_url(path="sky/body/" ~ clean_b ~ ".html") }}" class="tag" style="text-decoration: none;">#{{ clean_b }}</a>
-              {% endfor %}
-            </span>
-            {% endif %}
-          </div>
-        </header>
-        <div class="post-card-summary">
-          {% if page.description %}
-            <p>{{ page.description }}</p>
-          {% elif page.summary %}
-            {{ page.summary | regex_replace(pattern="(?s)^\\s*<h1[^>]*>.*?</h1>\\s*", rep="") | safe }}
-          {% else %}
-            {{ page.content | regex_replace(pattern="(?s)^\\s*<h1[^>]*>.*?</h1>\\s*", rep="") | striptags | truncate(length=200) }}
-          {% endif %}
-        </div>
-        <div class="post-card-footer">
-          <a href="{{ page.permalink }}" class="read-more">더 읽기 &rarr;</a>
-        </div>
-      </article>
+        {% set post_year = "" %}
+        {% set post_month = "" %}
+        {% set post_day = "" %}
+        {% if page.date %}
+          {% set post_year = page.date | date(format="%Y") %}
+          {% set post_month = page.date | date(format="%b") %}
+          {% set post_day = page.date | date(format="%d") %}
+        {% endif %}
+
+        {% set is_new_year = (post_year != "" and post_year != sky_year) %}
+        {% set is_new_month = (is_new_year or (post_month != "" and post_month != sky_month)) %}
+        {% set is_new_day = (is_new_month or (post_day != "" and post_day != sky_day)) %}
+
+        {% if is_new_day and not loop.first %}
+              </ul> <!-- day-items -->
+            </li> <!-- day -->
+        {% endif %}
+        {% if is_new_month and not loop.first %}
+            </ul> <!-- month-items -->
+          </li> <!-- month -->
+        {% endif %}
+        {% if is_new_year and not loop.first %}
+            </ul> <!-- year-items -->
+          </li> <!-- year -->
+        {% endif %}
+
+        {% if is_new_year %}
+          {% set_global sky_year = post_year %}
+          <li class="year">
+            <div class="year-info">
+              <h2 class="year-title">{{ post_year }}</h2>
+            </div>
+            <ul class="year-items">
+        {% endif %}
+
+        {% if is_new_month %}
+          {% set_global sky_month = post_month %}
+          <li class="month">
+            <div class="month-title">
+              <span class="month-sticky">{{ post_month }}</span>
+            </div>
+            <ul class="month-items">
+        {% endif %}
+
+        {% if is_new_day %}
+          {% set_global sky_day = post_day %}
+          <li class="day">
+            <div class="day-title">
+              <span class="day-sticky">{{ post_day }}</span>
+            </div>
+            <ul class="day-items">
+        {% endif %}
+
+        <li class="item">
+          <article class="post-entry">
+            <div class="post-entry-main">
+              <h2 class="post-entry-title">
+                <a href="{{ page.permalink }}">{{ page.title }}</a>
+              </h2>
+
+              {% set subtitle = "" %}
+              {% if page.extra and page.extra.subtitle %}
+                {% set subtitle = page.extra.subtitle %}
+              {% elif page.description %}
+                {% set subtitle = page.description %}
+              {% elif page.summary %}
+                {% set subtitle = page.summary | regex_replace(pattern="(?s)^\\s*<h1[^>]*>.*?</h1>\\s*", rep="") | striptags | trim | truncate(length=140) %}
+              {% else %}
+                {% set subtitle = page.content | regex_replace(pattern="(?s)^\\s*<h1[^>]*>.*?</h1>\\s*", rep="") | striptags | trim | truncate(length=140) %}
+              {% endif %}
+
+              {% if subtitle %}
+              <p class="post-entry-subtitle">{{ subtitle }}</p>
+              {% endif %}
+
+              {% if page.extra and (page.extra.place or page.extra.equip or page.extra.bright) %}
+              <div class="post-entry-obs-meta">
+                {%- if page.extra.place -%}
+                  {% set place_page = get_page(path="sky/site/" ~ page.extra.place ~ ".md") %}
+                  <span class="obs-meta-item"><svg class="obs-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> <a href="{{ place_page.permalink }}">{{ place_page.title | default(value=page.extra.place) }}</a></span>
+                {%- endif -%}
+                {%- if page.extra.equip -%}
+                  <span class="obs-meta-item"><svg class="obs-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12 12-5 2 4-12 5z"/><path d="m15 5 4 8"/><path d="m6 22 5-8 5 8"/></svg> {{ page.extra.equip }}</span>
+                {%- endif -%}
+                {%- if page.extra.bright -%}
+                  <span class="obs-meta-item"><svg class="obs-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg> Bortle {{ page.extra.bright }}</span>
+                {%- endif -%}
+              </div>
+              {% endif %}
+
+              {% if page.extra.skybody %}
+              <div class="post-entry-tags">
+                {% set body_slugs = page.extra.skybody | split(pat=",") %}
+                {% for b in body_slugs %}
+                  {% set clean_b = b | trim %}
+                  <a href="{{ get_url(path="sky/body/" ~ clean_b ~ ".html") }}" class="post-entry-tag" style="text-decoration: none;">#{{ clean_b }}</a>
+                {% endfor %}
+              </div>
+              {% endif %}
+            </div>
+          </article>
+        </li>
+
+        {% if loop.index == 10 or loop.last %}
+              </ul> <!-- day-items -->
+            </li> <!-- day -->
+            </ul> <!-- month-items -->
+          </li> <!-- month -->
+          </ul> <!-- year-items -->
+        </li> <!-- year -->
+        {% endif %}
       {% endif %}
       {% endfor %}
-    </div>
+    </ul>
   </section>
 
   {% if section.content %}

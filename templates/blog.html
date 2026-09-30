@@ -14,61 +14,155 @@
   </div>
   {% endif %}
 
-  <div class="posts-list">
+  <ul class="archive-list">
+    {% set_global current_year = "" %}
+    {% set_global current_month = "" %}
+    {% set_global current_day = "" %}
+
     {% for page in paginator.pages %}
-    <article class="post-card">
-      <header class="post-card-header">
-        <h2><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
-        <div class="post-card-meta">
-          {%- if page.extra and page.extra.trip_date -%}
-            {%- if page.updated and (page.updated | date(format="%Y-%m-%d") != page.date | date(format="%Y-%m-%d")) -%}
-              <span class="post-trip-date">여행: <time datetime="{{ page.date }}">{{ page.extra.trip_date }}</time></span>
-              <span class="post-published">(발행: <time datetime="{{ page.updated }}">{{ page.updated | date(format="%Y-%m-%d") }}</time>)</span>
-            {%- elif page.extra.trip_date != (page.date | date(format="%Y-%m-%d")) -%}
-              <span class="post-trip-date">여행: <time>{{ page.extra.trip_date }}</time></span>
-              <span class="post-published">(발행: <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time>)</span>
-            {%- elif page.date -%}
-              <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
-            {%- endif -%}
-          {%- else -%}
-            {% if page.date %}
-            <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
+      {% set post_year = "" %}
+      {% set post_month = "" %}
+      {% set post_day = "" %}
+      {% if page.date %}
+        {% set post_year = page.date | date(format="%Y") %}
+        {% set post_month = page.date | date(format="%b") %}
+        {% set post_day = page.date | date(format="%d") %}
+      {% endif %}
+
+      {% set is_new_year = (post_year != "" and post_year != current_year) %}
+      {% set is_new_month = (is_new_year or (post_month != "" and post_month != current_month)) %}
+      {% set is_new_day = (is_new_month or (post_day != "" and post_day != current_day)) %}
+
+      {% if is_new_day and not loop.first %}
+            </ul> <!-- day-items -->
+          </li> <!-- day -->
+      {% endif %}
+      {% if is_new_month and not loop.first %}
+          </ul> <!-- month-items -->
+        </li> <!-- month -->
+      {% endif %}
+      {% if is_new_year and not loop.first %}
+          </ul> <!-- year-items -->
+        </li> <!-- year -->
+      {% endif %}
+
+      {% if is_new_year %}
+        {% set_global current_year = post_year %}
+        <li class="year">
+          <div class="year-info">
+            <h2 class="year-title">{{ post_year }}</h2>
+          </div>
+          <ul class="year-items">
+      {% endif %}
+
+      {% if is_new_month %}
+        {% set_global current_month = post_month %}
+        <li class="month">
+          <div class="month-title">
+            <span class="month-sticky">{{ post_month }}</span>
+          </div>
+          <ul class="month-items">
+      {% endif %}
+
+      {% if is_new_day %}
+        {% set_global current_day = post_day %}
+        <li class="day">
+          <div class="day-title">
+            <span class="day-sticky">
+              {%- if page.extra and page.extra.trip_date and page.extra.trip_date is containing(pat="~") -%}
+                <span class="is-range" title="{{ page.extra.trip_date }}">{{ page.extra.trip_date | regex_replace(pattern="^\\d{4}-\\d{2}-(\\d{2})\\s*~\\s*\\d{4}-\\d{2}-(\\d{2})$", rep="$1~$2") }}</span>
+              {%- else -%}
+                {{ post_day }}
+              {%- endif -%}
+            </span>
+          </div>
+          <ul class="day-items">
+      {% endif %}
+
+      <li class="item">
+        <article class="post-entry">
+          <div class="post-entry-main">
+            <h2 class="post-entry-title">
+              <a href="{{ page.permalink }}">{{ page.title }}</a>
+            </h2>
+
+            {# Subtitle resolution: 1. extra.subtitle, 2. description, 3. sanitized summary fallback #}
+            {% set subtitle = "" %}
+            {% if page.extra and page.extra.subtitle %}
+              {% set subtitle = page.extra.subtitle %}
+            {% elif page.description %}
+              {% set subtitle = page.description %}
+            {% elif page.summary %}
+              {% set subtitle = page.summary | regex_replace(pattern="(?s)^\\s*<h1[^>]*>.*?</h1>\\s*", rep="") | striptags | trim | truncate(length=140) %}
+            {% else %}
+              {% set subtitle = page.content | regex_replace(pattern="(?s)^\\s*<h1[^>]*>.*?</h1>\\s*", rep="") | striptags | trim | truncate(length=140) %}
             {% endif %}
-            {% if page.updated and (not page.date or page.updated | date(format="%Y-%m-%d") != page.date | date(format="%Y-%m-%d")) %}
-            <span class="post-updated">{% if page.date %}(수정: {% else %}수정: {% endif %}<time datetime="{{ page.updated }}">{{ page.updated | date(format="%Y-%m-%d") }}</time>{% if page.date %}){% endif %}</span>
+
+            {% if subtitle %}
+            <p class="post-entry-subtitle">{{ subtitle }}</p>
             {% endif %}
-          {%- endif -%}
-          {% if page.taxonomies.tags %}
-          <span class="tags">
-            {% for t in page.taxonomies.tags %}
-            <span class="tag">#{{ t }}</span>
-            {% endfor %}
-          </span>
-          {% endif %}
-        </div>
-      </header>
-      <div class="post-card-summary">
-        {% if page.description %}
-          <p>{{ page.description }}</p>
-        {% elif page.summary %}
-          {{ page.summary | regex_replace(pattern="(?s)^\\s*<h1[^>]*>.*?</h1>\\s*", rep="") | safe }}
-        {% else %}
-          {{ page.content | regex_replace(pattern="(?s)^\\s*<h1[^>]*>.*?</h1>\\s*", rep="") | striptags | truncate(length=200) }}
-        {% endif %}
-      </div>
-      <div class="post-card-footer">
-        <a href="{{ page.permalink }}" class="read-more">더 읽기 &rarr;</a>
-      </div>
-    </article>
+
+            {% if page.extra and (page.extra.place or page.extra.equip or page.extra.bright) %}
+            <div class="post-entry-obs-meta">
+              {%- if page.extra.place -%}
+                {% set place_page = get_page(path="sky/site/" ~ page.extra.place ~ ".md") %}
+                <span class="obs-meta-item"><svg class="obs-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> <a href="{{ place_page.permalink }}">{{ place_page.title | default(value=page.extra.place) }}</a></span>
+              {%- endif -%}
+              {%- if page.extra.equip -%}
+                <span class="obs-meta-item"><svg class="obs-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12 12-5 2 4-12 5z"/><path d="m15 5 4 8"/><path d="m6 22 5-8 5 8"/></svg> {{ page.extra.equip }}</span>
+              {%- endif -%}
+              {%- if page.extra.bright -%}
+                <span class="obs-meta-item"><svg class="obs-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg> Bortle {{ page.extra.bright }}</span>
+              {%- endif -%}
+            </div>
+            {% endif %}
+
+            {% if page.taxonomies.tags or (page.extra and page.extra.skybody) %}
+            <div class="post-entry-tags">
+              {% if page.taxonomies.tags %}
+                {% for t in page.taxonomies.tags %}
+                <span class="post-entry-tag">#{{ t }}</span>
+                {% endfor %}
+              {% endif %}
+              {% if page.extra and page.extra.skybody %}
+                {% set body_slugs = page.extra.skybody | split(pat=",") %}
+                {% for b in body_slugs %}
+                  {% set clean_b = b | trim %}
+                  <span class="post-entry-tag">#{{ clean_b }}</span>
+                {% endfor %}
+              {% endif %}
+            </div>
+            {% endif %}
+          </div>
+        </article>
+      </li>
     {% endfor %}
-  </div>
+
+    {% if paginator.pages | length > 0 %}
+          </ul> <!-- day-items -->
+        </li> <!-- day -->
+        </ul> <!-- month-items -->
+      </li> <!-- month -->
+      </ul> <!-- year-items -->
+    </li> <!-- year -->
+    {% endif %}
+  </ul>
 
   {% if paginator.number_pagers > 1 %}
   <nav class="pagination">
     {% if paginator.previous %}
       <a href="{{ paginator.previous }}" class="page-prev">&larr; 이전</a>
     {% endif %}
-    <span class="page-current">{{ paginator.current_index }} / {{ paginator.number_pagers }}</span>
+    <div class="pagination-numbers">
+      {% for i in range(start=1, end=paginator.number_pagers + 1) %}
+        {% if i == paginator.current_index %}
+          <span class="page-num current" aria-current="page">{{ i }}</span>
+        {% else %}
+          <a href="{% if i == 1 %}{{ paginator.first }}{% else %}{{ paginator.base_url ~ i ~ '/' }}{% endif %}" class="page-num">{{ i }}</a>
+        {% endif %}
+        {% if not loop.last %}<span class="page-sep">|</span>{% endif %}
+      {% endfor %}
+    </div>
     {% if paginator.next %}
       <a href="{{ paginator.next }}" class="page-next">다음 &rarr;</a>
     {% endif %}
