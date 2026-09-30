@@ -11,14 +11,16 @@
 
   <div class="page-body">
     <!-- Horizontal Year Navigation -->
-    <nav class="archive-years-nav" aria-label="연도별 이동">
-      {% for group in year_groups %}
-        {% set year = group[0] %}
-        {% set posts = group[1] %}
-        {% if year != "null" and year != "" %}
-        <a href="#year-{{ year }}" class="year-link">{{ year }} <span class="count">({{ posts | length }})</span></a>
-        {% endif %}
-      {% endfor %}
+    <nav class="archive-years-wrap" aria-label="연도별 이동">
+      <ul class="archive-years-nav">
+        {% for group in year_groups %}
+          {% set year = group[0] %}
+          {% set posts = group[1] %}
+          {% if year != "null" and year != "" %}
+          <li class="archive-year-item"><a href="#year-{{ year }}" class="year-link">{{ year }} <span class="count">({{ posts | length }})</span></a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
     </nav>
 
     <!-- Year Sections -->

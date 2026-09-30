@@ -65,17 +65,24 @@
     margin-bottom: 0.8rem;
 
     .hobby-card-icon-wrap {
-      font-size: 1.9rem;
-      line-height: 1;
       padding: 0.5rem;
-      background-color: var(--accent-light);
+      background-color: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      color: var(--text-color);
       border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      width: 48px;
-      height: 48px;
+      width: 44px;
+      height: 44px;
+
+      svg {
+        width: 22px;
+        height: 22px;
+        stroke: currentColor;
+        stroke-width: 1.8;
+      }
     }
 
     .hobby-card-title-group {
@@ -93,7 +100,8 @@
           text-decoration: none;
 
           &:hover {
-            color: var(--primary);
+            color: var(--text-color);
+            text-decoration: underline;
           }
         }
       }
@@ -130,18 +138,18 @@
         align-items: center;
         gap: 0.25rem;
         font-size: 0.78rem;
-        padding: 0.25rem 0.55rem;
-        border-radius: 6px;
-        background-color: var(--code-bg);
+        padding: 0.22rem 0.55rem;
+        border-radius: 5px;
+        background-color: var(--tag-bg);
         color: var(--text-color);
-        border: 1px solid var(--border-color);
+        border: 1px solid var(--tag-border);
         text-decoration: none;
         transition: all 0.15s ease;
 
         &:hover {
-          background-color: var(--accent-light);
-          color: var(--primary);
-          border-color: var(--primary);
+          background-color: var(--bg-hover);
+          color: var(--text-color);
+          border-color: var(--border-color);
           text-decoration: none;
         }
       }
@@ -215,18 +223,19 @@
       display: inline-flex;
       align-items: center;
       gap: 0.35rem;
-      padding: 0.3rem 0.75rem;
+      padding: 0.28rem 0.75rem;
       border-radius: 999px;
-      background-color: var(--accent-light);
-      color: var(--primary);
+      background-color: var(--tag-bg);
+      color: var(--text-color);
       font-size: 0.82rem;
       font-weight: 500;
-      border: 1px solid transparent;
+      border: 1px solid var(--tag-border);
       text-decoration: none;
       transition: all 0.15s ease;
 
       &:hover {
-        border-color: var(--primary);
+        background-color: var(--bg-hover);
+        border-color: var(--border-color);
         transform: translateY(-1px);
       }
     }
@@ -251,74 +260,5 @@
       color: var(--text-color);
     }
   }
-
-  .hobby-recent-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.9rem;
-
-    .hobby-recent-item {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 0.75rem 1rem;
-      background-color: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      transition: border-color 0.15s ease, transform 0.15s ease;
-
-      @include mobile {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.35rem;
-      }
-
-      &:hover {
-        border-color: var(--primary);
-        transform: translateX(3px);
-      }
-
-      .hobby-recent-left {
-        display: flex;
-        align-items: center;
-        gap: 0.6rem;
-        flex: 1;
-        min-width: 0;
-
-        .hobby-item-category {
-          display: inline-flex;
-          align-items: center;
-          gap: 0.25rem;
-          font-size: 0.75rem;
-          font-weight: 600;
-          padding: 0.15rem 0.5rem;
-          border-radius: 4px;
-          background-color: var(--accent-light);
-          color: var(--primary);
-          flex-shrink: 0;
-        }
-
-        .hobby-item-title {
-          font-size: 0.95rem;
-          color: var(--text-color);
-          text-decoration: none;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-
-          &:hover {
-            color: var(--primary);
-            text-decoration: underline;
-          }
-        }
-      }
-
-      .hobby-item-date {
-        font-size: 0.82rem;
-        color: var(--text-muted);
-        flex-shrink: 0;
-      }
-    }
-  }
 }
+

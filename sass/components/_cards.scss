@@ -400,11 +400,119 @@ body:has(.sub-header) {
   display: none;
 }
 
+/* ==========================================================================
+   Recent Posts on Main Index (Editorial 2-Column List)
+   ========================================================================== */
+
+.recent-posts-list {
+  list-style: none;
+  margin: 1.4rem 0 2.8rem 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.recent-post-item {
+  display: grid;
+  grid-template-columns: 6.2rem 1fr;
+  gap: 0 1.2rem;
+  align-items: baseline;
+  padding: 0;
+  margin: 0;
+
+  @include mobile {
+    grid-template-columns: 5.5rem 1fr;
+    gap: 0 0.85rem;
+  }
+}
+
+.recent-post-section {
+  text-align: right;
+  line-height: 1.4;
+
+  .recent-section-link {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--text-muted);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.15s ease;
+
+    @include mobile {
+      font-size: 0.72rem;
+      letter-spacing: 0.02em;
+    }
+
+    &:hover {
+      color: var(--text-color);
+      text-decoration: none;
+    }
+  }
+}
+
+.recent-post-main {
+  min-width: 0;
+
+  .recent-post-title {
+    font-size: 1.15rem;
+    font-weight: 550;
+    line-height: 1.4;
+    letter-spacing: -0.015em;
+    margin: 0 0 0.25rem 0 !important;
+    padding: 0 !important;
+    border-bottom: none !important;
+
+    a {
+      color: var(--text-color);
+      text-decoration: none;
+      transition: color 0.15s ease;
+
+      &:hover {
+        color: var(--text-color);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+    }
+  }
+
+  .recent-post-date {
+    font-size: 0.82rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--text-muted);
+    line-height: 1.4;
+
+    .recent-date-sep {
+      margin: 0 0.25rem;
+      opacity: 0.6;
+    }
+
+    .recent-date-updated {
+      margin-left: 0.2rem;
+      opacity: 0.85;
+    }
+  }
+}
+
 .read-more {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   margin-top: 0.75rem;
-  font-weight: 600;
-  color: var(--primary);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: var(--text-color);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
 }
 
 .pagination {
