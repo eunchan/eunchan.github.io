@@ -1,4 +1,4 @@
-.PHONY: build serve deploy clean
+.PHONY: build serve deploy clean media-push media-pull sync-media-push sync-media-pull build-prod
 
 ZOLA_PATH = ./tools/zola
 ZOLA_TARGET = release
@@ -13,7 +13,23 @@ build:
 serve:
 	${ZOLA} serve
 
-deploy:
+# 미디어 GCS 동기화 (로컬 -> GCS)
+media-push:
+	@python3 tools/sync-media.py push
+
+# 미디어 복구 / 내려받기 (GCS -> 로컬)
+# 새 시스템에서 git clone 후 실행하거나 로컬 이미지 분실 시 원클릭 복구
+media-pull:
+	@python3 tools/sync-media.py pull
+
+sync-media-push: media-push
+sync-media-pull: media-pull
+
+# 배포용 프로덕션 빌드 (Zola 빌드 후 URL 치환 및 에셋 최적화)
+build-prod: build
+	@python3 tools/rewrite-media-urls.py
+
+deploy: media-push
 	@if [ "$$(jj --no-pager log -r '@' --no-graph -T 'empty')" != "true" ]; then \
 		echo "❌ Error: 작업 복사본(@)에 커밋되지 않은 변경사항이 있습니다. 커밋 후 실행하세요." >&2; \
 		exit 1; \

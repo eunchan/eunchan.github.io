@@ -11,3 +11,17 @@ Makefile
 
 public/
 tools/zola/target/
+
+# Media files managed via GCS (storage.eunchan.kim)
+/static/media/
+content/**/*.jpg
+content/**/*.jpeg
+content/**/*.png
+content/**/*.webp
+content/**/*.gif
+content/**/*.svg
+content/**/*.heic
+
+# Keep UI essentials
+!/static/img/
+!/static/vendor/
