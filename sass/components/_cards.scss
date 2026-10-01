@@ -92,6 +92,10 @@ body:has(.sub-header) {
     position: relative;
     margin-bottom: 2.8rem;
 
+    @include mobile {
+      margin-bottom: 0;
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -109,6 +113,10 @@ body:has(.sub-header) {
     padding: 0.6rem 0 0.4rem 0;
     margin: 0 0 1.2rem 0;
     border-bottom: none !important;
+
+    @include mobile {
+      display: none;
+    }
 
     .year-title {
       font-size: 1.35rem;
@@ -134,6 +142,11 @@ body:has(.sub-header) {
     margin-bottom: 2rem;
     position: relative;
 
+    @include mobile {
+      display: block;
+      margin-bottom: 2rem;
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -142,6 +155,26 @@ body:has(.sub-header) {
   .month-title {
     position: relative;
     margin: 0;
+
+    .month-year-suffix {
+      display: none;
+
+      @include mobile {
+        display: inline;
+        font-weight: 500;
+        margin-left: 0.3rem;
+        color: inherit;
+      }
+    }
+
+    @include mobile {
+      position: sticky;
+      top: var(--header-offset);
+      z-index: 15;
+      background-color: var(--bg-color);
+      margin: 0 -1.25rem 0.5rem -1.25rem;
+      padding: 0.65rem 1.25rem 0.45rem 1.25rem;
+    }
   }
 
   .month-sticky {
@@ -156,6 +189,22 @@ body:has(.sub-header) {
     padding-top: 0.22rem;
     text-align: right;
     z-index: 10;
+
+    @include mobile {
+      position: static;
+      display: inline-block;
+      text-align: left;
+      font-size: 1.15rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.015em;
+      color: var(--text-color);
+      padding: 0;
+      background: none;
+      border: none;
+      border-radius: 0;
+      line-height: 1.2;
+    }
   }
 
   /* --- Day Level --- */
@@ -165,6 +214,12 @@ body:has(.sub-header) {
     gap: 0 1.2rem;
     margin-bottom: 1.4rem;
     position: relative;
+
+    @include mobile {
+      grid-template-columns: 2.2rem 1fr;
+      gap: 0 0.8rem;
+      margin-bottom: 1.2rem;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -187,6 +242,12 @@ body:has(.sub-header) {
     padding-top: 0.15rem;
     text-align: right;
     z-index: 10;
+
+    @include mobile {
+      top: calc(var(--header-offset) + 2.45rem);
+      font-size: 0.92rem;
+      padding-top: 0.1rem;
+    }
 
     .is-range {
       font-size: 0.8rem;
