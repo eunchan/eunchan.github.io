@@ -1,12 +1,12 @@
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--family-sans);
   color: var(--text-color);
   line-height: 1.35;
 }
 
 h1 {
+  font-family: var(--family-serif);
   font-size: 2.4rem;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.025em;
   margin-top: 1.8rem;
   margin-bottom: 1.2rem;
@@ -14,6 +14,10 @@ h1 {
   @include mobile {
     font-size: 2rem;
   }
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: var(--family-sans);
 }
 
 h2 {
@@ -212,7 +216,7 @@ figure {
 .section-desc {
   font-family: var(--family-serif);
 
-  h1, h2, h3, h4, h5, h6 {
+  h2, h3, h4, h5, h6 {
     font-family: var(--family-sans);
   }
 

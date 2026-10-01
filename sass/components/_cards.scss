@@ -51,12 +51,12 @@
 .tag {
   display: inline-block;
   font-size: 0.78rem;
-  font-weight: 450;
+  font-weight: 300;
   color: var(--tag-color);
-  background: var(--tag-bg);
-  border: 1px solid var(--tag-border);
-  padding: 0.12rem 0.45rem;
-  border-radius: 4px;
+  // background: var(--tag-bg);
+  // border: 1px solid var(--tag-border);
+  padding: 0.12rem 0.25rem;
+  // border-radius: 4px;
   line-height: 1.4;
   letter-spacing: -0.01em;
   transition: all 0.15s ease;
@@ -88,7 +88,7 @@ body:has(.sub-header) {
   margin-top: 0.5rem;
 
   /* --- Year Level --- */
-  > .year {
+  >.year {
     position: relative;
     margin-bottom: 2.8rem;
 
@@ -127,7 +127,7 @@ body:has(.sub-header) {
   }
 
   /* --- Month Level --- */
-  .year-items > .month {
+  .year-items>.month {
     display: grid;
     grid-template-columns: 2.8rem 1fr;
     gap: 0 0.6rem;
@@ -159,7 +159,7 @@ body:has(.sub-header) {
   }
 
   /* --- Day Level --- */
-  .month-items > .day {
+  .month-items>.day {
     display: grid;
     grid-template-columns: 2.8rem 1fr;
     gap: 0 1.2rem;
@@ -201,7 +201,7 @@ body:has(.sub-header) {
     flex-direction: column;
     gap: 0.85rem;
 
-    > .item {
+    >.item {
       position: relative;
     }
   }
@@ -310,7 +310,7 @@ body:has(.sub-header) {
       }
     }
 
-    .year-items > .month {
+    .year-items>.month {
       grid-template-columns: 2.2rem 1fr;
       gap: 0 0.35rem;
       margin-bottom: 1.5rem;
@@ -321,7 +321,7 @@ body:has(.sub-header) {
       padding-top: 0.22rem;
     }
 
-    .month-items > .day {
+    .month-items>.day {
       grid-template-columns: 2.3rem 1fr;
       gap: 0 0.75rem;
       margin-bottom: 1.1rem;
@@ -398,8 +398,8 @@ body:has(.sub-header) {
   line-height: 1.7;
 }
 
-.post-card-summary > h1:first-child,
-.page-body > h1:first-child {
+.post-card-summary>h1:first-child,
+.page-body>h1:first-child {
   display: none;
 }
 
@@ -436,6 +436,7 @@ body:has(.sub-header) {
 
   .recent-section-link {
     display: inline-block;
+    font-family: var(--family-sans);
     font-size: 0.82rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -585,4 +586,3 @@ body:has(.sub-header) {
     }
   }
 }
-
