@@ -244,6 +244,11 @@ body:has(.sub-header) {
         margin: 0 0 0.45rem 0;
         word-break: keep-all;
         overflow-wrap: break-word;
+
+        @include mobile {
+          word-break: normal;
+          text-wrap: pretty;
+        }
       }
 
       .post-entry-obs-meta {

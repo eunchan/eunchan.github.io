@@ -51,6 +51,11 @@ p {
   margin-bottom: 1.25rem;
   word-break: keep-all;
   overflow-wrap: break-word;
+
+  @include mobile {
+    word-break: normal;
+    text-wrap: pretty;
+  }
 }
 
 ul, ol {
@@ -60,6 +65,13 @@ ul, ol {
 
 li {
   margin-bottom: 0.35rem;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+
+  @include mobile {
+    word-break: normal;
+    text-wrap: pretty;
+  }
 }
 
 hr {
