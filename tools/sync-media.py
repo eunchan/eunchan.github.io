@@ -73,7 +73,7 @@ def build_rsync_cmd(cli_type: str, bin_path: str, src: str, dst: str, dry_run: b
     exclude_regex = r".*\.DS_Store$|.*\.gitkeep$"
 
     if cli_type == "gcloud":
-        cmd = [bin_path, "storage", "rsync", "--recursive", f"--exclude={exclude_regex}"]
+        cmd = [bin_path, "storage", "rsync", "--recursive", "-u", f"--exclude={exclude_regex}"]
         if dry_run:
             cmd.append("--dry-run")
         cmd.extend([src, dst])
