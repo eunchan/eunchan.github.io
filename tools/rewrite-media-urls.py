@@ -68,7 +68,27 @@ def process_html_content(content: str, html_url_path: str) -> tuple[str, int]:
     """
     count = 0
 
-    # 패턴 1: <img ... src="..." ...> 및 <img ... src='...' ...>
+    # 1. 따옴표로 감싸진 모든 /media/... 경로 치환 (태그 속성, JSON 데이터, 스크립트 객체 일괄 처리)
+    # 예: "image": "/media/...", src="/media/...", style="...url('/media/...')..."
+    def replace_quoted_media(match):
+        nonlocal count
+        quote = match.group(1)
+        path = match.group(2)
+        count += 1
+        return f"{quote}{CDN_BASE_URL}/media/{path}{quote}"
+
+    content = re.sub(r'(["\'])/media/([^"\'\s>]+)\1', replace_quoted_media, content)
+
+    # 2. 따옴표 없는 CSS url(/media/...) 패턴 치환
+    def replace_unquoted_css_url(match):
+        nonlocal count
+        path = match.group(1)
+        count += 1
+        return f"url({CDN_BASE_URL}{path})"
+
+    content = re.sub(r'url\(\s*(/media/[^"\'\)\s]+)\s*\)', replace_unquoted_css_url, content)
+
+    # 3. Post Colocation 상대 경로 이미지 치환 (예: <img src="photo.jpg">, <a href="photo.jpg">)
     def replace_img_src(match):
         nonlocal count
         prefix = match.group(1)
@@ -81,7 +101,6 @@ def process_html_content(content: str, html_url_path: str) -> tuple[str, int]:
             return f'{prefix}src={quote}{new_url}{quote}{suffix}'
         return match.group(0)
 
-    # <img ... src="..." ...>
     content = re.sub(
         r'(<img\b[^>]*?\s)src=(["\'])(.*?)\2([^>]*>)',
         replace_img_src,
@@ -89,14 +108,12 @@ def process_html_content(content: str, html_url_path: str) -> tuple[str, int]:
         flags=re.IGNORECASE | re.DOTALL,
     )
 
-    # 패턴 2: <picture><source ... srcset="..." ...>
     def replace_source_srcset(match):
         nonlocal count
         prefix = match.group(1)
         quote = match.group(2)
         srcset = match.group(3)
         suffix = match.group(4)
-        # srcset은 'url 1x, url 2x' 형태일 수 있음
         parts = []
         changed = False
         for part in srcset.split(","):
@@ -122,7 +139,6 @@ def process_html_content(content: str, html_url_path: str) -> tuple[str, int]:
         flags=re.IGNORECASE | re.DOTALL,
     )
 
-    # 패턴 3: <a ... href="image.jpg" ...> (이미지를 직접 링크한 경우)
     def replace_a_href(match):
         nonlocal count
         prefix = match.group(1)
@@ -143,12 +159,9 @@ def process_html_content(content: str, html_url_path: str) -> tuple[str, int]:
         flags=re.IGNORECASE | re.DOTALL,
     )
 
-    # 패턴 4: OpenGraph / Twitter meta image
-    # <meta property="og:image" content="..." />
     def replace_meta_image(match):
         nonlocal count
         tag = match.group(0)
-        # content="..." 추출
         m = re.search(r'content=(["\'])(.*?)\1', tag, flags=re.IGNORECASE)
         if m:
             quote = m.group(1)

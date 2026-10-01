@@ -54,7 +54,6 @@ p {
 
   @include mobile {
     word-break: normal;
-    text-wrap: pretty;
   }
 }
 
@@ -70,7 +69,6 @@ li {
 
   @include mobile {
     word-break: normal;
-    text-wrap: pretty;
   }
 }
 

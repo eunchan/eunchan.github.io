@@ -2,6 +2,14 @@
  * TravelMap: Interactive World Map and Chronological Journey Timeline Controller
  */
 (function () {
+  function resolveMediaUrl(url) {
+    if (!url) return '';
+    if (url.startsWith('/media/')) {
+      return 'https://storage.eunchan.kim' + url;
+    }
+    return url;
+  }
+
   function initTravel() {
     const dataEl = document.getElementById('travel-places-data');
     if (!dataEl) return;
@@ -49,8 +57,9 @@
 
     container.innerHTML = featured
       .map(function (t) {
-        const bgStyle = t.image
-          ? `background-image: url('${t.image}');`
+        const imgUrl = resolveMediaUrl(t.image);
+        const bgStyle = imgUrl
+          ? `background-image: url('${imgUrl}');`
           : 'background-color: var(--code-bg);';
         return `
         <article class="featured-card">
@@ -81,8 +90,9 @@
     container.innerHTML = trips
       .map(function (t) {
         const year = t.date ? t.date.slice(0, 4) : '';
-        const hasImg = Boolean(t.image);
-        const bgStyle = hasImg ? `background-image: url('${t.image}');` : '';
+        const imgUrl = resolveMediaUrl(t.image);
+        const hasImg = Boolean(imgUrl);
+        const bgStyle = hasImg ? `background-image: url('${imgUrl}');` : '';
 
         return `
         <div class="timeline-item" id="trip-${t.id}">
