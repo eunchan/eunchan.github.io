@@ -6,8 +6,9 @@
 }
 
 .post-title {
+  font-family: var(--family-serif);
   font-size: 2.4rem;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.025em;
   line-height: 1.35;
   margin-top: 0;
@@ -213,8 +214,9 @@ body:has(.sub-header) {
 
     .post-entry-main {
       .post-entry-title {
-        font-size: 1.22rem;
-        font-weight: 550;
+        font-family: var(--family-serif);
+        font-size: 1.25rem;
+        font-weight: 600;
         line-height: 1.4;
         letter-spacing: -0.015em;
         margin: 0 0 0.35rem 0 !important;
@@ -235,6 +237,7 @@ body:has(.sub-header) {
       }
 
       .post-entry-subtitle {
+        font-family: var(--family-serif);
         font-size: 0.92rem;
         color: var(--text-muted);
         line-height: 1.6;
@@ -458,8 +461,9 @@ body:has(.sub-header) {
   min-width: 0;
 
   .recent-post-title {
+    font-family: var(--family-serif);
     font-size: 1.15rem;
-    font-weight: 550;
+    font-weight: 600;
     line-height: 1.4;
     letter-spacing: -0.015em;
     margin: 0 0 0.25rem 0 !important;

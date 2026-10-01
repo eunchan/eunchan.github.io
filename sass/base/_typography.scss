@@ -206,3 +206,18 @@ figure {
   }
 }
 
+// Editorial Article & Section Body Typography (Serif)
+.page-body,
+.section-body,
+.section-desc {
+  font-family: var(--family-serif);
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--family-sans);
+  }
+
+  code, pre, kbd, samp {
+    font-family: var(--family-code);
+  }
+}
+
