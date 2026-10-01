@@ -4,7 +4,7 @@ date = 2024-08-20
 description = "3일간의 NorCal BDR (Backcountry Discovery Route) 섹션 1, 2 어드벤처 라이딩 기록. Angels Camp부터 시에라 산맥, Lundy Lake, Masonic Mountain 및 Mt. Patterson 상급 코스 주행기."
 slug = "norcal-bdr-2"
 [taxonomies]
-tags = ["norcan-bdr", "bdr", "ktm-390-adventure", "mt.patterson", "sierra", "lundy-lake"]
+tags = ["norcal-bdr", "bdr", "ktm-390-adventure", "mt.patterson", "sierra", "lundy-lake"]
 [extra]
 trip_date = "2024-08-17 ~ 2024-08-19"
 comments = true
@@ -32,10 +32,16 @@ Pinecrest 캠핑장 근처까지만 가본 게 전부인 데, 처음으로 108�
 정말 잘 포장되어있고, 커브도 심하지 않고, 풍경이 마치 이탈리아 돌로미티 산길을
 달리는 느낌이었습니다.
 
+![108번 도로(Sonora Pass)에서 바라본 풍경](/media/motorcycle/norcal-bdr-2024/01-sonora-pass-highway-108.jpg)
+*108번 도로(Sonora Pass)를 넘어가는 길. 마치 돌로미티 산길을 달리는 듯한 웅장한 바위산 풍경*
+
 산을 넘어와서 Bridgeport에서 늦은 점심을 먹고, 주유를 한 뒤 Lundy Lake 캠핑장에
 자리를 잡았습니다. 주변에 다른 캠핑장도 많이 있긴 한데, 최대한 산 속으로 들어간
 곳에 자리 잡았습니다. 바로 코앞에 반쯤 에메랄드 빛인 호수도 있고, 샤워시설도
 있고, 주변에 깎아지는 절벽이 가득한 산들도 있고 나쁘지 않은 캠핑장이었네요.
+
+![Lundy Lake 진입로 풍경](/media/motorcycle/norcal-bdr-2024/02-lundy-lake-canyon-road.jpg)
+*깎아지른 절벽과 에메랄드빛 호수가 어우러진 런디 레이크(Lundy Lake) 캐니언 로드*
 
 그러나 호스트 오두막 발전기가 밤새도록 돌아가서 고즈넉한 분위기를 느낄 수 없는
 건 조금 아쉬웠습니다. 다음엔 좀 불편하더라도 주립캠핑장으로 가던지, 아니면
@@ -45,18 +51,35 @@ Pinecrest 캠핑장 근처까지만 가본 게 전부인 데, 처음으로 108�
 힘들었습니다.) 와서 맛있는 저녁을 먹고 쉬는 기분은 아마 모토캠핑의 묘미인 듯
 합니다.
 
+![바위 위에서 먹는 캠핑 저녁 식사](/media/motorcycle/norcal-bdr-2024/03-camp-dinner-on-granite-rock.jpg)
+*거대한 화강암 바위 위에 자리를 잡고 조리해 먹는 꿀맛 같은 캠핑 저녁 식사*
+
 하이라이트는 두번째 날이었습니다. 계획한 모든 오프로드 코스가 두번째 날에
 있었습니다. 이 날의 기억은 아마 멘도치노, 데스벨리, 로스트코스트의 기억을
 넘어서는 경험이 된 것 같네요.
+
+![둘째 날 아침 캠핑장 출발 준비](/media/motorcycle/norcal-bdr-2024/04-morning-camp-departure.jpg)
+*둘째 날 아침, 짐을 정리하고 본격적인 오프로드 라이딩 출발을 준비하는 바이크들*
 
 시작으로 오전에는 섹션1의 후반부인 Bodie -> Masonic Mountain 코스를 탔습니다.
 주도로는 험한 길 하나 없지만, 적당히 울퉁불퉁한 길이었고, Bodie를 지난 후엔 정말
 아무도 만나지 못하는 오지로 들어가서 멋진 풍경을 보여줬습니다.
 
+![Bodie에서 마소닉 마운틴으로 향하는 비포장 도로](/media/motorcycle/norcal-bdr-2024/05-bodie-to-masonic-dirt-road.jpg)
+*Bodie를 지나 마소닉 마운틴으로 향하는 광활한 고원 비포장 도로*
+
 Masonic 산을 오르는 길이 두곳인데, 처음 보이는 길은 경사도 심하고 모래가 많아서
 미끄러운 길이더군요. 거길 올라가려다 중간에 실패하고 반대편으로 다시
-올라갔습니다. 정상에서 보는 경치가 끝내주더군요. 아무도 만나지 못하는 오지의
+올라갔습니다.
+
+![마소닉 마운틴 오르막길](/media/motorcycle/norcal-bdr-2024/06-masonic-mountain-steep-climb.jpg)
+*가파른 경사와 미끄러운 모래로 쉽지 않았던 마소닉 마운틴 첫 번째 오르막길*
+
+정상에서 보는 경치가 끝내주더군요. 아무도 만나지 못하는 오지의
 길에서 바이크를 타는 느낌이 정말 좋았습니다.
+
+![마소닉 마운틴 정상에서](/media/motorcycle/norcal-bdr-2024/07-masonic-mountain-summit.jpg)
+*해발 9,225ft (2,812m) 마소닉 마운틴(Masonic Mountain) 정상에서 내려다본 오지의 파노라마*
 
 섹션1을 타고 나면, 어제 멈췄던 Bridgeport가 나옵니다. 거기 도착하니 이번엔 늦지
 않게 12시에 도착하네요. 출발을 9시정도에 했으니, 생각보다는 오래걸렸습니다. 아마
@@ -73,12 +96,18 @@ Masonic 산을 오르는 길이 두곳인데, 처음 보이는 길은 경사도 
 얼굴만해지고 라인 잘못 잡으면 바로 돌 사이에 빠질만한 길인데, 경사는 15도~20도
 정도 되는 길이 스위치백으로 계속 이어집니다.
 
+![패터슨 산(Mt. Patterson) 조망](/media/motorcycle/norcal-bdr-2024/08-approach-to-mt-patterson.jpg)
+*저 멀리 거대한 위용을 드러낸 패터슨 산(Mt. Patterson)과 상급 코스 능선*
+
 언덕을 올라가다가 앞바퀴가 돌을 올라타며 튀어서 넘어지며 작은 부상을 당했습니다.
 휴식이 필요했죠. 시간이 넉넉하진 않아서 전 쉬고 일행들만 Mt.Patterson에
 올라갔습니다. 아쉽더군요. 좀 더 힘내면 못 올라갈 것 같지는 않았는데, 나중에
 들어보니 마지막 구간은 미끄러운 자갈이라 좀 더 연습해야지만 올라갈 수
 있겠더군요. 그래도 그 전까지만이라도 올라가고 싶었는데 첫번째 고개에서 돌아서게
 되서 아쉬웠네요.
+
+![패터슨 산 오르막 돌밭에서 전도된 바이크](/media/motorcycle/norcal-bdr-2024/09-fallen-bike-on-patterson-ascent.jpg)
+*가파른 돌밭 오르막에서 앞바퀴가 튀며 균형을 잃고 넘어진 KTM 390 Adventure*
 
 그렇게 아쉽게 Mt.Patterson 코스를 접고 그 다음 섹션2 상급 코스를 계속
 진행했습니다. 이때까지만 해도 같은 상급코스인줄 알았어서, Mt.Patterson
@@ -88,6 +117,9 @@ Masonic 산을 오르는 길이 두곳인데, 처음 보이는 길은 경사도 
 바로 나오는 Cartwheel 언덕은 어떤 의미론 Mt.Patterson보다 더 험했습니다. 특히
 내리막길은 좌, 우 어디 갈 곳이 보이지 않고 얼굴만한 돌이 가득한 고난이도
 길이었습니다.
+
+![악명 높은 카트휠(Cartwheel) 언덕의 내리막 돌밭](/media/motorcycle/norcal-bdr-2024/10-cartwheel-hill-rock-garden.jpg)
+*얼굴만 한 바위와 돌이 가득 널려 있어 내려가기조차 험난했던 카트휠(Cartwheel) 내리막*
 
 다른 사람들에게도 마찬가지였는지, 같이간 일행이 꽤 고생했는데, 마지막 제일 험한
 부분은 옆으로 샛길이 있어서, 이미 모르고 진입한 저만 고생하고 일행은 그나마 덜
@@ -110,6 +142,9 @@ Masonic 산을 오르는 길이 두곳인데, 처음 보이는 길은 경사도 
 돌밭이 별로 없다고 들어서 가까운곳에 비슷한 게 있는지 조금 찾아봐야할 것 같네요.
 
 그렇게 지친 몸으로 Topaz에 가서 기절한 뒤 다음날 4번 도로를 타고 돌아왔습니다.
+
+![4번 도로 복귀길 헬멧에 끼어버린 새](/media/motorcycle/norcal-bdr-2024/11-route-4-helmet-bird-strike.jpg)
+*복귀길 4번 도로에서 헬멧 바이저 틈새로 날아와 끼어버린 새 (웃지 못할 뜻밖의 해프닝)*
 
 바이크는 적당히 망가졌습니다. 핸드가드는 바이스 없이는 펴지 못할 정도로
 구부러졌습니다. 엔진가드는 스크래치가 가득하고, 엔진 케이스에도 꽤 많은
