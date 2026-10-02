@@ -77,6 +77,12 @@ body:has(.sub-header) {
   --date-sticky-top: calc(var(--header-offset) + var(--year-sticky-height));
 }
 
+@include mobile {
+  body.header-hidden {
+    --header-offset: 0px !important;
+  }
+}
+
 .archive-list,
 .archive-list ul {
   list-style: none;
@@ -192,6 +198,7 @@ body:has(.sub-header) {
       display: flex;
       align-items: flex-start;
       line-height: 1 !important;
+      transition: top 0.25s ease;
     }
   }
 
@@ -266,6 +273,7 @@ body:has(.sub-header) {
       top: calc(var(--header-offset) + 1.4rem);
       font-size: 0.92rem;
       padding-top: 0.05rem;
+      transition: top 0.25s ease;
     }
 
     .is-range {
