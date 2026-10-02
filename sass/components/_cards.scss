@@ -68,7 +68,7 @@
 
 :root {
   --header-offset: 49px;
-  --year-sticky-height: 54px;
+  --year-sticky-height: 28px;
   --date-sticky-top: calc(var(--header-offset) + var(--year-sticky-height));
 }
 
@@ -105,13 +105,13 @@ body:has(.sub-header) {
     position: sticky;
     top: var(--header-offset);
     z-index: 20;
-    background-color: var(--bg-color);
+    background-color: transparent !important;
+    pointer-events: none;
     display: grid;
     grid-template-columns: 6.2rem 1fr;
     gap: 0 1.2rem;
-    align-items: end;
-    padding: 0.6rem 0 0.4rem 0;
-    margin: 0 0 1.2rem 0;
+    padding: 0;
+    margin: 0 0 0.5rem 0;
     border-bottom: none !important;
 
     @include mobile {
@@ -119,18 +119,27 @@ body:has(.sub-header) {
     }
 
     .year-title {
-      font-size: 1.35rem;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      background-color: var(--bg-color);
+      pointer-events: auto;
+      margin: 0 !important;
+      padding: 0.15rem 0 0 0 !important;
+      font-size: 1.25rem;
       font-weight: 700;
       font-variant-numeric: tabular-nums;
       letter-spacing: -0.015em;
       color: var(--text-color);
-      line-height: 1.2;
-      margin: 0 !important;
-      padding: 0 0 0.25rem 0 !important;
-      text-align: right;
-      justify-self: end;
-      border-bottom: 2px solid var(--border-color) !important;
-      display: inline-block;
+      line-height: 1.1;
+      border-bottom: none !important;
+
+      span {
+        display: inline-block;
+        padding-bottom: 0.15rem;
+        border-bottom: 2px solid var(--border-color);
+      }
     }
   }
 
@@ -144,7 +153,12 @@ body:has(.sub-header) {
 
     @include mobile {
       display: block;
+      margin-top: 1.5rem;
       margin-bottom: 2rem;
+
+      &:first-child {
+        margin-top: 0;
+      }
     }
 
     &:last-child {
@@ -171,9 +185,13 @@ body:has(.sub-header) {
       position: sticky;
       top: var(--header-offset);
       z-index: 15;
-      background-color: var(--bg-color);
-      margin: 0 -1.25rem 0.5rem -1.25rem;
-      padding: 0.65rem 1.25rem 0.45rem 1.25rem;
+      background-color: transparent !important;
+      pointer-events: none;
+      margin: 0 0 0.35rem -1.15rem;
+      padding: 0;
+      display: flex;
+      align-items: flex-start;
+      line-height: 1 !important;
     }
   }
 
@@ -194,16 +212,17 @@ body:has(.sub-header) {
       position: static;
       display: inline-block;
       text-align: left;
-      font-size: 1.15rem;
+      font-size: 0.84rem;
       font-weight: 700;
       font-variant-numeric: tabular-nums;
-      letter-spacing: -0.015em;
+      letter-spacing: -0.01em;
       color: var(--text-color);
-      padding: 0;
-      background: none;
+      padding: 0.15rem 0.45rem 0.15rem 0.45rem;
+      background-color: var(--bg-color);
+      pointer-events: auto;
       border: none;
-      border-radius: 0;
-      line-height: 1.2;
+      border-radius: 0 3px 3px 0;
+      line-height: 1.15;
     }
   }
 
@@ -216,7 +235,7 @@ body:has(.sub-header) {
     position: relative;
 
     @include mobile {
-      grid-template-columns: 2.2rem 1fr;
+      grid-template-columns: 3.3rem 1fr;
       gap: 0 0.8rem;
       margin-bottom: 1.2rem;
     }
@@ -244,9 +263,9 @@ body:has(.sub-header) {
     z-index: 10;
 
     @include mobile {
-      top: calc(var(--header-offset) + 2.45rem);
+      top: calc(var(--header-offset) + 1.4rem);
       font-size: 0.92rem;
-      padding-top: 0.1rem;
+      padding-top: 0.05rem;
     }
 
     .is-range {
@@ -363,44 +382,6 @@ body:has(.sub-header) {
   }
 
   @include mobile {
-    --year-sticky-height: 50px;
-
-    .year-info {
-      grid-template-columns: 4.85rem 1fr;
-      gap: 0 0.75rem;
-      padding: 0.5rem 0 0.35rem 0;
-
-      .year-title {
-        font-size: 1.2rem;
-      }
-    }
-
-    .year-items>.month {
-      grid-template-columns: 2.2rem 1fr;
-      gap: 0 0.35rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .month-sticky {
-      font-size: 0.75rem;
-      padding-top: 0.22rem;
-    }
-
-    .month-items>.day {
-      grid-template-columns: 2.3rem 1fr;
-      gap: 0 0.75rem;
-      margin-bottom: 1.1rem;
-    }
-
-    .day-sticky {
-      font-size: 0.88rem;
-      padding-top: 0.16rem;
-
-      .is-range {
-        font-size: 0.75rem;
-      }
-    }
-
     .day-items {
       gap: 0.75rem;
     }
