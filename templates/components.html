@@ -42,4 +42,38 @@
 
   <div class="gpx-map-viewport" style="height: {{ height }};"></div>
 </div>
-{% endcomponent gpx_map %}
+{%- endcomponent %}
+
+{% component include_markdown(path) -%}
+{% set content = load_data(path=path, format="plain") %}
+{{ content | markdown | safe }}
+{%- endcomponent %}
+
+{% component stuff_series(current=0, label="연도별 지름결산") -%}
+{% set years = [
+  { "y": 2015, "path": "@/blog/posts/2015/2015-12-24-stuff-in-2015.md" },
+  { "y": 2016, "path": "@/blog/posts/2016/2016-12-31-stuff-in-2016.md" },
+  { "y": 2017, "path": "@/blog/posts/2017/2017-12-31-stuff-in-2017.md" },
+  { "y": 2018, "path": "@/blog/posts/2018/2018-12-31-stuff-in-2018.md" },
+  { "y": 2019, "path": "@/blog/posts/2019/2019-12-31-stuff-in-2019.md" },
+  { "y": 2020, "path": "@/blog/posts/2020/2020-12-31-stuff-in-2020.md" },
+  { "y": 2021, "path": "@/blog/posts/2021/2021-12-31-stuff-in-2021.md" },
+  { "y": 2022, "path": "@/blog/posts/2022/2022-12-31-stuff-in-2022.md" },
+  { "y": 2023, "path": "@/blog/posts/2023/2023-12-31-stuff-in-2023.md" },
+  { "y": 2024, "path": "@/blog/posts/2024/stuff-in-2024.md" },
+  { "y": 2025, "path": "@/blog/posts/2025/stuff-in-2025.md" },
+] %}
+<div class="series-bar">
+{% if label != "" %}
+  <span class="series-label">{{ label }}</span>
+{% endif %}
+{%- for item in years %}
+  {%- if item.y == current -%}
+    <span class="current">{{ item.y }}</span>
+  {%- else -%}
+    <a href="{{ get_url(path=item.path) }}">{{ item.y }}</a>
+  {%- endif -%}
+  {%- if not loop.last %} · {% endif -%}
+{%- endfor -%}
+</div>
+{%- endcomponent %}
