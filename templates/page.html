@@ -3,7 +3,7 @@
 {% block content %}
 {% set show_toc = page.extra.toc | default(value=false) and page.toc and page.toc | length > 0 %}
 <div class="page-layout{% if show_toc %} has-toc{% endif %}">
-  {% if show_toc %}
+  {% if show_toc -%}
   <aside class="toc-sidebar">
     <details class="toc-collapsible" open>
       <summary class="toc-summary">
@@ -12,38 +12,38 @@
       </summary>
       <nav class="toc-nav">
         <ul>
-          {% for h1 in page.toc %}
+          {%- for h1 in page.toc %}
           <li>
             <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
-            {% if h1.children %}
+            {%- if h1.children %}
             <ul>
-              {% for h2 in h1.children %}
+              {%- for h2 in h1.children %}
               <li>
                 <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
-                {% if h2.children %}
+                {%- if h2.children %}
                 <ul>
-                  {% for h3 in h2.children %}
+                  {%- for h3 in h2.children %}
                   <li><a href="{{ h3.permalink | safe }}">{{ h3.title }}</a></li>
-                  {% endfor %}
+                  {%- endfor %}
                 </ul>
-                {% endif %}
+                {%- endif %}
               </li>
-              {% endfor %}
+              {%- endfor %}
             </ul>
-            {% endif %}
+            {%- endif %}
           </li>
-          {% endfor %}
+          {%- endfor %}
         </ul>
       </nav>
     </details>
   </aside>
-  {% endif %}
+  {%- endif -%}
 
   <div class="page-content-area">
     <article class="content-page">
       <header class="post-header">
         <h1 class="post-title">{{ page.title }}</h1>
-        {% if page.date or page.updated or (page.extra and page.extra.trip_date) %}
+        {%- if page.date or page.updated or (page.extra and page.extra.trip_date) %}
         <div class="post-meta">
           <span class="post-date-wrap">
             {%- if page.extra and page.extra.trip_date -%}
@@ -61,8 +61,8 @@
             {%- else -%}
             {% if page.date %}
             <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
-            {% endif %}
-            {% if page.updated and (not page.date or page.updated | date(format="%Y-%m-%d") != page.date |
+            {%- endif %}
+            {%- if page.updated and (not page.date or page.updated | date(format="%Y-%m-%d") != page.date |
             date(format="%Y-%m-%d")) %}
             <span class="post-updated">{% if page.date %}(수정: {% else %}수정: {% endif %}<time
                 datetime="{{ page.updated }}">{{ page.updated | date(format="%Y-%m-%d") }}</time>{% if page.date %}){%
@@ -70,39 +70,39 @@
             {% endif %}
             {%- endif -%}
           </span>
-          {% if page.taxonomies.tags %}
+          {%- if page.taxonomies.tags %}
           <span class="meta-tags">
-            {% for tag in page.taxonomies.tags %}
+            {%- for tag in page.taxonomies.tags %}
             <span class="tag">#{{ tag }}</span>
-            {% endfor %}
+            {%- endfor %}
           </span>
-          {% endif %}
+          {%- endif %}
         </div>
-        {% endif %}
+        {%- endif %}
       </header>
 
-      {% block page_before_body %}{% endblock page_before_body %}
+      {%- block page_before_body %}{% endblock page_before_body -%}
 
       <div class="page-body">
         {{ page.content | regex_replace(pattern="(?s)^\\s*<h1[^>]*>.*?</h1>\\s*", rep="") | safe }}
       </div>
 
-      {% block page_after_body %}{% endblock page_after_body %}
+      {%- block page_after_body %}{% endblock page_after_body -%}
 
-      {% if page.lower or page.higher %}
+      {% if page.lower or page.higher -%}
       <nav class="post-nav">
-        {% if page.higher %}
+        {%- if page.higher %}
         <div class="post-nav-item post-nav-prev">
           <a href="{{ page.higher.permalink | safe }}" rel="prev">
             <span class="post-nav-label">&larr; 이전 글</span>
             <span class="post-nav-title">{{ page.higher.title }}</span>
           </a>
         </div>
-        {% else %}
+        {%- else %}
         <div class="post-nav-placeholder"></div>
-        {% endif %}
+        {%- endif %}
 
-        {% if page.lower %}
+        {% if page.lower -%}
         <div class="post-nav-item post-nav-next">
           <a href="{{ page.lower.permalink | safe }}" rel="next">
             <span class="post-nav-label">다음 글 &rarr;</span>
@@ -113,9 +113,9 @@
         <div class="post-nav-placeholder"></div>
         {% endif %}
       </nav>
-      {% endif %}
+      {%- endif %}
 
-      {% if page.extra.comments | default(value=true) %}
+      {% if page.extra.comments | default(value=true) -%}
       <section class="comments-section" style="margin-top: 3rem;">
         <h2>댓글</h2>
         <div id="giscus-container"></div>
@@ -179,7 +179,7 @@
           })();
         </script>
       </section>
-      {% endif %}
+      {%- endif %}
     </article>
   </div>
 </div>

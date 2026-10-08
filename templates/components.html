@@ -64,16 +64,16 @@
   { "y": 2025, "path": "@/blog/posts/2025/stuff-in-2025.md" },
 ] %}
 <div class="series-bar">
-{% if label != "" %}
+{%- if label != "" %}
   <span class="series-label">{{ label }}</span>
-{% endif %}
+{% endif -%}
 {%- for item in years %}
-  {%- if item.y == current -%}
-    <span class="current">{{ item.y }}</span>
-  {%- else -%}
-    <a href="{{ get_url(path=item.path) }}">{{ item.y }}</a>
-  {%- endif -%}
-  {%- if not loop.last %} · {% endif -%}
-{%- endfor -%}
+  {%- if item.y == current %}
+  <span class="current">{{ item.y }}</span>
+  {%- else %}
+  <a href="{{ get_url(path=item.path) }}">{{ item.y }}</a>
+  {%- endif %}
+  {%- if not loop.last %} · {% endif %}
+{%- endfor %}
 </div>
 {%- endcomponent %}
