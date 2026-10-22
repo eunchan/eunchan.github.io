@@ -1,0 +1,124 @@
+{% component fft_phase(title="FFT 위상(Phase)과 복소수(Complex Phasor) 시뮬레이터", default_phase=0.0) %}
+<script src="{{ get_url(path="js/fft-phase.js", cachebust=true) }}" defer></script>
+<div class="fft-phase-container" id="fft-phase-app">
+<div class="fft-phase-header">
+<div class="fft-phase-title-area">
+<span class="fft-phase-icon">🧭</span>
+<h3>{{ title }}</h3>
+<span class="fft-status-badge" id="fft-phase-status-badge">순수 코사인 (Re = 1.0, Im = 0)</span>
+</div>
+<div class="fft-phase-top-controls">
+<label class="fft-control-label" for="fft-phase-select-k">주파수 Bin:
+<select id="fft-phase-select-k" class="fft-select" aria-label="주파수 Bin 선택">
+<option value="2">Bin 2 (2 cycles)</option>
+<option value="3">Bin 3 (3 cycles)</option>
+<option value="4" selected>Bin 4 (4 cycles)</option>
+<option value="5">Bin 5 (5 cycles)</option>
+<option value="6">Bin 6 (6 cycles)</option>
+<option value="8">Bin 8 (8 cycles)</option>
+</select>
+</label>
+<label class="fft-control-label" for="fft-phase-select-specmode">스펙트럼:
+<select id="fft-phase-select-specmode" class="fft-select" aria-label="스펙트럼 표시 방식">
+<option value="both" selected>실수부(Re) & 허수부(Im)</option>
+<option value="mag">진폭 (|X| 크기)</option>
+</select>
+</label>
+<button type="button" id="fft-phase-btn-play" class="fft-btn">🔄 위상 회전 재생 (360°)</button>
+</div>
+</div>
+<div class="fft-phase-display-grid">
+<div class="fft-phase-panel">
+<div class="fft-phase-panel-header">
+<div class="fft-phase-panel-title">
+<span class="badge-step">1</span> 시간 파형: <i>x[n] = cos(ωn + φ)</i>
+</div>
+<div class="fft-phase-panel-meta">시작점 <i>x[0]</i> 관찰</div>
+</div>
+<div class="fft-phase-canvas-wrap">
+<canvas id="fft-phase-canvas-signal" style="height: 190px;"></canvas>
+</div>
+<div class="fft-phase-panel-footer">
+<span>위상 <i>φ</i>에 따라 파형의 시작점 <i>x[0] = cos(φ)</i> 위치가 바뀝니다.</span>
+</div>
+</div>
+<div class="fft-phase-panel">
+<div class="fft-phase-panel-header">
+<div class="fft-phase-panel-title">
+<span class="badge-step">2</span> FFT 복소 평면 (Complex Phasor)
+</div>
+<div class="fft-phase-panel-meta">Bin의 복소수 값 (Re, Im)</div>
+</div>
+<div class="fft-phase-canvas-wrap">
+<canvas id="fft-phase-canvas-complex" style="height: 190px;"></canvas>
+</div>
+<div class="fft-phase-panel-footer">
+<span class="legend-real">■ 실수부(Re, cos)</span>
+<span class="legend-imag">■ 허수부(Im, sin)</span>
+<span class="legend-vector">● 페이저 벡터(Re + jIm)</span>
+</div>
+</div>
+<div class="fft-phase-panel fft-phase-panel-wide">
+<div class="fft-phase-panel-header">
+<div class="fft-phase-panel-title">
+<span class="badge-step">3</span> 전체 FFT Bins 실수/허수 스펙트럼
+</div>
+<div class="fft-phase-panel-meta">위상이 바뀌어도 진폭(|X|)은 일정 유지</div>
+</div>
+<div class="fft-phase-canvas-wrap">
+<canvas id="fft-phase-canvas-spectrum" style="height: 150px;"></canvas>
+</div>
+<div class="fft-phase-panel-footer">
+<span>파란색 기둥: 실수부 (Re) · 주황색 기둥: 허수부 (Im)</span>
+</div>
+</div>
+</div>
+<div class="fft-phase-control-bar">
+<div class="fft-phase-control-row">
+<div class="fft-phase-slider-label">
+<span>초기 위상 (Phase <i>φ</i>):</span>
+<input type="number" id="fft-phase-input-phase" class="fft-number-input" min="-180" max="180" step="1" value="0.0" aria-label="위상 각도 직접 입력">
+<span class="fft-freq-display" id="fft-phase-display-deg">0.0°</span>
+<span class="fft-phase-rad-display" id="fft-phase-display-rad">0.00π rad</span>
+</div>
+<div class="fft-phase-presets">
+<span class="preset-label">대표 위상:</span>
+<div id="fft-phase-preset-chips" class="fft-preset-chips"></div>
+</div>
+</div>
+<div class="fft-phase-slider-track-wrap">
+<span class="slider-bound">-180° (-π)</span>
+<input type="range" id="fft-phase-slider-phase" class="fft-range-input" min="-180" max="180" step="0.5" value="0.0" aria-label="위상 조절 슬라이더">
+<span class="slider-bound">+180° (+π)</span>
+</div>
+</div>
+<div class="fft-phase-stat-bar">
+<div class="stat-pill">
+<span class="stat-name">파형 시작값 x[0]</span>
+<strong class="stat-value" id="fft-phase-display-startval">+1.000</strong>
+</div>
+<div class="stat-pill">
+<span class="stat-name">실수부 (Re)</span>
+<strong class="stat-value text-real" id="fft-phase-stat-real">+1.000</strong>
+</div>
+<div class="stat-pill">
+<span class="stat-name">허수부 (Im)</span>
+<strong class="stat-value text-imag" id="fft-phase-stat-imag">+0.000 j</strong>
+</div>
+<div class="stat-pill">
+<span class="stat-name">크기 (|X|)</span>
+<strong class="stat-value" id="fft-phase-stat-mag">1.000</strong>
+</div>
+<div class="stat-pill">
+<span class="stat-name">복소 각도 (atan2)</span>
+<strong class="stat-value text-vector" id="fft-phase-stat-angle">0.0°</strong>
+</div>
+</div>
+<div class="fft-phase-insight-card">
+<div class="insight-icon">💡</div>
+<div class="insight-text" id="fft-phase-insight-text">
+<strong>오일러 복소 평면:</strong> 위상이 바뀔 때 FFT Bin의 복소수 벡터가 어떻게 원을 그리며 회전하는지 확인해보세요.
+</div>
+</div>
+</div>
+{%- endcomponent %}

@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap">
   <link rel="stylesheet" href="{{ get_url(path="style.css", cachebust=true) }}">
+  {% set has_math = (page and page.extra and page.extra.math) or (section and section.extra and section.extra.math) %}
+  {%- if has_math %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+  {%- endif %}
 
   {% if config.generate_feeds -%}
   <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
@@ -390,6 +394,11 @@
   </script>
   <script src="{{ get_url(path="js/search.js", cachebust=true) }}" defer></script>
   <script src="{{ get_url(path="js/mermaid.js") }}" defer></script>
+  {%- if has_math %}
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous" defer></script>
+  <script src="{{ get_url(path="js/katex.js", cachebust=true) }}" defer></script>
+  {%- endif %}
   {%- block extra_scripts %}{% endblock extra_scripts %}
 </body>
 </html>

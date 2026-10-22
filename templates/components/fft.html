@@ -1,0 +1,75 @@
+{% component fft_visualizer(title="FFT 주파수 분석 & 회전 나침반 시각화", default_freq=2.0) %}
+<script src="{{ get_url(path="js/fft-visualizer.js", cachebust=true) }}" defer></script>
+<div class="fft-visualizer-container" id="fft-visualizer-app">
+<div class="fft-header">
+<div class="fft-title-area">
+<span class="fft-icon">🧭</span>
+<h3>{{ title }}</h3>
+<span class="fft-status-badge" id="fft-status-badge">주파수 탐색 중...</span>
+</div>
+<div class="fft-top-controls">
+<select id="fft-signal-select" class="fft-select" aria-label="입력 신호 파형 선택">
+<option value="composite" selected>합성파 (2.0Hz + 5.0Hz)</option>
+<option value="single">단일 사인파 (3.0Hz)</option>
+<option value="square">구형파 (1.5Hz + 4.5Hz + 7.5Hz)</option>
+<option value="noisy">노이즈 속 단일파 (2.5Hz)</option>
+</select>
+<button type="button" id="fft-btn-play" class="fft-btn">⏸ 일시정지</button>
+<button type="button" id="fft-btn-sweep" class="fft-btn active">🔄 자동 탐색 중</button>
+</div>
+</div>
+<div class="fft-display-grid">
+<div class="fft-panel">
+<div class="fft-panel-header">
+<div class="fft-panel-title"><span class="badge-step">1</span> 블랙박스 입력 신호 <i>x(t)</i></div>
+<div class="fft-panel-meta" id="fft-meta-signal">t=0.0s</div>
+</div>
+<div class="fft-canvas-wrap">
+<canvas id="fft-canvas-signal"></canvas>
+</div>
+<div class="fft-panel-footer">미지의 입력 신호 파형 (시간 도메인)</div>
+</div>
+<div class="fft-panel">
+<div class="fft-panel-header">
+<div class="fft-panel-title"><span class="badge-step">2</span> 회전 나침반 (<i>e</i><sup>−<i>iωt</i></sup>)</div>
+<div class="fft-panel-meta" id="fft-meta-compass">f=2.00Hz</div>
+</div>
+<div class="fft-canvas-wrap">
+<canvas id="fft-canvas-compass"></canvas>
+</div>
+<div class="fft-panel-footer">X축(Real, cos) · Y축(Imag, −sin) 투영 및 중심 벡터</div>
+</div>
+<div class="fft-panel">
+<div class="fft-panel-header">
+<div class="fft-panel-title"><span class="badge-step">3</span> 주파수 스펙트럼 |<i>X(f)</i>|</div>
+<div class="fft-panel-meta" id="fft-meta-spectrum">진폭: -</div>
+</div>
+<div class="fft-canvas-wrap">
+<canvas id="fft-canvas-spectrum"></canvas>
+</div>
+<div class="fft-panel-footer">주파수별 성분 검출 (클릭하여 직접 이동 가능)</div>
+</div>
+</div>
+<div class="fft-slider-bar">
+<div class="fft-slider-info">
+<div class="fft-slider-label">
+<span>검사 주파수(Probe Frequency):</span>
+<span class="fft-freq-display" id="fft-freq-display">2.00 Hz</span>
+</div>
+<div class="fft-slider-presets">
+<span style="font-size:0.75rem; color:var(--text-muted); margin-right:4px;">주요 포인트:</span>
+<div id="fft-preset-chips" style="display:inline-flex; gap:4px;"></div>
+</div>
+</div>
+<div class="fft-slider-track-wrap">
+<span class="slider-bound">0.2 Hz</span>
+<input type="range" id="fft-freq-slider" class="fft-range-input" min="0.2" max="8.0" step="0.05" value="2.0" aria-label="검사 주파수 조절">
+<span class="slider-bound">8.0 Hz</span>
+</div>
+</div>
+<div class="fft-insight-card">
+<div class="insight-icon">💡</div>
+<div class="insight-text" id="fft-insight-text">나침반의 회전 주기와 신호 속 주파수가 일치할 때(공진), 나침반 바늘의 누적합이 급격히 증가하며 스펙트럼 피크가 검출됩니다.</div>
+</div>
+</div>
+{%- endcomponent %}

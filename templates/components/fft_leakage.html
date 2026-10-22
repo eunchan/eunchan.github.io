@@ -1,0 +1,101 @@
+{% component fft_leakage(title="FFT 스펙트럼 누설(Spectral Leakage) & Sinc 샘플링 시뮬레이터", default_k=8.0) %}
+<script src="{{ get_url(path="js/fft-leakage.js", cachebust=true) }}" defer></script>
+<div class="fft-leakage-container" id="fft-leakage-app">
+<div class="fft-leak-header">
+<div class="fft-leak-title-area">
+<span class="fft-leak-icon">🌊</span>
+<h3>{{ title }}</h3>
+<span class="fft-status-badge" id="fft-leak-status-badge">분석 준비 완료</span>
+</div>
+<div class="fft-leak-top-controls">
+<label class="fft-control-label" for="fft-leak-window-select">윈도우:
+<select id="fft-leak-window-select" class="fft-select" aria-label="윈도우 함수 선택">
+<option value="rect" selected>사각 윈도우 (Rectangular)</option>
+<option value="hann">해닝 윈도우 (Hann - 누설 억제)</option>
+</select>
+</label>
+<label class="fft-control-label" for="fft-leak-scale-select">스케일:
+<select id="fft-leak-scale-select" class="fft-select" aria-label="스펙트럼 Y축 스케일 선택">
+<option value="linear" selected>선형 (Linear: 0 ~ 1.0)</option>
+<option value="db">로그 (dB: 0 ~ -50dB)</option>
+</select>
+</label>
+<button type="button" id="fft-leak-btn-play" class="fft-btn">🔄 자동 주파수 스위프</button>
+</div>
+</div>
+<div class="fft-leak-content-grid">
+<div class="fft-leak-panel fft-leak-panel-signal">
+<div class="fft-leak-panel-header">
+<div class="fft-leak-panel-title">
+<span class="badge-step">1</span> 시간 도메인 샘플링 신호 <i>x[n]</i> (N = 32)
+</div>
+<div class="fft-leak-panel-meta">샘플 주기 일치 여부 관찰</div>
+</div>
+<div class="fft-leak-canvas-wrap">
+<canvas id="fft-leak-canvas-signal" style="height: 160px;"></canvas>
+</div>
+<div class="fft-leak-panel-footer">윈도우 끝점(n=31)과 시작점(n=0)의 불연속(Discontinuity)이 주파수 누설을 유발합니다.</div>
+</div>
+<div class="fft-leak-panel fft-leak-panel-spectrum">
+<div class="fft-leak-panel-header">
+<div class="fft-leak-panel-title">
+<span class="badge-step">2</span> 주파수 도메인: 연속 Sinc 곡선 vs 이산 FFT Bins
+</div>
+<div class="fft-leak-panel-meta">마우스를 올려 각 Bin의 값을 확인해보세요</div>
+</div>
+<div class="fft-leak-canvas-wrap">
+<canvas id="fft-leak-canvas-spectrum" style="height: 240px;"></canvas>
+</div>
+<div class="fft-leak-panel-footer">
+<span class="legend-sinc">■ 연속 스펙트럼 (Sinc / Dirichlet)</span>
+<span class="legend-bins">● 이산 FFT Bins 샘플점</span>
+</div>
+</div>
+</div>
+<div class="fft-leak-control-bar">
+<div class="fft-leak-control-row">
+<div class="fft-leak-slider-label">
+<span>입력 주파수 (f<sub>0</sub> / Target Bin):</span>
+<input type="number" id="fft-leak-input-k" class="fft-number-input" min="1.0" max="15.0" step="0.05" value="8.00" aria-label="주파수 직접 입력">
+<span class="fft-freq-display" id="fft-leak-display-k">8.00 MHz</span>
+</div>
+<div class="fft-leak-presets">
+<span class="preset-label">추천 프리셋:</span>
+<div id="fft-leak-preset-chips" class="fft-preset-chips"></div>
+</div>
+</div>
+<div class="fft-leak-slider-track-wrap">
+<span class="slider-bound">1.0 MHz</span>
+<input type="range" id="fft-leak-slider-k" class="fft-range-input" min="1.0" max="15.0" step="0.05" value="8.0" aria-label="입력 주파수 조절 슬라이더">
+<span class="slider-bound">15.0 MHz</span>
+</div>
+</div>
+<div class="fft-leak-data-section">
+<div class="fft-leak-data-header">
+<h4>📊 각 FFT Bin별 에너지 분배 (Spectral Splatting Breakdown)</h4>
+<span class="fft-leak-data-hint">N=32, fs=32MHz 기준 (Δf = 1MHz)</span>
+</div>
+<div class="fft-leak-table-wrap">
+<table class="fft-leak-table">
+<thead>
+<tr>
+<th>주파수 Bin</th>
+<th>진폭 (|X[k]|)</th>
+<th>데시벨 (dB)</th>
+<th>전력 점유율 (Power Ratio)</th>
+</tr>
+</thead>
+<tbody id="fft-leak-table-body">
+<!-- Dynamic Table Rows -->
+</tbody>
+</table>
+</div>
+</div>
+<div class="fft-leak-insight-card">
+<div class="insight-icon">💡</div>
+<div class="insight-text" id="fft-leak-insight-text">
+<strong>분석:</strong> 슬라이더를 움직여 정수 Bin에서 어긋날 때 Sinc 곡선의 영점을 벗어나 인접 Bin으로 에너지가 어떻게 흩어지는지 확인해보세요.
+</div>
+</div>
+</div>
+{%- endcomponent %}

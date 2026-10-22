@@ -15,6 +15,7 @@ slug = "article"
 
 반도체 마이크로아키텍처, ASIC 및 FPGA 디지털 회로 설계, UVM(Universal Verification Methodology) 기반 검증 기법, 그리고 글로벌 반도체 기술 동향 및 산업 분석 아티클입니다.
 
+- [FFT On DSP](silicon/fast-fourier-transform.md)
 - [스타게이트 프로젝트 - AI 데이터센터](silicon/the-stargate-project.md)
 - [네이버와 삼성의 ML 칩&시스템 협업](silicon/naver-and-samsung-collaboration.md)
 - [하드웨어 디자인 코드리뷰](silicon/code-review-in-hdl.md)
