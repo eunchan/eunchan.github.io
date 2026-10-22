@@ -4,6 +4,7 @@
 docs/static/
 /docs.old/
 Makefile
+.vscode/
 
 # But not these files
 !docs/media/
