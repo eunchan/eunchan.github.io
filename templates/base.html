@@ -325,9 +325,11 @@
       document.querySelectorAll('.toc-collapsible').forEach(el => el.removeAttribute('open'));
     }
 
-    // Back to top button & Mobile Smart Header
+    // Back to top button & Smart Header (Desktop + Mobile)
     const backToTopBtn = document.getElementById('back-to-top');
     const searchInput = document.getElementById('search');
+    const searchBox = document.getElementById('search-box');
+    const siteHeader = document.querySelector('.site-header');
     let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
     let isHeaderHidden = false;
     let scrollTicking = false;
@@ -345,29 +347,23 @@
         }
       }
 
-      // 2. Mobile Smart Header (auto-hide on scroll down, show on scroll up)
-      if (window.innerWidth <= 768) {
-        const isDrawerOpen = drawerMenu && drawerMenu.classList.contains('is-open');
-        const isSearchFocused = searchInput && document.activeElement === searchInput;
+      // 2. Smart Header (auto-hide on scroll down, show on scroll up)
+      const isDrawerOpen = drawerMenu && drawerMenu.classList.contains('is-open');
+      const isSearchActive = (searchInput && document.activeElement === searchInput) ||
+                             (searchBox && searchBox.classList.contains('is-active'));
 
-        if (!isDrawerOpen && !isSearchFocused) {
-          if (currentScrollY <= 60) {
-            if (isHeaderHidden) {
-              document.body.classList.remove('header-hidden');
-              isHeaderHidden = false;
-            }
-          } else if (delta > 8 && !isHeaderHidden) {
-            // Scrolling down -> hide header
-            document.body.classList.add('header-hidden');
-            isHeaderHidden = true;
-          } else if (delta < -8 && isHeaderHidden) {
-            // Scrolling up -> show header
+      if (!isDrawerOpen && !isSearchActive) {
+        if (currentScrollY <= 60) {
+          if (isHeaderHidden) {
             document.body.classList.remove('header-hidden');
             isHeaderHidden = false;
           }
-        }
-      } else {
-        if (isHeaderHidden) {
+        } else if (delta > 8 && !isHeaderHidden) {
+          // Scrolling down -> hide header
+          document.body.classList.add('header-hidden');
+          isHeaderHidden = true;
+        } else if (delta < -8 && isHeaderHidden) {
+          // Scrolling up -> show header
           document.body.classList.remove('header-hidden');
           isHeaderHidden = false;
         }
@@ -383,6 +379,15 @@
         scrollTicking = true;
       }
     }, { passive: true });
+
+    if (siteHeader) {
+      siteHeader.addEventListener('focusin', () => {
+        if (isHeaderHidden) {
+          document.body.classList.remove('header-hidden');
+          isHeaderHidden = false;
+        }
+      });
+    }
 
     if (backToTopBtn) {
       backToTopBtn.addEventListener('click', () => {

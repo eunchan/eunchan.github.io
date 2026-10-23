@@ -20,8 +20,9 @@
     width: 220px;
     flex-shrink: 0;
     position: sticky;
-    top: 64px;
-    max-height: calc(100vh - 80px);
+    top: calc(var(--header-offset, 49px) + 15px);
+    max-height: calc(100vh - (var(--header-offset, 49px) + 30px));
+    transition: top 0.25s ease, max-height 0.25s ease;
     overflow-y: auto;
     padding-right: 0.8rem;
     border-right: 1px solid var(--border-color);

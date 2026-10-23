@@ -7,10 +7,8 @@
   box-shadow: var(--shadow-sm);
   transition: transform 0.25s ease;
 
-  @include mobile {
-    body.header-hidden & {
-      transform: translateY(-100%);
-    }
+  body.header-hidden & {
+    transform: translateY(-100%);
   }
 }
 

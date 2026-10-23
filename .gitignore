@@ -6,6 +6,8 @@ docs/static/
 Makefile
 .vscode/
 
+AGENTS.md
+
 # But not these files
 !docs/media/
 !content/sky/site/
