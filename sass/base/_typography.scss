@@ -78,6 +78,51 @@ hr {
   margin: 2.2rem 0;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-family: var(--family-sans);
+  font-size: 0.94rem;
+  line-height: 1.6;
+
+  th,
+  td {
+    padding: 0.7rem 0.9rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border-color);
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  thead th {
+    background-color: var(--accent-light);
+    font-weight: 600;
+    color: var(--text-color);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
+    white-space: nowrap;
+  }
+
+  tbody tr:hover td {
+    background-color: var(--accent-light);
+  }
+
+  @include mobile {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    th,
+    td {
+      padding: 0.55rem 0.7rem;
+      font-size: 0.88rem;
+      word-break: normal;
+    }
+  }
+}
+
 blockquote {
   border-left: 4px solid var(--primary);
   margin: 1.5rem 0;

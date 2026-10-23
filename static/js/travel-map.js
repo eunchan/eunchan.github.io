@@ -256,7 +256,7 @@
         if (region === 'americas') {
           match = c.includes('canada') || c.includes('usa') || c.includes('mexico');
         } else if (region === 'europe') {
-          match = c.includes('europe') || c.includes('england') || c.includes('france');
+          match = c.includes('europe') || c.includes('england') || c.includes('france') || c.includes('italy');
         } else if (region === 'asia_oceania') {
           match = c.includes('japan') || c.includes('china') || c.includes('new zealand');
         } else if (region === 'africa') {
