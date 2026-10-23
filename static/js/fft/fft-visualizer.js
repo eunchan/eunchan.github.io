@@ -35,7 +35,7 @@
 
     // State
     let isPlaying = true;
-    let isAutoSweep = true;
+    let isAutoSweep = false;
     let probeFreq = 2.0; // Current probe frequency in Hz
     let sweepSpeed = 0.008; // Hz per frame in auto sweep
     let sweepDir = 1;
