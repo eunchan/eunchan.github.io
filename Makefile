@@ -14,8 +14,11 @@ serve:
 	${ZOLA} serve
 
 # 미디어 GCS 동기화 (로컬 -> GCS)
+# raw 지운 후 동기화 후 다시 symlink
 media-push:
+	@rm -f static/media/raw
 	@python3 tools/sync-media.py push
+	@ln -s ~/Pictures/eunchan.kim /Users/ekim/prj/eunchan.kim/static/media/raw
 
 # 미디어 복구 / 내려받기 (GCS -> 로컬)
 # 새 시스템에서 git clone 후 실행하거나 로컬 이미지 분실 시 원클릭 복구
